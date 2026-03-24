@@ -1,0 +1,62 @@
+# Industry: Banking — IFRS 9/7, Basel III
+# Source: KPMG IFRS IFS Banks 2025
+# 47 concepts across PNL, SFP, ECL, regulatory capital, disclosures
+
+concepts:
+  # ── PNL — Banking core ─────────────────────────────────────
+  - { id: FS.PNL.BANK.INTEREST_INCOME_EIM, label: "Interest income (effective interest method)", balance_type: credit, period_type: duration, ref: "IFRS 7.20(b)" }
+  - { id: FS.PNL.BANK.OTHER_INTEREST_INCOME, label: "Other interest income", balance_type: credit, period_type: duration }
+  - { id: FS.PNL.BANK.INTEREST_EXPENSE, label: "Interest expense", balance_type: debit, period_type: duration }
+  - { id: FS.PNL.BANK.NET_INTEREST_INCOME, label: "Net interest income", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.PNL.BANK.FEE_COMMISSION_INCOME, label: "Fee and commission income", balance_type: credit, period_type: duration, ref: "IFRS 15" }
+  - { id: FS.PNL.BANK.FEE_COMMISSION_EXPENSE, label: "Fee and commission expense", balance_type: debit, period_type: duration }
+  - { id: FS.PNL.BANK.NET_FEE_COMMISSION, label: "Net fee and commission income", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.PNL.BANK.NET_TRADING_INCOME, label: "Net trading income", balance_type: credit, period_type: duration, ref: "IFRS 7.20(a)(i)" }
+  - { id: FS.PNL.BANK.NET_INCOME_OTHER_FVTPL, label: "Net income from other FI at FVTPL", balance_type: credit, period_type: duration }
+  - { id: FS.PNL.BANK.OTHER_REVENUE, label: "Other revenue", balance_type: credit, period_type: duration }
+  - { id: FS.PNL.BANK.DERECOG_LOSS_AC, label: "Net loss on derecognition of FA at amortised cost", balance_type: debit, period_type: duration, ref: "IFRS 7.20A" }
+  - { id: FS.PNL.BANK.IMPAIRMENT_LOSSES_FI, label: "Impairment losses on financial instruments", balance_type: debit, period_type: duration, ref: "IFRS 9" }
+
+  # ── SFP — Banking assets ───────────────────────────────────
+  - { id: FS.SFP.BANK.TRADING_ASSETS_NON_PLEDGED, label: "Non-pledged trading assets", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.BANK.TRADING_ASSETS_PLEDGED, label: "Pledged trading assets", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.BANK.DERIVATIVE_ASSETS_RISK_MGMT, label: "Derivative assets held for risk management", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.BANK.LOANS_ADVANCES_BANKS, label: "Loans and advances to banks", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.BANK.LOANS_ADVANCES_CUSTOMERS, label: "Loans and advances to customers", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.BANK.INVESTMENT_SECURITIES, label: "Investment securities", balance_type: debit, period_type: instant }
+
+  # ── SFP — Banking liabilities ──────────────────────────────
+  - { id: FS.SFP.BANK.TRADING_LIABILITIES, label: "Trading liabilities", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.DERIVATIVE_LIABILITIES_RISK_MGMT, label: "Derivative liabilities for risk management", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.DEPOSITS_FROM_BANKS, label: "Deposits from banks", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.DEPOSITS_FROM_CUSTOMERS, label: "Deposits from customers", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.DEBT_SECURITIES_IN_ISSUE, label: "Debt securities in issue", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.SUBORDINATED_LIABILITIES, label: "Subordinated liabilities", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.PROVISION_FIN_GUARANTEE, label: "Financial guarantee contract provisions", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.BANK.PROVISION_LOAN_COMMITMENTS, label: "Loan commitment provisions", balance_type: credit, period_type: instant }
+
+  # ── ECL stages (IFRS 9.5.5) ───────────────────────────────
+  - { id: DISC.BANK.ECL_STAGE1_GROSS, label: "Gross carrying amount — Stage 1 (12-month ECL)", period_type: instant, ref: "IFRS 7.35M" }
+  - { id: DISC.BANK.ECL_STAGE2_GROSS, label: "Gross carrying amount — Stage 2 (lifetime, not impaired)", period_type: instant }
+  - { id: DISC.BANK.ECL_STAGE3_GROSS, label: "Gross carrying amount — Stage 3 (lifetime, impaired)", period_type: instant }
+  - { id: DISC.BANK.ECL_POCI_GROSS, label: "Gross carrying amount — POCI", period_type: instant }
+  - { id: DISC.BANK.ECL_STAGE1_ALLOWANCE, label: "Loss allowance — Stage 1", period_type: instant }
+  - { id: DISC.BANK.ECL_STAGE2_ALLOWANCE, label: "Loss allowance — Stage 2", period_type: instant }
+  - { id: DISC.BANK.ECL_STAGE3_ALLOWANCE, label: "Loss allowance — Stage 3", period_type: instant }
+
+  # ── IFRS 9 measurement categories ─────────────────────────
+  - { id: DISC.BANK.FA_MANDATORY_FVTPL, label: "Financial assets mandatorily at FVTPL", period_type: instant }
+  - { id: DISC.BANK.FA_DESIGNATED_FVTPL, label: "Financial assets designated at FVTPL", period_type: instant }
+  - { id: DISC.BANK.FA_FVOCI_DEBT, label: "Financial assets at FVOCI — debt", period_type: instant }
+  - { id: DISC.BANK.FA_FVOCI_EQUITY, label: "Financial assets at FVOCI — equity", period_type: instant }
+  - { id: DISC.BANK.FA_AMORTISED_COST, label: "Financial assets at amortised cost", period_type: instant }
+  - { id: DISC.BANK.FL_FVTPL, label: "Financial liabilities at FVTPL", period_type: instant }
+  - { id: DISC.BANK.FL_AMORTISED_COST, label: "Financial liabilities at amortised cost", period_type: instant }
+
+  # ── Regulatory capital (Basel III) ─────────────────────────
+  - { id: DISC.BANK.CET1_CAPITAL, label: "Common Equity Tier 1 (CET1) capital", period_type: instant, ref: "IAS 1.135" }
+  - { id: DISC.BANK.AT1_CAPITAL, label: "Additional Tier 1 (AT1) capital", period_type: instant }
+  - { id: DISC.BANK.TIER1_CAPITAL, label: "Total Tier 1 capital", period_type: instant, is_total: true }
+  - { id: DISC.BANK.TIER2_CAPITAL, label: "Tier 2 capital", period_type: instant }
+  - { id: DISC.BANK.TOTAL_REGULATORY_CAPITAL, label: "Total regulatory capital", period_type: instant, is_total: true }
+  - { id: DISC.BANK.RISK_WEIGHTED_ASSETS, label: "Risk-weighted assets (RWA)", period_type: instant }

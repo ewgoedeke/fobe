@@ -1,0 +1,59 @@
+# Industry: Insurance — IFRS 17
+# Source: KPMG IFRS IFS Insurers 2024
+# 39 concepts across PNL, SFP, IFRS 17 components, reinsurance
+
+concepts:
+  # ── PNL — Insurance core ───────────────────────────────────
+  - { id: FS.PNL.INS.INSURANCE_REVENUE, label: "Insurance revenue", balance_type: credit, period_type: duration, ref: "IFRS 17.83" }
+  - { id: FS.PNL.INS.INSURANCE_SERVICE_EXPENSES, label: "Insurance service expenses", balance_type: debit, period_type: duration, ref: "IFRS 17.84" }
+  - { id: FS.PNL.INS.NET_EXPENSES_REINSURANCE, label: "Net expenses from reinsurance contracts", balance_type: debit, period_type: duration }
+  - { id: FS.PNL.INS.INSURANCE_SERVICE_RESULT, label: "Insurance service result", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.PNL.INS.NET_FINANCE_EXPENSE_INSURANCE, label: "Net finance expenses from insurance contracts", balance_type: debit, period_type: duration, ref: "IFRS 17.87-92" }
+  - { id: FS.PNL.INS.NET_FINANCE_INCOME_REINSURANCE, label: "Net finance income from reinsurance contracts", balance_type: credit, period_type: duration }
+  - { id: FS.PNL.INS.MOVEMENT_INVESTMENT_CONTRACT_LIAB, label: "Movement in investment contract liabilities", balance_type: debit, period_type: duration }
+  - { id: FS.PNL.INS.MOVEMENT_THIRD_PARTY_INTERESTS, label: "Movement in third party interests in consolidated funds", balance_type: debit, period_type: duration }
+  - { id: FS.PNL.INS.NET_FINANCIAL_RESULT, label: "Net financial result", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.PNL.INS.REVENUE_INVESTMENT_MGMT, label: "Revenue from investment management services", balance_type: credit, period_type: duration }
+
+  # ── SFP — Insurance assets ─────────────────────────────────
+  - { id: FS.SFP.INS.FINANCIAL_INVESTMENTS_FV, label: "Financial investments at fair value", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.INS.FINANCIAL_INVESTMENTS_AC, label: "Financial investments at amortised cost", balance_type: debit, period_type: instant }
+  - { id: FS.SFP.INS.INSURANCE_CONTRACT_ASSETS, label: "Insurance contract assets", balance_type: debit, period_type: instant, ref: "IFRS 17.78(a)" }
+  - { id: FS.SFP.INS.REINSURANCE_CONTRACT_ASSETS, label: "Reinsurance contract assets", balance_type: debit, period_type: instant, ref: "IFRS 17.78(c)" }
+
+  # ── SFP — Insurance liabilities ────────────────────────────
+  - { id: FS.SFP.INS.INSURANCE_CONTRACT_LIABILITIES, label: "Insurance contract liabilities", balance_type: credit, period_type: instant, ref: "IFRS 17.78(b)" }
+  - { id: FS.SFP.INS.REINSURANCE_CONTRACT_LIABILITIES, label: "Reinsurance contract liabilities", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.INS.INVESTMENT_CONTRACT_LIABILITIES, label: "Investment contract liabilities", balance_type: credit, period_type: instant }
+  - { id: FS.SFP.INS.THIRD_PARTY_INTERESTS_CONSOL_FUNDS, label: "Third party interests in consolidated funds", balance_type: credit, period_type: instant }
+
+  # ── IFRS 17 measurement components ─────────────────────────
+  - { id: DISC.INS.PVFCF, label: "Present value of future cash flows", period_type: instant, ref: "IFRS 17.40(a)" }
+  - { id: DISC.INS.RISK_ADJUSTMENT, label: "Risk adjustment for non-financial risk", period_type: instant, ref: "IFRS 17.37" }
+  - { id: DISC.INS.CSM, label: "Contractual service margin", period_type: instant, ref: "IFRS 17.38" }
+  - { id: DISC.INS.LOSS_COMPONENT, label: "Loss component", period_type: instant, ref: "IFRS 17.47-52" }
+  - { id: DISC.INS.ASSETS_ACQ_CASHFLOWS, label: "Assets for insurance acquisition cash flows", period_type: instant }
+
+  # ── Insurance revenue disaggregation ───────────────────────
+  - { id: DISC.INS.REV_CSM_RECOGNISED, label: "CSM recognised for services provided", period_type: duration, ref: "IFRS 17.106(a)(iii)" }
+  - { id: DISC.INS.REV_RA_CHANGE, label: "Risk adjustment change for risk expired", period_type: duration }
+  - { id: DISC.INS.REV_EXPECTED_CLAIMS, label: "Expected incurred claims and expenses", period_type: duration }
+  - { id: DISC.INS.REV_ACQ_CASHFLOW_RECOVERY, label: "Recovery of acquisition cash flows", period_type: duration }
+
+  # ── IFRS 17 movement analysis ──────────────────────────────
+  - { id: DISC.INS.CHANGES_ADJUSTING_CSM, label: "Changes in estimates adjusting CSM", period_type: duration }
+  - { id: DISC.INS.CHANGES_ONEROUS_LOSSES, label: "Changes resulting in losses on onerous contracts", period_type: duration }
+  - { id: DISC.INS.NEW_BUSINESS_CSM, label: "New business CSM", period_type: duration }
+  - { id: DISC.INS.EXPERIENCE_ADJUSTMENTS, label: "Experience adjustments", period_type: duration }
+  - { id: DISC.INS.AMORTISATION_ACQ_CASHFLOWS, label: "Amortisation of acquisition cash flows", period_type: duration }
+  - { id: DISC.INS.INCURRED_CLAIMS, label: "Incurred claims and insurance service expenses", period_type: duration }
+  - { id: DISC.INS.ONEROUS_CONTRACT_LOSSES, label: "Losses/reversals on onerous contracts", period_type: duration }
+
+  # ── Insurance finance income/expense components ────────────
+  - { id: DISC.INS.INTEREST_ACCRETED, label: "Interest accreted on insurance contracts", period_type: duration }
+  - { id: DISC.INS.INTEREST_RATE_EFFECT, label: "Effect of interest rate changes on insurance contracts", period_type: duration }
+  - { id: DISC.INS.FX_LOSS_INSURANCE, label: "Net FX loss on insurance contracts", period_type: duration }
+
+  # ── OCI — Insurance-specific ───────────────────────────────
+  - { id: FS.OCI.INS.FINANCE_EXPENSE_INSURANCE, label: "Insurance finance expense (OCI portion)", balance_type: debit, period_type: duration, ref: "IFRS 17.90" }
+  - { id: FS.OCI.INS.FINANCE_INCOME_REINSURANCE, label: "Reinsurance finance income (OCI portion)", balance_type: credit, period_type: duration }
