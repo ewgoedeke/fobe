@@ -1,0 +1,117 @@
+# UGB (Unternehmensgesetzbuch) — Austrian statutory GAAP
+# Source: KPMG UGB-Musterabschluss, Dezember 2025
+# Prescribed formats per § 224 (Bilanz) and § 231 (GuV Gesamtkostenverfahren)
+
+# ── Bilanz Aktiva per § 224 Abs 2 UGB ───────────────────────
+labels:
+  FS.SFP.NON_CURRENT_ASSETS: { de: "Anlagevermögen", ref: "§ 224 Abs 2 A" }
+  FS.SFP.INTANGIBLE_ASSETS: { de: "Immaterielle Vermögensgegenstände", ref: "§ 224 Abs 2 A I" }
+  FS.SFP.GOODWILL: { de: "Geschäfts(Firmen)wert", ref: "§ 224 Abs 2 A I 2" }
+  FS.SFP.PPE_NET: { de: "Sachanlagen", ref: "§ 224 Abs 2 A II" }
+  FS.SFP.INVESTMENT_IN_SUB: { de: "Anteile an verbundenen Unternehmen", ref: "§ 224 Abs 2 A III 1" }
+  FS.SFP.EQUITY_ACCOUNTED_INVESTEES: { de: "Beteiligungen", ref: "§ 224 Abs 2 A III 3" }
+  FS.SFP.OTHER_INVESTMENTS: { de: "Wertpapiere des Anlagevermögens", ref: "§ 224 Abs 2 A III 5" }
+  FS.SFP.INVENTORIES: { de: "Vorräte", ref: "§ 224 Abs 2 B I" }
+  FS.SFP.TRADE_RECEIVABLES: { de: "Forderungen aus Lieferungen und Leistungen", ref: "§ 224 Abs 2 B II 1" }
+  FS.SFP.RELATED_PARTY_RECEIVABLES: { de: "Forderungen gegenüber verbundenen Unternehmen", ref: "§ 224 Abs 2 B II 2" }
+  FS.SFP.CASH: { de: "Kassenbestand, Schecks, Guthaben bei Kreditinstituten", ref: "§ 224 Abs 2 B IV" }
+  FS.SFP.PREPAYMENTS: { de: "Rechnungsabgrenzungsposten (aktiv)", ref: "§ 224 Abs 2 C" }
+  FS.SFP.DEFERRED_TAX_ASSETS: { de: "Aktive latente Steuern", ref: "§ 224 Abs 2 D" }
+  FS.SFP.CURRENT_ASSETS: { de: "Umlaufvermögen", ref: "§ 224 Abs 2 B" }
+  FS.SFP.TOTAL_ASSETS: { de: "Summe Aktiva", ref: "§ 224 Abs 2" }
+
+  # ── Bilanz Passiva per § 224 Abs 3 UGB ─────────────────────
+  FS.SFP.SHARE_CAPITAL: { de: "Eingefordertes und einbezahltes Nennkapital", ref: "§ 224 Abs 3 A I" }
+  FS.SFP.SHARE_PREMIUM: { de: "Kapitalrücklagen", ref: "§ 224 Abs 3 A II" }
+  FS.SFP.RETAINED_EARNINGS: { de: "Gewinnrücklagen", ref: "§ 224 Abs 3 A III" }
+  FS.SFP.TREASURY_SHARES: { de: "Eigene Anteile", ref: "§ 224 Abs 3 A I" }
+  FS.SFP.TOTAL_EQUITY: { de: "Eigenkapital", ref: "§ 224 Abs 3 A" }
+  FS.SFP.NCI: { de: "Anteile nicht beherrschender Gesellschafter", ref: "§ 250 UGB" }
+  FS.SFP.PROVISIONS: { de: "Rückstellungen", ref: "§ 224 Abs 3 B" }
+  FS.SFP.EMPLOYEE_BENEFITS_LIABILITY: { de: "Rückstellungen für Abfertigungen und Pensionen", ref: "§ 224 Abs 3 B 1-2" }
+  FS.SFP.LOANS_BORROWINGS: { de: "Verbindlichkeiten gegenüber Kreditinstituten", ref: "§ 224 Abs 3 C 2" }
+  FS.SFP.TRADE_PAYABLES: { de: "Verbindlichkeiten aus Lieferungen und Leistungen", ref: "§ 224 Abs 3 C 4" }
+  FS.SFP.RELATED_PARTY_PAYABLES: { de: "Verbindlichkeiten gegenüber verbundenen Unternehmen", ref: "§ 224 Abs 3 C 6" }
+  FS.SFP.OTHER_LIABILITIES: { de: "Sonstige Verbindlichkeiten", ref: "§ 224 Abs 3 C 8" }
+  FS.SFP.DEFERRED_INCOME: { de: "Rechnungsabgrenzungsposten (passiv)", ref: "§ 224 Abs 3 D" }
+  FS.SFP.DEFERRED_TAX_LIABILITIES: { de: "Latente Steuerrückstellungen", ref: "§ 224 Abs 3 B 3" }
+  FS.SFP.TOTAL_EQUITY_AND_LIABILITIES: { de: "Summe Passiva", ref: "§ 224 Abs 3" }
+
+  # ── GuV Gesamtkostenverfahren per § 231 Abs 2 UGB ──────────
+  FS.PNL.REVENUE: { de: "Umsatzerlöse", ref: "§ 231 Abs 2 Z 1" }
+  FS.PNL.CHANGE_IN_INVENTORIES_FG: { de: "Veränderung des Bestands an fertigen und unfertigen Erzeugnissen", ref: "§ 231 Abs 2 Z 2" }
+  FS.PNL.OWN_WORK_CAPITALISED: { de: "Andere aktivierte Eigenleistungen", ref: "§ 231 Abs 2 Z 3" }
+  FS.PNL.OTHER_INCOME: { de: "Sonstige betriebliche Erträge", ref: "§ 231 Abs 2 Z 4" }
+  FS.PNL.MATERIAL_COSTS: { de: "Materialaufwand", ref: "§ 231 Abs 2 Z 5a" }
+  FS.PNL.PURCHASED_SERVICES: { de: "Aufwendungen für bezogene Leistungen", ref: "§ 231 Abs 2 Z 5b" }
+  FS.PNL.STAFF_COSTS: { de: "Personalaufwand", ref: "§ 231 Abs 2 Z 6" }
+  FS.PNL.DEPRECIATION_AMORTISATION: { de: "Abschreibungen", ref: "§ 231 Abs 2 Z 7" }
+  FS.PNL.OTHER_EXPENSES: { de: "Sonstige betriebliche Aufwendungen", ref: "§ 231 Abs 2 Z 8" }
+  FS.PNL.OPERATING_PROFIT: { de: "Betriebsergebnis (Zwischensumme Z 1–8)", ref: "§ 231 Abs 2 Z 9" }
+  FS.PNL.DIVIDEND_INCOME: { de: "Erträge aus Beteiligungen", ref: "§ 231 Abs 2 Z 10" }
+  FS.PNL.FINANCE_INCOME: { de: "Sonstige Zinsen und ähnliche Erträge", ref: "§ 231 Abs 2 Z 12" }
+  FS.PNL.FINANCE_COSTS: { de: "Zinsen und ähnliche Aufwendungen", ref: "§ 231 Abs 2 Z 15" }
+  FS.PNL.NET_FINANCE_COSTS: { de: "Finanzergebnis (Zwischensumme Z 10–15)", ref: "§ 231 Abs 2 Z 16" }
+  FS.PNL.PROFIT_BEFORE_TAX: { de: "Ergebnis vor Steuern", ref: "§ 231 Abs 2 Z 17" }
+  FS.PNL.INCOME_TAX_EXPENSE: { de: "Steuern vom Einkommen und vom Ertrag", ref: "§ 231 Abs 2 Z 18" }
+  FS.PNL.NET_PROFIT: { de: "Jahresüberschuss / Jahresfehlbetrag", ref: "§ 231 Abs 2 Z 21" }
+  FS.PNL.GW_AMORTIZATION: { de: "Abschreibung auf Firmenwert", ref: "§ 203 UGB" }
+
+# ── UGB-specific concepts (no IFRS equivalent) ───────────────
+ugb_specific_concepts:
+  # Bilanz Aktiva sub-items per § 224
+  - { id: FS.SFP.UGB.CONCESSIONS_IP_LICENSES, label_de: "Konzessionen, Schutzrechte und Lizenzen", ref: "§ 224 Abs 2 A I 1", maps_to: FS.SFP.INTANGIBLE_ASSETS }
+  - { id: FS.SFP.UGB.INTANGIBLE_PREPAYMENTS, label_de: "Geleistete Anzahlungen (immateriell)", ref: "§ 224 Abs 2 A I 3", maps_to: FS.SFP.INTANGIBLE_ASSETS }
+  - { id: FS.SFP.UGB.LAND_AND_BUILDINGS, label_de: "Grundstücke und Bauten", ref: "§ 224 Abs 2 A II 1", maps_to: FS.SFP.PPE_NET }
+  - { id: FS.SFP.UGB.TECHNICAL_EQUIPMENT, label_de: "Technische Anlagen und Maschinen", ref: "§ 224 Abs 2 A II 2", maps_to: FS.SFP.PPE_NET }
+  - { id: FS.SFP.UGB.OTHER_EQUIPMENT_FIXTURES, label_de: "Andere Anlagen, Betriebs- und Geschäftsausstattung", ref: "§ 224 Abs 2 A II 3", maps_to: FS.SFP.PPE_NET }
+  - { id: FS.SFP.UGB.PPE_UNDER_CONSTRUCTION, label_de: "Geleistete Anzahlungen und Anlagen in Bau", ref: "§ 224 Abs 2 A II 4", maps_to: FS.SFP.PPE_NET }
+  - { id: FS.SFP.UGB.LOANS_TO_AFFILIATES, label_de: "Ausleihungen an verbundene Unternehmen", ref: "§ 224 Abs 2 A III 2" }
+  - { id: FS.SFP.UGB.LOANS_TO_ASSOCIATES, label_de: "Ausleihungen an Beteiligungsunternehmen", ref: "§ 224 Abs 2 A III 4" }
+  - { id: FS.SFP.UGB.OTHER_LOANS_NONCURRENT, label_de: "Sonstige Ausleihungen", ref: "§ 224 Abs 2 A III 6" }
+  - { id: FS.SFP.UGB.RAW_MATERIALS, label_de: "Roh-, Hilfs- und Betriebsstoffe", ref: "§ 224 Abs 2 B I 1", maps_to: FS.SFP.INVENTORIES }
+  - { id: FS.SFP.UGB.WORK_IN_PROGRESS, label_de: "Unfertige Erzeugnisse", ref: "§ 224 Abs 2 B I 2", maps_to: FS.SFP.INVENTORIES }
+  - { id: FS.SFP.UGB.FINISHED_GOODS, label_de: "Fertige Erzeugnisse und Waren", ref: "§ 224 Abs 2 B I 3", maps_to: FS.SFP.INVENTORIES }
+  - { id: FS.SFP.UGB.UNBILLED_SERVICES, label_de: "Noch nicht abrechenbare Leistungen", ref: "§ 224 Abs 2 B I 4", maps_to: FS.SFP.INVENTORIES }
+  - { id: FS.SFP.UGB.RECEIVABLES_FROM_ASSOCIATES, label_de: "Forderungen gegenüber Beteiligungsunternehmen", ref: "§ 224 Abs 2 B II 3" }
+  - { id: FS.SFP.UGB.OTHER_RECEIVABLES, label_de: "Sonstige Forderungen und Vermögensgegenstände", ref: "§ 224 Abs 2 B II 4" }
+
+  # Bilanz Passiva sub-items per § 224 Abs 3
+  - { id: FS.SFP.UGB.CAPITAL_RESERVES_RESTRICTED, label_de: "Gebundene Kapitalrücklagen", ref: "§ 224 Abs 3 A II 1", maps_to: FS.SFP.SHARE_PREMIUM }
+  - { id: FS.SFP.UGB.CAPITAL_RESERVES_UNRESTRICTED, label_de: "Nicht gebundene Kapitalrücklagen", ref: "§ 224 Abs 3 A II 2", maps_to: FS.SFP.SHARE_PREMIUM }
+  - { id: FS.SFP.UGB.LEGAL_RESERVE, label_de: "Gesetzliche Rücklage", ref: "§ 224 Abs 3 A III 1", maps_to: FS.SFP.RETAINED_EARNINGS }
+  - { id: FS.SFP.UGB.STATUTORY_RESERVES, label_de: "Satzungsmäßige Rücklagen", ref: "§ 224 Abs 3 A III 2", maps_to: FS.SFP.RETAINED_EARNINGS }
+  - { id: FS.SFP.UGB.FREE_RESERVES, label_de: "Andere (freie) Rücklagen", ref: "§ 224 Abs 3 A III 3", maps_to: FS.SFP.RETAINED_EARNINGS }
+  - { id: FS.SFP.UGB.BALANCE_SHEET_PROFIT, label_de: "Bilanzgewinn / Bilanzverlust", ref: "§ 224 Abs 3 A IV" }
+  - { id: FS.SFP.UGB.PROVISION_SEVERANCE, label_de: "Rückstellungen für Abfertigungen", ref: "§ 224 Abs 3 B 1", maps_to: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY }
+  - { id: FS.SFP.UGB.PROVISION_PENSIONS, label_de: "Rückstellungen für Pensionen", ref: "§ 224 Abs 3 B 2", maps_to: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY }
+  - { id: FS.SFP.UGB.PROVISION_TAX, label_de: "Steuerrückstellungen", ref: "§ 224 Abs 3 B 3", maps_to: FS.SFP.PROVISIONS }
+  - { id: FS.SFP.UGB.PROVISION_OTHER, label_de: "Sonstige Rückstellungen", ref: "§ 224 Abs 3 B 4", maps_to: FS.SFP.PROVISIONS }
+  - { id: FS.SFP.UGB.BONDS_ISSUED, label_de: "Anleihen", ref: "§ 224 Abs 3 C 1", maps_to: FS.SFP.LOANS_BORROWINGS }
+  - { id: FS.SFP.UGB.BANK_BORROWINGS, label_de: "Verbindlichkeiten gegenüber Kreditinstituten", ref: "§ 224 Abs 3 C 2", maps_to: FS.SFP.LOANS_BORROWINGS }
+  - { id: FS.SFP.UGB.ADVANCES_RECEIVED, label_de: "Erhaltene Anzahlungen auf Bestellungen", ref: "§ 224 Abs 3 C 3", maps_to: FS.SFP.CONTRACT_LIABILITIES }
+  - { id: FS.SFP.UGB.PAYABLES_TO_ASSOCIATES, label_de: "Verbindlichkeiten gegenüber Beteiligungsunternehmen", ref: "§ 224 Abs 3 C 7" }
+
+  # GuV items unique to UGB § 231
+  - { id: FS.PNL.UGB.GAIN_DISPOSAL_PPE, label_de: "Erträge aus dem Abgang vom und der Zuschreibung zum Anlagevermögen", ref: "§ 231 Abs 2 Z 4a", maps_to: FS.PNL.OTHER_INCOME }
+  - { id: FS.PNL.UGB.RELEASE_PROVISIONS, label_de: "Erträge aus der Auflösung von Rückstellungen", ref: "§ 231 Abs 2 Z 4b", maps_to: FS.PNL.OTHER_INCOME }
+  - { id: FS.PNL.UGB.WRITEDOWNS_CURRENT_ASSETS, label_de: "Abschreibungen auf Umlaufvermögen (außerplanmäßig)", ref: "§ 231 Abs 2 Z 7b" }
+  - { id: FS.PNL.UGB.NON_INCOME_TAXES, label_de: "Steuern (nicht Ertragsteuern)", ref: "§ 231 Abs 2 Z 8a" }
+  - { id: FS.PNL.UGB.INCOME_FINANCIAL_ASSETS, label_de: "Erträge aus Wertpapieren des Finanzanlagevermögens", ref: "§ 231 Abs 2 Z 11" }
+  - { id: FS.PNL.UGB.GAIN_DISPOSAL_FINANCIAL, label_de: "Erträge aus dem Abgang von Finanzanlagen", ref: "§ 231 Abs 2 Z 13" }
+  - { id: FS.PNL.UGB.EXPENSE_FINANCIAL_ASSETS, label_de: "Aufwendungen aus Finanzanlagen", ref: "§ 231 Abs 2 Z 14" }
+  - { id: FS.PNL.UGB.OTHER_TAXES, label_de: "Sonstige Steuern", ref: "§ 231 Abs 2 Z 20" }
+  - { id: FS.PNL.UGB.RELEASE_CAPITAL_RESERVES, label_de: "Auflösung von Kapitalrücklagen", ref: "§ 231 Abs 2 Z 22" }
+  - { id: FS.PNL.UGB.RELEASE_REVENUE_RESERVES, label_de: "Auflösung von Gewinnrücklagen", ref: "§ 231 Abs 2 Z 23" }
+  - { id: FS.PNL.UGB.ALLOCATION_TO_RESERVES, label_de: "Zuweisung zu Gewinnrücklagen", ref: "§ 231 Abs 2 Z 24" }
+  - { id: FS.PNL.UGB.PROFIT_BROUGHT_FORWARD, label_de: "Gewinn-/Verlustvortrag aus dem Vorjahr", ref: "§ 231 Abs 2 Z 25" }
+  - { id: FS.PNL.UGB.BALANCE_SHEET_PROFIT, label_de: "Bilanzgewinn / Bilanzverlust", ref: "§ 231 Abs 2 Z 26" }
+
+# ── Key UGB vs IFRS structural differences ───────────────────
+notes:
+  - "UGB mandates Gesamtkostenverfahren (nature-of-expense) per § 231"
+  - "UGB P&L extends through appropriation items (Z22-Z26) to Bilanzgewinn — IFRS stops at net profit"
+  - "UGB prescribes 4 provision categories (severance, pension, tax, other) — IFRS has one line"
+  - "UGB requires legal/statutory/free reserve split — IFRS uses single retained earnings"
+  - "IC 'davon' items required on many financial result lines (Z10-Z15)"
+  - "Verbindlichkeitenspiegel (§ 225 Abs 6) requires maturity bands: <1yr, 1-5yr, >5yr"
