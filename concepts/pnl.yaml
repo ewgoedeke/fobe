@@ -1,0 +1,374 @@
+# FS.PNL.* — Profit and Loss / Income Statement
+# All amounts in Dr+/Cr- natural sign: expenses positive (debit), income negative (credit)
+
+concepts:
+
+  # ── Revenue ────────────────────────────────────────────────
+  - id: FS.PNL.REVENUE
+    label: Revenue
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.REVENUE_RECOGNIZED
+    label: Revenue from contracts with customers (IFRS 15)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  # ── Cost of sales format (Umsatzkostenverfahren) ──────────
+  - id: FS.PNL.COST_OF_SALES
+    label: Cost of sales
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.GROSS_PROFIT
+    label: Gross profit
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.PNL.SELLING_DISTRIBUTION
+    label: Selling and distribution expenses
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.ADMIN_EXPENSES
+    label: Administrative expenses
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.RD_EXPENSES
+    label: Research and development expenses
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  # ── Nature of expense format (Gesamtkostenverfahren) ──────
+  - id: FS.PNL.MATERIAL_COSTS
+    label: Raw materials and consumables used
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.STAFF_COSTS
+    label: Employee benefits expense / personnel expense
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.DEPRECIATION_AMORTISATION
+    label: Depreciation and amortisation
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.DEPRECIATION
+    label: Depreciation
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.DEPRECIATION_ROU
+    label: Depreciation of right-of-use assets (IFRS 16)
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.CHANGE_IN_INVENTORIES_FG
+    label: Changes in inventories of finished goods and WIP
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.OWN_WORK_CAPITALISED
+    label: Own work capitalised
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.PURCHASED_SERVICES
+    label: Purchased services
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.TOTAL_COSTS_EXPENSES
+    label: Total costs and expenses
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Other operating ────────────────────────────────────────
+  - id: FS.PNL.OTHER_INCOME
+    label: Other operating income
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.OTHER_EXPENSES
+    label: Other operating expenses
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.IMPAIRMENT_EXPENSE
+    label: Impairment losses on non-financial assets
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.REVERSAL_IMPAIRMENT
+    label: Reversal of impairment losses (IAS 36)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS
+    label: Impairment losses on financial assets (IFRS 9 ECL)
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.DERIVATIVE_GAINS_LOSSES
+    label: Net gains/losses on derivatives (non-hedge)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.FX_GAINS_LOSSES
+    label: Net foreign exchange gains/losses
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  # ── Operating result ───────────────────────────────────────
+  - id: FS.PNL.EBITDA
+    label: EBITDA
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.PNL.OPERATING_PROFIT
+    label: Operating profit / EBIT
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Financial result ───────────────────────────────────────
+  - id: FS.PNL.FINANCE_INCOME
+    label: Finance income
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.FINANCE_COSTS
+    label: Finance costs
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.NET_FINANCE_COSTS
+    label: Net finance costs / financial result
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.PNL.SHARE_OF_PROFIT_ASSOCIATES
+    label: Share of profit of associates and joint ventures
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.DIVIDEND_INCOME
+    label: Dividend income
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  # ── Tax and net profit ─────────────────────────────────────
+  - id: FS.PNL.PROFIT_BEFORE_TAX
+    label: Profit before tax
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.PNL.INCOME_TAX_EXPENSE
+    label: Income tax expense
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.PROFIT_CONTINUING
+    label: Profit from continuing operations
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.PNL.PROFIT_DISCONTINUED
+    label: Profit from discontinued operations (IFRS 5)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.NET_PROFIT
+    label: Profit for the period
+    balance_type: credit
+    period_type: duration
+    source_type: both
+    mappable: true
+    is_monetary: false
+    is_total: true
+
+  # ── Attribution ────────────────────────────────────────────
+  - id: FS.PNL.PROFIT_ATTR_OWNERS
+    label: Profit attributable to owners of the parent
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.PROFIT_ATTR_NCI
+    label: Profit attributable to non-controlling interests
+    balance_type: credit
+    period_type: duration
+    source_type: consolidation
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  # ── Earnings per share ─────────────────────────────────────
+  - id: FS.PNL.EPS_BASIC
+    label: Basic earnings per share
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.EPS_DILUTED
+    label: Diluted earnings per share
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  # ── Consolidation-only ─────────────────────────────────────
+  - id: FS.PNL.GW_AMORTIZATION
+    label: Goodwill amortisation (UGB only)
+    balance_type: debit
+    period_type: duration
+    source_type: consolidation
+    mappable: false
+    is_monetary: false
+    is_total: false

@@ -1,0 +1,42 @@
+# FOBE — Framework for Ontology Building and Evaluation
+# Master ontology file
+#
+# Concept naming: {family}.{statement}.{concept}
+#   FS.SFP.*    Balance sheet (Statement of Financial Position)
+#   FS.PNL.*    Income statement (Profit and Loss)
+#   FS.OCI.*    Other comprehensive income
+#   FS.CFS.*    Cash flow statement
+#   FS.SOCIE.*  Statement of changes in equity
+#   DISC.*.*    Disclosure notes
+
+ontology_meta:
+  name: FOBE_FINONTOLOGY
+  version: 0.1.0
+  description: >
+    Multi-GAAP financial reporting ontology for tagging, validation,
+    and consolidation. Covers IFRS, UGB (Austrian), HGB (German).
+    Industry extensions for banks (IFRS 9/7) and insurers (IFRS 17).
+  sign_convention: natural  # Dr+/Cr- (debits positive, credits negative)
+  period_model:
+    period_key_axis: AXIS.PERIOD_KEY      # PERK.xxx per document
+    period_relation_axis: AXIS.PERIOD_RELATION  # PREL.CURRENT / PREL.COMPARATIVE
+    time_type_axis: AXIS.TIME_TYPE        # TIME.INSTANT / TIME.DURATION
+
+imports:
+  - contexts.yaml
+  - concepts/sfp.yaml
+  - concepts/pnl.yaml
+  - concepts/oci.yaml
+  - concepts/cfs.yaml
+  - concepts/socie.yaml
+  - concepts/disc/ppe.yaml
+  - concepts/disc/fin_inst.yaml
+  - concepts/disc/tax.yaml
+  - concepts/disc/leases.yaml
+  - concepts/disc/segment.yaml
+  - axes.yaml
+  - relations.yaml
+  - aliases.yaml
+  - gaap/ifrs.yaml
+  - gaap/ugb.yaml
+  - gaap/hgb.yaml

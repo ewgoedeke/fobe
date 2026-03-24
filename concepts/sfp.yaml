@@ -1,0 +1,513 @@
+# FS.SFP.* — Statement of Financial Position (Balance Sheet)
+# All amounts in Dr+/Cr- natural sign: assets positive, equity/liabilities negative
+
+concepts:
+
+  # ── Non-current assets ─────────────────────────────────────
+  - id: FS.SFP.PPE_NET
+    label: Property, plant and equipment
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.RIGHT_OF_USE_ASSETS
+    label: Right-of-use assets (IFRS 16)
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.INVESTMENT_PROPERTY
+    label: Investment property
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.GOODWILL
+    label: Goodwill
+    balance_type: debit
+    period_type: instant
+    source_type: both
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.INTANGIBLE_ASSETS
+    label: Intangible assets other than goodwill
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.INTANGIBLE_ASSETS_GOODWILL
+    label: Intangible assets and goodwill (combined)
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.EQUITY_ACCOUNTED_INVESTEES
+    label: Investments in associates and joint ventures
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.INVESTMENT_IN_SUB
+    label: Investment in subsidiary
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.OTHER_INVESTMENTS
+    label: Other financial investments
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DERIVATIVE_ASSETS
+    label: Derivative financial instruments (assets)
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DEFERRED_TAX_ASSETS
+    label: Deferred tax assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.BIOLOGICAL_ASSETS
+    label: Biological assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.PPE_FV_UPLIFT
+    label: PPE fair value uplift
+    balance_type: debit
+    period_type: instant
+    source_type: consolidation
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.NON_CURRENT_ASSETS
+    label: Total non-current assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Current assets ─────────────────────────────────────────
+  - id: FS.SFP.INVENTORIES
+    label: Inventories
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.TRADE_RECEIVABLES
+    label: Trade receivables
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.CONTRACT_ASSETS
+    label: Contract assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DIVIDEND_RECEIVABLE
+    label: Dividend receivable
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.CURRENT_TAX_ASSETS
+    label: Current tax assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.RELATED_PARTY_RECEIVABLES
+    label: Receivables from related parties
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.PREPAYMENTS
+    label: Prepayments and other current assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.OTHER_NON_FINANCIAL_ASSETS
+    label: Other non-financial assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.CASH
+    label: Cash and cash equivalents
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.ASSETS_HELD_FOR_SALE
+    label: Assets held for sale (IFRS 5)
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.CURRENT_ASSETS
+    label: Total current assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.SFP.TOTAL_ASSETS
+    label: Total assets
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Equity ─────────────────────────────────────────────────
+  - id: FS.SFP.SHARE_CAPITAL
+    label: Share capital / issued capital
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.SHARE_PREMIUM
+    label: Share premium / capital reserves
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.TREASURY_SHARES
+    label: Treasury shares
+    balance_type: debit  # contra-equity, debit balance
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.RETAINED_EARNINGS
+    label: Retained earnings
+    balance_type: credit
+    period_type: instant
+    source_type: both
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.RESERVES
+    label: Other reserves (OCI reserves, revaluation, etc.)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.CTA_RESERVE
+    label: Currency translation reserve
+    balance_type: credit
+    period_type: instant
+    source_type: consolidation
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.EQUITY_ATTR_OWNERS
+    label: Equity attributable to owners of the parent
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.SFP.NCI
+    label: Non-controlling interests
+    balance_type: credit
+    period_type: instant
+    source_type: consolidation
+    mappable: false
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.TOTAL_EQUITY
+    label: Total equity
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Non-current liabilities ────────────────────────────────
+  - id: FS.SFP.LOANS_BORROWINGS
+    label: Loans and borrowings / financial liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.LEASE_LIABILITIES
+    label: Lease liabilities (IFRS 16)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY
+    label: Employee benefit obligations (pensions, severance)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.PROVISIONS
+    label: Provisions
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DEFERRED_TAX_LIABILITIES
+    label: Deferred tax liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DEFERRED_INCOME
+    label: Deferred income / government grants
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DERIVATIVE_LIABILITIES
+    label: Derivative financial instruments (liabilities)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.OTHER_FINANCIAL_LIABILITIES
+    label: Other financial liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.NON_CURRENT_LIABILITIES
+    label: Total non-current liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  # ── Current liabilities ────────────────────────────────────
+  - id: FS.SFP.TRADE_PAYABLES
+    label: Trade payables
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.CONTRACT_LIABILITIES
+    label: Contract liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.DIVIDEND_PAYABLE
+    label: Dividend payable
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.CURRENT_TAX_LIABILITIES
+    label: Current tax liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.RELATED_PARTY_PAYABLES
+    label: Payables to related parties
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.OTHER_PAYABLES
+    label: Other payables and current liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.OTHER_LIABILITIES
+    label: Other liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.SUPPLIER_FINANCING_LIABILITIES
+    label: Supplier financing arrangement liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: true
+    is_total: false
+
+  - id: FS.SFP.LIABILITIES_HELD_FOR_SALE
+    label: Liabilities associated with assets held for sale (IFRS 5)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.SFP.CURRENT_LIABILITIES
+    label: Total current liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.SFP.TOTAL_LIABILITIES
+    label: Total liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
+
+  - id: FS.SFP.TOTAL_EQUITY_AND_LIABILITIES
+    label: Total equity and liabilities
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: true
