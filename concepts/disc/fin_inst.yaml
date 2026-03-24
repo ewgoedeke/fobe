@@ -1,0 +1,12 @@
+# DISC.FIN_INST.* — Financial Instruments Disclosure (IFRS 7/9)
+# Source: KPMG IFRS IFS 2025, pages 114-120
+
+concepts:
+  - { id: DISC.FIN_INST.ASSET_FV_HEDGING, label: "Financial assets — FV hedging instruments", period_type: instant }
+  - { id: DISC.FIN_INST.ASSET_FVTPL_MANDATORY, label: "Financial assets — mandatorily at FVTPL", period_type: instant }
+  - { id: DISC.FIN_INST.ASSET_FVOCI_DEBT, label: "Financial assets — FVOCI debt instruments", period_type: instant }
+  - { id: DISC.FIN_INST.ASSET_FVOCI_EQUITY, label: "Financial assets — FVOCI equity instruments", period_type: instant }
+  - { id: DISC.FIN_INST.ASSET_AMORTISED_COST, label: "Financial assets — amortised cost", period_type: instant }
+  - { id: DISC.FIN_INST.LIABILITY_FV_HEDGING, label: "Financial liabilities — FV hedging instruments", period_type: instant }
+  - { id: DISC.FIN_INST.LIABILITY_FVTPL, label: "Financial liabilities — FVTPL", period_type: instant }
+  - { id: DISC.FIN_INST.LIABILITY_AMORTISED_COST, label: "Financial liabilities — amortised cost", period_type: instant }

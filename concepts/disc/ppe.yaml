@@ -1,0 +1,24 @@
+# DISC.PPE.* — PPE Rollforward Disclosure (IAS 16)
+# Source: KPMG IFRS IFS 2025, pages 78-79
+# Categories via AXIS.PPE_CLASS_DOC: land/buildings, plant/equipment, fixtures, under construction
+
+concepts:
+  - { id: DISC.PPE.COST_OPENING, label: "Cost — opening balance", period_type: instant }
+  - { id: DISC.PPE.COST_ADDITIONS, label: "Cost — additions", period_type: duration }
+  - { id: DISC.PPE.COST_BCA, label: "Cost — acquisitions through business combinations", period_type: duration }
+  - { id: DISC.PPE.COST_RECLASS_TO_INV_PROP, label: "Cost — reclassification to investment property", period_type: duration }
+  - { id: DISC.PPE.COST_RECLASS_TO_HFS, label: "Cost — reclassification to assets held for sale", period_type: duration }
+  - { id: DISC.PPE.COST_DISPOSALS, label: "Cost — disposals", period_type: duration }
+  - { id: DISC.PPE.COST_FX_EFFECT, label: "Cost — effect of FX movements", period_type: duration }
+  - { id: DISC.PPE.COST_CLOSING, label: "Cost — closing balance", period_type: instant, is_total: true }
+  - { id: DISC.PPE.ACCUM_DEPR_OPENING, label: "Accumulated depreciation — opening", period_type: instant }
+  - { id: DISC.PPE.ACCUM_DEPR_CHARGE, label: "Accumulated depreciation — charge for year", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_IMPAIRMENT, label: "Accumulated depreciation — impairment loss", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_IMPAIRMENT_REVERSAL, label: "Accumulated depreciation — reversal of impairment", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_RECLASS, label: "Accumulated depreciation — reclassifications", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_DISPOSALS, label: "Accumulated depreciation — disposals", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_FX_EFFECT, label: "Accumulated depreciation — FX effect", period_type: duration }
+  - { id: DISC.PPE.ACCUM_DEPR_CLOSING, label: "Accumulated depreciation — closing", period_type: instant, is_total: true }
+  - { id: DISC.PPE.CARRYING_AMOUNT, label: "Carrying amount (net)", period_type: instant, is_total: true }
+  - { id: DISC.PPE.PPE_GROSS, label: "PPE gross carrying amount", period_type: instant }
+  - { id: DISC.PPE.ACCUMULATED_DEPRECIATION, label: "Accumulated depreciation total", period_type: instant }

@@ -1,0 +1,153 @@
+# FS.OCI.* — Other Comprehensive Income
+# Source: KPMG IFRS IFS 2025, pages 21-22
+
+concepts:
+  # ── Items NOT reclassified to P&L ──────────────────────────
+  - id: FS.OCI.REVALUATION_PPE
+    label: Revaluation of property, plant and equipment
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.REMEASURE_DEFINED_BENEFIT
+    label: Remeasurements of defined benefit liability (asset)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.FVOCI_EQUITY_FV_CHANGE
+    label: Equity investments at FVOCI — net change in fair value
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.EQUITY_INVESTEES_SHARE_NON_RECLASS
+    label: Share of OCI of equity-accounted investees (non-reclassifiable)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.TAX_NON_RECLASSIFIABLE
+    label: Related tax on non-reclassifiable items
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.TOTAL_NON_RECLASSIFIABLE
+    label: Items that will not be reclassified to profit or loss
+    balance_type: credit
+    period_type: duration
+    is_total: true
+
+  # ── Items reclassifiable to P&L ────────────────────────────
+  - id: FS.OCI.FX_TRANSLATION
+    label: Foreign currency translation differences
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.NET_INVESTMENT_HEDGE
+    label: Net investment hedge — effective portion
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.EQUITY_INVESTEES_SHARE_RECLASS
+    label: Share of OCI of equity-accounted investees (reclassifiable)
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE
+    label: Reclassification of FX differences on loss of significant influence
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.CFH_EFFECTIVE_PORTION
+    label: Cash flow hedges — effective portion of changes in fair value
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.CFH_RECLASS_TO_PNL
+    label: Cash flow hedges — reclassified to profit or loss
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.COST_OF_HEDGING_FV_CHANGE
+    label: Cost of hedging reserve — changes in fair value
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.COST_OF_HEDGING_RECLASS_TO_PNL
+    label: Cost of hedging reserve — reclassified to profit or loss
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.FVOCI_DEBT_FV_CHANGE
+    label: Debt investments at FVOCI — net change in fair value
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.FVOCI_DEBT_RECLASS_TO_PNL
+    label: Debt investments at FVOCI — reclassified to profit or loss
+    balance_type: credit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.TAX_RECLASSIFIABLE
+    label: Related tax on reclassifiable items
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+
+  - id: FS.OCI.TOTAL_RECLASSIFIABLE
+    label: Items that are or may be reclassified to profit or loss
+    balance_type: credit
+    period_type: duration
+    is_total: true
+
+  # ── Totals and attribution ─────────────────────────────────
+  - id: FS.OCI.TOTAL_OCI
+    label: Other comprehensive income for the period, net of tax
+    balance_type: credit
+    period_type: duration
+    is_total: true
+
+  - id: FS.OCI.TOTAL_COMPREHENSIVE_INCOME
+    label: Total comprehensive income for the period
+    balance_type: credit
+    period_type: duration
+    is_total: true
+
+  - id: FS.OCI.TCI_ATTR_OWNERS
+    label: Total comprehensive income attributable to owners of the parent
+    balance_type: credit
+    period_type: duration
+
+  - id: FS.OCI.TCI_ATTR_NCI
+    label: Total comprehensive income attributable to NCI
+    balance_type: credit
+    period_type: duration
+    source_type: consolidation

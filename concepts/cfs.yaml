@@ -1,0 +1,89 @@
+# FS.CFS.* — Cash Flow Statement (Indirect Method)
+# Source: KPMG IFRS IFS 2025, pages 26-27
+
+concepts:
+  # ── Operating activities (indirect) ────────────────────────
+  - { id: FS.CFS.PROFIT_FOR_PERIOD, label: "Profit for the period", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_DEPRECIATION, label: "Depreciation", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_AMORTISATION, label: "Amortisation", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_DEPRECIATION_ROU, label: "Depreciation of right-of-use assets", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_DEFERRED_INCOME, label: "Deferred income", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_IMPAIRMENT_PPE, label: "(Reversal of) impairment losses on PPE", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_IMPAIRMENT_INTANGIBLES, label: "Impairment losses on intangible assets and goodwill", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_IMPAIRMENT_DISPOSAL_GROUP, label: "Impairment loss on remeasurement of disposal group", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_FV_BIOLOGICAL, label: "Change in fair value of biological assets", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_FV_INVESTMENT_PROPERTY, label: "Change in fair value of investment property", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_NET_FINANCE_COSTS, label: "Net finance costs", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_SHARE_EQUITY_INVESTEES, label: "Share of profit of equity-accounted investees", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_GAIN_SALE_PPE, label: "Gain on sale of PPE", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_GAIN_SALE_DISCONT_OP, label: "Gain on sale of discontinued operation", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_SBP_EQUITY, label: "Equity-settled share-based payment transactions", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_TAX_EXPENSE, label: "Tax expense", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_GAIN_LOSS_FIN_INVESTMENTS, label: "Gain/loss on financial investments", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ADJ_PROVISIONS_EXPENSE, label: "Net provisions expense adjustment", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_FX_EFFECT, label: "Net foreign exchange adjustment", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_OTHER, label: "Other non-cash adjustments", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.NON_CASH_ADJ_TOTAL, label: "Total non-cash reconciliation adjustments", balance_type: debit, period_type: duration, is_total: true }
+
+  # ── Working capital changes ────────────────────────────────
+  - { id: FS.CFS.WC_INVENTORIES, label: "Change in inventories", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.WC_TRADE_RECEIVABLES, label: "Change in trade and other receivables", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.WC_CONTRACT_ASSETS, label: "Change in contract assets", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.WC_PREPAYMENTS, label: "Change in prepayments", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.WC_TRADE_PAYABLES, label: "Change in trade and other payables", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.WC_CONTRACT_LIABILITIES, label: "Change in contract liabilities", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.WC_PROVISIONS, label: "Change in provisions and employee benefits", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.WC_INTANGIBLE_EMISSIONS, label: "Change in intangible assets (emissions allowances)", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.WC_CHANGE_TOTAL, label: "Total working capital change", balance_type: debit, period_type: duration, is_total: true }
+
+  # ── Operating cash flows ───────────────────────────────────
+  - { id: FS.CFS.CASH_GENERATED_OPERATIONS, label: "Cash generated from operating activities", balance_type: debit, period_type: duration, is_total: true }
+  - { id: FS.CFS.INTEREST_PAID, label: "Interest paid", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.INCOME_TAXES_PAID, label: "Income taxes paid", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.PROVISIONS_PAID, label: "Provisions paid (settlement)", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.NET_CASH_OPERATING, label: "Net cash from operating activities", balance_type: debit, period_type: duration, is_total: true }
+
+  # ── Investing activities ───────────────────────────────────
+  - { id: FS.CFS.INTEREST_RECEIVED, label: "Interest received", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.DIVIDENDS_RECEIVED, label: "Dividends received", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_SALE_PPE, label: "Proceeds from sale of PPE", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_SALE_INVESTMENTS, label: "Proceeds from sale of investments", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.DISPOSAL_DISCONT_OP, label: "Disposal of discontinued operation, net of cash", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_SUBSIDIARY, label: "Acquisition of subsidiary, net of cash acquired", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_PPE, label: "Acquisition of PPE", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_INVESTMENT_PROPERTY, label: "Acquisition of investment property", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_BIOLOGICAL_ASSETS, label: "Purchase of biological assets", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_OTHER_INVESTMENTS, label: "Acquisition of other investments", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.DIVIDENDS_EQUITY_INVESTEES, label: "Dividends from equity-accounted investees", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.DEVELOPMENT_EXPENDITURE, label: "Development expenditure", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.GOVT_GRANT_RECEIVED, label: "Receipt of asset-related government grant", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.RELATED_PARTY_LOAN_REPAYMENT, label: "Repayment of related party loans", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.NET_CASH_INVESTING, label: "Net cash used in investing activities", balance_type: credit, period_type: duration, is_total: true }
+
+  # ── Financing activities ───────────────────────────────────
+  - { id: FS.CFS.PROCEEDS_SHARE_CAPITAL, label: "Proceeds from issue of share capital", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_CONVERTIBLE_NOTES, label: "Proceeds from issue of convertible notes", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_BORROWINGS, label: "Proceeds from loans and borrowings", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_TREASURY_SHARES, label: "Proceeds from sale of treasury shares", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_SHARE_OPTIONS, label: "Proceeds from exercise of share options", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.PROCEEDS_DERIVATIVES, label: "Proceeds from settlement of derivatives", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.TRANSACTION_COSTS_BORROWINGS, label: "Transaction costs on loans and borrowings", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.ACQUISITION_NCI, label: "Acquisition of NCI", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.REPURCHASE_TREASURY_SHARES, label: "Repurchase of treasury shares", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.REPAYMENT_BORROWINGS, label: "Repayment of borrowings", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.PAYMENT_LEASE_LIABILITIES, label: "Payment of lease liabilities", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.DIVIDENDS_PAID, label: "Dividends paid", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.RELATED_PARTY_FINANCING, label: "Financing with related parties", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.REPAYMENT_EARNOUT, label: "Payment of contingent consideration (earnout)", balance_type: credit, period_type: duration }
+  - { id: FS.CFS.NET_CASH_FINANCING, label: "Net cash from financing activities", balance_type: debit, period_type: duration, is_total: true }
+
+  # ── Reconciliation to balance ──────────────────────────────
+  - { id: FS.CFS.NET_CHANGE_CASH, label: "Net change in cash and cash equivalents", balance_type: debit, period_type: duration, is_total: true }
+  - { id: FS.CFS.CASH_OPENING, label: "Cash and cash equivalents at beginning of period", balance_type: debit, period_type: instant }
+  - { id: FS.CFS.FX_EFFECT_ON_CASH, label: "Effect of exchange rate changes on cash", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.SPINOFF_CASH_TRANSFER, label: "Cash transferred in spin-off/demerger", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.CASH_CLOSING, label: "Cash and cash equivalents at end of period", balance_type: debit, period_type: instant, is_total: true }
+
+  # ── Direct method operating (alternative) ──────────────────
+  - { id: FS.CFS.DIRECT_RECEIPTS_CUSTOMERS, label: "Cash receipts from customers", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.DIRECT_PAID_SUPPLIERS_EMPLOYEES, label: "Cash paid to suppliers and employees", balance_type: credit, period_type: duration }

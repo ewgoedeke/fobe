@@ -1,0 +1,42 @@
+# FS.SOCIE.* — Statement of Changes in Equity
+# Source: KPMG IFRS IFS 2025, pages 24-25
+# Matrix format: column concepts (reserve balances) × row concepts (movements)
+
+concepts:
+  # ── Column concepts (equity components) — instant balances ─
+  - { id: FS.SOCIE.SHARE_CAPITAL, label: "Share capital", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.SHARE_PREMIUM, label: "Share premium", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.TRANSLATION_RESERVE, label: "Translation reserve", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.COST_OF_HEDGING_RESERVE, label: "Cost of hedging reserve", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.HEDGING_RESERVE, label: "Hedging reserve", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.FAIR_VALUE_RESERVE, label: "Fair value reserve", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.REVALUATION_RESERVE, label: "Revaluation reserve", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.TREASURY_SHARES, label: "Treasury shares", balance_type: debit, period_type: instant }
+  - { id: FS.SOCIE.EQUITY_COMPONENT_CONVERTIBLE, label: "Equity component of convertible notes", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.RETAINED_EARNINGS, label: "Retained earnings", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.TOTAL_ATTR_OWNERS, label: "Total attributable to owners", balance_type: credit, period_type: instant, is_total: true }
+  - { id: FS.SOCIE.NCI, label: "Non-controlling interests", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.TOTAL_EQUITY, label: "Total equity", balance_type: credit, period_type: instant, is_total: true }
+
+  # ── Row concepts (movements) — duration ────────────────────
+  - { id: FS.SOCIE.BALANCE_PREVIOUSLY_REPORTED, label: "Balance as previously reported", balance_type: credit, period_type: instant }
+  - { id: FS.SOCIE.CORRECTION_OF_ERRORS, label: "Impact of correction of errors", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.BALANCE_RESTATED, label: "Restated balance", balance_type: credit, period_type: instant, is_total: true }
+  - { id: FS.SOCIE.PROFIT_FOR_PERIOD, label: "Profit for the period", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.OCI_FOR_PERIOD, label: "Other comprehensive income", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.TOTAL_COMPREHENSIVE_INCOME, label: "Total comprehensive income", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.SOCIE.HEDGE_TRANSFER_TO_INVENTORY, label: "Hedging gains/losses transferred to cost of inventory", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.ISSUE_ORDINARY_SHARES, label: "Issue of ordinary shares", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.ISSUE_SHARES_BCA, label: "Issue of shares related to business combinations", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.ISSUE_CONVERTIBLE_NOTES, label: "Issue of convertible notes", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.TREASURY_SHARES_ACQUIRED, label: "Treasury shares acquired", balance_type: debit, period_type: duration }
+  - { id: FS.SOCIE.TREASURY_SHARES_SOLD, label: "Treasury shares sold", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.DIVIDENDS, label: "Dividends", balance_type: debit, period_type: duration }
+  - { id: FS.SOCIE.EQUITY_SETTLED_SBP, label: "Equity-settled share-based payment", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.SHARE_OPTIONS_EXERCISED, label: "Share options exercised", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.TOTAL_CONTRIBUTIONS_DISTRIBUTIONS, label: "Total contributions and distributions", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.SOCIE.ACQUISITION_NCI_NO_CONTROL_CHANGE, label: "Acquisition of NCI without change in control", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.ACQUISITION_SUBSIDIARY_WITH_NCI, label: "Acquisition of subsidiary with NCI", balance_type: credit, period_type: duration }
+  - { id: FS.SOCIE.TOTAL_OWNERSHIP_CHANGES, label: "Total changes in ownership interests", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.SOCIE.TOTAL_TRANSACTIONS_WITH_OWNERS, label: "Total transactions with owners", balance_type: credit, period_type: duration, is_total: true }
+  - { id: FS.SOCIE.BALANCE_CLOSING, label: "Balance at end of period", balance_type: credit, period_type: instant, is_total: true }
