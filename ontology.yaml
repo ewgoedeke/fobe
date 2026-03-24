@@ -39,6 +39,9 @@ imports:
   - concepts/disc/related_parties.yaml
   - concepts/disc/contingencies.yaml
   - concepts/disc/inventory.yaml
+  - concepts/disc/personnel.yaml
+  - concepts/disc/auditor_fees.yaml
+  - concepts/disc/ugb_notes.yaml
   # Cross-cutting
   - axes.yaml
   - relations.yaml
