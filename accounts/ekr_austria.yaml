@@ -1,0 +1,182 @@
+# Austrian Einheitskontenrahmen (EKR) → FOBE Concept Mapping
+# 220 accounts across classes 0-9, mapped to FOBE ontology concepts
+# Source: Austrian standard chart of accounts (Einheitskontenrahmen)
+
+meta:
+  name: Austrian EKR
+  jurisdiction: AT
+  framework: UGB
+  account_format: "4-digit (XXXX)"
+  version: "2025"
+
+# ── Class 0: Anlagevermögen (Fixed Assets) ───────────────────
+class_0:
+  - { acct: "0100", de: "Konzessionen", en: "Concessions", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.1" }
+  - { acct: "0110", de: "Patente", en: "Patents", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.1" }
+  - { acct: "0120", de: "Lizenzen", en: "Licenses", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.1" }
+  - { acct: "0130", de: "Marken und ähnliche Rechte", en: "Trademarks", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.1" }
+  - { acct: "0150", de: "EDV-Software", en: "Software", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.1" }
+  - { acct: "0180", de: "Geschäfts(Firmen)wert", en: "Goodwill", concept: FS.SFP.GOODWILL, ref: "§203 UGB" }
+  - { acct: "0190", de: "Geleistete Anzahlungen immat. VG", en: "Advances on intangibles", concept: FS.SFP.INTANGIBLE_ASSETS, ref: "§224 A.I.2" }
+  - { acct: "0200", de: "Unbebaute Grundstücke", en: "Undeveloped land", concept: FS.SFP.PPE_NET, ref: "§224 A.II.1", ppe_class: PPEDOC.LAND }
+  - { acct: "0210", de: "Bebaute Grundstücke und Bauten", en: "Land and buildings", concept: FS.SFP.PPE_NET, ref: "§224 A.II.1", ppe_class: PPEDOC.LAND_BUILDINGS }
+  - { acct: "0300", de: "Maschinen", en: "Machinery", concept: FS.SFP.PPE_NET, ref: "§224 A.II.2", ppe_class: PPEDOC.MACHINERY }
+  - { acct: "0310", de: "Maschinelle Anlagen", en: "Plant equipment", concept: FS.SFP.PPE_NET, ref: "§224 A.II.2", ppe_class: PPEDOC.PLANT }
+  - { acct: "0400", de: "Büromaschinen", en: "Office machines", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.OFFICE_EQUIPMENT }
+  - { acct: "0420", de: "EDV-Anlagen (Hardware)", en: "IT equipment", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.IT_EQUIPMENT }
+  - { acct: "0440", de: "Werkzeuge", en: "Tools", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.TOOLS }
+  - { acct: "0450", de: "Fuhrpark (PKW)", en: "Motor vehicles (cars)", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.VEHICLES }
+  - { acct: "0460", de: "Fuhrpark (LKW)", en: "Motor vehicles (trucks)", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.VEHICLES }
+  - { acct: "0480", de: "Geschäftsausstattung", en: "Fixtures and fittings", concept: FS.SFP.PPE_NET, ref: "§224 A.II.3", ppe_class: PPEDOC.FIXTURES }
+  - { acct: "0500", de: "Geleistete Anzahlungen Sachanlagen", en: "Advances on PPE", concept: FS.SFP.PPE_NET, ref: "§224 A.II.4", ppe_class: PPEDOC.UNDER_CONSTRUCTION }
+  - { acct: "0510", de: "Anlagen in Bau", en: "Construction in progress", concept: FS.SFP.PPE_NET, ref: "§224 A.II.4", ppe_class: PPEDOC.UNDER_CONSTRUCTION }
+  - { acct: "0600", de: "Anteile an verbundenen Unternehmen", en: "Shares in subsidiaries", concept: FS.SFP.INVESTMENT_IN_SUB, ref: "§224 A.III.1" }
+  - { acct: "0610", de: "Beteiligungen", en: "Participating interests", concept: FS.SFP.EQUITY_ACCOUNTED_INVESTEES, ref: "§224 A.III.3" }
+  - { acct: "0650", de: "Wertpapiere des Anlagevermögens", en: "Non-current securities", concept: FS.SFP.OTHER_INVESTMENTS, ref: "§224 A.III.5" }
+  - { acct: "0660", de: "Ausleihungen an verbundene Unternehmen", en: "Loans to affiliates", concept: FS.SFP.OTHER_INVESTMENTS, ref: "§224 A.III.2", ic: true }
+  - { acct: "0670", de: "Ausleihungen an Beteiligungsunternehmen", en: "Loans to associates", concept: FS.SFP.OTHER_INVESTMENTS, ref: "§224 A.III.4", ic: true }
+  - { acct: "0680", de: "Sonstige Ausleihungen", en: "Other non-current loans", concept: FS.SFP.OTHER_INVESTMENTS, ref: "§224 A.III.6" }
+
+# ── Class 1: Vorräte (Inventories) ──────────────────────────
+class_1:
+  - { acct: "1100", de: "Rohstoffe", en: "Raw materials", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.1", inv_class: RAW_MATERIALS }
+  - { acct: "1200", de: "Bezogene Teile / Zubehör", en: "Purchased components", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.1", inv_class: RAW_MATERIALS }
+  - { acct: "1300", de: "Hilfsstoffe", en: "Auxiliary materials", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.1", inv_class: RAW_MATERIALS }
+  - { acct: "1400", de: "Betriebsstoffe", en: "Operating supplies", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.1", inv_class: SUPPLIES }
+  - { acct: "1500", de: "Halberzeugnisse (unfertige)", en: "Work in progress", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.2", inv_class: WIP }
+  - { acct: "1600", de: "Fertigerzeugnisse", en: "Finished goods", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.3", inv_class: FINISHED_GOODS }
+  - { acct: "1700", de: "Handelswaren", en: "Merchandise", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.3", inv_class: MERCHANDISE }
+  - { acct: "1800", de: "Noch nicht abrechenbare Leistungen", en: "Not yet billable services", concept: FS.SFP.CONTRACT_ASSETS, ref: "§224 B.I.4" }
+  - { acct: "1900", de: "Geleistete Anzahlungen Vorräte", en: "Advances on inventories", concept: FS.SFP.INVENTORIES, ref: "§224 B.I.5" }
+
+# ── Class 2: Forderungen, Wertpapiere, flüssige Mittel ──────
+class_2:
+  - { acct: "2000", de: "Forderungen aus L&L", en: "Trade receivables", concept: FS.SFP.TRADE_RECEIVABLES, ref: "§224 B.II.1" }
+  - { acct: "2050", de: "Wertberichtigungen zu Forderungen", en: "Allowance for doubtful debts", concept: FS.SFP.TRADE_RECEIVABLES, note: "contra account" }
+  - { acct: "2100", de: "Forderungen gg. verbundenen Unternehmen", en: "Receivables from affiliates", concept: FS.SFP.RELATED_PARTY_RECEIVABLES, ref: "§224 B.II.2", ic: true }
+  - { acct: "2150", de: "Forderungen gg. Beteiligungsunternehmen", en: "Receivables from associates", concept: FS.SFP.RELATED_PARTY_RECEIVABLES, ref: "§224 B.II.3", ic: true }
+  - { acct: "2200", de: "Sonstige Forderungen", en: "Other receivables", concept: FS.SFP.OTHER_NON_FINANCIAL_ASSETS, ref: "§224 B.II.4" }
+  - { acct: "2300", de: "Vorsteuer (USt)", en: "Input VAT receivable", concept: FS.SFP.CURRENT_TAX_ASSETS }
+  - { acct: "2410", de: "KöSt-Vorauszahlungen", en: "Corporate tax prepaid", concept: FS.SFP.CURRENT_TAX_ASSETS }
+  - { acct: "2600", de: "Dividendenforderungen", en: "Dividend receivable", concept: FS.SFP.DIVIDEND_RECEIVABLE, ic: true }
+  - { acct: "2700", de: "Kassa", en: "Cash on hand", concept: FS.SFP.CASH, ref: "§224 B.IV" }
+  - { acct: "2800", de: "Bank (Girokonto)", en: "Bank current account", concept: FS.SFP.CASH, ref: "§224 B.IV", note: "if overdrawn → FS.SFP.LOANS_BORROWINGS" }
+  - { acct: "2900", de: "Aktive Rechnungsabgrenzungsposten", en: "Prepaid expenses", concept: FS.SFP.PREPAYMENTS, ref: "§224 C" }
+  - { acct: "2930", de: "Aktive latente Steuern", en: "Deferred tax assets", concept: FS.SFP.DEFERRED_TAX_ASSETS, ref: "§198(9-10)" }
+  - { acct: "2950", de: "Wertpapiere des Umlaufvermögens", en: "Marketable securities", concept: FS.SFP.OTHER_INVESTMENTS, ref: "§224 B.III" }
+
+# ── Class 3: Rückstellungen, Verbindlichkeiten ───────────────
+class_3:
+  - { acct: "3000", de: "Rückstellungen für Abfertigungen", en: "Severance provisions", concept: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY, ref: "§224 B.1" }
+  - { acct: "3010", de: "Rückstellungen für Pensionen", en: "Pension provisions", concept: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY, ref: "§224 B.1" }
+  - { acct: "3020", de: "Steuerrückstellungen", en: "Tax provisions", concept: FS.SFP.PROVISIONS, ref: "§224 B.2" }
+  - { acct: "3030", de: "Sonstige Rückstellungen", en: "Other provisions", concept: FS.SFP.PROVISIONS, ref: "§224 B.3" }
+  - { acct: "3060", de: "Rückstellungen nicht konsumierte Urlaube", en: "Vacation accrual", concept: FS.SFP.PROVISIONS, ref: "§224 B.3" }
+  - { acct: "3070", de: "Garantierückstellungen", en: "Warranty provisions", concept: FS.SFP.PROVISIONS, ref: "§224 B.3" }
+  - { acct: "3100", de: "Anleihen", en: "Bonds issued", concept: FS.SFP.LOANS_BORROWINGS, ref: "§224 C.1" }
+  - { acct: "3150", de: "Verbindlichkeiten gg. Kreditinstituten (langfr.)", en: "Long-term bank borrowings", concept: FS.SFP.LOANS_BORROWINGS, ref: "§224 C.2" }
+  - { acct: "3160", de: "Verbindlichkeiten gg. Kreditinstituten (kurzfr.)", en: "Short-term bank borrowings", concept: FS.SFP.LOANS_BORROWINGS, ref: "§224 C.2" }
+  - { acct: "3200", de: "Erhaltene Anzahlungen", en: "Advances received", concept: FS.SFP.CONTRACT_LIABILITIES, ref: "§224 C.3" }
+  - { acct: "3300", de: "Verbindlichkeiten aus L&L", en: "Trade payables", concept: FS.SFP.TRADE_PAYABLES, ref: "§224 C.4" }
+  - { acct: "3400", de: "Verbindlichkeiten gg. verbundenen Unternehmen", en: "Payables to affiliates", concept: FS.SFP.RELATED_PARTY_PAYABLES, ref: "§224 C.6", ic: true }
+  - { acct: "3450", de: "Verbindlichkeiten gg. Beteiligungsunternehmen", en: "Payables to associates", concept: FS.SFP.RELATED_PARTY_PAYABLES, ref: "§224 C.7", ic: true }
+  - { acct: "3500", de: "Sonstige Verbindlichkeiten", en: "Other liabilities", concept: FS.SFP.OTHER_LIABILITIES, ref: "§224 C.8" }
+  - { acct: "3520", de: "Umsatzsteuer-Zahllast", en: "VAT payable", concept: FS.SFP.CURRENT_TAX_LIABILITIES }
+  - { acct: "3530", de: "Verbindlichkeiten Finanzamt", en: "Tax payables", concept: FS.SFP.CURRENT_TAX_LIABILITIES }
+  - { acct: "3540", de: "Verbindlichkeiten Sozialversicherung", en: "Social insurance payable", concept: FS.SFP.OTHER_LIABILITIES }
+  - { acct: "3600", de: "Dividendenverbindlichkeit", en: "Dividend payable", concept: FS.SFP.DIVIDEND_PAYABLE, ic: true }
+  - { acct: "3900", de: "Passive Rechnungsabgrenzungsposten", en: "Deferred income", concept: FS.SFP.DEFERRED_INCOME, ref: "§224 D" }
+  - { acct: "3910", de: "Passive latente Steuern", en: "Deferred tax liabilities", concept: FS.SFP.DEFERRED_TAX_LIABILITIES, ref: "§198(9-10)" }
+
+# ── Class 4: Betriebliche Erträge (Operating Income) ────────
+class_4:
+  - { acct: "4000", de: "Erlöse Inland", en: "Revenue (domestic)", concept: FS.PNL.REVENUE, ref: "§231 Z1" }
+  - { acct: "4010", de: "Erlöse EU", en: "Revenue (EU)", concept: FS.PNL.REVENUE, ref: "§231 Z1" }
+  - { acct: "4020", de: "Erlöse Drittländer", en: "Revenue (third countries)", concept: FS.PNL.REVENUE, ref: "§231 Z1" }
+  - { acct: "4100", de: "Erlöse Handelswaren", en: "Revenue from merchandise", concept: FS.PNL.REVENUE, ref: "§231 Z1" }
+  - { acct: "4200", de: "Erlöse Dienstleistungen", en: "Revenue from services", concept: FS.PNL.REVENUE, ref: "§231 Z1" }
+  - { acct: "4400", de: "Bestandsveränderungen (fertige Erz.)", en: "Change in inv. finished goods", concept: FS.PNL.CHANGE_IN_INVENTORIES_FG, ref: "§231 Z2" }
+  - { acct: "4500", de: "Aktivierte Eigenleistungen", en: "Own work capitalized", concept: FS.PNL.OWN_WORK_CAPITALISED, ref: "§231 Z3" }
+  - { acct: "4600", de: "Sonstige betriebliche Erträge", en: "Other operating income", concept: FS.PNL.OTHER_INCOME, ref: "§231 Z4" }
+  - { acct: "4610", de: "Erträge aus dem Abgang von AV", en: "Gain on disposal of fixed assets", concept: FS.PNL.OTHER_INCOME, ref: "§231 Z4a" }
+  - { acct: "4620", de: "Erträge aus Auflösung von Rückstellungen", en: "Release of provisions", concept: FS.PNL.OTHER_INCOME, ref: "§231 Z4b" }
+  - { acct: "4850", de: "Kursgewinne betrieblich", en: "FX gains (operating)", concept: FS.PNL.FX_GAINS_LOSSES, ref: "§231 Z4" }
+
+# ── Class 5: Materialaufwand (Material Costs) ───────────────
+class_5:
+  - { acct: "5000", de: "Aufwand für Rohstoffe", en: "Raw material expense", concept: FS.PNL.MATERIAL_COSTS, ref: "§231 Z5a" }
+  - { acct: "5100", de: "Aufwand für bezogene Teile", en: "Purchased components", concept: FS.PNL.MATERIAL_COSTS, ref: "§231 Z5a" }
+  - { acct: "5200", de: "Aufwand für Handelswaren", en: "Merchandise COGS", concept: FS.PNL.MATERIAL_COSTS, ref: "§231 Z5a" }
+  - { acct: "5300", de: "Energiekosten", en: "Energy costs", concept: FS.PNL.MATERIAL_COSTS, ref: "§231 Z5a" }
+  - { acct: "5500", de: "Aufwand bezogene Herstellungsleistungen", en: "Purchased manufacturing services", concept: FS.PNL.PURCHASED_SERVICES, ref: "§231 Z5b" }
+  - { acct: "5600", de: "Aufwand bezogene Instandhaltung", en: "Purchased maintenance", concept: FS.PNL.PURCHASED_SERVICES, ref: "§231 Z5b" }
+  - { acct: "5800", de: "Sonstige bezogene Leistungen", en: "Other purchased services", concept: FS.PNL.PURCHASED_SERVICES, ref: "§231 Z5b" }
+
+# ── Class 6: Personalaufwand (Personnel Costs) ──────────────
+class_6:
+  - { acct: "6000", de: "Löhne", en: "Wages", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6a" }
+  - { acct: "6100", de: "Gehälter", en: "Salaries", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6a" }
+  - { acct: "6200", de: "Aufwand für Abfertigung", en: "Severance expense", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6b" }
+  - { acct: "6250", de: "Aufwand für Pensionen", en: "Pension expense", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6b" }
+  - { acct: "6260", de: "Aufwand MVK (BV-Kasse)", en: "Employee fund contributions", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6b" }
+  - { acct: "6300", de: "Gesetzlicher Sozialaufwand", en: "Statutory social charges", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6c" }
+  - { acct: "6330", de: "Kommunalsteuer", en: "Municipal tax (payroll)", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6c" }
+  - { acct: "6400", de: "Freiwilliger Sozialaufwand", en: "Voluntary social costs", concept: FS.PNL.STAFF_COSTS, ref: "§231 Z6c" }
+
+# ── Class 7: Abschreibungen, sonstige betriebliche Aufwendungen ─
+class_7:
+  - { acct: "7000", de: "Abschreibungen immat. VG", en: "Amortization of intangibles", concept: FS.PNL.DEPRECIATION_AMORTISATION, ref: "§231 Z7a" }
+  - { acct: "7010", de: "Abschreibungen Sachanlagen", en: "Depreciation of PPE", concept: FS.PNL.DEPRECIATION_AMORTISATION, ref: "§231 Z7a" }
+  - { acct: "7030", de: "Abschreibungen auf den Firmenwert", en: "Goodwill amortization", concept: FS.PNL.GW_AMORTIZATION, ref: "§203(5) UGB", note: "UGB only — IFRS does not amortize goodwill" }
+  - { acct: "7080", de: "Außerplanmäßige Abschreibungen AV", en: "Impairment of non-current assets", concept: FS.PNL.IMPAIRMENT_EXPENSE, ref: "§204 UGB" }
+  - { acct: "7100", de: "Miete und Pacht", en: "Rent and lease expense", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7200", de: "Instandhaltung und Reparaturen", en: "Maintenance and repairs", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7300", de: "Transport und Frachtkosten", en: "Transport and freight", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7400", de: "Rechts- und Beratungskosten", en: "Legal and consulting fees", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7500", de: "Büromaterial", en: "Office supplies", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7510", de: "Werbeaufwand", en: "Advertising expense", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7610", de: "Verluste aus dem Abgang von AV", en: "Loss on disposal of fixed assets", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8" }
+  - { acct: "7700", de: "Steuern (nicht Ertragsteuern)", en: "Non-income taxes", concept: FS.PNL.OTHER_EXPENSES, ref: "§231 Z8a" }
+  - { acct: "7750", de: "Kursverluste betrieblich", en: "FX losses (operating)", concept: FS.PNL.FX_GAINS_LOSSES, ref: "§231 Z8" }
+  - { acct: "7800", de: "Wertberichtigungen zu Forderungen UV", en: "Impairment of receivables", concept: FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS, ref: "§231 Z8" }
+
+# ── Class 8: Finanzergebnis (Financial Result) ──────────────
+class_8:
+  - { acct: "8000", de: "Erträge aus Beteiligungen", en: "Income from participations", concept: FS.PNL.DIVIDEND_INCOME, ref: "§231 Z10" }
+  - { acct: "8010", de: "Erträge aus Beteiligungen verb. Unt.", en: "Dividend income from affiliates", concept: FS.PNL.DIVIDEND_INCOME, ref: "§231 Z10", ic: true }
+  - { acct: "8100", de: "Erträge aus Wertpapieren des AV", en: "Income from NC securities", concept: FS.PNL.FINANCE_INCOME, ref: "§231 Z11" }
+  - { acct: "8110", de: "Zinserträge Ausleihungen verb. Unt.", en: "Interest income from affiliate loans", concept: FS.PNL.FINANCE_INCOME, ref: "§231 Z11", ic: true }
+  - { acct: "8200", de: "Sonstige Zinsen und ähnliche Erträge", en: "Other interest income", concept: FS.PNL.FINANCE_INCOME, ref: "§231 Z12" }
+  - { acct: "8280", de: "Erträge aus dem Abgang von Finanzanlagen", en: "Gain on disposal of financial assets", concept: FS.PNL.FINANCE_INCOME, ref: "§231 Z13" }
+  - { acct: "8300", de: "Aufwendungen aus Finanzanlagen", en: "Expenses from financial assets", concept: FS.PNL.FINANCE_COSTS, ref: "§231 Z14" }
+  - { acct: "8310", de: "Abschreibungen auf Finanzanlagen", en: "Impairment of financial assets", concept: FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS, ref: "§231 Z14" }
+  - { acct: "8320", de: "Abschreibungen Beteiligungen verb. Unt.", en: "Impairment of investment in subs", concept: FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS, ref: "§231 Z14", ic: true }
+  - { acct: "8400", de: "Zinsen und ähnliche Aufwendungen", en: "Interest expense", concept: FS.PNL.FINANCE_COSTS, ref: "§231 Z15" }
+  - { acct: "8420", de: "Zinsaufwand verbundene Unternehmen", en: "Interest expense to affiliates", concept: FS.PNL.FINANCE_COSTS, ref: "§231 Z15", ic: true }
+
+# ── Class 9: Rechnungsabschluss (Closing / Equity / Tax) ────
+class_9:
+  - { acct: "9000", de: "Gezeichnetes Kapital / Stammkapital", en: "Share capital", concept: FS.SFP.SHARE_CAPITAL, ref: "§224 A.I" }
+  - { acct: "9100", de: "Kapitalrücklagen (gebundene)", en: "Capital reserves (restricted)", concept: FS.SFP.SHARE_PREMIUM, ref: "§224 A.II.1" }
+  - { acct: "9110", de: "Kapitalrücklagen (nicht gebundene)", en: "Capital reserves (unrestricted)", concept: FS.SFP.SHARE_PREMIUM, ref: "§224 A.II.2" }
+  - { acct: "9200", de: "Gesetzliche Rücklage", en: "Legal reserve", concept: FS.SFP.RETAINED_EARNINGS, ref: "§224 A.III.1" }
+  - { acct: "9210", de: "Satzungsmäßige Rücklagen", en: "Statutory reserves", concept: FS.SFP.RETAINED_EARNINGS, ref: "§224 A.III.2" }
+  - { acct: "9220", de: "Freie Rücklagen", en: "Free reserves", concept: FS.SFP.RETAINED_EARNINGS, ref: "§224 A.III.3" }
+  - { acct: "9300", de: "Bilanzgewinn / Bilanzverlust", en: "Retained profit/loss", concept: FS.SFP.RETAINED_EARNINGS, ref: "§224 A.IV" }
+  - { acct: "9400", de: "Körperschaftsteuer", en: "Corporate income tax", concept: FS.PNL.INCOME_TAX_EXPENSE, ref: "§231 Z18" }
+  - { acct: "9600", de: "Jahresüberschuss / Jahresfehlbetrag", en: "Net profit / net loss", concept: FS.PNL.NET_PROFIT, ref: "§231 Z21" }
+
+# ── IC accounts (intercompany — require elimination) ─────────
+ic_accounts:
+  - { acct: "0660", direction: ASSET_LOAN_GIVEN, counterparty_type: SUBSIDIARY }
+  - { acct: "0670", direction: ASSET_LOAN_GIVEN, counterparty_type: ASSOCIATE }
+  - { acct: "2100", direction: ASSET_RECEIVABLE, counterparty_type: SUBSIDIARY }
+  - { acct: "2150", direction: ASSET_RECEIVABLE, counterparty_type: ASSOCIATE }
+  - { acct: "2600", direction: ASSET_DIVIDEND_RECEIVABLE, counterparty_type: SUBSIDIARY }
+  - { acct: "3400", direction: LIABILITY_PAYABLE, counterparty_type: SUBSIDIARY }
+  - { acct: "3450", direction: LIABILITY_PAYABLE, counterparty_type: ASSOCIATE }
+  - { acct: "3600", direction: LIABILITY_DIVIDEND_PAYABLE, counterparty_type: SUBSIDIARY }
+  - { acct: "8010", direction: PNL_INCOME_DIVIDEND, counterparty_type: SUBSIDIARY }
+  - { acct: "8110", direction: PNL_INCOME_INTEREST, counterparty_type: SUBSIDIARY }
+  - { acct: "8320", direction: PNL_EXPENSE_IMPAIRMENT, counterparty_type: SUBSIDIARY }
+  - { acct: "8420", direction: PNL_EXPENSE_INTEREST, counterparty_type: SUBSIDIARY }
