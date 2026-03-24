@@ -172,3 +172,46 @@ document_meta_schema:
       amount_preservation_pct: { type: number }
       row_coverage_pct: { type: number }
       cross_statement_ties_pass: { type: integer, description: "N of M ties passing" }
+
+  # ── Segments (IFRS 8 / § 237 UGB) ─────────────────────────
+  # Segments are more than axis labels — they carry their own metadata
+  # for validation, cross-document comparison, and consolidation mapping.
+  segments:
+    type: "Segment[]"
+    description: "Operating and geographic segments with full metadata"
+    entry_schema:
+      segment_id: { type: string, required: true, description: "DOC member ID (SEG.001, GEO.001)" }
+      label: { type: string, required: true, description: "Segment name as printed" }
+      segment_type: { type: enum, values: [OPERATING, GEOGRAPHIC, PRODUCT, CUSTOMER, OTHER], required: true }
+      is_reportable: { type: boolean, default: true, description: "Meets IFRS 8.13 quantitative thresholds" }
+      is_aggregated: { type: boolean, default: false, description: "Result of aggregating smaller segments (IFRS 8.12)" }
+      aggregated_from: { type: "string[]", description: "Segment IDs aggregated into this one" }
+      # Entity mapping — which legal entities belong to this segment
+      entity_ids: { type: "string[]", description: "Legal entities in this segment (for consolidation scope)" }
+      # Quantitative thresholds (IFRS 8.13)
+      revenue_pct_of_total: { type: number, description: "Segment revenue / total revenue (for 10% test)" }
+      profit_pct_of_total: { type: number, description: "Segment profit / total profit (for 10% test)" }
+      assets_pct_of_total: { type: number, description: "Segment assets / total assets (for 10% test)" }
+      # Geographic detail
+      country_codes: { type: "string[]", description: "ISO 3166-1 countries in this segment" }
+      region: { type: string, description: "Normalized region (EMEA, APAC, Americas, etc.)" }
+      # Cross-document tracking
+      std_segment_id: { type: string, description: "STD axis member if mapped (SEGSTD.* normalized)" }
+      prior_year_segment_id: { type: string, description: "Segment ID in prior year (if renamed/restructured)" }
+      restructured: { type: boolean, default: false, description: "Segment boundaries changed vs prior year" }
+    examples:
+      - segment_id: SEG.001
+        label: "Wienerberger Building Solutions"
+        segment_type: OPERATING
+        is_reportable: true
+        revenue_pct_of_total: 0.62
+        entity_ids: ["suedwerk_gmbh", "nordtechnik_gmbh"]
+        country_codes: [AT, DE, PL, CZ]
+        region: "Central Europe"
+        std_segment_id: SEGSTD.BUILDING_MATERIALS
+      - segment_id: GEO.001
+        label: "Western Europe"
+        segment_type: GEOGRAPHIC
+        is_reportable: true
+        country_codes: [AT, DE, FR, NL, BE]
+        region: "Western Europe"
