@@ -1,0 +1,174 @@
+# FOBE Document Metadata Schema
+# Every tagged document carries this metadata alongside its tagged facts.
+# This is the contract between doc_tag (producer) and finparse (consumer).
+
+document_meta_schema:
+  version: "0.1.0"
+
+  # ── Document identity ──────────────────────────────────────
+  identity:
+    document_id: { type: string, required: true, description: "Unique document identifier" }
+    source_url: { type: string, description: "Original download URL" }
+    source_format: { type: enum, values: [PDF, XLSX, CSV, XBRL], required: true }
+    filename: { type: string, required: true }
+    file_size_bytes: { type: integer }
+    language: { type: string, description: "ISO 639-1 (en, de, sl, etc.)" }
+    pages_total: { type: integer }
+
+  # ── Reporting entity ───────────────────────────────────────
+  entity:
+    entity_name: { type: string, required: true, description: "Legal name of reporting entity" }
+    entity_type: { type: enum, values: [CONSOLIDATED, SEPARATE_PARENT, STANDALONE, COMBINED], required: true }
+    jurisdiction: { type: string, required: true, description: "ISO 3166-1 alpha-2 (AT, DE, GB, etc.)" }
+    lei: { type: string, description: "Legal Entity Identifier (20 chars)" }
+    stock_exchange: { type: string, description: "Primary listing (VSE, FSE, LSE, etc.)" }
+    index_membership: { type: "string[]", description: "Market indices (ATX, DAX, FTSE100)" }
+    industry: { type: string, description: "Industry classification (MANUFACTURING, BANKING, INSURANCE, UTILITIES, TELECOM, etc.)" }
+    sic_code: { type: string, description: "SIC / NACE industry code" }
+
+  # ── Reporting framework ────────────────────────────────────
+  framework:
+    gaap: { type: enum, values: [IFRS, UGB, HGB, US_GAAP, LOCAL_GAAP], required: true }
+    gaap_version: { type: string, description: "Standards effective date (e.g., 2025-01-01)" }
+    pnl_format: { type: enum, values: [COST_OF_SALES, NATURE_OF_EXPENSE], description: "IAS 1.99/102" }
+    oci_presentation: { type: enum, values: [ONE_STATEMENT, TWO_STATEMENT], description: "IAS 1.10A" }
+    cfs_method: { type: enum, values: [INDIRECT, DIRECT], description: "IAS 7.18" }
+
+  # ── Fiscal period ──────────────────────────────────────────
+  fiscal:
+    fiscal_year: { type: integer, required: true }
+    fiscal_year_start: { type: date, required: true }
+    fiscal_year_end: { type: date, required: true }
+    period_type: { type: enum, values: [ANNUAL, SEMI_ANNUAL, QUARTERLY, INTERIM], required: true }
+    is_first_time_adoption: { type: boolean, default: false }
+    comparative_periods: { type: integer, default: 1, description: "Number of comparative periods presented" }
+
+  # ── Currency and units ─────────────────────────────────────
+  currency:
+    presentation_currency: { type: string, required: true, description: "ISO 4217 (EUR, USD, GBP)" }
+    functional_currency: { type: string, description: "If different from presentation" }
+    default_unit: { type: enum, values: [UNITS, THOUSANDS, MILLIONS, BILLIONS], required: true }
+
+  # ── Audit ──────────────────────────────────────────────────
+  audit:
+    auditor_name: { type: string }
+    auditor_firm: { type: string, description: "Big 4 or other (KPMG, EY, Deloitte, PwC, BDO, etc.)" }
+    audit_opinion: { type: enum, values: [UNQUALIFIED, QUALIFIED, ADVERSE, DISCLAIMER, NOT_AUDITED] }
+    audit_date: { type: date }
+    key_audit_matters: { type: "string[]", description: "KAM topics identified by auditor" }
+
+  # ── Period map (DocTag model) ──────────────────────────────
+  # Maps abstract PERK.xxx keys to concrete calendar definitions.
+  # Every tagged cell references a PERK key; the period_map resolves it.
+  period_map:
+    type: "Record<string, PeriodDefinition>"
+    description: "PERK.001 → {label, time_type, start, end, kind, fiscal_year, ...}"
+    entry_schema:
+      label: { type: string, required: true }
+      time_type: { type: enum, values: [INSTANT, DURATION], required: true }
+      instant: { type: date, description: "For INSTANT periods (balance sheet dates)" }
+      start: { type: date, description: "For DURATION periods (P&L, CFS)" }
+      end: { type: date, description: "For DURATION periods" }
+      kind: { type: enum, values: [FY, HY, Q, M, CUSTOM, CUSTOM_NONCONTIG] }
+      fiscal_year: { type: integer }
+      quarter: { type: integer, description: "1-4" }
+      half: { type: integer, description: "1-2" }
+      is_audited: { type: boolean }
+      components: { type: "string[]", description: "PCOMP.xxx for non-contiguous periods" }
+
+  # ── Document axes (DOC members defined in this document) ───
+  # Entity-specific labels that DOC axes point to.
+  # Stable across all tables in the same document.
+  document_axes:
+    type: "Record<axisId, Record<memberId, string>>"
+    description: "Axis → {memberId: label} for document-specific members"
+    examples:
+      AXIS.SEGMENT_DOC:
+        SEG.001: "Building Solutions"
+        SEG.002: "Piping Solutions"
+        SEG.003: "North America"
+        SEG.TOTAL: "Total"
+        SEG.ELIM: "Eliminations"
+      AXIS.GEOGRAPHY_DOC:
+        GEO.001: "Austria"
+        GEO.002: "Western Europe"
+        GEO.003: "Eastern Europe"
+        GEO.004: "North America"
+        GEO.005: "Asia Pacific"
+      AXIS.PPE_CLASS_DOC:
+        PPEDOC.001: "Land and buildings"
+        PPEDOC.002: "Plant and machinery"
+        PPEDOC.003: "Other equipment"
+        PPEDOC.004: "Assets under construction"
+      AXIS.PRODUCT_LINE_DOC:
+        PROD.001: "Clay Building Materials"
+        PROD.002: "Pipes"
+      AXIS.REVENUE_TYPE_DOC:
+        REVTYPE.001: "Revenue from services"
+        REVTYPE.002: "Revenue from equipment sales"
+      AXIS.CUSTOMER_TYPE_DOC:
+        CUST.001: "Wholesale"
+        CUST.002: "Retail"
+      AXIS.PROVISION_TYPE_DOC:
+        PROVDOC.001: "Restructuring"
+        PROVDOC.002: "Warranty"
+        PROVDOC.003: "Environmental"
+      AXIS.EMPLOYEE_PLAN_DOC:
+        PLAN.001: "Defined benefit pension"
+        PLAN.002: "Severance (Abfertigung)"
+
+  # ── Document sections (scope) ──────────────────────────────
+  # Maps page ranges to financial statement sections.
+  # Used for table classification and navigation.
+  sections:
+    type: "DocumentSection[]"
+    entry_schema:
+      section_id: { type: string, required: true, description: "DOC.*, FS.*, DISC.*" }
+      label: { type: string, required: true }
+      start_page: { type: integer, required: true }
+      end_page: { type: integer, required: true }
+    standard_sections:
+      - DOC.FRONT_MATTER
+      - DOC.TOC
+      - DOC.MANAGEMENT_REPORT
+      - DOC.CORPORATE_GOVERNANCE
+      - FS.CONSOLIDATED.PNL
+      - FS.CONSOLIDATED.OCI
+      - FS.CONSOLIDATED.SFP
+      - FS.CONSOLIDATED.CFS
+      - FS.CONSOLIDATED.SOCIE
+      - FS.CONSOLIDATED.NOTES
+      - FS.SEPARATE.PNL
+      - FS.SEPARATE.SFP
+      - DOC.AUDITOR_REPORTS
+      - DOC.APPENDICES
+      - DOC.RISK_INTERNAL_CONTROL
+
+  # ── Group structure (for consolidated FS) ──────────────────
+  group_structure:
+    parent_entity: { type: string, description: "Name of consolidating entity" }
+    subsidiaries:
+      type: "Subsidiary[]"
+      entry_schema:
+        name: { type: string }
+        jurisdiction: { type: string }
+        ownership_pct: { type: number }
+        consolidation_method: { type: enum, values: [FULL, EQUITY_METHOD, PROPORTIONATE, NOT_CONSOLIDATED] }
+    associates:
+      type: "Associate[]"
+      entry_schema:
+        name: { type: string }
+        jurisdiction: { type: string }
+        ownership_pct: { type: number }
+
+  # ── Tagging provenance ─────────────────────────────────────
+  tagging:
+    ontology_version: { type: string, required: true, description: "FOBE version used for tagging" }
+    tagged_by: { type: string, description: "User or system that tagged" }
+    tagged_at: { type: datetime }
+    tagging_method: { type: enum, values: [MANUAL, LLM_ASSISTED, AUTO_CARRY_FORWARD, HYBRID] }
+    losslessness_score:
+      balance_equation_pass: { type: boolean }
+      amount_preservation_pct: { type: number }
+      row_coverage_pct: { type: number }
+      cross_statement_ties_pass: { type: integer, description: "N of M ties passing" }
