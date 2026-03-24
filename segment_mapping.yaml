@@ -1,0 +1,162 @@
+# FOBE Segment Mapping Schema
+# Maps document-specific segments (DOC) to normalized segments (STD)
+# and to other documents' segments for cross-document comparability.
+
+segment_mapping_schema:
+  version: "0.1.0"
+
+  # ── Mapping types ──────────────────────────────────────────
+  # Same problem as entity-to-group concept mapping, but for segments.
+  #
+  # Source: document segment (DOC axis member)
+  # Target: normalized segment (STD axis member) OR another document's segment
+  #
+  # Mapping lifecycle:
+  #   AUTO_MATCHED → SUGGESTED → CONFIRMED → SPLIT → REJECTED
+  #
+  # Carry-forward: confirmed mappings reuse across periods for same entity.
+
+  mapping_types:
+    # 1:1 — one DOC segment maps to one STD segment
+    one_to_one:
+      description: "Direct mapping of DOC segment to STD normalized segment"
+      example:
+        source: { doc: "006", segment_id: "SEG.001", label: "Wienerberger Building Solutions" }
+        target: { std_id: "SEGSTD.BUILDING_MATERIALS", label: "Building Materials" }
+
+    # many:1 — multiple DOC segments aggregate to one STD segment
+    many_to_one:
+      description: "Multiple document segments map to a single normalized segment"
+      example:
+        sources:
+          - { doc: "006", segment_id: "SEG.001", label: "Building Solutions" }
+          - { doc: "006", segment_id: "SEG.002", label: "Piping Solutions" }
+        target: { std_id: "SEGSTD.CONSTRUCTION_PRODUCTS", label: "Construction Products" }
+
+    # 1:many — one DOC segment splits into STD segments (restructuring)
+    one_to_many:
+      description: "Document segment maps to multiple normalized segments with allocation"
+      example:
+        source: { doc: "006", segment_id: "SEG.003", label: "North America" }
+        targets:
+          - { std_id: "SEGSTD.USA", pct: 75 }
+          - { std_id: "SEGSTD.CANADA", pct: 25 }
+
+    # cross-document — map segments between documents for comparability
+    cross_document:
+      description: "Same economic segment across different companies' reports"
+      example:
+        - { doc: "006", segment_id: "SEG.001", label: "Wienerberger Building Solutions" }
+        - { doc: "010", segment_id: "SEG.003", label: "voestalpine Metal Engineering" }
+        mapping_type: "DIFFERENT_ECONOMIC_ACTIVITY"
+        comparability: false
+
+  # ── Segment mapping entry ──────────────────────────────────
+  entry_schema:
+    mapping_id: { type: string, required: true }
+    document_id: { type: string, required: true }
+    segment_id: { type: string, required: true, description: "DOC member (SEG.001)" }
+    segment_label: { type: string, required: true }
+    segment_type: { type: enum, values: [OPERATING, GEOGRAPHIC, PRODUCT, CUSTOMER] }
+
+    # Target mapping
+    std_segment_id: { type: string, description: "STD member (SEGSTD.BUILDING_MATERIALS)" }
+    std_segment_label: { type: string }
+
+    # Geographic decomposition
+    countries: { type: "string[]", description: "ISO 3166-1 codes" }
+    regions: { type: "string[]", description: "Normalized regions" }
+    geographic_hierarchy:
+      type: "GeoNode[]"
+      description: "Hierarchical geographic breakdown"
+      entry_schema:
+        geo_id: { type: string }
+        label: { type: string }
+        parent_geo_id: { type: string }
+        country_codes: { type: "string[]" }
+
+    # Entity decomposition
+    entity_mapping:
+      type: "SegmentEntity[]"
+      description: "Which legal entities contribute to this segment"
+      entry_schema:
+        entity_id: { type: string }
+        entity_name: { type: string }
+        contribution_type: { type: enum, values: [FULL, PARTIAL, PRIMARY, SECONDARY] }
+        allocation_pct: { type: number, description: "If PARTIAL, what % of entity revenue belongs to segment" }
+
+    # Concept scope — which line items this segment reports
+    reported_concepts:
+      type: "string[]"
+      description: "Which concepts appear in this segment's disclosure"
+      example: ["DISC.SEGMENTS.EXTERNAL_REVENUE", "DISC.SEGMENTS.PROFIT_BEFORE_TAX",
+                "DISC.SEGMENTS.TOTAL_ASSETS", "DISC.SEGMENTS.CAPEX",
+                "DISC.SEGMENTS.DEPR_AMORT"]
+
+    # Cross-period tracking
+    prior_period_mapping:
+      prior_segment_id: { type: string, description: "Segment ID in prior year" }
+      prior_document_id: { type: string }
+      change_type: { type: enum, values: [UNCHANGED, RENAMED, SPLIT, MERGED, NEW, DISCONTINUED] }
+      change_description: { type: string }
+      restated: { type: boolean, description: "Were prior year comparatives restated for new structure?" }
+
+    # Mapping lifecycle
+    status: { type: enum, values: [AUTO_MATCHED, SUGGESTED, CONFIRMED, SPLIT, REJECTED] }
+    match_method: { type: enum, values: [CARRY_FORWARD, LABEL_SIMILARITY, ENTITY_OVERLAP, MANUAL] }
+    match_confidence: { type: number, description: "0.0-1.0" }
+    confirmed_by: { type: string }
+    confirmed_at: { type: datetime }
+
+  # ── STD segment taxonomy ───────────────────────────────────
+  # Normalized segments for cross-company comparison.
+  # These grow from confirmed mappings (same as concept aliases).
+  std_segments:
+    operating:
+      - { id: SEGSTD.AUTOMOTIVE, label: "Automotive" }
+      - { id: SEGSTD.INDUSTRIAL, label: "Industrial / Manufacturing" }
+      - { id: SEGSTD.BUILDING_MATERIALS, label: "Building Materials" }
+      - { id: SEGSTD.INFRASTRUCTURE, label: "Infrastructure" }
+      - { id: SEGSTD.ENERGY_GENERATION, label: "Energy Generation" }
+      - { id: SEGSTD.ENERGY_GRID, label: "Energy Grid / Networks" }
+      - { id: SEGSTD.TELECOM_FIXED, label: "Fixed Telecommunications" }
+      - { id: SEGSTD.TELECOM_MOBILE, label: "Mobile Telecommunications" }
+      - { id: SEGSTD.FINANCIAL_SERVICES, label: "Financial Services" }
+      - { id: SEGSTD.STEEL, label: "Steel" }
+      - { id: SEGSTD.TECHNOLOGY, label: "Technology" }
+      - { id: SEGSTD.CONSUMER, label: "Consumer Products" }
+      - { id: SEGSTD.HEALTHCARE, label: "Healthcare" }
+      - { id: SEGSTD.REAL_ESTATE, label: "Real Estate" }
+      - { id: SEGSTD.OTHER, label: "Other / Unallocated" }
+      - { id: SEGSTD.ELIMINATIONS, label: "Eliminations / Reconciling" }
+
+    geographic:
+      - { id: GEOSTD.AUSTRIA, label: "Austria", country: AT }
+      - { id: GEOSTD.GERMANY, label: "Germany", country: DE }
+      - { id: GEOSTD.WESTERN_EUROPE, label: "Western Europe" }
+      - { id: GEOSTD.EASTERN_EUROPE, label: "Eastern / Central Europe" }
+      - { id: GEOSTD.NORTH_AMERICA, label: "North America" }
+      - { id: GEOSTD.ASIA_PACIFIC, label: "Asia Pacific" }
+      - { id: GEOSTD.REST_OF_WORLD, label: "Rest of World" }
+      - { id: GEOSTD.DOMESTIC, label: "Domestic" }
+      - { id: GEOSTD.INTERNATIONAL, label: "International" }
+
+  # ── Validation rules ───────────────────────────────────────
+  validation:
+    - rule: "Segment revenue must sum to consolidated revenue (± eliminations)"
+      check: "SUM(DISC.SEGMENTS.EXTERNAL_REVENUE across all segments) = FS.PNL.REVENUE"
+
+    - rule: "75% external revenue coverage (IFRS 8.15)"
+      check: "SUM(revenue of reportable segments) / FS.PNL.REVENUE >= 0.75"
+
+    - rule: "Segment assets must reconcile to total assets"
+      check: "SUM(DISC.SEGMENTS.TOTAL_ASSETS across segments + unallocated) = FS.SFP.TOTAL_ASSETS"
+
+    - rule: "Geographic revenue must sum to total revenue"
+      check: "SUM(DISC.REVENUE.EXTERNAL_REVENUE by geography) = FS.PNL.REVENUE"
+
+    - rule: "No orphan segments — every reportable segment has at least one entity"
+      check: "entity_mapping is not empty for is_reportable = true segments"
+
+    - rule: "Restructured segments must have prior period restated or explained"
+      check: "IF change_type IN (SPLIT, MERGED) THEN restated = true OR change_description not empty"
