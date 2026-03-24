@@ -1,42 +1,52 @@
 # FOBE — Framework for Ontology Building and Evaluation
-# Master ontology file
-#
-# Concept naming: {family}.{statement}.{concept}
-#   FS.SFP.*    Balance sheet (Statement of Financial Position)
-#   FS.PNL.*    Income statement (Profit and Loss)
-#   FS.OCI.*    Other comprehensive income
-#   FS.CFS.*    Cash flow statement
-#   FS.SOCIE.*  Statement of changes in equity
-#   DISC.*.*    Disclosure notes
-
 ontology_meta:
   name: FOBE_FINONTOLOGY
-  version: 0.1.0
+  version: 0.2.0
   description: >
     Multi-GAAP financial reporting ontology for tagging, validation,
-    and consolidation. Covers IFRS, UGB (Austrian), HGB (German).
-    Industry extensions for banks (IFRS 9/7) and insurers (IFRS 17).
-  sign_convention: natural  # Dr+/Cr- (debits positive, credits negative)
+    and consolidation. Covers IFRS, UGB, HGB. Industry extensions
+    for banks (IFRS 9/7) and insurers (IFRS 17).
+  sign_convention: natural
   period_model:
-    period_key_axis: AXIS.PERIOD_KEY      # PERK.xxx per document
-    period_relation_axis: AXIS.PERIOD_RELATION  # PREL.CURRENT / PREL.COMPARATIVE
-    time_type_axis: AXIS.TIME_TYPE        # TIME.INSTANT / TIME.DURATION
+    period_key_axis: AXIS.PERIOD_KEY
+    period_relation_axis: AXIS.PERIOD_RELATION
+    time_type_axis: AXIS.TIME_TYPE
 
 imports:
   - contexts.yaml
+  # Primary financial statements
   - concepts/sfp.yaml
   - concepts/pnl.yaml
   - concepts/oci.yaml
   - concepts/cfs.yaml
   - concepts/socie.yaml
+  # Disclosure notes
   - concepts/disc/ppe.yaml
+  - concepts/disc/intangibles.yaml
+  - concepts/disc/goodwill.yaml
   - concepts/disc/fin_inst.yaml
+  - concepts/disc/fair_value.yaml
   - concepts/disc/tax.yaml
   - concepts/disc/leases.yaml
   - concepts/disc/segment.yaml
+  - concepts/disc/revenue.yaml
+  - concepts/disc/provisions.yaml
+  - concepts/disc/employee_benefits.yaml
+  - concepts/disc/borrowings.yaml
+  - concepts/disc/bca.yaml
+  - concepts/disc/eps.yaml
+  - concepts/disc/hedge.yaml
+  - concepts/disc/related_parties.yaml
+  - concepts/disc/contingencies.yaml
+  - concepts/disc/inventory.yaml
+  # Cross-cutting
   - axes.yaml
   - relations.yaml
   - aliases.yaml
+  # GAAP frameworks
   - gaap/ifrs.yaml
   - gaap/ugb.yaml
   - gaap/hgb.yaml
+  # Industry extensions
+  - industry/banks.yaml
+  - industry/insurers.yaml

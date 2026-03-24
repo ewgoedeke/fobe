@@ -1,0 +1,12 @@
+# DISC.PROVISIONS.* — Provisions Rollforward (IAS 37)
+concepts:
+  - { id: DISC.PROVISIONS.OPENING, label: "Opening balance", period_type: instant }
+  - { id: DISC.PROVISIONS.ADDITIONS, label: "Provisions made", period_type: duration }
+  - { id: DISC.PROVISIONS.UTILISED, label: "Amounts utilised", period_type: duration }
+  - { id: DISC.PROVISIONS.RELEASED, label: "Unused amounts reversed", period_type: duration }
+  - { id: DISC.PROVISIONS.UNWINDING, label: "Unwinding of discount", period_type: duration }
+  - { id: DISC.PROVISIONS.BCA, label: "Business combinations", period_type: duration }
+  - { id: DISC.PROVISIONS.FX_EFFECT, label: "FX effect", period_type: duration }
+  - { id: DISC.PROVISIONS.CLOSING, label: "Closing balance", period_type: instant, is_total: true }
+  - { id: DISC.PROVISIONS.CURRENT_PORTION, label: "Current portion", period_type: instant }
+  - { id: DISC.PROVISIONS.NON_CURRENT_PORTION, label: "Non-current portion", period_type: instant }

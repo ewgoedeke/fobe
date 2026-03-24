@@ -1,0 +1,13 @@
+# DISC.HEDGE.* — Hedge Accounting (IFRS 9, IFRS 7)
+concepts:
+  - { id: DISC.HEDGE.HEDGING_INSTRUMENT_NOTIONAL, label: "Hedging instrument — notional amount", period_type: instant }
+  - { id: DISC.HEDGE.HEDGING_INSTRUMENT_CARRYING_ASSET, label: "Hedging instrument — carrying amount (asset)", period_type: instant }
+  - { id: DISC.HEDGE.HEDGING_INSTRUMENT_CARRYING_LIABILITY, label: "Hedging instrument — carrying amount (liability)", period_type: instant }
+  - { id: DISC.HEDGE.HEDGING_INSTRUMENT_FV_CHANGE, label: "Hedging instrument — change in FV for effectiveness", period_type: duration }
+  - { id: DISC.HEDGE.HEDGED_ITEM_CARRYING, label: "Hedged item — carrying amount", period_type: instant }
+  - { id: DISC.HEDGE.HEDGED_ITEM_FV_CHANGE, label: "Hedged item — change in FV for effectiveness", period_type: duration }
+  - { id: DISC.HEDGE.CFH_RESERVE_OPENING, label: "Cash flow hedge reserve — opening", period_type: instant }
+  - { id: DISC.HEDGE.CFH_EFFECTIVE_PORTION, label: "Effective portion recognised in OCI", period_type: duration }
+  - { id: DISC.HEDGE.CFH_RECLASSIFIED_TO_PNL, label: "Reclassified from OCI to P&L", period_type: duration }
+  - { id: DISC.HEDGE.CFH_RESERVE_CLOSING, label: "Cash flow hedge reserve — closing", period_type: instant, is_total: true }
+  - { id: DISC.HEDGE.INEFFECTIVENESS_PNL, label: "Hedge ineffectiveness in P&L", period_type: duration }

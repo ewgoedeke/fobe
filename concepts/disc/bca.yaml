@@ -1,0 +1,13 @@
+# DISC.BCA.* — Business Combinations (IFRS 3)
+concepts:
+  - { id: DISC.BCA.CONSIDERATION_CASH, label: "Consideration — cash paid", period_type: instant }
+  - { id: DISC.BCA.CONSIDERATION_EQUITY, label: "Consideration — equity instruments issued", period_type: instant }
+  - { id: DISC.BCA.CONSIDERATION_CONTINGENT, label: "Consideration — contingent consideration", period_type: instant }
+  - { id: DISC.BCA.CONSIDERATION_TOTAL, label: "Total consideration transferred", period_type: instant, is_total: true }
+  - { id: DISC.BCA.NET_ASSETS_ACQUIRED, label: "Fair value of identifiable net assets acquired", period_type: instant }
+  - { id: DISC.BCA.NCI_AT_ACQUISITION, label: "NCI at acquisition date", period_type: instant }
+  - { id: DISC.BCA.GOODWILL_ARISING, label: "Goodwill arising on acquisition", period_type: instant }
+  - { id: DISC.BCA.BARGAIN_PURCHASE_GAIN, label: "Gain on bargain purchase", period_type: duration }
+  - { id: DISC.BCA.ACQUISITION_COSTS, label: "Acquisition-related costs expensed", period_type: duration }
+  - { id: DISC.BCA.REVENUE_SINCE_ACQUISITION, label: "Revenue of acquiree since acquisition", period_type: duration }
+  - { id: DISC.BCA.PROFIT_SINCE_ACQUISITION, label: "Profit of acquiree since acquisition", period_type: duration }

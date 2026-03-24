@@ -1,0 +1,20 @@
+# DISC.EMPLOYEE_BENEFITS.* — Employee Benefits (IAS 19)
+concepts:
+  # Defined benefit obligation
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_OPENING, label: "DBO — opening balance", period_type: instant }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_SERVICE_COST, label: "DBO — current service cost", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_INTEREST_COST, label: "DBO — interest cost", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT, label: "DBO — remeasurement (actuarial gains/losses)", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_BENEFITS_PAID, label: "DBO — benefits paid", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_PAST_SERVICE_COST, label: "DBO — past service cost/curtailment", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_BCA, label: "DBO — business combinations", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_FX_EFFECT, label: "DBO — FX effect", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.DBO_CLOSING, label: "DBO — closing balance", period_type: instant, is_total: true }
+  # Plan assets
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_OPENING, label: "Plan assets — opening balance", period_type: instant }
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_INTEREST_INCOME, label: "Plan assets — interest income", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_RETURN_EXCL_INTEREST, label: "Plan assets — return excl. interest (remeasurement)", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_CONTRIBUTIONS_EMPLOYER, label: "Plan assets — employer contributions", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_BENEFITS_PAID, label: "Plan assets — benefits paid", period_type: duration }
+  - { id: DISC.EMPLOYEE_BENEFITS.PA_CLOSING, label: "Plan assets — closing balance", period_type: instant, is_total: true }
+  - { id: DISC.EMPLOYEE_BENEFITS.NET_LIABILITY, label: "Net defined benefit liability", period_type: instant, is_total: true }
