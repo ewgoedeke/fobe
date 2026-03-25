@@ -9,6 +9,7 @@
         "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -450,6 +451,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -2431,6 +2433,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -2542,6 +2545,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -2808,6 +2812,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -3074,6 +3079,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -3265,6 +3271,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -3406,6 +3413,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -3547,6 +3555,7 @@
         "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -4559,6 +4568,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -5829,6 +5839,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -6343,6 +6354,7 @@
         "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -7177,6 +7189,7 @@
         "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -8085,6 +8098,7 @@
         "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -8697,6 +8711,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -9273,6 +9288,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -11206,6 +11222,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -13499,6 +13516,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -14703,6 +14721,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -15315,6 +15334,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -15581,6 +15601,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -16341,6 +16362,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -16532,6 +16554,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -16736,6 +16759,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -16927,6 +16951,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -17038,6 +17063,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -17873,6 +17899,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -19054,6 +19081,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -19661,6 +19689,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -20677,6 +20706,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -21659,6 +21689,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -22160,6 +22191,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -22513,6 +22545,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -22843,6 +22876,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -23142,6 +23176,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -23717,6 +23752,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -24131,6 +24167,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -24584,6 +24621,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -25606,6 +25644,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -25822,6 +25861,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -26958,6 +26998,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -27100,6 +27141,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -27305,6 +27347,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -27416,6 +27459,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -27732,6 +27776,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -28207,6 +28252,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -29194,6 +29240,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -29470,6 +29517,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -29786,6 +29834,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -30123,6 +30172,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -30328,6 +30378,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -30644,6 +30695,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -30775,6 +30827,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -31343,6 +31396,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -31611,6 +31665,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -31938,6 +31993,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -32365,6 +32421,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -33772,6 +33829,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -34319,6 +34377,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -34494,6 +34553,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -34821,6 +34881,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -35105,6 +35166,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -35495,6 +35557,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -35949,6 +36012,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -37246,6 +37310,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -37443,6 +37508,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -38114,6 +38180,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -38719,6 +38786,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -39324,6 +39392,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -40389,6 +40458,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -41454,6 +41524,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -41652,6 +41723,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -41785,6 +41857,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -42323,6 +42396,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -43418,6 +43492,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -43624,6 +43699,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -43866,6 +43942,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -44072,6 +44149,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -44163,6 +44241,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -44331,6 +44410,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -44444,6 +44524,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -44712,6 +44793,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -45007,6 +45089,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -45966,6 +46049,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -47090,6 +47174,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -47286,6 +47371,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -48471,6 +48557,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -49839,6 +49926,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -50118,6 +50206,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -50682,6 +50771,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -50826,6 +50916,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -50939,6 +51030,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -51050,6 +51142,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -51292,6 +51385,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -51436,6 +51530,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -51604,6 +51699,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -52244,6 +52340,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -52791,6 +52888,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -52997,6 +53095,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -53420,6 +53519,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -53618,6 +53718,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -53945,6 +54046,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -54089,6 +54191,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -54233,6 +54336,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -55084,6 +55188,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -56690,6 +56795,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -56989,6 +57095,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -57638,6 +57745,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -58707,6 +58815,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -58818,6 +58927,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -59007,6 +59117,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -59196,6 +59307,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -59338,6 +59450,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -59479,6 +59592,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -60744,6 +60858,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -62516,6 +62631,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -63480,6 +63596,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -64783,6 +64900,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -65358,6 +65476,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -65640,6 +65759,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -65882,6 +66002,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -65973,6 +66094,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -66792,6 +66914,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -66965,6 +67088,7 @@
         "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -68275,6 +68399,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -69889,6 +70014,7 @@
         "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -71070,6 +71196,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -72361,6 +72488,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -72529,6 +72657,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -72808,6 +72937,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -73473,6 +73603,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -73863,6 +73994,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -74069,6 +74201,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -74275,6 +74408,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -74481,6 +74615,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -74894,6 +75029,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -75261,6 +75397,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -75584,6 +75721,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -75951,6 +76089,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -76274,6 +76413,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -76480,6 +76620,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -76717,6 +76858,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -77551,6 +77693,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -77921,6 +78064,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -78287,6 +78431,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -78493,6 +78638,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -79619,6 +79765,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -79792,6 +79939,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -80796,6 +80944,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -81031,6 +81180,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -81814,6 +81964,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -82012,6 +82163,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -82507,6 +82659,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -82868,6 +83021,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -83277,6 +83431,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -83704,6 +83859,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -84131,6 +84287,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -84669,6 +84826,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -84953,6 +85111,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -85318,6 +85477,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -85598,6 +85758,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -85963,6 +86124,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -86417,6 +86579,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -86871,6 +87034,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -87483,6 +87647,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -88535,6 +88700,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -88775,6 +88941,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -88886,6 +89053,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -89286,6 +89454,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -89402,6 +89571,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -89605,6 +89775,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -90521,6 +90692,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -92527,6 +92699,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -92666,6 +92839,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -92945,6 +93119,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -93224,6 +93399,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -93461,6 +93637,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -93791,6 +93968,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -94066,6 +94244,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -94207,6 +94386,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -94444,6 +94624,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -94666,6 +94847,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -95280,6 +95462,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -95521,6 +95704,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -96221,6 +96405,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -96463,6 +96648,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -97225,6 +97411,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -97551,6 +97738,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -97693,6 +97881,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -97934,6 +98123,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -98200,6 +98390,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -98342,6 +98533,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -98581,6 +98773,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -98697,6 +98890,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -98838,6 +99032,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -99229,6 +99424,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -99367,6 +99563,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -99508,6 +99705,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -99741,6 +99939,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -100055,6 +100254,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -100288,6 +100488,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -100677,6 +100878,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -100843,6 +101045,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -101159,6 +101362,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -101523,6 +101727,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -101665,6 +101870,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -101807,6 +102013,7 @@
         "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -103048,6 +103255,7 @@
         "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -104141,6 +104349,7 @@
         "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },
@@ -105715,6 +105924,7 @@
         "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
+        "signConvention": "PRESENTATION",
         "sectionPath": [],
         "scope": null
       },

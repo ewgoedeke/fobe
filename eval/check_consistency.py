@@ -322,20 +322,52 @@ def _extract_period(col: dict, pos: int, total: int) -> str:
     return f"ord_{pos}"
 
 
+def _normalize_sign(parsed_value: float, concept_id: str, sign_convention: str, concepts: dict) -> float:
+    """Normalize a parsed amount to Dr+/Cr- natural sign.
+
+    Rule: dr_cr_amount = abs(parsed) × (1 if debit, -1 if credit)
+
+    For PRESENTATION sources, balance_type determines the sign — the parsed
+    sign (positive vs parentheses-negative) is redundant once the concept is known.
+    For NATURAL_DRCR sources, the amount is already correct.
+    """
+    if sign_convention == "NATURAL_DRCR":
+        return parsed_value
+    # PRESENTATION → NATURAL_DRCR
+    meta = concepts.get(concept_id)
+    if not meta:
+        return parsed_value  # unknown concept — pass through
+    if meta.balance_type == "credit":
+        return -abs(parsed_value)
+    else:
+        return abs(parsed_value)
+
+
 def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, str, str], list[Fact]]:
     """
     Index all tagged facts from the document.
 
     Returns: {(context, concept_id, period_key): [Fact, ...]}
     Facts from primary statements are sorted first within each key.
+    Amounts are normalized to Dr+/Cr- natural sign based on source sign convention.
     """
     facts: dict[tuple[str, str, str], list[Fact]] = defaultdict(list)
+
+    # Load concept metadata for sign normalization
+    concepts_meta = {}
+    if ontology_root:
+        from relationship_graph import load_concepts
+        concepts_meta = load_concepts(ontology_root)
 
     for table in tables:
         table_id = table["tableId"]
         sc = table.get("metadata", {}).get("statementComponent")
         page = table.get("pageNo", 0)
         scale = _get_unit_scale(table)
+        # Sign convention: per-table override. Default to NATURAL_DRCR (no normalization)
+        # so existing documents without the field are unaffected. Only documents that
+        # explicitly declare PRESENTATION get sign-normalized.
+        sign_convention = table.get("metadata", {}).get("signConvention", "NATURAL_DRCR")
         value_columns = _get_value_columns(table)
         value_col_indices = [c["colIdx"] for c in value_columns]
         is_primary = sc in PRIMARY_STATEMENTS
@@ -394,7 +426,8 @@ def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, 
                 col_meta = value_columns[col_pos]
                 period_key = _extract_period(col_meta, col_pos, len(value_columns))
 
-                normalized = pv * scale
+                scaled = pv * scale
+                normalized = _normalize_sign(scaled, concept_id, sign_convention, concepts_meta)
                 fact = Fact(
                     table_id=table_id,
                     context=context,
@@ -725,7 +758,11 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
             if note_val is None:
                 continue
 
-            delta = abs(face_val - note_val)
+            # Note-to-face comparison: use absolute values because disclosure
+            # note concepts may not have balance_type set, so sign normalization
+            # only applies to the face side. abs() comparison is safe here —
+            # the tie checks magnitude, not direction.
+            delta = abs(abs(face_val) - abs(note_val))
 
             if delta <= TOLERANCE:
                 findings.append(Finding(

@@ -184,6 +184,7 @@ def convert_table(isg_table: dict) -> dict | None:
             "statementComponent": sc,
             "detectedCurrency": "CURRENCY.EUR",
             "detectedUnit": unit,
+            "signConvention": "PRESENTATION",
             "sectionPath": [],
             "scope": None,
         },

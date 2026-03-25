@@ -93,6 +93,11 @@ context_rules:
       must sum to group totals (with reconciling items).
 
 # ── Anomaly rules (per concept family) ───────────────────────
+# NOTE: sign_rules validate amounts AFTER normalization to Dr+/Cr-.
+# When document_meta.sign_convention = PRESENTATION, the consistency
+# engine normalizes amounts during indexing using:
+#   dr_cr_amount = abs(parsed) × (1 if balance_type=debit, -1 if credit)
+# These rules then verify the normalization produced correct signs.
 anomaly_rules:
   sign_rules:
     - concepts: ["FS.PNL.REVENUE", "FS.PNL.OTHER_INCOME", "FS.PNL.FINANCE_INCOME", "FS.PNL.DIVIDEND_INCOME"]

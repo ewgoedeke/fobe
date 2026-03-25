@@ -48,6 +48,20 @@ document_meta_schema:
     presentation_currency: { type: string, required: true, description: "ISO 4217 (EUR, USD, GBP)" }
     functional_currency: { type: string, description: "If different from presentation" }
     default_unit: { type: enum, values: [UNITS, THOUSANDS, MILLIONS, BILLIONS], required: true }
+    sign_convention:
+      type: enum
+      values: [PRESENTATION, NATURAL_DRCR]
+      required: true
+      default: PRESENTATION
+      description: >
+        Source sign convention for amounts in this document.
+        PRESENTATION: revenue/equity shown as positive, expenses in parentheses
+        (standard for published financial statements and annual reports).
+        NATURAL_DRCR: debit positive, credit negative (Dr+/Cr-) — used by
+        entity trial balances, XBRL filings, and consolidation systems.
+        The ontology uses NATURAL_DRCR internally. When sign_convention is
+        PRESENTATION, amounts are normalized using concept.balance_type:
+        dr_cr_amount = abs(parsed) × (1 if debit, -1 if credit).
 
   # ── Audit ──────────────────────────────────────────────────
   audit:
