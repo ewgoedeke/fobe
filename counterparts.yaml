@@ -8,6 +8,13 @@ cross_statement_ties:
     requires: { context: SOCIE, concept: FS.SOCIE.PROFIT_FOR_PERIOD }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: DISCONTINUED_OPS_PRESENTATION
+        description: "PNL shows continuing ops profit, SOCIE shows total including discontinued"
+        confirm_via: "delta matches FS.PNL.PROFIT_DISCONTINUED"
+      - id: RECLASSIFICATION_BETWEEN_PERIODS
+        description: "SOCIE restated comparative, PNL did not (or vice versa)"
+        confirm_via: "mismatch only in comparative period"
 
   - name: oci_total_to_socie
     trigger: { context: OCI, concept: FS.OCI.TOTAL_OCI }
@@ -20,12 +27,23 @@ cross_statement_ties:
     requires: { context: SFP, concept: FS.SFP.TOTAL_EQUITY }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: DIVIDEND_TIMING
+        description: "SFP after dividend declaration, SOCIE before (or vice versa)"
+        confirm_via: "delta matches dividend amount in SOCIE.DIVIDENDS"
 
   - name: cfs_closing_cash_to_sfp
     trigger: { context: CFS, concept: FS.CFS.CASH_CLOSING }
     requires: { context: SFP, concept: FS.SFP.CASH }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: RESTRICTED_CASH
+        description: "SFP includes restricted cash, CFS excludes it (IAS 7.6)"
+        confirm_via: "delta matches restricted cash disclosure"
+      - id: BANK_OVERDRAFT
+        description: "CFS nets bank overdrafts into cash, SFP shows them as borrowings"
+        confirm_via: "delta matches bank overdraft liability"
 
   - name: sfp_balance_equation
     trigger: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
@@ -37,9 +55,26 @@ disaggregation_ties:
   - name: revenue_by_segment
     face: { context: PNL, concept: FS.PNL.REVENUE }
     detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.EXTERNAL_REVENUE, axis: AXIS.SEGMENT_DOC }
-    check: "face.amount = SUM(detail.amount by axis) + ic_residual"
+    check: "face.amount = SUM(detail.amount by axis) + residual"
     severity: WARNING
-    note: "ic_residual should be zero; non-zero = IC leakage"
+    residual_confirm: { concept: DISC.SEGMENTS.INTERSEGMENT_REVENUE, context: DISC.SEGMENTS }
+    ambiguities:
+      - id: IC_NOT_ELIMINATED
+        description: "Intercompany revenue not fully eliminated at group level"
+        confirm_via: "residual matches tagged DISC.SEGMENTS.INTERSEGMENT_REVENUE"
+        severity: WARNING
+      - id: COMPARATIVE_RESTATEMENT
+        description: "Prior-year figures restated in current report (IFRS 8.29)"
+        confirm_via: "residual only in comparative period, not current"
+        severity: INFO
+      - id: SEGMENT_RECLASSIFICATION
+        description: "Segment boundaries changed between periods (IFRS 8.34)"
+        confirm_via: "segment structure differs between current and comparative columns"
+        severity: INFO
+      - id: ROUNDING_DIFFERENCE
+        description: "Independent rounding of face and segment figures"
+        confirm_via: "residual < 0.01% of face amount"
+        severity: IGNORE
 
   - name: revenue_by_timing
     face: { context: PNL, concept: FS.PNL.REVENUE }
@@ -47,24 +82,48 @@ disaggregation_ties:
     concepts: [DISC.REVENUE.GOODS_TRANSFERRED_POINT, DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME]
     check: "face.amount = SUM(detail concepts)"
     severity: WARNING
+    ambiguities:
+      - id: PARTIAL_DISAGGREGATION
+        description: "Timing split does not cover all revenue streams"
+        confirm_via: "detail sum < face amount AND other revenue categories exist"
+        severity: INFO
 
   - name: ppe_face_to_note
     face: { context: SFP, concept: FS.SFP.PPE_NET }
     detail: { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT, axis: AXIS.PPE_CLASS_DOC }
     check: "face.amount = SUM(detail.amount by axis)"
     severity: WARNING
+    ambiguities:
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net carrying amount"
+        confirm_via: "detail sum > face amount"
+        severity: INFO
+      - id: CLASS_MISMATCH
+        description: "Note PPE classes don't map 1:1 to face line items"
+        confirm_via: "detail includes ROU assets or investment property mixed with PPE"
+        severity: INFO
 
   - name: segment_assets_to_total
     face: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
     detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.TOTAL_ASSETS, axis: AXIS.SEGMENT_DOC }
     check: "face.amount = SUM(detail.amount by axis) + unallocated"
     severity: WARNING
+    ambiguities:
+      - id: UNALLOCATED_ITEMS
+        description: "Corporate/HQ assets not allocated to operating segments"
+        confirm_via: "reconciliation table shows unallocated line"
+        severity: INFO
 
   - name: provisions_face_to_note
     face: { context: SFP, concept: FS.SFP.PROVISIONS }
     detail: { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING, axis: AXIS.PROVISION_TYPE_DOC }
     check: "face.amount = SUM(detail.amount by axis)"
     severity: WARNING
+    ambiguities:
+      - id: CURRENT_VS_NONCURRENT_SPLIT
+        description: "Face shows current + non-current combined, note splits them"
+        confirm_via: "detail sum ≈ face.current_provisions + face.noncurrent_provisions"
+        severity: INFO
 
 ic_decomposition:
   - name: revenue_ic
@@ -72,17 +131,43 @@ ic_decomposition:
     external_concept: DISC.SEGMENTS.EXTERNAL_REVENUE
     ic_concept: DISC.SEGMENTS.INTERSEGMENT_REVENUE
     check: "face = SUM(external) + SUM(ic_post_elimination)"
-    note: "IC post elimination should be zero for clean consolidation"
+    ambiguities:
+      - id: IC_NOT_ELIMINATED
+        description: "Intercompany revenue not fully eliminated at group level"
+        confirm_via: "residual matches tagged DISC.SEGMENTS.INTERSEGMENT_REVENUE"
+        severity: WARNING
+      - id: COMPARATIVE_RESTATEMENT
+        description: "Prior-year segment figures restated, face not (or vice versa)"
+        confirm_via: "residual only in comparative period; current period ties"
+        severity: INFO
+      - id: SEGMENT_RECLASSIFICATION
+        description: "Segment boundaries changed — external/IC split differs"
+        confirm_via: "segment structure differs between current and comparative"
+        severity: INFO
+      - id: ROUNDING
+        description: "Independent rounding of face and segment totals"
+        confirm_via: "residual < 0.01% of face"
+        severity: IGNORE
 
   - name: trade_receivables_ic
     face_concept: FS.SFP.TRADE_RECEIVABLES
     ic_concept: FS.SFP.RELATED_PARTY_RECEIVABLES
     check: "if ic exists, face should be decomposable into external + ic"
+    ambiguities:
+      - id: RELATED_PARTY_SCOPE
+        description: "Related party receivables may include non-IC items (e.g., key management)"
+        confirm_via: "related party note breaks down by counterparty type"
+        severity: INFO
 
   - name: trade_payables_ic
     face_concept: FS.SFP.TRADE_PAYABLES
     ic_concept: FS.SFP.RELATED_PARTY_PAYABLES
     check: "if ic exists, face should be decomposable into external + ic"
+    ambiguities:
+      - id: RELATED_PARTY_SCOPE
+        description: "Related party payables may include non-IC items"
+        confirm_via: "related party note breaks down by counterparty type"
+        severity: INFO
 
 summation_trees:
   - parent: FS.SFP.TOTAL_ASSETS

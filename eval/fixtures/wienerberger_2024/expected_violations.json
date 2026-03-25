@@ -1,0 +1,36 @@
+{
+  "document": "Wienerberger AG Annual Report 2024",
+  "source": "/tmp/doc_tag/006/Wienerberger_AG_Annual_Report_2024_tables_stitched/table_graphs.json",
+  "note": "Expected findings from three-pass consistency check with label matching.",
+  "expected_violations": [
+    {
+      "category": "VALID_DISAGGREGATION",
+      "edge_name": "revenue_by_segment",
+      "description": "Revenue disaggregation to segments holds (face = SUM external + IC)"
+    },
+    {
+      "category": "VALID_DISAGGREGATION",
+      "edge_name": "revenue_ic",
+      "description": "IC decomposition valid: external + IC = face (both 2024 and 2023)"
+    },
+    {
+      "category": "IC_LEAKAGE",
+      "edge_name": "revenue_by_segment",
+      "description": "Revenue IC residual 909 TEUR in 2023 comparative — intercompany revenue not fully eliminated"
+    },
+    {
+      "category": "EXPLAINED_MISMATCH",
+      "pattern_id": "UNIT_SCALE",
+      "concept": "FS.PNL.PROFIT_BEFORE_TAX",
+      "description": "PBT appears in primary PNL (TEUR) and 10-year overview (Mio) — ×1000 scale difference"
+    },
+    {
+      "category": "UNEXPLAINED_INCONSISTENCY",
+      "description": "Table_102 (OCI page 195) contains PNL-structure labels (Revenues, EBITDA, EBIT) — likely IAS 28 associate summary misclassified as OCI"
+    }
+  ],
+  "notes": [
+    "Treasury shares SHARE_COUNT_VS_MONETARY not yet detected — share count data in equity notes needs specific label patterns",
+    "Investment property GROSS_VS_NET not yet detected — note rollforward label matching not yet implemented"
+  ]
+}

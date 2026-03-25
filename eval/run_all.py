@@ -12,7 +12,7 @@ import os
 
 CHECKS = [
     ('Classification', 'eval/check_classification.py'),
-    ('Cross-Reference', 'eval/check_cross_reference.py'),
+    ('Consistency', 'eval/check_consistency.py'),
 ]
 
 

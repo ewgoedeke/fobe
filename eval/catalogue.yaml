@@ -1,0 +1,67 @@
+# FOBE Evaluation Catalogue — Running Regression Test Set
+# Each entry records a discovered issue across evaluated documents.
+# Used by check_consistency.py --check to verify findings are stable.
+
+catalogue:
+
+  # ── Wienerberger AG Annual Report 2024 ──────────────────────────
+  - document: Wienerberger AG 2024
+    company_id: "006"
+    source: /tmp/doc_tag/006/Wienerberger_AG_Annual_Report_2024_tables_stitched/table_graphs.json
+    fixture: eval/fixtures/wienerberger_2024/expected_violations.json
+    findings:
+      - id: WBI-001
+        category: VALID_DISAGGREGATION
+        edge: revenue_by_segment
+        description: "Revenue disaggregation: PNL face = SUM(segment external) for 2024"
+
+      - id: WBI-002
+        category: VALID_DISAGGREGATION
+        edge: revenue_ic
+        description: "IC decomposition valid: face = external + IC for both 2024 (IC=0) and 2023 (IC=909)"
+
+      - id: WBI-003
+        category: IC_LEAKAGE
+        edge: revenue_by_segment
+        description: "Revenue IC residual 909 TEUR in 2023 comparative"
+        root_cause: "Intercompany revenue not fully eliminated in 2023 consolidation"
+
+      - id: WBI-004
+        category: EXPLAINED_MISMATCH
+        pattern: UNIT_SCALE
+        concept: FS.PNL.PROFIT_BEFORE_TAX
+        description: "10-year overview (table_179, Mio) vs primary PNL (table_97, TEUR)"
+        root_cause: "Unit detection reports TEUR for the 10-year overview but values are in Mio EUR"
+
+      - id: WBI-005
+        category: UNEXPLAINED_INCONSISTENCY
+        table: table_102
+        page: 195
+        description: "OCI table contains PNL-structure labels (Revenues, EBITDA, EBIT)"
+        root_cause: "Table is an IAS 28 associate/JV summary misclassified as OCI"
+        resolution: "Reclassify to DISC.ASSOCIATES"
+
+      - id: WBI-006
+        category: NOT_YET_DETECTABLE
+        description: "Treasury shares EUR vs share count mismatch"
+        blocked_by: "Share count label patterns not yet in LABEL_CONCEPT_MAP"
+        expected_category: EXPLAINED_MISMATCH
+        expected_pattern: SHARE_COUNT_VS_MONETARY
+
+      - id: WBI-007
+        category: NOT_YET_DETECTABLE
+        description: "Investment property face 44,233 vs note 78,646 (gross vs net)"
+        blocked_by: "Investment property note rollforward label matching needed"
+        expected_category: EXPLAINED_MISMATCH
+        expected_pattern: GROSS_VS_NET
+
+  # ── Future documents ────────────────────────────────────────────
+  # Template:
+  # - document: Company Name Year
+  #   company_id: "NNN"
+  #   source: /path/to/table_graphs.json
+  #   fixture: eval/fixtures/company_year/expected_violations.json
+  #   findings:
+  #     - id: XXX-NNN
+  #       category: ...
+  #       description: ...

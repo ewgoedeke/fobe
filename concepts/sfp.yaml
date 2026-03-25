@@ -12,6 +12,10 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT, axis: AXIS.PPE_CLASS_DOC }
 
   - id: FS.SFP.RIGHT_OF_USE_ASSETS
     label: Right-of-use assets (IFRS 16)
@@ -30,6 +34,11 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    measurement_variants:
+      - { model: COST, note_shows: [DISC.INV_PROP.COST_OPENING, DISC.INV_PROP.ACCUM_DEPR] }
+      - { model: FAIR_VALUE, note_shows: [DISC.INV_PROP.FV_OPENING, DISC.INV_PROP.FV_CHANGE] }
 
   - id: FS.SFP.GOODWILL
     label: Goodwill
@@ -48,6 +57,10 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.INTANGIBLES, concept: DISC.INTANGIBLES.CARRYING_AMOUNT, axis: AXIS.INTANGIBLE_CLASS_DOC }
 
   - id: FS.SFP.INTANGIBLE_ASSETS_GOODWILL
     label: Intangible assets and goodwill (combined)
@@ -148,6 +161,10 @@ concepts:
     mappable: true
     is_monetary: true
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    has_ic_variant: true
+    ic_concept: FS.SFP.RELATED_PARTY_RECEIVABLES
 
   - id: FS.SFP.CONTRACT_ASSETS
     label: Contract assets
@@ -238,6 +255,10 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: true
+    valid_contexts: [SFP]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.TOTAL_ASSETS, axis: AXIS.SEGMENT_DOC }
 
   # ── Equity ─────────────────────────────────────────────────
   - id: FS.SFP.SHARE_CAPITAL
@@ -248,6 +269,10 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP, SOCIE]
+    unit_type: monetary
+    note_unit_type: shares
+    note: "SFP shows EUR value; equity note may show number of shares"
 
   - id: FS.SFP.SHARE_PREMIUM
     label: Share premium / capital reserves
@@ -266,6 +291,10 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP, SOCIE]
+    unit_type: monetary
+    note_unit_type: shares
+    note: "SFP shows EUR value; equity note shows share count — different units are expected"
 
   - id: FS.SFP.RETAINED_EARNINGS
     label: Retained earnings
@@ -357,6 +386,10 @@ concepts:
     mappable: true
     is_monetary: true
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING, axis: AXIS.PROVISION_TYPE_DOC }
 
   - id: FS.SFP.DEFERRED_TAX_LIABILITIES
     label: Deferred tax liabilities
@@ -412,6 +445,10 @@ concepts:
     mappable: true
     is_monetary: true
     is_total: false
+    valid_contexts: [SFP]
+    unit_type: monetary
+    has_ic_variant: true
+    ic_concept: FS.SFP.RELATED_PARTY_PAYABLES
 
   - id: FS.SFP.CONTRACT_LIABILITIES
     label: Contract liabilities
