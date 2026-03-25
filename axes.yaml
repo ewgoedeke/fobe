@@ -1,0 +1,309 @@
+# FOBE Axes — Dimension axes for tagging financial facts
+# STD axes: normalized vocabulary (defined here)
+# DOC axes: document-specific labels (defined per document in document_meta)
+
+axes:
+
+  # ═══════════════════════════════════════════════════════════
+  # ACCOUNTING POLICY AXES
+  # These axes capture HOW a number was measured/recognized.
+  # Critical for: consolidation comparability, GAAP conversion,
+  # audit trail, policy election tracking.
+  # ═══════════════════════════════════════════════════════════
+
+  - id: AXIS.VALUATION_METHOD
+    label: Inventory valuation method
+    type: STD
+    applicable_concepts: [FS.SFP.INVENTORIES, DISC.INVENTORY.*]
+    members:
+      - { id: VAL.FIFO, label: "First-in first-out (FIFO)" }
+      - { id: VAL.WEIGHTED_AVG, label: "Weighted average cost" }
+      - { id: VAL.SPECIFIC_ID, label: "Specific identification" }
+      - { id: VAL.LIFO, label: "Last-in first-out (LIFO)", note: "Not permitted under IFRS, allowed under UGB/HGB/US GAAP" }
+
+  - id: AXIS.MEASUREMENT_MODEL
+    label: Asset measurement model
+    type: STD
+    applicable_concepts: [FS.SFP.PPE_NET, FS.SFP.INTANGIBLE_ASSETS, FS.SFP.INVESTMENT_PROPERTY, FS.SFP.BIOLOGICAL_ASSETS]
+    members:
+      - { id: MEAS.COST_MODEL, label: "Cost model (IAS 16.30)" }
+      - { id: MEAS.REVALUATION_MODEL, label: "Revaluation model (IAS 16.31)" }
+      - { id: MEAS.FAIR_VALUE_MODEL, label: "Fair value model (IAS 40.33)" }
+      - { id: MEAS.FAIR_VALUE_LESS_COSTS_TO_SELL, label: "Fair value less costs to sell (IAS 41)" }
+
+  - id: AXIS.DEPRECIATION_METHOD
+    label: Depreciation/amortisation method
+    type: STD
+    applicable_concepts: [FS.SFP.PPE_NET, FS.SFP.INTANGIBLE_ASSETS, FS.SFP.RIGHT_OF_USE_ASSETS]
+    members:
+      - { id: DEPR.STRAIGHT_LINE, label: "Straight-line" }
+      - { id: DEPR.DECLINING_BALANCE, label: "Declining balance" }
+      - { id: DEPR.UNITS_OF_PRODUCTION, label: "Units of production" }
+      - { id: DEPR.SUM_OF_YEARS, label: "Sum of years digits" }
+
+  - id: AXIS.REVENUE_RECOGNITION
+    label: Revenue recognition method
+    type: STD
+    applicable_concepts: [FS.PNL.REVENUE, FS.PNL.REVENUE_RECOGNIZED, DISC.CONTRACTS.*]
+    members:
+      - { id: REVREC.OVER_TIME_INPUT, label: "Over time — input method (cost-to-cost)" }
+      - { id: REVREC.OVER_TIME_OUTPUT, label: "Over time — output method (milestones)" }
+      - { id: REVREC.POINT_IN_TIME, label: "At a point in time" }
+
+  - id: AXIS.FINANCIAL_INSTRUMENT_CLASSIFICATION
+    label: IFRS 9 measurement category
+    type: STD
+    applicable_concepts: [FS.SFP.OTHER_INVESTMENTS, FS.SFP.DERIVATIVE_ASSETS, FS.SFP.LOANS_BORROWINGS, DISC.FIN_INST.*]
+    members:
+      - { id: FI.AMORTISED_COST, label: "Amortised cost (IFRS 9.4.1.2)" }
+      - { id: FI.FVOCI_DEBT, label: "FVOCI — debt instruments (IFRS 9.4.1.2A)" }
+      - { id: FI.FVOCI_EQUITY, label: "FVOCI — equity instruments (IFRS 9.5.7.5)" }
+      - { id: FI.FVTPL_MANDATORY, label: "FVTPL — mandatory (failed SPPI)" }
+      - { id: FI.FVTPL_DESIGNATED, label: "FVTPL — designated (fair value option)" }
+      - { id: FI.FVTPL_TRADING, label: "FVTPL — held for trading" }
+
+  - id: AXIS.LEASE_TREATMENT
+    label: Lease accounting treatment
+    type: STD
+    applicable_concepts: [FS.SFP.RIGHT_OF_USE_ASSETS, FS.SFP.LEASE_LIABILITIES, DISC.LEASES.*]
+    members:
+      - { id: LEASE.IFRS16_ON_BALANCE, label: "IFRS 16 on-balance sheet (ROU + liability)" }
+      - { id: LEASE.SHORT_TERM_EXEMPT, label: "Short-term lease exemption (≤12 months)" }
+      - { id: LEASE.LOW_VALUE_EXEMPT, label: "Low-value asset exemption" }
+      - { id: LEASE.OPERATING_LEGACY, label: "Operating lease (pre-IFRS 16 / UGB)" }
+
+  - id: AXIS.GOODWILL_TREATMENT
+    label: Goodwill subsequent measurement
+    type: STD
+    applicable_concepts: [FS.SFP.GOODWILL, FS.PNL.GW_AMORTIZATION, FS.PNL.IMPAIRMENT_EXPENSE]
+    members:
+      - { id: GW.IMPAIRMENT_ONLY, label: "Impairment only (IFRS 3)" }
+      - { id: GW.AMORTISE_AND_IMPAIR, label: "Amortise + impairment test (UGB §203)" }
+    note: "IFRS locks to IMPAIRMENT_ONLY; UGB allows both as Wahlrecht"
+
+  - id: AXIS.NCI_MEASUREMENT
+    label: NCI measurement at acquisition
+    type: STD
+    applicable_concepts: [FS.SFP.NCI, DISC.BCA.*]
+    members:
+      - { id: NCI.FULL_GOODWILL, label: "Full goodwill method (NCI at fair value)" }
+      - { id: NCI.PARTIAL_GOODWILL, label: "Partial goodwill method (NCI at share of net assets)" }
+
+  - id: AXIS.CONSOLIDATION_METHOD
+    label: Consolidation method applied
+    type: STD
+    applicable_concepts: [FS.SFP.EQUITY_ACCOUNTED_INVESTEES, FS.SFP.INVESTMENT_IN_SUB]
+    members:
+      - { id: CONSOL.FULL, label: "Full consolidation" }
+      - { id: CONSOL.EQUITY_METHOD, label: "Equity method (IAS 28)" }
+      - { id: CONSOL.PROPORTIONATE, label: "Proportionate consolidation (UGB Wahlrecht)" }
+      - { id: CONSOL.COST_METHOD, label: "Cost method" }
+      - { id: CONSOL.NOT_CONSOLIDATED, label: "Not consolidated (immaterial)" }
+
+  - id: AXIS.BORROWING_COSTS
+    label: Borrowing cost treatment
+    type: STD
+    applicable_concepts: [FS.SFP.PPE_NET, FS.SFP.INTANGIBLE_ASSETS, FS.PNL.FINANCE_COSTS]
+    members:
+      - { id: BCOST.CAPITALISE, label: "Capitalise qualifying borrowing costs (IAS 23)" }
+      - { id: BCOST.EXPENSE, label: "Expense immediately" }
+    note: "IFRS requires capitalisation for qualifying assets; UGB allows choice"
+
+  - id: AXIS.ACQUISITION_COST_TREATMENT
+    label: Acquisition cost treatment
+    type: STD
+    applicable_concepts: [DISC.BCA.ACQUISITION_COSTS]
+    members:
+      - { id: ACQCOST.EXPENSE, label: "Expense in period (IFRS 3)" }
+      - { id: ACQCOST.CAPITALISE, label: "Capitalise into goodwill (UGB Wahlrecht)" }
+
+  - id: AXIS.FUNCTIONAL_CURRENCY
+    label: Entity functional currency
+    type: STD
+    applicable_concepts: ["*"]
+    members: []  # ISO 4217 codes, not enumerated
+    note: "Applied at entity level, not per concept. Drives FX translation (IAS 21)"
+
+  - id: AXIS.INSURANCE_MEASUREMENT_MODEL
+    label: IFRS 17 measurement model
+    type: STD
+    applicable_concepts: [DISC.INS_REG.*]
+    members:
+      - { id: INS_MODEL.GMM, label: "General Measurement Model" }
+      - { id: INS_MODEL.PAA, label: "Premium Allocation Approach" }
+      - { id: INS_MODEL.VFA, label: "Variable Fee Approach" }
+
+  - id: AXIS.INSURANCE_FINANCE_DISAGG
+    label: Insurance finance income/expense disaggregation
+    type: STD
+    applicable_concepts: [FS.PNL.INS.NET_FINANCE_EXPENSE_INSURANCE, FS.OCI.INS.*]
+    members:
+      - { id: INSF.PNL_ONLY, label: "All in P&L (no OCI option)" }
+      - { id: INSF.OCI_OPTION, label: "OCI option elected (IFRS 17.88)" }
+
+  # ═══════════════════════════════════════════════════════════
+  # PRESENTATION / STRUCTURAL AXES
+  # ═══════════════════════════════════════════════════════════
+
+  - id: AXIS.PNL_FORMAT
+    label: Income statement presentation format
+    type: STD
+    applicable_concepts: [FS.PNL.*]
+    members:
+      - { id: PNLFMT.NATURE_OF_EXPENSE, label: "By nature (Gesamtkostenverfahren)" }
+      - { id: PNLFMT.COST_OF_SALES, label: "By function (Umsatzkostenverfahren)" }
+    note: "UGB mandates NATURE_OF_EXPENSE; IFRS allows both"
+
+  - id: AXIS.MATURITY
+    label: Current / non-current classification
+    type: STD
+    applicable_concepts: [FS.SFP.*]
+    members:
+      - { id: MAT.CURRENT, label: "Current (≤12 months)" }
+      - { id: MAT.NON_CURRENT, label: "Non-current (>12 months)" }
+
+  - id: AXIS.MATURITY_BUCKET
+    label: Maturity band for liability/receivable analysis
+    type: STD
+    applicable_concepts: [DISC.BORROWINGS.*, DISC.UGB.*]
+    members:
+      - { id: MATBKT.WITHIN_1Y, label: "Within 1 year" }
+      - { id: MATBKT.1_TO_5Y, label: "1 to 5 years" }
+      - { id: MATBKT.OVER_5Y, label: "Over 5 years" }
+
+  - id: AXIS.SCOPE
+    label: Operations scope
+    type: STD
+    applicable_concepts: [FS.PNL.*, FS.CFS.*]
+    members:
+      - { id: SCOPE.CONTINUING, label: "Continuing operations" }
+      - { id: SCOPE.DISCONTINUED, label: "Discontinued operations (IFRS 5)" }
+      - { id: SCOPE.TOTAL, label: "Total operations" }
+
+  - id: AXIS.FAIR_VALUE_LEVEL
+    label: Fair value hierarchy
+    type: STD
+    applicable_concepts: [DISC.FAIR_VALUE.*]
+    members:
+      - { id: FVL.LEVEL_1, label: "Level 1 — quoted prices in active markets" }
+      - { id: FVL.LEVEL_2, label: "Level 2 — observable inputs" }
+      - { id: FVL.LEVEL_3, label: "Level 3 — unobservable inputs" }
+
+  - id: AXIS.ECL_STAGE
+    label: IFRS 9 ECL impairment stage
+    type: STD
+    applicable_concepts: [DISC.BANK.ECL_*]
+    members:
+      - { id: ECL.STAGE_1, label: "Stage 1 — 12-month ECL" }
+      - { id: ECL.STAGE_2, label: "Stage 2 — lifetime ECL, not credit-impaired" }
+      - { id: ECL.STAGE_3, label: "Stage 3 — lifetime ECL, credit-impaired" }
+      - { id: ECL.POCI, label: "Purchased or originated credit-impaired" }
+
+  # ═══════════════════════════════════════════════════════════
+  # PERIOD AXES (DocTag model)
+  # ═══════════════════════════════════════════════════════════
+
+  - id: AXIS.PERIOD_KEY
+    label: Abstract period identifier
+    type: DOC
+    members: []  # PERK.001, PERK.002, ... defined per document in period_map
+
+  - id: AXIS.PERIOD_RELATION
+    label: Relative period role
+    type: STD
+    members:
+      - { id: PREL.CURRENT, label: "Current reporting period" }
+      - { id: PREL.COMPARATIVE, label: "Comparative period" }
+      - { id: PREL.OPENING_COMPARATIVE, label: "Opening balance of comparative period" }
+
+  - id: AXIS.TIME_TYPE
+    label: Stock vs flow distinction
+    type: STD
+    members:
+      - { id: TIME.INSTANT, label: "Point-in-time (balance sheet)" }
+      - { id: TIME.DURATION, label: "Period flow (P&L, CFS)" }
+
+  # ═══════════════════════════════════════════════════════════
+  # DIMENSIONAL AXES (DOC = document-specific)
+  # ═══════════════════════════════════════════════════════════
+
+  - id: AXIS.SEGMENT_DOC
+    label: Operating segment (document-specific)
+    type: DOC
+    member_scheme: { prefix: SEG, id_pattern: "^SEG\\.[0-9]{3}$" }
+    reserved: [SEG.TOTAL, SEG.ELIM, SEG.OTHER, SEG.UNALLOCATED]
+
+  - id: AXIS.GEOGRAPHY_DOC
+    label: Geographic segment (document-specific)
+    type: DOC
+    member_scheme: { prefix: GEO, id_pattern: "^GEO\\.[0-9]{3}$" }
+    reserved: [GEO.TOTAL, GEO.DOMESTIC, GEO.INTERNATIONAL]
+
+  - id: AXIS.PPE_CLASS_DOC
+    label: PPE asset class (document-specific)
+    type: DOC
+    member_scheme: { prefix: PPEDOC, id_pattern: "^PPEDOC\\.[0-9]{3}$" }
+    reserved: [PPEDOC.TOTAL]
+
+  - id: AXIS.PPE_CLASS_STD
+    label: PPE asset class (normalised)
+    type: STD
+    members:
+      - { id: PPESTD.LAND, label: "Land" }
+      - { id: PPESTD.LAND_BUILDINGS, label: "Land and buildings" }
+      - { id: PPESTD.PLANT_MACHINERY, label: "Plant and machinery" }
+      - { id: PPESTD.VEHICLES, label: "Motor vehicles" }
+      - { id: PPESTD.OFFICE_IT_EQUIPMENT, label: "Office and IT equipment" }
+      - { id: PPESTD.FIXTURES_FITTINGS, label: "Fixtures and fittings" }
+      - { id: PPESTD.UNDER_CONSTRUCTION, label: "Assets under construction" }
+
+  - id: AXIS.INTANGIBLE_CLASS_STD
+    label: Intangible asset class (normalised)
+    type: STD
+    members:
+      - { id: INTSTD.SOFTWARE, label: "Software" }
+      - { id: INTSTD.PATENTS, label: "Patents and trademarks" }
+      - { id: INTSTD.CUSTOMER_RELATIONSHIPS, label: "Customer relationships" }
+      - { id: INTSTD.LICENCES, label: "Licences and concessions" }
+      - { id: INTSTD.DEVELOPMENT_COSTS, label: "Capitalised development costs" }
+      - { id: INTSTD.BRAND, label: "Brand names" }
+
+  - id: AXIS.PROVISION_TYPE_DOC
+    label: Provision category (document-specific)
+    type: DOC
+    member_scheme: { prefix: PROVDOC, id_pattern: "^PROVDOC\\.[0-9]{3}$" }
+
+  - id: AXIS.PROVISION_TYPE_STD
+    label: Provision category (normalised)
+    type: STD
+    members:
+      - { id: PROVSTD.RESTRUCTURING, label: "Restructuring" }
+      - { id: PROVSTD.WARRANTY, label: "Warranty / guarantee" }
+      - { id: PROVSTD.LEGAL, label: "Legal claims" }
+      - { id: PROVSTD.ENVIRONMENTAL, label: "Environmental remediation" }
+      - { id: PROVSTD.ONEROUS_CONTRACTS, label: "Onerous contracts" }
+      - { id: PROVSTD.DECOMMISSIONING, label: "Decommissioning / asset retirement" }
+      - { id: PROVSTD.OTHER, label: "Other provisions" }
+
+  - id: AXIS.ENTITY_DOC
+    label: Entity within the group (document-specific)
+    type: DOC
+    member_scheme: { prefix: ENT, id_pattern: "^ENT\\.[0-9]{3}$" }
+    note: "Used in associate/JV disclosures and subsidiary listings"
+
+  - id: AXIS.CURRENCY
+    label: Currency
+    type: STD
+    members: []  # ISO 4217 codes
+    note: "Every fact has a currency. Presentation currency from document_meta."
+
+  - id: AXIS.UNIT
+    label: Reporting unit scale
+    type: STD
+    members:
+      - { id: UNIT.UNITS, label: "Full units (EUR, USD)" }
+      - { id: UNIT.THOUSANDS, label: "Thousands (TEUR)" }
+      - { id: UNIT.MILLIONS, label: "Millions (Mio.)" }
+      - { id: UNIT.BILLIONS, label: "Billions (Mrd.)" }
+      - { id: UNIT.PER_SHARE, label: "Per share (EUR/share)" }
+      - { id: UNIT.PERCENT, label: "Percentage (%)" }
