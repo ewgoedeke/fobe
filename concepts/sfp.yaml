@@ -152,6 +152,7 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [SFP, CFS]
 
   - id: FS.SFP.TRADE_RECEIVABLES
     label: Trade receivables
@@ -161,7 +162,7 @@ concepts:
     mappable: true
     is_monetary: true
     is_total: false
-    valid_contexts: [SFP]
+    valid_contexts: [SFP, CFS]
     unit_type: monetary
     has_ic_variant: true
     ic_concept: FS.SFP.RELATED_PARTY_RECEIVABLES
@@ -228,6 +229,7 @@ concepts:
     mappable: true
     is_monetary: true
     is_total: false
+    valid_contexts: [SFP, CFS]
 
   - id: FS.SFP.ASSETS_HELD_FOR_SALE
     label: Assets held for sale (IFRS 5)
@@ -349,6 +351,7 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: true
+    valid_contexts: [SFP, CFS, SOCIE]
 
   # ── Non-current liabilities ────────────────────────────────
   - id: FS.SFP.LOANS_BORROWINGS
