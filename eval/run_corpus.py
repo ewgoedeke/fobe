@@ -22,9 +22,10 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from check_consistency import (
-    check_document, index_facts, Finding, Category,
+    check_document, check_document_scored, index_facts, Finding, Category,
     PRIMARY_STATEMENTS, _match_label, _infer_table_context,
 )
+from fact_scoring import CorroborationStatus
 from relationship_graph import build_graph, EdgeType
 
 
@@ -72,8 +73,8 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
             else:
                 fact_sources["note_or_other"] += 1
 
-    # Run checks
-    findings = check_document(tables, ontology_root)
+    # Run checks with scoring
+    findings, score_registry = check_document_scored(tables, ontology_root)
 
     # Categorize findings
     by_category = Counter()
@@ -85,20 +86,25 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
             by_edge[f.edge_name] += 1
         finding_details.append(f.to_dict())
 
-    # Corroboration summary
-    # Count concepts that are CONFIRMED (appear in a VALID_* finding)
+    # Per-fact corroboration from score registry
+    fact_status_counts = Counter()
+    for fs in score_registry.values():
+        fact_status_counts[fs.status.value] += 1
+
+    # Table arithmetic stats
+    table_arith_count = sum(
+        1 for fs in score_registry.values()
+        if any(c.check_type == "TABLE_ARITHMETIC" for c in fs.checks)
+    )
+
+    # Concept-level summary (backward compat + overview)
     confirmed_concepts = set()
     contradicted_concepts = set()
-    for f in findings:
-        if f.category in (Category.VALID_DISAGGREGATION, Category.VALID_TIE):
-            for c in f.concepts:
-                if c:
-                    confirmed_concepts.add(c)
-        elif f.category == Category.BROKEN_RELATIONSHIP:
-            for c in f.concepts:
-                if c:
-                    contradicted_concepts.add(c)
-
+    for fs in score_registry.values():
+        if fs.status == CorroborationStatus.CONFIRMED:
+            confirmed_concepts.add(fs.concept_id)
+        elif fs.status == CorroborationStatus.CONTRADICTED:
+            contradicted_concepts.add(fs.concept_id)
     unconfirmed_concepts = unique_concepts - confirmed_concepts - contradicted_concepts
 
     return {
@@ -124,6 +130,14 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
             "confirmed": len(confirmed_concepts),
             "contradicted": len(contradicted_concepts),
             "unconfirmed": len(unconfirmed_concepts),
+        },
+        "fact_scores": {
+            "confirmed": fact_status_counts.get("CONFIRMED", 0),
+            "corroborated": fact_status_counts.get("CORROBORATED", 0),
+            "unconfirmed": fact_status_counts.get("UNCONFIRMED", 0),
+            "contradicted": fact_status_counts.get("CONTRADICTED", 0),
+            "total": len(score_registry),
+            "table_arithmetic": table_arith_count,
         },
         "findings": finding_details,
     }
@@ -158,9 +172,29 @@ def print_comparison(results: list[dict]):
             print(f" {r[key]:>15,d}", end="")
         print()
 
-    # Corroboration
+    # Per-fact corroboration scores
     print()
-    print(f"{'Corroboration':<35s}", end="")
+    print(f"{'Fact Scores':<35s}", end="")
+    for n in names:
+        print(f" {n:>15s}", end="")
+    print()
+    print("─" * (35 + 16 * len(names)))
+    for label, key in [
+        ("CONFIRMED (≥2 checks)", "confirmed"),
+        ("CORROBORATED (1 check)", "corroborated"),
+        ("UNCONFIRMED (no checks)", "unconfirmed"),
+        ("CONTRADICTED (failed)", "contradicted"),
+        ("Total scored facts", "total"),
+        ("Table arithmetic hits", "table_arithmetic"),
+    ]:
+        print(f"  {label:<33s}", end="")
+        for r in results:
+            print(f" {r.get('fact_scores', {}).get(key, 0):>15,d}", end="")
+        print()
+
+    # Concept-level summary
+    print()
+    print(f"{'Concept Summary':<35s}", end="")
     for n in names:
         print(f" {n:>15s}", end="")
     print()
