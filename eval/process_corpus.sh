@@ -36,12 +36,17 @@ if [ ! -f "$DOC_TAG/ingest_docling.py" ]; then
     exit 1
 fi
 
-# Verify Docling is available
-python3 -c "from docling.document_converter import DocumentConverter" 2>/dev/null || {
-    echo "ERROR: Docling not available. Install with: pip install docling"
-    echo "Or run this script on the server where Docling is installed."
+# Find Python with Docling
+PYTHON=python3
+if [ -f /tmp/docling_venv/bin/python3 ]; then
+    /tmp/docling_venv/bin/python3 -c "from docling.document_converter import DocumentConverter" 2>/dev/null && PYTHON=/tmp/docling_venv/bin/python3
+fi
+$PYTHON -c "from docling.document_converter import DocumentConverter" 2>/dev/null || {
+    echo "ERROR: Docling not available."
+    echo "Install with: python3 -m venv /tmp/docling_venv && /tmp/docling_venv/bin/pip install docling"
     exit 1
 }
+echo "Using Python: $PYTHON"
 
 mkdir -p "$WORK_DIR"
 
@@ -92,7 +97,7 @@ for pdf in "$FOBE_ROOT"/sources/ugb/*.pdf; do
     mkdir -p "$doc_dir"
 
     # Run ingest_docling.py (auto-calls preprocess.py)
-    if python3 "$DOC_TAG/ingest_docling.py" \
+    if $PYTHON "$DOC_TAG/ingest_docling.py" \
         --pdf "$pdf" \
         --doc-dir "$doc_dir" \
         --display-name "$name" 2>&1; then
