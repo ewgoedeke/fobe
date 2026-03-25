@@ -169,6 +169,133 @@ ic_decomposition:
         confirm_via: "related party note breaks down by counterparty type"
         severity: INFO
 
+# ── Note-to-face ties ──────────────────────────────────────────────
+# Every disclosure note total must tie back to the corresponding face
+# line on the primary statement. This is the vertical link:
+#   face (PNL/SFP) ←→ note total (DISC.*)
+# The disaggregation_ties above check the horizontal link:
+#   note total = SUM(note details)
+#
+# Scope rule: the tie only holds for the SAME entity and consolidation
+# level. A group-level PNL face ties to a group-level revenue note,
+# not to a subsidiary's standalone revenue note.
+
+note_to_face_ties:
+  # ── PNL face → disclosure notes ────────────────────────────────
+  - name: revenue_face_to_note
+    face: { context: PNL, concept: FS.PNL.REVENUE }
+    note_total: { context: DISC.REVENUE, concept: DISC.REVENUE.TOTAL_REVENUE }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: SCOPE_MISMATCH
+        description: "Note covers a different scope (e.g., IFRS 15 revenue only, face includes lease income)"
+        confirm_via: "note states scope exclusions"
+        severity: INFO
+      - id: ROUNDING
+        description: "Independent rounding between statement and note"
+        confirm_via: "delta < 0.01% of face"
+        severity: IGNORE
+
+  - name: income_tax_face_to_note
+    face: { context: PNL, concept: FS.PNL.INCOME_TAX_EXPENSE }
+    note_total: { context: DISC.TAX, concept: DISC.TAX.TOTAL_TAX_EXPENSE }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: SIGN_CONVENTION
+        description: "Face uses Dr+ (positive expense), note uses accounting sign (may be negative)"
+        confirm_via: "abs(face) = abs(note)"
+        severity: INFO
+      - id: TAX_PRESENTATION
+        description: "Note splits current/deferred differently from face aggregation"
+        confirm_via: "note total = face after sign adjustment"
+        severity: INFO
+
+  - name: depreciation_face_to_note
+    face: { context: PNL, concept: FS.PNL.DEPRECIATION_AMORTISATION }
+    note_total: { context: DISC.PPE, concept: DISC.PPE.ACCUM_DEPR_CHARGE }
+    check: "face may include amortisation + impairment beyond PPE depreciation"
+    severity: INFO
+    ambiguities:
+      - id: SCOPE_WIDER
+        description: "PNL D&A includes intangibles amortisation + ROU depreciation, PPE note shows PPE only"
+        severity: INFO
+
+  # ── SFP face → disclosure notes ────────────────────────────────
+  - name: ppe_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.PPE_NET }
+    note_total: { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT }
+    check: "face = SUM(note carrying amounts by PPE class)"
+    severity: WARNING
+    ambiguities:
+      - id: ROU_INCLUDED
+        description: "Face PPE includes ROU assets, note separates them"
+        confirm_via: "face = note PPE + note ROU"
+        severity: INFO
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net after depreciation"
+        confirm_via: "note amount > face amount"
+        severity: INFO
+
+  - name: intangibles_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.INTANGIBLE_ASSETS }
+    note_total: { context: DISC.INTANGIBLES, concept: DISC.INTANGIBLES.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+
+  - name: goodwill_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.GOODWILL }
+    note_total: { context: DISC.GOODWILL, concept: DISC.GOODWILL.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+
+  - name: provisions_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.PROVISIONS }
+    note_total: { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING }
+    check: "face = SUM(provision types closing)"
+    severity: WARNING
+    ambiguities:
+      - id: CURRENT_VS_NONCURRENT
+        description: "Face shows one total, note splits current/non-current"
+        severity: INFO
+
+  - name: investment_property_face_to_note
+    face: { context: SFP, concept: FS.SFP.INVESTMENT_PROPERTY }
+    note_total: { context: DISC.INV_PROP, concept: DISC.INV_PROP.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: MEASUREMENT_MODEL
+        description: "Face at fair value, note at cost (or vice versa)"
+        confirm_via: "concept has measurement_variants"
+        severity: INFO
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net"
+        severity: INFO
+
+  - name: equity_investees_face_to_note
+    face: { context: SFP, concept: FS.SFP.EQUITY_ACCOUNTED_INVESTEES }
+    note_total: { context: DISC.ASSOCIATES, concept: FS.SFP.EQUITY_ACCOUNTED_INVESTEES }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: ASSOCIATE_OWN_FIGURES
+        description: "Note shows associate's own total assets/equity, not group's carrying amount"
+        confirm_via: "note provenance = ASSOCIATE_OWN"
+        severity: INFO
+
+  # ── CFS/SOCIE face → notes ────────────────────────────────────
+  - name: employee_benefits_to_note
+    face: { context: SFP, concept: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY }
+    note_total: { context: DISC.EMPLOYEE_BENEFITS, concept: DISC.EMPLOYEE_BENEFITS.DBO_CLOSING }
+    check: "face may include multiple schemes; note may show only defined benefit"
+    severity: INFO
+    ambiguities:
+      - id: SCHEME_SCOPE
+        description: "Face includes all employee benefit liabilities, note covers only defined benefit"
+        severity: INFO
+
 summation_trees:
   - parent: FS.SFP.TOTAL_ASSETS
     children: [FS.SFP.NON_CURRENT_ASSETS, FS.SFP.CURRENT_ASSETS]

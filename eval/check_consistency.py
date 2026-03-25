@@ -140,6 +140,12 @@ LABEL_CONCEPT_MAP: dict[str, tuple[str, str]] = {
     "deferred tax expense": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
     "deferred tax expense/income": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
     "deferred tax income": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
+    "income taxes": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
+    "incometaxes": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
+    "income tax expense": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
+    # Revenue note total
+    "total revenue": ("DISC.REVENUE.TOTAL_REVENUE", "DISC.REVENUE"),
+    "total revenues": ("DISC.REVENUE.TOTAL_REVENUE", "DISC.REVENUE"),
     # PPE rollforward
     "carrying amount": ("DISC.PPE.CARRYING_AMOUNT", "DISC.PPE"),
     "net book value": ("DISC.PPE.CARRYING_AMOUNT", "DISC.PPE"),
@@ -152,6 +158,8 @@ _LABEL_STRIP = re.compile(r'\s*\d+\)?\s*$|^\d+\.\s*')  # trailing "1)" or leadin
 def _normalize_label(label: str) -> str:
     """Normalize a label for matching."""
     label = _LABEL_STRIP.sub("", label.strip()).strip().lower()
+    # Remove extra whitespace
+    label = re.sub(r'\s+', ' ', label)
     return label
 
 
@@ -167,11 +175,14 @@ def _match_label(label: str, table_context: Optional[str] = None) -> Optional[tu
     # Exact match
     match = LABEL_CONCEPT_MAP.get(norm)
     if not match:
-        # Prefix match (e.g., "External revenues 1)" → "external revenues")
-        for key, val in LABEL_CONCEPT_MAP.items():
-            if len(norm) >= 5 and (norm.startswith(key) or key.startswith(norm)):
-                match = val
-                break
+        # Suffix-tolerant match: "External revenues 1)" normalizes to
+        # "external revenues" after stripping — already handled by normalizer.
+        # Also try with common suffixes stripped:
+        for suffix in [" total", " net", " gross"]:
+            if norm.endswith(suffix):
+                match = LABEL_CONCEPT_MAP.get(norm[:-len(suffix)].strip())
+                if match:
+                    break
     if not match:
         return None
 
@@ -555,6 +566,65 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                     concepts=[edge.trigger_concept, edge.requires_concept],
                     message=f"Cross-statement tie BROKEN: {edge.trigger_concept}={trigger_val:,.0f} ≠ {edge.requires_concept}={requires_val:,.0f}, Δ={delta:,.0f} [{pk}]",
                     details={"period": pk},
+                ))
+
+    # Note-to-face ties
+    for edge in graph.edges_by_type(EdgeType.NOTE_TO_FACE):
+        for pk in year_keys:
+            face_val = _lookup(facts, edge.face_context, edge.face_concept, pk)
+            if face_val is None:
+                continue
+
+            # Note total: either a single concept or SUM of concepts
+            note_val = None
+            if edge.note_concept:
+                note_val = _lookup(facts, edge.note_context, edge.note_concept, pk)
+            elif edge.note_sum_concepts:
+                total = 0.0
+                found_any = False
+                for nc in edge.note_sum_concepts:
+                    nv = _lookup(facts, edge.note_context, nc, pk)
+                    if nv is not None:
+                        total += nv
+                        found_any = True
+                if found_any:
+                    note_val = total
+
+            if note_val is None:
+                continue
+
+            delta = abs(face_val - note_val)
+
+            if delta <= TOLERANCE:
+                findings.append(Finding(
+                    category=Category.VALID_TIE,
+                    edge_name=edge.name,
+                    expected=face_val,
+                    actual=note_val,
+                    delta=delta,
+                    concepts=[edge.face_concept, edge.note_concept or "SUM(...)"],
+                    message=f"Note ties to face: {edge.face_concept} ({edge.face_context}) = note total ({edge.note_context}) [{pk}]",
+                    details={"period": pk},
+                ))
+            else:
+                # Triage using ambiguities
+                possible = [a.get("id") for a in edge.ambiguities]
+                sev = edge.severity
+                # Downgrade to INFO if rounding
+                if face_val != 0 and abs(delta / face_val) < 0.0001:
+                    sev = "INFO"
+                    possible = ["ROUNDING"]
+
+                findings.append(Finding(
+                    category=Category.BROKEN_RELATIONSHIP,
+                    edge_name=edge.name,
+                    severity=sev,
+                    expected=face_val,
+                    actual=note_val,
+                    delta=delta,
+                    concepts=[edge.face_concept, edge.note_concept or "SUM(...)"],
+                    message=f"Note ≠ face: {edge.face_concept}={face_val:,.0f} ≠ note({edge.note_context})={note_val:,.0f}, Δ={delta:,.0f} — possible: {', '.join(possible) or 'unknown'} [{pk}]",
+                    details={"period": pk, "possible_causes": possible},
                 ))
 
     # Disaggregation ties

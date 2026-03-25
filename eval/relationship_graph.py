@@ -26,6 +26,7 @@ class EdgeType(Enum):
     DISAGGREGATION = "DISAGGREGATION"
     CROSS_STATEMENT_TIE = "CROSS_STATEMENT_TIE"
     IC_DECOMPOSITION = "IC_DECOMPOSITION"
+    NOTE_TO_FACE = "NOTE_TO_FACE"
 
 
 @dataclass
@@ -55,6 +56,10 @@ class GraphEdge:
     requires_concept: Optional[str] = None
     check: str = "equals"
     severity: str = "WARNING"
+    # For NOTE_TO_FACE
+    note_context: Optional[str] = None
+    note_concept: Optional[str] = None
+    note_sum_concepts: list[str] = field(default_factory=list)  # if note total = SUM(concepts)
     # For IC_DECOMPOSITION
     ic_face_concept: Optional[str] = None
     ic_external_concept: Optional[str] = None
@@ -204,7 +209,32 @@ def build_graph(repo_root: str) -> OntologyGraph:
             ambiguities=tie.get("ambiguities", []),
         ))
 
-    # 4. IC decomposition from counterparts.yaml
+    # 4. Note-to-face ties from counterparts.yaml
+    for tie in counterparts.get("note_to_face_ties", []):
+        note_total = tie.get("note_total", {})
+        # note_total can be a simple {context, concept} or a {check: "SUM(...)", context}
+        note_concepts = []
+        note_concept = None
+        if isinstance(note_total, dict):
+            note_concept = note_total.get("concept")
+            check_str = note_total.get("check", "")
+            if check_str.startswith("SUM("):
+                # Parse SUM(CONCEPT1, CONCEPT2) syntax
+                inner = check_str[4:].rstrip(")")
+                note_concepts = [c.strip() for c in inner.split(",")]
+        edges.append(GraphEdge(
+            edge_type=EdgeType.NOTE_TO_FACE,
+            name=tie["name"],
+            face_context=tie["face"]["context"],
+            face_concept=tie["face"]["concept"],
+            note_context=note_total.get("context") if isinstance(note_total, dict) else None,
+            note_concept=note_concept,
+            note_sum_concepts=note_concepts,
+            severity=tie.get("severity", "WARNING"),
+            ambiguities=tie.get("ambiguities", []),
+        ))
+
+    # 5. IC decomposition from counterparts.yaml
     for ic in counterparts.get("ic_decomposition", []):
         edges.append(GraphEdge(
             edge_type=EdgeType.IC_DECOMPOSITION,
