@@ -8,6 +8,13 @@ cross_statement_ties:
     requires: { context: SOCIE, concept: FS.SOCIE.PROFIT_FOR_PERIOD }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: DISCONTINUED_OPS_PRESENTATION
+        description: "PNL shows continuing ops profit, SOCIE shows total including discontinued"
+        confirm_via: "delta matches FS.PNL.PROFIT_DISCONTINUED"
+      - id: RECLASSIFICATION_BETWEEN_PERIODS
+        description: "SOCIE restated comparative, PNL did not (or vice versa)"
+        confirm_via: "mismatch only in comparative period"
 
   - name: oci_total_to_socie
     trigger: { context: OCI, concept: FS.OCI.TOTAL_OCI }
@@ -20,12 +27,23 @@ cross_statement_ties:
     requires: { context: SFP, concept: FS.SFP.TOTAL_EQUITY }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: DIVIDEND_TIMING
+        description: "SFP after dividend declaration, SOCIE before (or vice versa)"
+        confirm_via: "delta matches dividend amount in SOCIE.DIVIDENDS"
 
   - name: cfs_closing_cash_to_sfp
     trigger: { context: CFS, concept: FS.CFS.CASH_CLOSING }
     requires: { context: SFP, concept: FS.SFP.CASH }
     check: equals
     severity: ERROR
+    ambiguities:
+      - id: RESTRICTED_CASH
+        description: "SFP includes restricted cash, CFS excludes it (IAS 7.6)"
+        confirm_via: "delta matches restricted cash disclosure"
+      - id: BANK_OVERDRAFT
+        description: "CFS nets bank overdrafts into cash, SFP shows them as borrowings"
+        confirm_via: "delta matches bank overdraft liability"
 
   - name: sfp_balance_equation
     trigger: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
@@ -37,34 +55,83 @@ disaggregation_ties:
   - name: revenue_by_segment
     face: { context: PNL, concept: FS.PNL.REVENUE }
     detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.EXTERNAL_REVENUE, axis: AXIS.SEGMENT_DOC }
-    check: "face.amount = SUM(detail.amount by axis) + ic_residual"
+    check: "face.amount = SUM(detail.amount by axis) + residual"
     severity: WARNING
-    note: "ic_residual should be zero; non-zero = IC leakage"
+    residual_confirm: { concept: DISC.SEGMENTS.INTERSEGMENT_REVENUE, context: DISC.SEGMENTS }
+    ambiguities:
+      - id: IC_NOT_ELIMINATED
+        description: "Intercompany revenue not fully eliminated at group level"
+        confirm_via: "residual matches tagged DISC.SEGMENTS.INTERSEGMENT_REVENUE"
+        severity: WARNING
+      - id: COMPARATIVE_RESTATEMENT
+        description: "Prior-year figures restated in current report (IFRS 8.29)"
+        confirm_via: "residual only in comparative period, not current"
+        severity: INFO
+      - id: SEGMENT_RECLASSIFICATION
+        description: "Segment boundaries changed between periods (IFRS 8.34)"
+        confirm_via: "segment structure differs between current and comparative columns"
+        severity: INFO
+      - id: ROUNDING_DIFFERENCE
+        description: "Independent rounding of face and segment figures"
+        confirm_via: "residual < 0.01% of face amount"
+        severity: IGNORE
 
   - name: revenue_by_timing
     face: { context: PNL, concept: FS.PNL.REVENUE }
     detail: { context: DISC.REVENUE }
     concepts: [DISC.REVENUE.GOODS_TRANSFERRED_POINT, DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME]
-    check: "face.amount = SUM(detail concepts)"
+    check: "face.amount >= SUM(detail concepts)"
+    note: >
+      IFRS 15 timing disaggregation covers only 'revenue from contracts with
+      customers'. Face revenue may include non-IFRS-15 items. face = SUM is
+      the ideal case; face > SUM indicates scope gap.
     severity: WARNING
+    ambiguities:
+      - id: NON_IFRS15_REVENUE
+        description: "Face includes revenue outside IFRS 15 scope"
+        confirm_via: "face > detail sum AND delta matches non-IFRS-15 revenue lines"
+        severity: INFO
+      - id: PARTIAL_DISAGGREGATION
+        description: "Timing split does not cover all IFRS 15 revenue streams (e.g., licence revenue separate)"
+        confirm_via: "detail sum < face amount AND other DISC.REVENUE concepts exist"
+        severity: INFO
 
   - name: ppe_face_to_note
     face: { context: SFP, concept: FS.SFP.PPE_NET }
     detail: { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT, axis: AXIS.PPE_CLASS_DOC }
     check: "face.amount = SUM(detail.amount by axis)"
     severity: WARNING
+    ambiguities:
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net carrying amount"
+        confirm_via: "detail sum > face amount"
+        severity: INFO
+      - id: CLASS_MISMATCH
+        description: "Note PPE classes don't map 1:1 to face line items"
+        confirm_via: "detail includes ROU assets or investment property mixed with PPE"
+        severity: INFO
 
   - name: segment_assets_to_total
     face: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
     detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.TOTAL_ASSETS, axis: AXIS.SEGMENT_DOC }
     check: "face.amount = SUM(detail.amount by axis) + unallocated"
     severity: WARNING
+    ambiguities:
+      - id: UNALLOCATED_ITEMS
+        description: "Corporate/HQ assets not allocated to operating segments"
+        confirm_via: "reconciliation table shows unallocated line"
+        severity: INFO
 
   - name: provisions_face_to_note
     face: { context: SFP, concept: FS.SFP.PROVISIONS }
     detail: { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING, axis: AXIS.PROVISION_TYPE_DOC }
     check: "face.amount = SUM(detail.amount by axis)"
     severity: WARNING
+    ambiguities:
+      - id: CURRENT_VS_NONCURRENT_SPLIT
+        description: "Face shows current + non-current combined, note splits them"
+        confirm_via: "detail sum ≈ face.current_provisions + face.noncurrent_provisions"
+        severity: INFO
 
 ic_decomposition:
   - name: revenue_ic
@@ -72,17 +139,184 @@ ic_decomposition:
     external_concept: DISC.SEGMENTS.EXTERNAL_REVENUE
     ic_concept: DISC.SEGMENTS.INTERSEGMENT_REVENUE
     check: "face = SUM(external) + SUM(ic_post_elimination)"
-    note: "IC post elimination should be zero for clean consolidation"
+    ambiguities:
+      - id: IC_NOT_ELIMINATED
+        description: "Intercompany revenue not fully eliminated at group level"
+        confirm_via: "residual matches tagged DISC.SEGMENTS.INTERSEGMENT_REVENUE"
+        severity: WARNING
+      - id: COMPARATIVE_RESTATEMENT
+        description: "Prior-year segment figures restated, face not (or vice versa)"
+        confirm_via: "residual only in comparative period; current period ties"
+        severity: INFO
+      - id: SEGMENT_RECLASSIFICATION
+        description: "Segment boundaries changed — external/IC split differs"
+        confirm_via: "segment structure differs between current and comparative"
+        severity: INFO
+      - id: ROUNDING
+        description: "Independent rounding of face and segment totals"
+        confirm_via: "residual < 0.01% of face"
+        severity: IGNORE
 
   - name: trade_receivables_ic
     face_concept: FS.SFP.TRADE_RECEIVABLES
     ic_concept: FS.SFP.RELATED_PARTY_RECEIVABLES
     check: "if ic exists, face should be decomposable into external + ic"
+    ambiguities:
+      - id: RELATED_PARTY_SCOPE
+        description: "Related party receivables may include non-IC items (e.g., key management)"
+        confirm_via: "related party note breaks down by counterparty type"
+        severity: INFO
 
   - name: trade_payables_ic
     face_concept: FS.SFP.TRADE_PAYABLES
     ic_concept: FS.SFP.RELATED_PARTY_PAYABLES
     check: "if ic exists, face should be decomposable into external + ic"
+    ambiguities:
+      - id: RELATED_PARTY_SCOPE
+        description: "Related party payables may include non-IC items"
+        confirm_via: "related party note breaks down by counterparty type"
+        severity: INFO
+
+# ── Note-to-face ties ──────────────────────────────────────────────
+# Every disclosure note total must tie back to the corresponding face
+# line on the primary statement. This is the vertical link:
+#   face (PNL/SFP) ←→ note total (DISC.*)
+# The disaggregation_ties above check the horizontal link:
+#   note total = SUM(note details)
+#
+# Scope rule: the tie only holds for the SAME entity and consolidation
+# level. A group-level PNL face ties to a group-level revenue note,
+# not to a subsidiary's standalone revenue note.
+
+note_to_face_ties:
+  # ── PNL face → disclosure notes ────────────────────────────────
+  - name: revenue_face_to_note
+    face: { context: PNL, concept: FS.PNL.REVENUE }
+    note_total: { context: DISC.REVENUE, concept: DISC.REVENUE.TOTAL_REVENUE }
+    check: "face >= note_total"
+    note: >
+      DISC.REVENUE covers IFRS 15 'revenue from contracts with customers' only.
+      PNL face revenue may also include lease income (IFRS 16), insurance revenue
+      (IFRS 17), interest income presented as revenue (banking), government grants,
+      or disposal gains classified in revenue. face = note is the ideal case;
+      face > note indicates non-IFRS-15 revenue in the face line.
+    severity: WARNING
+    ambiguities:
+      - id: NON_IFRS15_REVENUE
+        description: "Face includes revenue outside IFRS 15 scope (lease income, insurance, interest)"
+        confirm_via: "face > note AND delta explainable by other income lines"
+        severity: INFO
+      - id: IFRS15_SCOPE_ELECTION
+        description: "Entity elected to apply IFRS 15 to some contracts and not others (e.g., lease components)"
+        confirm_via: "accounting policy note states scope election"
+        severity: INFO
+      - id: NOTE_EXCEEDS_FACE
+        description: "Note total > face — structural error or different consolidation scope"
+        confirm_via: "note > face"
+        severity: WARNING
+      - id: ROUNDING
+        description: "Independent rounding between statement and note"
+        confirm_via: "delta < 0.01% of face"
+        severity: IGNORE
+
+  - name: income_tax_face_to_note
+    face: { context: PNL, concept: FS.PNL.INCOME_TAX_EXPENSE }
+    note_total: { context: DISC.TAX, concept: DISC.TAX.TOTAL_TAX_EXPENSE }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: SIGN_CONVENTION
+        description: "Face uses Dr+ (positive expense), note uses accounting sign (may be negative)"
+        confirm_via: "abs(face) = abs(note)"
+        severity: INFO
+      - id: TAX_PRESENTATION
+        description: "Note splits current/deferred differently from face aggregation"
+        confirm_via: "note total = face after sign adjustment"
+        severity: INFO
+
+  - name: depreciation_face_to_note
+    face: { context: PNL, concept: FS.PNL.DEPRECIATION_AMORTISATION }
+    note_total: { context: DISC.PPE, concept: DISC.PPE.ACCUM_DEPR_CHARGE }
+    check: "face may include amortisation + impairment beyond PPE depreciation"
+    severity: INFO
+    ambiguities:
+      - id: SCOPE_WIDER
+        description: "PNL D&A includes intangibles amortisation + ROU depreciation, PPE note shows PPE only"
+        severity: INFO
+
+  # ── SFP face → disclosure notes ────────────────────────────────
+  - name: ppe_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.PPE_NET }
+    note_total: { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT }
+    check: "face = SUM(note carrying amounts by PPE class)"
+    severity: WARNING
+    ambiguities:
+      - id: ROU_INCLUDED
+        description: "Face PPE includes ROU assets, note separates them"
+        confirm_via: "face = note PPE + note ROU"
+        severity: INFO
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net after depreciation"
+        confirm_via: "note amount > face amount"
+        severity: INFO
+
+  - name: intangibles_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.INTANGIBLE_ASSETS }
+    note_total: { context: DISC.INTANGIBLES, concept: DISC.INTANGIBLES.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+
+  - name: goodwill_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.GOODWILL }
+    note_total: { context: DISC.GOODWILL, concept: DISC.GOODWILL.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+
+  - name: provisions_face_to_note_total
+    face: { context: SFP, concept: FS.SFP.PROVISIONS }
+    note_total: { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING }
+    check: "face = SUM(provision types closing)"
+    severity: WARNING
+    ambiguities:
+      - id: CURRENT_VS_NONCURRENT
+        description: "Face shows one total, note splits current/non-current"
+        severity: INFO
+
+  - name: investment_property_face_to_note
+    face: { context: SFP, concept: FS.SFP.INVESTMENT_PROPERTY }
+    note_total: { context: DISC.INV_PROP, concept: DISC.INV_PROP.CARRYING_AMOUNT }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: MEASUREMENT_MODEL
+        description: "Face at fair value, note at cost (or vice versa)"
+        confirm_via: "concept has measurement_variants"
+        severity: INFO
+      - id: GROSS_VS_NET
+        description: "Note shows gross cost, face shows net"
+        severity: INFO
+
+  - name: equity_investees_face_to_note
+    face: { context: SFP, concept: FS.SFP.EQUITY_ACCOUNTED_INVESTEES }
+    note_total: { context: DISC.ASSOCIATES, concept: FS.SFP.EQUITY_ACCOUNTED_INVESTEES }
+    check: equals
+    severity: WARNING
+    ambiguities:
+      - id: ASSOCIATE_OWN_FIGURES
+        description: "Note shows associate's own total assets/equity, not group's carrying amount"
+        confirm_via: "note provenance = ASSOCIATE_OWN"
+        severity: INFO
+
+  # ── CFS/SOCIE face → notes ────────────────────────────────────
+  - name: employee_benefits_to_note
+    face: { context: SFP, concept: FS.SFP.EMPLOYEE_BENEFITS_LIABILITY }
+    note_total: { context: DISC.EMPLOYEE_BENEFITS, concept: DISC.EMPLOYEE_BENEFITS.DBO_CLOSING }
+    check: "face may include multiple schemes; note may show only defined benefit"
+    severity: INFO
+    ambiguities:
+      - id: SCHEME_SCOPE
+        description: "Face includes all employee benefit liabilities, note covers only defined benefit"
+        severity: INFO
 
 summation_trees:
   - parent: FS.SFP.TOTAL_ASSETS

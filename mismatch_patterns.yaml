@@ -1,0 +1,85 @@
+# FOBE Mismatch Pattern Library
+# Known patterns that explain why two amounts with the same label/concept
+# differ across tables. Used by Pass 2 of the consistency engine.
+#
+# Each pattern has a detection rule and severity:
+#   INFO    = expected difference, document for completeness
+#   IGNORE  = noise, suppress from output
+
+mismatch_patterns:
+  - id: UNIT_SCALE
+    description: "Same amount at different unit scales (EUR vs TEUR vs Mio EUR)"
+    detect:
+      method: ratio
+      ratios: [1000, 1000000]
+      tolerance: 0.01   # allow 1% rounding
+    severity: INFO
+    note: "Tables may use different unit scales — normalise before comparing"
+
+  - id: SHARE_COUNT_VS_MONETARY
+    description: "Note shows number of shares, face shows EUR value"
+    detect:
+      method: concept_unit_mismatch
+      condition: "one occurrence has unit_type=monetary, other has note_unit_type=shares"
+    applies_to:
+      - FS.SFP.TREASURY_SHARES
+      - FS.SFP.SHARE_CAPITAL
+    severity: INFO
+    note: "SFP face is EUR; equity note or SOCIE may show share count"
+
+  - id: GROSS_VS_NET
+    description: "Face shows net carrying amount, note shows gross cost or fair value"
+    detect:
+      method: note_exceeds_face
+      condition: "note amount > face amount AND concept has measurement_variants or disaggregation to rollforward"
+    applies_to:
+      - FS.SFP.PPE_NET
+      - FS.SFP.INTANGIBLE_ASSETS
+      - FS.SFP.INVESTMENT_PROPERTY
+      - FS.SFP.RIGHT_OF_USE_ASSETS
+    severity: INFO
+    note: "Note rollforward shows gross cost; face shows net (cost − accum depr)"
+
+  - id: ASSOCIATE_OWN_FIGURES
+    description: "Amount is the associate's own revenue/profit, not the group's share"
+    detect:
+      method: provenance
+      condition: "context = DISC.ASSOCIATES OR provenance = ASSOCIATE_OWN"
+    severity: INFO
+    note: "IAS 28 summarised information — not comparable to group face"
+
+  - id: SEGMENT_COMPONENT
+    description: "Amount is one segment's share of the group total"
+    detect:
+      method: segment_partial
+      condition: "context starts with DISC.SEGMENTS AND amount < face amount"
+    severity: INFO
+    note: "Individual segment values are parts of the whole — not mismatches"
+
+  - id: PERIOD_SUBSET
+    description: "Quarterly or half-year amount vs full-year total"
+    detect:
+      method: period_mismatch
+      condition: "period lengths differ between occurrences"
+    severity: INFO
+    note: "Interim vs annual figures are not comparable"
+
+  - id: DISCONTINUED_OPS_ADJUSTMENT
+    description: "Continuing operations amount vs total including discontinued"
+    detect:
+      method: delta_matches_concept
+      condition: "delta matches FS.PNL.PROFIT_DISCONTINUED"
+    applies_to:
+      - FS.PNL.PROFIT_BEFORE_TAX
+      - FS.PNL.NET_PROFIT
+      - FS.PNL.PROFIT_CONTINUING
+    severity: INFO
+    note: "Total = continuing + discontinued; difference is the discontinued ops amount"
+
+  - id: GENERIC_LABEL_COLLISION
+    description: "Generic labels like 'Other' or 'Total' match across unrelated tables"
+    detect:
+      method: label_pattern
+      labels: ["other", "total", "thereof", "davon", "summe", "gesamt", "sonstige"]
+    severity: IGNORE
+    note: "Suppress — these labels are too generic for meaningful cross-reference"

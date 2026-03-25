@@ -12,6 +12,12 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [PNL, CFS, OCI]
+    unit_type: monetary
+    has_ic_variant: true
+    disaggregation_targets:
+      - { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.EXTERNAL_REVENUE, axis: AXIS.SEGMENT_DOC }
+      - { context: DISC.REVENUE, concepts: [DISC.REVENUE.GOODS_TRANSFERRED_POINT, DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME] }
 
   - id: FS.PNL.REVENUE_RECOGNIZED
     label: Revenue from contracts with customers (IFRS 15)
@@ -223,6 +229,7 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: true
+    valid_contexts: [PNL, CFS]
 
   - id: FS.PNL.OPERATING_PROFIT
     label: Operating profit / EBIT
@@ -288,6 +295,10 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: true
+    valid_contexts: [PNL]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.PROFIT_BEFORE_TAX, axis: AXIS.SEGMENT_DOC }
 
   - id: FS.PNL.INCOME_TAX_EXPENSE
     label: Income tax expense
@@ -297,6 +308,11 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
+    valid_contexts: [PNL]
+    unit_type: monetary
+    disaggregation_targets:
+      - { context: DISC.TAX, concept: DISC.TAX.CURRENT_TAX_EXPENSE }
+      - { context: DISC.TAX, concept: DISC.TAX.DEFERRED_TAX_EXPENSE }
 
   - id: FS.PNL.PROFIT_CONTINUING
     label: Profit from continuing operations
@@ -324,6 +340,8 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: true
+    valid_contexts: [PNL, OCI]
+    unit_type: monetary
 
   # ── Attribution ────────────────────────────────────────────
   - id: FS.PNL.PROFIT_ATTR_OWNERS
@@ -353,6 +371,8 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: false
+    valid_contexts: [PNL]
+    unit_type: per_share
 
   - id: FS.PNL.EPS_DILUTED
     label: Diluted earnings per share
@@ -362,6 +382,8 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: false
+    valid_contexts: [PNL]
+    unit_type: per_share
 
   # ── Consolidation-only ─────────────────────────────────────
   - id: FS.PNL.GW_AMORTIZATION
