@@ -15,79 +15,178 @@ doc_tag (produces)  →  fobe (ontology)  ←  finparse-platform (consumes)
    evaluates quality     aliases             generates SQL seeds
 ```
 
+## Ontology coverage
+
+| Layer | Count |
+|---|---|
+| Core concepts (PNL, SFP, OCI, CFS, SOCIE + 26 disclosure families) | 564 |
+| UGB-specific concepts (§ 224/231 line items) | 42 |
+| **Total concept IDs** | **606** |
+| Label index entries (EN + DE + aliases) | 966 |
+| EKR account → concept mappings (Austrian chart of accounts) | 127 |
+| Counterpart edges (summation, disaggregation, ties, IC, note-to-face) | 23 |
+| Mismatch patterns (unit scale, gross vs net, etc.) | 8 |
+
+### Frameworks
+- **IFRS** — full concept coverage, validated against 4 ATX companies + KPMG IFS
+- **UGB** (Austrian) — 42 concepts, 48 labels with § references, validated against EuroTeleSites + CA Immo
+- **HGB** (German) — labels mapped, not yet validated
+
+### Industry extensions
+- Banking (IFRS 9/7, Basel III) — 46 concepts, PDF ready (ICBC Austria)
+- Insurance (IFRS 17, VAG) — 39 concepts, PDF ready (VIG Holding)
+
+## Structural Consistency Engine
+
+Three-pass checker that classifies every cross-table observation:
+
+| Pass | What | Output |
+|---|---|---|
+| **Pass 0** | Table arithmetic — parent/child row summations | CONFIRMED / CONTRADICTED |
+| **Pass 1** | Ontology relationship validation | VALID_DISAGGREGATION, VALID_TIE, BROKEN, IC_LEAKAGE |
+| **Pass 2** | Mismatch pattern explanation | EXPLAINED_MISMATCH (unit scale, gross/net, etc.) |
+| **Pass 3** | Context-concept + label validation | UNEXPLAINED_INCONSISTENCY |
+
+### Per-fact corroboration scoring
+
+Every indexed fact gets a confidence status:
+- **CONFIRMED** — ≥2 independent checks pass
+- **CORROBORATED** — 1 check passes
+- **UNCONFIRMED** — no checks testable
+- **CONTRADICTED** — ≥1 unexplained failure
+
+### Sign normalization
+
+Documents declare source sign convention (`signConvention: PRESENTATION` or `NATURAL_DRCR`).
+The engine normalizes to Dr+/Cr- during fact indexing using `concept.balance_type`.
+Context-aware: PNL negates all amounts, SFP negates credit concepts only.
+
+## Evaluation corpus
+
+### Validated (fixture built, checks pass)
+
+| Document | Framework | Industry | Key findings |
+|---|---|---|---|
+| Wienerberger 2024 | IFRS | Building materials | IC leakage 909 TEUR, OCI misclassification |
+| VERBUND 2024 | IFRS | Utilities | 5 confirmed, 2 scope issues |
+| voestalpine 2024/25 | IFRS | Steel | 3 confirmed, 28 from table arithmetic |
+| KPMG IFRS IFS 2025 | IFRS | Illustrative | SFP balance ✓, 4 known gaps (discontinued ops) |
+| EuroTeleSites 2024 | **UGB** | Telecom infra | 94% corroborated, all checks pass |
+| CA Immo 2024 (EN) | **UGB** | Real estate | All checks pass, treasury shares + bonds |
+
+### Downloaded (17 PDFs ready for processing)
+
+| Document | Framework | Industry |
+|---|---|---|
+| ICBC Austria 2024 | UGB + BWG | Banking |
+| VIG Holding 2024 | UGB + VAG | Insurance |
+| Lenzing 2024 | UGB | Chemicals / fibres |
+| Palfinger 2024 | UGB | Cranes / lifting |
+| Zumtobel 2024/25 | UGB | Lighting |
+| Kapsch 2024/25 | UGB | ITS |
+| OMV 2024 | IFRS + UGB | Oil & gas |
+| STRABAG 2024 | UGB | Construction |
+| Andritz 2024 | UGB | Plant engineering |
+| Mayr-Melnhof 2024 | UGB | Packaging / cartonboard |
+| AMAG 2024 | UGB | Aluminium |
+| Flughafen Wien 2024 | UGB | Airport infrastructure |
+| Pierer Mobility 2024 | UGB | Motorcycles (KTM) |
+| AGRANA 2024/25 | UGB | Food / sugar / starch |
+
+### Real errors found
+
+1. **Wienerberger IC leakage** — 909 TEUR intercompany revenue in 2023 comparative not eliminated, confirmed by tagged intersegment line
+2. **Wienerberger OCI misclassification** — table classified as OCI contains PNL labels (IAS 28 associate summary)
+3. **Wienerberger mistagging** — "Profit after tax" preTagged as GROSS_PROFIT in 10-year overview
+
 ## Directory layout
 
 ```
 fobe/
-├── ontology.yaml           # Master file — meta, imports
-├── contexts.yaml           # Statement contexts (SFP, PNL, OCI, CFS, SOCIE, DISC.*)
+├── ontology.yaml               # Master file — meta, imports
+├── contexts.yaml               # Statement contexts (SFP, PNL, OCI, CFS, SOCIE, DISC.*)
 ├── concepts/
-│   ├── sfp.yaml            # FS.SFP.* — balance sheet
-│   ├── pnl.yaml            # FS.PNL.* — income statement
-│   ├── oci.yaml            # FS.OCI.* — other comprehensive income
-│   ├── cfs.yaml            # FS.CFS.* — cash flow statement
-│   ├── socie.yaml          # FS.SOCIE.* — changes in equity
-│   └── disc/
-│       ├── ppe.yaml        # DISC.PPE.* — PPE disclosure
-│       ├── fin_inst.yaml   # DISC.FIN_INST.* — financial instruments
-│       ├── tax.yaml        # DISC.TAX.*
-│       ├── leases.yaml     # DISC.LEASES.* — IFRS 16
-│       └── segment.yaml    # DISC.SEGMENT.* — IFRS 8
-├── axes.yaml               # Dimension axes (STD + DOC dual-axis model)
-├── relations.yaml          # Calculation links, note links, cross-statement ties
-├── aliases.yaml            # Multilingual label → concept_id lookup
+│   ├── sfp.yaml                # FS.SFP.* — 56 balance sheet concepts
+│   ├── pnl.yaml                # FS.PNL.* — 44 income statement concepts
+│   ├── oci.yaml                # FS.OCI.* — 22 OCI concepts
+│   ├── cfs.yaml                # FS.CFS.* — 72 cash flow concepts
+│   ├── socie.yaml              # FS.SOCIE.* — 34 changes in equity concepts
+│   └── disc/                   # 26 disclosure families (336 concepts)
+│       ├── ppe.yaml            # DISC.PPE.* — PPE rollforward
+│       ├── segment.yaml        # DISC.SEGMENTS.* — IFRS 8 / § 237 UGB
+│       ├── revenue.yaml        # DISC.REVENUE.* — IFRS 15
+│       ├── tax.yaml            # DISC.TAX.* — income tax
+│       └── ...                 # + 22 more families
+├── axes.yaml                   # 33 dimension axes (STD + DOC dual-axis model)
+├── counterparts.yaml           # Cross-statement ties, disaggregation, IC, note-to-face
+├── constraints.yaml            # Context-concept rules, sign rules, anomaly detection
+├── aliases.yaml                # 130+ label variants (EN + DE)
+├── mismatch_patterns.yaml      # 8 known cross-table mismatch patterns
+├── completeness.yaml           # 3-tier completeness graph
+├── provenance.yaml             # 7 fact provenance types
+├── document_meta.yaml          # Document metadata schema (sign convention, periods)
 ├── gaap/
-│   ├── ifrs.yaml           # IFRS labels, refs, presentation trees
-│   ├── ugb.yaml            # UGB (Austrian) labels, refs
-│   └── hgb.yaml            # HGB (German) labels, refs
+│   ├── ifrs.yaml               # IFRS concept labels and references
+│   ├── ugb.yaml                # UGB labels with § references + 42 UGB-specific concepts
+│   └── hgb.yaml                # HGB labels
 ├── industry/
-│   ├── banks.yaml          # IFRS 9/7, Basel III concepts
-│   └── insurers.yaml       # IFRS 17 concepts
+│   ├── banks.yaml              # Banking regulatory (46 concepts)
+│   └── insurers.yaml           # Insurance regulatory (39 concepts)
+├── accounts/
+│   └── ekr_austria.yaml        # Austrian EKR chart of accounts (127 mappings)
 ├── eval/
-│   ├── lossless.py         # Losslessness invariant checks
-│   ├── cross_ref.py        # Amount cross-referencing, entity validation
-│   └── comparability.py    # Cross-document consistency
-└── build.py                # Generate SQL seeds for finparse-platform
+│   ├── check_consistency.py    # Three-pass consistency checker
+│   ├── check_classification.py # Table classification validator
+│   ├── relationship_graph.py   # Ontology graph builder
+│   ├── fact_scoring.py         # Per-fact corroboration scoring
+│   ├── table_arithmetic.py     # Pass 0 — same-table parent/child validation
+│   ├── run_corpus.py           # Cross-document comparison report
+│   ├── run_all.py              # Full evaluation suite
+│   ├── convert_isg.py          # ISG format → table_graphs.json converter
+│   ├── convert_saldenliste.py  # EKR trial balance → UGB statements converter
+│   ├── visualize.py            # Mermaid diagram generator
+│   ├── catalogue.yaml          # Running regression test set
+│   └── fixtures/               # Per-document expected results
+│       ├── wienerberger_2024/
+│       ├── eurotelesites_2024/
+│       ├── ca_immo_2024/
+│       ├── kpmg_ifs_2025/
+│       └── saldenliste_gmbh/
+├── sources/
+│   ├── kpmg/                   # KPMG reference PDFs (IFRS IFS, UGB, Banks, Insurers)
+│   └── ugb/                    # Austrian UGB annual report PDFs
+├── test_data/
+│   └── sample_saldenliste_gmbh.csv  # Sample Austrian trial balance
+└── docs/
+    ├── consistency-model.md    # Three-pass model + corroboration scoring
+    ├── diagram_full.md         # Cross-statement ties (Mermaid)
+    ├── diagram_ppe.md          # PPE rollforward hierarchy (Mermaid)
+    ├── diagram_revenue.md      # Revenue disaggregation (Mermaid)
+    ├── fact-identity.md        # Fact identity model
+    ├── axis-governance.md      # Three-tier axis visibility
+    └── mapping-granularity.md  # Account-level vs reporting-line-level
 ```
 
-## Concept naming convention
+## Running the evaluation
 
-Namespaced IDs: `{family}.{statement}.{concept}`
+```bash
+# Single document
+python3 eval/check_consistency.py <table_graphs.json>
+python3 eval/check_consistency.py <table_graphs.json> --json
+python3 eval/check_consistency.py <table_graphs.json> --check eval/fixtures/.../expected_violations.json
 
+# Corpus comparison
+python3 eval/run_corpus.py --all
+
+# Visualize reporting hierarchies
+python3 eval/visualize.py ppe
+python3 eval/visualize.py revenue
+python3 eval/visualize.py full
+
+# Convert formats
+python3 eval/convert_isg.py <isg_result.json> [output.json]
+python3 eval/convert_saldenliste.py <saldenliste.csv> [output.json]
 ```
-FS.SFP.CASH_AND_EQUIVALENTS     # balance sheet concept
-FS.PNL.REVENUE                   # income statement concept
-FS.OCI.FX_TRANSLATION            # OCI concept
-FS.CFS.NET_CASH_OPERATING        # cash flow concept
-FS.SOCIE.DIVIDENDS_PAID          # changes in equity concept
-DISC.PPE.PPE_GROSS               # disclosure concept
-```
-
-## Axis model (STD/DOC dual pattern)
-
-- **STD axes**: normalized vocabulary (e.g., `PPESTD.LAND_BUILDINGS`)
-- **DOC axes**: document-specific labels (e.g., `PPEDOC.001`)
-- STD axes defined here; DOC axes defined per document in doc_tag
-
-## Relation types
-
-1. **Summation**: `total_assets = non_current_assets + current_assets`
-2. **Division**: `eps_basic = profit_attr_owners / weighted_avg_shares`
-3. **Cross-statement ties**: `pnl.net_profit == socie.net_profit`
-4. **Disaggregation**: face amount = SUM(note detail along dimension)
-5. **Reconciliation**: opening + movements = closing
-6. **Derived metrics**: EBITDA, net debt, net debt/EBITDA
-
-## Evaluation (losslessness invariants)
-
-No dense ground truth needed — all checks are structural:
-
-- Balance equation: SUM(SFP facts) = 0
-- Tag uniqueness: (concept, entity, period, axes) → one amount
-- Amount preservation: source amounts = tagged amounts
-- Cross-statement ties: PNL↔SOCIE, CFS↔SFP, OCI↔SOCIE
-- Amount cross-referencing: same value across tables must have consistent tags
-- Period consistency: comparative[year N] = reported[year N-1]
 
 ## License
 
