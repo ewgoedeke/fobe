@@ -6,7 +6,7 @@ concepts:
   - { id: FS.CFS.PROFIT_FOR_PERIOD, label: "Profit for the period", balance_type: debit, period_type: duration }
   - { id: FS.CFS.ADJ_DEPRECIATION, label: "Depreciation", balance_type: debit, period_type: duration }
   - { id: FS.CFS.ADJ_AMORTISATION, label: "Amortisation", balance_type: debit, period_type: duration }
-  - { id: FS.CFS.ADJ_DEPRECIATION_ROU, label: "Depreciation of right-of-use assets", balance_type: debit, period_type: duration }
+  - { id: FS.CFS.ADJ_DEPRECIATION_ROU, label: "Depreciation of right-of-use assets", balance_type: debit, period_type: duration, valid_contexts: [CFS, PNL] }
   - { id: FS.CFS.ADJ_DEFERRED_INCOME, label: "Deferred income", balance_type: credit, period_type: duration }
   - { id: FS.CFS.ADJ_IMPAIRMENT_PPE, label: "(Reversal of) impairment losses on PPE", balance_type: debit, period_type: duration }
   - { id: FS.CFS.ADJ_IMPAIRMENT_INTANGIBLES, label: "Impairment losses on intangible assets and goodwill", balance_type: debit, period_type: duration }

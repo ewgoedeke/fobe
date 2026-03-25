@@ -1,0 +1,270 @@
+# FOBE Label Aliases — Common variant phrasings for concept labels
+# Used by the consistency engine label index builder.
+# Each alias maps to a canonical concept ID.
+#
+# The canonical label comes from concepts/*.yaml. These aliases cover
+# common alternative phrasings found in real financial documents.
+
+aliases:
+
+  # ── PNL ──────────────────────────────────────────────────────────
+  FS.PNL.REVENUE:
+    - revenues
+    - total revenues
+    - net revenues
+    - net revenue
+    - turnover
+    - sales
+    - sales revenue
+    - umsatz
+    - erlöse
+    - nettoumsatz
+
+  FS.PNL.COST_OF_SALES:
+    - cost of goods sold
+    - cost of products sold
+    - cost of revenue
+    - cost of revenues
+    - herstellungskosten der zur erzielung der umsatzerlöse erbrachten leistungen
+    - herstellkosten
+
+  FS.PNL.GROSS_PROFIT:
+    - gross margin
+    - bruttoergebnis
+    - bruttoergebnis vom umsatz
+    - rohertrag
+
+  FS.PNL.OPERATING_PROFIT:
+    - operating result
+    - operating income
+    - operating profit/loss (ebit)
+    - ebit
+    - betriebsergebnis
+
+  FS.PNL.EBITDA:
+    - operating ebitda
+    - adjusted ebitda
+
+  FS.PNL.NET_PROFIT:
+    - net income
+    - net result
+    - profit for the year
+    - profit for the financial year
+    - profit after tax
+    - profit/loss for the period
+    - profit/ loss after tax
+    - profit/ loss for the period
+    - ergebnis nach steuern
+    - ergebnis nach steuern aus fortgeführten aktivitäten
+    - jahresüberschuss
+    - jahresfehlbetrag
+    - konzernergebnis
+    - periodengewinn
+    - periodenergebnis
+
+  FS.PNL.PROFIT_BEFORE_TAX:
+    - profit/loss before tax
+    - profit/ loss before tax
+    - earnings before tax
+    - ergebnis vor ertragsteuern
+
+  FS.PNL.INCOME_TAX_EXPENSE:
+    - income taxes
+    - income tax
+    - tax expense
+    - ertragsteuern
+    - steuern vom einkommen und vom ertrag
+    - steuern vom einkommen
+
+  FS.PNL.FINANCE_INCOME:
+    - interest income
+    - finance revenue
+    - financial income
+    - zinserträge
+    - sonstige zinsen und ähnliche erträge
+
+  FS.PNL.FINANCE_COSTS:
+    - interest expense
+    - finance expense
+    - financial expenses
+    - zinsaufwand
+    - zinsen und ähnliche aufwendungen
+
+  FS.PNL.NET_FINANCE_COSTS:
+    - net financial result
+    - financial result
+    - net interest
+    - finanzergebnis
+    - finanzerfolg
+
+  FS.PNL.DEPRECIATION_AMORTISATION:
+    - depreciation and amortization
+    - depreciation & amortisation
+    - d&a
+    - abschreibungen auf immaterielle vermögenswerte und sachanlagen
+
+  FS.PNL.STAFF_COSTS:
+    - employee benefits expense
+    - personnel expenses
+    - staff expenses
+    - wages and salaries
+    - personalaufwand
+    - personalkosten
+
+  FS.PNL.MATERIAL_COSTS:
+    - raw materials and consumables used
+    - cost of materials
+    - materialaufwand
+    - aufwand für material
+
+  FS.PNL.OTHER_INCOME:
+    - other income
+    - other operating income
+    - sonstige betriebliche erträge
+
+  FS.PNL.OTHER_EXPENSES:
+    - other expenses
+    - other operating expenses
+    - sonstige betriebliche aufwendungen
+
+  FS.PNL.SHARE_OF_PROFIT_ASSOCIATES:
+    - share of profit of associates
+    - share of result of associates
+    - income from investments in associates
+    - income from investments in associates and joint ventures
+    - ergebnis aus at-beteiligungen
+    - ergebnis aus assoziierten unternehmen
+
+  FS.PNL.IMPAIRMENT_EXPENSE:
+    - impairment losses
+    - impairment charges
+    - wertminderungen
+
+  # ── SFP ──────────────────────────────────────────────────────────
+  FS.SFP.TOTAL_ASSETS:
+    - total assets
+    - bilanzsumme
+    - summe aktiva
+    - aktiva gesamt
+
+  FS.SFP.TOTAL_EQUITY:
+    - total equity
+    - shareholders' equity
+    - equity attributable to owners
+    - eigenkapital
+    - summe eigenkapital
+
+  FS.SFP.PPE_NET:
+    - property, plant and equipment
+    - property plant and equipment
+    - ppe
+    - sachanlagen
+
+  FS.SFP.GOODWILL:
+    - goodwill
+    - firmenwert
+    - geschäfts- oder firmenwert
+
+  FS.SFP.INTANGIBLE_ASSETS:
+    - intangible assets
+    - intangible assets other than goodwill
+    - immaterielle vermögenswerte
+    - immaterielle vermögensgegenstände
+
+  FS.SFP.CASH:
+    - cash and cash equivalents
+    - cash and equivalents
+    - cash at bank
+    - kassenbestand und guthaben bei kreditinstituten
+    - zahlungsmittel und zahlungsmitteläquivalente
+    - zahlungsmittel
+    - flüssige mittel
+    - liquide mittel
+
+  FS.SFP.INVENTORIES:
+    - inventories
+    - vorräte
+    - vorratsvermögen
+
+  FS.SFP.TRADE_RECEIVABLES:
+    - trade and other receivables
+    - trade receivables
+    - accounts receivable
+    - forderungen aus lieferungen und leistungen
+
+  FS.SFP.TRADE_PAYABLES:
+    - trade and other payables
+    - trade payables
+    - accounts payable
+    - verbindlichkeiten aus lieferungen und leistungen
+
+  FS.SFP.PROVISIONS:
+    - provisions
+    - rückstellungen
+
+  FS.SFP.LOANS_BORROWINGS:
+    - loans and borrowings
+    - financial liabilities
+    - borrowings
+    - bank loans
+    - finanzverbindlichkeiten
+    - verbindlichkeiten gegenüber kreditinstituten
+
+  FS.SFP.LEASE_LIABILITIES:
+    - lease liabilities
+    - right-of-use liabilities
+    - leasingverbindlichkeiten
+
+  FS.SFP.DEFERRED_TAX_ASSETS:
+    - deferred tax assets
+    - aktive latente steuern
+
+  FS.SFP.DEFERRED_TAX_LIABILITIES:
+    - deferred tax liabilities
+    - passive latente steuern
+
+  FS.SFP.NCI:
+    - non-controlling interests
+    - minority interests
+    - anteile anderer gesellschafter
+    - nicht beherrschende anteile
+    - minderheitenanteile
+
+  # ── Segment ──────────────────────────────────────────────────────
+  DISC.SEGMENTS.EXTERNAL_REVENUE:
+    - external revenues
+    - external revenue
+    - revenue from external customers
+    - außenumsatz
+    - außenumsätze
+
+  DISC.SEGMENTS.INTERSEGMENT_REVENUE:
+    - intercompany revenues
+    - intercompany revenue
+    - inter-segment revenue
+    - intersegment revenue
+    - innenumsatz
+    - innenumsätze
+
+  DISC.SEGMENTS.TOTAL_REVENUE:
+    - segment revenue
+    - total segment revenue
+    - segmentumsatz
+
+  DISC.SEGMENTS.CAPEX:
+    - capital expenditure
+    - capex
+    - additions to non-current assets
+    - investitionen
+
+  # ── Tax ──────────────────────────────────────────────────────────
+  DISC.TAX.CURRENT_TAX_EXPENSE:
+    - current tax expense
+    - current income tax
+    - laufender steueraufwand
+
+  DISC.TAX.DEFERRED_TAX_EXPENSE:
+    - deferred tax expense
+    - deferred tax expense/income
+    - deferred tax income
+    - latenter steueraufwand

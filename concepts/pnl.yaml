@@ -12,7 +12,7 @@ concepts:
     mappable: true
     is_monetary: false
     is_total: false
-    valid_contexts: [PNL]
+    valid_contexts: [PNL, CFS, OCI]
     unit_type: monetary
     has_ic_variant: true
     disaggregation_targets:
@@ -229,6 +229,7 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: true
+    valid_contexts: [PNL, CFS]
 
   - id: FS.PNL.OPERATING_PROFIT
     label: Operating profit / EBIT

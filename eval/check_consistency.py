@@ -114,89 +114,17 @@ class Fact:
 PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
 
 # ── Label-based concept matching ───────────────────────────────────
-# Maps normalized labels to (concept_id, context) for untagged rows.
-# Only high-confidence matches — ambiguous labels are skipped.
+# Auto-built from the ontology: concept labels (EN), UGB labels (DE),
+# and EKR account descriptions. Loaded once at import time.
 
-LABEL_CONCEPT_MAP: dict[str, tuple[str, str]] = {
-    # Segment note labels → DISC.SEGMENTS concepts
-    "external revenues": ("DISC.SEGMENTS.EXTERNAL_REVENUE", "DISC.SEGMENTS"),
-    "external revenue": ("DISC.SEGMENTS.EXTERNAL_REVENUE", "DISC.SEGMENTS"),
-    "intercompany revenues": ("DISC.SEGMENTS.INTERSEGMENT_REVENUE", "DISC.SEGMENTS"),
-    "intercompany revenue": ("DISC.SEGMENTS.INTERSEGMENT_REVENUE", "DISC.SEGMENTS"),
-    "inter-segment revenue": ("DISC.SEGMENTS.INTERSEGMENT_REVENUE", "DISC.SEGMENTS"),
-    "intersegment revenue": ("DISC.SEGMENTS.INTERSEGMENT_REVENUE", "DISC.SEGMENTS"),
-    "total revenues": ("DISC.SEGMENTS.TOTAL_REVENUE", "DISC.SEGMENTS"),
-    "segment revenue": ("DISC.SEGMENTS.TOTAL_REVENUE", "DISC.SEGMENTS"),
-    "segment assets": ("DISC.SEGMENTS.TOTAL_ASSETS", "DISC.SEGMENTS"),
-    "segment liabilities": ("DISC.SEGMENTS.TOTAL_LIABILITIES", "DISC.SEGMENTS"),
-    "capital expenditure": ("DISC.SEGMENTS.CAPEX", "DISC.SEGMENTS"),
-    # Revenue disaggregation
-    "goods transferred at a point in time": ("DISC.REVENUE.GOODS_TRANSFERRED_POINT", "DISC.REVENUE"),
-    "goods transferred over time": ("DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME", "DISC.REVENUE"),
-    "services transferred over time": ("DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME", "DISC.REVENUE"),
-    # Tax disaggregation
-    "current tax expense": ("DISC.TAX.CURRENT_TAX_EXPENSE", "DISC.TAX"),
-    "current income tax": ("DISC.TAX.CURRENT_TAX_EXPENSE", "DISC.TAX"),
-    "deferred tax expense": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
-    "deferred tax expense/income": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
-    "deferred tax income": ("DISC.TAX.DEFERRED_TAX_EXPENSE", "DISC.TAX"),
-    "income taxes": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
-    "incometaxes": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
-    "income tax expense": ("DISC.TAX.TOTAL_TAX_EXPENSE", "DISC.TAX"),
-    # Revenue note total
-    "total revenue": ("DISC.REVENUE.TOTAL_REVENUE", "DISC.REVENUE"),
-    "total revenues": ("DISC.REVENUE.TOTAL_REVENUE", "DISC.REVENUE"),
-    # ── German labels (ATX companies) ──────────────────────────────
-    "umsatzerlöse": ("FS.PNL.REVENUE", "PNL"),
-    "umsatz": ("FS.PNL.REVENUE", "PNL"),
-    "erlöse": ("FS.PNL.REVENUE", "PNL"),
-    "revenues": ("FS.PNL.REVENUE", "PNL"),
-    "ergebnis vor steuern": ("FS.PNL.PROFIT_BEFORE_TAX", "PNL"),
-    "profit before tax": ("FS.PNL.PROFIT_BEFORE_TAX", "PNL"),
-    "profit/loss before tax": ("FS.PNL.PROFIT_BEFORE_TAX", "PNL"),
-    "profit/ loss before tax": ("FS.PNL.PROFIT_BEFORE_TAX", "PNL"),
-    "ergebnis nach steuern": ("FS.PNL.NET_PROFIT", "PNL"),
-    "profit after tax": ("FS.PNL.NET_PROFIT", "PNL"),
-    "profit for the period": ("FS.PNL.NET_PROFIT", "PNL"),
-    "profit/ loss after tax": ("FS.PNL.NET_PROFIT", "PNL"),
-    "jahresüberschuss": ("FS.PNL.NET_PROFIT", "PNL"),
-    "konzernergebnis": ("FS.PNL.NET_PROFIT", "PNL"),
-    "herstellungskosten": ("FS.PNL.COST_OF_SALES", "PNL"),
-    "cost of goods sold": ("FS.PNL.COST_OF_SALES", "PNL"),
-    "cost of sales": ("FS.PNL.COST_OF_SALES", "PNL"),
-    "bruttoergebnis": ("FS.PNL.GROSS_PROFIT", "PNL"),
-    "gross profit": ("FS.PNL.GROSS_PROFIT", "PNL"),
-    "betriebsergebnis": ("FS.PNL.OPERATING_PROFIT", "PNL"),
-    "operating profit": ("FS.PNL.OPERATING_PROFIT", "PNL"),
-    "operating profit/loss": ("FS.PNL.OPERATING_PROFIT", "PNL"),
-    "operating profit/loss (ebit)": ("FS.PNL.OPERATING_PROFIT", "PNL"),
-    "abschreibungen": ("FS.PNL.DEPRECIATION_AMORTISATION", "PNL"),
-    "depreciation and amortization": ("FS.PNL.DEPRECIATION_AMORTISATION", "PNL"),
-    "depreciation and amortisation": ("FS.PNL.DEPRECIATION_AMORTISATION", "PNL"),
-    "personalaufwand": ("FS.PNL.STAFF_COSTS", "PNL"),
-    "materialaufwand": ("FS.PNL.MATERIAL_COSTS", "PNL"),
-    "finanzergebnis": ("FS.PNL.NET_FINANCE_COSTS", "PNL"),
-    "ertragsteuern": ("FS.PNL.INCOME_TAX_EXPENSE", "PNL"),
-    # SFP German
-    "bilanzsumme": ("FS.SFP.TOTAL_ASSETS", "SFP"),
-    "total assets": ("FS.SFP.TOTAL_ASSETS", "SFP"),
-    "eigenkapital": ("FS.SFP.TOTAL_EQUITY", "SFP"),
-    "total equity": ("FS.SFP.TOTAL_EQUITY", "SFP"),
-    "equity": ("FS.SFP.TOTAL_EQUITY", "SFP"),
-    "zahlungsmittel": ("FS.SFP.CASH", "SFP"),
-    "cash and cash equivalents": ("FS.SFP.CASH", "SFP"),
-    "vorräte": ("FS.SFP.INVENTORIES", "SFP"),
-    "inventories": ("FS.SFP.INVENTORIES", "SFP"),
-    "forderungen aus lieferungen und leistungen": ("FS.SFP.TRADE_RECEIVABLES", "SFP"),
-    "trade receivables": ("FS.SFP.TRADE_RECEIVABLES", "SFP"),
-    "verbindlichkeiten aus lieferungen und leistungen": ("FS.SFP.TRADE_PAYABLES", "SFP"),
-    "trade payables": ("FS.SFP.TRADE_PAYABLES", "SFP"),
-    "rückstellungen": ("FS.SFP.PROVISIONS", "SFP"),
-    "provisions": ("FS.SFP.PROVISIONS", "SFP"),
-    # PPE rollforward
-    "carrying amount": ("DISC.PPE.CARRYING_AMOUNT", "DISC.PPE"),
-    "net book value": ("DISC.PPE.CARRYING_AMOUNT", "DISC.PPE"),
-}
+# Labels too short or too generic to be useful for matching
+_AMBIGUOUS_LABELS = frozenset({
+    "other", "total", "thereof", "davon", "summe", "gesamt", "sonstige",
+    "net", "gross", "balance", "amount", "saldo", "betrag", "result",
+    "profit", "loss", "income", "expense", "costs", "charges",
+    "opening", "closing", "additions", "disposals",
+    "balance at beginning of period", "balance at end of period",
+})
 
 # Patterns for stripping common noise from labels
 _LABEL_STRIP = re.compile(r'\s*\d+\)?\s*$|^\d+\.\s*')  # trailing "1)" or leading "7."
@@ -205,29 +133,125 @@ _LABEL_STRIP = re.compile(r'\s*\d+\)?\s*$|^\d+\.\s*')  # trailing "1)" or leadin
 def _normalize_label(label: str) -> str:
     """Normalize a label for matching."""
     label = _LABEL_STRIP.sub("", label.strip()).strip().lower()
-    # Remove extra whitespace
     label = re.sub(r'\s+', ' ', label)
     return label
 
 
-def _match_label(label: str, table_context: Optional[str] = None) -> Optional[tuple[str, str]]:
+def _build_label_index(ontology_root: str) -> dict[str, tuple[str, str]]:
+    """Build label→(concept_id, context) index from the full ontology.
+
+    Sources:
+      1. concepts/*.yaml label fields (EN)
+      2. gaap/ugb.yaml labels (DE)
+      3. accounts/ekr_austria.yaml descriptions (DE + EN)
+    """
+    index: dict[str, tuple[str, str]] = {}
+
+    # 1. Concept labels from concepts/*.yaml
+    concepts_dir = Path(ontology_root) / "concepts"
+    for fpath in list(concepts_dir.glob("*.yaml")) + list((concepts_dir / "disc").glob("*.yaml")):
+        data = yaml.safe_load(open(fpath))
+        if not data or "concepts" not in data:
+            continue
+        for c in data["concepts"]:
+            cid = c.get("id", "")
+            label = c.get("label", "")
+            ctx = _infer_context(cid)
+            norm = _normalize_label(label)
+            if norm and norm not in _AMBIGUOUS_LABELS and len(norm) >= 4:
+                index[norm] = (cid, ctx)
+
+    # 2. UGB German labels from gaap/ugb.yaml
+    ugb_path = Path(ontology_root) / "gaap" / "ugb.yaml"
+    if ugb_path.exists():
+        ugb = yaml.safe_load(open(ugb_path))
+        for cid, label_obj in ugb.get("labels", {}).items():
+            # label_obj may be a dict {'de': '...', 'ref': '...'} or a string
+            if isinstance(label_obj, dict):
+                de_label = label_obj.get("de", "")
+            elif isinstance(label_obj, str):
+                de_label = label_obj
+            else:
+                continue
+            ctx = _infer_context(cid)
+            norm = _normalize_label(de_label)
+            if norm and norm not in _AMBIGUOUS_LABELS and len(norm) >= 4:
+                index[norm] = (cid, ctx)
+        # UGB-specific concepts
+        for c in ugb.get("ugb_specific_concepts", []):
+            cid = c.get("id", "")
+            maps_to = c.get("maps_to", cid)
+            de_label = c.get("label_de", "")
+            ctx = _infer_context(maps_to)
+            norm = _normalize_label(de_label)
+            if norm and norm not in _AMBIGUOUS_LABELS and len(norm) >= 4:
+                index[norm] = (maps_to, ctx)
+
+    # 3. EKR account descriptions from accounts/ekr_austria.yaml
+    ekr_path = Path(ontology_root) / "accounts" / "ekr_austria.yaml"
+    if ekr_path.exists():
+        ekr = yaml.safe_load(open(ekr_path))
+        for class_key in [f"class_{i}" for i in range(10)]:
+            for acct in ekr.get(class_key, []):
+                cid = acct.get("concept", "")
+                if not cid:
+                    continue
+                ctx = _infer_context(cid)
+                for lang_key in ("de", "en"):
+                    label = acct.get(lang_key, "")
+                    norm = _normalize_label(label)
+                    if norm and norm not in _AMBIGUOUS_LABELS and len(norm) >= 4:
+                        # Don't overwrite more specific labels
+                        if norm not in index:
+                            index[norm] = (cid, ctx)
+
+    # 4. Aliases from aliases.yaml
+    aliases_path = Path(ontology_root) / "aliases.yaml"
+    if aliases_path.exists():
+        aliases = yaml.safe_load(open(aliases_path))
+        for cid, alias_list in (aliases or {}).get("aliases", {}).items():
+            ctx = _infer_context(cid)
+            for alias in (alias_list or []):
+                norm = _normalize_label(alias)
+                if norm and norm not in _AMBIGUOUS_LABELS and len(norm) >= 4:
+                    # Aliases don't overwrite canonical labels
+                    if norm not in index:
+                        index[norm] = (cid, ctx)
+
+    return index
+
+
+# Module-level label index — built lazily on first use
+_LABEL_INDEX: Optional[dict[str, tuple[str, str]]] = None
+_LABEL_INDEX_ROOT: Optional[str] = None
+
+
+def _get_label_index(ontology_root: str) -> dict[str, tuple[str, str]]:
+    """Get or build the label index."""
+    global _LABEL_INDEX, _LABEL_INDEX_ROOT
+    if _LABEL_INDEX is None or _LABEL_INDEX_ROOT != ontology_root:
+        _LABEL_INDEX = _build_label_index(ontology_root)
+        _LABEL_INDEX_ROOT = ontology_root
+    return _LABEL_INDEX
+
+
+def _match_label(label: str, table_context: Optional[str] = None, ontology_root: Optional[str] = None) -> Optional[tuple[str, str]]:
     """Try to match a label to a (concept_id, context) pair.
 
-    Returns None if the match would conflict with the table's known context
-    (e.g., 'Total revenues' in a PNL table is the face line, not DISC.SEGMENTS).
+    Uses the auto-built label index from the full ontology.
+    Returns None if the match would conflict with the table's known context.
     """
     norm = _normalize_label(label)
-    if not norm or len(norm) < 3:
+    if not norm or len(norm) < 4 or norm in _AMBIGUOUS_LABELS:
         return None
-    # Exact match
-    match = LABEL_CONCEPT_MAP.get(norm)
+
+    index = _get_label_index(ontology_root or _LABEL_INDEX_ROOT or "")
+    match = index.get(norm)
     if not match:
-        # Suffix-tolerant match: "External revenues 1)" normalizes to
-        # "external revenues" after stripping — already handled by normalizer.
-        # Also try with common suffixes stripped:
+        # Try with common suffixes stripped
         for suffix in [" total", " net", " gross"]:
             if norm.endswith(suffix):
-                match = LABEL_CONCEPT_MAP.get(norm[:-len(suffix)].strip())
+                match = index.get(norm[:-len(suffix)].strip())
                 if match:
                     break
     if not match:
@@ -297,7 +321,7 @@ def _extract_period(col: dict, pos: int, total: int) -> str:
     return f"ord_{pos}"
 
 
-def index_facts(tables: list[dict]) -> dict[tuple[str, str, str], list[Fact]]:
+def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, str, str], list[Fact]]:
     """
     Index all tagged facts from the document.
 
@@ -340,7 +364,7 @@ def index_facts(tables: list[dict]) -> dict[tuple[str, str, str], list[Fact]]:
                 concept_id = pt["conceptId"]
                 context = sc or _infer_context(concept_id)
             else:
-                match = _match_label(label, table_context=table_context)
+                match = _match_label(label, table_context=table_context, ontology_root=ontology_root)
                 if match:
                     concept_id, label_ctx = match
                     context = table_context or label_ctx
@@ -1100,7 +1124,7 @@ def check_document(tables: list[dict], ontology_root: str) -> list[Finding]:
     graph = build_graph(ontology_root)
 
     # Index facts
-    facts = index_facts(tables)
+    facts = index_facts(tables, ontology_root=ontology_root)
 
     # Pass 1
     p1 = pass1_validate(graph, facts)

@@ -55,11 +55,11 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
                 pretagged_rows += 1
             else:
                 label = row.get("label", "") or ""
-                if _match_label(label, table_context=table_ctx):
+                if _match_label(label, table_context=table_ctx, ontology_root=ontology_root):
                     label_matched_rows += 1
 
     # Index facts
-    facts = index_facts(tables)
+    facts = index_facts(tables, ontology_root=ontology_root)
 
     # Fact stats
     unique_concepts = set()
