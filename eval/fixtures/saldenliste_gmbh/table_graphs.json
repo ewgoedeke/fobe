@@ -1,0 +1,1322 @@
+{
+  "tables": [
+    {
+      "tableId": "sfp_ugb",
+      "pageNo": 1,
+      "headerRowCount": 0,
+      "labelColIdx": 0,
+      "metadata": {
+        "statementComponent": "SFP",
+        "detectedCurrency": "CURRENCY.EUR",
+        "detectedUnit": "UNIT.UNITS",
+        "signConvention": "NATURAL_DRCR",
+        "sectionPath": [],
+        "scope": null
+      },
+      "columns": [
+        {
+          "colIdx": 0,
+          "role": "LABEL",
+          "headerLabel": "",
+          "detectedAxes": {}
+        },
+        {
+          "colIdx": 1,
+          "role": "VALUE",
+          "headerLabel": "2024",
+          "detectedAxes": {
+            "AXIS.PERIOD": "PERIOD.Y2024",
+            "AXIS.VALUE_TYPE": "VALTYPE.TERMINAL"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "rowId": "row:sfp_ugb:0",
+          "rowIdx": 0,
+          "label": "Kassa (\u00a7224 B.IV)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Kassa (\u00a7224 B.IV)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "428,500.00",
+              "parsedValue": 428500.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.CASH"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:1",
+          "rowIdx": 1,
+          "label": "Erhaltene Anzahlungen (\u00a7224 C.3)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Erhaltene Anzahlungen (\u00a7224 C.3)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-120,000.00",
+              "parsedValue": -120000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.CONTRACT_LIABILITIES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:2",
+          "rowIdx": 2,
+          "label": "Vorsteuer (USt)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Vorsteuer (USt)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "68,000.00",
+              "parsedValue": 68000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_TAX_ASSETS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:3",
+          "rowIdx": 3,
+          "label": "Umsatzsteuer-Zahllast",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Umsatzsteuer-Zahllast",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-52,000.00",
+              "parsedValue": -52000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_TAX_LIABILITIES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:4",
+          "rowIdx": 4,
+          "label": "Passive Rechnungsabgrenzungsposten (\u00a7224 D)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Passive Rechnungsabgrenzungsposten (\u00a7224 D)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-15,000.00",
+              "parsedValue": -15000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.DEFERRED_INCOME"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:5",
+          "rowIdx": 5,
+          "label": "Passive latente Steuern (\u00a7198(9-10))",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Passive latente Steuern (\u00a7198(9-10))",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-38,000.00",
+              "parsedValue": -38000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.DEFERRED_TAX_LIABILITIES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:6",
+          "rowIdx": 6,
+          "label": "Dividendenverbindlichkeit",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Dividendenverbindlichkeit",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-100,000.00",
+              "parsedValue": -100000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.DIVIDEND_PAYABLE"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:7",
+          "rowIdx": 7,
+          "label": "R\u00fcckstellungen f\u00fcr Abfertigungen (\u00a7224 B.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "R\u00fcckstellungen f\u00fcr Abfertigungen (\u00a7224 B.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-700,000.00",
+              "parsedValue": -700000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.EMPLOYEE_BENEFITS_LIABILITY"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:8",
+          "rowIdx": 8,
+          "label": "Beteiligungen (\u00a7224 A.III.3)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Beteiligungen (\u00a7224 A.III.3)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "75,000.00",
+              "parsedValue": 75000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.EQUITY_ACCOUNTED_INVESTEES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:9",
+          "rowIdx": 9,
+          "label": "Gesch\u00e4fts(Firmen)wert (\u00a7203 UGB)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Gesch\u00e4fts(Firmen)wert (\u00a7203 UGB)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "120,000.00",
+              "parsedValue": 120000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.GOODWILL"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:10",
+          "rowIdx": 10,
+          "label": "Konzessionen (\u00a7224 A.I.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Konzessionen (\u00a7224 A.I.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "63,500.00",
+              "parsedValue": 63500.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:11",
+          "rowIdx": 11,
+          "label": "Rohstoffe (\u00a7224 B.I.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Rohstoffe (\u00a7224 B.I.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "1,150,000.00",
+              "parsedValue": 1150000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.INVENTORIES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:12",
+          "rowIdx": 12,
+          "label": "Anteile an verbundenen Unternehmen (\u00a7224 A.III.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Anteile an verbundenen Unternehmen (\u00a7224 A.III.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "500,000.00",
+              "parsedValue": 500000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.INVESTMENT_IN_SUB"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:13",
+          "rowIdx": 13,
+          "label": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (\u00a7224 C.2)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (\u00a7224 C.2)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-1,550,000.00",
+              "parsedValue": -1550000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:14",
+          "rowIdx": 14,
+          "label": "Ausleihungen an verbundene Unternehmen (\u00a7224 A.III.2)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Ausleihungen an verbundene Unternehmen (\u00a7224 A.III.2)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "200,000.00",
+              "parsedValue": 200000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:15",
+          "rowIdx": 15,
+          "label": "Sonstige Verbindlichkeiten (\u00a7224 C.8)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Sonstige Verbindlichkeiten (\u00a7224 C.8)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-295,000.00",
+              "parsedValue": -295000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_LIABILITIES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:16",
+          "rowIdx": 16,
+          "label": "Sonstige Forderungen (\u00a7224 B.II.4)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Sonstige Forderungen (\u00a7224 B.II.4)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "42,000.00",
+              "parsedValue": 42000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_NON_FINANCIAL_ASSETS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:17",
+          "rowIdx": 17,
+          "label": "Bebaute Grundst\u00fccke und Bauten (\u00a7224 A.II.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Bebaute Grundst\u00fccke und Bauten (\u00a7224 A.II.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "3,392,000.00",
+              "parsedValue": 3392000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:18",
+          "rowIdx": 18,
+          "label": "Aktive Rechnungsabgrenzungsposten (\u00a7224 C)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Aktive Rechnungsabgrenzungsposten (\u00a7224 C)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "28,000.00",
+              "parsedValue": 28000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:19",
+          "rowIdx": 19,
+          "label": "Steuerr\u00fcckstellungen (\u00a7224 B.2)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Steuerr\u00fcckstellungen (\u00a7224 B.2)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-475,000.00",
+              "parsedValue": -475000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:20",
+          "rowIdx": 20,
+          "label": "Verbindlichkeiten gg. verbundenen Unternehmen (\u00a7224 C.6)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Verbindlichkeiten gg. verbundenen Unternehmen (\u00a7224 C.6)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-175,000.00",
+              "parsedValue": -175000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:21",
+          "rowIdx": 21,
+          "label": "Forderungen gg. verbundenen Unternehmen (\u00a7224 B.II.2)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Forderungen gg. verbundenen Unternehmen (\u00a7224 B.II.2)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "150,000.00",
+              "parsedValue": 150000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_RECEIVABLES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:22",
+          "rowIdx": 22,
+          "label": "Gesetzliche R\u00fccklage (\u00a7224 A.III.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Gesetzliche R\u00fccklage (\u00a7224 A.III.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-880,000.00",
+              "parsedValue": -880000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.RETAINED_EARNINGS"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:23",
+          "rowIdx": 23,
+          "label": "Gezeichnetes Kapital / Stammkapital (\u00a7224 A.I)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Gezeichnetes Kapital / Stammkapital (\u00a7224 A.I)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-500,000.00",
+              "parsedValue": -500000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_CAPITAL"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:24",
+          "rowIdx": 24,
+          "label": "Kapitalr\u00fccklagen (gebundene) (\u00a7224 A.II.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Kapitalr\u00fccklagen (gebundene) (\u00a7224 A.II.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-250,000.00",
+              "parsedValue": -250000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_PREMIUM"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:25",
+          "rowIdx": 25,
+          "label": "Verbindlichkeiten aus L&L (\u00a7224 C.4)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Verbindlichkeiten aus L&L (\u00a7224 C.4)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-680,000.00",
+              "parsedValue": -680000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_PAYABLES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:26",
+          "rowIdx": 26,
+          "label": "Forderungen aus L&L (\u00a7224 B.II.1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Forderungen aus L&L (\u00a7224 B.II.1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "855,000.00",
+              "parsedValue": 855000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES"
+          }
+        },
+        {
+          "rowId": "row:sfp_ugb:total",
+          "rowIdx": 27,
+          "label": "Bilanzsumme",
+          "rowType": "TOTAL_EXPLICIT",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [
+            "row:sfp_ugb:0",
+            "row:sfp_ugb:1",
+            "row:sfp_ugb:2",
+            "row:sfp_ugb:3",
+            "row:sfp_ugb:4",
+            "row:sfp_ugb:5",
+            "row:sfp_ugb:6",
+            "row:sfp_ugb:7",
+            "row:sfp_ugb:8",
+            "row:sfp_ugb:9",
+            "row:sfp_ugb:10",
+            "row:sfp_ugb:11",
+            "row:sfp_ugb:12",
+            "row:sfp_ugb:13",
+            "row:sfp_ugb:14",
+            "row:sfp_ugb:15",
+            "row:sfp_ugb:16",
+            "row:sfp_ugb:17",
+            "row:sfp_ugb:18",
+            "row:sfp_ugb:19",
+            "row:sfp_ugb:20",
+            "row:sfp_ugb:21",
+            "row:sfp_ugb:22",
+            "row:sfp_ugb:23",
+            "row:sfp_ugb:24",
+            "row:sfp_ugb:25",
+            "row:sfp_ugb:26"
+          ],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Bilanzsumme",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "1,242,000.00",
+              "parsedValue": 1242000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS"
+          }
+        }
+      ],
+      "aggregationGroups": [],
+      "pipelineSteps": [
+        {
+          "id": "saldenliste_convert",
+          "label": "Converted from Austrian Saldenliste",
+          "params": {}
+        }
+      ],
+      "rawHeaders": [],
+      "filledHeaders": []
+    },
+    {
+      "tableId": "pnl_ugb",
+      "pageNo": 2,
+      "headerRowCount": 0,
+      "labelColIdx": 0,
+      "metadata": {
+        "statementComponent": "PNL",
+        "detectedCurrency": "CURRENCY.EUR",
+        "detectedUnit": "UNIT.UNITS",
+        "signConvention": "NATURAL_DRCR",
+        "sectionPath": [],
+        "scope": null
+      },
+      "columns": [
+        {
+          "colIdx": 0,
+          "role": "LABEL",
+          "headerLabel": "",
+          "detectedAxes": {}
+        },
+        {
+          "colIdx": 1,
+          "role": "VALUE",
+          "headerLabel": "2024",
+          "detectedAxes": {
+            "AXIS.PERIOD": "PERIOD.Y2024",
+            "AXIS.VALUE_TYPE": "VALTYPE.TERMINAL"
+          }
+        }
+      ],
+      "rows": [
+        {
+          "rowId": "row:pnl_ugb:0",
+          "rowIdx": 0,
+          "label": "Bestandsver\u00e4nderungen (fertige Erz.) (\u00a7231 Z2)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Bestandsver\u00e4nderungen (fertige Erz.) (\u00a7231 Z2)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-45,000.00",
+              "parsedValue": -45000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.CHANGE_IN_INVENTORIES_FG"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:1",
+          "rowIdx": 1,
+          "label": "Abschreibungen immat. VG (\u00a7231 Z7a)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Abschreibungen immat. VG (\u00a7231 Z7a)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "591,000.00",
+              "parsedValue": 591000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:2",
+          "rowIdx": 2,
+          "label": "Ertr\u00e4ge aus Beteiligungen (\u00a7231 Z10)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Ertr\u00e4ge aus Beteiligungen (\u00a7231 Z10)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-125,000.00",
+              "parsedValue": -125000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:3",
+          "rowIdx": 3,
+          "label": "Zinsen und \u00e4hnliche Aufwendungen (\u00a7231 Z15)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Zinsen und \u00e4hnliche Aufwendungen (\u00a7231 Z15)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "138,000.00",
+              "parsedValue": 138000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:4",
+          "rowIdx": 4,
+          "label": "Zinsertr\u00e4ge Ausleihungen verb. Unt. (\u00a7231 Z11)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Zinsertr\u00e4ge Ausleihungen verb. Unt. (\u00a7231 Z11)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-20,500.00",
+              "parsedValue": -20500.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_INCOME"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:5",
+          "rowIdx": 5,
+          "label": "Abschreibungen auf den Firmenwert (\u00a7203(5) UGB)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Abschreibungen auf den Firmenwert (\u00a7203(5) UGB)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "24,000.00",
+              "parsedValue": 24000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.GW_AMORTIZATION"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:6",
+          "rowIdx": 6,
+          "label": "Wertberichtigungen zu Forderungen UV (\u00a7231 Z8)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Wertberichtigungen zu Forderungen UV (\u00a7231 Z8)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "22,000.00",
+              "parsedValue": 22000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:7",
+          "rowIdx": 7,
+          "label": "K\u00f6rperschaftsteuer (\u00a7231 Z18)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "K\u00f6rperschaftsteuer (\u00a7231 Z18)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "195,000.00",
+              "parsedValue": 195000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:8",
+          "rowIdx": 8,
+          "label": "Aufwand f\u00fcr Rohstoffe (\u00a7231 Z5a)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Aufwand f\u00fcr Rohstoffe (\u00a7231 Z5a)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "4,150,000.00",
+              "parsedValue": 4150000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.MATERIAL_COSTS"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:9",
+          "rowIdx": 9,
+          "label": "Miete und Pacht (\u00a7231 Z8)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Miete und Pacht (\u00a7231 Z8)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "815,000.00",
+              "parsedValue": 815000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:10",
+          "rowIdx": 10,
+          "label": "Sonstige betriebliche Ertr\u00e4ge (\u00a7231 Z4)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Sonstige betriebliche Ertr\u00e4ge (\u00a7231 Z4)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-180,000.00",
+              "parsedValue": -180000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_INCOME"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:11",
+          "rowIdx": 11,
+          "label": "Aktivierte Eigenleistungen (\u00a7231 Z3)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Aktivierte Eigenleistungen (\u00a7231 Z3)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-80,000.00",
+              "parsedValue": -80000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.OWN_WORK_CAPITALISED"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:12",
+          "rowIdx": 12,
+          "label": "Aufwand bezogene Herstellungsleistungen (\u00a7231 Z5b)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Aufwand bezogene Herstellungsleistungen (\u00a7231 Z5b)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "470,000.00",
+              "parsedValue": 470000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.PURCHASED_SERVICES"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:13",
+          "rowIdx": 13,
+          "label": "Erl\u00f6se Inland (\u00a7231 Z1)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Erl\u00f6se Inland (\u00a7231 Z1)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-9,830,000.00",
+              "parsedValue": -9830000.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.REVENUE"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:14",
+          "rowIdx": 14,
+          "label": "L\u00f6hne (\u00a7231 Z6a)",
+          "rowType": "DATA",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "L\u00f6hne (\u00a7231 Z6a)",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "3,274,000.00",
+              "parsedValue": 3274000.0,
+              "isNegative": false
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS"
+          }
+        },
+        {
+          "rowId": "row:pnl_ugb:total",
+          "rowIdx": 15,
+          "label": "Jahres\u00fcberschuss/-fehlbetrag",
+          "rowType": "TOTAL_EXPLICIT",
+          "indentLevel": 0,
+          "depth": 0,
+          "parentId": null,
+          "childIds": [
+            "row:pnl_ugb:0",
+            "row:pnl_ugb:1",
+            "row:pnl_ugb:2",
+            "row:pnl_ugb:3",
+            "row:pnl_ugb:4",
+            "row:pnl_ugb:5",
+            "row:pnl_ugb:6",
+            "row:pnl_ugb:7",
+            "row:pnl_ugb:8",
+            "row:pnl_ugb:9",
+            "row:pnl_ugb:10",
+            "row:pnl_ugb:11",
+            "row:pnl_ugb:12",
+            "row:pnl_ugb:13",
+            "row:pnl_ugb:14"
+          ],
+          "cells": [
+            {
+              "colIdx": 0,
+              "text": "Jahres\u00fcberschuss/-fehlbetrag",
+              "parsedValue": null,
+              "isNegative": false
+            },
+            {
+              "colIdx": 1,
+              "text": "-601,500.00",
+              "parsedValue": -601500.0,
+              "isNegative": true
+            }
+          ],
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT"
+          }
+        }
+      ],
+      "aggregationGroups": [],
+      "pipelineSteps": [
+        {
+          "id": "saldenliste_convert",
+          "label": "Converted from Austrian Saldenliste",
+          "params": {}
+        }
+      ],
+      "rawHeaders": [],
+      "filledHeaders": []
+    }
+  ]
+}
