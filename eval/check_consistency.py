@@ -423,17 +423,29 @@ def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, 
 
 
 def _get_period_keys(facts: dict) -> list[str]:
-    """Get the common period keys across all facts, sorted most-recent first."""
+    """Get the common period keys across all facts, sorted most-recent first.
+
+    Priority: Y2024 > Y2023 > CURRENT > COMPARATIVE > ord_0 > ord_1
+    """
     keys = set()
     for (ctx, cid, pk) in facts:
         keys.add(pk)
-    # Sort: Y2024 > Y2023 > ord_0 > ord_1
+    # Sort: absolute years first, then relative periods, then ordinals
     def sort_key(k):
         if k.startswith("Y"):
-            return (-int(k[1:]), k)
+            return (0, -int(k[1:]))
+        if k == "CURRENT":
+            return (1, 0)
+        if k == "COMPARATIVE":
+            return (1, 1)
+        if k.startswith("COMPARATIVE_"):
+            try:
+                return (1, int(k.split("_")[1]))
+            except (ValueError, IndexError):
+                return (1, 99)
         if k.startswith("ord_"):
-            return (0, k)
-        return (1, k)
+            return (2, int(k.split("_")[1]) if "_" in k else 0)
+        return (3, 0)
     return sorted(keys, key=sort_key)
 
 
@@ -469,6 +481,22 @@ def _sum_by_axis(facts: dict, context: str, concept: str, period_key: str) -> Op
 # ── Pass 1: Validate declared relationships ────────────────────────
 
 TOLERANCE = 1000.0  # Allow rounding tolerance (1 TEUR = 1000 EUR normalized)
+
+
+def _is_scale_mismatch(a: float, b: float) -> Optional[int]:
+    """Check if two amounts differ by a unit scale factor (×1000 or ×1000000).
+
+    Returns the scale factor if detected, None otherwise.
+    """
+    if a == 0 or b == 0:
+        return None
+    ratio = abs(a / b)
+    for scale in [1000, 1000000]:
+        if (scale * 0.99) < ratio < (scale * 1.01):
+            return scale
+        if (1 / scale * 0.99) < ratio < (1 / scale * 1.01):
+            return scale
+    return None
 
 
 def _triage_residual(
@@ -587,16 +615,32 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                     details={"period": pk, "partial": True, "missing_children": missing},
                 ))
             else:
-                findings.append(Finding(
-                    category=Category.BROKEN_RELATIONSHIP,
-                    edge_name=edge.name,
-                    severity="ERROR",
-                    expected=parent_val,
-                    actual=child_sum,
-                    delta=delta,
-                    concepts=[edge.parent] + [c for c, _, _ in child_vals],
-                    message=f"Summation BROKEN: {edge.parent}={parent_val:,.0f} ≠ SUM({', '.join(c for c,_,_ in child_vals)})={child_sum:,.0f}, Δ={delta:,.0f} [{pk}]",
-                    details={"period": pk, "missing_children": missing},
+                # Check if this is a unit scale mismatch rather than a real break
+                scale = _is_scale_mismatch(parent_val, child_sum)
+                if scale:
+                    findings.append(Finding(
+                        category=Category.EXPLAINED_MISMATCH,
+                        pattern_id="UNIT_SCALE",
+                        edge_name=edge.name,
+                        severity="INFO",
+                        expected=parent_val,
+                        actual=child_sum,
+                        delta=delta,
+                        concepts=[edge.parent] + [c for c, _, _ in child_vals],
+                        message=f"Summation unit scale: {edge.parent}={parent_val:,.0f} vs SUM={child_sum:,.0f} (×{scale}) — sources at different scales [{pk}]",
+                        details={"period": pk, "scale_factor": scale, "missing_children": missing},
+                    ))
+                else:
+                    findings.append(Finding(
+                        category=Category.BROKEN_RELATIONSHIP,
+                        edge_name=edge.name,
+                        severity="ERROR",
+                        expected=parent_val,
+                        actual=child_sum,
+                        delta=delta,
+                        concepts=[edge.parent] + [c for c, _, _ in child_vals],
+                        message=f"Summation BROKEN: {edge.parent}={parent_val:,.0f} ≠ SUM({', '.join(c for c,_,_ in child_vals)})={child_sum:,.0f}, Δ={delta:,.0f} [{pk}]",
+                        details={"period": pk, "missing_children": missing},
                 ))
 
     # Cross-statement ties
@@ -627,17 +671,32 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                     details={"period": pk},
                 ))
             else:
-                findings.append(Finding(
-                    category=Category.BROKEN_RELATIONSHIP,
-                    edge_name=edge.name,
-                    severity=edge.severity,
-                    expected=trigger_val,
-                    actual=requires_val,
-                    delta=delta,
-                    concepts=[edge.trigger_concept, edge.requires_concept],
-                    message=f"Cross-statement tie BROKEN: {edge.trigger_concept}={trigger_val:,.0f} ≠ {edge.requires_concept}={requires_val:,.0f}, Δ={delta:,.0f} [{pk}]",
-                    details={"period": pk},
-                ))
+                scale = _is_scale_mismatch(trigger_val, requires_val)
+                if scale:
+                    findings.append(Finding(
+                        category=Category.EXPLAINED_MISMATCH,
+                        pattern_id="UNIT_SCALE",
+                        edge_name=edge.name,
+                        severity="INFO",
+                        expected=trigger_val,
+                        actual=requires_val,
+                        delta=delta,
+                        concepts=[edge.trigger_concept, edge.requires_concept],
+                        message=f"Cross-statement unit scale: {edge.trigger_concept}={trigger_val:,.0f} vs {edge.requires_concept}={requires_val:,.0f} (×{scale}) [{pk}]",
+                        details={"period": pk, "scale_factor": scale},
+                    ))
+                else:
+                    findings.append(Finding(
+                        category=Category.BROKEN_RELATIONSHIP,
+                        edge_name=edge.name,
+                        severity=edge.severity,
+                        expected=trigger_val,
+                        actual=requires_val,
+                        delta=delta,
+                        concepts=[edge.trigger_concept, edge.requires_concept],
+                        message=f"Cross-statement tie BROKEN: {edge.trigger_concept}={trigger_val:,.0f} ≠ {edge.requires_concept}={requires_val:,.0f}, Δ={delta:,.0f} [{pk}]",
+                        details={"period": pk},
+                    ))
 
     # Note-to-face ties
     for edge in graph.edges_by_type(EdgeType.NOTE_TO_FACE):
@@ -678,25 +737,40 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                     details={"period": pk},
                 ))
             else:
-                # Triage using ambiguities
-                possible = [a.get("id") for a in edge.ambiguities]
-                sev = edge.severity
-                # Downgrade to INFO if rounding
-                if face_val != 0 and abs(delta / face_val) < 0.0001:
-                    sev = "INFO"
-                    possible = ["ROUNDING"]
+                # Check unit scale mismatch first
+                scale = _is_scale_mismatch(face_val, note_val)
+                if scale:
+                    findings.append(Finding(
+                        category=Category.EXPLAINED_MISMATCH,
+                        pattern_id="UNIT_SCALE",
+                        edge_name=edge.name,
+                        severity="INFO",
+                        expected=face_val,
+                        actual=note_val,
+                        delta=delta,
+                        concepts=[edge.face_concept, edge.note_concept or "SUM(...)"],
+                        message=f"Note-to-face unit scale: {edge.face_concept}={face_val:,.0f} vs note={note_val:,.0f} (×{scale}) [{pk}]",
+                        details={"period": pk, "scale_factor": scale},
+                    ))
+                else:
+                    # Triage using ambiguities
+                    possible = [a.get("id") for a in edge.ambiguities]
+                    sev = edge.severity
+                    if face_val != 0 and abs(delta / face_val) < 0.0001:
+                        sev = "INFO"
+                        possible = ["ROUNDING"]
 
-                findings.append(Finding(
-                    category=Category.BROKEN_RELATIONSHIP,
-                    edge_name=edge.name,
-                    severity=sev,
-                    expected=face_val,
-                    actual=note_val,
-                    delta=delta,
-                    concepts=[edge.face_concept, edge.note_concept or "SUM(...)"],
-                    message=f"Note ≠ face: {edge.face_concept}={face_val:,.0f} ≠ note({edge.note_context})={note_val:,.0f}, Δ={delta:,.0f} — possible: {', '.join(possible) or 'unknown'} [{pk}]",
-                    details={"period": pk, "possible_causes": possible},
-                ))
+                    findings.append(Finding(
+                        category=Category.BROKEN_RELATIONSHIP,
+                        edge_name=edge.name,
+                        severity=sev,
+                        expected=face_val,
+                        actual=note_val,
+                        delta=delta,
+                        concepts=[edge.face_concept, edge.note_concept or "SUM(...)"],
+                        message=f"Note ≠ face: {edge.face_concept}={face_val:,.0f} ≠ note({edge.note_context})={note_val:,.0f}, Δ={delta:,.0f} — possible: {', '.join(possible) or 'unknown'} [{pk}]",
+                        details={"period": pk, "possible_causes": possible},
+                    ))
 
     # Disaggregation ties
     for edge in graph.edges_by_type(EdgeType.DISAGGREGATION):
