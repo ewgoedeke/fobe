@@ -80,12 +80,20 @@ disaggregation_ties:
     face: { context: PNL, concept: FS.PNL.REVENUE }
     detail: { context: DISC.REVENUE }
     concepts: [DISC.REVENUE.GOODS_TRANSFERRED_POINT, DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME]
-    check: "face.amount = SUM(detail concepts)"
+    check: "face.amount >= SUM(detail concepts)"
+    note: >
+      IFRS 15 timing disaggregation covers only 'revenue from contracts with
+      customers'. Face revenue may include non-IFRS-15 items. face = SUM is
+      the ideal case; face > SUM indicates scope gap.
     severity: WARNING
     ambiguities:
+      - id: NON_IFRS15_REVENUE
+        description: "Face includes revenue outside IFRS 15 scope"
+        confirm_via: "face > detail sum AND delta matches non-IFRS-15 revenue lines"
+        severity: INFO
       - id: PARTIAL_DISAGGREGATION
-        description: "Timing split does not cover all revenue streams"
-        confirm_via: "detail sum < face amount AND other revenue categories exist"
+        description: "Timing split does not cover all IFRS 15 revenue streams (e.g., licence revenue separate)"
+        confirm_via: "detail sum < face amount AND other DISC.REVENUE concepts exist"
         severity: INFO
 
   - name: ppe_face_to_note
@@ -185,13 +193,27 @@ note_to_face_ties:
   - name: revenue_face_to_note
     face: { context: PNL, concept: FS.PNL.REVENUE }
     note_total: { context: DISC.REVENUE, concept: DISC.REVENUE.TOTAL_REVENUE }
-    check: equals
+    check: "face >= note_total"
+    note: >
+      DISC.REVENUE covers IFRS 15 'revenue from contracts with customers' only.
+      PNL face revenue may also include lease income (IFRS 16), insurance revenue
+      (IFRS 17), interest income presented as revenue (banking), government grants,
+      or disposal gains classified in revenue. face = note is the ideal case;
+      face > note indicates non-IFRS-15 revenue in the face line.
     severity: WARNING
     ambiguities:
-      - id: SCOPE_MISMATCH
-        description: "Note covers a different scope (e.g., IFRS 15 revenue only, face includes lease income)"
-        confirm_via: "note states scope exclusions"
+      - id: NON_IFRS15_REVENUE
+        description: "Face includes revenue outside IFRS 15 scope (lease income, insurance, interest)"
+        confirm_via: "face > note AND delta explainable by other income lines"
         severity: INFO
+      - id: IFRS15_SCOPE_ELECTION
+        description: "Entity elected to apply IFRS 15 to some contracts and not others (e.g., lease components)"
+        confirm_via: "accounting policy note states scope election"
+        severity: INFO
+      - id: NOTE_EXCEEDS_FACE
+        description: "Note total > face — structural error or different consolidation scope"
+        confirm_via: "note > face"
+        severity: WARNING
       - id: ROUNDING
         description: "Independent rounding between statement and note"
         confirm_via: "delta < 0.01% of face"
