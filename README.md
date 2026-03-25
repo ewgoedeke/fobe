@@ -74,24 +74,33 @@ Context-aware: PNL negates all amounts, SFP negates credit concepts only.
 | EuroTeleSites 2024 | **UGB** | Telecom infra | 94% corroborated, all checks pass |
 | CA Immo 2024 (EN) | **UGB** | Real estate | All checks pass, treasury shares + bonds |
 
-### Downloaded (17 PDFs ready for processing)
+### Downloaded (29 PDFs, 22 companies, 16 industries)
 
-| Document | Framework | Industry |
-|---|---|---|
-| ICBC Austria 2024 | UGB + BWG | Banking |
-| VIG Holding 2024 | UGB + VAG | Insurance |
-| Lenzing 2024 | UGB | Chemicals / fibres |
-| Palfinger 2024 | UGB | Cranes / lifting |
-| Zumtobel 2024/25 | UGB | Lighting |
-| Kapsch 2024/25 | UGB | ITS |
-| OMV 2024 | IFRS + UGB | Oil & gas |
-| STRABAG 2024 | UGB | Construction |
-| Andritz 2024 | UGB | Plant engineering |
-| Mayr-Melnhof 2024 | UGB | Packaging / cartonboard |
-| AMAG 2024 | UGB | Aluminium |
-| Flughafen Wien 2024 | UGB | Airport infrastructure |
-| Pierer Mobility 2024 | UGB | Motorcycles (KTM) |
-| AGRANA 2024/25 | UGB | Food / sugar / starch |
+| Company | Framework | Industry | UGB Einzelabschluss |
+|---|---|---|---|
+| ICBC Austria | UGB + BWG | Banking | bundled |
+| VIG Holding | UGB + VAG | Insurance | bundled |
+| **BAWAG** | UGB + BWG | Banking | **separate PDF** |
+| **RBI** | UGB + BWG | Banking | **separate PDF** |
+| **OMV** | UGB | Oil & gas | **separate PDF** |
+| **STRABAG** | UGB | Construction | **separate PDF** |
+| **Andritz** | UGB | Plant engineering | **separate PDF** |
+| **Mayr-Melnhof** | UGB | Packaging | **separate PDF** |
+| Lenzing | UGB | Chemicals / fibres | bundled |
+| Palfinger | UGB | Cranes / lifting | bundled |
+| Zumtobel | UGB | Lighting | bundled |
+| Kapsch TrafficCom | UGB | ITS | bundled |
+| AMAG | UGB | Aluminium | bundled |
+| Flughafen Wien | UGB | Airport | bundled |
+| Pierer Mobility | UGB | Motorcycles (KTM) | bundled |
+| AGRANA | UGB | Food / sugar | bundled |
+| DO & CO | UGB | Airline catering | bundled |
+| FACC | UGB | Aerospace | bundled |
+| Frequentis | UGB | Defence tech / ATM | bundled |
+| EVN | UGB | Energy / utilities | bundled |
+| S IMMO | UGB | Real estate | bundled |
+| Warimpex | UGB | Real estate / hotels | bundled |
+| Marinomed | UGB | Pharma / biotech | bundled |
 
 ### Real errors found
 
