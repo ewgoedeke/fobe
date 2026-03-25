@@ -322,21 +322,40 @@ def _extract_period(col: dict, pos: int, total: int) -> str:
     return f"ord_{pos}"
 
 
-def _normalize_sign(parsed_value: float, concept_id: str, sign_convention: str, concepts: dict) -> float:
+def _normalize_sign(
+    parsed_value: float,
+    concept_id: str,
+    sign_convention: str,
+    concepts: dict,
+    context: str = "",
+) -> float:
     """Normalize a parsed amount to Dr+/Cr- natural sign.
 
-    Rule: dr_cr_amount = abs(parsed) × (1 if debit, -1 if credit)
+    For PRESENTATION → NATURAL_DRCR, the rule depends on the statement context:
 
-    For PRESENTATION sources, balance_type determines the sign — the parsed
-    sign (positive vs parentheses-negative) is redundant once the concept is known.
+    PNL/OCI (arithmetic presentation): negate ALL amounts.
+      In presentation PNL, the sign encodes economic direction (income positive,
+      expense negative). In Dr+/Cr-, it's the opposite (income negative/credit,
+      expense positive/debit). Negating preserves summation relationships:
+      if PBT + TAX = NET_PROFIT in presentation, then -(PBT) + -(TAX) = -(NET_PROFIT).
+
+    SFP: negate credit concepts only, abs() for debit.
+      Assets are positive in both conventions. Equity/liabilities are positive
+      in presentation but negative in Dr+/Cr-.
+
     For NATURAL_DRCR sources, the amount is already correct.
     """
     if sign_convention == "NATURAL_DRCR":
         return parsed_value
     # PRESENTATION → NATURAL_DRCR
+    if context in ("PNL", "OCI"):
+        # Arithmetic presentation: negate all to flip economic→accounting sign
+        return -parsed_value
+
+    # SFP and other contexts: use balance_type
     meta = concepts.get(concept_id)
     if not meta:
-        return parsed_value  # unknown concept — pass through
+        return parsed_value
     if meta.balance_type == "credit":
         return -abs(parsed_value)
     else:
@@ -427,7 +446,7 @@ def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, 
                 period_key = _extract_period(col_meta, col_pos, len(value_columns))
 
                 scaled = pv * scale
-                normalized = _normalize_sign(scaled, concept_id, sign_convention, concepts_meta)
+                normalized = _normalize_sign(scaled, concept_id, sign_convention, concepts_meta, context=context)
                 fact = Fact(
                     table_id=table_id,
                     context=context,
