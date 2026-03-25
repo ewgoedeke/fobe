@@ -145,3 +145,57 @@ Not yet covered (requires improved preTagging):
 - Note rollforward details (PPE, intangibles, provisions)
 - Share count vs monetary amounts in equity notes
 - IC elimination figures
+
+## Corroboration Scoring
+
+Every indexed fact gets a per-fact confidence status based on how many
+independent checks corroborate it:
+
+| Status | Meaning | Criteria |
+|---|---|---|
+| **CONFIRMED** | High confidence | ≥2 independent checks pass |
+| **CORROBORATED** | Medium confidence | Exactly 1 check passes |
+| **UNCONFIRMED** | No signal | No checks testable (missing counterpart data) |
+| **CONTRADICTED** | Investigation needed | ≥1 check fails with no explaining ambiguity |
+
+### Check types that contribute to scoring
+
+1. **Ontology checks** (Pass 1): summation, disaggregation, cross-statement
+   tie, note-to-face, IC decomposition — each passing check adds one
+   corroboration signal to every fact that participated.
+
+2. **Table arithmetic** (Pass 0): for every row with `childIds` in the
+   source data, checks that `parsedValue(parent) = SUM(parsedValue(children))`
+   per VALUE column. No ontology needed — pure structural validation.
+   When a passing arithmetic check involves an indexed fact (matched by
+   `row_id`), both parent and child facts receive a `TABLE_ARITHMETIC`
+   check result.
+
+3. **Mismatch patterns** (Pass 2): explained mismatches (UNIT_SCALE,
+   GROSS_VS_NET, etc.) are informational — they don't contradict a fact
+   but they don't confirm it either.
+
+### Scoring flow
+
+```
+Pass 0: Table arithmetic (structural, no ontology)
+   ↓
+Pass 1: Ontology relationship checks
+   ↓
+Pass 2: Mismatch pattern explanation
+   ↓
+Pass 3: Context/label validation
+   ↓
+Score: aggregate all CheckResults per fact → status
+```
+
+### Corpus example
+
+```
+Fact Scores            Wienerberger    VERBUND    voestalpine
+  CONFIRMED                   32           0            28
+  CORROBORATED               186          15           174
+  UNCONFIRMED                 90         267            96
+  CONTRADICTED                12           9            46
+  Table arithmetic hits      224           0           208
+```

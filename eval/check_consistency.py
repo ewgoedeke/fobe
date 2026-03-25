@@ -109,6 +109,7 @@ class Fact:
     page: int = 0
     is_primary: bool = False  # from a primary statement (PNL/SFP/OCI/CFS/SOCIE)
     value_col_count: int = 0  # number of value columns in source table
+    row_id: str = ""          # rowId from table_graphs.json (for table arithmetic)
 
 
 PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
@@ -406,6 +407,7 @@ def index_facts(tables: list[dict], ontology_root: str = "") -> dict[tuple[str, 
                     page=page,
                     is_primary=is_primary,
                     value_col_count=len(value_columns),
+                    row_id=row.get("rowId", ""),
                 )
                 facts[(context, concept_id, period_key)].append(fact)
 
@@ -1262,6 +1264,39 @@ def check_against_expected(findings: list[Finding], expected_path: str) -> tuple
                 fails.append(f"UNEXPECTED ERROR: {finding.message}")
 
     return passes, fails
+
+
+def check_document_scored(tables: list[dict], ontology_root: str):
+    """Run all passes including Pass 0 (table arithmetic) and return per-fact scores.
+
+    Returns (findings, score_registry) where score_registry is
+    dict[(table_id, concept_id, col_idx) → FactScore].
+    """
+    from fact_scoring import build_score_registry, apply_findings_to_scores
+    from table_arithmetic import pass0_table_arithmetic, apply_table_arithmetic_to_scores
+
+    graph = build_graph(ontology_root)
+    facts = index_facts(tables, ontology_root=ontology_root)
+
+    # Build score registry from all indexed facts
+    registry = build_score_registry(facts)
+
+    # Pass 0: table arithmetic (pre-ontology)
+    arith_results = pass0_table_arithmetic(tables)
+    apply_table_arithmetic_to_scores(arith_results, registry)
+
+    # Pass 1-3: existing ontology checks
+    p1 = pass1_validate(graph, facts)
+    patterns = load_mismatch_patterns(ontology_root)
+    p2 = pass2_explain(graph, facts, patterns, p1)
+    p3 = pass3_unexplained(graph, facts, tables, p1, p2)
+
+    all_findings = p1 + p2 + p3
+
+    # Map findings to fact scores
+    apply_findings_to_scores(all_findings, facts, registry)
+
+    return all_findings, registry
 
 
 def main():
