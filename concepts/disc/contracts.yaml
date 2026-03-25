@@ -1,0 +1,16 @@
+# DISC.CONTRACTS.* — Construction Contracts & Project Business (IFRS 15)
+# Needed by: Andritz, SBO, any project/plant engineering company
+concepts:
+  - { id: DISC.CONTRACTS.CONTRACT_ASSETS, label: "Contract assets (costs incurred + profit less progress billings)", period_type: instant }
+  - { id: DISC.CONTRACTS.CONTRACT_LIABILITIES, label: "Contract liabilities (progress billings in excess)", period_type: instant }
+  - { id: DISC.CONTRACTS.NET_CONTRACT_POSITION, label: "Net contract asset/liability position", period_type: instant, is_total: true }
+  - { id: DISC.CONTRACTS.ADVANCE_PAYMENTS_RECEIVED, label: "Advance payments received from customers", period_type: instant }
+  - { id: DISC.CONTRACTS.REVENUE_OVER_TIME, label: "Revenue recognised over time", period_type: duration }
+  - { id: DISC.CONTRACTS.REVENUE_POINT_IN_TIME, label: "Revenue recognised at a point in time", period_type: duration }
+  - { id: DISC.CONTRACTS.REVENUE_SERVICE_AFTERMARKET, label: "Revenue from service/aftermarket", period_type: duration }
+  - { id: DISC.CONTRACTS.REVENUE_NEW_EQUIPMENT, label: "Revenue from new equipment/projects", period_type: duration }
+  - { id: DISC.CONTRACTS.REMAINING_PERFORMANCE_OBLIGATIONS, label: "Remaining performance obligations (order backlog)", period_type: instant }
+  - { id: DISC.CONTRACTS.ORDER_INTAKE, label: "Order intake (period)", period_type: duration }
+  - { id: DISC.CONTRACTS.PROVISIONS_WARRANTIES, label: "Warranty provisions", period_type: instant }
+  - { id: DISC.CONTRACTS.PROVISIONS_ONEROUS, label: "Provisions for onerous contracts", period_type: instant }
+  - { id: DISC.CONTRACTS.ONEROUS_CONTRACT_LOSS, label: "Loss recognised on onerous contracts", period_type: duration }

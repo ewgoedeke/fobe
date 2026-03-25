@@ -1,0 +1,30 @@
+# DISC.BANK_REG.* — Banking Regulatory & APMs
+# Extends industry/banks.yaml with regulatory disclosures
+# Needed by: Erste, RBI, BAWAG
+concepts:
+  # Regulatory charges (IFRIC 21)
+  - { id: DISC.BANK_REG.BANKING_LEVY, label: "Banking levy / financial transaction tax", period_type: duration }
+  - { id: DISC.BANK_REG.DEPOSIT_GUARANTEE_CONTRIBUTION, label: "Deposit guarantee scheme contribution", period_type: duration }
+  - { id: DISC.BANK_REG.RESOLUTION_FUND_CONTRIBUTION, label: "Resolution fund contribution", period_type: duration }
+  # Funding structure
+  - { id: DISC.BANK_REG.DEPOSITS_RETAIL, label: "Deposits — retail customers", period_type: instant }
+  - { id: DISC.BANK_REG.DEPOSITS_CORPORATE, label: "Deposits — corporate customers", period_type: instant }
+  - { id: DISC.BANK_REG.DEBT_SECURITIES_COVERED_BONDS, label: "Covered bonds issued", period_type: instant }
+  - { id: DISC.BANK_REG.DEBT_SECURITIES_SENIOR_PREFERRED, label: "Senior preferred notes", period_type: instant }
+  - { id: DISC.BANK_REG.DEBT_SECURITIES_SENIOR_NONPREF, label: "Senior non-preferred notes (MREL-eligible)", period_type: instant }
+  - { id: DISC.BANK_REG.AT1_INSTRUMENTS_EQUITY, label: "Additional Tier 1 instruments (equity-classified)", period_type: instant }
+  # Regulatory ratios (not IFRS but universally disclosed)
+  - { id: DISC.BANK_REG.CET1_RATIO, label: "CET1 ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.TOTAL_CAPITAL_RATIO, label: "Total capital ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.LEVERAGE_RATIO, label: "Leverage ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.LCR, label: "Liquidity coverage ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.NSFR, label: "Net stable funding ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.MREL_RATIO, label: "MREL ratio (%)", period_type: instant }
+  # Credit risk
+  - { id: DISC.BANK_REG.NPL_RATIO, label: "Non-performing loan ratio (%)", period_type: instant }
+  - { id: DISC.BANK_REG.NPL_COVERAGE_RATIO, label: "NPL coverage ratio (%)", period_type: instant }
+  # APMs
+  - { id: DISC.BANK_REG.COST_TO_INCOME_RATIO, label: "Cost-to-income ratio (%)", period_type: duration }
+  - { id: DISC.BANK_REG.RETURN_ON_EQUITY, label: "Return on equity (%)", period_type: duration }
+  - { id: DISC.BANK_REG.RETURN_ON_TANGIBLE_EQUITY, label: "Return on tangible common equity — ROTCE (%)", period_type: duration }
+  - { id: DISC.BANK_REG.NET_INTEREST_MARGIN, label: "Net interest margin (%)", period_type: duration }

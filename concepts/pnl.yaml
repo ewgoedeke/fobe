@@ -372,3 +372,40 @@ concepts:
     mappable: false
     is_monetary: false
     is_total: false
+
+  # ── Nature-of-expense additional items ─────────────────────
+  - id: FS.PNL.ENERGY_COSTS
+    label: Energy costs (standalone production cost)
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.SGA_EXPENSES
+    label: Selling, general and administrative expenses (combined)
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.COST_OF_SERVICES
+    label: Cost of services delivered
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false
+
+  - id: FS.PNL.COST_OF_EQUIPMENT
+    label: Cost of equipment sold
+    balance_type: debit
+    period_type: duration
+    source_type: pack
+    mappable: true
+    is_monetary: false
+    is_total: false

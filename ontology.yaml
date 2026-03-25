@@ -42,6 +42,11 @@ imports:
   - concepts/disc/personnel.yaml
   - concepts/disc/auditor_fees.yaml
   - concepts/disc/ugb_notes.yaml
+  - concepts/disc/contracts.yaml
+  - concepts/disc/oil_gas.yaml
+  - concepts/disc/environment.yaml
+  - concepts/disc/banking_regulatory.yaml
+  - concepts/disc/insurance_regulatory.yaml
   # Cross-cutting
   - axes.yaml
   - relations.yaml
