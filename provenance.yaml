@@ -1,0 +1,50 @@
+# FOBE Fact Provenance Types
+# Every tagged fact must declare its provenance type.
+# Provenance determines which cross-references and checks apply.
+
+provenance_types:
+  - id: FACE_STATEMENT
+    description: "Directly from a primary financial statement face (PNL, SFP, OCI, CFS, SOCIE)"
+    cross_reference: true
+    balance_equation: true
+    ic_check: true
+
+  - id: NOTE_TOTAL
+    description: "Total line in a disclosure note — should equal the corresponding face amount"
+    cross_reference: true
+    must_match: FACE_STATEMENT
+
+  - id: NOTE_DETAIL
+    description: "Disaggregation detail within a note — must sum to note total"
+    cross_reference: false
+    must_sum_to: NOTE_TOTAL
+
+  - id: ASSOCIATE_OWN
+    description: "Associate/JV's own financial data (IAS 28 summarised information)"
+    cross_reference: false
+    balance_equation: false
+    ic_check: false
+    note: "These are the associate's figures, not the group's. Do NOT cross-reference to group face amounts."
+
+  - id: SEGMENT_COMPONENT
+    description: "Segment-level data that should sum to consolidated group total"
+    cross_reference: true
+    must_sum_to: FACE_STATEMENT
+    sum_axis: AXIS.SEGMENT_DOC
+
+  - id: RECONCILING_ITEM
+    description: "Elimination, adjustment, or unallocated amount in a reconciliation"
+    cross_reference: true
+    note: "Participates in reconciliation: SUM(segments) + SUM(reconciling) = face"
+
+  - id: DERIVED_METRIC
+    description: "Alternative performance measure (EBITDA, ROTCE, C/I ratio) — not a primary IFRS line"
+    cross_reference: false
+    balance_equation: false
+    note: "Informational only. May not reconcile to primary statements."
+
+  - id: MANAGEMENT_REPORT
+    description: "Data from the management report / directors' report — may differ from audited FS"
+    cross_reference: false
+    balance_equation: false
+    note: "Often rounded differently or uses different definitions than audited FS."

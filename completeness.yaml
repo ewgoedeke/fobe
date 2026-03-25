@@ -1,0 +1,54 @@
+# FOBE Completeness Graph
+# Defines what a fully tagged document looks like at each tier.
+# The evaluation framework checks tagged documents against these requirements.
+
+tiers:
+  minimum_viable:
+    description: "Bare minimum for a usable tagged document"
+    requirements:
+      - context: PNL
+        concepts: [FS.PNL.REVENUE, FS.PNL.NET_PROFIT]
+      - context: SFP
+        concepts: [FS.SFP.TOTAL_ASSETS, FS.SFP.TOTAL_EQUITY_AND_LIABILITIES]
+    ties:
+      - { check: "SFP.TOTAL_ASSETS + SFP.TOTAL_EQUITY_AND_LIABILITIES = 0" }
+
+  standard:
+    description: "Standard quality — all primary statements tagged with key cross-statement ties"
+    extends: minimum_viable
+    requirements:
+      - context: PNL
+        concepts: [FS.PNL.REVENUE, FS.PNL.GROSS_PROFIT, FS.PNL.OPERATING_PROFIT, FS.PNL.PROFIT_BEFORE_TAX, FS.PNL.INCOME_TAX_EXPENSE, FS.PNL.NET_PROFIT]
+      - context: SFP
+        concepts: [FS.SFP.NON_CURRENT_ASSETS, FS.SFP.CURRENT_ASSETS, FS.SFP.TOTAL_ASSETS, FS.SFP.TOTAL_EQUITY, FS.SFP.NON_CURRENT_LIABILITIES, FS.SFP.CURRENT_LIABILITIES, FS.SFP.TOTAL_EQUITY_AND_LIABILITIES]
+      - context: CFS
+        concepts: [FS.CFS.NET_CASH_OPERATING, FS.CFS.NET_CASH_INVESTING, FS.CFS.NET_CASH_FINANCING, FS.CFS.CASH_CLOSING]
+        optional: true
+    ties:
+      - { name: pnl_net_profit_to_socie }
+      - { name: cfs_closing_cash_to_sfp }
+      - { name: sfp_balance_equation }
+
+  comprehensive:
+    description: "Full quality — all statements, all notes, all cross-references validated"
+    extends: standard
+    requirements:
+      - context: OCI
+        all_oci_concepts: true
+      - context: SOCIE
+        all_socie_concepts: true
+      - context: DISC.SEGMENTS
+        required_if: "document has segment reporting"
+      - context: DISC.PPE
+        required_if: "SFP has FS.SFP.PPE_NET"
+      - context: DISC.TAX
+        required_if: "PNL has FS.PNL.INCOME_TAX_EXPENSE"
+    ties:
+      - all_cross_statement_ties: true
+      - all_disaggregation_ties: true
+      - all_ic_decomposition: true
+    checks:
+      - "every FACE_STATEMENT fact has at least one NOTE_TOTAL or NOTE_DETAIL counterpart"
+      - "every NOTE_DETAIL sums to its NOTE_TOTAL"
+      - "segment totals reconcile to face"
+      - "comparative amounts match prior period"

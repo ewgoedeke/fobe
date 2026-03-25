@@ -1,0 +1,111 @@
+# FOBE Mandatory Counterpart Relationships
+# If a fact exists with the trigger concept, its counterpart(s) must also exist.
+# Missing counterpart = incomplete tagging (not an error in the source data).
+
+cross_statement_ties:
+  - name: pnl_net_profit_to_socie
+    trigger: { context: PNL, concept: FS.PNL.NET_PROFIT }
+    requires: { context: SOCIE, concept: FS.SOCIE.PROFIT_FOR_PERIOD }
+    check: equals
+    severity: ERROR
+
+  - name: oci_total_to_socie
+    trigger: { context: OCI, concept: FS.OCI.TOTAL_OCI }
+    requires: { context: SOCIE, concept: FS.SOCIE.OCI_FOR_PERIOD }
+    check: equals
+    severity: ERROR
+
+  - name: socie_closing_to_sfp_equity
+    trigger: { context: SOCIE, concept: FS.SOCIE.TOTAL_EQUITY }
+    requires: { context: SFP, concept: FS.SFP.TOTAL_EQUITY }
+    check: equals
+    severity: ERROR
+
+  - name: cfs_closing_cash_to_sfp
+    trigger: { context: CFS, concept: FS.CFS.CASH_CLOSING }
+    requires: { context: SFP, concept: FS.SFP.CASH }
+    check: equals
+    severity: ERROR
+
+  - name: sfp_balance_equation
+    trigger: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
+    requires: { context: SFP, concept: FS.SFP.TOTAL_EQUITY_AND_LIABILITIES }
+    check: "trigger.amount + requires.amount = 0"
+    severity: ERROR
+
+disaggregation_ties:
+  - name: revenue_by_segment
+    face: { context: PNL, concept: FS.PNL.REVENUE }
+    detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.EXTERNAL_REVENUE, axis: AXIS.SEGMENT_DOC }
+    check: "face.amount = SUM(detail.amount by axis) + ic_residual"
+    severity: WARNING
+    note: "ic_residual should be zero; non-zero = IC leakage"
+
+  - name: revenue_by_timing
+    face: { context: PNL, concept: FS.PNL.REVENUE }
+    detail: { context: DISC.REVENUE }
+    concepts: [DISC.REVENUE.GOODS_TRANSFERRED_POINT, DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME]
+    check: "face.amount = SUM(detail concepts)"
+    severity: WARNING
+
+  - name: ppe_face_to_note
+    face: { context: SFP, concept: FS.SFP.PPE_NET }
+    detail: { context: DISC.PPE, concept: DISC.PPE.CARRYING_AMOUNT, axis: AXIS.PPE_CLASS_DOC }
+    check: "face.amount = SUM(detail.amount by axis)"
+    severity: WARNING
+
+  - name: segment_assets_to_total
+    face: { context: SFP, concept: FS.SFP.TOTAL_ASSETS }
+    detail: { context: DISC.SEGMENTS, concept: DISC.SEGMENTS.TOTAL_ASSETS, axis: AXIS.SEGMENT_DOC }
+    check: "face.amount = SUM(detail.amount by axis) + unallocated"
+    severity: WARNING
+
+  - name: provisions_face_to_note
+    face: { context: SFP, concept: FS.SFP.PROVISIONS }
+    detail: { context: DISC.PROVISIONS, concept: DISC.PROVISIONS.CLOSING, axis: AXIS.PROVISION_TYPE_DOC }
+    check: "face.amount = SUM(detail.amount by axis)"
+    severity: WARNING
+
+ic_decomposition:
+  - name: revenue_ic
+    face_concept: FS.PNL.REVENUE
+    external_concept: DISC.SEGMENTS.EXTERNAL_REVENUE
+    ic_concept: DISC.SEGMENTS.INTERSEGMENT_REVENUE
+    check: "face = SUM(external) + SUM(ic_post_elimination)"
+    note: "IC post elimination should be zero for clean consolidation"
+
+  - name: trade_receivables_ic
+    face_concept: FS.SFP.TRADE_RECEIVABLES
+    ic_concept: FS.SFP.RELATED_PARTY_RECEIVABLES
+    check: "if ic exists, face should be decomposable into external + ic"
+
+  - name: trade_payables_ic
+    face_concept: FS.SFP.TRADE_PAYABLES
+    ic_concept: FS.SFP.RELATED_PARTY_PAYABLES
+    check: "if ic exists, face should be decomposable into external + ic"
+
+summation_trees:
+  - parent: FS.SFP.TOTAL_ASSETS
+    children: [FS.SFP.NON_CURRENT_ASSETS, FS.SFP.CURRENT_ASSETS]
+    partial: true
+
+  - parent: FS.SFP.TOTAL_EQUITY_AND_LIABILITIES
+    children: [FS.SFP.TOTAL_EQUITY, FS.SFP.NON_CURRENT_LIABILITIES, FS.SFP.CURRENT_LIABILITIES]
+    partial: true
+
+  - parent: FS.PNL.GROSS_PROFIT
+    children: [FS.PNL.REVENUE, FS.PNL.COST_OF_SALES]
+
+  - parent: FS.PNL.NET_PROFIT
+    children: [FS.PNL.PROFIT_BEFORE_TAX, FS.PNL.INCOME_TAX_EXPENSE]
+
+  - parent: FS.OCI.TOTAL_COMPREHENSIVE_INCOME
+    children: [FS.PNL.NET_PROFIT, FS.OCI.TOTAL_OCI]
+
+  - parent: FS.CFS.NET_CHANGE_CASH
+    children: [FS.CFS.NET_CASH_OPERATING, FS.CFS.NET_CASH_INVESTING, FS.CFS.NET_CASH_FINANCING]
+    partial: true
+
+  - parent: FS.CFS.CASH_CLOSING
+    children: [FS.CFS.CASH_OPENING, FS.CFS.NET_CHANGE_CASH, FS.CFS.FX_EFFECT_ON_CASH]
+    partial: true

@@ -1,0 +1,130 @@
+# FOBE Structural Constraints
+# Every (context, concept) pair must be valid per this matrix.
+# Every fact must satisfy its concept's anomaly rules.
+# Violations are structural errors, not warnings.
+
+context_rules:
+  PNL:
+    eligible: ["FS.PNL.*"]
+    forbidden: ["FS.SFP.*", "FS.OCI.*", "FS.CFS.*", "FS.SOCIE.*"]
+    description: "Income statement — only P&L concepts"
+
+  SFP:
+    eligible: ["FS.SFP.*"]
+    forbidden: ["FS.PNL.*", "FS.CFS.*", "FS.OCI.*"]
+    description: "Balance sheet — only SFP concepts"
+
+  OCI:
+    eligible: ["FS.OCI.*"]
+    forbidden:
+      - "FS.PNL.REVENUE"
+      - "FS.PNL.COST_OF_SALES"
+      - "FS.PNL.GROSS_PROFIT"
+      - "FS.PNL.OPERATING_PROFIT"
+      - "FS.PNL.EBITDA"
+      - "FS.PNL.PROFIT_BEFORE_TAX"
+      - "FS.PNL.INCOME_TAX_EXPENSE"
+    description: "OCI — only OCI concepts. PNL-structure rows indicate misclassification."
+
+  CFS:
+    eligible: ["FS.CFS.*"]
+    forbidden: ["FS.SFP.*", "FS.OCI.*", "FS.SOCIE.*"]
+    description: "Cash flow statement — only CFS concepts"
+
+  SOCIE:
+    eligible: ["FS.SOCIE.*"]
+    description: "Changes in equity — SOCIE concepts (movements + balances)"
+
+  DISC.PPE:
+    eligible: ["DISC.PPE.*"]
+  DISC.INTANGIBLES:
+    eligible: ["DISC.INTANGIBLES.*"]
+  DISC.GOODWILL:
+    eligible: ["DISC.GOODWILL.*"]
+  DISC.TAX:
+    eligible: ["DISC.TAX.*"]
+  DISC.LEASES:
+    eligible: ["DISC.LEASES.*"]
+  DISC.SEGMENTS:
+    eligible: ["DISC.SEGMENTS.*"]
+  DISC.REVENUE:
+    eligible: ["DISC.REVENUE.*"]
+  DISC.PROVISIONS:
+    eligible: ["DISC.PROVISIONS.*"]
+  DISC.EMPLOYEE_BENEFITS:
+    eligible: ["DISC.EMPLOYEE_BENEFITS.*"]
+  DISC.BORROWINGS:
+    eligible: ["DISC.BORROWINGS.*"]
+  DISC.BCA:
+    eligible: ["DISC.BCA.*"]
+  DISC.FAIR_VALUE:
+    eligible: ["DISC.FAIR_VALUE.*"]
+  DISC.EPS:
+    eligible: ["DISC.EPS.*"]
+  DISC.HEDGE:
+    eligible: ["DISC.HEDGE.*"]
+  DISC.RELATED_PARTIES:
+    eligible: ["DISC.RELATED_PARTIES.*"]
+  DISC.FIN_INST:
+    eligible: ["DISC.FIN_INST.*"]
+  DISC.INVENTORY:
+    eligible: ["DISC.INVENTORY.*"]
+  DISC.CONTINGENCIES:
+    eligible: ["DISC.CONTINGENCIES.*"]
+  DISC.AUDITOR:
+    eligible: ["DISC.AUDITOR.*"]
+  DISC.PERSONNEL:
+    eligible: ["DISC.PERSONNEL.*"]
+
+  # Special contexts
+  DISC.ASSOCIATES:
+    eligible: ["FS.PNL.*", "FS.SFP.*"]
+    provenance: ASSOCIATE_OWN
+    description: >
+      Associate/JV summarised financial information (IAS 28).
+      PNL and SFP concepts are valid but amounts are the ASSOCIATE'S,
+      not the group's. Excluded from group cross-references.
+
+  DISC.SEGMENTS_ENTITY:
+    eligible: ["FS.PNL.*", "FS.SFP.*"]
+    provenance: SEGMENT_COMPONENT
+    description: >
+      Segment-level P&L and SFP data. Amounts are per-segment,
+      must sum to group totals (with reconciling items).
+
+# ── Anomaly rules (per concept family) ───────────────────────
+anomaly_rules:
+  sign_rules:
+    - concepts: ["FS.PNL.REVENUE", "FS.PNL.OTHER_INCOME", "FS.PNL.FINANCE_INCOME", "FS.PNL.DIVIDEND_INCOME"]
+      rule: "amount < 0"
+      message: "Credit-balance P&L items should be negative (Cr-)"
+      severity: ERROR
+
+    - concepts: ["FS.PNL.COST_OF_SALES", "FS.PNL.STAFF_COSTS", "FS.PNL.MATERIAL_COSTS", "FS.PNL.DEPRECIATION_AMORTISATION", "FS.PNL.OTHER_EXPENSES", "FS.PNL.FINANCE_COSTS", "FS.PNL.INCOME_TAX_EXPENSE"]
+      rule: "amount > 0"
+      message: "Debit-balance P&L items should be positive (Dr+)"
+      severity: ERROR
+
+    - concepts: ["FS.SFP.TOTAL_ASSETS"]
+      rule: "amount > 0"
+      message: "Total assets must be positive (Dr+)"
+      severity: ERROR
+
+    - concepts: ["FS.SFP.TOTAL_EQUITY", "FS.SFP.TOTAL_EQUITY_AND_LIABILITIES"]
+      rule: "amount < 0"
+      message: "Total equity + liabilities must be negative (Cr-)"
+      severity: ERROR
+
+  reasonableness:
+    - rule: "comparative_within_range"
+      check: "abs(current - comparative) / max(abs(comparative), 1) < 2.0"
+      message: "Current period differs from comparative by more than 200%"
+      severity: WARNING
+
+  # Associate/JV detection heuristic
+  table_classification:
+    - rule: "associate_summary_detection"
+      condition: "table.row_count <= 8 AND has_label('revenue') AND has_label('total assets')"
+      message: "Small table with PNL + SFP structure — likely IAS 28 associate summary, not a primary statement"
+      severity: WARNING
+      suggested_context: "DISC.ASSOCIATES"
