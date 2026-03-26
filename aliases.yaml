@@ -1012,3 +1012,262 @@ aliases:
     - investment result
     - kapitalanlageergebnis
     - anlageergebnis
+
+  # ── Rollforward labels (context-dependent) ──
+  # These labels appear across PPE, intangibles, goodwill, provisions, leases.
+  # Disambiguation relies on valid_contexts on the concept.
+
+  DISC.PPE.COST_OPENING:
+    - balance at 1 january
+    - balance at beginning of year
+    - as at 1/1
+    - stand 1.1.
+    - anfangsbestand
+    - opening balance
+  DISC.PPE.COST_ADDITIONS:
+    - additions
+    - zugänge
+    - zugang
+  DISC.PPE.COST_DISPOSALS:
+    - disposals
+    - abgänge
+    - abgang
+  DISC.PPE.COST_BCA:
+    - acquisitions through business combinations
+    - change in the scope of consolidation
+    - changes in the scope of consolidation
+    - konsolidierungskreisänderungen
+  DISC.PPE.COST_FX_EFFECT:
+    - currency translation
+    - currency translation and other
+    - effect of movements in exchange rates
+    - währungsumrechnung
+  DISC.PPE.COST_CLOSING:
+    - balance at 31 december
+    - balance at end of year
+    - as at 12/31
+    - stand 31.12.
+    - endbestand
+    - closing balance
+  DISC.PPE.COST_RECLASS:
+    - reclassifications
+    - transfers
+    - reclassification
+    - umbuchungen
+    - umgliederungen
+  DISC.PPE.ACCUM_DEPR_OPENING:
+    - accumulated depreciation at beginning
+  DISC.PPE.ACCUM_DEPR_CHARGE:
+    - depreciation
+    - depreciation charge
+    - abschreibungen
+    - planmäßige abschreibung
+  DISC.PPE.ACCUM_DEPR_DISPOSALS:
+    - depreciation on disposals
+  DISC.PPE.ACCUM_DEPR_CLOSING:
+    - accumulated depreciation at end
+  DISC.PPE.CARRYING_AMOUNT:
+    - carrying amount
+    - net book value
+    - buchwert
+    - restbuchwert
+  DISC.PPE.IMPAIRMENT:
+    - impairment
+    - impairment losses
+    - wertminderung
+    - wertminderungen
+  DISC.PPE.REVERSAL_IMPAIRMENT:
+    - reversal of impairment
+    - reversal of impairments
+    - wertaufholung
+    - zuschreibung
+
+  DISC.INTANGIBLES.COST_OPENING:
+    - balance at 1 january
+    - opening balance
+    - anfangsbestand
+  DISC.INTANGIBLES.COST_ADDITIONS_ACQUIRED:
+    - additions
+    - separately acquired
+    - zugänge
+  DISC.INTANGIBLES.COST_DISPOSALS:
+    - disposals
+    - abgänge
+  DISC.INTANGIBLES.COST_FX_EFFECT:
+    - currency translation
+    - währungsumrechnung
+  DISC.INTANGIBLES.COST_CLOSING:
+    - balance at 31 december
+    - closing balance
+    - endbestand
+  DISC.INTANGIBLES.CARRYING_AMOUNT:
+    - carrying amount
+    - buchwert
+
+  DISC.GOODWILL.COST_OPENING:
+    - balance at 1 january
+    - opening balance
+  DISC.GOODWILL.COST_BCA:
+    - acquisitions through business combinations
+    - business combinations
+  DISC.GOODWILL.COST_DISPOSALS:
+    - disposals
+    - deconsolidation
+  DISC.GOODWILL.COST_FX_EFFECT:
+    - currency translation
+    - effect of movements in exchange rates
+  DISC.GOODWILL.COST_CLOSING:
+    - balance at 31 december
+    - closing balance
+  DISC.GOODWILL.CARRYING_AMOUNT:
+    - carrying amount
+    - net book value
+
+  DISC.PROVISIONS.OPENING:
+    - balance at 1 january
+    - opening balance
+    - anfangsbestand
+    - stand 1.1.
+  DISC.PROVISIONS.ADDITIONS:
+    - additions
+    - provisions made
+    - zuführung
+    - zuführungen
+    - dotierung
+  DISC.PROVISIONS.UTILISED:
+    - amounts utilised
+    - utilised
+    - used
+    - verbrauch
+    - inanspruchnahme
+  DISC.PROVISIONS.REVERSED:
+    - amounts reversed
+    - reversed
+    - released
+    - auflösung
+    - auflösungen
+  DISC.PROVISIONS.CLOSING:
+    - balance at 31 december
+    - closing balance
+    - endbestand
+    - stand 31.12.
+
+  DISC.LEASES.ROU_OPENING:
+    - balance at 1 january
+    - opening balance
+  DISC.LEASES.ROU_ADDITIONS:
+    - additions
+    - new leases
+    - zugänge
+  DISC.LEASES.ROU_DEPRECIATION:
+    - depreciation
+    - depreciation charge
+    - abschreibungen
+  DISC.LEASES.ROU_CLOSING:
+    - balance at 31 december
+    - closing balance
+
+  DISC.INV_PROP.COST_OPENING:
+    - balance at 1 january
+    - opening balance
+  DISC.INV_PROP.COST_ADDITIONS:
+    - additions
+    - capital expenditure
+    - subsequent expenditure
+  DISC.INV_PROP.COST_DISPOSALS:
+    - disposals
+  DISC.INV_PROP.COST_CLOSING:
+    - balance at 31 december
+    - closing balance
+  DISC.INV_PROP.CARRYING_AMOUNT:
+    - carrying amount
+    - fair value
+
+  DISC.BORROWINGS.OPENING:
+    - balance at 1 january
+    - opening balance
+  DISC.BORROWINGS.CLOSING:
+    - balance at 31 december
+    - closing balance
+
+  # ── German UGB labels ──
+  # Gesamtkostenverfahren PNL (§231 UGB)
+  FS.PNL.REVENUE:
+    - umsatzerlöse
+    - erlöse
+    - nettoumsatz
+  FS.PNL.OTHER_INCOME:
+    - sonstige betriebliche erträge
+    - sonstige betriebserträge
+  FS.PNL.MATERIAL_COSTS:
+    - materialaufwand
+    - aufwendungen für material und sonstige bezogene herstellungsleistungen
+    - aufwand für material
+    - cost of materials and purchased services
+  FS.PNL.STAFF_COSTS:
+    - personalaufwand
+    - personalkosten
+    - employee expenses
+    - a) gehälter
+  FS.PNL.DEPRECIATION_AMORTISATION:
+    - abschreibungen
+    - abschreibungen auf immaterielle vermögensgegenstände des anlagevermögens und sachanlagen
+    - depreciation and amortisation
+  FS.PNL.OTHER_EXPENSES:
+    - sonstige betriebliche aufwendungen
+    - sonstige betriebsaufwendungen
+  FS.PNL.OPERATING_PROFIT:
+    - betriebsergebnis
+    - earnings before interest and taxes (ebit)
+    - ebit
+  FS.PNL.PROFIT_BEFORE_TAX:
+    - ergebnis vor steuern
+    - ergebnis vor ertragsteuern
+    - earnings before taxes (ebt)
+  FS.PNL.NET_PROFIT:
+    - jahresüberschuss
+    - jahresfehlbetrag
+    - net income after taxes
+  FS.PNL.PROFIT_FOR_PERIOD:
+    - ergebnis nach steuern
+    - result for the period
+    - net profit
+
+  # UGB SFP (§224)
+  FS.SFP.TOTAL_ASSETS:
+    - summe aktiva
+    - bilanzsumme
+  FS.SFP.TOTAL_EQUITY_AND_LIABILITIES:
+    - summe passiva
+  FS.SFP.NON_CURRENT_ASSETS:
+    - anlagevermögen
+  FS.SFP.CURRENT_ASSETS:
+    - umlaufvermögen
+  FS.SFP.INTANGIBLE_ASSETS:
+    - immaterielle vermögensgegenstände
+  FS.SFP.PPE_NET:
+    - sachanlagen
+  FS.SFP.INVESTMENT_IN_SUB:
+    - anteile an verbundenen unternehmen
+    - beteiligungen an verbundenen unternehmen
+  FS.SFP.TRADE_RECEIVABLES:
+    - forderungen aus lieferungen und leistungen
+    - forderungen und sonstige vermögensgegenstände
+  FS.SFP.PROVISIONS:
+    - rückstellungen
+  FS.SFP.LOANS_BORROWINGS:
+    - verbindlichkeiten gegenüber kreditinstituten
+    - verbindlichkeiten
+  FS.SFP.TRADE_PAYABLES:
+    - verbindlichkeiten aus lieferungen und leistungen
+  FS.SFP.TOTAL_EQUITY:
+    - eigenkapital
+  FS.SFP.SHARE_CAPITAL:
+    - stammkapital
+    - grundkapital
+    - gezeichnetes kapital
+  FS.SFP.RETAINED_EARNINGS:
+    - bilanzgewinn
+    - bilanzverlust
+    - gewinnvortrag
+    - verlustvortrag

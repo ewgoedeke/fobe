@@ -222,9 +222,26 @@ def _build_label_index(ontology_root: str) -> dict[str, tuple[str, str]]:
     return index
 
 
-# Module-level label index — built lazily on first use
+# Module-level caches — built lazily on first use
 _LABEL_INDEX: Optional[dict[str, tuple[str, str]]] = None
 _LABEL_INDEX_ROOT: Optional[str] = None
+_CONCEPTS_META_CACHE: Optional[dict[str, dict]] = None
+_CONCEPTS_META_ROOT: Optional[str] = None
+
+
+def _get_concepts_meta(ontology_root: str) -> dict[str, dict]:
+    """Get concept metadata (valid_contexts etc.) keyed by concept_id."""
+    global _CONCEPTS_META_CACHE, _CONCEPTS_META_ROOT
+    if _CONCEPTS_META_CACHE is None or _CONCEPTS_META_ROOT != ontology_root:
+        raw = load_concepts(ontology_root)
+        # Convert ConceptMeta objects to dicts with valid_contexts
+        _CONCEPTS_META_CACHE = {}
+        for cid, meta in raw.items():
+            _CONCEPTS_META_CACHE[cid] = {
+                "valid_contexts": meta.valid_contexts,
+            }
+        _CONCEPTS_META_ROOT = ontology_root
+    return _CONCEPTS_META_CACHE
 
 
 def _get_label_index(ontology_root: str) -> dict[str, tuple[str, str]]:
@@ -263,9 +280,14 @@ def _match_label(label: str, table_context: Optional[str] = None, ontology_root:
     # (e.g., "Total revenues" in PNL is the face line, not DISC.SEGMENTS)
     if table_context in PRIMARY_STATEMENTS and label_ctx.startswith("DISC."):
         return None
-    # Don't match PPE rollforward concepts in non-PPE tables
-    if label_ctx == "DISC.PPE" and table_context and table_context != "DISC.PPE":
-        return None
+    # For disclosure concepts with valid_contexts, only match in the right table
+    if label_ctx.startswith("DISC.") and table_context:
+        # Check if concept has valid_contexts declared
+        concepts_meta = _get_concepts_meta(ontology_root or _LABEL_INDEX_ROOT or "")
+        meta = concepts_meta.get(concept_id)
+        if meta and meta.get("valid_contexts"):
+            if table_context not in meta["valid_contexts"]:
+                return None
 
     return match
 

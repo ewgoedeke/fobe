@@ -1,17 +1,17 @@
 # DISC.INTANGIBLES.* — Intangible Assets Rollforward (IAS 38)
 concepts:
-  - { id: DISC.INTANGIBLES.COST_OPENING, label: "Cost — opening balance", period_type: instant }
-  - { id: DISC.INTANGIBLES.COST_ADDITIONS_INTERNAL, label: "Cost — internally developed", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_ADDITIONS_ACQUIRED, label: "Cost — separately acquired", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_BCA, label: "Cost — business combinations", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_GOVT_GRANT, label: "Cost — government grant", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_DISPOSALS, label: "Cost — disposals", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_FX_EFFECT, label: "Cost — FX effect", period_type: duration }
-  - { id: DISC.INTANGIBLES.COST_CLOSING, label: "Cost — closing balance", period_type: instant, is_total: true }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_OPENING, label: "Accumulated amortisation — opening", period_type: instant }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_CHARGE, label: "Accumulated amortisation — charge", period_type: duration }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_IMPAIRMENT, label: "Accumulated amortisation — impairment", period_type: duration }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_IMPAIRMENT_REVERSAL, label: "Accumulated amortisation — reversal", period_type: duration }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_FX_EFFECT, label: "Accumulated amortisation — FX effect", period_type: duration }
-  - { id: DISC.INTANGIBLES.ACCUM_AMORT_CLOSING, label: "Accumulated amortisation — closing", period_type: instant, is_total: true }
-  - { id: DISC.INTANGIBLES.CARRYING_AMOUNT, label: "Carrying amount (net)", period_type: instant, is_total: true }
+  - { id: DISC.INTANGIBLES.COST_OPENING, label: "Cost — opening balance", period_type: instant, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_ADDITIONS_INTERNAL, label: "Cost — internally developed", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_ADDITIONS_ACQUIRED, label: "Cost — separately acquired", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_BCA, label: "Cost — business combinations", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_GOVT_GRANT, label: "Cost — government grant", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_DISPOSALS, label: "Cost — disposals", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_FX_EFFECT, label: "Cost — FX effect", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.COST_CLOSING, label: "Cost — closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_OPENING, label: "Accumulated amortisation — opening", period_type: instant, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_CHARGE, label: "Accumulated amortisation — charge", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_IMPAIRMENT, label: "Accumulated amortisation — impairment", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_IMPAIRMENT_REVERSAL, label: "Accumulated amortisation — reversal", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_FX_EFFECT, label: "Accumulated amortisation — FX effect", period_type: duration, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.ACCUM_AMORT_CLOSING, label: "Accumulated amortisation — closing", period_type: instant, is_total: true, valid_contexts: [DISC.INTANGIBLES] }
+  - { id: DISC.INTANGIBLES.CARRYING_AMOUNT, label: "Carrying amount (net)", period_type: instant, is_total: true, valid_contexts: [DISC.INTANGIBLES] }

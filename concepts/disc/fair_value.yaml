@@ -1,18 +1,18 @@
 # DISC.FAIR_VALUE.* — Fair Value Measurement (IFRS 13)
 # Cross-cut by AXIS.FV_LEVEL (Level 1/2/3)
 concepts:
-  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL1, label: "Assets measured at fair value — Level 1", period_type: instant }
-  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL2, label: "Assets measured at fair value — Level 2", period_type: instant }
-  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL3, label: "Assets measured at fair value — Level 3", period_type: instant }
-  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL1, label: "Liabilities at fair value — Level 1", period_type: instant }
-  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL2, label: "Liabilities at fair value — Level 2", period_type: instant }
-  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL3, label: "Liabilities at fair value — Level 3", period_type: instant }
+  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL1, label: "Assets measured at fair value — Level 1", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL2, label: "Assets measured at fair value — Level 2", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.ASSETS_LEVEL3, label: "Assets measured at fair value — Level 3", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL1, label: "Liabilities at fair value — Level 1", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL2, label: "Liabilities at fair value — Level 2", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.LIABILITIES_LEVEL3, label: "Liabilities at fair value — Level 3", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
   # Level 3 reconciliation
-  - { id: DISC.FAIR_VALUE.L3_OPENING, label: "Level 3 — opening balance", period_type: instant }
-  - { id: DISC.FAIR_VALUE.L3_GAINS_LOSSES_PNL, label: "Level 3 — gains/losses in P&L", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_GAINS_LOSSES_OCI, label: "Level 3 — gains/losses in OCI", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_PURCHASES, label: "Level 3 — purchases", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_SALES, label: "Level 3 — sales", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_TRANSFERS_IN, label: "Level 3 — transfers in", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_TRANSFERS_OUT, label: "Level 3 — transfers out", period_type: duration }
-  - { id: DISC.FAIR_VALUE.L3_CLOSING, label: "Level 3 — closing balance", period_type: instant, is_total: true }
+  - { id: DISC.FAIR_VALUE.L3_OPENING, label: "Level 3 — opening balance", period_type: instant, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_GAINS_LOSSES_PNL, label: "Level 3 — gains/losses in P&L", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_GAINS_LOSSES_OCI, label: "Level 3 — gains/losses in OCI", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_PURCHASES, label: "Level 3 — purchases", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_SALES, label: "Level 3 — sales", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_TRANSFERS_IN, label: "Level 3 — transfers in", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_TRANSFERS_OUT, label: "Level 3 — transfers out", period_type: duration, valid_contexts: [DISC.FAIR_VALUE] }
+  - { id: DISC.FAIR_VALUE.L3_CLOSING, label: "Level 3 — closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.FAIR_VALUE] }

@@ -2,19 +2,19 @@
 # UGB mandates a 5-part split per §231 Abs 2 Z6
 concepts:
   # UGB mandatory split (§231 Z6a-c)
-  - { id: DISC.PERSONNEL.WAGES, label: "Wages (Löhne)", period_type: duration, ref: "§231 Z6a" }
-  - { id: DISC.PERSONNEL.SALARIES, label: "Salaries (Gehälter)", period_type: duration, ref: "§231 Z6a" }
-  - { id: DISC.PERSONNEL.SEVERANCE_EXPENSE, label: "Severance expense (Abfertigungen)", period_type: duration, ref: "§231 Z6b" }
-  - { id: DISC.PERSONNEL.PENSION_EXPENSE, label: "Pension expense (Pensionen)", period_type: duration, ref: "§231 Z6b" }
-  - { id: DISC.PERSONNEL.MVK_EXPENSE, label: "Employee fund contributions (MVK/BV-Kasse)", period_type: duration, ref: "§231 Z6b" }
-  - { id: DISC.PERSONNEL.STATUTORY_SOCIAL_CHARGES, label: "Statutory social charges", period_type: duration, ref: "§231 Z6c" }
-  - { id: DISC.PERSONNEL.VOLUNTARY_SOCIAL, label: "Voluntary social costs", period_type: duration, ref: "§231 Z6c" }
-  - { id: DISC.PERSONNEL.TOTAL, label: "Total personnel expense", period_type: duration, is_total: true }
+  - { id: DISC.PERSONNEL.WAGES, label: "Wages (Löhne)", period_type: duration, ref: "§231 Z6a", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.SALARIES, label: "Salaries (Gehälter)", period_type: duration, ref: "§231 Z6a", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.SEVERANCE_EXPENSE, label: "Severance expense (Abfertigungen)", period_type: duration, ref: "§231 Z6b", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.PENSION_EXPENSE, label: "Pension expense (Pensionen)", period_type: duration, ref: "§231 Z6b", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.MVK_EXPENSE, label: "Employee fund contributions (MVK/BV-Kasse)", period_type: duration, ref: "§231 Z6b", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.STATUTORY_SOCIAL_CHARGES, label: "Statutory social charges", period_type: duration, ref: "§231 Z6c", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.VOLUNTARY_SOCIAL, label: "Voluntary social costs", period_type: duration, ref: "§231 Z6c", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.TOTAL, label: "Total personnel expense", period_type: duration, is_total: true, valid_contexts: [DISC.PERSONNEL] }
   # Headcount
-  - { id: DISC.PERSONNEL.HEADCOUNT_AVG, label: "Average number of employees", period_type: duration, unit_type: dimensionless }
-  - { id: DISC.PERSONNEL.HEADCOUNT_BLUE_COLLAR, label: "Average blue-collar employees", period_type: duration, unit_type: dimensionless }
-  - { id: DISC.PERSONNEL.HEADCOUNT_WHITE_COLLAR, label: "Average white-collar employees", period_type: duration, unit_type: dimensionless }
+  - { id: DISC.PERSONNEL.HEADCOUNT_AVG, label: "Average number of employees", period_type: duration, unit_type: dimensionless, valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.HEADCOUNT_BLUE_COLLAR, label: "Average blue-collar employees", period_type: duration, unit_type: dimensionless, valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.HEADCOUNT_WHITE_COLLAR, label: "Average white-collar employees", period_type: duration, unit_type: dimensionless, valid_contexts: [DISC.PERSONNEL] }
   # Management compensation (§237 Z8 UGB / IAS 24)
-  - { id: DISC.PERSONNEL.MGMT_BOARD_COMPENSATION, label: "Management board compensation (Vorstand/GF)", period_type: duration, ref: "§237 Z8" }
-  - { id: DISC.PERSONNEL.SUPERVISORY_BOARD_COMPENSATION, label: "Supervisory board compensation (Aufsichtsrat)", period_type: duration, ref: "§237 Z8" }
-  - { id: DISC.PERSONNEL.FORMER_MGMT_PENSIONS, label: "Pensions to former management", period_type: duration, ref: "§237 Z8" }
+  - { id: DISC.PERSONNEL.MGMT_BOARD_COMPENSATION, label: "Management board compensation (Vorstand/GF)", period_type: duration, ref: "§237 Z8", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.SUPERVISORY_BOARD_COMPENSATION, label: "Supervisory board compensation (Aufsichtsrat)", period_type: duration, ref: "§237 Z8", valid_contexts: [DISC.PERSONNEL] }
+  - { id: DISC.PERSONNEL.FORMER_MGMT_PENSIONS, label: "Pensions to former management", period_type: duration, ref: "§237 Z8", valid_contexts: [DISC.PERSONNEL] }

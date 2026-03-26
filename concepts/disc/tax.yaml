@@ -3,21 +3,21 @@
 
 concepts:
   # Tax expense breakdown
-  - { id: DISC.TAX.CURRENT_CORPORATE, label: "Current corporate income tax", period_type: duration }
-  - { id: DISC.TAX.CURRENT_PILLAR2, label: "Global minimum top-up tax (Pillar Two)", period_type: duration }
-  - { id: DISC.TAX.CURRENT_PRIOR_YEAR_ADJ, label: "Changes in estimates related to prior years", period_type: duration }
-  - { id: DISC.TAX.CURRENT_TOTAL, label: "Total current tax expense", period_type: duration, is_total: true }
-  - { id: DISC.TAX.DEFERRED_TEMP_DIFF, label: "Deferred — origination/reversal of temporary differences", period_type: duration }
-  - { id: DISC.TAX.DEFERRED_RATE_CHANGE, label: "Deferred — reduction in tax rate", period_type: duration }
-  - { id: DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES, label: "Deferred — recognition of previously unrecognised tax losses", period_type: duration }
-  - { id: DISC.TAX.DEFERRED_TOTAL, label: "Total deferred tax expense", period_type: duration, is_total: true }
-  - { id: DISC.TAX.TOTAL_CONTINUING_OPS, label: "Tax expense on continuing operations", period_type: duration, is_total: true }
+  - { id: DISC.TAX.CURRENT_CORPORATE, label: "Current corporate income tax", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.CURRENT_PILLAR2, label: "Global minimum top-up tax (Pillar Two)", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.CURRENT_PRIOR_YEAR_ADJ, label: "Changes in estimates related to prior years", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.CURRENT_TOTAL, label: "Total current tax expense", period_type: duration, is_total: true, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.DEFERRED_TEMP_DIFF, label: "Deferred — origination/reversal of temporary differences", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.DEFERRED_RATE_CHANGE, label: "Deferred — reduction in tax rate", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES, label: "Deferred — recognition of previously unrecognised tax losses", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.DEFERRED_TOTAL, label: "Total deferred tax expense", period_type: duration, is_total: true, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.TOTAL_CONTINUING_OPS, label: "Tax expense on continuing operations", period_type: duration, is_total: true, valid_contexts: [DISC.TAX] }
   # Tax rate reconciliation
-  - { id: DISC.TAX.RECON_PROFIT_BEFORE_TAX, label: "Profit before tax from continuing operations", period_type: duration }
-  - { id: DISC.TAX.RECON_AT_DOMESTIC_RATE, label: "Tax at domestic rate", period_type: duration }
-  - { id: DISC.TAX.RECON_FOREIGN_RATE_DIFF, label: "Effect of tax rates in foreign jurisdictions", period_type: duration }
-  - { id: DISC.TAX.RECON_NON_DEDUCTIBLE, label: "Non-deductible expenses", period_type: duration }
-  - { id: DISC.TAX.RECON_TAX_EXEMPT, label: "Tax-exempt income", period_type: duration }
-  - { id: DISC.TAX.RECON_TAX_INCENTIVES, label: "Tax incentives", period_type: duration }
-  - { id: DISC.TAX.RECON_PRIOR_YEAR_ADJ, label: "Prior year adjustments", period_type: duration }
-  - { id: DISC.TAX.RECON_TOTAL, label: "Effective tax expense", period_type: duration, is_total: true }
+  - { id: DISC.TAX.RECON_PROFIT_BEFORE_TAX, label: "Profit before tax from continuing operations", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_AT_DOMESTIC_RATE, label: "Tax at domestic rate", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_FOREIGN_RATE_DIFF, label: "Effect of tax rates in foreign jurisdictions", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_NON_DEDUCTIBLE, label: "Non-deductible expenses", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_TAX_EXEMPT, label: "Tax-exempt income", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_TAX_INCENTIVES, label: "Tax incentives", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_PRIOR_YEAR_ADJ, label: "Prior year adjustments", period_type: duration, valid_contexts: [DISC.TAX] }
+  - { id: DISC.TAX.RECON_TOTAL, label: "Effective tax expense", period_type: duration, is_total: true, valid_contexts: [DISC.TAX] }

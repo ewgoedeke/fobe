@@ -1,19 +1,19 @@
 # DISC.BORROWINGS.* — Borrowings & Debt (IFRS 7, IAS 1)
 # Cross-cut by AXIS.MATURITY_BUCKET_STD
 concepts:
-  - { id: DISC.BORROWINGS.BANK_LOANS, label: "Bank loans", period_type: instant }
-  - { id: DISC.BORROWINGS.BONDS_ISSUED, label: "Bonds and notes issued", period_type: instant }
-  - { id: DISC.BORROWINGS.LEASE_LIABILITIES, label: "Lease liabilities (IFRS 16)", period_type: instant }
-  - { id: DISC.BORROWINGS.OTHER_BORROWINGS, label: "Other borrowings", period_type: instant }
-  - { id: DISC.BORROWINGS.TOTAL, label: "Total borrowings", period_type: instant, is_total: true }
+  - { id: DISC.BORROWINGS.BANK_LOANS, label: "Bank loans", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.BONDS_ISSUED, label: "Bonds and notes issued", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.LEASE_LIABILITIES, label: "Lease liabilities (IFRS 16)", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.OTHER_BORROWINGS, label: "Other borrowings", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.TOTAL, label: "Total borrowings", period_type: instant, is_total: true, valid_contexts: [DISC.BORROWINGS] }
   # Maturity profile
-  - { id: DISC.BORROWINGS.MATURITY_WITHIN_1Y, label: "Due within 1 year", period_type: instant }
-  - { id: DISC.BORROWINGS.MATURITY_1_TO_5Y, label: "Due 1–5 years", period_type: instant }
-  - { id: DISC.BORROWINGS.MATURITY_OVER_5Y, label: "Due over 5 years", period_type: instant }
+  - { id: DISC.BORROWINGS.MATURITY_WITHIN_1Y, label: "Due within 1 year", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.MATURITY_1_TO_5Y, label: "Due 1–5 years", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.MATURITY_OVER_5Y, label: "Due over 5 years", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
   # Reconciliation
-  - { id: DISC.BORROWINGS.OPENING, label: "Opening balance", period_type: instant }
-  - { id: DISC.BORROWINGS.PROCEEDS, label: "Proceeds from borrowings", period_type: duration }
-  - { id: DISC.BORROWINGS.REPAYMENTS, label: "Repayments", period_type: duration }
-  - { id: DISC.BORROWINGS.INTEREST_ACCRUAL, label: "Interest accrued", period_type: duration }
-  - { id: DISC.BORROWINGS.FX_EFFECT, label: "FX effect", period_type: duration }
-  - { id: DISC.BORROWINGS.CLOSING, label: "Closing balance", period_type: instant, is_total: true }
+  - { id: DISC.BORROWINGS.OPENING, label: "Opening balance", period_type: instant, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.PROCEEDS, label: "Proceeds from borrowings", period_type: duration, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.REPAYMENTS, label: "Repayments", period_type: duration, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.INTEREST_ACCRUAL, label: "Interest accrued", period_type: duration, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.FX_EFFECT, label: "FX effect", period_type: duration, valid_contexts: [DISC.BORROWINGS] }
+  - { id: DISC.BORROWINGS.CLOSING, label: "Closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.BORROWINGS] }

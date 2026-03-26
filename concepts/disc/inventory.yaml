@@ -1,9 +1,9 @@
 # DISC.INVENTORY.* — Inventories (IAS 2)
 concepts:
-  - { id: DISC.INVENTORY.RAW_MATERIALS, label: "Raw materials and consumables", period_type: instant }
-  - { id: DISC.INVENTORY.WORK_IN_PROGRESS, label: "Work in progress", period_type: instant }
-  - { id: DISC.INVENTORY.FINISHED_GOODS, label: "Finished goods and merchandise", period_type: instant }
-  - { id: DISC.INVENTORY.TOTAL, label: "Total inventories", period_type: instant, is_total: true }
-  - { id: DISC.INVENTORY.WRITE_DOWN, label: "Inventory write-down to NRV", period_type: duration }
-  - { id: DISC.INVENTORY.REVERSAL_WRITE_DOWN, label: "Reversal of previous write-down", period_type: duration }
-  - { id: DISC.INVENTORY.COST_OF_INVENTORIES_RECOGNISED, label: "Cost of inventories recognised as expense", period_type: duration }
+  - { id: DISC.INVENTORY.RAW_MATERIALS, label: "Raw materials and consumables", period_type: instant, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.WORK_IN_PROGRESS, label: "Work in progress", period_type: instant, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.FINISHED_GOODS, label: "Finished goods and merchandise", period_type: instant, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.TOTAL, label: "Total inventories", period_type: instant, is_total: true, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.WRITE_DOWN, label: "Inventory write-down to NRV", period_type: duration, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.REVERSAL_WRITE_DOWN, label: "Reversal of previous write-down", period_type: duration, valid_contexts: [DISC.INVENTORIES] }
+  - { id: DISC.INVENTORY.COST_OF_INVENTORIES_RECOGNISED, label: "Cost of inventories recognised as expense", period_type: duration, valid_contexts: [DISC.INVENTORIES] }

@@ -3,22 +3,22 @@
 # Needed by: UNIQA, VIG
 concepts:
   # CSM roll-forward detail
-  - { id: DISC.INS_REG.CSM_OPENING, label: "CSM — opening balance", period_type: instant }
-  - { id: DISC.INS_REG.CSM_NEW_BUSINESS, label: "CSM — new business written", period_type: duration }
-  - { id: DISC.INS_REG.CSM_INTEREST_ACCRETION, label: "CSM — interest accretion", period_type: duration }
-  - { id: DISC.INS_REG.CSM_CHANGES_IN_ESTIMATES, label: "CSM — changes in estimates", period_type: duration }
-  - { id: DISC.INS_REG.CSM_RELEASE_TO_PNL, label: "CSM — release to profit or loss", period_type: duration }
-  - { id: DISC.INS_REG.CSM_FX_EFFECT, label: "CSM — FX effect", period_type: duration }
-  - { id: DISC.INS_REG.CSM_CLOSING, label: "CSM — closing balance", period_type: instant, is_total: true }
+  - { id: DISC.INS_REG.CSM_OPENING, label: "CSM — opening balance", period_type: instant, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_NEW_BUSINESS, label: "CSM — new business written", period_type: duration, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_INTEREST_ACCRETION, label: "CSM — interest accretion", period_type: duration, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_CHANGES_IN_ESTIMATES, label: "CSM — changes in estimates", period_type: duration, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_RELEASE_TO_PNL, label: "CSM — release to profit or loss", period_type: duration, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_FX_EFFECT, label: "CSM — FX effect", period_type: duration, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CSM_CLOSING, label: "CSM — closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.INS_REG] }
   # Liability split
-  - { id: DISC.INS_REG.LRC, label: "Liability for remaining coverage", period_type: instant }
-  - { id: DISC.INS_REG.LIC, label: "Liability for incurred claims", period_type: instant }
-  - { id: DISC.INS_REG.LOSS_COMPONENT, label: "Loss component of onerous contracts", period_type: instant }
+  - { id: DISC.INS_REG.LRC, label: "Liability for remaining coverage", period_type: instant, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.LIC, label: "Liability for incurred claims", period_type: instant, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.LOSS_COMPONENT, label: "Loss component of onerous contracts", period_type: instant, valid_contexts: [DISC.INS_REG] }
   # Regulatory (Solvency II)
-  - { id: DISC.INS_REG.SOLVENCY2_SCR_RATIO, label: "Solvency II SCR coverage ratio (%)", period_type: instant, unit_type: percentage }
-  - { id: DISC.INS_REG.SOLVENCY2_MCR_RATIO, label: "Solvency II MCR coverage ratio (%)", period_type: instant, unit_type: percentage }
-  - { id: DISC.INS_REG.OWN_FUNDS_SOLVENCY2, label: "Eligible own funds (Solvency II)", period_type: instant }
+  - { id: DISC.INS_REG.SOLVENCY2_SCR_RATIO, label: "Solvency II SCR coverage ratio (%)", period_type: instant, unit_type: percentage, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.SOLVENCY2_MCR_RATIO, label: "Solvency II MCR coverage ratio (%)", period_type: instant, unit_type: percentage, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.OWN_FUNDS_SOLVENCY2, label: "Eligible own funds (Solvency II)", period_type: instant, valid_contexts: [DISC.INS_REG] }
   # Measurement model tag
-  - { id: DISC.INS_REG.CONTRACTS_GMM, label: "Contracts measured under GMM", period_type: instant }
-  - { id: DISC.INS_REG.CONTRACTS_PAA, label: "Contracts measured under PAA", period_type: instant }
-  - { id: DISC.INS_REG.CONTRACTS_VFA, label: "Contracts measured under VFA", period_type: instant }
+  - { id: DISC.INS_REG.CONTRACTS_GMM, label: "Contracts measured under GMM", period_type: instant, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CONTRACTS_PAA, label: "Contracts measured under PAA", period_type: instant, valid_contexts: [DISC.INS_REG] }
+  - { id: DISC.INS_REG.CONTRACTS_VFA, label: "Contracts measured under VFA", period_type: instant, valid_contexts: [DISC.INS_REG] }

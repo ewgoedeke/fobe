@@ -1,7 +1,7 @@
 # DISC.AUDITOR.* — Auditor Fees Disclosure (§237 Z10 UGB / EU Audit Regulation)
 concepts:
-  - { id: DISC.AUDITOR.STATUTORY_AUDIT, label: "Statutory audit fees", period_type: duration }
-  - { id: DISC.AUDITOR.OTHER_ASSURANCE, label: "Other assurance services", period_type: duration }
-  - { id: DISC.AUDITOR.TAX_ADVISORY, label: "Tax advisory services", period_type: duration }
-  - { id: DISC.AUDITOR.OTHER_SERVICES, label: "Other non-audit services", period_type: duration }
-  - { id: DISC.AUDITOR.TOTAL, label: "Total auditor fees", period_type: duration, is_total: true }
+  - { id: DISC.AUDITOR.STATUTORY_AUDIT, label: "Statutory audit fees", period_type: duration, valid_contexts: [DISC.AUDITOR] }
+  - { id: DISC.AUDITOR.OTHER_ASSURANCE, label: "Other assurance services", period_type: duration, valid_contexts: [DISC.AUDITOR] }
+  - { id: DISC.AUDITOR.TAX_ADVISORY, label: "Tax advisory services", period_type: duration, valid_contexts: [DISC.AUDITOR] }
+  - { id: DISC.AUDITOR.OTHER_SERVICES, label: "Other non-audit services", period_type: duration, valid_contexts: [DISC.AUDITOR] }
+  - { id: DISC.AUDITOR.TOTAL, label: "Total auditor fees", period_type: duration, is_total: true, valid_contexts: [DISC.AUDITOR] }

@@ -1,13 +1,13 @@
 # DISC.OIL_GAS.* — Oil & Gas (IFRS 6, Successful Efforts)
 # Needed by: OMV
 concepts:
-  - { id: DISC.OIL_GAS.EXPLORATION_EVALUATION_ASSETS, label: "Exploration and evaluation assets (IFRS 6)", period_type: instant }
-  - { id: DISC.OIL_GAS.OIL_GAS_PROPERTIES, label: "Oil and gas development properties", period_type: instant }
-  - { id: DISC.OIL_GAS.EXPLORATION_EXPENSES, label: "Exploration expenses (dry hole costs)", period_type: duration }
-  - { id: DISC.OIL_GAS.DECOMMISSIONING_PROVISIONS, label: "Decommissioning / asset retirement provisions", period_type: instant }
-  - { id: DISC.OIL_GAS.DECOMMISSIONING_UNWINDING, label: "Unwinding of decommissioning discount", period_type: duration }
-  - { id: DISC.OIL_GAS.PRODUCTION_COSTS, label: "Production / lifting costs", period_type: duration }
-  - { id: DISC.OIL_GAS.CCS_ADJUSTMENT, label: "Current cost of supply (CCS) inventory adjustment", period_type: duration }
-  - { id: DISC.OIL_GAS.EXCISE_DUTIES, label: "Excise duties / mineral oil tax", period_type: duration }
-  - { id: DISC.OIL_GAS.PROVED_RESERVES, label: "Proved reserves (supplementary, not recognised)", period_type: instant }
-  - { id: DISC.OIL_GAS.PROBABLE_RESERVES, label: "Probable reserves (supplementary)", period_type: instant }
+  - { id: DISC.OIL_GAS.EXPLORATION_EVALUATION_ASSETS, label: "Exploration and evaluation assets (IFRS 6)", period_type: instant, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.OIL_GAS_PROPERTIES, label: "Oil and gas development properties", period_type: instant, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.EXPLORATION_EXPENSES, label: "Exploration expenses (dry hole costs)", period_type: duration, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.DECOMMISSIONING_PROVISIONS, label: "Decommissioning / asset retirement provisions", period_type: instant, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.DECOMMISSIONING_UNWINDING, label: "Unwinding of decommissioning discount", period_type: duration, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.PRODUCTION_COSTS, label: "Production / lifting costs", period_type: duration, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.CCS_ADJUSTMENT, label: "Current cost of supply (CCS) inventory adjustment", period_type: duration, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.EXCISE_DUTIES, label: "Excise duties / mineral oil tax", period_type: duration, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.PROVED_RESERVES, label: "Proved reserves (supplementary, not recognised)", period_type: instant, valid_contexts: [DISC.OIL_GAS] }
+  - { id: DISC.OIL_GAS.PROBABLE_RESERVES, label: "Probable reserves (supplementary)", period_type: instant, valid_contexts: [DISC.OIL_GAS] }
