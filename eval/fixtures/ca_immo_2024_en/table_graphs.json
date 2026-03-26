@@ -3168,14 +3168,7 @@
               "parsedValue": 13.198,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PROVISIONS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:1:16",
@@ -4312,14 +4305,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TOTAL_EQUITY_AND_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:1:32",
@@ -4386,14 +4372,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TOTAL_EQUITY_AND_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -9662,7 +9641,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.OTHER_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:6:3",
@@ -9720,14 +9705,7 @@
               "parsedValue": 5.025,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -12519,7 +12497,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.OTHER_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:11:6",
@@ -12992,14 +12976,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.BONDS_ISSUED",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:12:3",
@@ -13253,7 +13230,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.OTHER_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:12:6",
@@ -15085,14 +15068,7 @@
               "parsedValue": 715.243,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.CONTINGENCIES.GUARANTEES_GIVEN",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -16771,7 +16747,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.EXTERNAL_REVENUE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:18:3",
@@ -16944,14 +16926,7 @@
               "parsedValue": 29.466,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -17712,14 +17687,7 @@
               "parsedValue": 221.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.EMPLOYEE_BENEFITS.PA_CONTRIBUTIONS_EMPLOYER",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -22644,7 +22612,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.TOTAL_CONTINUING_OPS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -23144,14 +23118,7 @@
               "parsedValue": 3373119.02,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.INTANGIBLE_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:4",
@@ -23632,14 +23599,7 @@
               "parsedValue": 234944481.98,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:9",
@@ -23930,14 +23890,7 @@
               "parsedValue": 237403820.3,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:12",
@@ -24418,14 +24371,7 @@
               "parsedValue": 3377769945.92,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:17",
@@ -24519,14 +24465,7 @@
               "parsedValue": 3618546885.24,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.NON_CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [

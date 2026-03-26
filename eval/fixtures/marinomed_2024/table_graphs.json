@@ -1269,7 +1269,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.NON_CASH_ADJ_TOTAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:2",
@@ -2508,14 +2514,7 @@
               "parsedValue": 5808822.57,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:11",
@@ -2810,14 +2809,7 @@
               "parsedValue": 5972703.95,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.NON_CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:16",
@@ -3238,14 +3230,7 @@
               "parsedValue": 889254.82,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.INVENTORIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:23",
@@ -3420,7 +3405,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:26",
@@ -3657,14 +3648,7 @@
               "parsedValue": 6216136.26,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:30",
@@ -4301,7 +4285,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_CAPITAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:3:4",
@@ -4664,14 +4654,7 @@
               "parsedValue": 40736745.65,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.SHARE_PREMIUM",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:10",
@@ -5033,7 +5016,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RETAINED_EARNINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:3:16",
@@ -5088,14 +5077,7 @@
               "parsedValue": -12602443.28,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TOTAL_EQUITY",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:17",
@@ -5451,7 +5433,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:3:23",
@@ -7140,7 +7128,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:7",
@@ -7199,14 +7193,7 @@
               "parsedValue": 1493873.43,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:4:8",
@@ -7576,7 +7563,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:14",
@@ -7632,7 +7625,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:15",
@@ -7688,7 +7687,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:16",
@@ -7744,7 +7749,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:17",
@@ -8109,7 +8120,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:23",
@@ -8779,7 +8796,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:34",
@@ -8947,7 +8970,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:37",
@@ -15255,7 +15284,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:12:2",
@@ -15367,7 +15402,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:12:4",
@@ -17944,14 +17985,7 @@
               "parsedValue": 9058331.69,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -19043,14 +19077,7 @@
               "parsedValue": 1493873.43,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [

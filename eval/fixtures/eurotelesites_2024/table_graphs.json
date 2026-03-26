@@ -1171,7 +1171,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.MATERIAL_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:pnl_eurotelesites:5",

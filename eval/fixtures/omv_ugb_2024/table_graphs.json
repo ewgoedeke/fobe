@@ -15679,7 +15679,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_AMORTISED_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:9:8",
@@ -18008,7 +18014,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.PA_CONTRIBUTIONS_EMPLOYER",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:12:10",
@@ -23900,7 +23912,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -29249,7 +29267,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.HEADCOUNT_AVG",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -40052,14 +40076,7 @@
               "parsedValue": 20.596,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:36:7",
@@ -40819,14 +40836,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.NON_CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [

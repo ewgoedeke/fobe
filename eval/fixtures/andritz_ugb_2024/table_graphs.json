@@ -32462,14 +32462,7 @@
               "parsedValue": 102661481.33,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.PPE.CARRYING_AMOUNT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:18:11",
@@ -35604,14 +35597,7 @@
               "parsedValue": 0.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -36470,14 +36456,7 @@
               "parsedValue": 0.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -38237,14 +38216,7 @@
               "parsedValue": 0.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -38544,7 +38516,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.CFS_TOTAL_OUTFLOW",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:2",
@@ -39467,14 +39445,7 @@
               "parsedValue": 1039955623.87,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -40130,14 +40101,7 @@
               "parsedValue": 1039955623.87,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [

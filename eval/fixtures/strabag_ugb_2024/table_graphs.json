@@ -3882,7 +3882,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:6",
@@ -3940,14 +3946,7 @@
               "parsedValue": 1.028,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:7",
@@ -4373,14 +4372,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.NON_CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:14",
@@ -4974,14 +4966,7 @@
               "parsedValue": 624.277,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:2:24",
@@ -5766,14 +5751,7 @@
               "parsedValue": 99.821,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.SHARE_CAPITAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:7",
@@ -6011,14 +5989,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.SHARE_PREMIUM",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:11",
@@ -6257,14 +6228,7 @@
               "parsedValue": 530.531,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RETAINED_EARNINGS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:15",
@@ -6506,14 +6470,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TOTAL_EQUITY",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:19",
@@ -6753,14 +6710,7 @@
               "parsedValue": 14.276,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PROVISIONS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:23",
@@ -7650,14 +7600,7 @@
               "parsedValue": 589.39,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TOTAL_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:3:38",
@@ -8389,14 +8332,7 @@
               "parsedValue": 1.618,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:4:7",
@@ -9045,14 +8981,7 @@
               "parsedValue": -11.317,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.STAFF_COSTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:4:18",
@@ -9352,14 +9281,7 @@
               "parsedValue": -34.876,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_EXPENSES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:4:23",
@@ -10085,14 +10007,7 @@
               "parsedValue": -1.813,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.FINANCE_COSTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:4:35",
@@ -10756,7 +10671,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:46",

@@ -63864,14 +63864,7 @@
               "parsedValue": 3.85,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.PERSONNEL.HEADCOUNT_AVG",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:72:4",
@@ -67302,7 +67295,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:78:5",
@@ -69787,7 +69786,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:80:11",
@@ -72257,7 +72262,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:81:11",
@@ -73446,7 +73457,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DEFERRED_TAX_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -81556,7 +81573,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.CONTRACT_ASSETS_OPENING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:90:2",
@@ -86747,7 +86770,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_AMORTISED_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:102:3",
@@ -89489,14 +89518,7 @@
               "parsedValue": 8.393,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:8",
@@ -89772,7 +89794,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:109:2",
@@ -89828,7 +89856,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:109:3",
@@ -89884,7 +89918,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:109:4",
@@ -89939,14 +89979,7 @@
               "parsedValue": -53.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -91468,14 +91501,7 @@
               "parsedValue": 3.426,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -94424,7 +94450,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:3",
@@ -94528,7 +94560,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:4",
@@ -94736,7 +94774,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:6",
@@ -94840,7 +94884,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:7",
@@ -95055,7 +95105,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.LEASE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:9",
@@ -95159,7 +95215,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.LEASE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:10",
@@ -95380,14 +95442,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -95913,7 +95968,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BONDS_ISSUED",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:4",
@@ -96017,7 +96078,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BONDS_ISSUED",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:5",
@@ -96225,7 +96292,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:7",
@@ -96329,7 +96402,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.BANK_LOANS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:8",
@@ -96544,7 +96623,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.LEASE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:10",
@@ -96648,7 +96733,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.LEASE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:118:11",
@@ -96869,14 +96960,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -101048,14 +101132,7 @@
               "parsedValue": 307.905,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:124:6",
@@ -101596,14 +101673,7 @@
               "parsedValue": 299.82,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -111521,7 +111591,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_AMORTISED_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:134:8",
@@ -118930,7 +119006,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:2",
@@ -119022,7 +119104,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:3",
@@ -119114,7 +119202,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:4",
@@ -119206,7 +119300,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:5",
@@ -119487,7 +119587,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:8",
@@ -119579,7 +119685,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:9",
@@ -119671,7 +119783,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:10",
@@ -119763,7 +119881,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:11",
@@ -119855,7 +119979,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PERSONNEL.MGMT_BOARD_COMPENSATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:143:12",
@@ -121410,14 +121540,7 @@
               "parsedValue": 418.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.AUDITOR.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [

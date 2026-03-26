@@ -31292,7 +31292,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:4",
@@ -31733,7 +31739,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TOTAL_OCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:10",
@@ -31869,7 +31881,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TOTAL_OCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:12",
@@ -31937,7 +31955,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:13",
@@ -41201,7 +41225,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:38:8",
@@ -43043,7 +43073,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:38:22",
@@ -55114,7 +55150,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.CARRYING_AMOUNT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -57468,7 +57510,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.TOTAL_CONTINUING_OPS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:49:17",
@@ -62642,14 +62690,7 @@
               "parsedValue": 546.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -64501,7 +64542,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:61:3",
@@ -64557,7 +64604,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.SELLING_DISTRIBUTION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:61:4",
@@ -64843,7 +64896,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:61:9",
@@ -67767,7 +67826,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:66:10",
@@ -86184,7 +86249,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_AMORTISED_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:85:7",
@@ -91850,14 +91921,7 @@
               "parsedValue": 2023.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:93:6",
@@ -93376,7 +93440,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TAX_NON_RECLASSIFIABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:95:5",
@@ -93881,7 +93951,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TAX_NON_RECLASSIFIABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:95:11",
@@ -94497,14 +94573,7 @@
               "parsedValue": 11049.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.BORROWINGS.TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:96:5",
@@ -94560,7 +94629,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.MATURITY_1_TO_5Y",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:96:6",
@@ -100192,7 +100267,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:102:9",
@@ -100848,7 +100929,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:102:18",
@@ -117144,7 +117231,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RELATED_PARTIES.KMP_TOTAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:2",
@@ -117200,7 +117293,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RELATED_PARTIES.PAYABLES_TO",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:3",
@@ -119044,14 +119143,7 @@
               "parsedValue": 91.628,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.NON_CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:127:13",
@@ -119825,14 +119917,7 @@
               "parsedValue": 1.391,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.CASH",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:127:24",
@@ -119902,14 +119987,7 @@
               "parsedValue": 3.629,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.CURRENT_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:127:25",
@@ -120047,14 +120125,7 @@
               "parsedValue": 155.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PREPAYMENTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:127:27",
@@ -124238,7 +124309,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:10",
@@ -124579,14 +124656,7 @@
               "parsedValue": -729.15,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.STAFF_COSTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:129:14",
@@ -124755,14 +124825,7 @@
               "parsedValue": -3853.38,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.STAFF_COSTS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:129:16",

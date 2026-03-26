@@ -11137,14 +11137,7 @@
               "parsedValue": 462734318.02,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.RELATED_PARTIES.RECEIVABLES_FROM",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:5:5",

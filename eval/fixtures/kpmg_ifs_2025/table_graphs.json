@@ -8259,14 +8259,7 @@
               "parsedValue": 27.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:14:8",
@@ -8826,14 +8819,7 @@
               "parsedValue": 404.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:14:21",
@@ -10308,14 +10294,7 @@
               "parsedValue": -119.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:1",
@@ -10363,14 +10342,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_RESTATED",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:2",
@@ -10418,14 +10390,7 @@
               "parsedValue": -119.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_RESTATED",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:3",
@@ -10522,14 +10487,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.PROFIT_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:5",
@@ -10577,14 +10535,7 @@
               "parsedValue": 275.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.OCI_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:6",
@@ -10632,14 +10583,7 @@
               "parsedValue": 275.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_COMPREHENSIVE_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:7",
@@ -10736,14 +10680,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_TRANSACTIONS_WITH_OWNERS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:9",
@@ -11085,14 +11022,7 @@
               "parsedValue": 156.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:16",
@@ -11189,14 +11119,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.PROFIT_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:18",
@@ -11244,14 +11167,7 @@
               "parsedValue": 458.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.OCI_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:19",
@@ -11299,14 +11215,7 @@
               "parsedValue": 458.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_COMPREHENSIVE_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:20",
@@ -11452,14 +11361,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_TRANSACTIONS_WITH_OWNERS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:23",
@@ -11948,14 +11850,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_TRANSACTIONS_WITH_OWNERS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:33",
@@ -12199,14 +12094,7 @@
               "parsedValue": 622.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -18654,14 +18542,7 @@
               "parsedValue": 5599.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.PROFIT_BEFORE_TAX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:1",
@@ -18697,14 +18578,7 @@
               "parsedValue": 30367.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:2",
@@ -18740,14 +18614,7 @@
               "parsedValue": 317.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_EXPENSE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:3",
@@ -18820,14 +18687,7 @@
               "parsedValue": 42.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.DEPR_AMORT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:5",
@@ -18863,14 +18723,7 @@
               "parsedValue": -445.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.SHARE_EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:6",
@@ -18906,14 +18759,7 @@
               "parsedValue": -1583.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:7",
@@ -18949,14 +18795,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:8",
@@ -18992,14 +18831,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_TRADE_RECEIVABLES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:9",
@@ -19257,14 +19089,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:16",
@@ -19300,14 +19125,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_REVERSAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:17",
@@ -19343,14 +19161,7 @@
               "parsedValue": 23025.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:18",
@@ -19386,14 +19197,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.CAPEX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:19",
@@ -19429,14 +19233,7 @@
               "parsedValue": 5765.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:27:20",
@@ -19472,14 +19269,7 @@
               "parsedValue": 12180.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -19615,14 +19405,7 @@
               "parsedValue": 15016.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:1",
@@ -19676,14 +19459,7 @@
               "parsedValue": 110403.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:2",
@@ -19737,14 +19513,7 @@
               "parsedValue": 7549.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTERSEGMENT_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:3",
@@ -19801,14 +19570,7 @@
               "parsedValue": 117952.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:4",
@@ -19862,14 +19624,7 @@
               "parsedValue": 209.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.PROFIT_BEFORE_TAX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:5",
@@ -19923,14 +19678,7 @@
               "parsedValue": -1523.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:6",
@@ -19984,14 +19732,7 @@
               "parsedValue": -6124.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_EXPENSE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:7",
@@ -20045,14 +19786,7 @@
               "parsedValue": 1141.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.DEPR_AMORT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:8",
@@ -20106,14 +19840,7 @@
               "parsedValue": 587.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.SHARE_EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:9",
@@ -20167,14 +19894,7 @@
               "parsedValue": 238.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:10",
@@ -20228,14 +19948,7 @@
               "parsedValue": -326.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_REVERSAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:11",
@@ -20289,14 +20002,7 @@
               "parsedValue": -519.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_TRADE_RECEIVABLES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:12",
@@ -20350,14 +20056,7 @@
               "parsedValue": 33.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:13",
@@ -20466,14 +20165,7 @@
               "parsedValue": -116.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:15",
@@ -20527,14 +20219,7 @@
               "parsedValue": 493.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:16",
@@ -20588,14 +20273,7 @@
               "parsedValue": 107400.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:17",
@@ -20649,14 +20327,7 @@
               "parsedValue": 2489.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.CAPEX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:28:18",
@@ -21625,14 +21296,7 @@
               "parsedValue": 10375.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:1",
@@ -21686,14 +21350,7 @@
               "parsedValue": 119912.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:2",
@@ -21747,14 +21404,7 @@
               "parsedValue": 9516.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTERSEGMENT_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:3",
@@ -21811,14 +21461,7 @@
               "parsedValue": 129428.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_REVENUE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:4",
@@ -21872,14 +21515,7 @@
               "parsedValue": 151.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.PROFIT_BEFORE_TAX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:5",
@@ -21933,14 +21569,7 @@
               "parsedValue": -1299.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:6",
@@ -21994,14 +21623,7 @@
               "parsedValue": -5917.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.INTEREST_EXPENSE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:7",
@@ -22055,14 +21677,7 @@
               "parsedValue": 587.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.DEPR_AMORT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:8",
@@ -22116,14 +21731,7 @@
               "parsedValue": 28.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.SHARE_EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:9",
@@ -22177,14 +21785,7 @@
               "parsedValue": 76.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:10",
@@ -22238,14 +21839,7 @@
               "parsedValue": -193.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_REVERSAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:11",
@@ -22299,14 +21893,7 @@
               "parsedValue": -1408.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_TRADE_RECEIVABLES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:12",
@@ -22415,14 +22002,7 @@
               "parsedValue": 83703.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:14",
@@ -22476,14 +22056,7 @@
               "parsedValue": 1948.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.EQUITY_INVESTEES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:15",
@@ -22537,14 +22110,7 @@
               "parsedValue": 2923.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:30:16",
@@ -22598,14 +22164,7 @@
               "parsedValue": 50790.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.CAPEX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -23005,7 +22564,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_REPORTABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:8",
@@ -23042,7 +22607,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_OTHER",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:9",
@@ -23079,7 +22650,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:10",
@@ -23241,7 +22818,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_TOTAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:14",
@@ -23315,7 +22898,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:16",
@@ -23430,7 +23019,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:19",
@@ -23511,7 +23106,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:21",
@@ -23626,7 +23227,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:24",
@@ -28323,14 +27930,7 @@
               "parsedValue": 96884.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_REPORTABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:41:1",
@@ -28402,14 +28002,7 @@
               "parsedValue": 22730.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_OTHER",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:41:2",
@@ -28557,14 +28150,7 @@
               "parsedValue": 66862.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:41:4",
@@ -28709,14 +28295,7 @@
               "parsedValue": 3483.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:41:6",
@@ -36645,7 +36224,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:2",
@@ -36676,7 +36261,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:3",
@@ -36707,7 +36298,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:4",
@@ -36738,7 +36335,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:5",
@@ -36769,7 +36372,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:6",
@@ -38587,14 +38196,7 @@
               "parsedValue": 3560.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:64:6",
@@ -38804,14 +38406,7 @@
               "parsedValue": -1100.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:64:12",
@@ -42657,14 +42252,7 @@
               "parsedValue": -1379.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_CORPORATE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:1",
@@ -42718,14 +42306,7 @@
               "parsedValue": -76.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_PILLAR2",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:2",
@@ -42779,14 +42360,7 @@
               "parsedValue": -204.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_PRIOR_YEAR_ADJ",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:3",
@@ -42843,14 +42417,7 @@
               "parsedValue": -37.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:4",
@@ -42904,14 +42471,7 @@
               "parsedValue": -139.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_TEMP_DIFF",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:5",
@@ -42965,14 +42525,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_RATE_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:6",
@@ -43026,14 +42579,7 @@
               "parsedValue": -31.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:7",
@@ -43087,14 +42633,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:8",
@@ -43148,14 +42687,7 @@
               "parsedValue": -63.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_PROFIT_BEFORE_TAX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:9",
@@ -43209,14 +42741,7 @@
               "parsedValue": -254.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_AT_DOMESTIC_RATE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:10",
@@ -43270,14 +42795,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_FOREIGN_RATE_DIFF",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:11",
@@ -43331,14 +42849,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_NON_DEDUCTIBLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:12",
@@ -43392,14 +42903,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TAX_EXEMPT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:13",
@@ -43453,14 +42957,7 @@
               "parsedValue": -11.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TAX_INCENTIVES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:14",
@@ -43514,14 +43011,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_PRIOR_YEAR_ADJ",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:15",
@@ -43575,14 +43065,7 @@
               "parsedValue": -2194.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:70:16",
@@ -43822,14 +43305,7 @@
               "parsedValue": -1537.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_CORPORATE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:1",
@@ -43883,14 +43359,7 @@
               "parsedValue": -38.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_PILLAR2",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:2",
@@ -43944,14 +43413,7 @@
               "parsedValue": -22.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_PRIOR_YEAR_ADJ",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:3",
@@ -44005,14 +43467,7 @@
               "parsedValue": -30.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.CURRENT_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:4",
@@ -44066,14 +43521,7 @@
               "parsedValue": -71.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_TEMP_DIFF",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:5",
@@ -44127,14 +43575,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_RATE_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:6",
@@ -44188,14 +43629,7 @@
               "parsedValue": -43.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:7",
@@ -44249,14 +43683,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.DEFERRED_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:8",
@@ -44310,14 +43737,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_PROFIT_BEFORE_TAX",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:9",
@@ -44371,14 +43791,7 @@
               "parsedValue": -241.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_AT_DOMESTIC_RATE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:10",
@@ -44432,14 +43845,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_FOREIGN_RATE_DIFF",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:11",
@@ -44493,14 +43899,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_NON_DEDUCTIBLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:12",
@@ -44554,14 +43953,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TAX_EXEMPT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:13",
@@ -44615,14 +44007,7 @@
               "parsedValue": -4.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TAX_INCENTIVES",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:14",
@@ -44676,14 +44061,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_PRIOR_YEAR_ADJ",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:15",
@@ -44753,14 +44131,7 @@
               "parsedValue": -1986.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "DISC.TAX.RECON_TOTAL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:71:16",
@@ -59870,14 +59241,7 @@
               "parsedValue": 679.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.PROFIT_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:4",
@@ -59937,14 +59301,7 @@
               "parsedValue": -20.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.OCI_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:5",
@@ -60431,14 +59788,7 @@
               "parsedValue": -157.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.DIVIDENDS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:13",
@@ -60512,14 +59862,7 @@
               "parsedValue": 733.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:14",
@@ -60701,14 +60044,7 @@
               "parsedValue": 471.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.PROFIT_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:17",
@@ -60768,14 +60104,7 @@
               "parsedValue": -8.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.OCI_FOR_PERIOD",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:18",
@@ -61140,14 +60469,7 @@
               "parsedValue": -169.0,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.DIVIDENDS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:108:24",
@@ -61218,14 +60540,7 @@
               "parsedValue": 431.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -66580,14 +65895,7 @@
               "parsedValue": 1863.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:118:14",
@@ -67195,14 +66503,7 @@
               "parsedValue": 347.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_CONTRIBUTIONS_DISTRIBUTIONS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:118:23",
@@ -67335,14 +66636,7 @@
               "parsedValue": 74509.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.BALANCE_CLOSING",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -91899,7 +91193,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:4",
@@ -91930,7 +91230,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:5",
@@ -91961,7 +91267,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:6",
@@ -92030,7 +91342,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:8",
@@ -92061,7 +91379,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:9",
@@ -92123,7 +91447,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGE_TRANSFER_TO_INVENTORY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:11",
@@ -96090,7 +95420,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:12",
@@ -96634,7 +95970,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:30",
@@ -110319,14 +109661,7 @@
               "parsedValue": 27.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:212:10",
@@ -110890,14 +110225,7 @@
               "parsedValue": 404.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:212:23",
@@ -111157,14 +110485,7 @@
               "parsedValue": 6405.0,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_COMPREHENSIVE_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [],

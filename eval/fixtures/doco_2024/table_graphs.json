@@ -18798,14 +18798,7 @@
               "parsedValue": 23.11,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.REMEASURE_DEFINED_BENEFIT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:3",
@@ -18872,14 +18865,7 @@
               "parsedValue": 499.48,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.FVOCI_EQUITY_FV_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:4",
@@ -19014,14 +19000,7 @@
               "parsedValue": 4.28,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.REVALUATION_PPE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:6",
@@ -19088,14 +19067,7 @@
               "parsedValue": 19.7,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.EQUITY_INVESTEES_SHARE_NON_RECLASS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:7",
@@ -19230,14 +19202,7 @@
               "parsedValue": 16.08,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TAX_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:9",
@@ -19312,14 +19277,7 @@
               "parsedValue": 587.73,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:10",
@@ -19386,14 +19344,7 @@
               "parsedValue": 47.88,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.FX_TRANSLATION",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:11",
@@ -19460,14 +19411,7 @@
               "parsedValue": 229.58,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.NET_INVESTMENT_HEDGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:12",
@@ -19534,14 +19478,7 @@
               "parsedValue": 12.2,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.EQUITY_INVESTEES_SHARE_RECLASS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:13",
@@ -19676,14 +19613,7 @@
               "parsedValue": 37.72,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.CFH_EFFECTIVE_PORTION",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:15",
@@ -19750,14 +19680,7 @@
               "parsedValue": 276.71,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TAX_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:16",
@@ -19831,14 +19754,7 @@
               "parsedValue": 604.26,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:15:17",
@@ -19908,14 +19824,7 @@
               "parsedValue": 1191.98,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_OCI",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -20310,14 +20219,7 @@
               "parsedValue": 21.92,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.REMEASURE_DEFINED_BENEFIT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:3",
@@ -20384,14 +20286,7 @@
               "parsedValue": 158.01,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.FVOCI_EQUITY_FV_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:4",
@@ -20458,14 +20353,7 @@
               "parsedValue": 11.77,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.EQUITY_INVESTEES_SHARE_NON_RECLASS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:5",
@@ -20532,14 +20420,7 @@
               "parsedValue": 204.41,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.REVALUATION_PPE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:6",
@@ -20606,14 +20487,7 @@
               "parsedValue": -99.38,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TAX_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:7",
@@ -20686,14 +20560,7 @@
               "parsedValue": 296.72,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_NON_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:8",
@@ -20760,14 +20627,7 @@
               "parsedValue": 29.79,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.PNL.NET_PROFIT",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:9",
@@ -20905,14 +20765,7 @@
               "parsedValue": 2.17,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.FX_TRANSLATION",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:11",
@@ -20979,14 +20832,7 @@
               "parsedValue": 293.75,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.CFH_EFFECTIVE_PORTION",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:12",
@@ -21053,14 +20899,7 @@
               "parsedValue": 21.32,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.NET_INVESTMENT_HEDGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:13",
@@ -21195,14 +21034,7 @@
               "parsedValue": 14.3,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.EQUITY_INVESTEES_SHARE_RECLASS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:15",
@@ -21274,14 +21106,7 @@
               "parsedValue": 331.55,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:16",
@@ -21348,14 +21173,7 @@
               "parsedValue": 200.83,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.CFH_RECLASS_TO_PNL",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:17",
@@ -21422,14 +21240,7 @@
               "parsedValue": 191.27,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.COST_OF_HEDGING_FV_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:18",
@@ -21496,14 +21307,7 @@
               "parsedValue": 24.88,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.FVOCI_DEBT_FV_CHANGE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:19",
@@ -21570,14 +21374,7 @@
               "parsedValue": 16.25,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TAX_RECLASSIFIABLE",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:20",
@@ -21718,14 +21515,7 @@
               "parsedValue": 533.92,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_OCI",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:16:22",
@@ -21797,14 +21587,7 @@
               "parsedValue": 1191.98,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.OCI.TOTAL_COMPREHENSIVE_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         }
       ],
       "aggregationGroups": [
@@ -22673,14 +22456,7 @@
               "parsedValue": 202.12,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_COMPREHENSIVE_INCOME",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:8",
@@ -23247,14 +23023,7 @@
               "parsedValue": -32.7,
               "isNegative": true
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_CONTRIBUTIONS_DISTRIBUTIONS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:15",
@@ -23336,14 +23105,7 @@
               "parsedValue": 103.09,
               "isNegative": false
             }
-          ],
-          "preTagged": {
-            "conceptId": "FS.SOCIE.TOTAL_TRANSACTIONS_WITH_OWNERS",
-            "method": "llm",
-            "confidence": 0.8,
-            "rule": "sonnet_tag",
-            "model": "claude-sonnet-4-20250514"
-          }
+          ]
         },
         {
           "rowId": "row:17:16",
