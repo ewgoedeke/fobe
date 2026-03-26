@@ -218,7 +218,7 @@ def print_comparison(results: list[dict]):
         "VALID_DISAGGREGATION": "✅",
         "VALID_TIE": "✅",
         "BROKEN_RELATIONSHIP": "❌",
-        "IC_LEAKAGE": "⚠️",
+        "DECOMPOSITION_RESIDUAL": "⚠️",
         "EXPLAINED_MISMATCH": "ℹ️",
         "UNEXPLAINED_INCONSISTENCY": "❓",
     }

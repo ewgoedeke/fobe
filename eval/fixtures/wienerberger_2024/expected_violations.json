@@ -14,7 +14,7 @@
       "description": "IC decomposition valid: external + IC = face (both 2024 and 2023)"
     },
     {
-      "category": "IC_LEAKAGE",
+      "category": "DECOMPOSITION_RESIDUAL",
       "edge_name": "revenue_by_segment",
       "description": "Revenue IC residual 909 TEUR in 2023 comparative — intercompany revenue not fully eliminated"
     },

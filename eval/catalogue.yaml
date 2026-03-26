@@ -21,7 +21,7 @@ catalogue:
         description: "IC decomposition valid: face = external + IC for both 2024 (IC=0) and 2023 (IC=909)"
 
       - id: WBI-003
-        category: IC_LEAKAGE
+        category: DECOMPOSITION_RESIDUAL
         edge: revenue_by_segment
         description: "Revenue IC residual 909 TEUR in 2023 comparative"
         root_cause: "Intercompany revenue not fully eliminated in 2023 consolidation"
