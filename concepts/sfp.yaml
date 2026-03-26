@@ -298,6 +298,40 @@ concepts:
     note_unit_type: shares
     note: "SFP shows EUR value; equity note shows share count — different units are expected"
 
+  # ── Share counts (equity note / EPS disclosure) ────────────
+  - id: FS.SFP.SHARES_ISSUED
+    label: Shares issued (number)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+    unit_type: shares
+    note: "Total shares issued including treasury; equity note or front page"
+
+  - id: FS.SFP.SHARES_OUTSTANDING
+    label: Shares outstanding (number)
+    balance_type: credit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+    unit_type: shares
+    note: "Shares issued minus treasury shares"
+
+  - id: FS.SFP.TREASURY_SHARES_COUNT
+    label: Treasury shares (number)
+    balance_type: debit
+    period_type: instant
+    source_type: pack
+    mappable: false
+    is_monetary: false
+    is_total: false
+    unit_type: shares
+    note: "Number of treasury shares held; contra to shares outstanding"
+
   - id: FS.SFP.RETAINED_EARNINGS
     label: Retained earnings
     balance_type: credit

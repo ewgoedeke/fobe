@@ -11,9 +11,9 @@ concepts:
   - { id: DISC.PERSONNEL.VOLUNTARY_SOCIAL, label: "Voluntary social costs", period_type: duration, ref: "§231 Z6c" }
   - { id: DISC.PERSONNEL.TOTAL, label: "Total personnel expense", period_type: duration, is_total: true }
   # Headcount
-  - { id: DISC.PERSONNEL.HEADCOUNT_AVG, label: "Average number of employees", period_type: duration }
-  - { id: DISC.PERSONNEL.HEADCOUNT_BLUE_COLLAR, label: "Average blue-collar employees", period_type: duration }
-  - { id: DISC.PERSONNEL.HEADCOUNT_WHITE_COLLAR, label: "Average white-collar employees", period_type: duration }
+  - { id: DISC.PERSONNEL.HEADCOUNT_AVG, label: "Average number of employees", period_type: duration, unit_type: dimensionless }
+  - { id: DISC.PERSONNEL.HEADCOUNT_BLUE_COLLAR, label: "Average blue-collar employees", period_type: duration, unit_type: dimensionless }
+  - { id: DISC.PERSONNEL.HEADCOUNT_WHITE_COLLAR, label: "Average white-collar employees", period_type: duration, unit_type: dimensionless }
   # Management compensation (§237 Z8 UGB / IAS 24)
   - { id: DISC.PERSONNEL.MGMT_BOARD_COMPENSATION, label: "Management board compensation (Vorstand/GF)", period_type: duration, ref: "§237 Z8" }
   - { id: DISC.PERSONNEL.SUPERVISORY_BOARD_COMPENSATION, label: "Supervisory board compensation (Aufsichtsrat)", period_type: duration, ref: "§237 Z8" }

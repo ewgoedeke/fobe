@@ -11,7 +11,7 @@ Reports per document:
 
 Usage:
     python3 eval/run_corpus.py <dir1/table_graphs.json> [dir2/...] [...]
-    python3 eval/run_corpus.py --all   # scan /tmp/doc_tag/*/
+    python3 eval/run_corpus.py --all   # scan /tmp/doc_tag/ + eval/fixtures/
 """
 
 import json
@@ -296,9 +296,18 @@ def main():
     ontology_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     if "--all" in sys.argv:
-        doc_paths = sorted(
-            str(p) for p in Path("/tmp/doc_tag").glob("*/*/table_graphs.json")
-        )
+        # Scan both doc_tag (preTagged) and eval/fixtures (Docling-parsed)
+        doc_tag_dir = Path("/tmp/doc_tag")
+        fixtures_dir = Path(ontology_root) / "eval" / "fixtures"
+        seen = set()
+        doc_paths = []
+        for p in sorted(
+            list(doc_tag_dir.glob("*/*/table_graphs.json"))
+            + list(fixtures_dir.glob("*/table_graphs.json"))
+        ):
+            if str(p) not in seen:
+                seen.add(str(p))
+                doc_paths.append(str(p))
     else:
         doc_paths = [a for a in sys.argv[1:] if not a.startswith("-")]
 

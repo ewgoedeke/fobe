@@ -34,7 +34,7 @@ concepts:
   # Beteiligungsspiegel (§238 Z2 UGB) — subsidiary/associate listing
   - { id: DISC.UGB.SUBSIDIARY_NAME, label: "Subsidiary name", period_type: instant }
   - { id: DISC.UGB.SUBSIDIARY_JURISDICTION, label: "Subsidiary jurisdiction (Sitz)", period_type: instant }
-  - { id: DISC.UGB.SUBSIDIARY_OWNERSHIP_PCT, label: "Ownership percentage (Beteiligungsquote)", period_type: instant }
+  - { id: DISC.UGB.SUBSIDIARY_OWNERSHIP_PCT, label: "Ownership percentage (Beteiligungsquote)", period_type: instant, unit_type: percentage }
   - { id: DISC.UGB.SUBSIDIARY_EQUITY, label: "Subsidiary equity (Eigenkapital)", period_type: instant }
   - { id: DISC.UGB.SUBSIDIARY_RESULT, label: "Subsidiary annual result (Jahresergebnis)", period_type: duration }
   
