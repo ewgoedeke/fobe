@@ -953,6 +953,79 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                     details={"period": pk},
                 ))
 
+    # Division / ratio relationships
+    for edge in graph.edges_by_type(EdgeType.DIVISION):
+        for pk in year_keys:
+            num_ctx = _infer_context(edge.numerator_concept)
+            den_ctx = _infer_context(edge.denominator_concept)
+            res_ctx = _infer_context(edge.result_concept)
+
+            num_val = _lookup(facts, num_ctx, edge.numerator_concept, pk)
+            den_val = _lookup(facts, den_ctx, edge.denominator_concept, pk)
+            res_val = _lookup(facts, res_ctx, edge.result_concept, pk)
+
+            # Need at least result + one of numerator/denominator
+            if res_val is None:
+                continue
+            if num_val is None and den_val is None:
+                continue
+
+            if edge.is_subtraction:
+                # Special case: result = numerator - denominator
+                if num_val is not None and den_val is not None:
+                    expected = num_val - den_val
+                    delta = abs(res_val - expected)
+                    if delta <= TOLERANCE:
+                        findings.append(Finding(
+                            category=Category.VALID_DISAGGREGATION,
+                            edge_name=edge.name,
+                            expected=expected,
+                            actual=res_val,
+                            delta=delta,
+                            concepts=[edge.numerator_concept, edge.denominator_concept, edge.result_concept],
+                            message=f"Subtraction holds: {edge.result_concept}={res_val:,.0f} = {edge.numerator_concept}({num_val:,.0f}) - {edge.denominator_concept}({den_val:,.0f}) [{pk}]",
+                            details={"period": pk, "relationship": "subtraction"},
+                        ))
+                    else:
+                        findings.append(Finding(
+                            category=Category.BROKEN_RELATIONSHIP,
+                            edge_name=edge.name,
+                            severity="WARNING",
+                            expected=expected,
+                            actual=res_val,
+                            delta=delta,
+                            concepts=[edge.numerator_concept, edge.denominator_concept, edge.result_concept],
+                            message=f"Subtraction BROKEN: {edge.result_concept}={res_val:,.0f} ≠ {edge.numerator_concept}({num_val:,.0f}) - {edge.denominator_concept}({den_val:,.0f}) = {expected:,.0f} [{pk}]",
+                            details={"period": pk, "relationship": "subtraction"},
+                        ))
+            elif num_val is not None and den_val is not None and den_val != 0:
+                # Division: result = numerator / denominator
+                expected = num_val / den_val
+                delta = abs(res_val - expected)
+                if delta <= edge.tolerance:
+                    findings.append(Finding(
+                        category=Category.VALID_DISAGGREGATION,
+                        edge_name=edge.name,
+                        expected=expected,
+                        actual=res_val,
+                        delta=delta,
+                        concepts=[edge.numerator_concept, edge.denominator_concept, edge.result_concept],
+                        message=f"Division holds: {edge.result_concept}={res_val:.2f} ≈ {edge.numerator_concept}({num_val:,.0f}) / {edge.denominator_concept}({den_val:,.0f}) = {expected:.2f} [{pk}]",
+                        details={"period": pk, "relationship": "division"},
+                    ))
+                else:
+                    findings.append(Finding(
+                        category=Category.BROKEN_RELATIONSHIP,
+                        edge_name=edge.name,
+                        severity="WARNING",
+                        expected=expected,
+                        actual=res_val,
+                        delta=delta,
+                        concepts=[edge.numerator_concept, edge.denominator_concept, edge.result_concept],
+                        message=f"Division BROKEN: {edge.result_concept}={res_val:.2f} ≠ {edge.numerator_concept}({num_val:,.0f}) / {edge.denominator_concept}({den_val:,.0f}) = {expected:.2f}, Δ={delta:.2f} [{pk}]",
+                        details={"period": pk, "relationship": "division"},
+                    ))
+
     return findings
 
 
@@ -1051,6 +1124,14 @@ def pass2_explain(
             concept_meta = graph.concepts.get(cid)
             flist = obs["facts"]
             amounts = obs["amounts"]
+
+            # Skip non-monetary concepts — unit scale mismatches are expected
+            # for shares, per_share, percentage, and dimensionless concepts
+            if concept_meta and concept_meta.unit_type in ("shares", "per_share", "percentage", "dimensionless"):
+                # Non-monetary concepts appearing in different tables with different
+                # values is normal (e.g., EPS in PNL vs EPS note, share counts in
+                # equity note vs front page). Suppress entirely.
+                continue
 
             # Check SHARE_COUNT_VS_MONETARY
             if concept_meta and concept_meta.note_unit_type == "shares":

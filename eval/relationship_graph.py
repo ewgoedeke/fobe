@@ -27,6 +27,7 @@ class EdgeType(Enum):
     CROSS_STATEMENT_TIE = "CROSS_STATEMENT_TIE"
     IC_DECOMPOSITION = "IC_DECOMPOSITION"
     NOTE_TO_FACE = "NOTE_TO_FACE"
+    DIVISION = "DIVISION"
 
 
 @dataclass
@@ -64,6 +65,12 @@ class GraphEdge:
     ic_face_concept: Optional[str] = None
     ic_external_concept: Optional[str] = None
     ic_concept: Optional[str] = None
+    # For DIVISION
+    numerator_concept: Optional[str] = None
+    denominator_concept: Optional[str] = None
+    result_concept: Optional[str] = None
+    tolerance: float = 0.02
+    is_subtraction: bool = False  # special case: result = numerator - denominator
 
 
 @dataclass
@@ -243,6 +250,20 @@ def build_graph(repo_root: str) -> OntologyGraph:
             ic_external_concept=ic.get("external_concept"),
             ic_concept=ic.get("ic_concept"),
             ambiguities=ic.get("ambiguities", []),
+        ))
+
+    # 6. Division relationships from counterparts.yaml
+    for div in counterparts.get("division_relationships", []):
+        edges.append(GraphEdge(
+            edge_type=EdgeType.DIVISION,
+            name=div["name"],
+            numerator_concept=div["numerator"]["concept"],
+            denominator_concept=div["denominator"]["concept"],
+            result_concept=div["result"]["concept"],
+            tolerance=div.get("tolerance", 0.02),
+            is_subtraction=div.get("denominator_is_subtraction", False),
+            check=div.get("check", "result = numerator / denominator"),
+            ambiguities=div.get("ambiguities", []),
         ))
 
     # 5. Disaggregation targets from enriched concept metadata

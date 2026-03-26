@@ -15,8 +15,8 @@ concepts:
   - { id: DISC.INS_REG.LIC, label: "Liability for incurred claims", period_type: instant }
   - { id: DISC.INS_REG.LOSS_COMPONENT, label: "Loss component of onerous contracts", period_type: instant }
   # Regulatory (Solvency II)
-  - { id: DISC.INS_REG.SOLVENCY2_SCR_RATIO, label: "Solvency II SCR coverage ratio (%)", period_type: instant }
-  - { id: DISC.INS_REG.SOLVENCY2_MCR_RATIO, label: "Solvency II MCR coverage ratio (%)", period_type: instant }
+  - { id: DISC.INS_REG.SOLVENCY2_SCR_RATIO, label: "Solvency II SCR coverage ratio (%)", period_type: instant, unit_type: percentage }
+  - { id: DISC.INS_REG.SOLVENCY2_MCR_RATIO, label: "Solvency II MCR coverage ratio (%)", period_type: instant, unit_type: percentage }
   - { id: DISC.INS_REG.OWN_FUNDS_SOLVENCY2, label: "Eligible own funds (Solvency II)", period_type: instant }
   # Measurement model tag
   - { id: DISC.INS_REG.CONTRACTS_GMM, label: "Contracts measured under GMM", period_type: instant }

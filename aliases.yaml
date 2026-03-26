@@ -268,3 +268,89 @@ aliases:
     - deferred tax expense/income
     - deferred tax income
     - latenter steueraufwand
+
+  # ── EPS / share counts ─────────────────────────────────────────────
+  FS.PNL.EPS_BASIC:
+    - basic earnings per share
+    - earnings per share basic
+    - ergebnis je aktie
+    - ergebnis je aktie unverwässert
+    - unverwässertes ergebnis je aktie
+    - basic eps
+    - earnings per share (basic)
+
+  FS.PNL.EPS_DILUTED:
+    - diluted earnings per share
+    - earnings per share diluted
+    - verwässertes ergebnis je aktie
+    - ergebnis je aktie verwässert
+    - diluted eps
+    - earnings per share (diluted)
+
+  DISC.EPS.WEIGHTED_AVG_SHARES_BASIC:
+    - weighted average shares outstanding basic
+    - weighted average number of shares basic
+    - gewichtete durchschnittliche aktienanzahl
+    - durchschnittliche aktienanzahl
+    - average shares outstanding
+    - weighted average ordinary shares
+
+  DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED:
+    - weighted average shares outstanding diluted
+    - weighted average number of shares diluted
+    - verwässerte durchschnittliche aktienanzahl
+
+  DISC.EPS.DIVIDEND_PER_SHARE:
+    - dividend per share
+    - dividende je aktie
+    - ausschüttung je aktie
+    - dividends per share
+
+  FS.SFP.SHARES_ISSUED:
+    - shares issued
+    - number of shares issued
+    - ausgegebene aktien
+    - gezeichnetes kapital (stück)
+
+  FS.SFP.SHARES_OUTSTANDING:
+    - shares outstanding
+    - number of shares outstanding
+    - ausstehende aktien
+    - im umlauf befindliche aktien
+
+  FS.SFP.TREASURY_SHARES_COUNT:
+    - treasury shares (number)
+    - number of treasury shares
+    - eigene aktien (stück)
+    - eigene anteile (stück)
+
+  # ── Banking ratios ─────────────────────────────────────────────────
+  DISC.BANK_REG.CET1_RATIO:
+    - cet1 ratio
+    - common equity tier 1 ratio
+    - kernkapitalquote
+    - harte kernkapitalquote
+
+  DISC.BANK_REG.TOTAL_CAPITAL_RATIO:
+    - total capital ratio
+    - gesamtkapitalquote
+
+  DISC.BANK_REG.COST_TO_INCOME_RATIO:
+    - cost/income ratio
+    - cost-income ratio
+    - kosten-ertrags-relation
+    - aufwand-ertrag-koeffizient
+
+  DISC.BANK_REG.RETURN_ON_EQUITY:
+    - return on equity
+    - roe
+    - eigenkapitalrendite
+    - eigenkapitalrentabilität
+
+  # ── Personnel headcount ────────────────────────────────────────────
+  DISC.PERSONNEL.HEADCOUNT_AVG:
+    - average number of employees
+    - durchschnittliche mitarbeiterzahl
+    - mitarbeiter durchschnitt
+    - number of employees (average)
+    - headcount

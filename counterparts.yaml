@@ -318,6 +318,63 @@ note_to_face_ties:
         description: "Face includes all employee benefit liabilities, note covers only defined benefit"
         severity: INFO
 
+# ── Division / ratio relationships ─────────────────────────────────
+# Derived facts: result = numerator / denominator.
+# These are three-way corroboration checks — if all three facts exist
+# and the division holds, all three tags are confirmed.
+
+division_relationships:
+  - name: eps_basic_derivation
+    numerator: { concept: FS.PNL.NET_PROFIT }
+    denominator: { concept: DISC.EPS.WEIGHTED_AVG_SHARES_BASIC }
+    result: { concept: FS.PNL.EPS_BASIC }
+    tolerance: 0.02  # EUR rounding per share
+    note: >
+      IAS 33.10: basic EPS = profit attributable to ordinary equity holders
+      / weighted average ordinary shares outstanding. Numerator may need
+      adjustment for preference dividends. Denominator is time-weighted.
+    ambiguities:
+      - id: PREFERENCE_DIVIDENDS
+        description: "Numerator adjusted for preference dividends (IAS 33.14)"
+        confirm_via: "delta matches preference dividend amount"
+      - id: ATTRIBUTABLE_VS_TOTAL
+        description: "Net profit includes NCI; EPS uses attributable to owners only"
+        confirm_via: "numerator should be NET_PROFIT_ATTR_OWNERS, not NET_PROFIT"
+
+  - name: eps_diluted_derivation
+    numerator: { concept: FS.PNL.NET_PROFIT }
+    denominator: { concept: DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED }
+    result: { concept: FS.PNL.EPS_DILUTED }
+    tolerance: 0.02
+    note: >
+      IAS 33.31: diluted EPS adjusts both numerator (add back convertible
+      interest/dividends) and denominator (add dilutive potential shares).
+    ambiguities:
+      - id: ANTIDILUTIVE
+        description: "Potential shares excluded as antidilutive (diluted EPS > basic EPS)"
+        confirm_via: "diluted EPS = basic EPS"
+
+  - name: dividend_per_share_derivation
+    numerator: { concept: FS.SOCIE.DIVIDENDS }
+    denominator: { concept: FS.SFP.SHARES_OUTSTANDING }
+    result: { concept: DISC.EPS.DIVIDEND_PER_SHARE }
+    tolerance: 0.01
+    note: >
+      DPS = total dividends paid / shares outstanding. May differ from
+      declared dividend if share count changed during the period.
+    ambiguities:
+      - id: INTERIM_VS_FINAL
+        description: "DPS includes interim + final; SOCIE may show only final"
+        confirm_via: "delta matches interim dividend"
+
+  - name: shares_outstanding_derivation
+    numerator: { concept: FS.SFP.SHARES_ISSUED }
+    denominator_is_subtraction: true  # special case: outstanding = issued - treasury
+    denominator: { concept: FS.SFP.TREASURY_SHARES_COUNT }
+    result: { concept: FS.SFP.SHARES_OUTSTANDING }
+    check: "result = numerator - denominator"
+    note: "Shares outstanding = shares issued - treasury shares (subtraction, not division)"
+
 summation_trees:
   - parent: FS.SFP.TOTAL_ASSETS
     children: [FS.SFP.NON_CURRENT_ASSETS, FS.SFP.CURRENT_ASSETS]

@@ -13,5 +13,5 @@ concepts:
   - { id: DISC.GOODWILL.CGU_CARRYING_AMOUNT, label: "Goodwill allocated to CGU", period_type: instant }
   - { id: DISC.GOODWILL.CGU_RECOVERABLE_AMOUNT, label: "CGU recoverable amount", period_type: instant }
   - { id: DISC.GOODWILL.CGU_HEADROOM, label: "CGU headroom (recoverable - carrying)", period_type: instant }
-  - { id: DISC.GOODWILL.CGU_DISCOUNT_RATE, label: "Pre-tax discount rate used", period_type: instant }
-  - { id: DISC.GOODWILL.CGU_GROWTH_RATE, label: "Terminal growth rate", period_type: instant }
+  - { id: DISC.GOODWILL.CGU_DISCOUNT_RATE, label: "Pre-tax discount rate used", period_type: instant, unit_type: percentage }
+  - { id: DISC.GOODWILL.CGU_GROWTH_RATE, label: "Terminal growth rate", period_type: instant, unit_type: percentage }
