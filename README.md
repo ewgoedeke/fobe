@@ -63,44 +63,52 @@ Context-aware: PNL negates all amounts, SFP negates credit concepts only.
 
 ## Evaluation corpus
 
-### Validated (fixture built, checks pass)
+**30 PDFs, 22 companies, 16 industries** — parsed via Docling into `table_graphs.json`
+fixtures. Each fixture runs through the consistency engine for tag corroboration.
 
-| Document | Framework | Industry | Key findings |
-|---|---|---|---|
-| Wienerberger 2024 | IFRS | Building materials | IC leakage 909 TEUR, OCI misclassification |
-| VERBUND 2024 | IFRS | Utilities | 5 confirmed, 2 scope issues |
-| voestalpine 2024/25 | IFRS | Steel | 3 confirmed, 28 from table arithmetic |
-| KPMG IFRS IFS 2025 | IFRS | Illustrative | SFP balance ✓, 4 known gaps (discontinued ops) |
-| EuroTeleSites 2024 | **UGB** | Telecom infra | 94% corroborated, all checks pass |
-| CA Immo 2024 (EN) | **UGB** | Real estate | All checks pass, treasury shares + bonds |
+### Parsed and evaluated (22 fixtures)
 
-### Downloaded (29 PDFs, 22 companies, 16 industries)
+| Document | Tables | Rows | Framework | Industry |
+|---|---|---|---|---|
+| Wienerberger 2024 | 220 | 3000+ | IFRS | Building materials |
+| KPMG IFRS IFS 2025 | 210 | 2305 | IFRS | Illustrative |
+| Lenzing 2025 | 322 | 2953 | IFRS+UGB | Chemicals / fibres |
+| Lenzing 2024 | 304 | 2979 | IFRS+UGB | Chemicals / fibres |
+| Flughafen Wien 2024 | 291 | 2546 | IFRS+UGB | Airport |
+| AGRANA 2024 | 217 | 2349 | IFRS+UGB | Food / sugar |
+| AMAG 2024 | 246 | 1909 | IFRS+UGB | Aluminium |
+| Kapsch TrafficCom 2024 | 205 | 2240 | IFRS+UGB | ITS |
+| Frequentis 2024 | 199 | 1814 | IFRS+UGB | Defence tech / ATM |
+| EVN 2024 | 189 | 1864 | IFRS+UGB | Energy / utilities |
+| Mayr-Melnhof 2024 (full) | 186 | 1862 | IFRS+UGB | Packaging |
+| FACC 2024 | 168 | 1296 | IFRS+UGB | Aerospace |
+| DO & CO 2024 | 145 | 1393 | IFRS+UGB | Airline catering |
+| Andritz UGB 2024 | 45 | 586 | **UGB** | Plant engineering |
+| CA Immo 2024 (EN) | 38 | 360 | **UGB** | Real estate |
+| ICBC Austria 2024 | 33 | 368 | **UGB+BWG** | Banking |
+| Marinomed 2024 | 25 | 251 | IFRS+UGB | Pharma / biotech |
+| BAWAG UGB 2024 | 20 | 157 | **UGB+BWG** | Banking |
+| Mayr-Melnhof UGB 2024 | 15 | 158 | **UGB** | Packaging |
+| Andritz 2024 | 10 | 51 | IFRS | Plant engineering |
+| EuroTeleSites 2024 | 2 | 49 | **UGB** | Telecom infra |
+| CA Immo 2024 (DE) | 2 | 81 | **UGB** | Real estate |
+| Saldenliste GmbH | 2 | 44 | **UGB** | Test (EKR trial balance) |
+
+### Awaiting Docling processing (11 PDFs)
 
 | Company | Framework | Industry | UGB Einzelabschluss |
 |---|---|---|---|
-| ICBC Austria | UGB + BWG | Banking | bundled |
-| VIG Holding | UGB + VAG | Insurance | bundled |
-| **BAWAG** | UGB + BWG | Banking | **separate PDF** |
-| **RBI** | UGB + BWG | Banking | **separate PDF** |
 | **OMV** | UGB | Oil & gas | **separate PDF** |
 | **STRABAG** | UGB | Construction | **separate PDF** |
-| **Andritz** | UGB | Plant engineering | **separate PDF** |
-| **Mayr-Melnhof** | UGB | Packaging | **separate PDF** |
-| Lenzing | UGB | Chemicals / fibres | bundled |
+| **RBI** | UGB+BWG | Banking | **separate PDF** |
 | Palfinger | UGB | Cranes / lifting | bundled |
 | Zumtobel | UGB | Lighting | bundled |
-| Kapsch TrafficCom | UGB | ITS | bundled |
-| AMAG | UGB | Aluminium | bundled |
-| Flughafen Wien | UGB | Airport | bundled |
 | Pierer Mobility | UGB | Motorcycles (KTM) | bundled |
-| AGRANA | UGB | Food / sugar | bundled |
-| DO & CO | UGB | Airline catering | bundled |
-| FACC | UGB | Aerospace | bundled |
-| Frequentis | UGB | Defence tech / ATM | bundled |
-| EVN | UGB | Energy / utilities | bundled |
 | S IMMO | UGB | Real estate | bundled |
 | Warimpex | UGB | Real estate / hotels | bundled |
-| Marinomed | UGB | Pharma / biotech | bundled |
+| VIG Holding | UGB+VAG | Insurance | bundled |
+| Wolford | UGB | Luxury textiles | bundled |
+| Kapsch | UGB | ITS | bundled |
 
 ### Real errors found
 
@@ -155,11 +163,12 @@ fobe/
 │   ├── convert_saldenliste.py  # EKR trial balance → UGB statements converter
 │   ├── visualize.py            # Mermaid diagram generator
 │   ├── catalogue.yaml          # Running regression test set
-│   └── fixtures/               # Per-document expected results
-│       ├── wienerberger_2024/
-│       ├── eurotelesites_2024/
-│       ├── ca_immo_2024/
-│       ├── kpmg_ifs_2025/
+│   ├── process_corpus.sh       # Batch PDF → Docling → fixtures pipeline
+│   └── fixtures/               # Per-document table_graphs.json (22 parsed)
+│       ├── wienerberger_2024/  # + agrana, amag, andritz, bawag, ca_immo,
+│       ├── eurotelesites_2024/ #   doco, evn, facc, flughafen_wien,
+│       ├── kpmg_ifs_2025/      #   frequentis, icbc_austria, kapsch,
+│       ├── lenzing_2025/       #   lenzing, marinomed, mayr_melnhof
 │       └── saldenliste_gmbh/
 ├── sources/
 │   ├── kpmg/                   # KPMG reference PDFs (IFRS IFS, UGB, Banks, Insurers)
