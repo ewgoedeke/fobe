@@ -1,0 +1,36 @@
+{
+  "document_id": "lenzing_2024_full",
+  "entity_name": "Lenzing",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "2022",
+      "year": 2022
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "2021",
+      "year": 2021
+    },
+    "PERIOD.COMPARATIVE_4": {
+      "label": "2020",
+      "year": 2020
+    },
+    "PERIOD.COMPARATIVE_5": {
+      "label": "2017",
+      "year": 2017
+    }
+  },
+  "document_axes": {}
+}

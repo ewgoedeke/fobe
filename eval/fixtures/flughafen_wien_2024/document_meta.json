@@ -1,0 +1,16 @@
+{
+  "document_id": "flughafen_wien_2024",
+  "entity_name": "Flughafen Wien",
+  "gaap": "IFRS",
+  "industry": "AVIATION",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "Wage and salary increases 2024",
+      "year": 2024
+    }
+  },
+  "document_axes": {}
+}

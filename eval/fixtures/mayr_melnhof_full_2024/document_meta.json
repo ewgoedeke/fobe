@@ -1,0 +1,36 @@
+{
+  "document_id": "mayr_melnhof_full_2024",
+  "entity_name": "Mayr Melnhof Full",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_5": {
+      "label": "Base year - 2019",
+      "year": 2019
+    },
+    "PERIOD.COMPARATIVE_4": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "2025",
+      "year": 2025
+    }
+  },
+  "document_axes": {}
+}

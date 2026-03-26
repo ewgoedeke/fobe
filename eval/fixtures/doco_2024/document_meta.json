@@ -1,0 +1,24 @@
+{
+  "document_id": "doco_2024",
+  "entity_name": "Doco",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.COMPARATIVE": {
+      "label": "Geschäftsjahr 2024/2025",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "Geschäftsjahr 2023/2024*",
+      "year": 2023
+    },
+    "PERIOD.CURRENT": {
+      "label": "31. März 2025",
+      "year": 2025
+    }
+  },
+  "document_axes": {}
+}

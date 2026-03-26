@@ -1,0 +1,20 @@
+{
+  "document_id": "andritz_ugb_2024",
+  "entity_name": "Andritz",
+  "gaap": "UGB",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.UNITS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}

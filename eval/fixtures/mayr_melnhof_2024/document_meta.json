@@ -1,0 +1,20 @@
+{
+  "document_id": "mayr_melnhof_2024",
+  "entity_name": "Mayr Melnhof",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.UNITS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "Stand 31. Dez. 2024 | A.ANLAGEVERMÖGEN",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "Stand 31. Dez. 2023 (in | A.ANLAGEVERMÖGEN",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}

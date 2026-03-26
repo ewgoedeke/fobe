@@ -1,0 +1,20 @@
+{
+  "document_id": "eurotelesites_2024",
+  "entity_name": "Eurotelesites",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.UNITS",
+  "periods": {
+    "PERIOD.Y2024": {
+      "label": "31 December 2024",
+      "year": 2024
+    },
+    "PERIOD.Y2023": {
+      "label": "31 December 2023",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}
