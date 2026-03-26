@@ -1157,7 +1157,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -1553,7 +1553,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.NET_CHANGE_CASH",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:1:7",
@@ -1609,7 +1616,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_OPENING",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:1:8",
@@ -1668,7 +1682,17 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_CLOSING",
+            "method": "structural",
+            "confidence": 0.75,
+            "rule": "bottom_up_partial",
+            "sourceRows": [
+              "row:1:6",
+              "row:1:7"
+            ],
+            "edge": "sum_FS.CFS.CASH_CLOSING"
+          }
         }
       ],
       "aggregationGroups": [

@@ -240,6 +240,118 @@ def _classify_by_section_path(table: dict) -> str | None:
     return None
 
 
+# ── LLM classification ────────────────────────────────────────────
+
+_VALID_CONTEXTS = [
+    "PNL", "SFP", "OCI", "CFS", "SOCIE",
+    "DISC.SEGMENTS", "DISC.REVENUE", "DISC.PPE", "DISC.INTANGIBLES",
+    "DISC.GOODWILL", "DISC.INV_PROP", "DISC.LEASES", "DISC.PROVISIONS",
+    "DISC.TAX", "DISC.EMPLOYEE_BENEFITS", "DISC.EPS", "DISC.SHARE_BASED",
+    "DISC.BCA", "DISC.FIN_INST", "DISC.FAIR_VALUE", "DISC.INVENTORIES",
+    "DISC.BORROWINGS", "DISC.RELATED_PARTIES", "DISC.CONTINGENCIES",
+    "DISC.HELD_FOR_SALE", "DISC.HEDGE", "DISC.CREDIT_RISK",
+    "DISC.BIOLOGICAL_ASSETS", "DISC.GOV_GRANTS", "DISC.DIVIDENDS",
+    "DISC.ASSOCIATES", "DISC.IMPAIRMENT", "DISC.FX_RISK",
+    "DISC.INTEREST_RATE_RISK", "DISC.NCI", "DISC.RESTATEMENT",
+    "DISC.PERSONNEL", "DISC.AUDITOR", "DISC.EQUITY",
+]
+
+
+def _classify_by_llm(tables: list[dict], verbose: bool = False) -> list[str | None]:
+    """Use Claude API to classify tables that keyword matching couldn't handle.
+
+    Tries anthropic SDK first, falls back to subprocess claude call.
+    """
+    # Process in batches of 30 to stay within token limits
+    all_results = []
+    batch_size = 30
+    for batch_start in range(0, len(tables), batch_size):
+        batch = tables[batch_start:batch_start + batch_size]
+        batch_results = _classify_batch_llm(batch, verbose)
+        all_results.extend(batch_results)
+    return all_results
+
+
+def _classify_batch_llm(tables: list[dict], verbose: bool) -> list[str | None]:
+    """Classify a batch of tables via Claude."""
+    table_descriptions = []
+    for i, table in enumerate(tables):
+        rows = table.get("rows", [])
+        columns = table.get("columns", [])
+        col_headers = [c.get("headerLabel", "")[:40] for c in columns[:8]]
+        row_labels = [r.get("label", "")[:50] for r in rows[:12] if r.get("label", "").strip()]
+        page = table.get("pageNo", "?")
+        has_values = any(
+            c.get("parsedValue") is not None
+            for r in rows
+            for c in r.get("cells", [])
+        )
+
+        table_descriptions.append(
+            f"Table {i} (page {page}, {'has values' if has_values else 'no values'}):\n"
+            f"  Columns: {col_headers}\n"
+            f"  Row labels: {row_labels}"
+        )
+
+    prompt = (
+        "Classify each financial table into one of these contexts, or null if it's "
+        "not a financial data table (e.g., table of contents, audit text, regulatory references).\n\n"
+        "Valid contexts:\n"
+        + "\n".join(f"  {ctx}" for ctx in _VALID_CONTEXTS)
+        + "\n\nTables to classify:\n"
+        + "\n".join(table_descriptions)
+        + '\n\nRespond with ONLY a JSON array of strings (one per table), e.g.:\n'
+        '["PNL", "DISC.PPE", null, "SFP", "DISC.TAX"]\n\n'
+        "No explanations. Just the JSON array."
+    )
+
+    # Try anthropic SDK first
+    try:
+        import anthropic
+        client = anthropic.Anthropic()
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1024,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = response.content[0].text.strip()
+    except Exception:
+        # Fallback: use claude CLI via subprocess
+        try:
+            import subprocess
+            result = subprocess.run(
+                ["claude", "-p", prompt, "--model", "sonnet", "--output-format", "text"],
+                capture_output=True, text=True, timeout=60,
+            )
+            text = result.stdout.strip()
+        except Exception as e:
+            if verbose:
+                print(f"  [llm] Error: {e}")
+            return [None] * len(tables)
+
+    try:
+        # Extract JSON array from response (may have markdown fences)
+        import json as json_mod
+        if "```" in text:
+            text = text.split("```")[1]
+            if text.startswith("json"):
+                text = text[4:]
+        results = json_mod.loads(text.strip())
+        if isinstance(results, list) and len(results) == len(tables):
+            validated = []
+            for r in results:
+                if r in _VALID_CONTEXTS:
+                    validated.append(r)
+                else:
+                    validated.append(None)
+            return validated
+    except Exception as e:
+        if verbose:
+            print(f"  [llm] Parse error: {e}")
+
+    return [None] * len(tables)
+
+
 # ── Keyword classification ────────────────────────────────────────
 
 def _classify_by_keywords(table: dict) -> str | None:
@@ -270,14 +382,14 @@ def _classify_by_keywords(table: dict) -> str | None:
 # ── Main pipeline ─────────────────────────────────────────────────
 
 def classify_document(tg_path: str, dry_run: bool = False,
-                      verbose: bool = False) -> dict:
+                      verbose: bool = False, use_llm: bool = False) -> dict:
     """Classify all tables in a table_graphs.json file."""
     with open(tg_path) as f:
         data = json.load(f)
     tables = data.get("tables", [])
 
     stats = {"already": 0, "toc": 0, "section_path": 0, "keyword": 0,
-             "unclassified": 0}
+             "llm": 0, "unclassified": 0}
 
     # Step 1: Detect TOC
     page_map = _detect_toc(tables)
@@ -326,12 +438,28 @@ def classify_document(tg_path: str, dry_run: bool = False,
 
         stats["unclassified"] += 1
 
+    # Step 5: LLM classification for remaining unclassified tables
+    if use_llm and stats["unclassified"] > 0:
+        unclassified = [t for t in tables
+                        if not t.get("metadata", {}).get("statementComponent")]
+        if unclassified:
+            llm_results = _classify_by_llm(unclassified, verbose)
+            for table, result in zip(unclassified, llm_results):
+                if result:
+                    stats["llm"] += 1
+                    stats["unclassified"] -= 1
+                    if verbose:
+                        first_label = table["rows"][0]["label"][:30] if table["rows"] else ""
+                        print(f"  [llm]     {table['tableId']:15s} {first_label:30s} → {result}")
+                    if not dry_run:
+                        table["metadata"]["statementComponent"] = result
+
     total = len(tables)
-    classified = stats["already"] + stats["toc"] + stats["section_path"] + stats["keyword"]
-    print(f"  Classified: {classified}/{total} "
-          f"(already={stats['already']}, toc={stats['toc']}, "
-          f"section={stats['section_path']}, keyword={stats['keyword']}, "
-          f"unclassified={stats['unclassified']})")
+    classified = stats["already"] + stats["toc"] + stats["section_path"] + stats["keyword"] + stats.get("llm", 0)
+    parts = f"already={stats['already']}, toc={stats['toc']}, section={stats['section_path']}, keyword={stats['keyword']}"
+    if stats.get("llm"):
+        parts += f", llm={stats['llm']}"
+    print(f"  Classified: {classified}/{total} ({parts}, unclassified={stats['unclassified']})")
 
     if not dry_run:
         with open(tg_path, "w") as f:
@@ -345,6 +473,7 @@ def main():
         print(__doc__)
         sys.exit(1)
 
+    use_llm = "--llm" in sys.argv
     dry_run = "--dry-run" in sys.argv
     verbose = "--verbose" in sys.argv or "-v" in sys.argv
     args = [a for a in sys.argv[1:] if not a.startswith("--") and not a == "-v"]
@@ -367,7 +496,7 @@ def main():
             continue
         name = Path(path).parent.name
         print(f"\n{name}:")
-        classify_document(path, dry_run=dry_run, verbose=verbose)
+        classify_document(path, dry_run=dry_run, verbose=verbose, use_llm=use_llm)
 
 
 if __name__ == "__main__":
