@@ -16,6 +16,7 @@ Usage:
 
 import json
 import os
+import re
 import subprocess
 import sys
 from collections import defaultdict
@@ -27,6 +28,28 @@ import yaml
 # Add parent dir to path for sibling imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from relationship_graph import load_concepts, ConceptMeta, _infer_context
+
+
+# ── Pre-filter for untaggable labels ──────────────────────────────────────────
+
+_UNTAGGABLE_PATTERNS = [
+    re.compile(r"^\s*$"),                                  # empty / whitespace-only
+    re.compile(r"^\d{1,2}[./]\d{1,2}[./]\d{2,4}$"),       # dates like 31.12.2024
+    re.compile(r"^\d{4}$"),                                # bare year like 2024
+    re.compile(r"^[\d.,\s%()+-]+$"),                       # numeric-only (with formatting chars)
+    re.compile(r"^[(\[]?\d+[)\]]?$"),                      # note references like (1) or [3]
+    re.compile(r"^note\s+\d", re.IGNORECASE),              # "Note 12", "note 3.2"
+    re.compile(r"^(IAS|IFRS)\s*\d", re.IGNORECASE),       # IAS/IFRS references
+    re.compile(r"^in\s+(EUR|USD|TEUR|TUSD|Mio|T€)", re.IGNORECASE),  # unit headers
+]
+
+
+def _is_untaggable_label(label: str) -> bool:
+    """Return True if the row label is structurally untaggable (no concept match possible)."""
+    text = label.strip()
+    if not text:
+        return True
+    return any(p.search(text) for p in _UNTAGGABLE_PATTERNS)
 
 
 # ── Constants ──────────────────────────────────────────────────────────────────
@@ -64,7 +87,14 @@ def _row_summary(row: dict, value_col_indices: set[int]) -> str:
     label = (row.get("label", "").strip() or "(no label)")[:80]
     row_type = row.get("rowType", "DATA")
     pre = row.get("preTagged")
-    tagged_note = f"[already tagged: {pre['conceptId']}]" if pre else "[UNTAGGED]"
+
+    # Pre-filter: mark structurally untaggable rows so LLM skips them
+    if not pre and _is_untaggable_label(row.get("label", "")):
+        tagged_note = "[SKIP]"
+    elif pre:
+        tagged_note = f"[already tagged: {pre['conceptId']}]"
+    else:
+        tagged_note = "[UNTAGGED]"
 
     # Check if this row has any numeric values
     cells = row.get("cells", [])
@@ -95,7 +125,8 @@ def _build_table_prompt(
 
     rows = table.get("rows", [])
     untagged_row_indices = [
-        r.get("rowIdx") for r in rows if not r.get("preTagged")
+        r.get("rowIdx") for r in rows
+        if not r.get("preTagged") and not _is_untaggable_label(r.get("label", ""))
     ]
 
     concept_lines = "\n".join(
@@ -300,6 +331,9 @@ def _apply_tags(
         # Don't overwrite existing tags
         if row.get("preTagged"):
             continue
+        # Don't tag rows with untaggable labels (guard against LLM hallucination)
+        if _is_untaggable_label(row.get("label", "")):
+            continue
         if not dry_run:
             row["preTagged"] = {
                 "conceptId": concept_id,
@@ -315,13 +349,15 @@ def _apply_tags(
 # ── Table filtering ────────────────────────────────────────────────────────────
 
 def _has_untagged_value_rows(table: dict) -> bool:
-    """Return True if this table has any untagged rows with numeric values."""
+    """Return True if this table has any taggable untagged rows with numeric values."""
     columns = table.get("columns", [])
     value_col_indices = {c["colIdx"] for c in columns if c.get("role") == "VALUE"}
     if not value_col_indices:
         return False
     for row in table.get("rows", []):
         if row.get("preTagged"):
+            continue
+        if _is_untaggable_label(row.get("label", "")):
             continue
         cells = row.get("cells", [])
         has_values = any(
@@ -362,7 +398,13 @@ def tag_document(
             continue
         if not _has_untagged_value_rows(table):
             continue
-        concepts = concept_index.get(ctx, [])
+        # Filter to concepts whose primary context matches this table's context,
+        # avoiding cross-context pollution (e.g. a DISC.PPE concept appearing in SFP)
+        raw_concepts = concept_index.get(ctx, [])
+        concepts = [
+            m for m in raw_concepts
+            if _infer_context(m.concept_id) == ctx
+        ]
         if not concepts:
             if verbose:
                 print(f"  [skip] No concepts for context {ctx} (tableId={table.get('tableId')})")
@@ -457,6 +499,43 @@ def tag_document(
     return stats
 
 
+# ── Strip bad tags ────────────────────────────────────────────────────────────
+
+def _strip_bad_tags(
+    tg_path: str,
+    dry_run: bool = False,
+    verbose: bool = False,
+) -> int:
+    """Remove LLM-generated preTagged entries on rows with untaggable labels.
+
+    Returns the number of tags stripped.
+    """
+    with open(tg_path) as f:
+        data = json.load(f)
+
+    stripped = 0
+    for table in data.get("tables", []):
+        for row in table.get("rows", []):
+            pre = row.get("preTagged")
+            if not pre:
+                continue
+            if pre.get("method") != METHOD:
+                continue
+            if _is_untaggable_label(row.get("label", "")):
+                stripped += 1
+                if verbose:
+                    print(f"  [strip] row {row.get('rowIdx')} label={row.get('label', '')!r} "
+                          f"concept={pre.get('conceptId')} (table={table.get('tableId')})")
+                if not dry_run:
+                    del row["preTagged"]
+
+    if not dry_run and stripped > 0:
+        with open(tg_path, "w") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+    return stripped
+
+
 # ── Coverage reporting ────────────────────────────────────────────────────────
 
 def _count_coverage(tg_path: str) -> tuple[int, int]:
@@ -519,9 +598,11 @@ def main():
                         help=f"Claude model alias (default: {MODEL_SHORT})")
     parser.add_argument("--concurrency", type=int, default=DEFAULT_CONCURRENCY,
                         help=f"Max parallel workers for --all (default: {DEFAULT_CONCURRENCY})")
+    parser.add_argument("--strip-bad", action="store_true",
+                        help="Remove existing LLM tags on rows with untaggable labels")
     args = parser.parse_args()
 
-    if not args.path and not args.run_all:
+    if not args.path and not args.run_all and not args.strip_bad:
         parser.print_help()
         sys.exit(1)
 
@@ -531,6 +612,24 @@ def main():
 
     if args.verbose:
         print(f"Repo root: {repo_root}")
+
+    # Handle --strip-bad mode
+    if args.strip_bad:
+        if args.path:
+            paths = [args.path]
+        else:
+            paths = _find_all_fixtures(repo_root)
+        total_stripped = 0
+        for p in paths:
+            fixture_name = Path(p).parent.name
+            n = _strip_bad_tags(p, dry_run=args.dry_run, verbose=args.verbose)
+            if n > 0:
+                print(f"  {fixture_name}: stripped {n} bad tags")
+            total_stripped += n
+        print(f"\nTotal: {total_stripped} bad tags {'would be ' if args.dry_run else ''}stripped")
+        if args.dry_run:
+            print("(dry run — no changes written)")
+        sys.exit(0)
 
     concept_index = _build_concept_index(repo_root)
     if args.verbose:
