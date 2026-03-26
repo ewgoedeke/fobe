@@ -5,7 +5,7 @@ check_consistency.py — Three-pass structural consistency checker.
 Replaces check_cross_reference.py with ontology-driven validation.
 
 Pass 1: Validate DECLARED relationships (counterparts.yaml + concept metadata)
-  → VALID_DISAGGREGATION, VALID_TIE, BROKEN_RELATIONSHIP, IC_LEAKAGE
+  → VALID_DISAGGREGATION, VALID_TIE, BROKEN_RELATIONSHIP, DECOMPOSITION_RESIDUAL
 
 Pass 2: Explain KNOWN mismatch patterns (mismatch_patterns.yaml)
   → EXPLAINED_MISMATCH with pattern ID
@@ -47,7 +47,7 @@ class Category(Enum):
     BROKEN_RELATIONSHIP = "BROKEN_RELATIONSHIP"
     EXPLAINED_MISMATCH = "EXPLAINED_MISMATCH"
     UNEXPLAINED_INCONSISTENCY = "UNEXPLAINED_INCONSISTENCY"
-    IC_LEAKAGE = "IC_LEAKAGE"
+    DECOMPOSITION_RESIDUAL = "DECOMPOSITION_RESIDUAL"
 
 
 @dataclass
@@ -575,7 +575,7 @@ def _triage_residual(
             for amb in edge.ambiguities:
                 if amb.get("id") == amb_id:
                     return {
-                        "category": Category.IC_LEAKAGE,
+                        "category": Category.DECOMPOSITION_RESIDUAL,
                         "severity": amb.get("severity", "WARNING"),
                         "message": f"IC confirmed: {{face}}={{face_val:,.0f}}, external={{detail_sum:,.0f}}, IC={{residual:,.0f}} (matches tagged {confirm_cid}) [{{pk}}]",
                         "extra_concepts": [confirm_cid],
@@ -595,7 +595,7 @@ def _triage_residual(
     possible = [amb.get("id") for amb in edge.ambiguities if amb.get("id") != "ROUNDING"]
 
     return {
-        "category": Category.IC_LEAKAGE,
+        "category": Category.DECOMPOSITION_RESIDUAL,
         "severity": "INFO",
         "message": f"Disaggregation residual: {{face}}={{face_val:,.0f}}, SUM={{detail_sum:,.0f}}, Δ={{residual:,.0f}} — possible: {', '.join(possible) or 'unknown cause'} [{{pk}}]",
         "extra_details": {"ambiguity": "UNRESOLVED", "possible_causes": possible},
@@ -930,14 +930,14 @@ def pass1_validate(graph: OntologyGraph, facts: dict) -> list[Finding]:
                 ))
             elif ic_amount == 0 and delta > TOLERANCE:
                 findings.append(Finding(
-                    category=Category.IC_LEAKAGE,
+                    category=Category.DECOMPOSITION_RESIDUAL,
                     edge_name=edge.name,
                     severity="WARNING",
                     expected=face_val,
                     actual=ext_val,
                     delta=delta,
                     concepts=[edge.ic_face_concept, edge.ic_external_concept or ""],
-                    message=f"IC LEAKAGE: {edge.ic_face_concept}={face_val:,.0f}, external={ext_val:,.0f}, IC not tagged, Δ={delta:,.0f} [{pk}]",
+                    message=f"Decomposition residual: {edge.ic_face_concept}={face_val:,.0f}, external={ext_val:,.0f}, IC not tagged, Δ={delta:,.0f} [{pk}]",
                     details={"period": pk, "ic_missing": True},
                 ))
             else:
@@ -1496,7 +1496,7 @@ def main():
         Category.VALID_DISAGGREGATION,
         Category.VALID_TIE,
         Category.BROKEN_RELATIONSHIP,
-        Category.IC_LEAKAGE,
+        Category.DECOMPOSITION_RESIDUAL,
         Category.EXPLAINED_MISMATCH,
         Category.UNEXPLAINED_INCONSISTENCY,
     ]
@@ -1504,7 +1504,7 @@ def main():
         Category.VALID_DISAGGREGATION: "✅",
         Category.VALID_TIE: "✅",
         Category.BROKEN_RELATIONSHIP: "❌",
-        Category.IC_LEAKAGE: "⚠️",
+        Category.DECOMPOSITION_RESIDUAL: "⚠️",
         Category.EXPLAINED_MISMATCH: "ℹ️",
         Category.UNEXPLAINED_INCONSISTENCY: "❓",
     }
@@ -1530,7 +1530,7 @@ def main():
             print(f"  {icon} {cat.value}: {count}")
 
     errors = len(by_category.get(Category.BROKEN_RELATIONSHIP.value, []))
-    ic_leak = len(by_category.get(Category.IC_LEAKAGE.value, []))
+    ic_leak = len(by_category.get(Category.DECOMPOSITION_RESIDUAL.value, []))
     return 1 if errors > 0 else 0
 
 

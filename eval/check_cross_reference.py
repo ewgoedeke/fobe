@@ -147,7 +147,7 @@ def check_revenue_consistency(tables):
             if best_match and best_delta > 0:
                 ic_val = segment_ic.get(best_match[0], 0)
                 issues.append({
-                    'check': 'REVENUE_IC_LEAKAGE',
+                    'check': 'REVENUE_DECOMPOSITION_RESIDUAL',
                     'severity': 'WARNING' if best_delta < abs(pnl_val) * 0.01 else 'ERROR',
                     'pnl_face_revenue': pnl_val,
                     'segment_external_revenue': best_match[1],

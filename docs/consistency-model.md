@@ -37,7 +37,7 @@ Uses the ontology graph (counterparts.yaml + concept metadata) to check:
 | **CROSS_STATEMENT_TIE** | `cross_statement_ties` | trigger amount = requires amount |
 | **IC_DECOMPOSITION** | `ic_decomposition` | face = external + IC |
 
-Results: `VALID_DISAGGREGATION`, `VALID_TIE`, `BROKEN_RELATIONSHIP`, `IC_LEAKAGE`
+Results: `VALID_DISAGGREGATION`, `VALID_TIE`, `BROKEN_RELATIONSHIP`, `DECOMPOSITION_RESIDUAL`
 
 **Same-table preference**: When a concept appears in multiple tables
 (e.g., 10-year overview vs primary statement), the engine prefers the
@@ -84,7 +84,7 @@ Result: `UNEXPLAINED_INCONSISTENCY`
 | `VALID_DISAGGREGATION` | Declared relationship holds | None |
 | `VALID_TIE` | Cross-statement tie holds | None |
 | `BROKEN_RELATIONSHIP` | Declared relationship fails | ERROR — investigate |
-| `IC_LEAKAGE` | face ≠ external + IC | WARNING — IC not eliminated |
+| `DECOMPOSITION_RESIDUAL` | face ≠ external + IC | WARNING — unexplained residual |
 | `EXPLAINED_MISMATCH` | Known pattern explains difference | INFO — document |
 | `UNEXPLAINED_INCONSISTENCY` | No relationship, no pattern | WARNING — investigate |
 

@@ -117,7 +117,7 @@ def build_score_registry(facts: dict) -> dict[tuple, FactScore]:
 
 # Map Finding categories to check pass/fail/explained
 _PASSING_CATEGORIES = {"VALID_DISAGGREGATION", "VALID_TIE"}
-_EXPLAINED_CATEGORIES = {"EXPLAINED_MISMATCH", "UNEXPLAINED_INCONSISTENCY", "IC_LEAKAGE"}
+_EXPLAINED_CATEGORIES = {"EXPLAINED_MISMATCH", "UNEXPLAINED_INCONSISTENCY", "DECOMPOSITION_RESIDUAL"}
 
 
 def apply_findings_to_scores(
