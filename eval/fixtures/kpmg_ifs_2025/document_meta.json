@@ -1,0 +1,62 @@
+{
+  "document_id": "kpmg_ifs_2025",
+  "entity_name": "Kpmg Ifs",
+  "gaap": "IFRS",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.Y2025": {
+      "label": "31 December 2025",
+      "year": 2025
+    },
+    "PERIOD.Y2024": {
+      "label": "31 December 2024 restated* b",
+      "year": 2024
+    },
+    "PERIOD.Y2026": {
+      "label": "2026",
+      "year": 2026
+    },
+    "PERIOD.Y2027": {
+      "label": "2027",
+      "year": 2027
+    },
+    "PERIOD.Y2028": {
+      "label": "2028",
+      "year": 2028
+    },
+    "PERIOD.Y2029": {
+      "label": "2029",
+      "year": 2029
+    }
+  },
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "Operations",
+      "SEG.002": "Reportable segments.Non-recycled Papers",
+      "SEG.003": "Reportable segments.Recycled Papers",
+      "SEG.004": "Forestry",
+      "SEG.005": "Timber Products",
+      "SEG.006": "Research and Development",
+      "SEG.007": "Total reportable segments",
+      "SEG.008": "All other segments",
+      "SEG.009": "Reportable segments",
+      "SEG.010": "Reportable segment totals",
+      "SEG.011": "Reportable segments.Packaging (discontinued) d"
+    },
+    "AXIS.GEOGRAPHY_DOC": {
+      "GEO.001": "Basis of preparation 1. Reporting entity 2. Basis of accounting 3. Functional and 4. Use of judgements 5. Change in accounting Performance for the year 6. Operating segments Discontinued operation 8. Revenue 9. Income and expenses 10. Net finance costs Earnings per share benefits Share-based payment Employee benefits",
+      "GEO.002": "Adjusted earnings before interest, tax, depreciation and amortisation (adjusted EBITDA)",
+      "GEO.003": "All foreign countries",
+      "GEO.004": "Germany",
+      "GEO.005": "UK",
+      "GEO.006": "US",
+      "GEO.007": "Revenue from contracts with customers b",
+      "GEO.008": "Europe",
+      "GEO.009": "Revenue from contracts with customers",
+      "GEO.010": "In thousands of EUR"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "document_id": "omv_ugb_2024",
+  "entity_name": "Omv",
+  "gaap": "UGB",
+  "industry": "OIL_GAS",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "in EUR 2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "in EUR 1.000 2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "Plan 2022",
+      "year": 2022
+    }
+  },
+  "document_axes": {}
+}

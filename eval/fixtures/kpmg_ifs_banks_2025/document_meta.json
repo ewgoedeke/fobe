@@ -1,0 +1,20 @@
+{
+  "document_id": "kpmg_ifs_banks_2025",
+  "entity_name": "Kpmg Ifs Banks",
+  "gaap": "IFRS",
+  "industry": "BANKING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "31 December 2025",
+      "year": 2025
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "31 December 2024",
+      "year": 2024
+    }
+  },
+  "document_axes": {}
+}

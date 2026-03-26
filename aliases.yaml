@@ -4,22 +4,481 @@
 #
 # The canonical label comes from concepts/*.yaml. These aliases cover
 # common alternative phrasings found in real financial documents.
+# Entity-specific labels (segment names, PPE classes) belong in
+# document_meta.json, not here.
 
 aliases:
 
-  # ── PNL ──────────────────────────────────────────────────────────
-  FS.PNL.REVENUE:
-    - revenues
-    - total revenues
-    - net revenues
-    - net revenue
-    - turnover
-    - sales
-    - sales revenue
-    - umsatz
-    - erlöse
-    - nettoumsatz
+  # ── DISC.BANK_REG ──
+  DISC.BANK_REG.CET1_RATIO:
+    - cet1 ratio
+    - common equity tier 1 ratio
+    - kernkapitalquote
+    - harte kernkapitalquote
+  DISC.BANK_REG.COST_TO_INCOME_RATIO:
+    - cost/income ratio
+    - cost-income ratio
+    - kosten-ertrags-relation
+    - aufwand-ertrag-koeffizient
+  DISC.BANK_REG.RETURN_ON_EQUITY:
+    - return on equity
+    - roe
+    - eigenkapitalrendite
+    - eigenkapitalrentabilität
+  DISC.BANK_REG.TOTAL_CAPITAL_RATIO:
+    - total capital ratio
+    - gesamtkapitalquote
 
+  # ── DISC.BORROWINGS ──
+  DISC.BORROWINGS.BANK_LOANS:
+    - liabilities to banks
+  DISC.BORROWINGS.BONDS:
+    - bonds
+  DISC.BORROWINGS.NET_DEBT:
+    - net debt
+  DISC.BORROWINGS.OTHER_BORROWINGS:
+    - liabilities to non-banks
+
+  # ── DISC.CREDIT_RISK ──
+  DISC.CREDIT_RISK.INSURED_RECEIVABLES:
+    - thereof insured against default
+  DISC.CREDIT_RISK.NOT_PAST_DUE:
+    - not due
+  DISC.CREDIT_RISK.PAST_DUE_30:
+    - upto 30 days overdue
+  DISC.CREDIT_RISK.PAST_DUE_60:
+    - 31 to 60 days overdue
+  DISC.CREDIT_RISK.PAST_DUE_90:
+    - 61 to 90 days overdue
+  DISC.CREDIT_RISK.PAST_DUE_90_PLUS:
+    - more than 90 days overdue
+
+  # ── DISC.DERIVATIVE_INSTRUMENTS ──
+  DISC.DERIVATIVE_INSTRUMENTS.NOTIONAL_AMOUNT:
+    - forward exchange contracts and swaps
+    - interest rate hedging instruments
+    - foreign currency hedging instruments
+    - interest rate and foreign currency hedging instruments
+
+  # ── DISC.DIVIDENDS ──
+  DISC.DIVIDENDS.DIVIDEND_PAID:
+    - dividends
+    - dividend
+
+  # ── DISC.EBITDA ──
+  DISC.EBITDA.EBITDA:
+    - ebitda
+    - ebitda margin
+    - operating ebitda margin
+
+  # ── DISC.EMPLOYEE_BENEFITS ──
+  DISC.EMPLOYEE_BENEFITS.DBO_OPENING:
+    - defined benefit obligation at 1 january
+    - present value of defined benefit obligation - opening
+    - balance at 1 january
+
+  # ── DISC.ENTITY_LIST ──
+  DISC.ENTITY_LIST.ADDITIONS:
+    - included during reporting year for the first time
+  DISC.ENTITY_LIST.COUNT:
+    - thereof foreign companies
+    - thereof domestic companies
+  DISC.ENTITY_LIST.DISPOSALS:
+    - merged/ liquidated during the reporting period
+    - divested during the reporting period
+  DISC.ENTITY_LIST.SCOPE_CHANGE:
+    - change in consolidation method
+
+  # ── DISC.EPS ──
+  DISC.EPS.DIVIDEND_PER_SHARE:
+    - dividend per share
+    - dividende je aktie
+    - ausschüttung je aktie
+    - dividends per share
+  DISC.EPS.WEIGHTED_AVG_SHARES_BASIC:
+    - weighted-average number of ordinary shares (basic)
+    - weighted average number of ordinary shares
+    - weighted-average number of ordinary shares
+  DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED:
+    - weighted-average number of ordinary shares (diluted)
+    - diluted weighted average number of shares
+
+  # ── DISC.EPS_BASIC ──
+  DISC.EPS_BASIC.EPS:
+    - earnings per share
+    - basic earnings per share in eur
+    - earnings per share (ineur)
+
+  # ── DISC.EPS_DENOMINATOR_BASIC ──
+  DISC.EPS_DENOMINATOR_BASIC.WEIGHTED_SHARES:
+    - shares outstanding (weighted)
+    - weighted average
+
+  # ── DISC.EPS_DILUTED ──
+  DISC.EPS_DILUTED.EPS:
+    - diluted earnings per share in eur
+
+  # ── DISC.FINANCIAL_INSTRUMENTS ──
+  DISC.FINANCIAL_INSTRUMENTS.AMORTISED_COST:
+    - amortised cost
+  DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT:
+    - carrying amount
+    - financial instruments
+  DISC.FINANCIAL_INSTRUMENTS.FAIR_VALUE:
+    - fair value
+    - shares in funds
+    - stock
+    - other securities
+    - securities
+  DISC.FINANCIAL_INSTRUMENTS.FVOCI:
+    - fair value through other comprehensive income
+  DISC.FINANCIAL_INSTRUMENTS.FVTPL:
+    - fair value through profit or loss
+
+  # ── DISC.INCOME_TAX ──
+  DISC.INCOME_TAX.CURRENT_TAX:
+    - current tax
+  DISC.INCOME_TAX.DEFERRED_TAX:
+    - deferred tax
+  DISC.INCOME_TAX.EFFECTIVE_TAX_RATE:
+    - effective tax rate
+    - tax rate
+
+  # ── DISC.INTANGIBLE_ASSETS ──
+  DISC.INTANGIBLE_ASSETS.AMORTISATION_CHARGE:
+    - amortisation
+    - amortization
+
+  # ── DISC.INVENTORY ──
+  DISC.INVENTORY.FINISHED_GOODS:
+    - finished goods
+    - finished goods and merchandise
+    - fertige erzeugnisse und waren
+  DISC.INVENTORY.RAW_MATERIALS:
+    - raw materials and consumables
+    - raw materials
+    - roh-, hilfs- und betriebsstoffe
+  DISC.INVENTORY.WORK_IN_PROGRESS:
+    - work in progress
+    - unfertige erzeugnisse
+
+  # ── DISC.MEASURE ──
+  DISC.MEASURE.ADJUSTED_EARNINGS:
+    - adjusted earnings
+  DISC.MEASURE.ADMIN_RATIO:
+    - administrative expenses to revenues
+  DISC.MEASURE.ASSET_COVERAGE:
+    - asset coverage
+  DISC.MEASURE.CAPITAL_EMPLOYED:
+    - capital employed
+  DISC.MEASURE.EQUITY_RATIO:
+    - equity ratio
+  DISC.MEASURE.GEARING:
+    - gearing
+  DISC.MEASURE.GROSS_MARGIN:
+    - gross profit to revenues
+  DISC.MEASURE.INTEREST_COVERAGE:
+    - operating ebitda/interest result
+  DISC.MEASURE.MARKET_CAP:
+    - market capitalization
+    - market capitalization at year-end
+  DISC.MEASURE.NET_DEBT_TO_EBITDA:
+    - net debt/operating ebitda
+  DISC.MEASURE.PE_RATIO:
+    - p/e ratio high
+    - p/e ratio low
+    - p/e ratio at year-end
+  DISC.MEASURE.ROCE:
+    - roce
+  DISC.MEASURE.SELLING_RATIO:
+    - selling expenses to revenues
+  DISC.MEASURE.SHARE_PRICE:
+    - share price at year-end
+    - share price high
+    - share price low
+  DISC.MEASURE.WORKING_CAPITAL:
+    - working capital
+  DISC.MEASURE.WORKING_CAPITAL_RATIO:
+    - working capital to revenues
+
+  # ── DISC.PERSONNEL ──
+  DISC.PERSONNEL.HEADCOUNT_AVG:
+    - average number of employees
+    - durchschnittliche mitarbeiterzahl
+    - mitarbeiter durchschnitt
+    - number of employees (average)
+    - headcount
+
+  # ── DISC.PPE ──
+  DISC.PPE.ADDITIONS:
+    - additions
+  DISC.PPE.DEPRECIATION_CHARGE:
+    - depreciation
+    - depreciation charge
+  DISC.PPE.DISPOSALS:
+    - disposals
+  DISC.PPE.FX_AND_OTHER:
+    - currency translation and other
+  DISC.PPE.IMPAIRMENT:
+    - impairment
+  DISC.PPE.REVERSAL_IMPAIRMENT:
+    - reversal of impairments
+  DISC.PPE.SCOPE_CHANGES:
+    - change in the scope of consolidation
+
+  # ── DISC.PROVISIONS ──
+  DISC.PROVISIONS.CLOSING:
+    - balance at end of period
+    - closing balance
+  DISC.PROVISIONS.OPENING:
+    - balance at beginning of period
+    - opening balance
+  DISC.PROVISIONS.OTHER:
+    - other provisions
+  DISC.PROVISIONS.RESTRUCTURING:
+    - provision for restructuring
+  DISC.PROVISIONS.WARRANTY:
+    - provision for warranties
+
+  # ── DISC.REFUND_LIABILITY ──
+  DISC.REFUND_LIABILITY.CARRYING_AMOUNT:
+    - refund liabilities
+
+  # ── DISC.RELATED_PARTY ──
+  DISC.RELATED_PARTY.TRANSACTION_AMOUNT:
+    - related party transactions
+
+  # ── DISC.RETIREMENT_BENEFITS ──
+  DISC.RETIREMENT_BENEFITS.DISCOUNT_RATE:
+    - discount rate
+  DISC.RETIREMENT_BENEFITS.MORTALITY:
+    - life expectancy
+  DISC.RETIREMENT_BENEFITS.SALARY_GROWTH:
+    - salary increases
+  DISC.RETIREMENT_BENEFITS.TURNOVER_RATE:
+    - employee turnover
+
+  # ── DISC.REVENUE ──
+  DISC.REVENUE.TOTAL_REVENUE:
+    - revenue from contracts with customers
+    - total revenue
+    - umsatzerlöse
+
+  # ── DISC.SEGMENTS ──
+  DISC.SEGMENTS.CAPEX:
+    - capital expenditure
+    - capex
+    - additions to non-current assets
+    - investitionen
+  DISC.SEGMENTS.EXTERNAL_REVENUE:
+    - external revenues
+    - external revenue
+    - revenue from external customers
+    - außenumsatz
+    - außenumsätze
+  DISC.SEGMENTS.INTERSEGMENT_REVENUE:
+    - intercompany revenues
+    - intercompany revenue
+    - inter-segment revenue
+    - intersegment revenue
+    - innenumsatz
+    - innenumsätze
+  DISC.SEGMENTS.SEGMENT_ASSETS:
+    - segment assets
+  DISC.SEGMENTS.SEGMENT_LIABILITIES:
+    - segment liabilities
+  DISC.SEGMENTS.TOTAL_REVENUE:
+    - segment revenue
+    - total segment revenue
+    - segmentumsatz
+
+  # ── DISC.STAFF_COSTS ──
+  DISC.STAFF_COSTS.HEADCOUNT:
+    - number of employees
+    - øemployees
+
+  # ── DISC.TAX ──
+  DISC.TAX.CURRENT_TAX_EXPENSE:
+    - current tax expense
+    - current income tax
+    - laufender steueraufwand
+  DISC.TAX.DEFERRED_TAX_EXPENSE:
+    - deferred tax expense
+    - deferred tax expense/income
+    - deferred tax income
+    - latenter steueraufwand
+
+  # ── FS.CFS ──
+  FS.CFS.ACQUISITION_SUBSIDIARIES:
+    - acquisition of subsidiaries
+    - net payments madefor the acquisition of companies
+  FS.CFS.CAPEX:
+    - capital expenditures
+    - purchase of property, plant and equipment
+    - payments madefor property, plant and equipment and intangible assets
+    - total investments
+  FS.CFS.CASH_CLOSING:
+    - cash and cash equivalents at 31 december
+    - cash and cash equivalents at end of period
+    - zahlungsmittel am ende der periode
+    - cash at end of period
+    - cash and cash equivalents at the end of the period
+  FS.CFS.CASH_FROM_FINANCING:
+    - cash flows from financing activities
+    - cash flow from financing activities
+  FS.CFS.CASH_FROM_INVESTING:
+    - cash flows from investing activities
+    - cash flow from investing activities
+  FS.CFS.CASH_FROM_OPERATIONS:
+    - cash generated from operations
+    - cash flow from operating activities
+  FS.CFS.CASH_OPENING:
+    - cash and cash equivalents at 1 january
+    - cash and cash equivalents at beginning of period
+    - zahlungsmittel am anfang der periode
+    - cash at beginning of period
+    - cash and cash equivalents at the beginning of the period
+  FS.CFS.CHANGE_FINANCIAL_ASSETS:
+    - increase/decrease in securities and other financial assets
+  FS.CFS.CHANGE_INVENTORIES:
+    - increase/decrease in inventories
+  FS.CFS.CHANGE_OTHER_WORKING_CAPITAL:
+    - increase/decrease in other net current assets
+  FS.CFS.CHANGE_PAYABLES:
+    - increase/decrease in trade payables
+  FS.CFS.CHANGE_PROVISIONS:
+    - increase/decrease in non-current provisions
+  FS.CFS.CHANGE_RECEIVABLES:
+    - increase/decrease in trade receivables
+  FS.CFS.DIRECT_PAID_SUPPLIERS_EMPLOYEES:
+    - cash paid to suppliers and employees
+  FS.CFS.DIRECT_RECEIPTS_CUSTOMERS:
+    - cash receipts from customers
+  FS.CFS.DISPOSAL_SUBSIDIARIES:
+    - proceeds from disposal of subsidiaries
+    - net proceeds from the sale of companies
+  FS.CFS.DIVIDENDS_FROM_ASSOCIATES:
+    - dividend payments from associates and joint ventures
+  FS.CFS.DIVIDENDS_PAID:
+    - dividends paid
+  FS.CFS.DIVIDENDS_PAID_NCI:
+    - dividends paid to non-controlling interests
+  FS.CFS.FREE_CASH_FLOW:
+    - free cash flow
+  FS.CFS.FX_EFFECT:
+    - effects of exchange rate fluctuations on cash held
+  FS.CFS.GAIN_LOSS_DISPOSAL:
+    - gains/losses from the disposal of fixed and financial assets
+  FS.CFS.GROSS_CASH_FLOW:
+    - gross cash flow
+  FS.CFS.INTEREST_PAID:
+    - interest paid
+  FS.CFS.INTEREST_RECEIVED:
+    - interest received
+  FS.CFS.NET_CASH_FINANCING:
+    - net cash used in financing activities
+    - net cash from financing activities
+    - cashflow aus finanzierungstätigkeit
+  FS.CFS.NET_CASH_INVESTING:
+    - net cash used in investing activities
+    - net cash from investing activities
+    - cashflow aus investitionstätigkeit
+  FS.CFS.NET_CASH_OPERATING:
+    - net cash from operating activities
+    - cash flows from operating activities
+    - cashflow aus betrieblicher tätigkeit
+  FS.CFS.NET_CHANGE_CASH:
+    - net increase in cash
+    - net change in cash and cash equivalents
+    - change in cash and cash equivalents
+  FS.CFS.OTHER_NON_CASH:
+    - other non-cash income and expenses
+  FS.CFS.PROCEEDS_BORROWINGS:
+    - proceeds from borrowings
+    - cash inflows from the increase in short-term financial liabilities
+    - cash inflows from the increase in long-term financial liabilities
+  FS.CFS.PROCEEDS_DISPOSAL:
+    - proceeds from the sale of assets (including financial assets)
+  FS.CFS.PURCHASE_INVESTMENTS:
+    - payments madefor investments in financial assets
+  FS.CFS.PURCHASE_TREASURY_SHARES:
+    - purchase of treasury shares
+  FS.CFS.REPAYMENT_BORROWINGS:
+    - repayment of borrowings
+    - cash outflows from the repayment of short-term financial liabilities
+  FS.CFS.REPAYMENT_LEASES:
+    - cash outflows from the repayment of lease liabilities
+  FS.CFS.TAXES_PAID:
+    - income taxes paid
+    - taxes paid
+
+  # ── FS.OCI ──
+  FS.OCI.CASH_FLOW_HEDGES:
+    - effective portion of changes in fair value of cash flow hedges
+    - cash flow hedges - effective portion of changes in fair value
+    - cash flow hedges
+  FS.OCI.CFH_RECLASS_TO_PNL:
+    - cash flow hedges - reclassified to profit or loss
+    - cash flow hedges — reclassified to profit or loss
+  FS.OCI.COST_OF_HEDGING_RECLASS_TO_PNL:
+    - cost of hedging reserve - reclassified to profit or loss
+    - cost of hedging reserve — reclassified to profit or loss
+  FS.OCI.DEBT_INVESTMENTS_FVOCI:
+    - debt investments at fvoci - net change in fair value
+    - net change in fair value of debt instruments at fvoci
+  FS.OCI.EQUITY_INVESTMENTS_FVOCI:
+    - equity investments at fvoci - net change in fair value
+    - equity investments at fvoci
+  FS.OCI.FOREIGN_CURRENCY_TRANSLATION:
+    - foreign currency translation
+    - currency translation differences
+    - foreign exchange adjustments
+    - foreign exchange adjustments to investments in associates and joint ventures
+  FS.OCI.FVOCI_DEBT_RECLASS_TO_PNL:
+    - debt investments at fvoci - reclassified to profit or loss
+    - debt investments at fvoci — reclassified to profit or loss
+  FS.OCI.FX_DIFFERENCES:
+    - foreign currency translation differences
+    - exchange differences on translation of foreign operations
+    - foreign currency translation differences for foreign operations
+    - währungsumrechnung
+  FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE:
+    - reclassification of foreign currency differences on loss of significant influence
+  FS.OCI.ITEMS_MAY_RECLASSIFY:
+    - items that may be reclassified subsequently to profit or loss
+  FS.OCI.ITEMS_NOT_RECLASSIFIED:
+    - items that will not be reclassified to profit or loss
+  FS.OCI.OCI_TOTAL:
+    - other comprehensive income
+  FS.OCI.REMEASUREMENTS_DBO:
+    - remeasurements of defined benefit liability
+    - remeasurements of the defined benefit liability (asset)
+    - remeasurements of defined benefit plans
+    - neubewertungen der nettopensionsschuld
+  FS.OCI.REVALUATION_PPE:
+    - revaluation of property, plant and equipment
+    - neubewertung von sachanlagen
+  FS.OCI.TAX_NON_RECLASSIFIABLE:
+    - related tax on non-reclassifiable items
+    - related tax
+  FS.OCI.TAX_RECLASSIFIABLE:
+    - related tax on reclassifiable items
+  FS.OCI.TOTAL_COMPREHENSIVE_INCOME:
+    - total comprehensive income for the period
+    - total comprehensive income
+    - gesamtergebnis der periode
+  FS.OCI.TOTAL_OCI:
+    - other comprehensive income for the period, net of tax
+    - total other comprehensive income
+    - total other comprehensive income for the period
+    - sonstiges ergebnis
+
+  # ── FS.PNL ──
+  FS.PNL.ADMIN_EXPENSES:
+    - administrative expenses
+    - general and administrative expenses
+    - verwaltungskosten
+    - verwaltungsaufwand
   FS.PNL.COST_OF_SALES:
     - cost of goods sold
     - cost of products sold
@@ -27,26 +486,107 @@ aliases:
     - cost of revenues
     - herstellungskosten der zur erzielung der umsatzerlöse erbrachten leistungen
     - herstellkosten
-
-  FS.PNL.GROSS_PROFIT:
-    - gross margin
-    - bruttoergebnis
-    - bruttoergebnis vom umsatz
-    - rohertrag
-
-  FS.PNL.OPERATING_PROFIT:
-    - operating result
-    - operating income
-    - operating profit/loss (ebit)
-    - ebit
-    - betriebsergebnis
-
+    - cost of sales
+  FS.PNL.DEPRECIATION_AMORTISATION:
+    - depreciation and amortization
+    - depreciation & amortisation
+    - d&a
+    - abschreibungen auf immaterielle vermögenswerte und sachanlagen
+    - depreciation and amortisation
+    - depreciation, amortization and impairment
+    - depreciation, amortization, impairments and special write-offs
   FS.PNL.EBITDA:
     - operating ebitda
     - adjusted ebitda
     - adjusted earnings before interest, tax, depreciation and amortisation (adjusted ebitda)
     - adjusted earnings before interest, tax, depreciation and amortization
-
+  FS.PNL.EPS_BASIC:
+    - basic earnings per share
+    - earnings per share basic
+    - ergebnis je aktie
+    - ergebnis je aktie unverwässert
+    - unverwässertes ergebnis je aktie
+    - basic eps
+    - basic eps (eur)
+    - earnings per share (basic)
+    - basic earnings per share (eur)
+  FS.PNL.EPS_DILUTED:
+    - diluted earnings per share
+    - earnings per share diluted
+    - verwässertes ergebnis je aktie
+    - ergebnis je aktie verwässert
+    - diluted eps
+    - diluted eps (eur)
+    - earnings per share (diluted)
+    - diluted earnings per share (eur)
+  FS.PNL.FINANCE_COSTS:
+    - interest expense
+    - finance expense
+    - financial expenses
+    - zinsaufwand
+    - zinsen und ähnliche aufwendungen
+    - finance costs
+    - interest expenses
+    - interest and similar expenses
+    - interest expense on lease liabilities
+    - net interest result from defined benefit pension and severance obligations as well as anniversary bonuses
+    - valuation of derivative financial instruments
+    - valuation of other investments
+    - recycling foreign currency effects from deconsolidation
+    - foreign exchange differences
+    - bank charges
+  FS.PNL.FINANCE_INCOME:
+    - interest income
+    - finance revenue
+    - financial income
+    - zinserträge
+    - sonstige zinsen und ähnliche erträge
+    - finance income
+    - interest and similar income
+    - income from third parties (dividends)
+    - result from the disposal of investments
+    - write-ups on financial instruments
+  FS.PNL.GROSS_PROFIT:
+    - gross margin
+    - bruttoergebnis
+    - bruttoergebnis vom umsatz
+    - rohertrag
+    - gross profit
+  FS.PNL.IMPAIRMENT_EXPENSE:
+    - impairment losses
+    - impairment charges
+    - wertminderungen
+    - impairment charges to assets and special write-offs related to restructuring
+    - impairment charges to assets, special write-offs and other valuation effects
+    - impairment of financial instruments
+  FS.PNL.IMPAIRMENT_RECEIVABLES:
+    - impairment loss on trade receivables and contract assets
+    - impairment loss on trade receivables
+    - wertberichtigungen auf forderungen
+  FS.PNL.INCOME_TAX_EXPENSE:
+    - income taxes
+    - income tax
+    - tax expense
+    - ertragsteuern
+    - steuern vom einkommen und vom ertrag
+    - steuern vom einkommen
+    - income tax expense
+  FS.PNL.MATERIAL_COSTS:
+    - raw materials and consumables used
+    - cost of materials
+    - materialaufwand
+    - aufwand für material
+    - material costs
+    - cost of material
+  FS.PNL.NET_FINANCE_COSTS:
+    - net financial result
+    - financial result
+    - net interest
+    - finanzergebnis
+    - finanzerfolg
+    - net finance costs
+    - interest result
+    - other financial result
   FS.PNL.NET_PROFIT:
     - net income
     - net result
@@ -63,72 +603,86 @@ aliases:
     - konzernergebnis
     - periodengewinn
     - periodenergebnis
-
+  FS.PNL.OPERATING_PROFIT:
+    - operating result
+    - operating income
+    - operating profit/loss (ebit)
+    - ebit
+    - betriebsergebnis
+    - operating profit
+    - profit from operations
+    - operating ebit
+  FS.PNL.OTHER_EXPENSES:
+    - other expenses
+    - other operating expenses
+    - sonstige betriebliche aufwendungen
+    - structural adjustments
+  FS.PNL.OTHER_INCOME:
+    - other income
+    - other operating income
+    - sonstige betriebliche erträge
+    - result from the sale of non-core assets
+  FS.PNL.PROFIT_ATTR_NCI:
+    - profit attributable to non-controlling interests
+    - non-controlling interests
+    - attributable to non-controlling interests
+    - thereof non-controlling interests
+    - of which non-controlling interests
+  FS.PNL.PROFIT_ATTR_OWNERS:
+    - profit attributable to owners of the company
+    - profit attributable to equity holders of the parent
+    - owners of the company
+    - attributable to equity holders of the parent
+    - attributable to equity holders
+    - thereof equity holders of the parent
+    - thereof shareholders of the parent company
   FS.PNL.PROFIT_BEFORE_TAX:
     - profit/loss before tax
     - profit/ loss before tax
     - earnings before tax
     - ergebnis vor ertragsteuern
-
-  FS.PNL.INCOME_TAX_EXPENSE:
-    - income taxes
-    - income tax
-    - tax expense
-    - ertragsteuern
-    - steuern vom einkommen und vom ertrag
-    - steuern vom einkommen
-
-  FS.PNL.FINANCE_INCOME:
-    - interest income
-    - finance revenue
-    - financial income
-    - zinserträge
-    - sonstige zinsen und ähnliche erträge
-
-  FS.PNL.FINANCE_COSTS:
-    - interest expense
-    - finance expense
-    - financial expenses
-    - zinsaufwand
-    - zinsen und ähnliche aufwendungen
-
-  FS.PNL.NET_FINANCE_COSTS:
-    - net financial result
-    - financial result
-    - net interest
-    - finanzergebnis
-    - finanzerfolg
-
-  FS.PNL.DEPRECIATION_AMORTISATION:
-    - depreciation and amortization
-    - depreciation & amortisation
-    - d&a
-    - abschreibungen auf immaterielle vermögenswerte und sachanlagen
-
-  FS.PNL.STAFF_COSTS:
-    - employee benefits expense
-    - personnel expenses
-    - staff expenses
-    - wages and salaries
-    - personalaufwand
-    - personalkosten
-
-  FS.PNL.MATERIAL_COSTS:
-    - raw materials and consumables used
-    - cost of materials
-    - materialaufwand
-    - aufwand für material
-
-  FS.PNL.OTHER_INCOME:
-    - other income
-    - other operating income
-    - sonstige betriebliche erträge
-
-  FS.PNL.OTHER_EXPENSES:
-    - other expenses
-    - other operating expenses
-    - sonstige betriebliche aufwendungen
-
+    - profit before income tax
+    - profit before tax
+    - result before tax
+  FS.PNL.PROFIT_CONTINUING:
+    - profit from continuing operations
+    - profit for the period from continuing operations
+    - ergebnis aus fortgeführten geschäftsbereichen
+    - result from continuing operations
+  FS.PNL.PROFIT_DISCONTINUED:
+    - profit (loss) from discontinued operation, net of tax
+    - profit from discontinued operations
+    - discontinued operation
+    - result from discontinued operations
+    - sale of disposal group
+  FS.PNL.PROFIT_FOR_PERIOD:
+    - profit for the period
+    - profit for the year
+    - periodengewinn
+    - jahresüberschuss
+    - net profit
+    - result for the period
+    - earnings
+  FS.PNL.RD_EXPENSES:
+    - research and development expenses
+    - forschungs- und entwicklungskosten
+  FS.PNL.REVENUE:
+    - revenues
+    - total revenues
+    - net revenues
+    - net revenue
+    - turnover
+    - sales
+    - sales revenue
+    - umsatz
+    - erlöse
+    - nettoumsatz
+    - revenue
+  FS.PNL.SELLING_DISTRIBUTION:
+    - selling and distribution expenses
+    - selling expenses
+    - distribution costs
+    - vertriebskosten
   FS.PNL.SHARE_OF_PROFIT_ASSOCIATES:
     - share of profit of associates
     - share of result of associates
@@ -136,43 +690,24 @@ aliases:
     - income from investments in associates and joint ventures
     - ergebnis aus at-beteiligungen
     - ergebnis aus assoziierten unternehmen
+    - share of profit of equity-accounted investees
+  FS.PNL.STAFF_COSTS:
+    - employee benefits expense
+    - personnel expenses
+    - staff expenses
+    - wages and salaries
+    - personalaufwand
+    - personalkosten
+    - staff costs
 
-  FS.PNL.IMPAIRMENT_EXPENSE:
-    - impairment losses
-    - impairment charges
-    - wertminderungen
-
-  # ── SFP ──────────────────────────────────────────────────────────
-  FS.SFP.TOTAL_ASSETS:
-    - total assets
-    - bilanzsumme
-    - summe aktiva
-    - aktiva gesamt
-
-  FS.SFP.TOTAL_EQUITY:
-    - total equity
-    - shareholders' equity
-    - equity attributable to owners
-    - eigenkapital
-    - summe eigenkapital
-
-  FS.SFP.PPE_NET:
-    - property, plant and equipment
-    - property plant and equipment
-    - ppe
-    - sachanlagen
-
-  FS.SFP.GOODWILL:
-    - goodwill
-    - firmenwert
-    - geschäfts- oder firmenwert
-
-  FS.SFP.INTANGIBLE_ASSETS:
-    - intangible assets
-    - intangible assets other than goodwill
-    - immaterielle vermögenswerte
-    - immaterielle vermögensgegenstände
-
+  # ── FS.SFP ──
+  FS.SFP.ASSETS_HELD_FOR_SALE:
+    - assets held for sale
+    - non-current assets held for sale
+    - zur veräußerung gehaltene vermögenswerte
+  FS.SFP.BIOLOGICAL_ASSETS:
+    - biological assets
+    - biologische vermögenswerte
   FS.SFP.CASH:
     - cash and cash equivalents
     - cash and equivalents
@@ -182,28 +717,85 @@ aliases:
     - zahlungsmittel
     - flüssige mittel
     - liquide mittel
-
+  FS.SFP.CASH_AND_EQUIVALENTS:
+    - cash and short-term deposits
+    - cash and financial assets
+  FS.SFP.CONTRACT_ASSETS:
+    - contract assets
+    - vertragsvermögenswerte
+  FS.SFP.CONTRACT_LIABILITIES:
+    - contract liabilities
+    - vertragsverbindlichkeiten
+    - contract liability
+  FS.SFP.CURRENT_ASSETS:
+    - current assets
+    - kurzfristiges vermögen
+    - umlaufvermögen
+    - total current assets
+  FS.SFP.CURRENT_LIABILITIES:
+    - current liabilities
+    - kurzfristige verbindlichkeiten
+    - kurzfristige schulden
+    - total current liabilities
+  FS.SFP.CURRENT_TAX_ASSETS:
+    - current tax assets
+    - income tax receivable
+    - ertragsteueransprüche
+    - income tax receivables
+  FS.SFP.CURRENT_TAX_LIABILITIES:
+    - current tax liabilities
+    - income tax payable
+    - ertragsteuerverbindlichkeiten
+    - income tax liabilities
+    - payables for current taxes
+  FS.SFP.DEFERRED_INCOME:
+    - deferred income
+    - passive rechnungsabgrenzungsposten
+  FS.SFP.DEFERRED_TAX_ASSETS:
+    - deferred tax assets
+    - aktive latente steuern
+  FS.SFP.DEFERRED_TAX_LIABILITIES:
+    - deferred tax liabilities
+    - passive latente steuern
+  FS.SFP.DERIVATIVE_ASSETS:
+    - derivative financial instruments
+  FS.SFP.EMPLOYEE_BENEFITS_LIABILITY:
+    - employee benefits
+    - employee benefit obligations
+    - pensionsrückstellungen
+    - rückstellungen für abfertigungen
+    - employee-related provisions
+  FS.SFP.EQUITY_ACCOUNTED_INVESTEES:
+    - equity-accounted investees
+    - investments in associates and joint ventures
+    - investments in associates
+    - anteile an assoziierten unternehmen
+  FS.SFP.EQUITY_ATTR_OWNERS:
+    - equity attributable to owners of the company
+    - equity attributable to equity holders of the parent
+    - controlling interests
+  FS.SFP.GOODWILL:
+    - goodwill
+    - firmenwert
+    - geschäfts- oder firmenwert
+  FS.SFP.INTANGIBLE_ASSETS:
+    - intangible assets
+    - intangible assets other than goodwill
+    - immaterielle vermögenswerte
+    - immaterielle vermögensgegenstände
+  FS.SFP.INTANGIBLE_ASSETS_GOODWILL:
+    - intangible assets and goodwill
   FS.SFP.INVENTORIES:
     - inventories
     - vorräte
     - vorratsvermögen
-
-  FS.SFP.TRADE_RECEIVABLES:
-    - trade and other receivables
-    - trade receivables
-    - accounts receivable
-    - forderungen aus lieferungen und leistungen
-
-  FS.SFP.TRADE_PAYABLES:
-    - trade and other payables
-    - trade payables
-    - accounts payable
-    - verbindlichkeiten aus lieferungen und leistungen
-
-  FS.SFP.PROVISIONS:
-    - provisions
-    - rückstellungen
-
+  FS.SFP.INVESTMENT_PROPERTY:
+    - investment property
+    - als finanzinvestition gehaltene immobilien
+  FS.SFP.LEASE_LIABILITIES:
+    - lease liabilities
+    - right-of-use liabilities
+    - leasingverbindlichkeiten
   FS.SFP.LOANS_BORROWINGS:
     - loans and borrowings
     - financial liabilities
@@ -211,319 +803,61 @@ aliases:
     - bank loans
     - finanzverbindlichkeiten
     - verbindlichkeiten gegenüber kreditinstituten
-
-  FS.SFP.LEASE_LIABILITIES:
-    - lease liabilities
-    - right-of-use liabilities
-    - leasingverbindlichkeiten
-
-  FS.SFP.DEFERRED_TAX_ASSETS:
-    - deferred tax assets
-    - aktive latente steuern
-
-  FS.SFP.DEFERRED_TAX_LIABILITIES:
-    - deferred tax liabilities
-    - passive latente steuern
-
+    - interest-bearing loans
   FS.SFP.NCI:
     - non-controlling interests
     - minority interests
     - anteile anderer gesellschafter
     - nicht beherrschende anteile
     - minderheitenanteile
-
-  # ── Segment ──────────────────────────────────────────────────────
-  DISC.SEGMENTS.EXTERNAL_REVENUE:
-    - external revenues
-    - external revenue
-    - revenue from external customers
-    - außenumsatz
-    - außenumsätze
-
-  DISC.SEGMENTS.INTERSEGMENT_REVENUE:
-    - intercompany revenues
-    - intercompany revenue
-    - inter-segment revenue
-    - intersegment revenue
-    - innenumsatz
-    - innenumsätze
-
-  DISC.SEGMENTS.TOTAL_REVENUE:
-    - segment revenue
-    - total segment revenue
-    - segmentumsatz
-
-  DISC.SEGMENTS.CAPEX:
-    - capital expenditure
-    - capex
-    - additions to non-current assets
-    - investitionen
-
-  # ── Tax ──────────────────────────────────────────────────────────
-  DISC.TAX.CURRENT_TAX_EXPENSE:
-    - current tax expense
-    - current income tax
-    - laufender steueraufwand
-
-  DISC.TAX.DEFERRED_TAX_EXPENSE:
-    - deferred tax expense
-    - deferred tax expense/income
-    - deferred tax income
-    - latenter steueraufwand
-
-  # ── EPS / share counts ─────────────────────────────────────────────
-  FS.PNL.EPS_BASIC:
-    - basic earnings per share
-    - earnings per share basic
-    - ergebnis je aktie
-    - ergebnis je aktie unverwässert
-    - unverwässertes ergebnis je aktie
-    - basic eps
-    - basic eps (eur)
-    - earnings per share (basic)
-    - basic earnings per share (eur)
-
-  FS.PNL.EPS_DILUTED:
-    - diluted earnings per share
-    - earnings per share diluted
-    - verwässertes ergebnis je aktie
-    - ergebnis je aktie verwässert
-    - diluted eps
-    - diluted eps (eur)
-    - earnings per share (diluted)
-    - diluted earnings per share (eur)
-
-  DISC.EPS.WEIGHTED_AVG_SHARES_BASIC:
-    - weighted average shares outstanding basic
-    - weighted average number of shares basic
-    - gewichtete durchschnittliche aktienanzahl
-    - durchschnittliche aktienanzahl
-    - average shares outstanding
-    - weighted average ordinary shares
-    - weighted-average number of ordinary shares (basic)
-    - weighted average number of ordinary shares
-    - weighted-average number of ordinary shares
-
-  DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED:
-    - weighted average shares outstanding diluted
-    - weighted average number of shares diluted
-    - verwässerte durchschnittliche aktienanzahl
-    - weighted-average number of ordinary shares (diluted)
-    - diluted weighted average number of shares
-
-  DISC.EPS.DIVIDEND_PER_SHARE:
-    - dividend per share
-    - dividende je aktie
-    - ausschüttung je aktie
-    - dividends per share
-
-  FS.SFP.SHARES_ISSUED:
-    - shares issued
-    - number of shares issued
-    - ausgegebene aktien
-    - gezeichnetes kapital (stück)
-
-  FS.SFP.SHARES_OUTSTANDING:
-    - shares outstanding
-    - number of shares outstanding
-    - ausstehende aktien
-    - im umlauf befindliche aktien
-
-  FS.SFP.TREASURY_SHARES_COUNT:
-    - treasury shares (number)
-    - number of treasury shares
-    - eigene aktien (stück)
-    - eigene anteile (stück)
-
-  # ── Banking ratios ─────────────────────────────────────────────────
-  DISC.BANK_REG.CET1_RATIO:
-    - cet1 ratio
-    - common equity tier 1 ratio
-    - kernkapitalquote
-    - harte kernkapitalquote
-
-  DISC.BANK_REG.TOTAL_CAPITAL_RATIO:
-    - total capital ratio
-    - gesamtkapitalquote
-
-  DISC.BANK_REG.COST_TO_INCOME_RATIO:
-    - cost/income ratio
-    - cost-income ratio
-    - kosten-ertrags-relation
-    - aufwand-ertrag-koeffizient
-
-  DISC.BANK_REG.RETURN_ON_EQUITY:
-    - return on equity
-    - roe
-    - eigenkapitalrendite
-    - eigenkapitalrentabilität
-
-  # ── Personnel headcount ────────────────────────────────────────────
-  DISC.PERSONNEL.HEADCOUNT_AVG:
-    - average number of employees
-    - durchschnittliche mitarbeiterzahl
-    - mitarbeiter durchschnitt
-    - number of employees (average)
-    - headcount
-
-  # ── OCI ──────────────────────────────────────────────────────────
-  FS.OCI.TOTAL_OCI:
-    - other comprehensive income for the period, net of tax
-    - total other comprehensive income
-    - total other comprehensive income for the period
-    - sonstiges ergebnis
-
-  FS.OCI.TOTAL_COMPREHENSIVE_INCOME:
-    - total comprehensive income for the period
-    - total comprehensive income
-    - gesamtergebnis der periode
-
-  FS.OCI.REVALUATION_PPE:
-    - revaluation of property, plant and equipment
-    - neubewertung von sachanlagen
-
-  FS.OCI.REMEASUREMENTS_DBO:
-    - remeasurements of defined benefit liability
-    - remeasurements of the defined benefit liability (asset)
-    - remeasurements of defined benefit plans
-    - neubewertungen der nettopensionsschuld
-
-  FS.OCI.EQUITY_INVESTMENTS_FVOCI:
-    - equity investments at fvoci - net change in fair value
-    - equity investments at fvoci
-
-  FS.OCI.FX_DIFFERENCES:
-    - foreign currency translation differences
-    - exchange differences on translation of foreign operations
-    - foreign currency translation differences for foreign operations
-    - währungsumrechnung
-
-  FS.OCI.CFH_RECLASS_TO_PNL:
-    - cash flow hedges - reclassified to profit or loss
-    - cash flow hedges — reclassified to profit or loss
-
-  FS.OCI.COST_OF_HEDGING_RECLASS_TO_PNL:
-    - cost of hedging reserve - reclassified to profit or loss
-    - cost of hedging reserve — reclassified to profit or loss
-
-  FS.OCI.FVOCI_DEBT_RECLASS_TO_PNL:
-    - debt investments at fvoci - reclassified to profit or loss
-    - debt investments at fvoci — reclassified to profit or loss
-
-  FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE:
-    - reclassification of foreign currency differences on loss of significant influence
-
-  FS.OCI.TAX_NON_RECLASSIFIABLE:
-    - related tax on non-reclassifiable items
-    - related tax
-
-  FS.OCI.TAX_RECLASSIFIABLE:
-    - related tax on reclassifiable items
-
-  FS.OCI.CASH_FLOW_HEDGES:
-    - effective portion of changes in fair value of cash flow hedges
-    - cash flow hedges - effective portion of changes in fair value
-    - cash flow hedges
-
-  FS.OCI.DEBT_INVESTMENTS_FVOCI:
-    - debt investments at fvoci - net change in fair value
-    - net change in fair value of debt instruments at fvoci
-
-  # ── Additional PNL ──────────────────────────────────────────────
-  FS.PNL.PROFIT_CONTINUING:
-    - profit from continuing operations
-    - profit for the period from continuing operations
-    - ergebnis aus fortgeführten geschäftsbereichen
-
-  FS.PNL.PROFIT_DISCONTINUED:
-    - profit (loss) from discontinued operation, net of tax
-    - profit from discontinued operations
-    - discontinued operation
-
-  FS.PNL.PROFIT_FOR_PERIOD:
-    - profit for the period
-    - profit for the year
-    - periodengewinn
-    - jahresüberschuss
-
-  FS.PNL.PROFIT_ATTR_OWNERS:
-    - profit attributable to owners of the company
-    - profit attributable to equity holders of the parent
-    - owners of the company
-
-  FS.PNL.PROFIT_ATTR_NCI:
-    - profit attributable to non-controlling interests
-    - non-controlling interests
-
-  FS.PNL.SELLING_DISTRIBUTION:
-    - selling and distribution expenses
-    - selling expenses
-    - distribution costs
-    - vertriebskosten
-
-  FS.PNL.ADMIN_EXPENSES:
-    - administrative expenses
-    - general and administrative expenses
-    - verwaltungskosten
-    - verwaltungsaufwand
-
-  FS.PNL.RD_EXPENSES:
-    - research and development expenses
-    - forschungs- und entwicklungskosten
-
-  FS.PNL.IMPAIRMENT_RECEIVABLES:
-    - impairment loss on trade receivables and contract assets
-    - impairment loss on trade receivables
-    - wertberichtigungen auf forderungen
-
-  # ── Additional SFP ──────────────────────────────────────────────
-  FS.SFP.TOTAL_EQUITY_AND_LIABILITIES:
-    - total equity and liabilities
-    - total liabilities and equity
-    - summe passiva
-    - bilanzsumme passiva
-
   FS.SFP.NON_CURRENT_ASSETS:
     - non-current assets
     - non current assets
     - langfristiges vermögen
     - anlagevermögen
-
-  FS.SFP.CURRENT_ASSETS:
-    - current assets
-    - kurzfristiges vermögen
-    - umlaufvermögen
-
+    - total non-current assets
   FS.SFP.NON_CURRENT_LIABILITIES:
     - non-current liabilities
     - langfristige verbindlichkeiten
     - langfristige schulden
-
-  FS.SFP.CURRENT_LIABILITIES:
-    - current liabilities
-    - kurzfristige verbindlichkeiten
-    - kurzfristige schulden
-
-  FS.SFP.TOTAL_LIABILITIES:
-    - total liabilities
-    - summe verbindlichkeiten
-    - summe schulden
-
-  FS.SFP.SHARE_CAPITAL:
-    - share capital
-    - issued capital
-    - grundkapital
-    - gezeichnetes kapital
-    - stammkapital
-    - nennkapital
-
-  FS.SFP.SHARE_PREMIUM:
-    - share premium
-    - additional paid-in capital
-    - kapitalrücklage
-    - kapitalrücklagen
-    - agio
-
+    - total non-current liabilities
+  FS.SFP.OTHER_FINANCIAL_LIABILITIES:
+    - other financial liabilities
+    - other non-current liabilities
+  FS.SFP.OTHER_INVESTMENTS:
+    - other investments, including derivatives
+    - other investments
+    - other financial assets
+    - sonstige finanzielle vermögenswerte
+    - other financial investments and non-current receivables
+  FS.SFP.OTHER_LIABILITIES:
+    - other liabilities
+    - other payables
+    - sonstige verbindlichkeiten
+  FS.SFP.OTHER_NON_FINANCIAL_ASSETS:
+    - other non-financial assets
+  FS.SFP.OTHER_PAYABLES:
+    - other current liabilities
+    - miscellaneous liabilities
+  FS.SFP.PPE_NET:
+    - property, plant and equipment
+    - property plant and equipment
+    - ppe
+    - sachanlagen
+  FS.SFP.PREPAYMENTS:
+    - prepayments
+    - prepaid expenses
+    - rechnungsabgrenzungsposten
+    - aktive rechnungsabgrenzungsposten
+  FS.SFP.PROVISIONS:
+    - provisions
+    - rückstellungen
+    - other non-current provisions
+  FS.SFP.RESERVES:
+    - reserves
+    - other reserves
+    - rücklagen
+    - sonstige rücklagen
   FS.SFP.RETAINED_EARNINGS:
     - retained earnings
     - accumulated profits
@@ -531,147 +865,150 @@ aliases:
     - gewinnrücklage
     - gewinnrücklagen
     - gewinnvortrag
+    - revenue reserves
+  FS.SFP.RIGHT_OF_USE_ASSETS:
+    - right-of-use assets
+  FS.SFP.SHARES_ISSUED:
+    - shares issued
+    - number of shares issued
+    - ausgegebene aktien
+    - gezeichnetes kapital (stück)
+  FS.SFP.SHARES_OUTSTANDING:
+    - shares outstanding
+    - number of shares outstanding
+    - ausstehende aktien
+    - im umlauf befindliche aktien
+  FS.SFP.SHARE_CAPITAL:
+    - share capital
+    - issued capital
+    - grundkapital
+    - gezeichnetes kapital
+    - stammkapital
+    - nennkapital
+    - subscribed capital
+  FS.SFP.SHARE_PREMIUM:
+    - share premium
+    - additional paid-in capital
+    - kapitalrücklage
+    - kapitalrücklagen
+    - agio
+    - capital reserves
+  FS.SFP.TOTAL_ASSETS:
+    - total assets
+    - bilanzsumme
+    - summe aktiva
+    - aktiva gesamt
+  FS.SFP.TOTAL_EQUITY:
+    - total equity
+    - shareholders' equity
+    - equity attributable to owners
+    - eigenkapital
+    - summe eigenkapital
+    - equity
+    - equity and non-controlling interests
+  FS.SFP.TOTAL_EQUITY_AND_LIABILITIES:
+    - total equity and liabilities
+    - total liabilities and equity
+    - summe passiva
+    - bilanzsumme passiva
+  FS.SFP.TOTAL_LIABILITIES:
+    - total liabilities
+    - summe verbindlichkeiten
+    - summe schulden
+  FS.SFP.TRADE_PAYABLES:
+    - trade and other payables
+    - trade payables
+    - accounts payable
+    - verbindlichkeiten aus lieferungen und leistungen
+  FS.SFP.TRADE_RECEIVABLES:
+    - trade and other receivables
+    - trade receivables
+    - accounts receivable
+    - forderungen aus lieferungen und leistungen
+    - other receivables
+    - other current receivables
+  FS.SFP.TREASURY_SHARES:
+    - treasury shares
+  FS.SFP.TREASURY_SHARES_COUNT:
+    - treasury shares (number)
+    - number of treasury shares
+    - eigene aktien (stück)
+    - eigene anteile (stück)
 
-  FS.SFP.RESERVES:
-    - reserves
-    - other reserves
-    - rücklagen
-    - sonstige rücklagen
+  # ── FS.SOCIE ──
+  FS.SOCIE.CLOSING_BALANCE:
+    - balance at 31 december
+  FS.SOCIE.DIVIDENDS:
+    - dividends to owners
+    - dividend distributions
+    - dividend/hybrid coupon payment
+  FS.SOCIE.HYPERINFLATION:
+    - effects from hyperinflation (ias 29)
+  FS.SOCIE.PROFIT_LOSS:
+    - profit/loss after tax
+  FS.SOCIE.SHARE_BASED_PAYMENT:
+    - share-based payment
+    - changes in stock option plan
+  FS.SOCIE.TREASURY_SHARES_ACQUIRED:
+    - treasury shares acquired
 
-  FS.SFP.CONTRACT_ASSETS:
-    - contract assets
-    - vertragsvermögenswerte
+  # ── Banking PNL ──
+  FS.PNL.INTEREST_INCOME_GROSS:
+    - interest income
+    - interest and similar income
+    - zinserträge
+    - zins- und zinsähnliche erträge
+  FS.PNL.INTEREST_EXPENSE_GROSS:
+    - interest expense
+    - interest and similar expense
+    - zinsaufwendungen
+    - zins- und zinsähnliche aufwendungen
+  FS.PNL.NET_INTEREST_INCOME:
+    - net interest income
+    - net interest margin
+    - zinsüberschuss
+    - nettozinsertrag
+  FS.PNL.FEE_COMMISSION_INCOME:
+    - fee and commission income
+    - provisionsertrag
+    - provisionserträge
+  FS.PNL.FEE_COMMISSION_EXPENSE:
+    - fee and commission expense
+    - provisionsaufwand
+    - provisionsaufwendungen
+  FS.PNL.NET_FEE_COMMISSION:
+    - net fee and commission income
+    - provisionsüberschuss
+  FS.PNL.TRADING_INCOME:
+    - trading income
+    - trading result
+    - handelsergebnis
+  FS.PNL.CREDIT_LOSS_EXPENSE:
+    - credit loss expense
+    - impairment losses on financial instruments
+    - expected credit loss
+    - kreditrisikovorsorge
+    - risikovorsorge
 
-  FS.SFP.CONTRACT_LIABILITIES:
-    - contract liabilities
-    - vertragsverbindlichkeiten
-
-  FS.SFP.CURRENT_TAX_ASSETS:
-    - current tax assets
-    - income tax receivable
-    - ertragsteueransprüche
-
-  FS.SFP.CURRENT_TAX_LIABILITIES:
-    - current tax liabilities
-    - income tax payable
-    - ertragsteuerverbindlichkeiten
-
-  FS.SFP.INVESTMENT_PROPERTY:
-    - investment property
-    - als finanzinvestition gehaltene immobilien
-
-  FS.SFP.EQUITY_ACCOUNTED_INVESTEES:
-    - equity-accounted investees
-    - investments in associates and joint ventures
-    - investments in associates
-    - anteile an assoziierten unternehmen
-
-  FS.SFP.OTHER_INVESTMENTS:
-    - other investments, including derivatives
-    - other investments
-    - other financial assets
-    - sonstige finanzielle vermögenswerte
-
-  FS.SFP.BIOLOGICAL_ASSETS:
-    - biological assets
-    - biologische vermögenswerte
-
-  FS.SFP.ASSETS_HELD_FOR_SALE:
-    - assets held for sale
-    - non-current assets held for sale
-    - zur veräußerung gehaltene vermögenswerte
-
-  FS.SFP.PREPAYMENTS:
-    - prepayments
-    - prepaid expenses
-    - rechnungsabgrenzungsposten
-    - aktive rechnungsabgrenzungsposten
-
-  FS.SFP.EMPLOYEE_BENEFITS_LIABILITY:
-    - employee benefits
-    - employee benefit obligations
-    - pensionsrückstellungen
-    - rückstellungen für abfertigungen
-
-  FS.SFP.DEFERRED_INCOME:
-    - deferred income
-    - passive rechnungsabgrenzungsposten
-
-  FS.SFP.OTHER_LIABILITIES:
-    - other liabilities
-    - other payables
-    - sonstige verbindlichkeiten
-
-  # ── CFS ──────────────────────────────────────────────────────────
-  FS.CFS.NET_CASH_OPERATING:
-    - net cash from operating activities
-    - cash flows from operating activities
-    - cashflow aus betrieblicher tätigkeit
-
-  FS.CFS.NET_CASH_INVESTING:
-    - net cash used in investing activities
-    - net cash from investing activities
-    - cashflow aus investitionstätigkeit
-
-  FS.CFS.NET_CASH_FINANCING:
-    - net cash used in financing activities
-    - net cash from financing activities
-    - cashflow aus finanzierungstätigkeit
-
-  FS.CFS.CASH_OPENING:
-    - cash and cash equivalents at 1 january
-    - cash and cash equivalents at beginning of period
-    - zahlungsmittel am anfang der periode
-
-  FS.CFS.CASH_CLOSING:
-    - cash and cash equivalents at 31 december
-    - cash and cash equivalents at end of period
-    - zahlungsmittel am ende der periode
-
-  FS.CFS.DIRECT_RECEIPTS_CUSTOMERS:
-    - cash receipts from customers
-
-  FS.CFS.DIRECT_PAID_SUPPLIERS_EMPLOYEES:
-    - cash paid to suppliers and employees
-
-  # ── Disclosure notes ────────────────────────────────────────────
-  DISC.INVENTORY.RAW_MATERIALS:
-    - raw materials and consumables
-    - raw materials
-    - roh-, hilfs- und betriebsstoffe
-
-  DISC.INVENTORY.FINISHED_GOODS:
-    - finished goods
-    - finished goods and merchandise
-    - fertige erzeugnisse und waren
-
-  DISC.INVENTORY.WORK_IN_PROGRESS:
-    - work in progress
-    - unfertige erzeugnisse
-
-  DISC.EPS.WEIGHTED_AVG_SHARES_BASIC:
-    - weighted-average number of ordinary shares (basic)
-    - weighted average number of ordinary shares
-    - weighted-average number of ordinary shares
-
-  DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED:
-    - weighted-average number of ordinary shares (diluted)
-    - diluted weighted average number of shares
-
-  DISC.EMPLOYEE_BENEFITS.DBO_OPENING:
-    - defined benefit obligation at 1 january
-    - present value of defined benefit obligation - opening
-    - balance at 1 january
-
-  DISC.PROVISIONS.OPENING:
-    - balance at beginning of period
-    - opening balance
-
-  DISC.PROVISIONS.CLOSING:
-    - balance at end of period
-    - closing balance
-
-  DISC.REVENUE.TOTAL_REVENUE:
-    - revenue from contracts with customers
-    - total revenue
-    - umsatzerlöse
+  # ── Insurance PNL ──
+  FS.PNL.INSURANCE_REVENUE:
+    - insurance revenue
+    - versicherungserlöse
+    - versicherungsumsatz
+  FS.PNL.INSURANCE_SERVICE_EXPENSE:
+    - insurance service expense
+    - versicherungsserviceaufwand
+    - versicherungsdienstleistungsaufwand
+  FS.PNL.INSURANCE_SERVICE_RESULT:
+    - insurance service result
+    - versicherungsserviceergebnis
+    - versicherungstechnisches ergebnis
+  FS.PNL.NET_INSURANCE_FINANCE:
+    - net insurance finance income/expense
+    - insurance finance income or expenses
+    - versicherungsfinanzergebnis
+  FS.PNL.NET_INVESTMENT_INCOME:
+    - net investment income
+    - investment result
+    - kapitalanlageergebnis
+    - anlageergebnis

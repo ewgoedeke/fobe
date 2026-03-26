@@ -362,6 +362,89 @@ concepts:
     is_monetary: false
     is_total: false
 
+  # ── Banking PNL (IFRS 9 / IAS 1) ─────────────────────────
+  - id: FS.PNL.INTEREST_INCOME_GROSS
+    label: Interest income (gross)
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.INTEREST_EXPENSE_GROSS
+    label: Interest expense (gross)
+    balance_type: debit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.NET_INTEREST_INCOME
+    label: Net interest income
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+    is_total: true
+
+  - id: FS.PNL.FEE_COMMISSION_INCOME
+    label: Fee and commission income
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.FEE_COMMISSION_EXPENSE
+    label: Fee and commission expense
+    balance_type: debit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.NET_FEE_COMMISSION
+    label: Net fee and commission income
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+    is_total: true
+
+  - id: FS.PNL.TRADING_INCOME
+    label: Trading income
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.CREDIT_LOSS_EXPENSE
+    label: Credit loss expense
+    balance_type: debit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  # ── Insurance PNL (IFRS 17) ─────────────────────────────
+  - id: FS.PNL.INSURANCE_REVENUE
+    label: Insurance revenue
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.INSURANCE_SERVICE_EXPENSE
+    label: Insurance service expense
+    balance_type: debit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.INSURANCE_SERVICE_RESULT
+    label: Insurance service result
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+    is_total: true
+
+  - id: FS.PNL.NET_INSURANCE_FINANCE
+    label: Net insurance finance income/expense
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
+  - id: FS.PNL.NET_INVESTMENT_INCOME
+    label: Net investment income
+    balance_type: credit
+    period_type: duration
+    valid_contexts: [PNL]
+
   # ── Earnings per share ─────────────────────────────────────
   - id: FS.PNL.EPS_BASIC
     label: Basic earnings per share

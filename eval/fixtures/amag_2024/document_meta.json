@@ -1,0 +1,24 @@
+{
+  "document_id": "amag_2024",
+  "entity_name": "Amag",
+  "gaap": "UGB",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "Rerformance | 2023",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}

@@ -1,0 +1,32 @@
+{
+  "document_id": "palfinger_2024",
+  "entity_name": "Palfinger",
+  "gaap": "UGB",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.COMPARATIVE_4": {
+      "label": "2020",
+      "year": 2020
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "2021",
+      "year": 2021
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "2022",
+      "year": 2022
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    }
+  },
+  "document_axes": {}
+}

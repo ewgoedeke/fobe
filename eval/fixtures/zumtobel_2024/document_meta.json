@@ -1,0 +1,32 @@
+{
+  "document_id": "zumtobel_2024",
+  "entity_name": "Zumtobel",
+  "gaap": "IFRS",
+  "industry": "UTILITIES",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024/25",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023/24",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "2022/23",
+      "year": 2022
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "2021/22",
+      "year": 2021
+    },
+    "PERIOD.COMPARATIVE_4": {
+      "label": "2020/21",
+      "year": 2020
+    }
+  },
+  "document_axes": {}
+}

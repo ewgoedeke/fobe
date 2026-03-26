@@ -1,0 +1,20 @@
+{
+  "document_id": "vig_holding_2024",
+  "entity_name": "Vig Holding",
+  "gaap": "UGB",
+  "industry": "BANKING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "2024 | Direct business",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023 | Direct business",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}

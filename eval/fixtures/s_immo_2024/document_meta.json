@@ -1,0 +1,36 @@
+{
+  "document_id": "s_immo_2024",
+  "entity_name": "S Immo",
+  "gaap": "IFRS",
+  "industry": "REAL_ESTATE",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.THOUSANDS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "31 December 2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "31 December 2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_5": {
+      "label": "Baseline 2019",
+      "year": 2019
+    },
+    "PERIOD.COMPARATIVE_4": {
+      "label": "Target 2030",
+      "year": 2030
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "Target 2035",
+      "year": 2035
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "Target 2040",
+      "year": 2040
+    }
+  },
+  "document_axes": {}
+}

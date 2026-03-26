@@ -1,0 +1,32 @@
+{
+  "document_id": "strabag_ugb_2024",
+  "entity_name": "Strabag",
+  "gaap": "UGB",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "31.12.2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "31.12.2023",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_4": {
+      "label": "Rückblickend | 2023 1",
+      "year": 2023
+    },
+    "PERIOD.COMPARATIVE_3": {
+      "label": "Rückblickend | 2024",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE_2": {
+      "label": "Etappenziele und Zieljahre | 2025",
+      "year": 2025
+    }
+  },
+  "document_axes": {}
+}

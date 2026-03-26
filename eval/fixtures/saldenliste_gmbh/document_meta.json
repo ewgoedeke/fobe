@@ -1,0 +1,16 @@
+{
+  "document_id": "saldenliste_gmbh",
+  "entity_name": "Saldenliste Gmbh",
+  "gaap": "UGB",
+  "industry": "MANUFACTURING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.UNITS",
+  "periods": {
+    "PERIOD.Y2024": {
+      "label": "2024",
+      "year": 2024
+    }
+  },
+  "document_axes": {}
+}

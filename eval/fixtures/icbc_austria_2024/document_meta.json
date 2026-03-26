@@ -1,0 +1,20 @@
+{
+  "document_id": "icbc_austria_2024",
+  "entity_name": "Icbc Austria",
+  "gaap": "IFRS",
+  "industry": "BANKING",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.UNITS",
+  "periods": {
+    "PERIOD.CURRENT": {
+      "label": "31.12.2024 TEUR",
+      "year": 2024
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "31.12.2023 TEUR",
+      "year": 2023
+    }
+  },
+  "document_axes": {}
+}

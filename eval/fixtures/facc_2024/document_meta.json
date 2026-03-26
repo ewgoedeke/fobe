@@ -1,0 +1,24 @@
+{
+  "document_id": "facc_2024",
+  "entity_name": "Facc",
+  "gaap": "IFRS",
+  "industry": "UTILITIES",
+  "jurisdiction": "AT",
+  "currency": "CURRENCY.EUR",
+  "unit": "UNIT.MILLIONS",
+  "periods": {
+    "PERIOD.COMPARATIVE_2": {
+      "label": "2022",
+      "year": 2022
+    },
+    "PERIOD.COMPARATIVE": {
+      "label": "2023",
+      "year": 2023
+    },
+    "PERIOD.CURRENT": {
+      "label": "2024",
+      "year": 2024
+    }
+  },
+  "document_axes": {}
+}
