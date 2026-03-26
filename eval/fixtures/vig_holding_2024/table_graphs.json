@@ -1258,7 +1258,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -1912,7 +1912,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:1:7",
@@ -2196,7 +2203,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -2364,7 +2371,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:2:3",
@@ -2476,7 +2490,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:2:5",
@@ -2704,7 +2725,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:2:9",
@@ -2983,7 +3011,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -4692,7 +4720,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [
@@ -11515,7 +11550,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -12172,7 +12207,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:7:7",
@@ -12395,7 +12437,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -12659,7 +12701,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:8:4",
@@ -14038,7 +14087,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -14554,7 +14603,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -15130,7 +15179,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_NON_FINANCIAL_ASSETS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:10:8",
@@ -15370,7 +15426,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -15526,7 +15589,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -17056,7 +17119,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -17224,7 +17287,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:12:3",
@@ -18750,7 +18820,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -22235,7 +22305,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],

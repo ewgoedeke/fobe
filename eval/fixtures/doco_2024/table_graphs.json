@@ -31091,7 +31091,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -32189,7 +32189,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -32541,7 +32541,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PPE",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -32806,7 +32806,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:28:3",
@@ -32874,7 +32881,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [],

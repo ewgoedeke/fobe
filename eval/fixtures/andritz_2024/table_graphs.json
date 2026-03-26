@@ -144,7 +144,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -1341,7 +1341,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -2962,7 +2962,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -4469,7 +4469,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -4592,7 +4592,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:text_1:2",

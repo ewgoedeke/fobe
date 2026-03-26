@@ -24291,7 +24291,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -24669,7 +24669,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -24895,7 +24895,7 @@
       "headerRowCount": 2,
       "labelColIdx": 2,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -25703,7 +25703,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -26259,7 +26259,7 @@
       "headerRowCount": 3,
       "labelColIdx": 2,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -27403,7 +27403,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -28823,7 +28823,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -32291,7 +32291,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -32599,7 +32599,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -33061,7 +33061,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -34021,7 +34021,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -34379,7 +34379,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -35113,7 +35113,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -36095,7 +36095,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -38029,7 +38029,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -38177,7 +38177,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MEASURE.EQUITY_RATIO",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -38307,7 +38314,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -38449,7 +38456,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_FROM_OPERATIONS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:2",
@@ -38517,7 +38531,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_FROM_INVESTING",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:3",
@@ -38588,7 +38609,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.FREE_CASH_FLOW",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:4",
@@ -38656,7 +38684,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_FROM_FINANCING",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:5",
@@ -38727,7 +38762,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.NET_CHANGE_CASH",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:6",
@@ -38795,7 +38837,16 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.FX_EFFECT_ON_CASH",
+            "method": "structural",
+            "confidence": 0.85,
+            "rule": "top_down",
+            "sourceRows": [
+              "row:45:8"
+            ],
+            "edge": "sum_FS.CFS.CASH_CLOSING"
+          }
         },
         {
           "rowId": "row:45:7",
@@ -38863,7 +38914,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_OPENING",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:45:8",
@@ -38935,7 +38993,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_CLOSING",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [
@@ -39100,7 +39165,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -39310,7 +39375,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LEASE_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:46:3",
@@ -39378,7 +39450,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_FINANCIAL_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:46:4",
@@ -39588,7 +39667,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CASH",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:46:7",
@@ -39656,7 +39742,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BORROWINGS.NET_DEBT",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [
@@ -39809,7 +39902,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -39951,7 +40044,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OPERATING_PROFIT",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:47:2",
@@ -40503,7 +40603,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -40920,7 +41020,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:48:6",
@@ -40988,7 +41095,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:48:7",
@@ -41059,7 +41173,17 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_EQUITY_AND_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.75,
+            "rule": "bottom_up_partial",
+            "sourceRows": [
+              "row:48:5",
+              "row:48:6"
+            ],
+            "edge": "sum_FS.SFP.TOTAL_EQUITY_AND_LIABILITIES"
+          }
         },
         {
           "rowId": "row:48:8",
@@ -41362,7 +41486,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -41758,7 +41882,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -42154,7 +42278,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
@@ -42550,7 +42674,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -43221,7 +43345,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -58526,7 +58650,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -59262,7 +59386,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -61844,7 +61968,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.GOV_GRANTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -63298,7 +63422,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -63762,7 +63886,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -63930,7 +64054,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:73:3",
@@ -63989,7 +64120,17 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.CARRYING_AMOUNT",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:81:3",
+              "row:81:3"
+            ],
+            "edge": "ppe_face_to_note_total"
+          }
         }
       ],
       "aggregationGroups": [
@@ -73204,7 +73345,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -73769,7 +73910,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:82:6",
@@ -74137,7 +74285,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:82:10",
@@ -74597,7 +74752,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.INTANGIBLE_ASSETS.AMORTISATION_CHARGE",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:82:15",
@@ -74873,7 +75035,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.INTANGIBLE_ASSETS.AMORTISATION_CHARGE",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:82:18",
@@ -75280,7 +75449,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -76026,7 +76195,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:83:7",
@@ -76546,7 +76722,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:83:12",
@@ -77066,7 +77249,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.INTANGIBLE_ASSETS.AMORTISATION_CHARGE",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:83:17",
@@ -77482,7 +77672,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.INTANGIBLE_ASSETS.AMORTISATION_CHARGE",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:83:21",
@@ -78767,7 +78964,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -79159,7 +79356,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:86:7",
@@ -79379,7 +79583,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -79663,7 +79867,17 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.CLOSING",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:81:12",
+              "row:81:12"
+            ],
+            "edge": "provisions_face_to_note_total"
+          }
         }
       ],
       "aggregationGroups": [
@@ -79790,7 +80004,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -80017,7 +80231,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:53:1"
+            ],
+            "edge": "revenue_face_to_note"
+          }
         }
       ],
       "aggregationGroups": [
@@ -80142,7 +80365,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -80478,7 +80701,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_RECLASS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:89:6",
@@ -80698,7 +80928,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -80982,7 +81212,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.TOTAL_REVENUE",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:53:1"
+            ],
+            "edge": "revenue_face_to_note"
+          }
         }
       ],
       "aggregationGroups": [
@@ -81109,7 +81348,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -82099,7 +82338,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -82451,7 +82690,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -82671,7 +82910,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -83655,7 +83894,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -84548,7 +84787,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -84992,7 +85231,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -85403,7 +85642,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.IMPAIRMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -86463,7 +86702,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -87446,7 +87685,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.GOV_GRANTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -87798,7 +88037,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -88027,7 +88266,17 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_CLOSING",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:81:11",
+              "row:81:11"
+            ],
+            "edge": "employee_benefits_to_note"
+          }
         }
       ],
       "aggregationGroups": [
@@ -88162,7 +88411,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -88386,7 +88635,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:108:4",
@@ -88774,7 +89030,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -89162,7 +89418,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -89330,7 +89586,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RETIREMENT_BENEFITS.SALARY_GROWTH",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:110:3",
@@ -89498,7 +89761,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RETIREMENT_BENEFITS.MORTALITY",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -89606,7 +89876,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -89873,7 +90143,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -90140,7 +90410,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -90364,7 +90634,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:113:4",
@@ -90640,7 +90917,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -91235,7 +91512,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -91519,7 +91796,17 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.CLOSING",
+            "method": "structural",
+            "confidence": 0.7,
+            "rule": "cross_table",
+            "sourceRows": [
+              "row:81:12",
+              "row:81:12"
+            ],
+            "edge": "provisions_face_to_note_total"
+          }
         }
       ],
       "aggregationGroups": [
@@ -91646,7 +91933,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -93112,7 +93399,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -93967,7 +94254,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LEASE_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:117:8",
@@ -94576,7 +94870,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -95437,7 +95731,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LEASE_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:118:9",
@@ -96064,7 +96365,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
@@ -96340,7 +96641,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -100647,7 +100948,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
@@ -107481,7 +107782,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -107960,7 +108261,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -108439,7 +108740,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": null,
         "detectedUnit": "UNIT.THOUSANDS",
         "sectionPath": [],
@@ -111731,7 +112032,7 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -117465,7 +117766,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PERSONNEL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -118871,7 +119172,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
@@ -119848,7 +120149,7 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.AUDITOR",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
