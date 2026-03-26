@@ -44,6 +44,8 @@ aliases:
   FS.PNL.EBITDA:
     - operating ebitda
     - adjusted ebitda
+    - adjusted earnings before interest, tax, depreciation and amortisation (adjusted ebitda)
+    - adjusted earnings before interest, tax, depreciation and amortization
 
   FS.PNL.NET_PROFIT:
     - net income
@@ -396,6 +398,28 @@ aliases:
     - foreign currency translation differences for foreign operations
     - währungsumrechnung
 
+  FS.OCI.CFH_RECLASS_TO_PNL:
+    - cash flow hedges - reclassified to profit or loss
+    - cash flow hedges — reclassified to profit or loss
+
+  FS.OCI.COST_OF_HEDGING_RECLASS_TO_PNL:
+    - cost of hedging reserve - reclassified to profit or loss
+    - cost of hedging reserve — reclassified to profit or loss
+
+  FS.OCI.FVOCI_DEBT_RECLASS_TO_PNL:
+    - debt investments at fvoci - reclassified to profit or loss
+    - debt investments at fvoci — reclassified to profit or loss
+
+  FS.OCI.FX_RECLASS_LOSS_SIGNIFICANT_INFLUENCE:
+    - reclassification of foreign currency differences on loss of significant influence
+
+  FS.OCI.TAX_NON_RECLASSIFIABLE:
+    - related tax on non-reclassifiable items
+    - related tax
+
+  FS.OCI.TAX_RECLASSIFIABLE:
+    - related tax on reclassifiable items
+
   FS.OCI.CASH_FLOW_HEDGES:
     - effective portion of changes in fair value of cash flow hedges
     - cash flow hedges - effective portion of changes in fair value
@@ -603,6 +627,12 @@ aliases:
     - cash and cash equivalents at 31 december
     - cash and cash equivalents at end of period
     - zahlungsmittel am ende der periode
+
+  FS.CFS.DIRECT_RECEIPTS_CUSTOMERS:
+    - cash receipts from customers
+
+  FS.CFS.DIRECT_PAID_SUPPLIERS_EMPLOYEES:
+    - cash paid to suppliers and employees
 
   # ── Disclosure notes ────────────────────────────────────────────
   DISC.INVENTORY.RAW_MATERIALS:

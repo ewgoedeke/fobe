@@ -32,6 +32,9 @@ from relationship_graph import (
     OntologyGraph, GraphEdge, EdgeType,
     build_graph, _infer_context,
 )
+from check_consistency import (
+    _match_label, _infer_table_context, _get_label_index,
+)
 
 
 # ── Tolerance ─────────────────────────────────────────────────────
@@ -677,6 +680,61 @@ def propagate_divisions(hierarchies: list[TableHierarchy],
     return inferred
 
 
+# ── Pass 0: Label matching (fill pretag_all gaps) ─────────────────
+
+def _label_match_pass(tables: list[dict], ontology_root: str,
+                      verbose: bool = False) -> list[InferredTag]:
+    """Use the full ontology label index to tag rows that pretag_all missed."""
+    _get_label_index(ontology_root)  # ensure label index is built
+    inferred = []
+
+    for table in tables:
+        ctx = table.get("metadata", {}).get("statementComponent")
+        if not ctx:
+            continue
+
+        for row in table.get("rows", []):
+            pt = row.get("preTagged")
+            if pt and pt.get("conceptId"):
+                continue
+            if row.get("rowType") == "SEPARATOR":
+                continue
+
+            label = row.get("label", "")
+            if not label or not label.strip():
+                continue
+
+            match = _match_label(label, table_context=ctx, ontology_root=ontology_root)
+            if match:
+                concept_id, label_ctx = match
+                tag = InferredTag(
+                    row_id=row["rowId"],
+                    table_id=table["tableId"],
+                    concept_id=concept_id,
+                    confidence=0.80,
+                    rule="label_match",
+                    source_rows=[],
+                    edge_name="ontology_label_index",
+                    iteration=-1,
+                )
+                row["preTagged"] = {
+                    "conceptId": concept_id,
+                    "method": "structural",
+                    "confidence": 0.80,
+                    "rule": "label_match",
+                    "sourceRows": [],
+                    "edge": "ontology_label_index",
+                }
+                inferred.append(tag)
+                if verbose:
+                    print(f"  [label] {label[:50]} → {concept_id}")
+
+    if inferred and verbose:
+        print(f"  Label matching: {len(inferred)} additional tags")
+
+    return inferred
+
+
 # ── Cascade loop ──────────────────────────────────────────────────
 
 def apply_tag(tables: list[dict], tag: InferredTag):
@@ -707,7 +765,12 @@ def cascade(tables: list[dict], ontology_root: str,
     graph = build_graph(ontology_root)
     parent_to_trees, child_to_trees = _build_summation_index(graph)
 
-    all_inferred: list[InferredTag] = []
+    # Pass 0: Fill gaps via the full ontology label index.
+    # pretag_all.py uses a separate label index that may miss concepts
+    # defined in concepts/*.yaml, gaap/ugb.yaml, or aliases.yaml.
+    label_matched = _label_match_pass(tables, ontology_root, verbose)
+
+    all_inferred: list[InferredTag] = list(label_matched)
 
     for iteration in range(max_iterations):
         hierarchies = build_table_hierarchies(tables)
