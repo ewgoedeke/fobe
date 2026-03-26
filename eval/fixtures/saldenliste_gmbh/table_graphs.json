@@ -34,7 +34,7 @@
         {
           "rowId": "row:sfp_ugb:0",
           "rowIdx": 0,
-          "label": "Kassa (\u00a7224 B.IV)",
+          "label": "Kassa (§224 B.IV)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -43,7 +43,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Kassa (\u00a7224 B.IV)",
+              "text": "Kassa (§224 B.IV)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -61,7 +61,7 @@
         {
           "rowId": "row:sfp_ugb:1",
           "rowIdx": 1,
-          "label": "Erhaltene Anzahlungen (\u00a7224 C.3)",
+          "label": "Erhaltene Anzahlungen (§224 C.3)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -70,7 +70,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Erhaltene Anzahlungen (\u00a7224 C.3)",
+              "text": "Erhaltene Anzahlungen (§224 C.3)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -142,7 +142,7 @@
         {
           "rowId": "row:sfp_ugb:4",
           "rowIdx": 4,
-          "label": "Passive Rechnungsabgrenzungsposten (\u00a7224 D)",
+          "label": "Passive Rechnungsabgrenzungsposten (§224 D)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -151,7 +151,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Passive Rechnungsabgrenzungsposten (\u00a7224 D)",
+              "text": "Passive Rechnungsabgrenzungsposten (§224 D)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -169,7 +169,7 @@
         {
           "rowId": "row:sfp_ugb:5",
           "rowIdx": 5,
-          "label": "Passive latente Steuern (\u00a7198(9-10))",
+          "label": "Passive latente Steuern (§198(9-10))",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -178,7 +178,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Passive latente Steuern (\u00a7198(9-10))",
+              "text": "Passive latente Steuern (§198(9-10))",
               "parsedValue": null,
               "isNegative": false
             },
@@ -223,7 +223,7 @@
         {
           "rowId": "row:sfp_ugb:7",
           "rowIdx": 7,
-          "label": "R\u00fcckstellungen f\u00fcr Abfertigungen (\u00a7224 B.1)",
+          "label": "Rückstellungen für Abfertigungen (§224 B.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -232,7 +232,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "R\u00fcckstellungen f\u00fcr Abfertigungen (\u00a7224 B.1)",
+              "text": "Rückstellungen für Abfertigungen (§224 B.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -250,7 +250,7 @@
         {
           "rowId": "row:sfp_ugb:8",
           "rowIdx": 8,
-          "label": "Beteiligungen (\u00a7224 A.III.3)",
+          "label": "Beteiligungen (§224 A.III.3)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -259,7 +259,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Beteiligungen (\u00a7224 A.III.3)",
+              "text": "Beteiligungen (§224 A.III.3)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -277,7 +277,7 @@
         {
           "rowId": "row:sfp_ugb:9",
           "rowIdx": 9,
-          "label": "Gesch\u00e4fts(Firmen)wert (\u00a7203 UGB)",
+          "label": "Geschäfts(Firmen)wert (§203 UGB)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -286,7 +286,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Gesch\u00e4fts(Firmen)wert (\u00a7203 UGB)",
+              "text": "Geschäfts(Firmen)wert (§203 UGB)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -304,7 +304,7 @@
         {
           "rowId": "row:sfp_ugb:10",
           "rowIdx": 10,
-          "label": "Konzessionen (\u00a7224 A.I.1)",
+          "label": "Konzessionen (§224 A.I.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -313,7 +313,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Konzessionen (\u00a7224 A.I.1)",
+              "text": "Konzessionen (§224 A.I.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -331,7 +331,7 @@
         {
           "rowId": "row:sfp_ugb:11",
           "rowIdx": 11,
-          "label": "Rohstoffe (\u00a7224 B.I.1)",
+          "label": "Rohstoffe (§224 B.I.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -340,7 +340,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Rohstoffe (\u00a7224 B.I.1)",
+              "text": "Rohstoffe (§224 B.I.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -358,7 +358,7 @@
         {
           "rowId": "row:sfp_ugb:12",
           "rowIdx": 12,
-          "label": "Anteile an verbundenen Unternehmen (\u00a7224 A.III.1)",
+          "label": "Anteile an verbundenen Unternehmen (§224 A.III.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -367,7 +367,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Anteile an verbundenen Unternehmen (\u00a7224 A.III.1)",
+              "text": "Anteile an verbundenen Unternehmen (§224 A.III.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -385,7 +385,7 @@
         {
           "rowId": "row:sfp_ugb:13",
           "rowIdx": 13,
-          "label": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (\u00a7224 C.2)",
+          "label": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (§224 C.2)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -394,7 +394,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (\u00a7224 C.2)",
+              "text": "Verbindlichkeiten gg. Kreditinstituten (langfr.) (§224 C.2)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -412,7 +412,7 @@
         {
           "rowId": "row:sfp_ugb:14",
           "rowIdx": 14,
-          "label": "Ausleihungen an verbundene Unternehmen (\u00a7224 A.III.2)",
+          "label": "Ausleihungen an verbundene Unternehmen (§224 A.III.2)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -421,7 +421,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Ausleihungen an verbundene Unternehmen (\u00a7224 A.III.2)",
+              "text": "Ausleihungen an verbundene Unternehmen (§224 A.III.2)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -439,7 +439,7 @@
         {
           "rowId": "row:sfp_ugb:15",
           "rowIdx": 15,
-          "label": "Sonstige Verbindlichkeiten (\u00a7224 C.8)",
+          "label": "Sonstige Verbindlichkeiten (§224 C.8)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -448,7 +448,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Sonstige Verbindlichkeiten (\u00a7224 C.8)",
+              "text": "Sonstige Verbindlichkeiten (§224 C.8)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -466,7 +466,7 @@
         {
           "rowId": "row:sfp_ugb:16",
           "rowIdx": 16,
-          "label": "Sonstige Forderungen (\u00a7224 B.II.4)",
+          "label": "Sonstige Forderungen (§224 B.II.4)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -475,7 +475,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Sonstige Forderungen (\u00a7224 B.II.4)",
+              "text": "Sonstige Forderungen (§224 B.II.4)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -493,7 +493,7 @@
         {
           "rowId": "row:sfp_ugb:17",
           "rowIdx": 17,
-          "label": "Bebaute Grundst\u00fccke und Bauten (\u00a7224 A.II.1)",
+          "label": "Bebaute Grundstücke und Bauten (§224 A.II.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -502,7 +502,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Bebaute Grundst\u00fccke und Bauten (\u00a7224 A.II.1)",
+              "text": "Bebaute Grundstücke und Bauten (§224 A.II.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -520,7 +520,7 @@
         {
           "rowId": "row:sfp_ugb:18",
           "rowIdx": 18,
-          "label": "Aktive Rechnungsabgrenzungsposten (\u00a7224 C)",
+          "label": "Aktive Rechnungsabgrenzungsposten (§224 C)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -529,7 +529,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Aktive Rechnungsabgrenzungsposten (\u00a7224 C)",
+              "text": "Aktive Rechnungsabgrenzungsposten (§224 C)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -547,7 +547,7 @@
         {
           "rowId": "row:sfp_ugb:19",
           "rowIdx": 19,
-          "label": "Steuerr\u00fcckstellungen (\u00a7224 B.2)",
+          "label": "Steuerrückstellungen (§224 B.2)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -556,7 +556,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Steuerr\u00fcckstellungen (\u00a7224 B.2)",
+              "text": "Steuerrückstellungen (§224 B.2)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -574,7 +574,7 @@
         {
           "rowId": "row:sfp_ugb:20",
           "rowIdx": 20,
-          "label": "Verbindlichkeiten gg. verbundenen Unternehmen (\u00a7224 C.6)",
+          "label": "Verbindlichkeiten gg. verbundenen Unternehmen (§224 C.6)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -583,7 +583,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Verbindlichkeiten gg. verbundenen Unternehmen (\u00a7224 C.6)",
+              "text": "Verbindlichkeiten gg. verbundenen Unternehmen (§224 C.6)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -601,7 +601,7 @@
         {
           "rowId": "row:sfp_ugb:21",
           "rowIdx": 21,
-          "label": "Forderungen gg. verbundenen Unternehmen (\u00a7224 B.II.2)",
+          "label": "Forderungen gg. verbundenen Unternehmen (§224 B.II.2)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -610,7 +610,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Forderungen gg. verbundenen Unternehmen (\u00a7224 B.II.2)",
+              "text": "Forderungen gg. verbundenen Unternehmen (§224 B.II.2)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -628,7 +628,7 @@
         {
           "rowId": "row:sfp_ugb:22",
           "rowIdx": 22,
-          "label": "Gesetzliche R\u00fccklage (\u00a7224 A.III.1)",
+          "label": "Gesetzliche Rücklage (§224 A.III.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -637,7 +637,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Gesetzliche R\u00fccklage (\u00a7224 A.III.1)",
+              "text": "Gesetzliche Rücklage (§224 A.III.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -655,7 +655,7 @@
         {
           "rowId": "row:sfp_ugb:23",
           "rowIdx": 23,
-          "label": "Gezeichnetes Kapital / Stammkapital (\u00a7224 A.I)",
+          "label": "Gezeichnetes Kapital / Stammkapital (§224 A.I)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -664,7 +664,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Gezeichnetes Kapital / Stammkapital (\u00a7224 A.I)",
+              "text": "Gezeichnetes Kapital / Stammkapital (§224 A.I)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -682,7 +682,7 @@
         {
           "rowId": "row:sfp_ugb:24",
           "rowIdx": 24,
-          "label": "Kapitalr\u00fccklagen (gebundene) (\u00a7224 A.II.1)",
+          "label": "Kapitalrücklagen (gebundene) (§224 A.II.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -691,7 +691,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Kapitalr\u00fccklagen (gebundene) (\u00a7224 A.II.1)",
+              "text": "Kapitalrücklagen (gebundene) (§224 A.II.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -709,7 +709,7 @@
         {
           "rowId": "row:sfp_ugb:25",
           "rowIdx": 25,
-          "label": "Verbindlichkeiten aus L&L (\u00a7224 C.4)",
+          "label": "Verbindlichkeiten aus L&L (§224 C.4)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -718,7 +718,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Verbindlichkeiten aus L&L (\u00a7224 C.4)",
+              "text": "Verbindlichkeiten aus L&L (§224 C.4)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -736,7 +736,7 @@
         {
           "rowId": "row:sfp_ugb:26",
           "rowIdx": 26,
-          "label": "Forderungen aus L&L (\u00a7224 B.II.1)",
+          "label": "Forderungen aus L&L (§224 B.II.1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -745,7 +745,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Forderungen aus L&L (\u00a7224 B.II.1)",
+              "text": "Forderungen aus L&L (§224 B.II.1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -861,7 +861,7 @@
         {
           "rowId": "row:pnl_ugb:0",
           "rowIdx": 0,
-          "label": "Bestandsver\u00e4nderungen (fertige Erz.) (\u00a7231 Z2)",
+          "label": "Bestandsveränderungen (fertige Erz.) (§231 Z2)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -870,7 +870,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Bestandsver\u00e4nderungen (fertige Erz.) (\u00a7231 Z2)",
+              "text": "Bestandsveränderungen (fertige Erz.) (§231 Z2)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -888,7 +888,7 @@
         {
           "rowId": "row:pnl_ugb:1",
           "rowIdx": 1,
-          "label": "Abschreibungen immat. VG (\u00a7231 Z7a)",
+          "label": "Abschreibungen immat. VG (§231 Z7a)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -897,7 +897,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Abschreibungen immat. VG (\u00a7231 Z7a)",
+              "text": "Abschreibungen immat. VG (§231 Z7a)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -915,7 +915,7 @@
         {
           "rowId": "row:pnl_ugb:2",
           "rowIdx": 2,
-          "label": "Ertr\u00e4ge aus Beteiligungen (\u00a7231 Z10)",
+          "label": "Erträge aus Beteiligungen (§231 Z10)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -924,7 +924,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Ertr\u00e4ge aus Beteiligungen (\u00a7231 Z10)",
+              "text": "Erträge aus Beteiligungen (§231 Z10)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -942,7 +942,7 @@
         {
           "rowId": "row:pnl_ugb:3",
           "rowIdx": 3,
-          "label": "Zinsen und \u00e4hnliche Aufwendungen (\u00a7231 Z15)",
+          "label": "Zinsen und ähnliche Aufwendungen (§231 Z15)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -951,7 +951,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Zinsen und \u00e4hnliche Aufwendungen (\u00a7231 Z15)",
+              "text": "Zinsen und ähnliche Aufwendungen (§231 Z15)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -969,7 +969,7 @@
         {
           "rowId": "row:pnl_ugb:4",
           "rowIdx": 4,
-          "label": "Zinsertr\u00e4ge Ausleihungen verb. Unt. (\u00a7231 Z11)",
+          "label": "Zinserträge Ausleihungen verb. Unt. (§231 Z11)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -978,7 +978,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Zinsertr\u00e4ge Ausleihungen verb. Unt. (\u00a7231 Z11)",
+              "text": "Zinserträge Ausleihungen verb. Unt. (§231 Z11)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -996,7 +996,7 @@
         {
           "rowId": "row:pnl_ugb:5",
           "rowIdx": 5,
-          "label": "Abschreibungen auf den Firmenwert (\u00a7203(5) UGB)",
+          "label": "Abschreibungen auf den Firmenwert (§203(5) UGB)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1005,7 +1005,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Abschreibungen auf den Firmenwert (\u00a7203(5) UGB)",
+              "text": "Abschreibungen auf den Firmenwert (§203(5) UGB)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1023,7 +1023,7 @@
         {
           "rowId": "row:pnl_ugb:6",
           "rowIdx": 6,
-          "label": "Wertberichtigungen zu Forderungen UV (\u00a7231 Z8)",
+          "label": "Wertberichtigungen zu Forderungen UV (§231 Z8)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1032,7 +1032,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Wertberichtigungen zu Forderungen UV (\u00a7231 Z8)",
+              "text": "Wertberichtigungen zu Forderungen UV (§231 Z8)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1050,7 +1050,7 @@
         {
           "rowId": "row:pnl_ugb:7",
           "rowIdx": 7,
-          "label": "K\u00f6rperschaftsteuer (\u00a7231 Z18)",
+          "label": "Körperschaftsteuer (§231 Z18)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1059,7 +1059,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "K\u00f6rperschaftsteuer (\u00a7231 Z18)",
+              "text": "Körperschaftsteuer (§231 Z18)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1077,7 +1077,7 @@
         {
           "rowId": "row:pnl_ugb:8",
           "rowIdx": 8,
-          "label": "Aufwand f\u00fcr Rohstoffe (\u00a7231 Z5a)",
+          "label": "Aufwand für Rohstoffe (§231 Z5a)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1086,7 +1086,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Aufwand f\u00fcr Rohstoffe (\u00a7231 Z5a)",
+              "text": "Aufwand für Rohstoffe (§231 Z5a)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1104,7 +1104,7 @@
         {
           "rowId": "row:pnl_ugb:9",
           "rowIdx": 9,
-          "label": "Miete und Pacht (\u00a7231 Z8)",
+          "label": "Miete und Pacht (§231 Z8)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1113,7 +1113,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Miete und Pacht (\u00a7231 Z8)",
+              "text": "Miete und Pacht (§231 Z8)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1131,7 +1131,7 @@
         {
           "rowId": "row:pnl_ugb:10",
           "rowIdx": 10,
-          "label": "Sonstige betriebliche Ertr\u00e4ge (\u00a7231 Z4)",
+          "label": "Sonstige betriebliche Erträge (§231 Z4)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1140,7 +1140,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Sonstige betriebliche Ertr\u00e4ge (\u00a7231 Z4)",
+              "text": "Sonstige betriebliche Erträge (§231 Z4)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1158,7 +1158,7 @@
         {
           "rowId": "row:pnl_ugb:11",
           "rowIdx": 11,
-          "label": "Aktivierte Eigenleistungen (\u00a7231 Z3)",
+          "label": "Aktivierte Eigenleistungen (§231 Z3)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1167,7 +1167,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Aktivierte Eigenleistungen (\u00a7231 Z3)",
+              "text": "Aktivierte Eigenleistungen (§231 Z3)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1185,7 +1185,7 @@
         {
           "rowId": "row:pnl_ugb:12",
           "rowIdx": 12,
-          "label": "Aufwand bezogene Herstellungsleistungen (\u00a7231 Z5b)",
+          "label": "Aufwand bezogene Herstellungsleistungen (§231 Z5b)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1194,7 +1194,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Aufwand bezogene Herstellungsleistungen (\u00a7231 Z5b)",
+              "text": "Aufwand bezogene Herstellungsleistungen (§231 Z5b)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1212,7 +1212,7 @@
         {
           "rowId": "row:pnl_ugb:13",
           "rowIdx": 13,
-          "label": "Erl\u00f6se Inland (\u00a7231 Z1)",
+          "label": "Erlöse Inland (§231 Z1)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1221,7 +1221,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Erl\u00f6se Inland (\u00a7231 Z1)",
+              "text": "Erlöse Inland (§231 Z1)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1239,7 +1239,7 @@
         {
           "rowId": "row:pnl_ugb:14",
           "rowIdx": 14,
-          "label": "L\u00f6hne (\u00a7231 Z6a)",
+          "label": "Löhne (§231 Z6a)",
           "rowType": "DATA",
           "indentLevel": 0,
           "depth": 0,
@@ -1248,7 +1248,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "L\u00f6hne (\u00a7231 Z6a)",
+              "text": "Löhne (§231 Z6a)",
               "parsedValue": null,
               "isNegative": false
             },
@@ -1266,7 +1266,7 @@
         {
           "rowId": "row:pnl_ugb:total",
           "rowIdx": 15,
-          "label": "Jahres\u00fcberschuss/-fehlbetrag",
+          "label": "Jahresüberschuss/-fehlbetrag",
           "rowType": "TOTAL_EXPLICIT",
           "indentLevel": 0,
           "depth": 0,
@@ -1291,7 +1291,7 @@
           "cells": [
             {
               "colIdx": 0,
-              "text": "Jahres\u00fcberschuss/-fehlbetrag",
+              "text": "Jahresüberschuss/-fehlbetrag",
               "parsedValue": null,
               "isNegative": false
             },

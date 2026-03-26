@@ -589,7 +589,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_EQUITY",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "top_down_arithmetic",
+            "sourceRows": [
+              "row:sfp_eurotelesites:26"
+            ],
+            "edge": "sum_FS.SFP.TOTAL_EQUITY_AND_LIABILITIES"
+          }
         },
         {
           "rowId": "row:sfp_eurotelesites:17",
@@ -720,7 +729,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "top_down_arithmetic",
+            "sourceRows": [
+              "row:sfp_eurotelesites:26"
+            ],
+            "edge": "sum_FS.SFP.TOTAL_EQUITY_AND_LIABILITIES"
+          }
         },
         {
           "rowId": "row:sfp_eurotelesites:21",
@@ -885,7 +903,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "top_down_arithmetic",
+            "sourceRows": [
+              "row:sfp_eurotelesites:26"
+            ],
+            "edge": "sum_FS.SFP.TOTAL_EQUITY_AND_LIABILITIES"
+          }
         },
         {
           "rowId": "row:sfp_eurotelesites:26",
@@ -1202,7 +1229,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:pnl_eurotelesites:7",
@@ -1706,7 +1740,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RETAINED_EARNINGS",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         }
       ],
       "aggregationGroups": [],
