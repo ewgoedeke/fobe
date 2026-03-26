@@ -10,6 +10,10 @@ import subprocess
 import sys
 import os
 
+ENRICHMENTS = [
+    ('Structural Inference', 'eval/structural_inference.py'),
+]
+
 CHECKS = [
     ('Classification', 'eval/check_classification.py'),
     ('Consistency', 'eval/check_consistency.py'),
@@ -29,6 +33,18 @@ def main():
     print(f'Document: {doc_path}')
     print(f'=' * 60)
     
+    # Run enrichment steps first (structural inference writes preTagged)
+    for name, script in ENRICHMENTS:
+        script_path = os.path.join(repo_root, script)
+        print(f'\n{"─" * 60}')
+        print(f'Enrichment: {name}')
+        print(f'{"─" * 60}')
+
+        subprocess.run(
+            [sys.executable, script_path, doc_path, '--dry-run'],
+            capture_output=False
+        )
+
     results = {}
     for name, script in CHECKS:
         script_path = os.path.join(repo_root, script)

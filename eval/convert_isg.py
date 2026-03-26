@@ -48,11 +48,19 @@ def _parse_number(text: str) -> float | None:
 def _detect_statement(cols: list[str], rows: list[dict]) -> str | None:
     """Detect the statement type from column headers and row labels."""
     col_text = " ".join(cols).lower()
-    labels = " ".join(str(list(r.values())[0]) for r in rows[:10]).lower()
+    all_labels = [str(list(r.values())[0]).lower() for r in rows]
+    labels = " ".join(all_labels[:10])
+    labels_all = " ".join(all_labels)
 
-    if "statement of financial position" in col_text or "31 december" in col_text:
-        if "equity" in labels and "assets" in labels:
+    # SFP: assets side (header mentions statement of financial position / "as at")
+    is_sfp_header = ("statement of financial position" in col_text
+                     or "as at" in col_text
+                     or ("31 december" in col_text and "for the year" not in col_text))
+    if is_sfp_header:
+        if "assets" in labels or ("equity" in labels and "liabilities" in labels_all):
             return "SFP"
+
+    # PNL must be checked before SFP equity side (both contain "equity" keyword)
     if "revenue" in labels and ("cost of sales" in labels or "gross profit" in labels):
         return "PNL"
     if "other comprehensive income" in labels:
@@ -63,6 +71,178 @@ def _detect_statement(cols: list[str], rows: list[dict]) -> str | None:
         return "OCI"
     if "segment" in col_text or "segment" in labels[:200]:
         return None  # segments handled separately
+
+    # SFP equity+liabilities side (split table): first row is "Equity" or
+    # "Liabilities", and table contains SFP-specific keywords like
+    # "share capital", "total equity and liabilities", "borrowings"
+    first_label = all_labels[0].strip() if all_labels else ""
+    if first_label in ("equity", "liabilities", "liabilities and equity"):
+        if any(kw in labels_all for kw in ["share capital", "retained earnings",
+                                           "total equity and liabilities",
+                                           "total equity", "borrowings"]):
+            return "SFP"
+
+    # ── Disclosure note classification ────────────────────────────
+    # Only classify tables that have numeric values (skip pure text/reference tables)
+    # At this point, rows are raw ISG dicts: {col_name: value, ...}
+    has_values = False
+    for r in rows:
+        vals = list(r.values())[1:]  # skip label column
+        for v in vals:
+            if _parse_number(str(v)) is not None:
+                has_values = True
+                break
+        if has_values:
+            break
+    if not has_values:
+        return None
+
+    kw = labels_all
+
+    # Segments (IFRS 8)
+    if "segment" in kw and any(w in kw for w in ["revenue", "assets", "liabilities",
+                                                   "reportable", "operating"]):
+        return "DISC.SEGMENTS"
+
+    # Revenue disaggregation (IFRS 15)
+    if "revenue" in kw and any(w in kw for w in ["disaggregat", "timing",
+                                                   "geography", "product",
+                                                   "point in time", "over time",
+                                                   "contract"]):
+        return "DISC.REVENUE"
+
+    # PPE rollforward (IAS 16)
+    if any(w in kw for w in ["property, plant", "ppe"]):
+        if any(w in kw for w in ["cost", "depreciation", "carrying", "additions",
+                                  "disposals", "balance at"]):
+            return "DISC.PPE"
+
+    # Intangibles rollforward (IAS 38)
+    if "intangible" in kw and any(w in kw for w in ["cost", "amortis", "carrying",
+                                                      "additions", "balance at"]):
+        return "DISC.INTANGIBLES"
+
+    # Goodwill (IFRS 3 / IAS 36)
+    if "goodwill" in kw and any(w in kw for w in ["impairment", "carrying",
+                                                    "cgu", "balance at"]):
+        return "DISC.GOODWILL"
+
+    # Investment property (IAS 40)
+    if "investment property" in kw:
+        return "DISC.INV_PROP"
+
+    # Leases (IFRS 16)
+    if "right-of-use" in kw or ("lease" in kw and any(w in kw for w in [
+            "maturity", "liability", "right", "depreciation"])):
+        return "DISC.LEASES"
+
+    # Provisions rollforward (IAS 37)
+    if "provision" in kw and any(w in kw for w in ["opening", "closing",
+                                                     "beginning", "reversal",
+                                                     "utilised", "balance at"]):
+        return "DISC.PROVISIONS"
+
+    # Tax (IAS 12)
+    if "deferred tax" in kw:
+        return "DISC.TAX"
+    if "tax" in kw and any(w in kw for w in ["effective", "reconcil", "rate",
+                                               "current tax expense"]):
+        return "DISC.TAX"
+
+    # Employee benefits (IAS 19)
+    if any(w in kw for w in ["employee benefit", "pension", "defined benefit",
+                               "actuarial", "post-employment"]):
+        return "DISC.EMPLOYEE_BENEFITS"
+    if "employee" in kw and any(w in kw for w in ["wages", "salaries", "social",
+                                                    "contribution"]):
+        return "DISC.EMPLOYEE_BENEFITS"
+
+    # Earnings per share (IAS 33)
+    if "earnings per share" in kw or ("weighted" in kw and "shares" in kw):
+        return "DISC.EPS"
+    if "profit" in kw and "attributable" in kw and "ordinary" in kw:
+        return "DISC.EPS"
+
+    # Share-based payments (IFRS 2) / Share capital
+    if "share" in kw and any(w in kw for w in ["option", "based", "plan",
+                                                 "granted", "vested", "exercised"]):
+        return "DISC.SHARE_BASED"
+
+    # Business combinations (IFRS 3)
+    if any(w in kw for w in ["acquisition", "business combination", "purchase price",
+                               "consideration transferred"]):
+        return "DISC.BCA"
+
+    # Financial instruments (IFRS 7/9)
+    if "financial" in kw and any(w in kw for w in ["asset", "instrument",
+                                                     "liability", "fvoci",
+                                                     "amortised cost"]):
+        return "DISC.FIN_INST"
+
+    # Fair value hierarchy (IFRS 13)
+    if "fair value" in kw and any(w in kw for w in ["level", "hierarch"]):
+        return "DISC.FAIR_VALUE"
+
+    # Inventories (IAS 2)
+    if any(w in kw for w in ["inventor", "raw material", "finished good",
+                               "work in progress"]):
+        return "DISC.INVENTORIES"
+
+    # Borrowings / debt (IFRS 7)
+    if any(w in kw for w in ["borrowing", "bond issue", "loan"]):
+        if any(w in kw for w in ["maturity", "repayment", "carrying",
+                                   "balance at", "proceeds"]):
+            return "DISC.BORROWINGS"
+
+    # Related parties (IAS 24)
+    if "related party" in kw or "key management" in kw:
+        return "DISC.RELATED_PARTIES"
+
+    # Contingencies and commitments (IAS 37)
+    if "contingent" in kw or "commitment" in kw:
+        return "DISC.CONTINGENCIES"
+
+    # Held for sale / discontinued ops (IFRS 5)
+    if any(w in kw for w in ["held for sale", "disposal group", "discontinued"]):
+        return "DISC.HELD_FOR_SALE"
+
+    # Hedge accounting (IFRS 9)
+    if any(w in kw for w in ["hedge", "hedging", "cash flow hedge",
+                               "forward exchange contract"]):
+        return "DISC.HEDGE"
+
+    # Credit risk / ECL (IFRS 9)
+    if "credit" in kw and any(w in kw for w in ["risk", "ecl", "loss allowance",
+                                                   "expected"]):
+        return "DISC.CREDIT_RISK"
+    if "receivable" in kw and any(w in kw for w in ["ageing", "past due",
+                                                      "allowance"]):
+        return "DISC.CREDIT_RISK"
+
+    # Biological assets (IAS 41)
+    if "biological" in kw:
+        return "DISC.BIOLOGICAL_ASSETS"
+
+    # Government grants (IAS 20)
+    if "government grant" in kw:
+        return "DISC.GOV_GRANTS"
+
+    # Dividends
+    if "dividend" in kw:
+        return "DISC.DIVIDENDS"
+
+    # Associates / Joint ventures (IAS 28)
+    if "associate" in kw or "joint venture" in kw:
+        return "DISC.ASSOCIATES"
+
+    # Impairment (IAS 36)
+    if "impairment" in kw and any(w in kw for w in ["loss", "test", "recoverable"]):
+        return "DISC.IMPAIRMENT"
+
+    # Depreciation/amortisation detail
+    if any(w in kw for w in ["depreciation", "amortisation"]) and "useful" in kw:
+        return "DISC.PPE"
+
     return None
 
 
@@ -200,47 +380,181 @@ def convert_table(isg_table: dict) -> dict | None:
 
 
 def _build_simple_hierarchy(rows: list[dict], value_col_indices: list[int]):
-    """Build parent-child hierarchy by checking if TOTAL rows sum their predecessors."""
-    tolerance = 0.5
+    """Build parent-child hierarchy via multi-pass subtotal detection.
 
-    for i, row in enumerate(rows):
-        if row["rowType"] != "TOTAL_EXPLICIT":
-            continue
+    Pass logic (up to 5 passes):
+      1. For each row with values, check if it equals the sum of a consecutive
+         run of rows above (backward subtotal) or below (forward breakdown).
+      2. Once a subtotal is found, its children are marked and excluded from
+         being candidates in subsequent passes.
+      3. Rows detected as subtotals but typed DATA are reclassified as
+         TOTAL_IMPLICIT.
 
-        # Try to find children: scan backward until another TOTAL or start
-        candidates = []
-        for j in range(i - 1, -1, -1):
-            prev = rows[j]
-            if prev["rowType"] in ("TOTAL_EXPLICIT", "SEPARATOR"):
-                break
-            if prev["rowType"] == "DATA":
-                candidates.append(j)
+    This handles nested structures like:
+      detail1, detail2, detail3 → subtotalA (implicit)
+      detail4, detail5         → subtotalB (implicit)
+      subtotalA + subtotalB    → TOTAL (explicit)
+    """
+    max_passes = 5
+    assigned: set[int] = set()  # row indices already assigned as children
 
-        if not candidates:
-            continue
+    for pass_num in range(max_passes):
+        found_any = False
 
-        # Check if total = SUM(candidates) for any value column
-        for col_idx in value_col_indices:
-            total_val = _get_pv(row, col_idx)
-            if total_val is None:
+        # Process in document order — smaller groups (earlier in the table)
+        # get detected before their parents (later in the table).
+        # Within each pass, skip rows already consumed or already parents.
+        for i, row in enumerate(rows):
+            # Skip rows already assigned as children or already have children
+            if i in assigned or row.get("childIds"):
+                continue
+            # Skip rows without values
+            if row["rowType"] == "SEPARATOR":
                 continue
 
-            child_sum = 0.0
-            all_found = True
-            for ci in candidates:
-                cv = _get_pv(rows[ci], col_idx)
-                if cv is not None:
-                    child_sum += cv
-                else:
-                    all_found = False
+            # Try backward subtotal: row[i] = SUM(consecutive preceding rows)
+            result = _try_backward_subtotal(rows, i, value_col_indices, assigned)
+            if result:
+                _apply_hierarchy(rows, i, result, assigned)
+                found_any = True
+                continue
 
-            if all_found and abs(total_val - child_sum) <= tolerance:
-                # Match! Set hierarchy
-                child_ids = [rows[ci]["rowId"] for ci in reversed(candidates)]
-                row["childIds"] = child_ids
-                for ci in candidates:
-                    rows[ci]["parentId"] = row["rowId"]
-                break  # one column match is enough
+            # Try forward breakdown: row[i] = SUM(consecutive following rows)
+            result = _try_forward_breakdown(rows, i, value_col_indices, assigned)
+            if result:
+                _apply_hierarchy(rows, i, result, assigned)
+                found_any = True
+
+        if not found_any:
+            break
+
+
+def _try_backward_subtotal(rows: list[dict], total_idx: int,
+                           value_col_indices: list[int],
+                           assigned: set[int]) -> list[int] | None:
+    """Check if rows[total_idx] = SUM of consecutive preceding rows.
+
+    Skips rows already assigned as children of other subtotals — they
+    belong to a lower level. But rows that are subtotals themselves
+    (have childIds) are valid candidates for the next hierarchy level.
+
+    Tries progressively longer runs of candidates (2..N) and returns the
+    first match. Requires at least 2 children.
+    """
+    candidates = []
+    for j in range(total_idx - 1, -1, -1):
+        prev = rows[j]
+        if prev["rowType"] == "SEPARATOR":
+            break
+        if j in assigned:
+            # Skip assigned children, but don't break — there may be
+            # unassigned rows or subtotals further up
+            continue
+        if prev.get("childIds") or prev["rowType"] in ("DATA", "TOTAL_EXPLICIT", "TOTAL_IMPLICIT"):
+            candidates.append(j)
+
+    if len(candidates) < 2:
+        return None
+
+    # Strategy 1: Try just the subtotal rows (rows with childIds) — these
+    # are the expected children at the next hierarchy level.
+    subtotal_candidates = [j for j in candidates if rows[j].get("childIds")]
+    if len(subtotal_candidates) >= 2:
+        if _check_sum(rows, total_idx, subtotal_candidates, value_col_indices):
+            return subtotal_candidates
+
+    # Strategy 2: Try progressively longer contiguous runs from closest row.
+    for length in range(2, len(candidates) + 1):
+        subset = candidates[:length]
+        if _check_sum(rows, total_idx, subset, value_col_indices):
+            return subset
+
+    return None
+
+
+def _try_forward_breakdown(rows: list[dict], parent_idx: int,
+                           value_col_indices: list[int],
+                           assigned: set[int]) -> list[int] | None:
+    """Check if rows[parent_idx] = SUM of consecutive following rows.
+
+    Used for parent rows that precede their children (e.g., "Profit after tax"
+    followed by "thereof NCI" + "thereof parent").
+    """
+    candidates = []
+    for j in range(parent_idx + 1, len(rows)):
+        nxt = rows[j]
+        if nxt["rowType"] == "SEPARATOR":
+            break
+        if j in assigned:
+            continue
+        if nxt.get("childIds") or nxt["rowType"] in ("DATA", "TOTAL_EXPLICIT", "TOTAL_IMPLICIT"):
+            candidates.append(j)
+
+    if len(candidates) < 2:
+        return None
+
+    for length in range(2, len(candidates) + 1):
+        subset = candidates[:length]
+        if _check_sum(rows, parent_idx, subset, value_col_indices):
+            return subset
+
+    return None
+
+
+def _check_sum(rows: list[dict], total_idx: int, child_indices: list[int],
+               value_col_indices: list[int]) -> bool:
+    """Check if total row ≈ SUM(child rows) across value columns.
+
+    Requires match on at least one column where total has a value.
+    Missing child values are treated as 0 (empty cells in financial
+    tables typically mean zero). At least half of children must have
+    a value in a column for it to count.
+    Uses tolerance of max(0.5, 0.005 * |total|) per column.
+    """
+    matched_any = False
+    for col_idx in value_col_indices:
+        total_val = _get_pv(rows[total_idx], col_idx)
+        if total_val is None:
+            continue
+
+        child_sum = 0.0
+        present_count = 0
+        for ci in child_indices:
+            cv = _get_pv(rows[ci], col_idx)
+            if cv is not None:
+                child_sum += cv
+                present_count += 1
+
+        # Need at least 2 children with values, and at least half overall
+        if present_count < max(2, len(child_indices) / 2):
+            continue
+
+        tol = max(0.5, 0.005 * abs(total_val))
+        if abs(total_val - child_sum) <= tol:
+            matched_any = True
+        else:
+            # If this column has values but doesn't match, fail
+            return False
+
+    return matched_any
+
+
+def _apply_hierarchy(rows: list[dict], parent_idx: int,
+                     child_indices: list[int], assigned: set[int]):
+    """Set parent-child links and reclassify subtotal rows."""
+    parent_row = rows[parent_idx]
+    # Sort children by row index (document order)
+    child_indices_sorted = sorted(child_indices)
+    child_ids = [rows[ci]["rowId"] for ci in child_indices_sorted]
+    parent_row["childIds"] = child_ids
+
+    for ci in child_indices_sorted:
+        rows[ci]["parentId"] = parent_row["rowId"]
+        assigned.add(ci)
+
+    # Reclassify DATA rows detected as subtotals to TOTAL_IMPLICIT
+    if parent_row["rowType"] == "DATA":
+        parent_row["rowType"] = "TOTAL_IMPLICIT"
 
 
 def _get_pv(row: dict, col_idx: int) -> float | None:

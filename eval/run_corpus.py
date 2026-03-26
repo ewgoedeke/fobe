@@ -27,6 +27,7 @@ from check_consistency import (
 )
 from fact_scoring import CorroborationStatus
 from relationship_graph import build_graph, EdgeType
+from structural_inference import cascade as structural_cascade
 
 
 def analyze_document(doc_path: str, ontology_root: str) -> dict:
@@ -58,6 +59,13 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
                 label = row.get("label", "") or ""
                 if _match_label(label, table_context=table_ctx, ontology_root=ontology_root):
                     label_matched_rows += 1
+
+    # Structural inference (dry-run: count but don't modify original)
+    import copy
+    tables_copy = copy.deepcopy(tables)
+    si_iterations, si_tags = structural_cascade(tables_copy, ontology_root)
+    si_by_rule = Counter(t.rule for t in si_tags)
+    structural_inferred = len(si_tags)
 
     # Index facts
     facts = index_facts(tables, ontology_root=ontology_root)
@@ -115,6 +123,9 @@ def analyze_document(doc_path: str, ontology_root: str) -> dict:
         "data_rows": data_rows,
         "pretagged_rows": pretagged_rows,
         "label_matched_rows": label_matched_rows,
+        "structural_inferred": structural_inferred,
+        "structural_by_rule": dict(si_by_rule),
+        "structural_iterations": si_iterations,
         "indexed_facts": len(facts),
         "unique_concepts": len(unique_concepts),
         "concept_list": sorted(unique_concepts),
@@ -163,6 +174,7 @@ def print_comparison(results: list[dict]):
         ("Data rows", "data_rows"),
         ("PreTagged rows", "pretagged_rows"),
         ("Label-matched rows", "label_matched_rows"),
+        ("Structural inferred", "structural_inferred"),
         ("Indexed fact keys", "indexed_facts"),
         ("Unique concepts", "unique_concepts"),
     ]
