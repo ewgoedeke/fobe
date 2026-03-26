@@ -1,17 +1,17 @@
 # DISC.GOODWILL.* — Goodwill (IFRS 3, IAS 36)
 concepts:
-  - { id: DISC.GOODWILL.COST_OPENING, label: "Cost — opening balance", period_type: instant }
-  - { id: DISC.GOODWILL.COST_BCA, label: "Cost — business combinations", period_type: duration }
-  - { id: DISC.GOODWILL.COST_DISPOSALS, label: "Cost — disposals (deconsolidation)", period_type: duration }
-  - { id: DISC.GOODWILL.COST_FX_EFFECT, label: "Cost — FX effect", period_type: duration }
-  - { id: DISC.GOODWILL.COST_CLOSING, label: "Cost — closing balance", period_type: instant, is_total: true }
-  - { id: DISC.GOODWILL.IMPAIRMENT_OPENING, label: "Accumulated impairment — opening", period_type: instant }
-  - { id: DISC.GOODWILL.IMPAIRMENT_CHARGE, label: "Impairment loss recognised", period_type: duration }
-  - { id: DISC.GOODWILL.IMPAIRMENT_CLOSING, label: "Accumulated impairment — closing", period_type: instant, is_total: true }
-  - { id: DISC.GOODWILL.CARRYING_AMOUNT, label: "Carrying amount (net)", period_type: instant, is_total: true }
+  - { id: DISC.GOODWILL.COST_OPENING, label: "Cost — opening balance", period_type: instant, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.COST_BCA, label: "Cost — business combinations", period_type: duration, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.COST_DISPOSALS, label: "Cost — disposals (deconsolidation)", period_type: duration, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.COST_FX_EFFECT, label: "Cost — FX effect", period_type: duration, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.COST_CLOSING, label: "Cost — closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.IMPAIRMENT_OPENING, label: "Accumulated impairment — opening", period_type: instant, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.IMPAIRMENT_CHARGE, label: "Impairment loss recognised", period_type: duration, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.IMPAIRMENT_CLOSING, label: "Accumulated impairment — closing", period_type: instant, is_total: true, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.CARRYING_AMOUNT, label: "Carrying amount (net)", period_type: instant, is_total: true, valid_contexts: [DISC.GOODWILL] }
   # CGU allocation
-  - { id: DISC.GOODWILL.CGU_CARRYING_AMOUNT, label: "Goodwill allocated to CGU", period_type: instant }
-  - { id: DISC.GOODWILL.CGU_RECOVERABLE_AMOUNT, label: "CGU recoverable amount", period_type: instant }
-  - { id: DISC.GOODWILL.CGU_HEADROOM, label: "CGU headroom (recoverable - carrying)", period_type: instant }
-  - { id: DISC.GOODWILL.CGU_DISCOUNT_RATE, label: "Pre-tax discount rate used", period_type: instant, unit_type: percentage }
-  - { id: DISC.GOODWILL.CGU_GROWTH_RATE, label: "Terminal growth rate", period_type: instant, unit_type: percentage }
+  - { id: DISC.GOODWILL.CGU_CARRYING_AMOUNT, label: "Goodwill allocated to CGU", period_type: instant, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.CGU_RECOVERABLE_AMOUNT, label: "CGU recoverable amount", period_type: instant, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.CGU_HEADROOM, label: "CGU headroom (recoverable - carrying)", period_type: instant, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.CGU_DISCOUNT_RATE, label: "Pre-tax discount rate used", period_type: instant, unit_type: percentage, valid_contexts: [DISC.GOODWILL] }
+  - { id: DISC.GOODWILL.CGU_GROWTH_RATE, label: "Terminal growth rate", period_type: instant, unit_type: percentage, valid_contexts: [DISC.GOODWILL] }

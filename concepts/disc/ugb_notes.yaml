@@ -2,44 +2,44 @@
 # Concepts required by Austrian statutory law with no direct IFRS equivalent
 concepts:
   # Anlagenspiegel extensions (§226 UGB) — beyond what DISC.PPE covers
-  - { id: DISC.UGB.FIXED_ASSET_INTEREST_CAPITALISED, label: "Interest capitalised in fixed assets (§203 Abs 4)", period_type: duration }
-  
+  - { id: DISC.UGB.FIXED_ASSET_INTEREST_CAPITALISED, label: "Interest capitalised in fixed assets (§203 Abs 4)", period_type: duration, valid_contexts: [DISC.UGB] }
+
   # Verbindlichkeitenspiegel (§225 Abs 6 UGB)
-  - { id: DISC.UGB.LIABILITIES_WITHIN_1Y, label: "Liabilities — remaining term < 1 year", period_type: instant }
-  - { id: DISC.UGB.LIABILITIES_1_TO_5Y, label: "Liabilities — remaining term 1-5 years", period_type: instant }
-  - { id: DISC.UGB.LIABILITIES_OVER_5Y, label: "Liabilities — remaining term > 5 years", period_type: instant }
-  - { id: DISC.UGB.LIABILITIES_SECURED, label: "Liabilities secured by collateral (dingliche Sicherheiten)", period_type: instant }
-  
+  - { id: DISC.UGB.LIABILITIES_WITHIN_1Y, label: "Liabilities — remaining term < 1 year", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.LIABILITIES_1_TO_5Y, label: "Liabilities — remaining term 1-5 years", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.LIABILITIES_OVER_5Y, label: "Liabilities — remaining term > 5 years", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.LIABILITIES_SECURED, label: "Liabilities secured by collateral (dingliche Sicherheiten)", period_type: instant, valid_contexts: [DISC.UGB] }
+
   # Haftungsverhältnisse (§199 / §237 Z3 UGB)
-  - { id: DISC.UGB.CONTINGENT_LIABILITIES_GUARANTEES, label: "Guarantees and sureties (Bürgschaften)", period_type: instant }
-  - { id: DISC.UGB.CONTINGENT_LIABILITIES_BILLS, label: "Contingent liabilities from bills of exchange", period_type: instant }
-  - { id: DISC.UGB.CONTINGENT_LIABILITIES_OTHER, label: "Other contingent liabilities (Haftungsverhältnisse)", period_type: instant }
-  
+  - { id: DISC.UGB.CONTINGENT_LIABILITIES_GUARANTEES, label: "Guarantees and sureties (Bürgschaften)", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.CONTINGENT_LIABILITIES_BILLS, label: "Contingent liabilities from bills of exchange", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.CONTINGENT_LIABILITIES_OTHER, label: "Other contingent liabilities (Haftungsverhältnisse)", period_type: instant, valid_contexts: [DISC.UGB] }
+
   # Sonstige finanzielle Verpflichtungen (§237 Z3a UGB)
-  - { id: DISC.UGB.OPERATING_LEASE_COMMITMENTS_1Y, label: "Operating lease commitments — within 1 year", period_type: instant }
-  - { id: DISC.UGB.OPERATING_LEASE_COMMITMENTS_TOTAL, label: "Operating lease commitments — total", period_type: instant }
-  - { id: DISC.UGB.PURCHASE_COMMITMENTS, label: "Purchase commitments (Bestellobligo)", period_type: instant }
-  
+  - { id: DISC.UGB.OPERATING_LEASE_COMMITMENTS_1Y, label: "Operating lease commitments — within 1 year", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.OPERATING_LEASE_COMMITMENTS_TOTAL, label: "Operating lease commitments — total", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.PURCHASE_COMMITMENTS, label: "Purchase commitments (Bestellobligo)", period_type: instant, valid_contexts: [DISC.UGB] }
+
   # Latente Steuern Aufgliederung (§198 Abs 9-10 UGB)
-  - { id: DISC.UGB.DTA_TEMP_DIFF, label: "DTA from temporary differences", period_type: instant }
-  - { id: DISC.UGB.DTA_TAX_LOSSES, label: "DTA from tax loss carryforwards", period_type: instant }
-  - { id: DISC.UGB.DTL_TEMP_DIFF, label: "DTL from temporary differences", period_type: instant }
-  
+  - { id: DISC.UGB.DTA_TEMP_DIFF, label: "DTA from temporary differences", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.DTA_TAX_LOSSES, label: "DTA from tax loss carryforwards", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.DTL_TEMP_DIFF, label: "DTL from temporary differences", period_type: instant, valid_contexts: [DISC.UGB] }
+
   # Eigenkapitalspiegel details (§231 Abs 5 UGB)
-  - { id: DISC.UGB.DIVIDEND_DISTRIBUTION, label: "Dividend distribution (Ausschüttung)", period_type: duration }
-  - { id: DISC.UGB.SHAREHOLDER_CONTRIBUTION, label: "Shareholder contribution (Gesellschafterzuschuss)", period_type: duration }
-  - { id: DISC.UGB.RESERVE_APPROPRIATION, label: "Appropriation to reserves (Zuweisungen)", period_type: duration }
-  - { id: DISC.UGB.RESERVE_RELEASE, label: "Release of reserves (Auflösungen)", period_type: duration }
-  
+  - { id: DISC.UGB.DIVIDEND_DISTRIBUTION, label: "Dividend distribution (Ausschüttung)", period_type: duration, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.SHAREHOLDER_CONTRIBUTION, label: "Shareholder contribution (Gesellschafterzuschuss)", period_type: duration, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.RESERVE_APPROPRIATION, label: "Appropriation to reserves (Zuweisungen)", period_type: duration, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.RESERVE_RELEASE, label: "Release of reserves (Auflösungen)", period_type: duration, valid_contexts: [DISC.UGB] }
+
   # Beteiligungsspiegel (§238 Z2 UGB) — subsidiary/associate listing
-  - { id: DISC.UGB.SUBSIDIARY_NAME, label: "Subsidiary name", period_type: instant }
-  - { id: DISC.UGB.SUBSIDIARY_JURISDICTION, label: "Subsidiary jurisdiction (Sitz)", period_type: instant }
-  - { id: DISC.UGB.SUBSIDIARY_OWNERSHIP_PCT, label: "Ownership percentage (Beteiligungsquote)", period_type: instant, unit_type: percentage }
-  - { id: DISC.UGB.SUBSIDIARY_EQUITY, label: "Subsidiary equity (Eigenkapital)", period_type: instant }
-  - { id: DISC.UGB.SUBSIDIARY_RESULT, label: "Subsidiary annual result (Jahresergebnis)", period_type: duration }
-  
+  - { id: DISC.UGB.SUBSIDIARY_NAME, label: "Subsidiary name", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.SUBSIDIARY_JURISDICTION, label: "Subsidiary jurisdiction (Sitz)", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.SUBSIDIARY_OWNERSHIP_PCT, label: "Ownership percentage (Beteiligungsquote)", period_type: instant, unit_type: percentage, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.SUBSIDIARY_EQUITY, label: "Subsidiary equity (Eigenkapital)", period_type: instant, valid_contexts: [DISC.UGB] }
+  - { id: DISC.UGB.SUBSIDIARY_RESULT, label: "Subsidiary annual result (Jahresergebnis)", period_type: duration, valid_contexts: [DISC.UGB] }
+
   # Geschäfte mit nahestehenden Unternehmen (§237 Z8a/8b UGB)
-  - { id: DISC.UGB.RELATED_PARTY_TRANSACTIONS_TOTAL, label: "Total related party transactions", period_type: duration, ref: "§237 Z8b" }
-  
+  - { id: DISC.UGB.RELATED_PARTY_TRANSACTIONS_TOTAL, label: "Total related party transactions", period_type: duration, ref: "§237 Z8b", valid_contexts: [DISC.UGB] }
+
   # Ereignisse nach dem Bilanzstichtag (§238 Z1 UGB)
-  - { id: DISC.UGB.SUBSEQUENT_EVENTS, label: "Events after the balance sheet date", period_type: instant, ref: "§238 Z1" }
+  - { id: DISC.UGB.SUBSEQUENT_EVENTS, label: "Events after the balance sheet date", period_type: instant, ref: "§238 Z1", valid_contexts: [DISC.UGB] }

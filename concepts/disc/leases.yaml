@@ -3,14 +3,14 @@
 
 concepts:
   # ROU asset rollforward
-  - { id: DISC.LEASES.ROU_OPENING, label: "Right-of-use assets — opening balance", period_type: instant }
-  - { id: DISC.LEASES.ROU_ADDITIONS, label: "Right-of-use assets — additions", period_type: duration }
-  - { id: DISC.LEASES.ROU_DEPRECIATION, label: "Right-of-use assets — depreciation", period_type: duration }
-  - { id: DISC.LEASES.ROU_DERECOGNITION, label: "Right-of-use assets — derecognition", period_type: duration }
-  - { id: DISC.LEASES.ROU_CLOSING, label: "Right-of-use assets — closing balance", period_type: instant, is_total: true }
+  - { id: DISC.LEASES.ROU_OPENING, label: "Right-of-use assets — opening balance", period_type: instant, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.ROU_ADDITIONS, label: "Right-of-use assets — additions", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.ROU_DEPRECIATION, label: "Right-of-use assets — depreciation", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.ROU_DERECOGNITION, label: "Right-of-use assets — derecognition", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.ROU_CLOSING, label: "Right-of-use assets — closing balance", period_type: instant, is_total: true, valid_contexts: [DISC.LEASES] }
   # P&L amounts
-  - { id: DISC.LEASES.PNL_INTEREST_EXPENSE, label: "Interest on lease liabilities", period_type: duration }
-  - { id: DISC.LEASES.PNL_SUBLEASE_INCOME, label: "Income from sub-leasing ROU assets", period_type: duration }
-  - { id: DISC.LEASES.PNL_SHORT_TERM_EXPENSE, label: "Short-term lease expense", period_type: duration }
-  - { id: DISC.LEASES.PNL_LOW_VALUE_EXPENSE, label: "Low-value asset lease expense", period_type: duration }
-  - { id: DISC.LEASES.CFS_TOTAL_OUTFLOW, label: "Total cash outflow for leases", period_type: duration }
+  - { id: DISC.LEASES.PNL_INTEREST_EXPENSE, label: "Interest on lease liabilities", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.PNL_SUBLEASE_INCOME, label: "Income from sub-leasing ROU assets", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.PNL_SHORT_TERM_EXPENSE, label: "Short-term lease expense", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.PNL_LOW_VALUE_EXPENSE, label: "Low-value asset lease expense", period_type: duration, valid_contexts: [DISC.LEASES] }
+  - { id: DISC.LEASES.CFS_TOTAL_OUTFLOW, label: "Total cash outflow for leases", period_type: duration, valid_contexts: [DISC.LEASES] }

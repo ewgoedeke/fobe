@@ -1,18 +1,18 @@
 # DISC.RELATED_PARTIES.* — Related Party Disclosures (IAS 24)
 # Cross-cut by AXIS.RELATED_PARTY_TYPE_DOC
 concepts:
-  - { id: DISC.RELATED_PARTIES.SALES_TO, label: "Sales to related parties", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.PURCHASES_FROM, label: "Purchases from related parties", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.RECEIVABLES_FROM, label: "Receivables from related parties", period_type: instant }
-  - { id: DISC.RELATED_PARTIES.PAYABLES_TO, label: "Payables to related parties", period_type: instant }
-  - { id: DISC.RELATED_PARTIES.LOANS_TO, label: "Loans to related parties", period_type: instant }
-  - { id: DISC.RELATED_PARTIES.LOANS_FROM, label: "Loans from related parties", period_type: instant }
-  - { id: DISC.RELATED_PARTIES.GUARANTEES_GIVEN, label: "Guarantees given to related parties", period_type: instant }
-  - { id: DISC.RELATED_PARTIES.INTEREST_INCOME, label: "Interest income from related parties", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.INTEREST_EXPENSE, label: "Interest expense to related parties", period_type: duration }
+  - { id: DISC.RELATED_PARTIES.SALES_TO, label: "Sales to related parties", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.PURCHASES_FROM, label: "Purchases from related parties", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.RECEIVABLES_FROM, label: "Receivables from related parties", period_type: instant, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.PAYABLES_TO, label: "Payables to related parties", period_type: instant, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.LOANS_TO, label: "Loans to related parties", period_type: instant, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.LOANS_FROM, label: "Loans from related parties", period_type: instant, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.GUARANTEES_GIVEN, label: "Guarantees given to related parties", period_type: instant, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.INTEREST_INCOME, label: "Interest income from related parties", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.INTEREST_EXPENSE, label: "Interest expense to related parties", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
   # Key management personnel
-  - { id: DISC.RELATED_PARTIES.KMP_SHORT_TERM, label: "KMP compensation — short-term benefits", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.KMP_POST_EMPLOYMENT, label: "KMP compensation — post-employment benefits", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.KMP_SHARE_BASED, label: "KMP compensation — share-based payments", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.KMP_TERMINATION, label: "KMP compensation — termination benefits", period_type: duration }
-  - { id: DISC.RELATED_PARTIES.KMP_TOTAL, label: "KMP compensation — total", period_type: duration, is_total: true }
+  - { id: DISC.RELATED_PARTIES.KMP_SHORT_TERM, label: "KMP compensation — short-term benefits", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.KMP_POST_EMPLOYMENT, label: "KMP compensation — post-employment benefits", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.KMP_SHARE_BASED, label: "KMP compensation — share-based payments", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.KMP_TERMINATION, label: "KMP compensation — termination benefits", period_type: duration, valid_contexts: [DISC.RELATED_PARTIES] }
+  - { id: DISC.RELATED_PARTIES.KMP_TOTAL, label: "KMP compensation — total", period_type: duration, is_total: true, valid_contexts: [DISC.RELATED_PARTIES] }

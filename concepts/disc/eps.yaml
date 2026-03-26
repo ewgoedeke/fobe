@@ -1,10 +1,10 @@
 # DISC.EPS.* — Earnings Per Share (IAS 33)
 concepts:
-  - { id: DISC.EPS.PROFIT_ATTR_ORDINARY, label: "Profit attributable to ordinary shareholders", period_type: duration }
-  - { id: DISC.EPS.WEIGHTED_AVG_SHARES_BASIC, label: "Weighted average shares — basic", period_type: duration, unit_type: shares }
-  - { id: DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED, label: "Weighted average shares — diluted", period_type: duration, unit_type: shares }
-  - { id: DISC.EPS.BASIC, label: "Basic EPS", period_type: duration, unit_type: per_share }
-  - { id: DISC.EPS.DILUTED, label: "Diluted EPS", period_type: duration, unit_type: per_share }
-  - { id: DISC.EPS.DILUTION_EFFECT_OPTIONS, label: "Dilution effect — share options", period_type: duration, unit_type: shares }
-  - { id: DISC.EPS.DILUTION_EFFECT_CONVERTIBLE, label: "Dilution effect — convertible instruments", period_type: duration, unit_type: shares }
-  - { id: DISC.EPS.DIVIDEND_PER_SHARE, label: "Dividend per share", period_type: duration, unit_type: per_share }
+  - { id: DISC.EPS.PROFIT_ATTR_ORDINARY, label: "Profit attributable to ordinary shareholders", period_type: duration, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.WEIGHTED_AVG_SHARES_BASIC, label: "Weighted average shares — basic", period_type: duration, unit_type: shares, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.WEIGHTED_AVG_SHARES_DILUTED, label: "Weighted average shares — diluted", period_type: duration, unit_type: shares, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.BASIC, label: "Basic EPS", period_type: duration, unit_type: per_share, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.DILUTED, label: "Diluted EPS", period_type: duration, unit_type: per_share, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.DILUTION_EFFECT_OPTIONS, label: "Dilution effect — share options", period_type: duration, unit_type: shares, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.DILUTION_EFFECT_CONVERTIBLE, label: "Dilution effect — convertible instruments", period_type: duration, unit_type: shares, valid_contexts: [DISC.EPS] }
+  - { id: DISC.EPS.DIVIDEND_PER_SHARE, label: "Dividend per share", period_type: duration, unit_type: per_share, valid_contexts: [DISC.EPS] }

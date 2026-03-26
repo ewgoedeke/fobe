@@ -1,7 +1,7 @@
 # DISC.CONTINGENCIES.* — Contingent Liabilities & Commitments (IAS 37)
 concepts:
-  - { id: DISC.CONTINGENCIES.CONTINGENT_LIABILITIES, label: "Contingent liabilities", period_type: instant }
-  - { id: DISC.CONTINGENCIES.LEGAL_CLAIMS, label: "Contingent liabilities — legal claims", period_type: instant }
-  - { id: DISC.CONTINGENCIES.GUARANTEES_GIVEN, label: "Guarantees given", period_type: instant }
-  - { id: DISC.CONTINGENCIES.CAPITAL_COMMITMENTS, label: "Capital expenditure commitments", period_type: instant }
-  - { id: DISC.CONTINGENCIES.PURCHASE_COMMITMENTS, label: "Purchase commitments", period_type: instant }
+  - { id: DISC.CONTINGENCIES.CONTINGENT_LIABILITIES, label: "Contingent liabilities", period_type: instant, valid_contexts: [DISC.CONTINGENCIES] }
+  - { id: DISC.CONTINGENCIES.LEGAL_CLAIMS, label: "Contingent liabilities — legal claims", period_type: instant, valid_contexts: [DISC.CONTINGENCIES] }
+  - { id: DISC.CONTINGENCIES.GUARANTEES_GIVEN, label: "Guarantees given", period_type: instant, valid_contexts: [DISC.CONTINGENCIES] }
+  - { id: DISC.CONTINGENCIES.CAPITAL_COMMITMENTS, label: "Capital expenditure commitments", period_type: instant, valid_contexts: [DISC.CONTINGENCIES] }
+  - { id: DISC.CONTINGENCIES.PURCHASE_COMMITMENTS, label: "Purchase commitments", period_type: instant, valid_contexts: [DISC.CONTINGENCIES] }

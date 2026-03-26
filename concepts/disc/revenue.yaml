@@ -1,18 +1,18 @@
 # DISC.REVENUE.* — Revenue Disaggregation (IFRS 15.114-115)
 # Cross-cut by axes: SEGMENT_DOC, GEOGRAPHY_DOC, TIMING, PRODUCT_LINE_DOC
 concepts:
-  - { id: DISC.REVENUE.EXTERNAL_REVENUE, label: "External revenue", period_type: duration }
-  - { id: DISC.REVENUE.INTERSEGMENT_REVENUE, label: "Inter-segment revenue", period_type: duration }
-  - { id: DISC.REVENUE.GOODS_TRANSFERRED_POINT, label: "Revenue — goods transferred at a point in time", period_type: duration }
-  - { id: DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME, label: "Revenue — goods/services transferred over time", period_type: duration }
-  - { id: DISC.REVENUE.SERVICES_REVENUE, label: "Revenue from services", period_type: duration }
-  - { id: DISC.REVENUE.PRODUCT_REVENUE, label: "Revenue from products/goods", period_type: duration }
-  - { id: DISC.REVENUE.LICENCE_REVENUE, label: "Revenue from licences", period_type: duration }
-  - { id: DISC.REVENUE.CONSTRUCTION_CONTRACT_REVENUE, label: "Revenue from construction contracts", period_type: duration }
-  - { id: DISC.REVENUE.TOTAL_REVENUE, label: "Total revenue", period_type: duration, is_total: true }
+  - { id: DISC.REVENUE.EXTERNAL_REVENUE, label: "External revenue", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.INTERSEGMENT_REVENUE, label: "Inter-segment revenue", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.GOODS_TRANSFERRED_POINT, label: "Revenue — goods transferred at a point in time", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.GOODS_TRANSFERRED_OVERTIME, label: "Revenue — goods/services transferred over time", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.SERVICES_REVENUE, label: "Revenue from services", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.PRODUCT_REVENUE, label: "Revenue from products/goods", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.LICENCE_REVENUE, label: "Revenue from licences", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.CONSTRUCTION_CONTRACT_REVENUE, label: "Revenue from construction contracts", period_type: duration, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.TOTAL_REVENUE, label: "Total revenue", period_type: duration, is_total: true, valid_contexts: [DISC.REVENUE] }
   # Contract balances
-  - { id: DISC.REVENUE.CONTRACT_ASSETS_OPENING, label: "Contract assets — opening", period_type: instant }
-  - { id: DISC.REVENUE.CONTRACT_ASSETS_CLOSING, label: "Contract assets — closing", period_type: instant }
-  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_OPENING, label: "Contract liabilities — opening", period_type: instant }
-  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_CLOSING, label: "Contract liabilities — closing", period_type: instant }
-  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_RECOGNISED, label: "Revenue recognised from opening contract liabilities", period_type: duration }
+  - { id: DISC.REVENUE.CONTRACT_ASSETS_OPENING, label: "Contract assets — opening", period_type: instant, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.CONTRACT_ASSETS_CLOSING, label: "Contract assets — closing", period_type: instant, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_OPENING, label: "Contract liabilities — opening", period_type: instant, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_CLOSING, label: "Contract liabilities — closing", period_type: instant, valid_contexts: [DISC.REVENUE] }
+  - { id: DISC.REVENUE.CONTRACT_LIABILITIES_RECOGNISED, label: "Revenue recognised from opening contract liabilities", period_type: duration, valid_contexts: [DISC.REVENUE] }

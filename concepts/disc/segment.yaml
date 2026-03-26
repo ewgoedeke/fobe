@@ -3,24 +3,24 @@
 # Segments via AXIS.SEGMENT_DOC (document-specific segment names)
 
 concepts:
-  - { id: DISC.SEGMENTS.EXTERNAL_REVENUE, label: "External revenues", period_type: duration }
-  - { id: DISC.SEGMENTS.INTERSEGMENT_REVENUE, label: "Inter-segment revenue", period_type: duration }
-  - { id: DISC.SEGMENTS.TOTAL_REVENUE, label: "Segment revenue", period_type: duration, is_total: true }
-  - { id: DISC.SEGMENTS.PROFIT_BEFORE_TAX, label: "Segment profit (loss) before tax", period_type: duration }
-  - { id: DISC.SEGMENTS.INTEREST_INCOME, label: "Interest income", period_type: duration }
-  - { id: DISC.SEGMENTS.INTEREST_EXPENSE, label: "Interest expense", period_type: duration }
-  - { id: DISC.SEGMENTS.DEPR_AMORT, label: "Depreciation and amortisation", period_type: duration }
-  - { id: DISC.SEGMENTS.SHARE_EQUITY_INVESTEES, label: "Share of profit of equity-accounted investees", period_type: duration }
-  - { id: DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL, label: "Impairment losses on non-financial assets", period_type: duration }
-  - { id: DISC.SEGMENTS.IMPAIRMENT_REVERSAL, label: "Reversal of impairment on non-financial assets", period_type: duration }
-  - { id: DISC.SEGMENTS.IMPAIRMENT_TRADE_RECEIVABLES, label: "Impairment on trade receivables and contract assets", period_type: duration }
-  - { id: DISC.SEGMENTS.OTHER_MATERIAL_ITEMS, label: "Other material items of income/expense", period_type: duration }
-  - { id: DISC.SEGMENTS.TOTAL_ASSETS, label: "Segment assets", period_type: instant }
-  - { id: DISC.SEGMENTS.EQUITY_INVESTEES, label: "Equity-accounted investees", period_type: instant }
-  - { id: DISC.SEGMENTS.TOTAL_LIABILITIES, label: "Segment liabilities", period_type: instant }
-  - { id: DISC.SEGMENTS.CAPEX, label: "Capital expenditure", period_type: duration }
+  - { id: DISC.SEGMENTS.EXTERNAL_REVENUE, label: "External revenues", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.INTERSEGMENT_REVENUE, label: "Inter-segment revenue", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.TOTAL_REVENUE, label: "Segment revenue", period_type: duration, is_total: true, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.PROFIT_BEFORE_TAX, label: "Segment profit (loss) before tax", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.INTEREST_INCOME, label: "Interest income", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.INTEREST_EXPENSE, label: "Interest expense", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.DEPR_AMORT, label: "Depreciation and amortisation", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.SHARE_EQUITY_INVESTEES, label: "Share of profit of equity-accounted investees", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL, label: "Impairment losses on non-financial assets", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.IMPAIRMENT_REVERSAL, label: "Reversal of impairment on non-financial assets", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.IMPAIRMENT_TRADE_RECEIVABLES, label: "Impairment on trade receivables and contract assets", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.OTHER_MATERIAL_ITEMS, label: "Other material items of income/expense", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.TOTAL_ASSETS, label: "Segment assets", period_type: instant, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.EQUITY_INVESTEES, label: "Equity-accounted investees", period_type: instant, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.TOTAL_LIABILITIES, label: "Segment liabilities", period_type: instant, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.CAPEX, label: "Capital expenditure", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
   # Reconciliation to consolidated
-  - { id: DISC.SEGMENTS.RECON_REVENUE_REPORTABLE, label: "Revenue for reportable segments", period_type: duration }
-  - { id: DISC.SEGMENTS.RECON_REVENUE_OTHER, label: "Revenue for other segments", period_type: duration }
-  - { id: DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT, label: "Elimination of inter-segment revenue", period_type: duration }
-  - { id: DISC.SEGMENTS.RECON_REVENUE_TOTAL, label: "Consolidated revenue", period_type: duration, is_total: true }
+  - { id: DISC.SEGMENTS.RECON_REVENUE_REPORTABLE, label: "Revenue for reportable segments", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.RECON_REVENUE_OTHER, label: "Revenue for other segments", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT, label: "Elimination of inter-segment revenue", period_type: duration, valid_contexts: [DISC.SEGMENTS] }
+  - { id: DISC.SEGMENTS.RECON_REVENUE_TOTAL, label: "Consolidated revenue", period_type: duration, is_total: true, valid_contexts: [DISC.SEGMENTS] }

@@ -1,9 +1,9 @@
 # DISC.ENVIRONMENT.* — Environmental & Emissions
 # Needed by: OMV, Lenzing, any industrial company
 concepts:
-  - { id: DISC.ENVIRONMENT.EMISSION_CERTIFICATES_ASSET, label: "Emission certificates / carbon credits (asset)", period_type: instant }
-  - { id: DISC.ENVIRONMENT.EMISSION_ALLOWANCES_LIABILITY, label: "Emission allowance obligations (liability)", period_type: instant }
-  - { id: DISC.ENVIRONMENT.EMISSION_CERTIFICATE_GAINS, label: "Gains on sale of emission certificates", period_type: duration }
-  - { id: DISC.ENVIRONMENT.CARBON_TAX_EXPENSE, label: "Carbon tax / emissions expense", period_type: duration }
-  - { id: DISC.ENVIRONMENT.ENVIRONMENTAL_PROVISIONS, label: "Environmental remediation provisions", period_type: instant }
-  - { id: DISC.ENVIRONMENT.GOVERNMENT_GRANTS_SUSTAINABILITY, label: "Government grants — sustainability/green investment", period_type: duration }
+  - { id: DISC.ENVIRONMENT.EMISSION_CERTIFICATES_ASSET, label: "Emission certificates / carbon credits (asset)", period_type: instant, valid_contexts: [DISC.ENVIRONMENT] }
+  - { id: DISC.ENVIRONMENT.EMISSION_ALLOWANCES_LIABILITY, label: "Emission allowance obligations (liability)", period_type: instant, valid_contexts: [DISC.ENVIRONMENT] }
+  - { id: DISC.ENVIRONMENT.EMISSION_CERTIFICATE_GAINS, label: "Gains on sale of emission certificates", period_type: duration, valid_contexts: [DISC.ENVIRONMENT] }
+  - { id: DISC.ENVIRONMENT.CARBON_TAX_EXPENSE, label: "Carbon tax / emissions expense", period_type: duration, valid_contexts: [DISC.ENVIRONMENT] }
+  - { id: DISC.ENVIRONMENT.ENVIRONMENTAL_PROVISIONS, label: "Environmental remediation provisions", period_type: instant, valid_contexts: [DISC.ENVIRONMENT] }
+  - { id: DISC.ENVIRONMENT.GOVERNMENT_GRANTS_SUSTAINABILITY, label: "Government grants — sustainability/green investment", period_type: duration, valid_contexts: [DISC.ENVIRONMENT] }
