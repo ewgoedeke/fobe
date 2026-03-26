@@ -462,7 +462,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -1055,7 +1055,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:15",
@@ -1166,7 +1173,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.EBITDA",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:2:18",
@@ -1240,7 +1254,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.BIOLOGICAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.805,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:20",
@@ -1277,7 +1298,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INVENTORIES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.693,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:21",
@@ -1425,7 +1453,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:25",
@@ -1462,7 +1497,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS_GOODWILL",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:26",
@@ -1536,7 +1578,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INVESTMENT_PROPERTY",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.769,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:28",
@@ -1573,7 +1622,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EQUITY_ACCOUNTED_INVESTEES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.789,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:29",
@@ -1647,7 +1703,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.7,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:31",
@@ -1795,7 +1858,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.708,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:35",
@@ -1832,7 +1902,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_PAYABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:36",
@@ -1906,7 +1983,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:38",
@@ -2165,7 +2249,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.ACQUISITION_NCI",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:2:45",
@@ -10075,7 +10166,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -12009,7 +12100,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -18039,7 +18130,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -18211,7 +18302,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.RD_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.675,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -18343,7 +18441,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -19179,7 +19277,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -20364,7 +20462,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -20425,7 +20523,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.SEGMENT_PROFIT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:1",
@@ -20456,7 +20561,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.803,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:2",
@@ -20487,7 +20599,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.INTERSEGMENT_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.811,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:3",
@@ -20521,7 +20640,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.INTERSEGMENT_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.708,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:4",
@@ -20552,7 +20678,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_INCOME",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.797,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:5",
@@ -20583,7 +20716,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.8,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:6",
@@ -20614,7 +20754,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.822,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:7",
@@ -20645,7 +20792,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.SHARE_OF_PROFIT_ASSOCIATES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.773,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:8",
@@ -20707,7 +20861,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.BIO_FAIR_VALUE_ADJ",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.731,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:10",
@@ -20769,7 +20930,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.869,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:12",
@@ -20800,7 +20968,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.79,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:13",
@@ -20831,7 +21006,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.709,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:14",
@@ -20862,7 +21044,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.SEGMENT_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.793,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:15",
@@ -20893,7 +21082,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EQUITY_ACCOUNTED_INVESTEES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:16",
@@ -20924,7 +21120,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CAPEX",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:29:17",
@@ -20955,7 +21158,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.SEGMENT_LIABILITIES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.807,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -20975,7 +21185,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -21995,7 +22205,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -22070,7 +22280,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.716,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:31:1",
@@ -22144,7 +22361,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_OTHER",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:31:3",
@@ -22181,7 +22405,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:31:4",
@@ -22260,7 +22491,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_TOTAL",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:31:6",
@@ -22297,7 +22535,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_BEFORE_TAX",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.761,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:31:7",
@@ -22519,7 +22764,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.68,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:31:13",
@@ -22789,7 +23041,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADING_LIABILITIES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.688,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:31:20",
@@ -22998,7 +23257,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -23073,7 +23332,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_INCOME",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:1",
@@ -23110,7 +23376,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:2",
@@ -23147,7 +23420,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CAPEX",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:3",
@@ -23184,7 +23464,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:4",
@@ -23221,7 +23508,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.BIO_FAIR_VALUE_ADJ",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.745,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:5",
@@ -23406,7 +23700,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.692,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:32:10",
@@ -23480,7 +23781,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.884,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -23500,7 +23808,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -23575,7 +23883,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_INCOME",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:33:1",
@@ -23612,7 +23927,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_COSTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:33:2",
@@ -23649,7 +23971,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CAPEX",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:33:3",
@@ -23686,7 +24015,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:33:4",
@@ -23723,7 +24059,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.BIO_FAIR_VALUE_ADJ",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.745,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:33:5",
@@ -23834,7 +24177,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.884,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -24192,7 +24542,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -24441,7 +24791,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.FAIR_VALUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.658,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:35:7",
@@ -24492,7 +24849,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -24567,7 +24924,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:1",
@@ -24604,7 +24968,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:36:2",
@@ -24644,7 +25015,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.824,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:3",
@@ -24758,7 +25136,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.7,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:6",
@@ -24798,7 +25183,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.CASH_FROM_OPERATIONS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.714,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:7",
@@ -24835,7 +25227,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "NOTES.TAX",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:8",
@@ -24912,7 +25311,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.ADJ_GAIN_SALE_DISCONT_OP",
+            "method": "structural",
+            "confidence": 0.8,
+            "rule": "label_match",
+            "sourceRows": [],
+            "edge": "ontology_label_index"
+          }
         },
         {
           "rowId": "row:36:10",
@@ -24990,7 +25396,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_DISCONTINUED",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.892,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:12",
@@ -25027,7 +25440,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS_BASIC.EPS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.68,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:36:13",
@@ -25064,7 +25484,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS_DILUTED.EPS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.689,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -25988,7 +26415,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -26166,7 +26593,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.68,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:39:2",
@@ -26884,7 +27318,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:39:15",
@@ -26939,7 +27380,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REVENUE.OTHER_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.SEGMENTS"
+          }
         },
         {
           "rowId": "row:39:16",
@@ -27234,7 +27682,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -32269,7 +32717,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -33260,7 +33708,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -35497,7 +35945,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -41372,7 +41820,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -42441,7 +42889,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -43523,7 +43971,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -43722,7 +44170,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -45663,7 +46111,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -45850,7 +46298,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.FX_EFFECT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.766,
+            "statementRole": "DISC.BIOLOGICAL_ASSETS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -46437,7 +46892,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -46549,7 +47004,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.722,
+            "statementRole": "DISC.RELATED_PARTIES"
+          }
         },
         {
           "rowId": "row:80:2",
@@ -49639,7 +50101,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -49816,7 +50278,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.661,
+            "statementRole": "DISC.PPE"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -52610,7 +53079,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -52870,7 +53339,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.GOODWILL.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.SEGMENTS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -53455,7 +53931,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -53518,7 +53994,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RETIREMENT_BENEFITS.DISCOUNT_RATE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.GOODWILL"
+          }
         },
         {
           "rowId": "row:92:1",
@@ -53600,7 +54083,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -53663,7 +54146,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RETIREMENT_BENEFITS.DISCOUNT_RATE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.GOODWILL"
+          }
         },
         {
           "rowId": "row:93:1",
@@ -54095,7 +54585,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -56421,7 +56911,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -56960,7 +57450,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -57105,7 +57595,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -57250,7 +57740,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -58102,7 +58592,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -64031,7 +64521,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -66860,7 +67350,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -68812,7 +69302,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -71806,7 +72296,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -74663,7 +75153,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -77710,7 +78200,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -77866,7 +78356,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.OTHER",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.645,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         },
         {
           "rowId": "row:136:4",
@@ -77917,7 +78414,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -78544,7 +79041,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -78912,7 +79409,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -79173,7 +79670,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.CREDIT_RISK.PAST_DUE_90_PLUS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.7,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         },
         {
           "rowId": "row:140:5",
@@ -79236,7 +79740,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -79604,7 +80108,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -79865,7 +80369,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.CREDIT_RISK.PAST_DUE_90_PLUS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.7,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         },
         {
           "rowId": "row:142:5",
@@ -80154,7 +80665,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -80392,7 +80903,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -80975,7 +81486,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.689,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         },
         {
           "rowId": "row:145:6",
@@ -81136,7 +81654,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.AMORTISED_COST",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         },
         {
           "rowId": "row:145:8",
@@ -81215,7 +81740,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -85669,7 +86201,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -85868,7 +86400,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -86747,7 +87279,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.INTEREST_RATE_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -88892,7 +89424,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -89546,7 +90078,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -89912,7 +90444,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -89981,7 +90513,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.756,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90019,7 +90551,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.85,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90181,7 +90713,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.642,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90387,7 +90919,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.763,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         }
       ],
@@ -90408,7 +90940,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -90477,7 +91009,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.756,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90515,7 +91047,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.85,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90553,7 +91085,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.734,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90684,7 +91216,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.642,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         },
         {
@@ -90890,7 +91422,7 @@
               "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
             },
             "matchConfidence": 0.763,
-            "statementRole": "DISC.TAX"
+            "statementRole": "SOCIE"
           }
         }
       ],
@@ -90911,7 +91443,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
+        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -94880,7 +95412,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.NCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -97894,7 +98426,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -98181,7 +98713,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FINANCE_INCOME",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.643,
+            "statementRole": "DISC.LEASES"
+          }
         },
         {
           "rowId": "row:180:8",
@@ -98232,7 +98771,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -100781,7 +101320,7 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.RESTATEMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
@@ -100856,7 +101395,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.RESTATEMENT"
+          }
         },
         {
           "rowId": "row:188:1",
@@ -100893,7 +101439,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.RESTATEMENT"
+          }
         },
         {
           "rowId": "row:188:2",
@@ -100971,7 +101524,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_FOR_PERIOD",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.637,
+            "statementRole": "DISC.RESTATEMENT"
+          }
         },
         {
           "rowId": "row:188:4",
@@ -101008,7 +101568,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TOTAL_COMPREHENSIVE_INCOME",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.85,
+            "statementRole": "DISC.RESTATEMENT"
+          }
         }
       ],
       "aggregationGroups": [],

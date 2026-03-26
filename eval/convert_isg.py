@@ -70,7 +70,7 @@ def _detect_statement(cols: list[str], rows: list[dict]) -> str | None:
     if "attributable to" in labels and "comprehensive" in labels:
         return "OCI"
     if "segment" in col_text or "segment" in labels[:200]:
-        return None  # segments handled separately
+        return "DISC.SEGMENTS"
 
     # SFP equity+liabilities side (split table): first row is "Equity" or
     # "Liabilities", and table contains SFP-specific keywords like
@@ -98,8 +98,20 @@ def _detect_statement(cols: list[str], rows: list[dict]) -> str | None:
         return None
 
     kw = labels_all
+    col_kw = col_text  # column headers, already lowered
 
-    # Segments (IFRS 8)
+    # SOCIE (Statement of Changes in Equity) — detected from column headers
+    if any(w in col_kw for w in ["retained earnings", "treasury share",
+                                   "revaluation reserve", "hedging reserve",
+                                   "translation reserve", "fair value reserve",
+                                   "non- controlling interests", "total equity"]):
+        if any(w in col_kw for w in ["reserve", "retained", "nci", "total"]):
+            return "SOCIE"
+
+    # Segments (IFRS 8) — column headers often name segments
+    if any(w in col_kw for w in ["reportable segment", "all other segment",
+                                   "total reportable", "segment total"]):
+        return "DISC.SEGMENTS"
     if "segment" in kw and any(w in kw for w in ["revenue", "assets", "liabilities",
                                                    "reportable", "operating"]):
         return "DISC.SEGMENTS"
@@ -242,6 +254,154 @@ def _detect_statement(cols: list[str], rows: list[dict]) -> str | None:
     # Depreciation/amortisation detail
     if any(w in kw for w in ["depreciation", "amortisation"]) and "useful" in kw:
         return "DISC.PPE"
+
+    # ── Column-header-driven classification ──────────────────────
+    # These catch tables where row labels are cryptic but column headers
+    # reveal the disclosure context.
+
+    # Financing reconciliation (IAS 7.44) — columns name liability types
+    if any(w in col_kw for w in ["lease liabilities", "redeemable preference",
+                                   "derivatives (assets)"]):
+        return "DISC.BORROWINGS"
+
+    # Fair value hierarchy — columns have Level 1/2/3 or carrying amount/fair value
+    if any(w in col_kw for w in ["level 1", "level 2", "level 3"]):
+        return "DISC.FAIR_VALUE"
+    if "carrying amount" in col_kw and "fair value" in col_kw:
+        return "DISC.FAIR_VALUE"
+
+    # NCI subsidiary detail (IFRS 12)
+    if any(w in col_kw for w in ["intra-group", "individually immaterial"]):
+        return "DISC.NCI"
+
+    # Credit risk — ECL stages, loss rate, gross carrying amount
+    if any(w in col_kw for w in ["loss rate", "loss allowance", "credit-",
+                                   "gross carrying amount", "ecl"]):
+        return "DISC.CREDIT_RISK"
+    if any(w in kw for w in ["past due", "low risk", "substandard", "doubtful"]):
+        return "DISC.CREDIT_RISK"
+
+    # Credit concentration by geography/customer type
+    if ("carrying amount" in col_kw or "net carrying" in col_kw):
+        if any(w in kw for w in ["country", "region", "wholesale",
+                                   "retail", "end-user"]):
+            return "DISC.CREDIT_RISK"
+
+    # Hedge accounting detail — hedge effectiveness columns
+    if any(w in col_kw for w in ["hedge ineffectiveness", "hedging reserve",
+                                   "costs of hedging"]):
+        return "DISC.HEDGE"
+
+    # FX sensitivity / interest rate sensitivity
+    if any(w in col_kw for w in ["strengthening", "weakening"]):
+        return "DISC.FX_RISK"
+    if any(w in col_kw for w in ["bp increase", "bp decrease",
+                                   "100 bp"]):
+        return "DISC.INTEREST_RATE_RISK"
+
+    # Exchange rates table
+    if any(w in col_kw for w in ["average rate", "spot rate"]):
+        return "DISC.FX_RISK"
+
+    # Lease maturity (IFRS 16)
+    if any(w in kw for w in ["less than one year", "one to two years",
+                               "two to three years", "more than five years"]):
+        return "DISC.LEASES"
+
+    # Revenue disaggregation — geography or product in columns
+    if any(w in col_kw for w in ["geographical", "product"]):
+        if "revenue" in kw or "revenue" in col_kw:
+            return "DISC.REVENUE"
+
+    # Deferred tax movement — columns show OCI/equity/BCA/other
+    if any(w in col_kw for w in ["recognised in oci", "recognised directly in equity",
+                                   "acquired in business"]):
+        return "DISC.TAX"
+
+    # Tax losses / deductible differences
+    if any(w in kw for w in ["deductible temporary", "tax losses",
+                               "never expire"]):
+        return "DISC.TAX"
+
+    # Segment detail — column headers name specific segments or say "segment"
+    if any(w in col_kw for w in ["forestry", "timber", "packaging",
+                                   "non-recycled", "recycled",
+                                   "segment total", "consolidated total",
+                                   "reportable segment"]):
+        return "DISC.SEGMENTS"
+    # Revenue reconciliation with segment elimination
+    if "inter-segment" in kw and ("revenue" in kw or "elimination" in kw):
+        return "DISC.SEGMENTS"
+
+    # Share options movement
+    if any(w in kw for w in ["outstanding at 1 january", "exercised during",
+                               "forfeited during", "granted during"]):
+        return "DISC.SHARE_BASED"
+    if any(w in col_kw for w in ["number of options", "weighted- average exercis"]):
+        return "DISC.SHARE_BASED"
+
+    # Investment property fair value
+    if any(w in kw for w in ["income-generating property", "vacant property"]):
+        return "DISC.INV_PROP"
+
+    # Supplier finance arrangements (IAS 7.44F)
+    if "supplier finance" in kw:
+        return "DISC.BORROWINGS"
+
+    # Goodwill impairment testing — CGU key assumptions
+    if any(w in kw for w in ["discount rate", "terminal value growth",
+                               "ebitda growth rate"]):
+        return "DISC.GOODWILL"
+
+    # Equity investments at FVOCI detail
+    if any(w in kw for w in ["equity securities", "consumer markets",
+                               "pharmaceuticals"]):
+        return "DISC.FIN_INST"
+
+    # Trade receivables breakdown
+    if "trade receivables" in kw and "related parties" in kw:
+        return "DISC.RELATED_PARTIES"
+
+    # Error correction / restatement impact
+    if "correction of error" in col_kw or "restatement" in col_kw:
+        return "DISC.RESTATEMENT"
+
+    # Biological assets (column-driven)
+    if any(w in col_kw for w in ["biological", "bearer", "consumable"]):
+        return "DISC.BIOLOGICAL_ASSETS"
+
+    # Dividends per share
+    if any(w in kw for w in ["cents per qualifying ordinary share",
+                               "cents per non-redeemable"]):
+        return "DISC.DIVIDENDS"
+
+    # Revenue by geography or NCA by geography
+    if any(w in kw for w in ["country x", "all foreign countries",
+                               "foreign countries"]):
+        return "DISC.SEGMENTS"
+
+    # Share-based payment liabilities
+    if any(w in kw for w in ["carrying amount of liabilities for",
+                               "intrinsic value of liabilities for"]):
+        return "DISC.SHARE_BASED"
+
+    # Biological asset fair value gains
+    if any(w in kw for w in ["change in fair value (realised)",
+                               "change in fair value (unrealised)"]):
+        return "DISC.BIOLOGICAL_ASSETS"
+
+    # PPE depreciation impact
+    if "depreciation" in kw and "expense" in kw:
+        return "DISC.PPE"
+
+    # Impairment by CGU
+    if any(w in kw for w in ["non-recycled papers", "timber products"]):
+        return "DISC.GOODWILL"
+
+    # Investment at fair value
+    if any(w in col_kw for w in ["fair value at 31 december",
+                                   "dividend income recognise"]):
+        return "DISC.FIN_INST"
 
     return None
 
