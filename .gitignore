@@ -5,3 +5,5 @@ __pycache__/
 dist/
 build/
 .env
+node_modules/
+explorer/frontend/dist/
