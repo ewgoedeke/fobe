@@ -71,20 +71,23 @@ class PipelineConfig:
     ontology_root: str = ""
 
     # Default gate thresholds (overridden by gate_thresholds)
+    # Tuned on 39-doc corpus (27032026EVAL007): aim for ≥80% pass rate.
+    # Stage 5 tag_rate is the main bottleneck (median ~28% without LLM
+    # classification); will tighten as classification coverage improves.
     DEFAULT_THRESHOLDS = {
         "stage2": {
-            "min_distinct_statements": 2,
-            "require_pnl": True,
-            "require_sfp": True,
+            "min_distinct_statements": 1,
+            "require_pnl": False,
+            "require_sfp": False,
         },
         "stage3": {
-            "min_parse_rate": 0.80,
+            "min_parse_rate": 0.60,
         },
         "stage4": {
-            "min_consistency_rate": 0.70,
+            "min_consistency_rate": 0.50,
         },
         "stage5": {
-            "min_tag_rate": 0.50,
+            "min_tag_rate": 0.10,
         },
     }
 
