@@ -330,11 +330,36 @@ class Stage5_FactTagging:
     name = "stage5"
 
     def execute(self, state: DocumentState, config: PipelineConfig) -> None:
+        from pretag_all import pretag_document
+        from structural_inference import cascade as structural_cascade
         from run_corpus import analyze_document
 
-        # analyze_document runs: pretag → structural_inference → consistency
-        # It reads from the file on disk, so our in-memory changes don't
-        # affect it. This matches current run_eval.py behavior.
+        # Step 1: Label-based pre-tagging (writes tags to disk)
+        pretag_document(state.tg_path, dry_run=False)
+
+        # Step 2: Structural inference on re-read tables
+        with open(state.tg_path) as f:
+            tables = json.load(f).get("tables", [])
+        tables_copy = copy.deepcopy(tables)
+        structural_cascade(tables_copy, config.ontology_root,
+                           verbose=config.verbose)
+
+        # Step 3: LLM tagging with GAAP filter (#49)
+        if config.use_llm:
+            from llm_tagger import tag_document, _build_concept_index
+            concept_index = _build_concept_index(config.ontology_root)
+            gaap = state.meta.get("gaap") if state.meta else None
+            if config.verbose:
+                print(f"  LLM tagger: gaap={gaap}",
+                      file=__import__("sys").stderr)
+            tag_document(
+                state.tg_path,
+                concept_index,
+                gaap=gaap,
+                verbose=config.verbose,
+            )
+
+        # Step 4: Analyze results (facts, consistency, scoring)
         result = analyze_document(state.tg_path, config.ontology_root)
 
         # Store tagging stats
