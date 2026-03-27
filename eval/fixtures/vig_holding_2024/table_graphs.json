@@ -240,7 +240,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -1258,11 +1260,12 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2203,11 +2206,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3011,11 +3015,12 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -5094,11 +5099,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -7809,11 +7816,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BCA",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -9867,11 +9876,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -11682,11 +11693,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -12599,11 +12611,12 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14249,11 +14262,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14789,11 +14803,12 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -15811,11 +15826,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -17341,11 +17357,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -17750,11 +17767,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -18271,11 +18290,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -19042,11 +19063,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -22527,11 +22549,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -26805,7 +26828,9 @@
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -28565,7 +28590,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29533,7 +29560,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {

@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from table_classifier import classify_table
+from reference_graph import build_reference_graph, has_note_column, DocumentRefGraph
 
 
 # ── TOC detection ─────────────────────────────────────────────────
@@ -101,8 +102,14 @@ def _detect_toc(tables: list[dict]) -> dict[int, str] | None:
         if len(rows) < 3:
             continue
 
-        # Count VALUE columns
+        # Reject tables with Note/Anhang columns — these are financial statements
+        if has_note_column(tbl):
+            continue
+
+        # Count VALUE columns — TOC should have at most 2 (page number columns)
         value_cols = [c for c in tbl.get("columns", []) if c.get("role") == "VALUE"]
+        if len(value_cols) > 2:
+            continue
 
         # Collect (label, page_number) pairs
         entries = []
@@ -130,9 +137,6 @@ def _detect_toc(tables: list[dict]) -> dict[int, str] | None:
         # TOC: most values are monotonically increasing page numbers
         # KPI: values are financial amounts (large, not monotonic)
         pages = [p for _, p in entries]
-        if len(value_cols) >= 3:
-            # Multiple value columns = likely KPI summary, not TOC
-            continue
 
         # Check for monotonically increasing tendency (allowing some noise)
         increasing = sum(1 for i in range(1, len(pages)) if pages[i] >= pages[i-1])
@@ -154,7 +158,15 @@ def _detect_toc(tables: list[dict]) -> dict[int, str] | None:
             continue
 
         # Build page→section map
-        return _parse_toc_entries(entries)
+        page_map = _parse_toc_entries(entries)
+
+        # Gate: require ≥2 distinct primary statement types to accept TOC.
+        # A single-type TOC is likely a false positive (Issue #36).
+        primary_in_toc = {v for v in page_map.values()
+                          if v in ("PNL", "SFP", "OCI", "CFS", "SOCIE")}
+        if len(primary_in_toc) >= 2:
+            return page_map
+        # else: continue scanning — this table is not a real TOC
 
     return None
 
@@ -213,7 +225,75 @@ def _classify_by_page(table: dict, page_map: dict[int, str]) -> str | None:
         # matching determine the specific DISC.* context
         if section == "NOTES":
             return None
+        # Cap range propagation: if the table is too far from the nearest
+        # TOC entry, don't assign (avoids over-classifying distant tables)
+        distance = page - best_page
+        # Find the next section's start page to determine safe range
+        sorted_pages = sorted(page_map.keys())
+        idx = sorted_pages.index(best_page)
+        if idx + 1 < len(sorted_pages):
+            max_distance = sorted_pages[idx + 1] - best_page
+        else:
+            max_distance = 20  # last section: cap at 20 pages
+        if distance > max_distance:
+            return None
         return section
+
+    return None
+
+
+# ── Note-section classification ───────────────────────────────────
+
+def _classify_by_note_section(table: dict, ref_graph: DocumentRefGraph) -> str | None:
+    """Classify a table by looking up its note column values in the reference graph.
+
+    If a table has a Note column and most of the note numbers point to the same
+    disclosure context, assign that context.
+    """
+    if not has_note_column(table):
+        return None
+
+    columns = table.get("columns", [])
+    note_col_indices = set()
+    for col in columns:
+        if col.get("role") == "NOTES":
+            note_col_indices.add(col["colIdx"])
+        elif col.get("headerLabel", "").lower().strip() in (
+            "note", "notes", "anhang", "anmerkung", "anmerkungen",
+        ):
+            note_col_indices.add(col["colIdx"])
+
+    if not note_col_indices:
+        return None
+
+    # Collect note numbers from this table's rows
+    from collections import Counter
+    context_votes: Counter = Counter()
+
+    for row in table.get("rows", []):
+        for cell in row.get("cells", []):
+            if cell.get("colIdx") not in note_col_indices:
+                continue
+            note_text = cell.get("text", "").strip()
+            if not note_text:
+                continue
+            # Extract base number
+            m = re.match(r"(\d+)", note_text)
+            if not m:
+                continue
+            note_base = int(m.group(1))
+            ctx = ref_graph.context_for_note(note_base)
+            if ctx:
+                context_votes[ctx] += 1
+
+    if not context_votes:
+        return None
+
+    # If there's a dominant context (>= 50% of votes), use it
+    total_votes = sum(context_votes.values())
+    top_ctx, top_count = context_votes.most_common(1)[0]
+    if top_count >= total_votes * 0.5 and top_count >= 2:
+        return top_ctx
 
     return None
 
@@ -382,14 +462,38 @@ def _classify_by_keywords(table: dict) -> str | None:
 # ── Main pipeline ─────────────────────────────────────────────────
 
 def classify_document(tg_path: str, dry_run: bool = False,
-                      verbose: bool = False, use_llm: bool = False) -> dict:
-    """Classify all tables in a table_graphs.json file."""
+                      verbose: bool = False, use_llm: bool = False,
+                      reclassify: bool = False) -> dict:
+    """Classify all tables in a table_graphs.json file.
+
+    Args:
+        reclassify: If True, strip existing statementComponent from all tables
+                    before classifying, forcing fresh classification.
+    """
     with open(tg_path) as f:
         data = json.load(f)
     tables = data.get("tables", [])
 
-    stats = {"already": 0, "toc": 0, "section_path": 0, "keyword": 0,
-             "llm": 0, "unclassified": 0}
+    if reclassify:
+        stripped = 0
+        for table in tables:
+            meta = table.get("metadata", {})
+            if meta.get("statementComponent"):
+                del meta["statementComponent"]
+                meta.pop("classification_confidence", None)
+                meta.pop("classification_method", None)
+                stripped += 1
+        if verbose:
+            print(f"  Reclassify: stripped statementComponent from {stripped}/{len(tables)} tables")
+
+    stats = {"already": 0, "toc": 0, "note_section": 0, "section_path": 0,
+             "keyword": 0, "llm": 0, "unclassified": 0}
+
+    # Step 0: Build reference graph
+    ref_graph = build_reference_graph(tables)
+    if ref_graph.note_entries and verbose:
+        print(f"  Reference graph: {len(ref_graph.note_entries)} note numbers, "
+              f"{len(ref_graph.note_to_context)} contexts mapped")
 
     # Step 1: Detect TOC
     page_map = _detect_toc(tables)
@@ -402,6 +506,8 @@ def classify_document(tg_path: str, dry_run: bool = False,
         sc = table.get("metadata", {}).get("statementComponent")
         if sc:
             stats["already"] += 1
+            table["metadata"].setdefault("classification_confidence", "high")
+            table["metadata"].setdefault("classification_method", "already")
             continue
 
         # Step 2: TOC page lookup
@@ -409,9 +515,23 @@ def classify_document(tg_path: str, dry_run: bool = False,
         if result:
             stats["toc"] += 1
             if verbose:
-                print(f"  [toc]     {table['tableId']:15s} p.{table.get('pageNo','?'):>3s} → {result}")
+                print(f"  [toc]     {table['tableId']:15s} p.{str(table.get('pageNo','?')):>3s} → {result}")
             if not dry_run:
                 table["metadata"]["statementComponent"] = result
+                table["metadata"]["classification_confidence"] = "high"
+                table["metadata"]["classification_method"] = "toc"
+            continue
+
+        # Step 2b: Note-section classification
+        result = _classify_by_note_section(table, ref_graph)
+        if result:
+            stats["note_section"] += 1
+            if verbose:
+                print(f"  [note]    {table['tableId']:15s} → {result}")
+            if not dry_run:
+                table["metadata"]["statementComponent"] = result
+                table["metadata"]["classification_confidence"] = "medium"
+                table["metadata"]["classification_method"] = "note_section"
             continue
 
         # Step 3: sectionPath
@@ -423,6 +543,8 @@ def classify_document(tg_path: str, dry_run: bool = False,
                 print(f"  [section] {table['tableId']:15s} {sp} → {result}")
             if not dry_run:
                 table["metadata"]["statementComponent"] = result
+                table["metadata"]["classification_confidence"] = "medium"
+                table["metadata"]["classification_method"] = "section_path"
             continue
 
         # Step 4: Keywords
@@ -434,9 +556,13 @@ def classify_document(tg_path: str, dry_run: bool = False,
                 print(f"  [keyword] {table['tableId']:15s} {first_label:30s} → {result}")
             if not dry_run:
                 table["metadata"]["statementComponent"] = result
+                table["metadata"]["classification_confidence"] = "medium"
+                table["metadata"]["classification_method"] = "keyword"
             continue
 
         stats["unclassified"] += 1
+        table["metadata"]["classification_confidence"] = "none"
+        table["metadata"]["classification_method"] = "unclassified"
 
     # Step 5: LLM classification for remaining unclassified tables
     if use_llm and stats["unclassified"] > 0:
@@ -453,10 +579,12 @@ def classify_document(tg_path: str, dry_run: bool = False,
                         print(f"  [llm]     {table['tableId']:15s} {first_label:30s} → {result}")
                     if not dry_run:
                         table["metadata"]["statementComponent"] = result
+                        table["metadata"]["classification_confidence"] = "low"
+                        table["metadata"]["classification_method"] = "llm"
 
     total = len(tables)
-    classified = stats["already"] + stats["toc"] + stats["section_path"] + stats["keyword"] + stats.get("llm", 0)
-    parts = f"already={stats['already']}, toc={stats['toc']}, section={stats['section_path']}, keyword={stats['keyword']}"
+    classified = stats["already"] + stats["toc"] + stats["note_section"] + stats["section_path"] + stats["keyword"] + stats.get("llm", 0)
+    parts = f"already={stats['already']}, toc={stats['toc']}, note={stats['note_section']}, section={stats['section_path']}, keyword={stats['keyword']}"
     if stats.get("llm"):
         parts += f", llm={stats['llm']}"
     print(f"  Classified: {classified}/{total} ({parts}, unclassified={stats['unclassified']})")
@@ -476,6 +604,7 @@ def main():
     use_llm = "--llm" in sys.argv
     dry_run = "--dry-run" in sys.argv
     verbose = "--verbose" in sys.argv or "-v" in sys.argv
+    reclassify = "--reclassify" in sys.argv
     args = [a for a in sys.argv[1:] if not a.startswith("--") and not a == "-v"]
 
     if "--all" in sys.argv:
@@ -496,7 +625,8 @@ def main():
             continue
         name = Path(path).parent.name
         print(f"\n{name}:")
-        classify_document(path, dry_run=dry_run, verbose=verbose, use_llm=use_llm)
+        classify_document(path, dry_run=dry_run, verbose=verbose,
+                         use_llm=use_llm, reclassify=reclassify)
 
 
 if __name__ == "__main__":

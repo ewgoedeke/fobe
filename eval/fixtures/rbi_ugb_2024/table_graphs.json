@@ -428,7 +428,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -1642,11 +1644,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -3379,11 +3383,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -6085,11 +6091,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -7224,11 +7232,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -10314,11 +10324,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -10760,11 +10772,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -11921,11 +11935,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -12455,11 +12471,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -13214,11 +13232,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -14993,11 +15013,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -15625,11 +15647,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -20829,11 +20853,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -26030,11 +26056,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -26772,11 +26800,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -27198,11 +27228,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -27592,11 +27624,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -28353,11 +28387,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -29289,11 +29325,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -33064,11 +33102,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -35037,11 +35077,13 @@
       "headerRowCount": 2,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -37296,11 +37338,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -39864,11 +39908,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -40758,11 +40804,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -41478,11 +41526,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -42204,11 +42254,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -43549,11 +43601,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -44095,11 +44149,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -44878,11 +44934,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -45635,11 +45693,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -46605,11 +46665,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -47031,11 +47093,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -47836,11 +47900,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -48262,11 +48328,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -48552,11 +48620,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -51021,11 +51091,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -53870,11 +53942,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -55519,11 +55593,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -55853,11 +55929,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -56199,11 +56277,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -56937,11 +57017,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -57675,11 +57757,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -58598,11 +58682,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -59520,11 +59606,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -60032,11 +60120,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -60551,11 +60641,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -61798,11 +61890,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -62342,11 +62436,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -62582,11 +62678,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -62816,11 +62914,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -63281,11 +63381,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -63525,11 +63627,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -65017,11 +65121,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -65499,11 +65605,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -66647,11 +66755,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -67380,11 +67490,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -68782,11 +68894,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -69709,11 +69823,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -71111,11 +71227,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -72466,11 +72584,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -73650,11 +73770,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -75296,11 +75418,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -76586,11 +76710,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -78208,11 +78334,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -78995,11 +79123,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -79782,11 +79912,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -80661,11 +80793,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -83158,11 +83292,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -85655,11 +85791,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -87828,11 +87966,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -90001,11 +90141,12 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -90416,11 +90557,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -90874,11 +91016,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -91220,11 +91363,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -92004,11 +92148,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
