@@ -112,6 +112,11 @@ class Stage2_StructureExtraction:
         min_distinct = config.threshold("stage2", "min_distinct_statements") or 2
         require_pnl = config.threshold("stage2", "require_pnl") or False
         require_sfp = config.threshold("stage2", "require_sfp") or False
+        max_per_primary = config.threshold("stage2", "max_per_primary_type") or 8
+
+        # Per-type counts for primary statements
+        primary_counts = {t: classified_types[t] for t in PRIMARY_STATEMENTS
+                          if classified_types[t] > 0}
 
         findings = []
         passed = True
@@ -139,6 +144,20 @@ class Stage2_StructureExtraction:
                 "detail": "No table classified as SFP",
             })
 
+        # Check for inflated primary statement counts — a real annual report
+        # has 1-2 tables per primary type, never 15+ SFP or 20+ PNL.
+        inflated = {t: n for t, n in primary_counts.items()
+                    if n > max_per_primary}
+        if inflated:
+            passed = False
+            for stmt_type, count in inflated.items():
+                findings.append({
+                    "type": "inflated_primary",
+                    "detail": (f"{count} tables classified as {stmt_type} "
+                               f"(max {max_per_primary}). "
+                               f"Classification is likely broken."),
+                })
+
         return GateResult(
             passed=passed,
             stage=self.name,
@@ -146,6 +165,7 @@ class Stage2_StructureExtraction:
             metrics={
                 "distinct_primary_statements": distinct_primary,
                 "primary_types": sorted(primary_types),
+                "primary_counts": primary_counts,
                 "classified_by_type": dict(classified_types.most_common()),
                 "unclassified": unclassified,
                 "total_tables": len(state.tables),

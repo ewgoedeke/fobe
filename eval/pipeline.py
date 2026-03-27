@@ -79,6 +79,7 @@ class PipelineConfig:
             "min_distinct_statements": 1,
             "require_pnl": False,
             "require_sfp": False,
+            "max_per_primary_type": 8,
         },
         "stage3": {
             "min_parse_rate": 0.60,
