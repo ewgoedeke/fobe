@@ -11,16 +11,22 @@ Usage:
     # or: uvicorn server:app --reload --port 8787
 """
 
+import hashlib
 import json
 import os
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
+
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    fitz = None
 
 # Allow importing from eval/
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -497,6 +503,19 @@ def _build_document_index():
         "saldenliste_gmbh": None,
     }
 
+    # Auto-discover PDFs by matching fixture name to sources/{gaap}/{name}.pdf
+    sources_dir = REPO_ROOT / "sources"
+    for gaap_dir in ("ifrs", "ugb", "hgb"):
+        gaap_path = sources_dir / gaap_dir
+        if gaap_path.is_dir():
+            for pdf_file in gaap_path.glob("*.pdf"):
+                stem = pdf_file.stem  # e.g. "agrana_2024"
+                if stem not in pdf_map:
+                    pdf_map[stem] = {
+                        "pdf": f"sources/{gaap_dir}/{pdf_file.name}",
+                        "offset": 0,
+                    }
+
     for fixture_dir in sorted(fixtures_dir.iterdir()):
         if not fixture_dir.is_dir():
             continue
@@ -686,6 +705,670 @@ def table_images_manifest(doc_id: str):
         t["image_url"] = f"/api/table-image/{doc_id}/{t['table_id']}"
 
     return manifest
+
+
+# ── HITL Classification Review ────────────────────────────
+
+@app.get("/api/review/status")
+def review_status():
+    """List all fixtures with pipeline stage info for the review dashboard."""
+    if not _documents:
+        _build_document_index()
+
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures"
+    if not fixtures_dir.exists():
+        return {"fixtures": []}
+
+    results = []
+    for d in sorted(fixtures_dir.iterdir()):
+        if not d.is_dir():
+            continue
+        tg_path = d / "table_graphs.json"
+        if not tg_path.is_file():
+            continue
+
+        doc_id = d.name
+        manifest_path = d / "review_needed.json"
+        human_path = d / "human_review.json"
+        meta_path = d / "document_meta.json"
+
+        # Find PDF status from document index
+        doc = next((doc for doc in _documents if doc["id"] == doc_id), None)
+        has_pdf = bool(doc and doc.get("has_pdf"))
+
+        # Load table_graphs.json for stage info
+        try:
+            with open(tg_path) as f:
+                tg = json.load(f)
+            tables = tg.get("tables", [])
+        except Exception:
+            tables = []
+
+        # Classification stats
+        from collections import Counter as _C
+        class_counts = _C()
+        method_counts = _C()
+        total_tables = len(tables)
+        for t in tables:
+            meta = t.get("metadata", {})
+            sc = meta.get("statementComponent")
+            cm = meta.get("classification_method", "unclassified")
+            if sc:
+                class_counts[sc] += 1
+            else:
+                class_counts["unclassified"] += 1
+            method_counts[cm] += 1
+
+        # TOC detection: check if any table was classified via TOC
+        toc_count = method_counts.get("toc", 0)
+        has_toc = toc_count > 0
+
+        # Note references: count tables with noteRef in rows
+        note_ref_tables = 0
+        total_note_refs = 0
+        for t in tables:
+            table_has_note = False
+            for r in t.get("rows", []):
+                if r.get("noteRef"):
+                    total_note_refs += 1
+                    table_has_note = True
+            if table_has_note:
+                note_ref_tables += 1
+
+        # Page references: count distinct pages
+        pages = set()
+        for t in tables:
+            p = t.get("pageNo")
+            if p:
+                pages.add(p)
+
+        # Meta info
+        meta_info = {}
+        if meta_path.is_file():
+            try:
+                with open(meta_path) as f:
+                    meta_info = json.load(f)
+            except Exception:
+                pass
+
+        # Primary statement counts
+        primary = {k: v for k, v in class_counts.items()
+                   if k in ("PNL", "SFP", "OCI", "CFS", "SOCIE")}
+        disc = {k: v for k, v in class_counts.items()
+                if k.startswith("DISC.")}
+
+        results.append({
+            "id": doc_id,
+            "has_pdf": has_pdf,
+            "has_manifest": manifest_path.is_file(),
+            "has_human_review": human_path.is_file(),
+            # Stage info
+            "total_tables": total_tables,
+            "pages": len(pages),
+            "page_range": f"{min(pages)}-{max(pages)}" if pages else "",
+            # TOC
+            "has_toc": has_toc,
+            "toc_tables": toc_count,
+            # Classification
+            "primary_types": primary,
+            "disc_types": len(disc),
+            "unclassified": class_counts.get("unclassified", 0),
+            "methods": dict(method_counts.most_common()),
+            # References
+            "note_ref_tables": note_ref_tables,
+            "total_note_refs": total_note_refs,
+            # Meta
+            "gaap": meta_info.get("gaap", ""),
+            "entity": meta_info.get("entity_name", ""),
+            "industry": meta_info.get("industry", ""),
+            "currency": meta_info.get("currency", ""),
+        })
+
+    return {"fixtures": results}
+
+
+@app.get("/api/review/{doc_id}")
+def review_manifest(doc_id: str):
+    """Return review_needed.json for a document, generating if needed."""
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    manifest_path = fixtures_dir / "review_needed.json"
+    tg_path = fixtures_dir / "table_graphs.json"
+
+    if not tg_path.exists():
+        return {"error": "fixture not found"}
+
+    # If manifest exists, return it
+    if manifest_path.exists():
+        with open(manifest_path) as f:
+            return json.load(f)
+
+    # Generate on the fly from current table_graphs.json
+    from human_review import generate_review_manifest
+    from pipeline import GateResult
+    from stages import PRIMARY_STATEMENTS
+    from collections import Counter as _Counter
+
+    with open(tg_path) as f:
+        tables = json.load(f).get("tables", [])
+
+    classified_types = _Counter()
+    for t in tables:
+        sc = t.get("metadata", {}).get("statementComponent")
+        if sc:
+            classified_types[sc] += 1
+
+    primary_counts = {t: classified_types[t] for t in PRIMARY_STATEMENTS
+                      if classified_types[t] > 0}
+    findings = []
+    for st, count in primary_counts.items():
+        if count > 8:
+            findings.append({"type": "inflated_primary",
+                             "detail": f"{count} tables classified as {st} (max 8)"})
+
+    gate_result = GateResult(passed=not findings, stage="stage2",
+                             findings=findings, metrics={})
+
+    toc_info = None
+    try:
+        from classify_tables import _detect_toc
+        toc_info = _detect_toc(tables)
+    except Exception:
+        pass
+
+    manifest = generate_review_manifest(tables, gate_result, toc_info, doc_id)
+    return manifest
+
+
+@app.get("/api/review/{doc_id}/human")
+def get_human_review(doc_id: str):
+    """Return existing human_review.json for a document."""
+    review_path = REPO_ROOT / "eval" / "fixtures" / doc_id / "human_review.json"
+    if not review_path.exists():
+        return {"exists": False}
+    with open(review_path) as f:
+        data = json.load(f)
+    data["exists"] = True
+    return data
+
+
+@app.post("/api/review/{doc_id}/save")
+async def save_human_review(doc_id: str, request: Request):
+    """Save human_review.json for a document."""
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    if not fixtures_dir.exists():
+        return {"error": "fixture not found"}
+
+    body = await request.json()
+    review_path = fixtures_dir / "human_review.json"
+    with open(review_path, "w") as f:
+        json.dump(body, f, indent=2, default=str)
+
+    return {"saved": True, "path": str(review_path)}
+
+
+@app.get("/api/review/{doc_id}/tables")
+def review_tables(doc_id: str):
+    """Return tables with classification info for the review UI.
+
+    Lighter than /api/tables/{doc_id} — includes classification metadata
+    and first few row labels but not all cells/values.
+    """
+    tg_path = REPO_ROOT / "eval" / "fixtures" / doc_id / "table_graphs.json"
+    if not tg_path.exists():
+        return {"error": "fixture not found", "tables": []}
+
+    with open(tg_path) as f:
+        data = json.load(f)
+
+    tables = []
+    for t in data.get("tables", []):
+        meta = t.get("metadata", {})
+        rows = t.get("rows", [])
+
+        # Extract first labels and column headers for context
+        first_labels = []
+        col_headers = []
+        for r in rows:
+            if r.get("rowType") == "HEADER" and not col_headers:
+                col_headers = [c.get("text", "") for c in r.get("cells", [])
+                               if c.get("text", "").strip()][:6]
+            elif len(first_labels) < 3 and r.get("label", "").strip():
+                first_labels.append(r["label"].strip()[:80])
+
+        tables.append({
+            "tableId": t.get("tableId", ""),
+            "pageNo": t.get("pageNo"),
+            "statementComponent": meta.get("statementComponent"),
+            "classification_method": meta.get("classification_method", "unclassified"),
+            "classification_confidence": meta.get("classification_confidence", "none"),
+            "first_labels": first_labels,
+            "col_headers": col_headers,
+            "row_count": len(rows),
+            "sectionPath": meta.get("sectionPath", []),
+        })
+
+    return {"doc_id": doc_id, "tables": tables}
+
+
+# ── Ground Truth Annotation ───────────────────────────────
+
+from test_set import TEST_SET, is_test_set
+from ground_truth import load_toc_gt_dict, save_toc_gt_dict, toc_gt_path
+from classify_tables import _detect_toc, _parse_toc_entries
+from validate_ground_truth import validate_all as validate_gt_all
+
+
+@app.get("/api/annotate/documents")
+def annotate_documents():
+    """List test-set documents with annotation status."""
+    if not _documents:
+        _build_document_index()
+
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures"
+    results = []
+    for doc_id in TEST_SET:
+        fixture_dir = fixtures_dir / doc_id
+        tg_path = fixture_dir / "table_graphs.json"
+
+        # Basic info
+        info = {
+            "doc_id": doc_id,
+            "gaap": "UGB" if "ugb" in doc_id else "IFRS",
+            "has_fixture": tg_path.exists(),
+            "table_count": 0,
+            "has_pdf": False,
+            "annotation_status": "not_started",
+        }
+
+        # Page count from table_graphs.json pages dict
+        if tg_path.exists():
+            try:
+                with open(tg_path) as f:
+                    tg_data = json.load(f)
+                pages_obj = tg_data.get("pages", {})
+                if isinstance(pages_obj, dict):
+                    info["page_count"] = len(pages_obj)
+                info["table_count"] = len(tg_data.get("tables", []))
+            except (json.JSONDecodeError, OSError):
+                pass
+
+        # Check PDF availability
+        doc = next((d for d in _documents if d["id"] == doc_id), None)
+        if doc:
+            info["has_pdf"] = doc.get("has_pdf", False)
+            if not info["table_count"]:
+                info["table_count"] = doc.get("tables", 0)
+
+        # Check ground truth status
+        gt = load_toc_gt_dict(str(fixture_dir))
+        if gt:
+            sections = gt.get("sections", [])
+            if sections:
+                info["annotation_status"] = "complete"
+                info["section_count"] = len(sections)
+            else:
+                info["annotation_status"] = "in_progress"
+            # has_toc: True/False if annotated, None if not yet tagged
+            if "has_toc" in gt:
+                info["has_toc"] = gt["has_toc"]
+
+        results.append(info)
+
+    return {"documents": results}
+
+
+@app.get("/api/annotate/{doc_id}/toc")
+def annotate_get_toc(doc_id: str):
+    """Load ground truth TOC for a document, or empty template."""
+    fixture_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    gt = load_toc_gt_dict(str(fixture_dir))
+
+    # Get total page count
+    page_count = 0
+    tg_path = fixture_dir / "table_graphs.json"
+    if tg_path.exists():
+        try:
+            with open(tg_path) as f:
+                tg_data = json.load(f)
+            pages_obj = tg_data.get("pages", {})
+            if isinstance(pages_obj, dict):
+                page_count = len(pages_obj)
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    if gt:
+        return {"doc_id": doc_id, "ground_truth": gt, "page_count": page_count}
+
+    # Return empty template
+    return {"doc_id": doc_id, "page_count": page_count, "ground_truth": {
+        "version": 1,
+        "annotator": "",
+        "toc_table_id": None,
+        "toc_pages": [],
+        "sections": [],
+        "notes_start_page": None,
+        "notes_end_page": None,
+    }}
+
+
+@app.post("/api/annotate/{doc_id}/toc")
+async def annotate_save_toc(doc_id: str, request: Request):
+    """Save ground truth TOC for a document."""
+    body = await request.json()
+    fixture_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    if not fixture_dir.exists():
+        return {"error": f"fixture directory not found: {doc_id}"}
+
+    save_toc_gt_dict(str(fixture_dir), body)
+    return {"status": "saved", "doc_id": doc_id}
+
+
+def _map_to_physical_section(stmt_type: str, label: str = "") -> str:
+    """Map pipeline statement types to physical document section types.
+
+    The pipeline produces semantic types (DISC.PPE, DISC.TAX, etc.) but ground
+    truth annotation uses physical document structure types.
+    """
+    # Primary statements stay as-is
+    if stmt_type in ("PNL", "SFP", "OCI", "CFS", "SOCIE"):
+        return stmt_type
+    # Already physical section types
+    if stmt_type in ("TOC", "NOTES", "FRONT_MATTER", "MANAGEMENT_REPORT", "AUDITOR_REPORT",
+                     "CORPORATE_GOVERNANCE", "ESG", "RISK_REPORT", "REMUNERATION_REPORT",
+                     "SUPERVISORY_BOARD", "RESPONSIBILITY_STATEMENT", "APPENDIX", "OTHER"):
+        return stmt_type
+    # DISC.* → check if label says "Anlage" / "Beilage" → APPENDIX, else NOTES
+    if stmt_type.startswith("DISC."):
+        label_lower = label.lower()
+        if any(kw in label_lower for kw in ("anlage", "beilage", "appendix", "schedule")):
+            return "APPENDIX"
+        return "NOTES"
+    return "OTHER"
+
+
+@app.get("/api/annotate/{doc_id}/toc/detect")
+def annotate_detect_toc(doc_id: str):
+    """Auto-detect TOC from table_graphs.json using pipeline's _detect_toc().
+
+    Returns detected sections as pre-fill data for the annotation form.
+    Maps pipeline semantic types (DISC.*) to physical section types.
+    """
+    tg_path = REPO_ROOT / "eval" / "fixtures" / doc_id / "table_graphs.json"
+    if not tg_path.exists():
+        return {"doc_id": doc_id, "detected": False, "sections": [],
+                "error": "no table_graphs.json"}
+
+    with open(tg_path) as f:
+        tg = json.load(f)
+
+    tables = tg.get("tables", [])
+    page_map = _detect_toc(tables)
+
+    if not page_map:
+        return {"doc_id": doc_id, "detected": False, "sections": [],
+                "message": "No TOC detected in document"}
+
+    # Find the TOC table page to include as a section
+    toc_page = None
+    for tbl in tables[:20]:
+        rows = tbl.get("rows", [])
+        if len(rows) >= 3:
+            entries = []
+            for r in rows:
+                for c in r.get("cells", []):
+                    pv = c.get("parsedValue")
+                    if pv is not None and 1 < pv < 500 and pv == int(pv):
+                        entries.append(int(pv))
+                        break
+            if len(entries) >= 3:
+                toc_page = tbl.get("pageNo")
+                break
+
+    # Convert page_map to section list (merge consecutive pages of same type)
+    # First pass: collect raw sections with pipeline types
+    raw_sections = []
+    sorted_pages = sorted(page_map.items())
+    current = None
+    for page, stmt_type in sorted_pages:
+        if current and current["_raw_type"] == stmt_type and page <= current["end_page"] + 5:
+            current["end_page"] = page
+        else:
+            if current:
+                raw_sections.append(current)
+            current = {
+                "label": "",
+                "_raw_type": stmt_type,
+                "start_page": page,
+                "end_page": page,
+                "note_number": None,
+                "validated": False,
+            }
+    if current:
+        raw_sections.append(current)
+
+    # Try to enrich labels from the TOC table entries
+    for tbl in tables[:20]:
+        rows = tbl.get("rows", [])
+        for r in rows:
+            label = r.get("label", "").strip()
+            if not label:
+                continue
+            for c in r.get("cells", []):
+                pv = c.get("parsedValue")
+                if pv is not None and 1 < pv < 500 and pv == int(pv):
+                    page = int(pv)
+                    for sec in raw_sections:
+                        if sec["start_page"] == page and not sec["label"]:
+                            sec["label"] = label
+                            break
+
+    # Map pipeline types to physical section types using label context
+    sections = []
+
+    # Insert TOC section if detected
+    if toc_page:
+        sections.append({
+            "label": "Table of Contents",
+            "statement_type": "TOC",
+            "start_page": toc_page,
+            "end_page": toc_page,
+            "note_number": None,
+            "validated": False,
+        })
+
+    for sec in raw_sections:
+        sec["statement_type"] = _map_to_physical_section(sec["_raw_type"], sec["label"])
+        del sec["_raw_type"]
+        sections.append(sec)
+
+    return {"doc_id": doc_id, "detected": True, "sections": sections}
+
+
+@app.get("/api/annotate/{doc_id}/tables")
+def annotate_tables(doc_id: str):
+    """Return table list with page numbers for reference during annotation."""
+    tg_path = REPO_ROOT / "eval" / "fixtures" / doc_id / "table_graphs.json"
+    if not tg_path.exists():
+        return {"doc_id": doc_id, "tables": []}
+
+    with open(tg_path) as f:
+        tg = json.load(f)
+
+    tables = []
+    for t in tg.get("tables", []):
+        rows = t.get("rows", [])
+        first_labels = [r.get("label", "").strip()[:80]
+                        for r in rows if r.get("label", "").strip()][:3]
+        tables.append({
+            "tableId": t.get("tableId", ""),
+            "pageNo": t.get("pageNo"),
+            "row_count": len(rows),
+            "first_labels": first_labels,
+            "statementComponent": t.get("metadata", {}).get("statementComponent"),
+        })
+    return {"doc_id": doc_id, "tables": tables}
+
+
+@app.post("/api/annotate/{doc_id}/validate")
+def annotate_validate(doc_id: str):
+    """Validate ground truth TOC against table data."""
+    fixture_dir = str(REPO_ROOT / "eval" / "fixtures" / doc_id)
+    result = validate_gt_all(fixture_dir)
+    return {"doc_id": doc_id, **result}
+
+
+# ── Element Browser endpoints ─────────────────────────────
+
+PAGE_CACHE_DIR = Path("/tmp/fobe_page_cache")
+
+
+@app.get("/api/page-image/{doc_id}/{page_no}")
+def page_image(doc_id: str, page_no: int, dpi: int = 150):
+    """Render a single PDF page as PNG using PyMuPDF."""
+    if fitz is None:
+        return Response(content=b"pymupdf not installed", status_code=501)
+
+    if not _documents:
+        _build_document_index()
+    doc = next((d for d in _documents if d["id"] == doc_id), None)
+    if not doc or not doc.get("pdf"):
+        return {"error": "no PDF available"}
+    pdf_path = REPO_ROOT / doc["pdf"]
+    if not pdf_path.exists():
+        return {"error": "PDF file not found"}
+
+    # Check disk cache
+    PAGE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_key = f"{doc_id}_{page_no}_{dpi}"
+    cache_path = PAGE_CACHE_DIR / f"{cache_key}.png"
+    if cache_path.exists():
+        return FileResponse(cache_path, media_type="image/png",
+                            headers={"Cache-Control": "public, max-age=3600"})
+
+    # Render page
+    try:
+        pdf_doc = fitz.open(str(pdf_path))
+        page_offset = doc.get("page_offset", 0)
+        page_idx = (page_no - 1) + page_offset  # page_no is 1-indexed
+        if page_idx < 0 or page_idx >= len(pdf_doc):
+            pdf_doc.close()
+            return {"error": f"page {page_no} out of range"}
+        page = pdf_doc[page_idx]
+        mat = fitz.Matrix(dpi / 72, dpi / 72)
+        pix = page.get_pixmap(matrix=mat)
+        png_bytes = pix.tobytes("png")
+        pdf_doc.close()
+    except Exception as e:
+        return {"error": f"render failed: {e}"}
+
+    # Cache to disk
+    cache_path.write_bytes(png_bytes)
+    return Response(content=png_bytes, media_type="image/png",
+                    headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/api/elements/browse")
+def elements_browse():
+    """Build element-type-to-pages mapping across all test-set documents."""
+    if not _documents:
+        _build_document_index()
+
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures"
+    results = []
+
+    for doc_id in TEST_SET:
+        fixture_dir = fixtures_dir / doc_id
+        tg_path = fixture_dir / "table_graphs.json"
+        if not tg_path.exists():
+            continue
+
+        try:
+            with open(tg_path) as f:
+                tg_data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            continue
+
+        pages_obj = tg_data.get("pages", {})
+        page_count = len(pages_obj) if isinstance(pages_obj, dict) else 0
+
+        # Page dimensions for coordinate mapping
+        page_dims = {}
+        if isinstance(pages_obj, dict):
+            for pno, dims in pages_obj.items():
+                page_dims[int(pno)] = {"width": dims.get("width", 595),
+                                       "height": dims.get("height", 842)}
+
+        # Collect all tables with bbox info
+        all_tables = []
+        for t in tg_data.get("tables", []):
+            bbox = t.get("bbox", [0, 0, 0, 0])
+            sc = t.get("metadata", {}).get("statementComponent")
+            all_tables.append({
+                "tableId": t.get("tableId", ""),
+                "pageNo": t.get("pageNo"),
+                "bbox": bbox,
+                "statementComponent": sc,
+            })
+
+        # Build elements mapping
+        elements = defaultdict(lambda: {"pages": set(), "tables": []})
+
+        # Source 1: ground truth TOC sections (preferred)
+        gt_path = fixture_dir / "ground_truth" / "toc.json"
+        source = "table_classification"
+        if gt_path.exists():
+            try:
+                with open(gt_path) as f:
+                    gt = json.load(f)
+                sections = gt.get("sections", [])
+                if sections:
+                    source = "ground_truth"
+                    for sec in sections:
+                        stype = sec.get("statement_type", "OTHER")
+                        sp = sec.get("start_page")
+                        ep = sec.get("end_page")
+                        if sp and ep:
+                            for p in range(sp, ep + 1):
+                                elements[stype]["pages"].add(p)
+            except (json.JSONDecodeError, OSError):
+                pass
+
+        # Source 2: always use table classification for pages + tables
+        # (supplements ground truth which may be incomplete)
+        for t in all_tables:
+            sc = t.get("statementComponent")
+            pno = t.get("pageNo")
+            if sc and pno:
+                elements[sc]["tables"].append(t)
+                elements[sc]["pages"].add(pno)
+            elif pno:
+                elements["UNCLASSIFIED"]["tables"].append(t)
+                elements["UNCLASSIFIED"]["pages"].add(pno)
+
+        # Convert sets to sorted lists
+        elements_out = {}
+        for etype, data in elements.items():
+            elements_out[etype] = {
+                "pages": sorted(data["pages"]),
+                "tables": data["tables"],
+            }
+
+        # PDF availability
+        doc = next((d for d in _documents if d["id"] == doc_id), None)
+        has_pdf = doc.get("has_pdf", False) if doc else False
+
+        results.append({
+            "doc_id": doc_id,
+            "gaap": "UGB" if "ugb" in doc_id else "IFRS",
+            "page_count": page_count,
+            "has_pdf": has_pdf,
+            "source": source,
+            "page_dims": page_dims,
+            "elements": elements_out,
+            "all_tables": all_tables,
+        })
+
+    return {"documents": results}
 
 
 # ── Serve frontend static files ───────────────────────────
