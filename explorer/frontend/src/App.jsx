@@ -4,6 +4,7 @@ import LoginPage from './components/LoginPage.jsx'
 import Dashboard from './components/Dashboard.jsx'
 import ReviewPage from './components/ReviewPage.jsx'
 import TocAnnotator from './components/TocAnnotator.jsx'
+import AnnotationWorkflow from './components/annotation-workflow/AnnotationWorkflow.jsx'
 import ElementBrowserTabs from './components/element-browser/ElementBrowserTabs.jsx'
 import TagLogPage from './components/TagLogPage.jsx'
 import DocumentsPage from './components/DocumentsPage.jsx'
@@ -18,7 +19,7 @@ import { useAuth } from './auth.jsx'
 import { useNavigation } from './lib/hooks/useNavigation.jsx'
 
 function PageContent() {
-  const { view, navigate } = useNavigation()
+  const { view, navigate, params } = useNavigation()
   const [selectedId, setSelectedId] = useState(null)
   const [activeDoc, setActiveDoc] = useState(null)
   const [pdfPage, setPdfPage] = useState(1)
@@ -78,6 +79,13 @@ function PageContent() {
       )
 
     case 'annotate':
+      return (
+        <div className="flex flex-col flex-1 h-full overflow-hidden">
+          <AnnotationWorkflow initialDocId={params.docId || null} />
+        </div>
+      )
+
+    case 'annotate-legacy':
       return (
         <div className="flex flex-col flex-1 h-full overflow-hidden">
           <TocAnnotator onBack={() => navigate('dashboard')} />
