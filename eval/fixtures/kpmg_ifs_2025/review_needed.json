@@ -1,0 +1,4538 @@
+{
+  "generated_at": "2026-03-30T01:15:27.054786",
+  "document": "kpmg_ifs_2025",
+  "gate_findings": [
+    {
+      "type": "inflated_primary",
+      "detail": "10 tables classified as SOCIE (max 8). Classification is likely broken."
+    },
+    {
+      "type": "inflated_primary",
+      "detail": "29 tables classified as CFS (max 8). Classification is likely broken."
+    }
+  ],
+  "toc_detected": {
+    "page_map": {
+      "17": "SFP",
+      "20": "PNL",
+      "24": "SOCIE",
+      "26": "CFS",
+      "29": "NOTES",
+      "194": "OCI",
+      "196": "CFS"
+    }
+  },
+  "page_index": [
+    {
+      "page": 1,
+      "tables": [
+        {
+          "tableId": "table_1",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "References and abbreviations",
+            "Independent auditors' report",
+            "Consolidated financial statements"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "tables": [
+        {
+          "tableId": "table_2",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Basis of preparation 1. Reporting entity 2. Basis of accounting 3. Functional an",
+            "11. Employee 12. arrangements 13. Income taxes",
+            "presentation currency"
+          ],
+          "col_headers": [],
+          "row_count": 52,
+          "data_row_count": 37,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "tables": [
+        {
+          "tableId": "table_3",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Supplier finance arrangements",
+            "PillarTwo top-up taxes"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "tables": [
+        {
+          "tableId": "table_5",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "CGU",
+            "EBITDA",
+            "ECL"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "tables": [
+        {
+          "tableId": "table_6",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Impairment testing of goodwill",
+            "See Note 22 to the consolidated financial statements.",
+            "The key audit matter"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "tables": [
+        {
+          "tableId": "table_7",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Valuation of standing timber",
+            "See Note 16 to the consolidated financial statements.",
+            "The key audit matter"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "tables": [
+        {
+          "tableId": "table_8",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Valuation of disposal group held for sale",
+            "See Note 20 to the consolidated financial statements.",
+            "The key audit matter"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "tables": [
+        {
+          "tableId": "table_9",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Recognition of deferred tax assets",
+            "See Note 14 to the consolidated financial statements.",
+            "The key audit matter"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "tables": [
+        {
+          "tableId": "table_10",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Assets",
+            "Property, plant and equipment d",
+            "Intangible assets and goodwill"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "tables": [
+        {
+          "tableId": "table_11",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Equity",
+            "Share capital",
+            "Share premium"
+          ],
+          "col_headers": [],
+          "row_count": 28,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "tables": [
+        {
+          "tableId": "table_12",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 1.10",
+            "Insights 2.8.50.110",
+            "IAS 1.10(f), 40A"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "tables": [
+        {
+          "tableId": "table_13",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Continuing operations",
+            "Revenue c,d",
+            "Cost of sales e"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "tables": [
+        {
+          "tableId": "table_14",
+          "classification": "DISC.FAIR_VALUE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Other comprehensive income",
+            "Items that will not be reclassified to profit or loss",
+            "Revaluation of property, plant and equipment"
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "tables": [
+        {
+          "tableId": "table_15",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Profit attributable to:",
+            "Owners of the Company",
+            "Non-controlling Interests"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "tables": [
+        {
+          "tableId": "table_16",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 1.10A",
+            "IAS 1.82",
+            "IFRS 15.113, IAS 1.29-30, 85, Insights 4.2.560.25"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "tables": [
+        {
+          "tableId": "table_17",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IAS 1.106(b)",
+            "IAS 1.106(d)(i)",
+            "IAS 1.106(d)(ii), 106A"
+          ],
+          "col_headers": [],
+          "row_count": 38,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "tables": [
+        {
+          "tableId": "table_18",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "(35)",
+            "-",
+            "(35)"
+          ],
+          "col_headers": [],
+          "row_count": 30,
+          "data_row_count": 20,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "tables": [
+        {
+          "tableId": "table_19",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash flows from operating activities a, b",
+            "Profit for the period c",
+            "Adjustments for:"
+          ],
+          "col_headers": [],
+          "row_count": 31,
+          "data_row_count": 29,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "tables": [
+        {
+          "tableId": "table_20",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash flows from investing activities",
+            "Interest received f",
+            "Dividends received f"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "tables": [
+        {
+          "tableId": "table_21",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IAS 7 .18, 20, A, Insights 2.3.30.20",
+            "IAS 7 .6, 11, Insights 2.3.20.11",
+            "IFRS 16.50, IAS 7 .17(e)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "tables": [
+        {
+          "tableId": "table_22",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash flows from financing activities",
+            "Proceeds from issue of share capital",
+            "Proceeds from issue of convertible notes"
+          ],
+          "col_headers": [],
+          "row_count": 19,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "tables": [
+        {
+          "tableId": "table_23",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IAS 1.10(e)",
+            "Introduction",
+            "Auditors' report"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "tables": [
+        {
+          "tableId": "table_24",
+          "classification": "SOCIE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IFRS 13.6(a)",
+            "IFRS 13.BC184",
+            "IAS 8.28"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=1"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "tables": [
+        {
+          "tableId": "table_25",
+          "classification": "SOCIE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Non-recycled Papers",
+            "Recycled Papers",
+            "Packaging (sold in February 2025; see Note 7)"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=2"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "tables": [
+        {
+          "tableId": "table_26",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IFRS 8.27-28",
+            "IFRS 8.12, 22(aa)"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=1"
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "tables": [
+        {
+          "tableId": "table_27",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IFRS 8.21(b), 23",
+            "IFRS 8.23(a), 32",
+            "IFRS 8.23(b)"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=2"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "tables": [
+        {
+          "tableId": "table_28",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "(162)",
+            "7,543",
+            "940"
+          ],
+          "col_headers": [],
+          "row_count": 20,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=3"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "tables": [
+        {
+          "tableId": "table_29",
+          "classification": "NOTES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Segment profit (loss) before tax",
+            "External revenues a",
+            "Inter-segment revenue a"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "tables": [
+        {
+          "tableId": "table_30",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "(466)",
+            "23,193",
+            "2,835"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "tables": [
+        {
+          "tableId": "table_31",
+          "classification": "DISC.TAX",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "i. Revenues",
+            "Total revenue for reportable segments",
+            "Revenue for other segments"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "tables": [
+        {
+          "tableId": "table_32",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Interest income",
+            "Interest expense",
+            "Capital expenditure"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "tables": [
+        {
+          "tableId": "table_33",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Interest income",
+            "Interest expense",
+            "Capital expenditure"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "tables": [
+        {
+          "tableId": "table_34",
+          "classification": "DISC.HELD_FOR_SALE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "[ Country X ] (of which EUR 4,149 thousand (2024: EUR 12,781 thousand) relates t",
+            "All foreign countries",
+            "Germany (of which EUR 1,885 thousand (2024: EUR 6,005 thousand) relates to disco"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "tables": [
+        {
+          "tableId": "table_35",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "[ Country X ]",
+            "All foreign countries",
+            "Germany"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 36,
+      "tables": [
+        {
+          "tableId": "table_36",
+          "classification": "DISC.TAX",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue",
+            "Elimination of inter-segment revenue",
+            "External revenue"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "tables": [
+        {
+          "tableId": "table_37",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 5.33(c)",
+            "IAS 7 .40(d)",
+            "IAS 7 .40(c)"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "tables": [
+        {
+          "tableId": "table_38",
+          "classification": "DISC.INV_PROP",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue from contracts with customers b",
+            "Other revenue",
+            "Investment property rentals"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "tables": [
+        {
+          "tableId": "table_39",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Primary geographical markets",
+            "Europe",
+            "US"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "tables": [
+        {
+          "tableId": "table_40",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Type of good or service",
+            "Geographic region",
+            "Market or type of customer"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "tables": [
+        {
+          "tableId": "table_41",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "3,174",
+            "793",
+            "3,967"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "tables": [
+        {
+          "tableId": "table_42",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 15.112, 114, BC340",
+            "IFRS 15.115",
+            "IFRS 15.114, 5.5B"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "tables": [
+        {
+          "tableId": "table_43",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Receivables, which are included in 'trade and other receivables'",
+            "Receivables, which are included in 'assets held for sale'",
+            "Contract assets"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "tables": [
+        {
+          "tableId": "table_44",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Standard paper products",
+            "Made-to-order paper products"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "tables": [
+        {
+          "tableId": "table_45",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "8.",
+            "D.",
+            "Type of product/service"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "tables": [
+        {
+          "tableId": "table_46",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Changes in inventories of finished goods and work in progress",
+            "Raw materials and consumables",
+            "Employee benefits"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "tables": [
+        {
+          "tableId": "table_47",
+          "classification": "DISC.IMPAIRMENT",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Interest income under the effective interest method on: a - Corporate debt secur",
+            "- Corporate debt securities - at amortised cost",
+            "- Cash and cash equivalents"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "tables": [
+        {
+          "tableId": "table_48",
+          "classification": "DISC.EPS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Profit (loss) for the year, attributable to the owners of the Company",
+            "Dividends on non- redeemable preference shares",
+            "Profit (loss) attributable to ordinary shareholders"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 49,
+      "tables": [
+        {
+          "tableId": "table_49",
+          "classification": "DISC.FAIR_VALUE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Issued ordinary shares at 1 January",
+            "Effect of treasury shares held",
+            "Effect of share options exercised"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "tables": [
+        {
+          "tableId": "table_50",
+          "classification": "DISC.EPS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Profit (loss) attributable to ordinary shareholders (basic)",
+            "Interest expense on convertible notes, net of tax",
+            "Profit (loss) attributable to ordinary shareholders (diluted)"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "tables": [
+        {
+          "tableId": "table_51",
+          "classification": "DISC.EPS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Weighted-average number of ordinary shares (basic)",
+            "Effect of conversion of convertible notes",
+            "Effect of share options on issue"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "tables": [
+        {
+          "tableId": "table_52",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Options granted to key management personnel",
+            "On 1 January 2021",
+            "On 1 January 2024"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "tables": [
+        {
+          "tableId": "table_53",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Total carrying amount of liabilities for SARs",
+            "Total intrinsic value of liabilities for vested benefits"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "tables": [
+        {
+          "tableId": "table_54",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Fair value at grant date",
+            "Share price at grant date",
+            "Exercise price"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "tables": [
+        {
+          "tableId": "table_55",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Fair value",
+            "Share price",
+            "Exercise price"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 56,
+      "tables": [
+        {
+          "tableId": "table_56",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Outstanding at 1 January",
+            "Forfeited during the year",
+            "Exercised during the year"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "tables": [
+        {
+          "tableId": "table_57",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Net defined benefit asset",
+            "Total employee benefit asset",
+            "Net defined benefit liability"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 58,
+      "tables": [
+        {
+          "tableId": "table_58",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Included in profit or loss b",
+            "Current service cost"
+          ],
+          "col_headers": [],
+          "row_count": 24,
+          "data_row_count": 18,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 59,
+      "tables": [
+        {
+          "tableId": "table_59",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Equity securities:",
+            "- Consumer markets",
+            "- Pharmaceuticals"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "tables": [
+        {
+          "tableId": "table_60",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Discount rate",
+            "Future salary growth",
+            "Future pension growth"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "tables": [
+        {
+          "tableId": "table_61",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Longevity at age 65 for current pensioners",
+            "Males",
+            "Females"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "tables": [
+        {
+          "tableId": "table_62",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Discount rate (1% movement)",
+            "Future salary growth (1% movement)",
+            "Future pension growth (1% movement)"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "tables": [
+        {
+          "tableId": "table_63",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Wages and salaries",
+            "Social security contributions",
+            "Contributions to defined contribution plans"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "tables": [
+        {
+          "tableId": "table_64",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Current tax expense",
+            "Current year:",
+            "- Corporate income tax"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "tables": [
+        {
+          "tableId": "table_65",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Items that will not be reclassified to profit or loss",
+            "Revaluation of property, plant and equipment",
+            "Remeasurements of defined benefit liability (asset)"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 18,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "tables": [
+        {
+          "tableId": "table_66",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Convertible notes",
+            "Share-based payments"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "tables": [
+        {
+          "tableId": "table_67",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Tax using the Company's domestic tax rate",
+            "Effect of tax rates in foreign jurisdictions",
+            "Current tax expense related to global minimum top-up tax (see Note 14(J)) c"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "tables": [
+        {
+          "tableId": "table_68",
+          "classification": "DISC.INV_PROP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Property, plant and equipment (including right-of-use assets d )",
+            "Intangible assets",
+            "Biological assets"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 69,
+      "tables": [
+        {
+          "tableId": "table_69",
+          "classification": "DISC.INV_PROP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Property, plant and equipment (including right-of-use assets d )",
+            "Intangible assets",
+            "Biological assets"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 70,
+      "tables": [
+        {
+          "tableId": "table_70",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "(66)",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 71,
+      "tables": [
+        {
+          "tableId": "table_71",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 72,
+      "tables": [
+        {
+          "tableId": "table_72",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Deductible temporary differences",
+            "Tax losses"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 73,
+      "tables": [
+        {
+          "tableId": "table_73",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Expire",
+            "Never expire"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 74,
+      "tables": [
+        {
+          "tableId": "table_74",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Profit from continuing operations",
+            "Income tax expense",
+            "Profit before tax"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 75,
+      "tables": [
+        {
+          "tableId": "table_75",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January 2024",
+            "Purchases",
+            "Sales of livestock"
+          ],
+          "col_headers": [],
+          "row_count": 24,
+          "data_row_count": 20,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 76,
+      "tables": [
+        {
+          "tableId": "table_76",
+          "classification": "DISC.BIOLOGICAL_ASSETS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Gain included in 'other income'",
+            "Change in fair value (realised)",
+            "Change in fair value (unrealised)"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 77,
+      "tables": [
+        {
+          "tableId": "table_77",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Standing timber",
+            "Standing timber older than 25 years (the age at which it becomes marketable)",
+            "Younger standing timber"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 78,
+      "tables": [
+        {
+          "tableId": "table_78",
+          "classification": "DISC.INVENTORIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Raw materials and consumables",
+            "Finished goods",
+            "Right to recover returned goods a"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 79,
+      "tables": [
+        {
+          "tableId": "table_79",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 15.B21, BC367",
+            "Insights 3.8.400.70"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 80,
+      "tables": [
+        {
+          "tableId": "table_80",
+          "classification": "DISC.RELATED_PARTIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Trade receivables due from related parties",
+            "Other trade receivables"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 81,
+      "tables": [
+        {
+          "tableId": "table_81",
+          "classification": "DISC.ASSOCIATES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Carrying amount of trade receivables transferred to a bank",
+            "Carrying amount of associated liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 82,
+      "tables": [
+        {
+          "tableId": "table_82",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Bank balances",
+            "Demand deposits",
+            "Cash"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=4"
+        }
+      ]
+    },
+    {
+      "page": 83,
+      "tables": [
+        {
+          "tableId": "table_83",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Property, plant and equipment",
+            "Inventories",
+            "Trade and other receivables"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 85,
+      "tables": [
+        {
+          "tableId": "table_85",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Cost",
+            "Balance at 1 January 2024",
+            "Additions"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 86,
+      "tables": [
+        {
+          "tableId": "table_86",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Accumulated depreciation and impairment losses",
+            "Balance at 1 January 2024",
+            "Depreciation"
+          ],
+          "col_headers": [],
+          "row_count": 19,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 87,
+      "tables": [
+        {
+          "tableId": "table_87",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "(Decrease) increase in depreciation",
+            "expense"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 88,
+      "tables": [
+        {
+          "tableId": "table_88",
+          "classification": "DISC.GOV_GRANTS",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Cost",
+            "Balance at 1 January 2024",
+            "Acquisitions"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 89,
+      "tables": [
+        {
+          "tableId": "table_89",
+          "classification": "DISC.INTANGIBLES",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Accumulated amortisation and impairment losses",
+            "Balance at 1 January 2024",
+            "Amortisation"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 90,
+      "tables": [
+        {
+          "tableId": "table_90",
+          "classification": "DISC.INTANGIBLES",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-recycled Papers",
+            "Plant and equipment and development costs",
+            "The impairment loss and subsequent reversal in relation to the Non-recycled Pape"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 91,
+      "tables": [
+        {
+          "tableId": "table_91",
+          "classification": "DISC.TAX",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "IAS 36.130(a), (d)(i)",
+            "IAS 36.130(g), 132",
+            "IAS 36.130(e)"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 92,
+      "tables": [
+        {
+          "tableId": "table_92",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Discount rate",
+            "Terminal value growth rate",
+            "Budgeted EBITDA growth rate (average of next five years)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 93,
+      "tables": [
+        {
+          "tableId": "table_93",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Discount rate",
+            "Budgeted EBITDA growth rate"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 94,
+      "tables": [
+        {
+          "tableId": "table_94",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 36.48, Insights 3.10.250.20",
+            "IAS 36.134(d)(ii), (iv)-(v), (e)(ii), (iv)-(v), (f), IE89"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 95,
+      "tables": [
+        {
+          "tableId": "table_95",
+          "classification": "DISC.PPE",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Acquisitions",
+            "Reclassification from property, plant and equipment"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 96,
+      "tables": [
+        {
+          "tableId": "table_96",
+          "classification": "DISC.INV_PROP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Income-generating property",
+            "Vacant property"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 98,
+      "tables": [
+        {
+          "tableId": "table_98",
+          "classification": "DISC.TAX",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Interest in joint venture",
+            "Interests in associates",
+            "Balance at 31 December"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 99,
+      "tables": [
+        {
+          "tableId": "table_99",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Percentage ownership interest",
+            "Non-current assets",
+            "Current assets (including cash and cash equivalents - 2025: EUR 200 thousand, 20"
+          ],
+          "col_headers": [],
+          "row_count": 19,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 100,
+      "tables": [
+        {
+          "tableId": "table_100",
+          "classification": "DISC.ASSOCIATES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Percentage ownership interest",
+            "Non-current assets",
+            "Current assets"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 101,
+      "tables": [
+        {
+          "tableId": "table_101",
+          "classification": "DISC.ASSOCIATES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Carrying amount of interests in associates",
+            "Share of:",
+            "- Profit from continuing operations"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 102,
+      "tables": [
+        {
+          "tableId": "table_102",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-current investments",
+            "Corporate debt securities - at amortised cost",
+            "Corporate debt securities - at FVOCI"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 103,
+      "tables": [
+        {
+          "tableId": "table_103",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Investment in MSE Limited",
+            "Investment in DEF Limited"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 104,
+      "tables": [
+        {
+          "tableId": "table_104",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "In issue at 1 January",
+            "Issued for cash",
+            "Exercise of share options"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 105,
+      "tables": [
+        {
+          "tableId": "table_105",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "25.97 cents per qualifying ordinary share (2024: 4.28 cents)",
+            "25.03 cents per non-redeemable preference share (2024: 25.03 cents)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 106,
+      "tables": [
+        {
+          "tableId": "table_106",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "27 .92 cents per qualifying ordinary share (2024: 25.97 cents)",
+            "25.03 cents per non-redeemable preference share (2024: 25.03 cents)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 107,
+      "tables": [
+        {
+          "tableId": "table_107",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 16.77(f)",
+            "IFRS 7 .20(a)(vii)",
+            "IAS 21.52(b)"
+          ],
+          "col_headers": [],
+          "row_count": 26,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 108,
+      "tables": [
+        {
+          "tableId": "table_108",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 23,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=3"
+        }
+      ]
+    },
+    {
+      "page": 109,
+      "tables": [
+        {
+          "tableId": "table_109",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Total liabilities",
+            "Less: cash and cash equivalents",
+            "Net debt"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 110,
+      "tables": [
+        {
+          "tableId": "table_110",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-current liabilities",
+            "Secured bank loans",
+            "Unsecured bond issues"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 111,
+      "tables": [
+        {
+          "tableId": "table_111",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Secured bank loan (see Note 18(A))",
+            "Secured bank loan",
+            "Secured bank loan"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 112,
+      "tables": [
+        {
+          "tableId": "table_112",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 1.69(d), 72A-72B, Insights 3.1.50.100, 190, 3.1.70.20",
+            "IAS 1.76ZA, Insights 3.1.80.10"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 113,
+      "tables": [
+        {
+          "tableId": "table_113",
+          "classification": "DISC.BIOLOGICAL_ASSETS",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Proceeds from issue of convertible notes (1,000,000 notes at EUR 4 par value)",
+            "Transaction costs",
+            "Net proceeds"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 114,
+      "tables": [
+        {
+          "tableId": "table_114",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Proceeds from issue of convertible notes (250,000 notes at EUR 4 (USD 4.4) par v",
+            "Transaction costs b",
+            "Net proceeds"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 115,
+      "tables": [
+        {
+          "tableId": "table_115",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 1.69(a)-(d), 76A-76B, IAS 32.11, 16, Insights 3.1.100",
+            "Insights 7 .7 .50.80",
+            "IAS 1.69(a)-(d), 76A-76B, IAS 32.11, Insights 3.1.100"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 116,
+      "tables": [
+        {
+          "tableId": "table_116",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Proceeds from issue of redeemable preference shares",
+            "Transaction costs",
+            "Accrued dividend"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 117,
+      "tables": [
+        {
+          "tableId": "table_117",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January 2025",
+            "Changes from financing cash flows",
+            "Proceeds from issue of share capital"
+          ],
+          "col_headers": [],
+          "row_count": 28,
+          "data_row_count": 25,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=5"
+        }
+      ]
+    },
+    {
+      "page": 118,
+      "tables": [
+        {
+          "tableId": "table_118",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 23,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=4"
+        }
+      ]
+    },
+    {
+      "page": 119,
+      "tables": [
+        {
+          "tableId": "table_119",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Restated balance at 1 January 2024",
+            "Changes from financing cash flows",
+            "Proceeds from loans and borrowings"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 18,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=6"
+        }
+      ]
+    },
+    {
+      "page": 120,
+      "tables": [
+        {
+          "tableId": "table_120",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=5"
+        }
+      ]
+    },
+    {
+      "page": 121,
+      "tables": [
+        {
+          "tableId": "table_121",
+          "classification": "DISC.CONTINGENCIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Trade payables due to related parties",
+            "Trade payables - supplier finance arrangement",
+            "Other trade payables"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 122,
+      "tables": [
+        {
+          "tableId": "table_122",
+          "classification": "DISC.BORROWINGS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Carrying amount of financial liabilities subject to supplier finance arrangement",
+            "Presented within trade and other payables",
+            "- of which suppliers have received payment from the bank"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 123,
+      "tables": [
+        {
+          "tableId": "table_123",
+          "classification": "DISC.BCA",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Deferred income - Asset acquisition a",
+            "Non-current",
+            "Current"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 124,
+      "tables": [
+        {
+          "tableId": "table_124",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IAS 20.24, Insights 4.3.130.60",
+            "IAS 20.23, Insights 5.14.110.20"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 125,
+      "tables": [
+        {
+          "tableId": "table_125",
+          "classification": "DISC.PROVISIONS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at",
+            "1 January 2025",
+            "Assumed in a business combination"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 126,
+      "tables": [
+        {
+          "tableId": "table_126",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Introduction",
+            "Auditors' report",
+            "Primary statements"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 127,
+      "tables": [
+        {
+          "tableId": "table_127",
+          "classification": "DISC.BORROWINGS",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Financial assets measured at fair value",
+            "Interest rate swaps used for hedging",
+            "Forward exchange contracts used for hedging"
+          ],
+          "col_headers": [],
+          "row_count": 29,
+          "data_row_count": 25,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 128,
+      "tables": [
+        {
+          "tableId": "table_128",
+          "classification": "DISC.FAIR_VALUE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 21,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 129,
+      "tables": [
+        {
+          "tableId": "table_129",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Financial assets measured at fair value",
+            "Interest rate swaps used for hedging",
+            "Forward exchange contracts used for hedging"
+          ],
+          "col_headers": [],
+          "row_count": 26,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 130,
+      "tables": [
+        {
+          "tableId": "table_130",
+          "classification": "DISC.FAIR_VALUE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "-",
+            "-"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 20,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 131,
+      "tables": [
+        {
+          "tableId": "table_131",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Contingent consideration",
+            "Equity securities",
+            "Corporate debt securities"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 132,
+      "tables": [
+        {
+          "tableId": "table_132",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Forward exchange contracts",
+            "Interest rate swaps",
+            "Equity conversion option (embedded in convertible notes) a"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 133,
+      "tables": [
+        {
+          "tableId": "table_133",
+          "classification": "DISC.BCA",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January 2024",
+            "Gain included in OCI",
+            "- Net change in fair value (unrealised)"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 134,
+      "tables": [
+        {
+          "tableId": "table_134",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "31 December 2025",
+            "Expected cash flows (10% movement)",
+            "Risk-adjusted discount rate (1% movement (100 bps))"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=7"
+        }
+      ]
+    },
+    {
+      "page": 135,
+      "tables": [
+        {
+          "tableId": "table_135",
+          "classification": "DISC.IMPAIRMENT",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Impairment loss on trade receivables and contract assets arising from contracts ",
+            "Impairment loss on lease receivable",
+            "Impairment loss on debt securities at amortised cost"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 136,
+      "tables": [
+        {
+          "tableId": "table_136",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "[ Countries A, B, C, D and E ]",
+            "Other [ Region Z ] countries",
+            "US"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 137,
+      "tables": [
+        {
+          "tableId": "table_137",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Wholesale customers",
+            "Retail customers",
+            "End-user customers"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 138,
+      "tables": [
+        {
+          "tableId": "table_138",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "External credit ratings at least Baa3 from [ Rating Agency X ] or BBB- from [ Ra",
+            "Other customers:",
+            "- Four or more years' trading history with the Group*"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 139,
+      "tables": [
+        {
+          "tableId": "table_139",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Grades 1-6: Low risk",
+            "Grades 7-9: Fair risk",
+            "Grade 10: Substandard"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 140,
+      "tables": [
+        {
+          "tableId": "table_140",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Current (not past due)",
+            "1-30 days past due",
+            "31-60 days past due"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 141,
+      "tables": [
+        {
+          "tableId": "table_141",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Grades 1-6: Low risk",
+            "Grades 7-9: Fair risk",
+            "Grade 10: Substandard"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 142,
+      "tables": [
+        {
+          "tableId": "table_142",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Current (not past due)",
+            "1-30 days past due",
+            "31-60 days past due"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 143,
+      "tables": [
+        {
+          "tableId": "table_143",
+          "classification": "DISC.HELD_FOR_SALE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Amounts written off",
+            "Amounts derecognised due to discontinued operation"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 144,
+      "tables": [
+        {
+          "tableId": "table_144",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "[ Country X ]",
+            "[ Countries A, B, C, D and E ]",
+            "Other [ Region Z ] countries"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 145,
+      "tables": [
+        {
+          "tableId": "table_145",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "BBB- to AAA",
+            "BB- to BB+",
+            "B- to B+"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 146,
+      "tables": [
+        {
+          "tableId": "table_146",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Net remeasurement of loss allowance",
+            "Transfer to lifetime ECL - not credit-impaired"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 147,
+      "tables": [
+        {
+          "tableId": "table_147",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Net remeasurement of loss allowance",
+            "Transfer to lifetime ECL - not credit-impaired"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 148,
+      "tables": [
+        {
+          "tableId": "table_148",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January",
+            "Net remeasurement of loss allowance",
+            "Financial assets derecognised"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 149,
+      "tables": [
+        {
+          "tableId": "table_149",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-derivative financial liabilities",
+            "Contingent consideration",
+            "Bank overdrafts"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=8"
+        }
+      ]
+    },
+    {
+      "page": 150,
+      "tables": [
+        {
+          "tableId": "table_150",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 7 .39, B11, Insights 7 .10.650.80",
+            "Insights 7 .10.650.70",
+            "Insights 7 .10.650.30"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 151,
+      "tables": [
+        {
+          "tableId": "table_151",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-derivative financial liabilities",
+            "Bank overdrafts",
+            "Secured bank loans"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=9"
+        }
+      ]
+    },
+    {
+      "page": 152,
+      "tables": [
+        {
+          "tableId": "table_152",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Introduction",
+            "Auditors' report",
+            "7 statements"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 153,
+      "tables": [
+        {
+          "tableId": "table_153",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Trade receivables",
+            "Secured bank loans",
+            "Trade payables"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 154,
+      "tables": [
+        {
+          "tableId": "table_154",
+          "classification": "DISC.FX_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "USD 1",
+            "GBP 1",
+            "CHF 1"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 155,
+      "tables": [
+        {
+          "tableId": "table_155",
+          "classification": "DISC.FX_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "31 December 2025",
+            "EUR (9% movement)",
+            "USD (10% movement)"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 156,
+      "tables": [
+        {
+          "tableId": "table_156",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Fixed-rate instruments",
+            "Financial assets",
+            "Financial liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 157,
+      "tables": [
+        {
+          "tableId": "table_157",
+          "classification": "DISC.INTEREST_RATE_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "31 December 2025",
+            "Variable-rate instruments",
+            "Interest rate swaps"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 158,
+      "tables": [
+        {
+          "tableId": "table_158",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Foreign currency risk",
+            "Forward exchange contracts",
+            "Net exposure (in thousands of EUR)"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 159,
+      "tables": [
+        {
+          "tableId": "table_159",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Foreign currency risk",
+            "Forward exchange contracts",
+            "Net exposure (in thousands of EUR)"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 160,
+      "tables": [
+        {
+          "tableId": "table_160",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Foreign currency risk",
+            "Sales, receivables and borrowings",
+            "Inventory purchases"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=10"
+        }
+      ]
+    },
+    {
+      "page": 161,
+      "tables": [
+        {
+          "tableId": "table_161",
+          "classification": "DISC.INVENTORIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Foreign currency risk",
+            "Forward exchange contracts - sales, receivables and borrowings",
+            "Forward exchange contracts - inventory purchases"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 162,
+      "tables": [
+        {
+          "tableId": "table_162",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "(23)",
+            "(15)",
+            "(24)"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=6"
+        }
+      ]
+    },
+    {
+      "page": 163,
+      "tables": [
+        {
+          "tableId": "table_163",
+          "classification": "DISC.INVENTORIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Foreign currency risk",
+            "Forward exchange contracts - sales, receivables and borrowings",
+            "Forward exchange contracts - inventory purchases"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 164,
+      "tables": [
+        {
+          "tableId": "table_164",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "35",
+            "23",
+            "37"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=7"
+        }
+      ]
+    },
+    {
+      "page": 165,
+      "tables": [
+        {
+          "tableId": "table_165",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January 2025",
+            "Cash flow hedges",
+            "Changes in fair value:"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=8"
+        }
+      ]
+    },
+    {
+      "page": 166,
+      "tables": [
+        {
+          "tableId": "table_166",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Balance at 1 January 2024",
+            "Cash flow hedges",
+            "Effective portion of changes in fair value:"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=9"
+        }
+      ]
+    },
+    {
+      "page": 167,
+      "tables": [
+        {
+          "tableId": "table_167",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "(4)",
+            "During the period - 2025",
+            "125"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SOCIE count=10"
+        }
+      ]
+    },
+    {
+      "page": 168,
+      "tables": [
+        {
+          "tableId": "table_168",
+          "classification": "DISC.TRADE_PAYABLES",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "31 December 2025",
+            "Financial assets",
+            "Other investments, including derivatives"
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 169,
+      "tables": [
+        {
+          "tableId": "table_169",
+          "classification": "DISC.SHARE_BASED",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Cash",
+            "Equity instruments (8,000 ordinary shares)",
+            "Replacement share-based payment awards"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 170,
+      "tables": [
+        {
+          "tableId": "table_170",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Terms and conditions",
+            "Fair value at date of acquisition"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 171,
+      "tables": [
+        {
+          "tableId": "table_171",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Property, plant and equipment",
+            "Intangible assets",
+            "Inventories"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 172,
+      "tables": [
+        {
+          "tableId": "table_172",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Property, plant and equipment",
+            "Intangible assets",
+            "Inventories"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 173,
+      "tables": [
+        {
+          "tableId": "table_173",
+          "classification": "DISC.CASH",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Consideration transferred",
+            "NCI, based on their proportionate interest in the recognised amounts of the asse",
+            "Fair value of pre-existing interest in Papyrus"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 174,
+      "tables": [
+        {
+          "tableId": "table_174",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "NCI percentage",
+            "Non-current assets",
+            "Current assets"
+          ],
+          "col_headers": [],
+          "row_count": 35,
+          "data_row_count": 27,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 175,
+      "tables": [
+        {
+          "tableId": "table_175",
+          "classification": "DISC.NCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "10%",
+            "9,550",
+            "5,120"
+          ],
+          "col_headers": [],
+          "row_count": 35,
+          "data_row_count": 29,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 176,
+      "tables": [
+        {
+          "tableId": "table_176",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 12.10(b)(iii), 18"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 177,
+      "tables": [
+        {
+          "tableId": "table_177",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "2025",
+            "Balance at 1 January",
+            "Depreciation charge for the year"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 178,
+      "tables": [
+        {
+          "tableId": "table_178",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "2024",
+            "Balance at 1 January",
+            "Depreciation charge for the year"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 179,
+      "tables": [
+        {
+          "tableId": "table_179",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Interest on lease liabilities",
+            "Income from sub-leasing right-of-use assets presented in 'other revenue'",
+            "Expenses relating to short-term leases"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=11"
+        }
+      ]
+    },
+    {
+      "page": 180,
+      "tables": [
+        {
+          "tableId": "table_180",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Less than one year",
+            "One to two years",
+            "Two to three years"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 181,
+      "tables": [
+        {
+          "tableId": "table_181",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Less than one year",
+            "One to two years",
+            "Two to three years"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 182,
+      "tables": [
+        {
+          "tableId": "table_182",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Introduction",
+            "Introduction",
+            "IAS"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 183,
+      "tables": [
+        {
+          "tableId": "table_183",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Short-term employee benefits",
+            "Post-employment benefits",
+            "Other long-term benefits"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 184,
+      "tables": [
+        {
+          "tableId": "table_184",
+          "classification": "DISC.RELATED_PARTIES",
+          "method": "note_section",
+          "confidence": "medium",
+          "first_labels": [
+            "Legal fees",
+            "Repairs and maintenance",
+            "Inventory purchases - paper"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 185,
+      "tables": [
+        {
+          "tableId": "table_185",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Sale of goods and services",
+            "Parent of the Group - Cameron Paper Co (2024: Brown Products Corporation)",
+            "Joint venture"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 186,
+      "tables": [
+        {
+          "tableId": "table_186",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Derivative financial instruments",
+            "Non-derivative financial instruments at FVTPL",
+            "Debt and equity securities at FVOCI"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 187,
+      "tables": [
+        {
+          "tableId": "table_187",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Total assets",
+            "Trade and other payables (current)",
+            "Deferred tax liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 188,
+      "tables": [
+        {
+          "tableId": "table_188",
+          "classification": "DISC.RESTATEMENT",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Administrative expenses",
+            "Income tax expense",
+            "Others"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 189,
+      "tables": [
+        {
+          "tableId": "table_189",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A.",
+            "B.",
+            "C."
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 23,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 190,
+      "tables": [
+        {
+          "tableId": "table_190",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Auditors' report",
+            "statements",
+            "Primary"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 191,
+      "tables": [
+        {
+          "tableId": "table_191",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Insights 5.10.140.150",
+            "Insights 3.5.430.30",
+            "Insights 2.7 .160.20"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 192,
+      "tables": [
+        {
+          "tableId": "table_192",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Introduction",
+            "[IAS 21.39]",
+            "[IFRS 10.B94, IAS 21.41]"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 193,
+      "tables": [
+        {
+          "tableId": "table_193",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Introduction",
+            "Auditors' report",
+            "Primary statements"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 194,
+      "tables": [
+        {
+          "tableId": "table_194",
+          "classification": "OCI",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Insights 4.3.140.10",
+            "Insights 3.3.100.70, 5.14.130.10",
+            "Insights 5.14.170.30"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 195,
+      "tables": [
+        {
+          "tableId": "table_195",
+          "classification": "OCI",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "[IAS 12.58]",
+            "[IAS 12.88A]",
+            "[IAS 12.2, 12, 46, IFRIC 23.11]"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 196,
+      "tables": [
+        {
+          "tableId": "table_196",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "\u2022 buildings:",
+            "\u2022 plant and equipment:",
+            "\u2022 fixtures and fittings:"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=12"
+        }
+      ]
+    },
+    {
+      "page": 197,
+      "tables": [
+        {
+          "tableId": "table_197",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Goodwill",
+            "Research and development",
+            "Emissions allowances"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=13"
+        }
+      ]
+    },
+    {
+      "page": 198,
+      "tables": [
+        {
+          "tableId": "table_198",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IFRS 7 .21",
+            "[IFRS 9.4.1.2]",
+            "[IFRS 9.4.1.2A]"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=14"
+        }
+      ]
+    },
+    {
+      "page": 199,
+      "tables": [
+        {
+          "tableId": "table_199",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "[IFRS 9.B4.1.11(b), B4.1.12]"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=15"
+        }
+      ]
+    },
+    {
+      "page": 200,
+      "tables": [
+        {
+          "tableId": "table_200",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Financial assets at FVTPL",
+            "Financial assets at amortised cost",
+            "Debt investments at FVOCI"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=16"
+        }
+      ]
+    },
+    {
+      "page": 201,
+      "tables": [
+        {
+          "tableId": "table_201",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "report",
+            "Auditors'",
+            "Primary statements"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=17"
+        }
+      ]
+    },
+    {
+      "page": 202,
+      "tables": [
+        {
+          "tableId": "table_202",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "[IAS 32.35-35A]",
+            "[IAS 32.AG25-AG26]",
+            "[IAS 32.33]"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=18"
+        }
+      ]
+    },
+    {
+      "page": 203,
+      "tables": [
+        {
+          "tableId": "table_203",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Auditors' report",
+            "Primary statements",
+            "NOTES"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=19"
+        }
+      ]
+    },
+    {
+      "page": 204,
+      "tables": [
+        {
+          "tableId": "table_204",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IFRS 7 .35F(d), 35G(a)(iii), [IFRS 9.A]",
+            "[IFRS 9.5.5.1-5.5.2]",
+            "IFRS 7 .35F(e), [IFRS 9.5.4.4]"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=20"
+        }
+      ]
+    },
+    {
+      "page": 205,
+      "tables": [
+        {
+          "tableId": "table_205",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Warranties",
+            "Restructuring",
+            "Site restoration"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=21"
+        }
+      ]
+    },
+    {
+      "page": 206,
+      "tables": [
+        {
+          "tableId": "table_206",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "[IFRS 16.29-33]",
+            "[IFRS 16.26]",
+            "IAS 1.112(c)"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=22"
+        }
+      ]
+    },
+    {
+      "page": 207,
+      "tables": [
+        {
+          "tableId": "table_207",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "[IFRS 16.17]",
+            "[IFRS 16.61-62]",
+            "[IFRS 16.63]"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=23"
+        }
+      ]
+    },
+    {
+      "page": 209,
+      "tables": [
+        {
+          "tableId": "table_209",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1 January 2026",
+            "1 January 2026",
+            "1 January 2026"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=24"
+        }
+      ]
+    },
+    {
+      "page": 210,
+      "tables": [
+        {
+          "tableId": "table_210",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1 January 2027",
+            "1 January 2027",
+            "To be determined a"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=25"
+        }
+      ]
+    },
+    {
+      "page": 211,
+      "tables": [
+        {
+          "tableId": "table_211",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Continuing operations",
+            "Revenue",
+            "Cost of sales"
+          ],
+          "col_headers": [],
+          "row_count": 32,
+          "data_row_count": 25,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=26"
+        }
+      ]
+    },
+    {
+      "page": 212,
+      "tables": [
+        {
+          "tableId": "table_212",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Profit for the period",
+            "Other comprehensive income",
+            "Items that will not be reclassified to profit or loss"
+          ],
+          "col_headers": [],
+          "row_count": 28,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=27"
+        }
+      ]
+    },
+    {
+      "page": 213,
+      "tables": [
+        {
+          "tableId": "table_213",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash flows from operating activities",
+            "Cash receipts from customers",
+            "Cash paid to suppliers and employees"
+          ],
+          "col_headers": [],
+          "row_count": 41,
+          "data_row_count": 34,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=28"
+        }
+      ]
+    },
+    {
+      "page": 214,
+      "tables": [
+        {
+          "tableId": "table_214",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Property, plant and equipment",
+            "Investment property",
+            "Intangible assets"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: CFS count=29"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 210,
+    "by_type": {
+      "CFS": 29,
+      "DISC.TAX": 13,
+      "SOCIE": 10,
+      "DISC.SHARE_BASED": 10,
+      "DISC.PPE": 9,
+      "DISC.CREDIT_RISK": 9,
+      "SFP": 8,
+      "DISC.SEGMENTS": 7,
+      "DISC.EMPLOYEE_BENEFITS": 6,
+      "DISC.FIN_INST": 6,
+      "DISC.HEDGE": 5,
+      "OCI": 4,
+      "DISC.FAIR_VALUE": 4,
+      "PNL": 4,
+      "DISC.INV_PROP": 4,
+      "DISC.DIVIDENDS": 4,
+      "DISC.LEASES": 4,
+      "DISC.EPS": 3,
+      "DISC.INVENTORIES": 3,
+      "DISC.ASSOCIATES": 3,
+      "DISC.GOODWILL": 3,
+      "DISC.HELD_FOR_SALE": 2,
+      "DISC.IMPAIRMENT": 2,
+      "DISC.BIOLOGICAL_ASSETS": 2,
+      "DISC.RELATED_PARTIES": 2,
+      "DISC.INTANGIBLES": 2,
+      "DISC.BORROWINGS": 2,
+      "DISC.BCA": 2,
+      "DISC.FX_RISK": 2,
+      "NOTES": 1,
+      "DISC.GOV_GRANTS": 1,
+      "DISC.CONTINGENCIES": 1,
+      "DISC.PROVISIONS": 1,
+      "DISC.INTEREST_RATE_RISK": 1,
+      "DISC.TRADE_PAYABLES": 1,
+      "DISC.CASH": 1,
+      "DISC.NCI": 1,
+      "DISC.RESTATEMENT": 1
+    },
+    "flagged_count": 76,
+    "flagged_page_range": [
+      3,
+      214
+    ],
+    "suggested_action": "Review 29 CFS classifications on pages 26-214; likely over-classified. Review 10 SOCIE classifications on pages 24-167; likely over-classified. 37 unclassified tables need assignment"
+  }
+}

@@ -1,0 +1,954 @@
+document: Wienerberger AG Annual Report 2024
+company_id: '006'
+analysis_date: '2026-03-26'
+source: /tmp/doc_tag/006/Wienerberger_AG_Annual_Report_2024_tables_stitched/table_graphs.json
+summary:
+  total_tagged_rows: 334
+  phantom_concepts: 83
+  existing_concepts: 66
+  families_with_gaps: 24
+  esg_tables_uncovered: 16
+gaps:
+- family: DISC.BORROWINGS
+  concept_file: concepts/disc/borrowings.yaml
+  ifrs_ref: IFRS 7 / IAS 1.76A
+  phantom_concepts:
+  - id: DISC.BORROWINGS.BANK_LOANS
+    labels:
+    - Liabilities to banks
+    tables:
+    - table_159
+    pages:
+    - 244
+  - id: DISC.BORROWINGS.BONDS
+    labels:
+    - Bonds
+    tables:
+    - table_159
+    pages:
+    - 244
+  - id: DISC.BORROWINGS.NET_DEBT
+    labels:
+    - Net debt
+    tables:
+    - table_179
+    - table_18
+    pages:
+    - 50
+    - 283
+  - id: DISC.BORROWINGS.OTHER_BORROWINGS
+    labels:
+    - Liabilities to non-banks
+    tables:
+    - table_159
+    pages:
+    - 244
+  existing_concepts: []
+- family: DISC.CREDIT_RISK
+  concept_file: null
+  ifrs_ref: IFRS 7.35A-38
+  phantom_concepts:
+  - id: DISC.CREDIT_RISK.INSURED_RECEIVABLES
+    labels:
+    - thereof insured against default
+    tables:
+    - table_171
+    pages:
+    - 255
+  - id: DISC.CREDIT_RISK.NOT_PAST_DUE
+    labels:
+    - Not due
+    tables:
+    - table_173
+    pages:
+    - 256
+  - id: DISC.CREDIT_RISK.PAST_DUE_30
+    labels:
+    - Upto 30 days overdue
+    tables:
+    - table_173
+    pages:
+    - 256
+  - id: DISC.CREDIT_RISK.PAST_DUE_60
+    labels:
+    - 31 to 60 days overdue
+    tables:
+    - table_173
+    pages:
+    - 256
+  - id: DISC.CREDIT_RISK.PAST_DUE_90
+    labels:
+    - 61 to 90 days overdue
+    tables:
+    - table_173
+    pages:
+    - 256
+  - id: DISC.CREDIT_RISK.PAST_DUE_90_PLUS
+    labels:
+    - More than 90 days overdue
+    tables:
+    - table_173
+    pages:
+    - 256
+  existing_concepts: []
+- family: DISC.DERIVATIVE_INSTRUMENTS
+  concept_file: concepts/disc/hedge.yaml
+  ifrs_ref: IFRS 7 / IFRS 9
+  phantom_concepts:
+  - id: DISC.DERIVATIVE_INSTRUMENTS.NOTIONAL_AMOUNT
+    labels:
+    - Foreign currency hedging instruments
+    - Forward exchange contracts and swaps
+    - Interest rate and foreign currency hedging instruments
+    - Interest rate hedging instruments
+    tables:
+    - table_159
+    - table_161
+    - table_162
+    pages:
+    - 244
+    - 246
+  existing_concepts: []
+- family: DISC.DIVIDENDS
+  concept_file: null
+  ifrs_ref: IAS 1.137
+  phantom_concepts:
+  - id: DISC.DIVIDENDS.DIVIDEND_PAID
+    labels:
+    - Dividend
+    tables:
+    - table_26
+    pages:
+    - 63
+  existing_concepts: []
+- family: DISC.EBITDA
+  concept_file: null
+  ifrs_ref: IAS 1 / voluntary KPIs
+  phantom_concepts:
+  - id: DISC.EBITDA.EBITDA
+    labels:
+    - EBITDA
+    - EBITDA margin
+    - Operating EBITDA
+    - Operating EBITDA 1)
+    - Operating EBITDA margin
+    - OperatingEBITDA
+    tables:
+    - table_102
+    - table_15
+    - table_16
+    - table_179
+    - table_23
+    - table_24
+    pages:
+    - 48
+    - 55
+    - 57
+    - 195
+    - 283
+  existing_concepts: []
+- family: DISC.ENTITY_LIST
+  concept_file: null
+  ifrs_ref: IFRS 12 / IAS 27
+  phantom_concepts:
+  - id: DISC.ENTITY_LIST.ADDITIONS
+    labels:
+    - Included during reporting year for the first time
+    tables:
+    - table_100
+    pages:
+    - 194
+  - id: DISC.ENTITY_LIST.COUNT
+    labels:
+    - Thereof domestic companies
+    - Thereof foreign companies
+    tables:
+    - table_100
+    pages:
+    - 194
+  - id: DISC.ENTITY_LIST.DISPOSALS
+    labels:
+    - Divested during the reporting period
+    - Merged/ liquidated during the reporting period
+    tables:
+    - table_100
+    pages:
+    - 194
+  - id: DISC.ENTITY_LIST.SCOPE_CHANGE
+    labels:
+    - Change in consolidation method
+    tables:
+    - table_100
+    pages:
+    - 194
+  existing_concepts: []
+- family: DISC.EPS_BASIC
+  concept_file: concepts/disc/eps.yaml
+  ifrs_ref: IAS 33
+  phantom_concepts:
+  - id: DISC.EPS_BASIC.EPS
+    labels:
+    - Earnings per share (inEUR)
+    tables:
+    - table_97
+    pages:
+    - 189
+  existing_concepts: []
+- family: DISC.EPS_DENOMINATOR_BASIC
+  concept_file: concepts/disc/eps.yaml
+  ifrs_ref: IAS 33
+  phantom_concepts:
+  - id: DISC.EPS_DENOMINATOR_BASIC.WEIGHTED_SHARES
+    labels:
+    - Shares outstanding (weighted) 4)
+    - Weighted average
+    tables:
+    - table_124
+    - table_26
+    pages:
+    - 63
+    - 218
+  existing_concepts: []
+- family: DISC.FINANCIAL_INSTRUMENTS
+  concept_file: concepts/disc/fin_inst.yaml
+  ifrs_ref: IFRS 7 / IFRS 9
+  phantom_concepts:
+  - id: DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT
+    labels:
+    - Financial instruments
+    tables:
+    - table_159
+    pages:
+    - 244
+  - id: DISC.FINANCIAL_INSTRUMENTS.FAIR_VALUE
+    labels:
+    - Other securities
+    - Securities
+    - Shares in funds
+    - Stock
+    tables:
+    - table_142
+    - table_143
+    pages:
+    - 232
+  existing_concepts: []
+- family: DISC.LEASE_LIABILITIES
+  concept_file: concepts/disc/leases.yaml
+  ifrs_ref: IFRS 16
+  phantom_concepts:
+  - id: DISC.LEASE_LIABILITIES.CARRYING_AMOUNT
+    labels:
+    - Lease liabilities
+    tables:
+    - table_156
+    - table_159
+    pages:
+    - 242
+    - 244
+  existing_concepts: []
+- family: DISC.MARKET_RISK
+  concept_file: null
+  ifrs_ref: IFRS 7.40-42
+  phantom_concepts:
+  - id: DISC.MARKET_RISK.CURRENCY_EXPOSURE
+    labels:
+    - British pound
+    - Eastern European currencies
+    - Euro
+    - USdollar
+    tables:
+    - table_167
+    pages:
+    - 253
+  existing_concepts: []
+- family: DISC.MEASURE
+  concept_file: null
+  ifrs_ref: IAS 1 / voluntary KPIs
+  phantom_concepts:
+  - id: DISC.MEASURE.ADJUSTED_EARNINGS
+    labels:
+    - Adjusted earnings 1)
+    tables:
+    - table_26
+    pages:
+    - 63
+  - id: DISC.MEASURE.ADMIN_RATIO
+    labels:
+    - Administrative expenses to revenues
+    tables:
+    - table_15
+    pages:
+    - 48
+  - id: DISC.MEASURE.ASSET_COVERAGE
+    labels:
+    - Asset coverage
+    tables:
+    - table_18
+    pages:
+    - 50
+  - id: DISC.MEASURE.CAPITAL_EMPLOYED
+    labels:
+    - Average capitalemployed
+    - Capital employed
+    - Capital employedafter hedgingeffect
+    - Capital employedatreporting date
+    tables:
+    - table_167
+    - table_179
+    - table_18
+    - table_21
+    pages:
+    - 50
+    - 54
+    - 253
+    - 283
+  - id: DISC.MEASURE.EQUITY_RATIO
+    labels:
+    - Equity ratio
+    tables:
+    - table_18
+    pages:
+    - 50
+  - id: DISC.MEASURE.GEARING
+    labels:
+    - Gearing
+    tables:
+    - table_179
+    - table_18
+    pages:
+    - 50
+    - 283
+  - id: DISC.MEASURE.GROSS_MARGIN
+    labels:
+    - Gross profit to revenues
+    tables:
+    - table_15
+    pages:
+    - 48
+  - id: DISC.MEASURE.INTEREST_COVERAGE
+    labels:
+    - Operating EBITDA/interest result
+    tables:
+    - table_17
+    pages:
+    - 50
+  - id: DISC.MEASURE.MARKET_CAP
+    labels:
+    - Market capitalization at year-end
+    tables:
+    - table_26
+    pages:
+    - 63
+  - id: DISC.MEASURE.NET_DEBT_TO_EBITDA
+    labels:
+    - Net debt/Operating EBITDA
+    tables:
+    - table_17
+    pages:
+    - 50
+  - id: DISC.MEASURE.PE_RATIO
+    labels:
+    - P/E ratio at year-end
+    - P/E ratio high
+    - P/E ratio low
+    tables:
+    - table_26
+    pages:
+    - 63
+  - id: DISC.MEASURE.ROCE
+    labels:
+    - ROCE 6)
+    tables:
+    - table_179
+    pages:
+    - 283
+  - id: DISC.MEASURE.ROE
+    labels:
+    - Return on equity 5)
+    tables:
+    - table_179
+    pages:
+    - 283
+  - id: DISC.MEASURE.SELLING_RATIO
+    labels:
+    - Selling expenses to revenues
+    tables:
+    - table_15
+    pages:
+    - 48
+  - id: DISC.MEASURE.SHARE_PRICE
+    labels:
+    - Share price at year-end
+    - Share price high
+    - Share price low
+    tables:
+    - table_26
+    pages:
+    - 63
+  - id: DISC.MEASURE.WORKING_CAPITAL_RATIO
+    labels:
+    - Working capital to revenues 1)
+    tables:
+    - table_18
+    pages:
+    - 50
+  existing_concepts: []
+- family: DISC.PPE
+  concept_file: concepts/disc/ppe.yaml
+  ifrs_ref: IAS 16
+  phantom_concepts:
+  - id: DISC.PPE.DISPOSALS
+    labels:
+    - Disposals
+    tables:
+    - table_20
+    pages:
+    - 53
+  - id: DISC.PPE.FX_AND_OTHER
+    labels:
+    - Currency translation and other
+    tables:
+    - table_20
+    pages:
+    - 53
+  - id: DISC.PPE.REVERSAL_IMPAIRMENT
+    labels:
+    - Reversal of impairments
+    tables:
+    - table_20
+    pages:
+    - 53
+  - id: DISC.PPE.SCOPE_CHANGES
+    labels:
+    - Change in the scope of consolidation
+    tables:
+    - table_20
+    pages:
+    - 53
+  existing_concepts: []
+- family: DISC.REFUND_LIABILITY
+  concept_file: null
+  ifrs_ref: IFRS 15
+  phantom_concepts:
+  - id: DISC.REFUND_LIABILITY.CARRYING_AMOUNT
+    labels:
+    - Refund liabilities
+    tables:
+    - table_156
+    pages:
+    - 242
+  existing_concepts: []
+- family: DISC.RETIREMENT_BENEFITS
+  concept_file: concepts/disc/employee_benefits.yaml
+  ifrs_ref: IAS 19
+  phantom_concepts:
+  - id: DISC.RETIREMENT_BENEFITS.DISCOUNT_RATE
+    labels:
+    - Discount rate
+    tables:
+    - table_150
+    - table_154
+    pages:
+    - 238
+    - 240
+  - id: DISC.RETIREMENT_BENEFITS.MORTALITY
+    labels:
+    - Life expectancy
+    tables:
+    - table_150
+    pages:
+    - 238
+  - id: DISC.RETIREMENT_BENEFITS.SALARY_GROWTH
+    labels:
+    - Salary increases
+    tables:
+    - table_150
+    - table_154
+    pages:
+    - 238
+    - 240
+  - id: DISC.RETIREMENT_BENEFITS.TURNOVER_RATE
+    labels:
+    - Employee turnover
+    tables:
+    - table_150
+    - table_154
+    pages:
+    - 238
+    - 240
+  existing_concepts: []
+- family: DISC.REVENUE
+  concept_file: concepts/disc/revenue.yaml
+  ifrs_ref: IFRS 15
+  phantom_concepts:
+  - id: DISC.REVENUE.PRODUCT_LINE
+    labels:
+    - Façade
+    - Pavers
+    - Pipes
+    - Roof
+    - Wall
+    tables:
+    - table_109
+    pages:
+    - 206
+  existing_concepts: []
+- family: DISC.SEGMENTS
+  concept_file: concepts/disc/segment.yaml
+  ifrs_ref: IFRS 8
+  phantom_concepts:
+  - id: DISC.SEGMENTS.EXTERNAL_REVENUE
+    labels:
+    - Bricks North America
+    - Central East
+    - Emerging Markets
+    - Europe East
+    - Europe West
+    - External Revenues
+    - North America
+    - Northern Europe
+    - Pipes North America
+    - Smart HubSolutions
+    - South East
+    - UK/Ireland
+    - Western Europe
+    - Wienerberger Building Solution
+    - Wienerberger Piping Solution
+    - wienerberger
+    tables:
+    - table_129
+    - table_130
+    - table_14
+    - table_171
+    - table_19
+    - table_23
+    - table_24
+    - table_25
+    - table_77
+    - table_78
+    - table_79
+    pages:
+    - 47
+    - 53
+    - 55
+    - 57
+    - 58
+    - 158
+    - 224
+    - 255
+  existing_concepts: []
+- family: DISC.SHARE_CAPITAL
+  concept_file: null
+  ifrs_ref: IAS 1.79
+  phantom_concepts:
+  - id: DISC.SHARE_CAPITAL.SHARES_OUTSTANDING
+    labels:
+    - Outstanding
+    tables:
+    - table_124
+    pages:
+    - 218
+  existing_concepts: []
+- family: DISC.STAFF_COSTS
+  concept_file: concepts/disc/personnel.yaml
+  ifrs_ref: IAS 19 / IAS 1
+  phantom_concepts:
+  - id: DISC.STAFF_COSTS.BY_FUNCTION
+    labels:
+    - Administration
+    - Production
+    - Sales
+    tables:
+    - table_117
+    pages:
+    - 212
+  - id: DISC.STAFF_COSTS.HEADCOUNT
+    labels:
+    - ØEmployees
+    tables:
+    - table_179
+    pages:
+    - 283
+  existing_concepts: []
+- family: DISC.TRADE_RECEIVABLES
+  concept_file: null
+  ifrs_ref: IFRS 7.35H-35N
+  phantom_concepts:
+  - id: DISC.TRADE_RECEIVABLES.BY_GEOGRAPHY
+    labels:
+    - Central-Eastern Europe
+    tables:
+    - table_171
+    pages:
+    - 255
+  existing_concepts: []
+- family: FS.CFS
+  concept_file: concepts/cfs.yaml
+  ifrs_ref: IAS 7
+  phantom_concepts:
+  - id: FS.CFS.ACQUISITION_SUBSIDIARIES
+    labels:
+    - Net payments madefor the acquisition of companies
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CAPEX
+    labels:
+    - Capital expenditure
+    - Payments madefor property, plant and equipment and intangible assets
+    - Total investments 4)
+    tables:
+    - raw_119
+    - table_179
+    - table_20
+    pages:
+    - 53
+    - 192
+    - 283
+  - id: FS.CFS.CASH_FROM_FINANCING
+    labels:
+    - Cashflowfromfinancing activities
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CASH_FROM_INVESTING
+    labels:
+    - Cashflowfrominvesting activities
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CASH_FROM_OPERATIONS
+    labels:
+    - Cashflowfromoperatingactivities
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_FINANCIAL_ASSETS
+    labels:
+    - Increase/decrease in securities and other financial assets
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_INVENTORIES
+    labels:
+    - Increase/decrease in inventories
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_OTHER_WORKING_CAPITAL
+    labels:
+    - Increase/decrease in other net current assets
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_PAYABLES
+    labels:
+    - Increase/decrease in trade payables
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_PROVISIONS
+    labels:
+    - Increase/decrease in non-current provisions
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CHANGE_RECEIVABLES
+    labels:
+    - Increase/decrease in trade receivables
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.DISPOSAL_SUBSIDIARIES
+    labels:
+    - Net proceeds from the sale of companies
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.FREE_CASH_FLOW
+    labels:
+    - Free cash flow 2)
+    - Free cash flow 3)
+    tables:
+    - table_179
+    - table_26
+    pages:
+    - 63
+    - 283
+  - id: FS.CFS.GAIN_LOSS_DISPOSAL
+    labels:
+    - Gains/losses from the disposal of fixed and financial assets
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.GROSS_CASH_FLOW
+    labels:
+    - Gross cash flow
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.OTHER_NON_CASH
+    labels:
+    - Other non-cash income and expenses
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.PROCEEDS_DISPOSAL
+    labels:
+    - Proceeds from the sale of assets (including financial assets)
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.PURCHASE_INVESTMENTS
+    labels:
+    - Payments madefor investments in financial assets
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.PURCHASE_TREASURY_SHARES
+    labels:
+    - Purchase of treasury shares
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.REPAYMENT_LEASES
+    labels:
+    - Cash outflows from the repayment of lease liabilities
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.TAXES_PAID
+    labels:
+    - Income taxes paid
+    tables:
+    - raw_119
+    pages:
+    - 192
+  existing_concepts:
+  - id: FS.CFS.CASH_CLOSING
+    labels:
+    - Cashandcashequivalentsattheendoftheperiod 1)
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.CASH_OPENING
+    labels:
+    - Cash and cash equivalents at the beginning of the period
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.DIVIDENDS_FROM_ASSOCIATES
+    labels:
+    - Dividend payments from associates and joint ventures
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.DIVIDENDS_PAID
+    labels:
+    - Dividends paid by WienerbergerAG
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.DIVIDENDS_PAID_NCI
+    labels:
+    - Dividends paid to non-controlling interests
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.FX_EFFECT
+    labels:
+    - Effects of exchange rate fluctuations on cash held
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.INTEREST_PAID
+    labels:
+    - Interest paid
+    - Interest rate derivatives
+    tables:
+    - raw_119
+    - table_159
+    pages:
+    - 192
+    - 244
+  - id: FS.CFS.INTEREST_RECEIVED
+    labels:
+    - Interest received
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.NET_CHANGE_CASH
+    labels:
+    - Changeincashandcashequivalents
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.PROCEEDS_BORROWINGS
+    labels:
+    - Cash inflows from the increase in long-term financial liabilities
+    - Cash inflows from the increase in short-term financial liabilities
+    tables:
+    - raw_119
+    pages:
+    - 192
+  - id: FS.CFS.REPAYMENT_BORROWINGS
+    labels:
+    - Cash outflows from the repayment of short-term financial liabilities
+    tables:
+    - raw_119
+    pages:
+    - 192
+- family: FS.OCI
+  concept_file: concepts/oci.yaml
+  ifrs_ref: IAS 1.81A-B
+  phantom_concepts:
+  - id: FS.OCI.FOREIGN_CURRENCY_TRANSLATION
+    labels:
+    - Foreign exchange adjustments
+    - Foreign exchange adjustments to investments in associates and joint ventures
+    tables:
+    - table_99
+    pages:
+    - 193
+  existing_concepts:
+  - id: FS.OCI.TCI_ATTR_NCI
+    labels:
+    - Total comprehensive income after tax
+    tables:
+    - table_102
+    pages:
+    - 195
+  - id: FS.OCI.TOTAL_COMPREHENSIVE_INCOME
+    labels:
+    - Totalcomprehensiveincome
+    tables:
+    - table_99
+    pages:
+    - 193
+- family: FS.SOCE
+  concept_file: concepts/socie.yaml
+  ifrs_ref: IAS 1.106-110
+  phantom_concepts:
+  - id: FS.SOCE.MOVEMENT_AMOUNT
+    labels:
+    - Changes in hedging reserves
+    - Changes in non-controlling interest
+    - Changes in other reserves
+    - Dividend payment
+    - Other comprehensive income
+    - Purchase of treasury shares
+    - Use of treasury shares
+    tables:
+    - table_99
+    pages:
+    - 193
+  existing_concepts: []
+- family: FS.SOCIE
+  concept_file: concepts/socie.yaml
+  ifrs_ref: IAS 1.106-110
+  phantom_concepts:
+  - id: FS.SOCIE.CLOSING_BALANCE
+    labels:
+    - Balanceon31/12/2024
+    tables:
+    - table_100
+    - table_99
+    pages:
+    - 193
+    - 194
+  - id: FS.SOCIE.DIVIDENDS
+    labels:
+    - Dividend/hybrid coupon payment
+    tables:
+    - table_99
+    pages:
+    - 193
+  - id: FS.SOCIE.HYPERINFLATION
+    labels:
+    - Effects from hyperinflation (IAS 29)
+    tables:
+    - table_99
+    pages:
+    - 193
+  - id: FS.SOCIE.OPENING_BALANCE
+    labels:
+    - Balanceon31/12/2022
+    - Balanceon31/12/2023
+    tables:
+    - table_100
+    - table_99
+    pages:
+    - 193
+    - 194
+  - id: FS.SOCIE.PROFIT_LOSS
+    labels:
+    - Profit/loss after tax
+    tables:
+    - table_97
+    - table_99
+    pages:
+    - 189
+    - 193
+  - id: FS.SOCIE.SHARE_BASED_PAYMENT
+    labels:
+    - Changes in stock option plan
+    tables:
+    - table_99
+    pages:
+    - 193
+  existing_concepts: []
+esg_uncovered:
+  page_range: 118-160
+  table_count: 16
+  table_ids:
+  - table_54
+  - table_55
+  - table_56
+  - table_57
+  - table_58
+  - table_59
+  - table_60
+  - table_61
+  - table_64
+  - table_71
+  - table_75
+  - table_77
+  - table_78
+  - table_79
+  - table_81
+  - table_82
+  topics:
+  - energy consumption
+  - GHG emissions
+  - air pollution
+  - water
+  - biodiversity
+  - waste
+  - workforce demographics
+  - training & development

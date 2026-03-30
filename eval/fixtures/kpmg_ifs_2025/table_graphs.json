@@ -6,12 +6,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -462,12 +464,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -2540,7 +2544,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2652,7 +2658,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2919,7 +2927,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3186,7 +3196,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3378,7 +3390,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3520,7 +3534,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3657,12 +3673,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -4838,12 +4856,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -6341,7 +6361,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -6851,12 +6873,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -7878,12 +7902,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -8927,12 +8953,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -9622,7 +9650,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -10194,12 +10224,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -12114,12 +12146,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -14447,12 +14481,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -15850,12 +15886,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -16582,12 +16620,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -16849,12 +16889,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -17759,12 +17801,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -17831,7 +17875,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.STAFF_COSTS.BY_FUNCTION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.695,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:23:2",
@@ -17881,7 +17932,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.AUDITOR_REPORTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.813,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:23:4",
@@ -17951,12 +18009,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18156,12 +18216,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18355,12 +18417,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18467,12 +18531,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -19289,12 +19355,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -20457,12 +20525,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "NOTES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -21180,12 +21250,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -22184,12 +22256,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -23290,12 +23364,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -23871,12 +23947,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24279,12 +24357,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HELD_FOR_SALE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HELD_FOR_SALE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24617,12 +24697,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24924,12 +25006,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -25591,7 +25675,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -26001,12 +26087,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -26490,12 +26578,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -27546,12 +27636,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -27763,12 +27854,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -28916,7 +29009,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29054,12 +29149,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -29286,12 +29383,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29398,12 +29496,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29715,12 +29814,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -30233,12 +30334,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.IMPAIRMENT",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -31285,12 +31388,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -31579,12 +31684,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -31916,12 +32023,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32277,12 +32386,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32513,12 +32624,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32836,12 +32949,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32968,12 +33083,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -33544,12 +33661,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -33827,12 +33946,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -34160,12 +34281,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -34634,12 +34757,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -36130,12 +36255,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -36738,12 +36865,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -36921,12 +37049,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37263,12 +37393,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37548,12 +37680,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37889,7 +38023,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "NOTES.SHARE_BASED_PAYMENTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.679,
+            "statementRole": "DISC.EMPLOYEE_BENEFITS",
+            "noteContext": "DISC.SHARE_BASED",
+            "noteNumber": 12
+          }
         },
         {
           "rowId": "row:63:8",
@@ -37946,12 +38089,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -38464,12 +38609,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -39846,12 +39993,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -40051,12 +40200,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -40786,12 +40937,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -41464,12 +41617,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -42142,12 +42297,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -43195,12 +43352,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44261,12 +44420,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44460,12 +44621,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44594,12 +44757,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -45217,12 +45382,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -46401,12 +46568,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -46615,12 +46784,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -46858,12 +47028,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47095,7 +47267,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -47182,12 +47356,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47364,12 +47540,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47478,12 +47656,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47775,12 +47955,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -48127,12 +48309,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -49179,12 +49363,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -50409,12 +50595,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -50613,12 +50801,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOV_GRANTS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -51879,12 +52069,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.IMPAIRMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -53387,12 +53579,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -53680,12 +53874,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -54245,12 +54441,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -54403,12 +54601,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -54535,7 +54735,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -54642,12 +54844,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -54917,12 +55121,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -55062,12 +55268,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -55241,12 +55449,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -55950,12 +56160,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -56591,12 +56803,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -56805,12 +57019,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57255,12 +57471,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57454,12 +57672,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57794,12 +58014,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57939,12 +58161,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -58084,12 +58308,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -58936,12 +59161,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -60560,12 +60787,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -60915,12 +61144,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -61593,12 +61824,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -62691,7 +62924,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -62798,12 +63033,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -62988,12 +63225,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -63183,7 +63421,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -63321,12 +63561,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -63474,12 +63716,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -64869,12 +65113,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -66656,12 +66902,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -67707,12 +67955,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69031,12 +69281,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CONTINGENCIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CONTINGENCIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69659,12 +69911,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BORROWINGS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69942,12 +70196,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BCA",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -70204,7 +70460,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -70291,12 +70549,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PROVISIONS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -71180,7 +71440,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -71349,12 +71611,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BORROWINGS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -72791,12 +73055,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -74431,12 +74697,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -75720,12 +75988,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -77023,12 +77293,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -77192,12 +77463,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -77472,12 +77744,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BCA",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78169,12 +78443,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78560,12 +78836,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.IMPAIRMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.IMPAIRMENT",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78767,12 +79045,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78981,12 +79261,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79188,12 +79470,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79608,12 +79892,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79976,12 +80262,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80307,12 +80595,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80675,12 +80965,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -81006,12 +81298,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HELD_FOR_SALE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HELD_FOR_SALE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -81232,12 +81526,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -81470,12 +81766,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -82334,12 +82632,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -82726,12 +83026,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -83114,12 +83416,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -83340,12 +83644,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -84514,7 +84820,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -84683,12 +84991,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -85728,7 +86038,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -85959,12 +86271,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -86768,12 +87082,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FX_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -86967,12 +87283,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FX_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -87463,12 +87781,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -87846,12 +88166,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTEREST_RATE_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTEREST_RATE_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -88262,12 +88584,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -88704,12 +89028,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -89158,12 +89484,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -89711,12 +90039,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90003,12 +90333,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90369,12 +90701,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90657,12 +90991,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -91023,12 +91359,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -91555,12 +91893,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -92064,12 +92404,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -92677,12 +93019,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TRADE_PAYABLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -93839,12 +94183,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -94087,12 +94433,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -94199,12 +94546,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -94663,12 +95012,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -94794,12 +95144,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CASH",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -95028,12 +95380,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -96149,12 +96503,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.NCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.NCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98185,7 +98541,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -98320,12 +98678,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98637,12 +98997,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98954,12 +99316,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -99205,12 +99569,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -99550,12 +99916,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -99831,7 +100199,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -99968,12 +100338,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -100227,12 +100599,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -100450,12 +100824,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -101077,7 +101453,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -101314,12 +101692,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -102099,12 +102479,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RESTATEMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RESTATEMENT",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -102379,7 +102761,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103142,7 +103526,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103469,7 +103855,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103612,7 +104000,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103854,7 +104244,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -104116,12 +104508,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104259,12 +104653,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104499,12 +104895,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104571,7 +104969,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.694,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:196:2",
@@ -104616,12 +105021,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104695,7 +105102,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.RD_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.716,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:197:2",
@@ -104745,7 +105159,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS_GOODWILL",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.722,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -104765,12 +105186,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105157,12 +105580,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105296,12 +105721,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105445,12 +105872,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105535,7 +105964,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.SUSTAINABILITY",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.637,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:201:2",
@@ -105659,7 +106095,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.APPENDICES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -105679,12 +106122,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105994,12 +106439,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106084,7 +106531,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.AUDITOR_REPORTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.813,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:203:2",
@@ -106208,7 +106662,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.APPENDICES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -106228,12 +106689,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106618,12 +107081,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106785,12 +107250,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -107102,12 +107569,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -107467,12 +107936,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -107610,12 +108081,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -107753,12 +108226,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -109235,12 +109710,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -110505,12 +110982,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -112404,12 +112883,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {

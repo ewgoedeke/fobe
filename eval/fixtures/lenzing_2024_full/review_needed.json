@@ -1,0 +1,5859 @@
+{
+  "generated_at": "2026-03-30T01:15:28.002477",
+  "document": "lenzing_2024_full",
+  "gate_findings": [
+    {
+      "type": "inflated_primary",
+      "detail": "11 tables classified as OCI (max 8). Classification is likely broken."
+    }
+  ],
+  "toc_detected": {
+    "page_map": {
+      "38": "DISC.EQUITY",
+      "40": "DISC.PPE",
+      "245": "PNL",
+      "246": "OCI",
+      "247": "SFP",
+      "248": "SOCIE",
+      "249": "CFS",
+      "250": "NOTES"
+    }
+  },
+  "page_index": [
+    {
+      "page": 2,
+      "tables": [
+        {
+          "tableId": "text_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "31.6",
+            "1,350",
+            "900"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "text_2",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "0",
+            "54",
+            "-200"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "tables": [
+        {
+          "tableId": "raw_0",
+          "classification": "DISC.EPS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue",
+            "EBITDA (earnings before interest, tax, depreciation and amortization)",
+            "EBITDA margin"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Gross cash flow",
+            "Cash flow from operating activities",
+            "Free cash flow"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_2",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Total assets",
+            "Adjusted equity",
+            "Adjusted equity ratio"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_3",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Market capitalization in mn as at 31/12",
+            "Share price as at 31/12",
+            "Dividend per share"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_4",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Full-time equivalents (FTE) as at 31/12"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "tables": [
+        {
+          "tableId": "raw_5",
+          "classification": "DISC.CONTINGENCIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Highlights 2024 Letter from the CEO",
+            "Report of the Supervisory Board",
+            "The Company 2024"
+          ],
+          "col_headers": [],
+          "row_count": 48,
+          "data_row_count": 46,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "tables": [
+        {
+          "tableId": "text_3",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "MARCH",
+            "Sustainable glacier protection: Lenzing an award winner at the CNMI Sustainable ",
+            "Innovative concept combines sustainable glacier protection and circular economy "
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "tables": [
+        {
+          "tableId": "raw_6",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Lenzing Group locations",
+            "The Lenzing Group strategy",
+            "Sustainability in the Lenzing Group"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "text_4",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Lenzing Group locations",
+            "The Lenzing Group strategy",
+            "Sustainability in the Lenzing Group"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "tables": [
+        {
+          "tableId": "raw_7",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "General Market Environment",
+            "The Development of Business in the Lenzing Group",
+            "The Development of Business in the Divisions"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "tables": [
+        {
+          "tableId": "text_5",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "From synthetic",
+            "polymers",
+            "Polyester, Polyamide,"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "text_6",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "bast fibers",
+            "Cotton,",
+            "Flax, Hemp,"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "tables": [
+        {
+          "tableId": "raw_8",
+          "classification": "PNL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue",
+            "Cost of sales",
+            "Gross profit"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "tables": [
+        {
+          "tableId": "raw_9",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Earnings before interest and tax (EBIT)",
+            "+ Amortization of intangible assets, depreciation of property, plant and equipme",
+            "- Income from the release of investment grants"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "tables": [
+        {
+          "tableId": "raw_10",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash flow from operating activities",
+            "- Cash flow from investing activities",
+            "+ Acquisition/disbursement of other investments and investments accounted for us"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_11",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Acquisition of intangible assets, property, plant and equipment and biological a",
+            "+ Acquisition of corporate units",
+            "CAPEX"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_12",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash and cash equivalents",
+            "+ Liquid bills of exchange (in trade receivables)",
+            "Liquid assets"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_13",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Inventories",
+            "+ Trade receivables",
+            "- Trade payables"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "tables": [
+        {
+          "tableId": "raw_14",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Equity",
+            "+ Non-current government grants",
+            "+ Current government grants"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_15",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Current loans and borrowings",
+            "+ Non-current loans and borrowings",
+            "- Liquid assets"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "tables": [
+        {
+          "tableId": "raw_16",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Net financial",
+            "debt",
+            "/ Adjusted equity"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_17",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Earnings before interest and tax (EBIT)",
+            "- Proportional share of current income tax expense (on EBIT)",
+            "Earnings before interest and tax (EBIT) less proportional share of current incom"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_18",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total assets",
+            "- Trade payables",
+            "- Non-current puttable non-controlling interests"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "tables": [
+        {
+          "tableId": "raw_19",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Adjusted equity 31/12",
+            "Adjusted equity 01/01",
+            "Average adjusted equity"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "tables": [
+        {
+          "tableId": "raw_20",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Sustainability key performance indicators",
+            "Highlights of the year",
+            "About the sustainability statement"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_21",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Pollution",
+            "Water and marine resources",
+            "Biodiversity and ecosystems"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "tables": [
+        {
+          "tableId": "raw_22",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Raw material security",
+            "Proportion of wood source certified or controlled by forest certification",
+            "Sustainable innovations (entity-specific)"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "tables": [
+        {
+          "tableId": "raw_23",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Incorporation by reference",
+            "ESRS 2 GOV-1 paragraphs 22 b, 22 c i (GRI 2-12)",
+            "ESRS 2 GOV-1 paragraph 22 c iii"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "tables": [
+        {
+          "tableId": "raw_24",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of individuals, total",
+            "Under 30 years",
+            "30-50 years"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "tables": [
+        {
+          "tableId": "raw_25",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Illustrative",
+            "Investor Relations",
+            "ESG Ratings"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "tables": [
+        {
+          "tableId": "raw_26",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Statement on due diligence",
+            "CORE ELEMENTS OF DUE DILIGENCE",
+            "a) Embedding due diligence in governance, strategy and business model"
+          ],
+          "col_headers": [],
+          "row_count": 36,
+          "data_row_count": 29,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "tables": [
+        {
+          "tableId": "text_7",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "forests & plantations",
+            "Biobased materials",
+            "\uf0b7"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 59,
+      "tables": [
+        {
+          "tableId": "raw_27",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Lenzing Group: Distribution of value creation",
+            "Value creation",
+            "Economic value creation a"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_28",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total number of employees",
+            "Austria",
+            "Brazil"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "tables": [
+        {
+          "tableId": "raw_29",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Air emissions",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "tables": [
+        {
+          "tableId": "raw_30",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Circular Business Model",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_31",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ZDHCviscose",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_32",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ZDHClyocell",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_33",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Wastewater",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "tables": [
+        {
+          "tableId": "raw_34",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Conservation project Albania",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "tables": [
+        {
+          "tableId": "raw_35",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Progress made in 2024",
+            "Previous near-term science- based target",
+            "Linked remuneration target"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "tables": [
+        {
+          "tableId": "raw_36",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Community engagement",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_37",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Target 10",
+            "Target 12",
+            "Target 13"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "tables": [
+        {
+          "tableId": "raw_38",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Stakeholders",
+            "Investors",
+            "Academia, media"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 70,
+      "tables": [
+        {
+          "tableId": "raw_39",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Impact/risk/ opportunity",
+            "E1 Climate change",
+            "Climate change adaptation"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 71,
+      "tables": [
+        {
+          "tableId": "raw_40",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Climate change mitigation",
+            "positive impact",
+            "positive impact"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 72,
+      "tables": [
+        {
+          "tableId": "raw_41",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "positive impact",
+            "risk",
+            "risk"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 73,
+      "tables": [
+        {
+          "tableId": "raw_42",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Pollution of water",
+            "negative impact",
+            "negative impact"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 74,
+      "tables": [
+        {
+          "tableId": "raw_43",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "E3 Water and marine resources",
+            "Water withdrawals and water consumption",
+            "negative impact"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 75,
+      "tables": [
+        {
+          "tableId": "raw_44",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "negative impact",
+            "Impacts and dependencies on ecosystem services",
+            "negative impact"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 76,
+      "tables": [
+        {
+          "tableId": "raw_45",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "negative impact",
+            "Sustainable innovations (entity-specific)",
+            "positive impact"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 77,
+      "tables": [
+        {
+          "tableId": "raw_46",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Working conditions - Health and safety",
+            "negative impact",
+            "positive impact"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 78,
+      "tables": [
+        {
+          "tableId": "raw_47",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "negative impact",
+            "positive impact",
+            "opportunity"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 79,
+      "tables": [
+        {
+          "tableId": "raw_48",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "negative impact",
+            "positive impact",
+            "negative impact"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 87,
+      "tables": [
+        {
+          "tableId": "raw_49",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ESRS content index (IRO-2 56.)",
+            "Chapter and Disclosure Requirement",
+            "ESRS 2 General Disclosures"
+          ],
+          "col_headers": [],
+          "row_count": 26,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 88,
+      "tables": [
+        {
+          "tableId": "raw_50",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ESRS 2 E2 IRO-1 Description of the processes to identify and assess material pol",
+            "E2-1 Policies related to pollution",
+            "E2-2 Actions and resources related to pollution"
+          ],
+          "col_headers": [],
+          "row_count": 46,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 89,
+      "tables": [
+        {
+          "tableId": "raw_51",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "S2 Workers in the value chain",
+            "ESRS 2 S2 SBM-2 Interests and views of stakeholders",
+            "ESRS 2 S2 SBM-3 Material impacts, risks and opportunities and their interaction "
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 90,
+      "tables": [
+        {
+          "tableId": "raw_52",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Disclosure Requirement and related datapoint",
+            "ESRS 2 GOV-1: 21 (d) Board's gender diversity",
+            "ESRS 2 GOV-1: 21 (e) Percentage of board members who are independent"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 91,
+      "tables": [
+        {
+          "tableId": "raw_53",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "E1-6: 53,54,55 Gross GHG emissions intensity",
+            "E1-7: 56 GHG removals and carbon credits",
+            "E1-9: 66 Exposure of the benchmark protfolio to climate-related physical risks"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 92,
+      "tables": [
+        {
+          "tableId": "raw_54",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ESRS 2 E4 SBM-3: 16 (b) Material negative impacts with regards to land degradati",
+            "ESRS 2 E4 SBM-3: 16 (c) Own operations affect threatened species",
+            "E4-2: 24 (b) Sustainable land / agriculture practices or policies"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 93,
+      "tables": [
+        {
+          "tableId": "raw_55",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "S2-1: 17 Human rights policy commitments",
+            "S2-1: 18 Policies related to value chain workers",
+            "ESRS S2-1 Non-respect of UNGPs on Business and Human Rights principles and OECD "
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 95,
+      "tables": [
+        {
+          "tableId": "raw_56",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "economic activities -disclosure",
+            "Year",
+            "Code (2)"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 96,
+      "tables": [
+        {
+          "tableId": "raw_57",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Economic Activities (1) Minimum Safeguards (17)",
+            "Text",
+            "A. TAXONOMY-ELIGIBLE ACTIVITIES"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_58",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CapEx of Taxonomy-non-eligible activities",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 97,
+      "tables": [
+        {
+          "tableId": "raw_59",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CCM",
+            "CCA",
+            "WTR"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 98,
+      "tables": [
+        {
+          "tableId": "raw_60",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Financial year 2023",
+            "Economic Activities (1)",
+            "Text"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_61",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "OpEx of Taxonomy-non-eligible activities",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_62",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CCM",
+            "CCA",
+            "WTR"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 99,
+      "tables": [
+        {
+          "tableId": "raw_63",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Additions to intangible assets (see note 17 of consolidated financial statements",
+            "Additions to property, plant and equipment excluding down payments",
+            "Additions to land and buildings (see note 18 of consolidated financial statement"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_64",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Maintenance and repairs including maintenance material (see note 6 of consolidat",
+            "Rental and leasing expenses (see note 20 of consolidated financial statements 20",
+            "Research and development expenses (see consolidated financial income statement 2"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 100,
+      "tables": [
+        {
+          "tableId": "raw_65",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "The undertaking carries out, funds or has exposures to research, development, de",
+            "The undertaking carries out, funds or has exposures to construction and safe ope",
+            "The undertaking carries out, funds or has exposures to safe operation of existin"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 103,
+      "tables": [
+        {
+          "tableId": "text_8",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "services",
+            "(scope 3",
+            "cat1)"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 105,
+      "tables": [
+        {
+          "tableId": "raw_66",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Climate scenario",
+            "Global temperature rise (by 2100)",
+            "Policy narrative"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 106,
+      "tables": [
+        {
+          "tableId": "raw_67",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Policy",
+            "Technology",
+            "Transitional risks Consumer sentiment"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 107,
+      "tables": [
+        {
+          "tableId": "raw_68",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Reputation",
+            "risks Facility disruption",
+            "Physical Supply risk"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_69",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "\u25cb",
+            "\u25cf",
+            "\u25cf"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 112,
+      "tables": [
+        {
+          "tableId": "raw_70",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Topic relevant to climate change",
+            "CO 2 sequestration in sustainably managed forests",
+            "Substitution of raw materials that have large climate impacts"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_71",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Near-term science- based target",
+            "Long-term science- based net- zero target",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 113,
+      "tables": [
+        {
+          "tableId": "raw_72",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Previous near-term science- based",
+            "target Linked",
+            "remuneration target Linked corporate target"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 114,
+      "tables": [
+        {
+          "tableId": "raw_73",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Fuel sources used in the Lenzing Group",
+            "Lenzing, Austria",
+            "Heiligenkreuz, Austria"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 115,
+      "tables": [
+        {
+          "tableId": "raw_74",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "(1) Fuel consumption from coal and coal products",
+            "(2) Fuel consumption from crude oil and petroleum products",
+            "(3) Fuel consumption from natural gas"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 117,
+      "tables": [
+        {
+          "tableId": "raw_75",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Scope 1 GHGemissions",
+            "Gross scope 1 GHGemissions b",
+            "% of scope 1 GHG emissions from regulated emission trading schemes (%)"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_76",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "GHG emissions intensity (market-based)"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_77",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Absolute scope 1 and 2 GHGemissions",
+            "Absolute scope 3 GHG emissions",
+            "Absolute scope 1, 2 and 3 GHG emissions"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 118,
+      "tables": [
+        {
+          "tableId": "raw_78",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Specific emissions b,c (million tonsCO 2 eq. per ton fiber",
+            "&pulp sold) and index e Specific scope 1, 2 and 3 emissions",
+            "Specific scope 1, 2 and 3 emissions index (2017 = 100%)"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 125,
+      "tables": [
+        {
+          "tableId": "raw_79",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Air emissions",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 126,
+      "tables": [
+        {
+          "tableId": "raw_80",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ZDHClyocell",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_81",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Wastewater",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_82",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "FEM",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 128,
+      "tables": [
+        {
+          "tableId": "raw_83",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Sulfur (CS 2 and H 2 S emissions expressed as sulfur) b,c",
+            "SO 2 c",
+            "NO x c"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_84",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Index (based on kg/t, 2014 = 100%) Sulfur (CS 2 and H 2 S emissions expressed as",
+            "Sulfur (CS 2 and H 2 S emissions expressed as sulfur) d",
+            "SO 2 d"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 129,
+      "tables": [
+        {
+          "tableId": "raw_85",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "COD a",
+            "COD b",
+            "SO 4 b,c"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_86",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "COD c",
+            "COD d",
+            "SO 4 d"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_87",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Skin sensitisation category 1",
+            "Respiratory sensitisation category 1",
+            "Reproductive toxicity category 2"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 130,
+      "tables": [
+        {
+          "tableId": "raw_88",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total SoCs"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_89",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Respiratory sensitising properties (article 57f - human health)",
+            "Persistent, Bioaccumulative (article 57d) and Toxic or Very Persistent, Very Bio"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 134,
+      "tables": [
+        {
+          "tableId": "raw_90",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "FEM",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 135,
+      "tables": [
+        {
+          "tableId": "raw_91",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "All areas",
+            "Surface water",
+            "freshwater"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_92",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Water intensity"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_93",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total water consumption",
+            "of which in areas of water stress",
+            "Total water recycled and reused"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 136,
+      "tables": [
+        {
+          "tableId": "raw_94",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Water discharged by destination",
+            "Surface water",
+            "Groundwater"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 139,
+      "tables": [
+        {
+          "tableId": "raw_95",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "The need and requirements for a Biodiversity Approach",
+            "Identifying dependencies on ecosystems, sources of impact, defining methods, and",
+            "Locating dependencies and potential impacts"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 143,
+      "tables": [
+        {
+          "tableId": "raw_96",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_97",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Conservation area Brazil",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 144,
+      "tables": [
+        {
+          "tableId": "raw_98",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Category of action",
+            "Avoid",
+            "Reduce"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 145,
+      "tables": [
+        {
+          "tableId": "raw_99",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total area",
+            "Forest/plantation area",
+            "Owned"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 146,
+      "tables": [
+        {
+          "tableId": "raw_100",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Data availability and quality",
+            "Lenzing sources",
+            "Wood"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 147,
+      "tables": [
+        {
+          "tableId": "raw_101",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "forestry, pulp and paper",
+            "Land/ freshwater/(ocean) use change",
+            "Pollution/pollution removal"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 155,
+      "tables": [
+        {
+          "tableId": "text_9",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Recovery & reuse of process chemicals",
+            "Recycling of pre-consumer waste",
+            "Recycling of post-consumer waste"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 158,
+      "tables": [
+        {
+          "tableId": "raw_102",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Textile recycling",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 160,
+      "tables": [
+        {
+          "tableId": "raw_103",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Overall total weight of products and technical and biological materials used dur",
+            "Percentage of biological materials (and biofules used for non- energy purposes) ",
+            "Absolute weight of secondary reused or recycled components, secondary intermedia"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 163,
+      "tables": [
+        {
+          "tableId": "raw_104",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total Waste generated",
+            "Total waste diverted from disposal",
+            "Hazardous waste diverted from disposal"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 18,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 169,
+      "tables": [
+        {
+          "tableId": "text_10",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "48 Based on Higg MSI database v3.9 (Oct. 2024).",
+            "49 Terinte, N., Manda, B.M.K., Taylor, J., Schuster, K.C. and Patel, M. (2014). ",
+            "51  https:/ /quantis.com/wp-content/uploads/2018/03/measuringfashion_globalim-pa"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 181,
+      "tables": [
+        {
+          "tableId": "raw_105",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Social standard",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_106",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Equity, Diversity and Inclusion",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 182,
+      "tables": [
+        {
+          "tableId": "raw_107",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Female",
+            "Male"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_108",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Employees per country",
+            "and in head count Austria",
+            "Brazil"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 183,
+      "tables": [
+        {
+          "tableId": "raw_109",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total number of employees",
+            "Female",
+            "Male"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 184,
+      "tables": [
+        {
+          "tableId": "raw_110",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total number of employees",
+            "Austria",
+            "Brazil"
+          ],
+          "col_headers": [],
+          "row_count": 59,
+          "data_row_count": 49,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 185,
+      "tables": [
+        {
+          "tableId": "raw_111",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of employees that left the company, total",
+            "Female",
+            "Male"
+          ],
+          "col_headers": [],
+          "row_count": 30,
+          "data_row_count": 29,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 186,
+      "tables": [
+        {
+          "tableId": "raw_112",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of newly hired employees, total",
+            "Female",
+            "Male"
+          ],
+          "col_headers": [],
+          "row_count": 30,
+          "data_row_count": 28,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_113",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total number of non-employees"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 187,
+      "tables": [
+        {
+          "tableId": "raw_114",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "(Percent)",
+            "Coverage Rate",
+            "0 -19%"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_115",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Category 1",
+            "Category 2",
+            "Category 3"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_116",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of individuals, total",
+            "Under 30 years",
+            "30-50 years"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 188,
+      "tables": [
+        {
+          "tableId": "raw_117",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of employee category 1, total",
+            "Under 30 years",
+            "30-50 years"
+          ],
+          "col_headers": [],
+          "row_count": 36,
+          "data_row_count": 30,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_118",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Number of individuals, Under 30 years",
+            "30-50 years",
+            "Over 50 years"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 190,
+      "tables": [
+        {
+          "tableId": "raw_119",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Lenzing Group",
+            "Austria",
+            "Czech Republic"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 192,
+      "tables": [
+        {
+          "tableId": "raw_120",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatalities of work-related injuries",
+            "i) Rate of fatalities of work-related injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 193,
+      "tables": [
+        {
+          "tableId": "raw_121",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatalities of work-related injuries",
+            "i) Rate of fatalities of work-related injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_122",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatalities of work-related injuries",
+            "i) Rate of fatalities of work-related injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_123",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatalities of work-related injuries",
+            "i) Rate of fatalities of work-related injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_124",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "For employees in the own workforce",
+            "For employees in the own workforce",
+            "For employees in the own workforce"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 194,
+      "tables": [
+        {
+          "tableId": "raw_125",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Work-related ill health for employees",
+            "Work-related ill health for non-employees"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 196,
+      "tables": [
+        {
+          "tableId": "raw_126",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Sites",
+            "Lenzing (Austria) LAG",
+            "Heiligenkreuz (Austria) LFG"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 201,
+      "tables": [
+        {
+          "tableId": "raw_127",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Supplier engagement",
+            "Measure(s)",
+            "Progress made in 2024"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 215,
+      "tables": [
+        {
+          "tableId": "raw_128",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "2024",
+            "2023",
+            "2022"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_129",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "87%",
+            "88%",
+            "73%"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_130",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "suppliers (in 2024)",
+            "Supplier",
+            "AustroCel Hallein GmbH"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 217,
+      "tables": [
+        {
+          "tableId": "raw_131",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Site",
+            "Lenzing",
+            "Paskov"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 219,
+      "tables": [
+        {
+          "tableId": "raw_132",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Supplier engagement",
+            "Measure(s)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 225,
+      "tables": [
+        {
+          "tableId": "raw_133",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatal injuries",
+            "i) Rate of fatal injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_134",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total hours worked (productive working hours)",
+            "i) Number of fatal injuries",
+            "i) Rate of fatal injuries"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_135",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "For employees in the own workforce",
+            "For non-employees in the own workforce"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 226,
+      "tables": [
+        {
+          "tableId": "raw_136",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total headcounts as of 31.12.",
+            "Proportion of women",
+            "Proportion of age >50"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 227,
+      "tables": [
+        {
+          "tableId": "raw_137",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Austria",
+            "Germany",
+            "Czech Republic"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_138",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "PEFC",
+            "FSC \u00ae 100%",
+            "FSC \u00ae Mix"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_139",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Czech Republic",
+            "Slovakia",
+            "Poland"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_140",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Wood sourcing Region",
+            "Wood species (most important)"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 228,
+      "tables": [
+        {
+          "tableId": "raw_141",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Grimsby",
+            "Grimsby",
+            "Grimsby"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 229,
+      "tables": [
+        {
+          "tableId": "raw_142",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Heiligenkreuz",
+            "Heiligenkreuz",
+            "Heiligenkreuz"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 230,
+      "tables": [
+        {
+          "tableId": "raw_143",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Paskov",
+            "Paskov",
+            "Paskov"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 232,
+      "tables": [
+        {
+          "tableId": "raw_144",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Afghanistan",
+            "Albania",
+            "Argentina"
+          ],
+          "col_headers": [],
+          "row_count": 57,
+          "data_row_count": 57,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 233,
+      "tables": [
+        {
+          "tableId": "raw_145",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Global Code of Business Conduct",
+            "Sustainability Policy",
+            "Supplier Code of Conduct"
+          ],
+          "col_headers": [],
+          "row_count": 50,
+          "data_row_count": 23,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 236,
+      "tables": [
+        {
+          "tableId": "raw_146",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Declaration of Commitment",
+            "The Corporate Bodies of Lenzing AG",
+            "Managing Board"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 239,
+      "tables": [
+        {
+          "tableId": "raw_147",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Shareholder Representatives",
+            "Thomas Cord Prinzhorn (m), MBA, Chairman 2",
+            "Carlos An\u00edbal de Almeida Junior (m) 2 1. Deputy Chair"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 240,
+      "tables": [
+        {
+          "tableId": "raw_148",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Shareholder Representatives",
+            "Marcelo Feriozzi Bacci (m)",
+            "Nicole van der Elst Desai (f)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 241,
+      "tables": [
+        {
+          "tableId": "raw_149",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Committee",
+            "Audit Committee",
+            "Nomination Committee"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 244,
+      "tables": [
+        {
+          "tableId": "raw_150",
+          "classification": "DISC.PPE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Consolidated Income Statement",
+            "Consolidated Statement of Comprehensive Income",
+            "Consolidated Statement of Financial Position"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 245,
+      "tables": [
+        {
+          "tableId": "raw_151",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Notes to the Consolidated Financial Statements",
+            "Note 1.",
+            "Note 2."
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 18,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_152",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "and the Consolidated Statement of Changes in Equity",
+            "Note 17.",
+            "Note 18."
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_153",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Notes to the Consolidated Statement of Cash Flows",
+            "Note 33.",
+            "Notes on Risk Management"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 246,
+      "tables": [
+        {
+          "tableId": "raw_154",
+          "classification": "OCI",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Revenue",
+            "Cost of sales",
+            "Gross profit"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=1"
+        }
+      ]
+    },
+    {
+      "page": 247,
+      "tables": [
+        {
+          "tableId": "raw_155",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Net profit/loss after tax",
+            "Items that will not be reclassified subsequently to profit or loss",
+            "Remeasurement of defined benefit liability"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 248,
+      "tables": [
+        {
+          "tableId": "raw_156",
+          "classification": "SOCIE",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Intangible assets",
+            "Property, plant and equipment",
+            "Biological assets"
+          ],
+          "col_headers": [],
+          "row_count": 47,
+          "data_row_count": 46,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 249,
+      "tables": [
+        {
+          "tableId": "raw_157",
+          "classification": "CFS",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "As at 01/01/2023",
+            "Net profit/loss after tax as per consolidated income statement",
+            "Other comprehensive income (net of tax)"
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 250,
+      "tables": [
+        {
+          "tableId": "raw_158",
+          "classification": "NOTES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Net profit/loss after tax",
+            "+",
+            "+/-"
+          ],
+          "col_headers": [],
+          "row_count": 37,
+          "data_row_count": 33,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 253,
+      "tables": [
+        {
+          "tableId": "raw_159",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Standards/interpretations",
+            "IFRS 16",
+            "IAS 1"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_160",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "IFRS 10, IAS 28",
+            "IFRS 14",
+            "IAS 21"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 254,
+      "tables": [
+        {
+          "tableId": "raw_161",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "As at 01/01",
+            "Included in consolidation for the first time during the year",
+            "Merged during the year"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_162",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Intangible assets, property, plant and equipment, right-of-use assets",
+            "Inventories",
+            "Liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 255,
+      "tables": [
+        {
+          "tableId": "raw_163",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "1 EUR",
+            "1 EUR",
+            "1 EUR"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 256,
+      "tables": [
+        {
+          "tableId": "raw_164",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue from external customers",
+            "Inter-segment revenue",
+            "Total revenue"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_165",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue from external customers",
+            "Inter-segment revenue",
+            "Total revenue"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 257,
+      "tables": [
+        {
+          "tableId": "raw_166",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Earnings before interest and tax (EBIT)",
+            "Amortization of intangible assets, depreciation of property, plant and equipment",
+            "Income from the release of investment grants"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_167",
+          "classification": "DISC.REVENUE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Regenerated cellulosic fibers",
+            "Co-products of fiber production",
+            "Mechanical and plant engineering, engineering services and others"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_168",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Austria",
+            "Europe (excl. Austria, incl. Turkey)",
+            "Asia"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_169",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Austria",
+            "Europe (excl. Austria, incl. Turkey)",
+            "Asia"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 258,
+      "tables": [
+        {
+          "tableId": "raw_170",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Income from recharging of services and other products",
+            "Income from the release of deferred income for emission certificates and from su",
+            "Rental income"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 259,
+      "tables": [
+        {
+          "tableId": "raw_171",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Material",
+            "Other purchased services",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_172",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Wages and salaries",
+            "Expenses for severance payments and gratuity",
+            "Retirement benefit expenses"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_173",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Average",
+            "As at 31/12"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_174",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Hourly workers",
+            "Salaried employees",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_175",
+          "classification": "DISC.BIOLOGICAL_ASSETS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Amortization and depreciation",
+            "Depletion (see note 19)",
+            "Impairment"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 262,
+      "tables": [
+        {
+          "tableId": "raw_176",
+          "classification": "DISC.SEGMENTS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "CGU Pulp Site Czech Republic",
+            "Segment Divison Fiber",
+            "Other CGUs"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_177",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "CGU Pulp Site Czech Republic",
+            "Operating margin",
+            "After-tax discount rate (WACC)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_178",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "CGU Pulp Site Czech Republic",
+            "Operating margin",
+            "After-tax discount rate (WACC)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_179",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "CGU Pulp Site Czech Republic",
+            "Average annual operating margin in planning period",
+            "Long-term growth rate of perpetual yield"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 263,
+      "tables": [
+        {
+          "tableId": "raw_180",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Audit of the annual financial statements (incl. consolidated financial statement",
+            "Other assurance services",
+            "Other services"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_181",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Audit of the annual financial statements (incl. consolidated financial statement",
+            "Other assurance services",
+            "Other services"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_182",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Income from non-current and current financial assets",
+            "Interest income from bank balances, originated loans and receivables",
+            "Income from dividends for equity instruments measured at fair value through othe"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=2"
+        },
+        {
+          "tableId": "raw_183",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Net foreign currency gains/losses from financial liabilities",
+            "Interest expense from bonds and private placements",
+            "Interest expense for bank loans, other interest and similar expenses"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 264,
+      "tables": [
+        {
+          "tableId": "raw_184",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Current income tax expense",
+            "Austria",
+            "Abroad"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_185",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Current income tax expense",
+            "Tax expense for current year",
+            "Reduction due to the use of tax losses"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_186",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Earnings before tax (EBT)",
+            "Calculated tax expense (23% of earnings before tax; previous year: 24% of earnin",
+            "Deductible distribution of hybrid coupon"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 265,
+      "tables": [
+        {
+          "tableId": "raw_187",
+          "classification": "DISC.EPS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Weighted average number of shares",
+            "Diluted = basic"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 266,
+      "tables": [
+        {
+          "tableId": "raw_188",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cost",
+            "As at 01/01/2024",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 267,
+      "tables": [
+        {
+          "tableId": "raw_189",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cost",
+            "As at 01/01/2023",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_190",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Software/computer programs",
+            "Licenses and other intangible assets",
+            "Purchased"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 268,
+      "tables": [
+        {
+          "tableId": "raw_191",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cost",
+            "As at 01/01/2024",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 269,
+      "tables": [
+        {
+          "tableId": "raw_192",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cost",
+            "As at 01/01/2023",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_193",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Land use rights",
+            "Buildings",
+            "Fiber and pulp production lines"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 270,
+      "tables": [
+        {
+          "tableId": "raw_194",
+          "classification": "DISC.BCA",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Acquisition",
+            "Capitalized production costs"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_195",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Market price EUR/m 3",
+            "Discount rate",
+            "Wood volumem 3"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_196",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Change in the market price (+/- 10%)",
+            "Discount rate (+/- 1%)",
+            "Wood volume (+/- 5%)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_197",
+          "classification": "DISC.GOODWILL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Change in the market price (+/- 10%)",
+            "Discount rate (+/- 1%)",
+            "Wood volume (+/- 5%)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 271,
+      "tables": [
+        {
+          "tableId": "raw_198",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Carrying amount as at 01/01",
+            "Addition",
+            "Disposals"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_199",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Carrying amount as at 01/01",
+            "Addition",
+            "Disposals"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_200",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Expenses relating to short-term leases",
+            "Expenses relating to variable leases",
+            "Expenses relating to leases of low-value assets"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 272,
+      "tables": [
+        {
+          "tableId": "raw_201",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "In the following year",
+            "In the following 1 to 2 years",
+            "In the following 2 to 3 years"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_202",
+          "classification": "DISC.ASSOCIATES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Lenzing PapierGmbH (LPP)",
+            "Other associates",
+            "LD Florestal S.A. (LDF)"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 273,
+      "tables": [
+        {
+          "tableId": "raw_203",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Share in profit or loss of investments accounted for using the equity method",
+            "Other comprehensive income - remeasurement of defined benefit liability"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=3"
+        },
+        {
+          "tableId": "raw_204",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Result from remeasurement of investments accounted for using the equity method",
+            "Share in profit or loss of investments accounted for using the equity method"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=4"
+        }
+      ]
+    },
+    {
+      "page": 274,
+      "tables": [
+        {
+          "tableId": "raw_205",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Non-current assets",
+            "Current assets",
+            "Equity"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_206",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Equity",
+            "Thereof:",
+            "Group's interest (20%; previous year: 20%)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_207",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Non-current assets",
+            "Current assets",
+            "Equity"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_208",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Equity",
+            "Thereof:",
+            "Group's interest (40%; previous year: 40%)"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 275,
+      "tables": [
+        {
+          "tableId": "raw_209",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-current assets",
+            "Current assets",
+            "Thereof cash and cash equivalents"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_210",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Equity",
+            "Thereof:",
+            "Group's interest (50%; previous year: 50%)"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_211",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Non-current securities",
+            "Other equity investments",
+            "Originated loans"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 276,
+      "tables": [
+        {
+          "tableId": "raw_212",
+          "classification": "DISC.INVENTORIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Raw materials and supplies",
+            "Work in progress",
+            "Finished goods and merchandise"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_213",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Trade receivables (gross)",
+            "Bad debt provisions",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_214",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Other non-current financial assets (particularly from derivatives and other fina",
+            "Other non-current non-financial assets (particularly from other taxes)",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_215",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Other current financial assets",
+            "Recharging of maintenance services",
+            "Unadvanced amount from factoring agreements"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 278,
+      "tables": [
+        {
+          "tableId": "raw_216",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01/2023",
+            "Other comprehensive income",
+            "Tax effect"
+          ],
+          "col_headers": [],
+          "row_count": 23,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=5"
+        }
+      ]
+    },
+    {
+      "page": 279,
+      "tables": [
+        {
+          "tableId": "raw_217",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Gains/losses recognized in the reporting period from the valuation of cash flow ",
+            "From gas swaps",
+            "From forward foreign exchange contracts"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_218",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "-",
+            "Accumulated profits of LenzingAG under Austrian law (Austrian Commercial Code - ",
+            "Earnings attributable to subsidiaries, including the effect of adjusting the fin"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_219",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "LenzingAG closed the 2024 financial year with loss under the Austrian law (\u00f6UGB)",
+            "after the reversal of (distributable) revenue reserves",
+            "remains an accumulated profit of"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 280,
+      "tables": [
+        {
+          "tableId": "raw_220",
+          "classification": "DISC.DIVIDENDS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Non-current assets",
+            "Current assets",
+            "Equity"
+          ],
+          "col_headers": [],
+          "row_count": 22,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_221",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Items that will not be reclassified subsequently to profit or loss",
+            "Remeasurement of defined benefit liability",
+            "Income tax relating to these components of other comprehensive income"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=6"
+        }
+      ]
+    },
+    {
+      "page": 282,
+      "tables": [
+        {
+          "tableId": "raw_222",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Bond",
+            "Fixed interest",
+            "Private placements"
+          ],
+          "col_headers": [],
+          "row_count": 29,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 283,
+      "tables": [
+        {
+          "tableId": "raw_223",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Intangible assets and property, plant and equipment",
+            "Other investments",
+            "Inventories"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_224",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Intangible assets and property, plant and equipment",
+            "Right-of-use assets",
+            "Biological assets"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_225",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Recognized in profit or loss",
+            "Recognized in other comprehensive income"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=7"
+        },
+        {
+          "tableId": "raw_226",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Total",
+            "Thereof capitalized loss carryforwards",
+            "Thereof non-capitalized loss carryforwards"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 285,
+      "tables": [
+        {
+          "tableId": "raw_227",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Provisions for pensions and similar obligations",
+            "Pensions and severance payments",
+            "Jubilee benefits"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 286,
+      "tables": [
+        {
+          "tableId": "raw_228",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Austria - pensions",
+            "Austria - severance payments",
+            "Indonesia"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 287,
+      "tables": [
+        {
+          "tableId": "raw_229",
+          "classification": "PNL",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Current service cost",
+            "Net interest"
+          ],
+          "col_headers": [],
+          "row_count": 20,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 288,
+      "tables": [
+        {
+          "tableId": "raw_230",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Discount rate",
+            "Salary increase",
+            "Pension increase"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_231",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Discount rate",
+            "Salary increase",
+            "Pension increase"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_232",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Austria - pensions",
+            "Austria - severance payments",
+            "Indonesia"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_233",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Austria - pensions",
+            "Austria - severance payments",
+            "Other countries"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 289,
+      "tables": [
+        {
+          "tableId": "raw_234",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Austria",
+            "Czech Republic",
+            "31/12/2023"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_235",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "As at 01/01",
+            "Service cost",
+            "Current service cost"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 290,
+      "tables": [
+        {
+          "tableId": "raw_236",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Restructuring measures",
+            "Anticipated losses and other risks",
+            "Emission certificates"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_237",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Restructuring measures",
+            "Anticipated losses and other risks",
+            "Emission certificates"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 291,
+      "tables": [
+        {
+          "tableId": "raw_238",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Carrying amount of liabilities affected by the agreements",
+            "thereof payments already implemented by banks",
+            "Payment services"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_239",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Austrian reverse factoring agreement",
+            "Brazilian reverse factoring agreement"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 292,
+      "tables": [
+        {
+          "tableId": "raw_240",
+          "classification": "DISC.BORROWINGS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Other current financial liabilities",
+            "Derivatives not yet settled (open positions)",
+            "Other accruals"
+          ],
+          "col_headers": [],
+          "row_count": 18,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 293,
+      "tables": [
+        {
+          "tableId": "raw_241",
+          "classification": "DISC.BORROWINGS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Increase in loans and borrowings",
+            "Repayment of loans and borrowings",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_242",
+          "classification": "DISC.BORROWINGS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Increase in loans and borrowings",
+            "Repayment of loans and borrowings",
+            "Currency translation adjustment"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 294,
+      "tables": [
+        {
+          "tableId": "raw_243",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Equity",
+            "+ Government grants",
+            "- Proportional share of deferred taxes on government grants"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_244",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Non-current loans and borrowings",
+            "Current loans and borrowings",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_245",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cash and cash equivalents",
+            "Liquid bills of exchange (in trade receivables)",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_246",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "- Liquid assets",
+            "Net financial debt incl. lease liabilities",
+            "- Current lease liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_247",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "EBITDA",
+            "Net financial debt / EBITDA"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 296,
+      "tables": [
+        {
+          "tableId": "raw_248",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Originated loans",
+            "Non-current securities",
+            "Other equity investments"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_249",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Bond",
+            "Private placements",
+            "Liabilities to banks"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 14,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 297,
+      "tables": [
+        {
+          "tableId": "raw_250",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Originated loans",
+            "Non-current securities",
+            "Other equity investments"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_251",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Bond",
+            "Private placements",
+            "Liabilities to banks"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 298,
+      "tables": [
+        {
+          "tableId": "raw_252",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "As at 01/01",
+            "Gain/loss included in financial result",
+            "As at 31/12"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_253",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "As at 01/01",
+            "Measurement of puttable non-controlling interest recognized directly in equity",
+            "As at 31/12"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 299,
+      "tables": [
+        {
+          "tableId": "raw_254",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "EBITDA (+/- 1%)",
+            "Discount rate (WACC) after tax (+/- 0.25%)"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 300,
+      "tables": [
+        {
+          "tableId": "raw_255",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Forward foreign exchange contracts",
+            "CNY/CNH-sale / EUR-buy",
+            "CNY/CNH-sale / GBP-buy"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_256",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Forward foreign exchange contracts",
+            "CNY/CNH-sale / EUR-buy",
+            "CNY/CNH-sale / GBP-buy"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 301,
+      "tables": [
+        {
+          "tableId": "raw_257",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Sales",
+            "Purchases",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_258",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Interest rate and currency derivatives",
+            "Fixed purchase / variable sale USD purchase / EUR sale",
+            "Interest rate derivative"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 302,
+      "tables": [
+        {
+          "tableId": "raw_259",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Interest rate and currency derivatives",
+            "Fixed purchase / variable sale USD purchase / EUR sale",
+            "Interest rate derivative"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_260",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Combined interest/currency rate",
+            "Fixed purchase / variable sale USD purchase / EUR sale",
+            "Interest rate derivative"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 303,
+      "tables": [
+        {
+          "tableId": "raw_261",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Commodity derivatives",
+            "Gas purchase",
+            "Gas purchase"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_262",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Commodity derivatives",
+            "Gas purchase",
+            "Gas purchase"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 304,
+      "tables": [
+        {
+          "tableId": "raw_263",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Commodity price risks",
+            "Purchases",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_264",
+          "classification": "SOCIE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Hedging reserve as at 01/01",
+            "Currency risks",
+            "Combined interest rate/currency risks"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 305,
+      "tables": [
+        {
+          "tableId": "raw_265",
+          "classification": "SFP",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Other financial assets - derivative financial instruments with a positive fair v",
+            "Financial assets as at 31/12/2023",
+            "Other financial assets - derivative financial instruments with a positive fair v"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_266",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Other financial liabilities - derivative financial instruments with a negative f",
+            "Financial liabilities as at 31/12/2023",
+            "Other financial liabilities - derivative financial instruments with a negative f"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 306,
+      "tables": [
+        {
+          "tableId": "raw_267",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Financial assets measured at amortized cost",
+            "Financial assets measured at fair value through profit or loss",
+            "Equity instruments measured at fair value through other comprehensive income"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=8"
+        }
+      ]
+    },
+    {
+      "page": 307,
+      "tables": [
+        {
+          "tableId": "raw_268",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Financial assets measured at amortized cost",
+            "Financial assets measured at fair value through profit or loss",
+            "Equity instruments measured at fair value through other comprehensive income"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=9"
+        }
+      ]
+    },
+    {
+      "page": 308,
+      "tables": [
+        {
+          "tableId": "raw_269",
+          "classification": "DISC.PROVISIONS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Trade receivables",
+            "Bad debt provisions as at 01/01",
+            "Utilization"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_270",
+          "classification": "DISC.PROVISIONS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Trade receivables",
+            "Bad debt provisions as at 01/01",
+            "Utilization"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 309,
+      "tables": [
+        {
+          "tableId": "raw_271",
+          "classification": "DISC.PROVISIONS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Originated loans at amortized cost",
+            "Bad debt provisions as at 01/01",
+            "Reversal"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_272",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Not overdue",
+            "Overdue up to 30 days",
+            "Overdue for 31 to 90 days"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_273",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Not overdue",
+            "Overdue up to 30 days",
+            "Overdue for 31 to 90 days"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_274",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Gross carrying amount as at 31/12",
+            "Thereof not overdue",
+            "Thereof impaired"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_275",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Gross carrying amount as at 31/12",
+            "Thereof not overdue",
+            "Thereof impaired"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 310,
+      "tables": [
+        {
+          "tableId": "raw_276",
+          "classification": "DISC.FIN_INST",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Carrying amount of asset financial instruments (see note 35)",
+            "Less risk reduction in relation to receivables due to",
+            "Credit insurance received for trade receivables (not including deductibles)"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 311,
+      "tables": [
+        {
+          "tableId": "raw_277",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Bond",
+            "Private placements",
+            "Bank loans"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_278",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Bond",
+            "Private placements",
+            "Bank loans"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 312,
+      "tables": [
+        {
+          "tableId": "raw_279",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Currency, combined currency/interest rate and interest rate derivatives and comm",
+            "Derivatives with a positive fair value (cash flow hedges)",
+            "Derivatives with a positive fair value (cash flow hedges with the underlying alr"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_280",
+          "classification": "CFS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Currency, combined currency/interest rate and interest rate derivatives and comm",
+            "Derivatives with a positive fair value (cash flow hedges)",
+            "Derivatives with a positive fair value (cash flow hedges with the underlying alr"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 314,
+      "tables": [
+        {
+          "tableId": "raw_281",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "EUR-USD",
+            "EUR-GBP",
+            "EUR-CNY/CNH"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=10"
+        },
+        {
+          "tableId": "raw_282",
+          "classification": "OCI",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "USD-IDR",
+            "USD-GBP",
+            "USD-CNY/CNH"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 9,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: OCI count=11"
+        }
+      ]
+    },
+    {
+      "page": 315,
+      "tables": [
+        {
+          "tableId": "raw_283",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Cash and cash equivalents",
+            "Other investments",
+            "Loans and borrowings"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_284",
+          "classification": "DISC.HEDGE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Cash and cash equivalents",
+            "Other investments",
+            "Loans and borrowings"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 316,
+      "tables": [
+        {
+          "tableId": "raw_285",
+          "classification": "DISC.FAIR_VALUE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Sensitivity of net profit or loss after tax",
+            "31/12/2023",
+            "Sensitivity of net profit or loss after tax"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 318,
+      "tables": [
+        {
+          "tableId": "raw_286",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "EQUI-Fibres Beteiligungsgesellschaft mbH and its subsidiaries (EFB)",
+            "Lenzing PapierGmbH (LPP)",
+            "RVL Reststoffverwertung Lenzing GmbH (RVL)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_287",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Land use rights",
+            "Goods and services provided",
+            "Goods and services received"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_288",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Land use rights",
+            "Goods and services provided",
+            "Goods and services received"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 319,
+      "tables": [
+        {
+          "tableId": "raw_289",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Remuneration for the Managing Board",
+            "Basic salary",
+            "Benefits in kind and other benefits (in particular use of company vehicles)"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 322,
+      "tables": [
+        {
+          "tableId": "raw_290",
+          "classification": "DISC.ASSOCIATES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Consolidated companies",
+            "Beech Investment s.r.o., Zlat\u00e9 Moravce, Slovakia",
+            "BZL - Bildungszentrum Lenzing GmbH, Lenzing, Austria"
+          ],
+          "col_headers": [],
+          "row_count": 41,
+          "data_row_count": 36,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 332,
+      "tables": [
+        {
+          "tableId": "raw_291",
+          "classification": "DISC.LEASES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Revenue",
+            "EBITDA (earnings before interest, tax, depreciation and amortization)",
+            "EBITDA margin"
+          ],
+          "col_headers": [],
+          "row_count": 39,
+          "data_row_count": 35,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 333,
+      "tables": [
+        {
+          "tableId": "raw_292",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Financial results 2024",
+            "Evidence reference date 'Annual General Meeting'",
+            "81 st Annual General Meeting"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 341,
+      "tables": [
+        {
+          "tableId": "text_11",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Kulka Stephan",
+            "Lasinger-Guserl Anna",
+            "Ledl Caroline"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 304,
+    "by_type": {
+      "DISC.PPE": 148,
+      "OCI": 11,
+      "CFS": 8,
+      "DISC.EMPLOYEE_BENEFITS": 8,
+      "DISC.TAX": 8,
+      "SFP": 5,
+      "PNL": 5,
+      "DISC.FIN_INST": 5,
+      "SOCIE": 4,
+      "DISC.SEGMENTS": 4,
+      "DISC.LEASES": 3,
+      "DISC.GOODWILL": 3,
+      "DISC.HEDGE": 3,
+      "DISC.CREDIT_RISK": 3,
+      "DISC.BORROWINGS": 3,
+      "DISC.PROVISIONS": 3,
+      "DISC.EPS": 2,
+      "DISC.DIVIDENDS": 2,
+      "DISC.ASSOCIATES": 2,
+      "DISC.CONTINGENCIES": 1,
+      "NOTES": 1,
+      "DISC.REVENUE": 1,
+      "DISC.BIOLOGICAL_ASSETS": 1,
+      "DISC.BCA": 1,
+      "DISC.INVENTORIES": 1,
+      "DISC.FAIR_VALUE": 1
+    },
+    "flagged_count": 78,
+    "flagged_page_range": [
+      2,
+      341
+    ],
+    "suggested_action": "Review 11 OCI classifications on pages 246-314; likely over-classified. 67 unclassified tables need assignment"
+  }
+}

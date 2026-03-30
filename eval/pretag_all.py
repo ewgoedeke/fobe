@@ -924,7 +924,10 @@ def pretag_document(tg_path, dry_run=False):
     print(f"  No match:        {stats['no_match']}")
     total = stats['already_tagged'] + stats['newly_tagged'] + stats['skipped'] + stats['no_match']
     tagged = stats['already_tagged'] + stats['newly_tagged']
-    print(f"  Coverage:        {tagged}/{total} ({100*tagged/total:.0f}%)")
+    if total > 0:
+        print(f"  Coverage:        {tagged}/{total} ({100*tagged/total:.0f}%)")
+    else:
+        print(f"  Coverage:        0/0 (no taggable rows)")
 
     if unmatched:
         print(f"\n  Unmatched rows ({len(unmatched)}):")

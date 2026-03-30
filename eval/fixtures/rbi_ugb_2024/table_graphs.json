@@ -2435,7 +2435,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.674,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:1:11",
@@ -6370,7 +6377,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CONTRACT_LIABILITIES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.688,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:3:4",
@@ -6506,7 +6520,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "NOTES.COMMITMENTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:3:6",
@@ -7118,7 +7139,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REFUND_LIABILITY.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.689,
+            "statementRole": "SFP"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -8898,7 +8926,15 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED",
+              "AXIS.SCOPE": "SCOPE.CONTINUING"
+            },
+            "matchConfidence": 0.752,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:4:23",
@@ -11586,7 +11622,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.637,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:6:14",
@@ -13789,7 +13832,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:9:5",
@@ -15315,7 +15365,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:10:3",
@@ -17668,7 +17725,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:11:15",
@@ -22873,7 +22937,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:12:15",
@@ -26396,7 +26467,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:13:5",
@@ -50896,7 +50974,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.RWA",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.692,
+            "statementRole": "SFP"
+          }
         }
       ],
       "aggregationGroups": [
@@ -51269,7 +51354,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.RWA",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.692,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:35:3",
@@ -59864,7 +59956,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.STAFF_COSTS.HEADCOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.805,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:43:4",
@@ -63028,7 +63127,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.FAIR_VALUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.68,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:2",
@@ -63140,7 +63246,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.716,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:4",
@@ -63196,7 +63309,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_PAYABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.657,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:5",
@@ -64121,7 +64241,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TRADE_RECEIVABLES.BY_GEOGRAPHY",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.661,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:51:6",
@@ -64681,7 +64808,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.67,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:51:13",
@@ -75590,7 +75724,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.642,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:61:2",
@@ -81725,7 +81866,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:66:5",
@@ -84224,7 +84372,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:67:5",
@@ -86723,7 +86878,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:68:5",
@@ -88898,7 +89060,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:69:5",
@@ -90145,8 +90314,9 @@
         "detectedUnit": null,
         "sectionPath": [],
         "scope": null,
-        "classification_confidence": "none",
-        "classification_method": "unclassified"
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -90401,7 +90571,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MEASURE.EQUITY_RATIO",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.693,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -90561,8 +90738,9 @@
         "detectedUnit": null,
         "sectionPath": [],
         "scope": null,
-        "classification_confidence": "none",
-        "classification_method": "unclassified"
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -90894,7 +91072,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.LCR",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -91020,8 +91205,9 @@
         "detectedUnit": null,
         "sectionPath": [],
         "scope": null,
-        "classification_confidence": "none",
-        "classification_method": "unclassified"
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -91241,7 +91427,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.NSFR",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -91367,8 +91560,9 @@
         "detectedUnit": null,
         "sectionPath": [],
         "scope": null,
-        "classification_confidence": "none",
-        "classification_method": "unclassified"
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.FIN_INST"
       },
       "columns": [
         {
@@ -92152,8 +92346,9 @@
         "detectedUnit": null,
         "sectionPath": [],
         "scope": null,
-        "classification_confidence": "none",
-        "classification_method": "unclassified"
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.FIN_INST"
       },
       "columns": [
         {

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "annotator": "",
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 2,
+      "end_page": 2,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": false
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 24,
+      "end_page": 24,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "annotated_at": "2026-03-28T10:46:38.830977+00:00",
+  "has_toc": true
+}

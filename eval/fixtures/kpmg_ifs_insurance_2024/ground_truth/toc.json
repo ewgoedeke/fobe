@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "annotator": "Eckhard",
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "Consolidated statement of financial position",
+      "start_page": 12,
+      "end_page": 13,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "SFP"
+    },
+    {
+      "label": "Consolidated statement of changes in equity",
+      "start_page": 14,
+      "end_page": 15,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "SOCIE"
+    },
+    {
+      "label": "Notes to the consolidated financial statements",
+      "start_page": 18,
+      "end_page": 243,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "NOTES"
+    },
+    {
+      "label": "Appendix I",
+      "start_page": 244,
+      "end_page": 244,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "APPENDIX"
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 2,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OCI",
+      "start_page": 11,
+      "end_page": 11,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 245,
+      "end_page": 251,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 4,
+      "end_page": 10,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "CFS",
+      "start_page": 18,
+      "end_page": 18,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "PNL",
+      "start_page": 12,
+      "end_page": 12,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OCI",
+      "start_page": 13,
+      "end_page": 13,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "annotated_at": "2026-03-28T22:08:27.163853+00:00",
+  "has_toc": true
+}

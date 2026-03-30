@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "annotator": "",
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 147,
+      "end_page": 147,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 19,
+      "end_page": 19,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 29,
+      "end_page": 29,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 3,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 18,
+      "end_page": 18,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OCI",
+      "start_page": 149,
+      "end_page": 149,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 1,
+      "end_page": 2,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 42,
+      "end_page": 42,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "PNL",
+      "start_page": 148,
+      "end_page": 148,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 174,
+      "end_page": 174,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 4,
+      "end_page": 4,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "annotated_at": "2026-03-28T22:04:12.335683+00:00"
+}

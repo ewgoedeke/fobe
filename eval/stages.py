@@ -56,33 +56,50 @@ class Stage2_StructureExtraction:
     def execute(self, state: DocumentState, config: PipelineConfig) -> None:
         from classify_tables import classify_document
         from generate_document_meta import generate_meta
+        from human_review import load_human_review, apply_overrides, is_review_stale
 
-        # Classification — dry_run=False when reclassifying so the file is
-        # updated on disk for downstream stages that re-read it.
-        dry_run = not config.reclassify
+        # Check for ground truth TOC — if present and config says use it,
+        # apply ground truth page map before classification
+        gt_applied = False
+        if getattr(config, "use_ground_truth", False):
+            from ground_truth import load_toc_gt, toc_gt_to_page_map
+            from classify_tables import _classify_by_page
+            fixture_dir = str(Path(state.tg_path).parent)
+            gt = load_toc_gt(fixture_dir)
+            if gt and gt.sections:
+                page_map = toc_gt_to_page_map(gt)
+                with open(state.tg_path) as f:
+                    data = json.load(f)
+                tables = data.get("tables", [])
+                classified = 0
+                for t in tables:
+                    result = _classify_by_page(t, page_map)
+                    if result:
+                        t.setdefault("metadata", {})["statementComponent"] = result
+                        t["metadata"]["classification_method"] = "ground_truth"
+                        t["metadata"]["classification_confidence"] = "high"
+                        classified += 1
+                with open(state.tg_path, "w") as f:
+                    json.dump(data, f, indent=2, default=str)
+                gt_applied = True
+                if config.verbose:
+                    print(f"  [stage2] Applied ground truth TOC: {classified}/{len(tables)} "
+                          f"tables classified from {len(page_map)} page entries",
+                          file=__import__("sys").stderr)
+
+        # Classification — dry_run=False when reclassifying OR when no tables
+        # have existing classification (first run on new fixtures).
+        has_existing = any(
+            t.get("metadata", {}).get("statementComponent")
+            for t in state.tables
+        )
+        dry_run = not config.reclassify and has_existing
         classification = classify_document(
             state.tg_path, dry_run=dry_run,
             verbose=config.verbose, use_llm=config.use_llm,
-            reclassify=config.reclassify,
+            reclassify=config.reclassify if not gt_applied else False,
         )
         state.classification = classification
-
-        # Reload tables after classification (classify_document may have
-        # modified them in memory if dry_run=False, but with dry_run=True
-        # we need to re-read to get the classified version)
-        # Actually, classify_document with dry_run=True does NOT write, so
-        # the on-disk file is unchanged. We need to classify in-memory.
-        # For now, re-read and classify non-dry to get classified tables.
-        # TODO: refactor classify_document to accept tables directly.
-        #
-        # Workaround: classify again non-dry so on-disk file is updated,
-        # then re-read. This is what run_eval.py currently does (it calls
-        # classify dry_run=True, then analyze_document reads the file).
-        # The current flow: classify_document dry_run=True returns stats,
-        # but does NOT update tables. analyze_document then calls
-        # structural_cascade which reads the file again.
-        # We'll follow the same pattern: keep classification stats, let
-        # downstream stages re-read the file.
 
         # Meta extraction
         meta = generate_meta(state.tg_path, verbose=config.verbose)
@@ -92,6 +109,33 @@ class Stage2_StructureExtraction:
         with open(state.tg_path) as f:
             data = json.load(f)
         state.tables = data.get("tables", [])
+
+        # Apply human review overrides if available
+        fixture_dir = str(Path(state.tg_path).parent)
+        review = load_human_review(fixture_dir)
+        if review:
+            stale, missing = is_review_stale(review, state.tables)
+            if stale and config.verbose:
+                print(f"  [stage2] WARNING: human_review.json references "
+                      f"missing tableIds: {missing}", file=__import__("sys").stderr)
+
+            state.tables, apply_stats = apply_overrides(state.tables, review)
+            state.classification["human_review_applied"] = apply_stats
+            state.classification["human_review_stale"] = stale
+
+            # Write updated tables back to disk for downstream stages
+            data["tables"] = state.tables
+            with open(state.tg_path, "w") as f:
+                json.dump(data, f, indent=2, default=str)
+
+            if config.verbose:
+                total = apply_stats.get("total_applied", 0)
+                print(f"  [stage2] Applied {total} human review overrides "
+                      f"({apply_stats})", file=__import__("sys").stderr)
+
+            # Store gate_override flag for gate() to check
+            state.classification["_gate_override"] = review.get(
+                "gate_override", False)
 
     def gate(self, state: DocumentState, config: PipelineConfig) -> GateResult:
         # Count distinct statement types across classified tables
@@ -158,18 +202,73 @@ class Stage2_StructureExtraction:
                                f"Classification is likely broken."),
                 })
 
+        # Check for gate_override from human review
+        gate_override = state.classification.get("_gate_override", False)
+        human_review_applied = "human_review_applied" in state.classification
+
+        if gate_override and not passed:
+            passed = True
+            findings.append({
+                "type": "gate_override",
+                "detail": "Gate forced to pass by human_review.json gate_override=true",
+            })
+
+        metrics = {
+            "distinct_primary_statements": distinct_primary,
+            "primary_types": sorted(primary_types),
+            "primary_counts": primary_counts,
+            "classified_by_type": dict(classified_types.most_common()),
+            "unclassified": unclassified,
+            "total_tables": len(state.tables),
+        }
+
+        # Generate review manifest if gate fails
+        if not passed:
+            from human_review import (generate_review_manifest,
+                                      write_review_manifest)
+            from classify_tables import _detect_toc
+
+            # Get TOC info for the manifest
+            toc_info = None
+            try:
+                toc_info = _detect_toc(state.tables)
+            except Exception:
+                pass
+
+            manifest = generate_review_manifest(
+                state.tables,
+                # Pass a temporary GateResult with current findings
+                type("_GR", (), {"findings": findings, "metrics": metrics})(),
+                toc_info,
+                state.doc_name,
+            )
+            fixture_dir = str(Path(state.tg_path).parent)
+            manifest_path = write_review_manifest(fixture_dir, manifest)
+            state.review_needed = manifest
+
+            metrics["needs_review"] = True
+
+            if human_review_applied:
+                findings.append({
+                    "type": "review_insufficient",
+                    "detail": ("human_review.json was applied but gate still "
+                               f"fails. Updated review_needed.json at "
+                               f"{manifest_path}"),
+                })
+            else:
+                findings.append({
+                    "type": "needs_review",
+                    "detail": f"Review manifest written to {manifest_path}",
+                })
+
+        # Axis extraction moved to Stage 4 (post-hierarchy) where
+        # cross-column arithmetic can validate segment/geo columns.
+
         return GateResult(
             passed=passed,
             stage=self.name,
             findings=findings,
-            metrics={
-                "distinct_primary_statements": distinct_primary,
-                "primary_types": sorted(primary_types),
-                "primary_counts": primary_counts,
-                "classified_by_type": dict(classified_types.most_common()),
-                "unclassified": unclassified,
-                "total_tables": len(state.tables),
-            },
+            metrics=metrics,
         )
 
 
@@ -178,10 +277,16 @@ class Stage2_StructureExtraction:
 class Stage3_NumericConversion:
     name = "stage3"
 
+    # Scale multipliers for detected units
+    _SCALE_FACTORS = {
+        "UNIT.THOUSANDS": 1_000,
+        "UNIT.MILLIONS": 1_000_000,
+        "UNIT.BILLIONS": 1_000_000_000,
+    }
+
     def execute(self, state: DocumentState, config: PipelineConfig) -> None:
-        # Docling already populates parsedValue for most cells.
-        # This stage validates and fills gaps.
         for table in state.tables:
+            # Step 1: Fill gaps in parsedValue
             for row in table.get("rows", []):
                 for cell in row.get("cells", []):
                     if cell.get("parsedValue") is not None:
@@ -192,6 +297,52 @@ class Stage3_NumericConversion:
                     parsed = _try_parse_value(text)
                     if parsed is not None:
                         cell["parsedValue"] = parsed
+
+            # Step 2: Detect and store scale factor per table
+            unit = table.get("metadata", {}).get("detectedUnit")
+            scale = self._SCALE_FACTORS.get(unit, 1)
+            if scale != 1:
+                table.setdefault("metadata", {})["scaleFactor"] = scale
+
+            # Step 3: Detect per-column scale from header text
+            # (handles mixed scales within one table, e.g. "in TEUR" vs "in %")
+            col_scales = {}
+            for col in table.get("columns", []):
+                if col.get("role") != "VALUE":
+                    continue
+                header = (col.get("headerLabel") or "").lower()
+                col_scale = _detect_header_scale(header)
+                if col_scale:
+                    col_scales[col["colIdx"]] = col_scale
+
+            # Step 4: Apply scaledValue = parsedValue * scale
+            # Use per-column scale if available, else table-level scale
+            value_col_indices = {
+                c["colIdx"] for c in table.get("columns", [])
+                if c.get("role") == "VALUE"
+            }
+            for row in table.get("rows", []):
+                for cell in row.get("cells", []):
+                    pv = cell.get("parsedValue")
+                    if pv is None:
+                        continue
+                    ci = cell.get("colIdx")
+                    if ci not in value_col_indices:
+                        continue
+                    # Per-column scale takes precedence over table-level
+                    effective_scale = col_scales.get(ci, scale)
+                    # Don't scale percentages or per-share values
+                    col_unit = _col_unit(table, ci)
+                    if col_unit in ("UNIT.PERCENT", "UNIT.PER_SHARE"):
+                        effective_scale = 1
+                    if effective_scale != 1:
+                        cell["scaledValue"] = pv * effective_scale
+                    else:
+                        cell["scaledValue"] = pv
+
+        # Step 5: Structural quality assessment
+        from table_quality import assess_structure
+        assess_structure(state.tables, verbose=config.verbose)
 
     def gate(self, state: DocumentState, config: PipelineConfig) -> GateResult:
         total_value_cells = 0
@@ -289,6 +440,33 @@ def _try_parse_value(text: str) -> float | None:
         return None
 
 
+import re as _re
+
+_HEADER_SCALE_PATTERNS = [
+    (_re.compile(r"(?i)\b(teur|t\s*eur|in\s+tausend|in\s+thousands|tsd)\b"), 1_000),
+    (_re.compile(r"(?i)\b(meur|m\s*eur|mio|in\s+million|in\s+millions)\b"), 1_000_000),
+    (_re.compile(r"(?i)\b(mrd|in\s+billion|in\s+billions)\b"), 1_000_000_000),
+]
+
+
+def _detect_header_scale(header: str) -> int | None:
+    """Detect scale factor from column header text."""
+    for pattern, scale in _HEADER_SCALE_PATTERNS:
+        if pattern.search(header):
+            return scale
+    return None
+
+
+def _col_unit(table: dict, col_idx: int) -> str | None:
+    """Get the detected unit for a specific column, if any."""
+    for col in table.get("columns", []):
+        if col.get("colIdx") == col_idx:
+            axes = col.get("detectedAxes", {})
+            return axes.get("AXIS.VALUE_TYPE") or None
+    # Fall back to table-level unit
+    return table.get("metadata", {}).get("detectedUnit")
+
+
 # ── Stage 4: Table Structure Extraction ──────────────────────────
 
 class Stage4_TableStructure:
@@ -296,21 +474,48 @@ class Stage4_TableStructure:
 
     def execute(self, state: DocumentState, config: PipelineConfig) -> None:
         from structural_inference import cascade as structural_cascade
+        from table_stitching import stitch_tables
 
-        # Run structural inference on a copy (don't modify state.tables yet,
-        # let cascade build the hierarchy)
+        # Step 4a: Multipage table stitching
+        merged = stitch_tables(state.tables, verbose=config.verbose)
+        state._stitched_count = merged
+
+        # Step 4b: Run structural inference (hierarchy + summation detection)
         tables_copy = copy.deepcopy(state.tables)
         iterations, tags = structural_cascade(
             tables_copy, config.ontology_root,
             verbose=config.verbose,
         )
-        # Store results for downstream use
         state._structural_iterations = iterations
         state._structural_tags = tags
-        # Update tables with hierarchy info from the cascade
         state.tables = tables_copy
 
+        # Step 4c: Hierarchy-informed axis extraction
+        # Now that hierarchy is built, extract axes with validation
+        from generate_document_meta import extract_axes
+        extract_axes(state.tables, state.meta, verbose=config.verbose)
+
+        # Apply cross-column arithmetic to validate segment columns
+        from column_arithmetic import classify_columns
+        seg_axes = state.meta.get("document_axes", {}).get("segments", {})
+        if seg_axes:
+            for table in state.tables:
+                sc = table.get("metadata", {}).get("statementComponent") or ""
+                if "SEGMENT" in sc:
+                    result = classify_columns(table)
+                    if result.additive_cols:
+                        table.setdefault("metadata", {})["columnClassification"] = {
+                            "additive": result.additive_cols,
+                            "total": result.total_col,
+                            "derived": result.derived_cols,
+                            "confidence": result.confidence,
+                        }
+
     def gate(self, state: DocumentState, config: PipelineConfig) -> GateResult:
+        # Hierarchy quality scoring
+        from table_quality import assess_hierarchy
+        assess_hierarchy(state.tables)
+
         # Check parent-child summation consistency
         from table_arithmetic import pass0_table_arithmetic
 
@@ -340,6 +545,7 @@ class Stage4_TableStructure:
                 "consistency_rate": round(consistency_rate, 4),
                 "structural_iterations": getattr(state, "_structural_iterations", 0),
                 "structural_tags": len(getattr(state, "_structural_tags", [])),
+                "stitched_tables": getattr(state, "_stitched_count", 0),
             },
         )
 
@@ -364,11 +570,14 @@ class Stage5_FactTagging:
         structural_cascade(tables_copy, config.ontology_root,
                            verbose=config.verbose)
 
-        # Step 3: LLM tagging with GAAP filter (#49)
+        # Step 3: LLM tagging (API) or prompt generation (IDE)
+        from llm_tagger import _build_concept_index
+        concept_index = _build_concept_index(config.ontology_root)
+        gaap = state.meta.get("gaap") if state.meta else None
+
         if config.use_llm:
-            from llm_tagger import tag_document, _build_concept_index
-            concept_index = _build_concept_index(config.ontology_root)
-            gaap = state.meta.get("gaap") if state.meta else None
+            # Direct API call (batch automation)
+            from llm_tagger import tag_document
             if config.verbose:
                 print(f"  LLM tagger: gaap={gaap}",
                       file=__import__("sys").stderr)
@@ -378,6 +587,17 @@ class Stage5_FactTagging:
                 gaap=gaap,
                 verbose=config.verbose,
             )
+        else:
+            # Generate prompt files for IDE sessions (cost-free)
+            from prompt_generator import generate_document_prompts
+            prompt_dir = config.output_dir
+            prompts = generate_document_prompts(
+                state.tg_path, concept_index, gaap=gaap,
+                output_dir=prompt_dir,
+            )
+            if prompts and config.verbose:
+                print(f"  Generated {len(prompts)} prompt file(s) for IDE tagging",
+                      file=__import__("sys").stderr)
 
         # Step 4: Analyze results (facts, consistency, scoring)
         result = analyze_document(state.tg_path, config.ontology_root)

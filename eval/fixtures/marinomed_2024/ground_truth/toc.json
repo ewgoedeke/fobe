@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "annotator": "",
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "Information on capital, share, voting and control rights",
+      "start_page": 36,
+      "end_page": 36,
+      "note_number": null,
+      "validated": false,
+      "statement_type": "NOTES"
+    },
+    {
+      "label": "Statement of financial position",
+      "start_page": 45,
+      "end_page": 46,
+      "note_number": null,
+      "validated": false,
+      "statement_type": "SFP"
+    },
+    {
+      "label": "Statement of profit or loss",
+      "start_page": 47,
+      "end_page": 47,
+      "note_number": null,
+      "validated": false,
+      "statement_type": "PNL"
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 3,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 1,
+      "end_page": 2,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "has_toc": true,
+  "annotated_at": "2026-03-28T22:03:18.388953+00:00"
+}

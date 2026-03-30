@@ -173,6 +173,9 @@ def main():
     parser.add_argument("--reclassify", action="store_true",
                         help="Strip existing statementComponent and re-classify "
                              "all tables from scratch")
+    parser.add_argument("--use-ground-truth", action="store_true",
+                        help="Use ground truth TOC annotations (from ground_truth/toc.json) "
+                             "for classification instead of auto-detection")
     parser.add_argument("--documents", nargs="*",
                         help="Filter --all to specific fixture names "
                              "(e.g. amag_2024 evn_2024)")
@@ -221,6 +224,7 @@ def main():
         stages_to_run=stages_to_run,
         use_llm=not args.no_llm,
         reclassify=args.reclassify,
+        use_ground_truth=args.use_ground_truth,
         verbose=args.verbose,
         output_dir=run_dir,
         ontology_root=ontology_root,
@@ -247,10 +251,19 @@ def main():
         pipeline.persist(state, doc_dir)
 
         # Brief status line
-        status_icon = {"completed": "OK", "halted_at_gate": "HALT",
-                       "error": "ERR"}.get(state.status, "?")
+        needs_review = (state.halted_at and state.halted_at in state.gate_results
+                        and state.gate_results[state.halted_at].metrics.get("needs_review"))
+        if needs_review:
+            status_icon = "REVIEW"
+        else:
+            status_icon = {"completed": "OK", "halted_at_gate": "HALT",
+                           "error": "ERR"}.get(state.status, "?")
         suffix = ""
-        if state.halted_at:
+        if needs_review:
+            fixture_dir = str(Path(tg_path).parent)
+            suffix = (f" at {state.halted_at}: review needed → "
+                      f"{fixture_dir}/review_needed.json")
+        elif state.halted_at:
             suffix = f" at {state.halted_at}: {_first_finding(state)[:60]}"
         elif state.status == "error":
             suffix = f": {state.error[:60]}"
@@ -275,9 +288,32 @@ def main():
           f"{sum(ps['halted'].values())} halted, "
           f"{ps['errors']} errors in {elapsed:.1f}s",
           file=sys.stderr)
-    if ps["halt_details"]:
+    # Separate needs-review from other halts
+    review_docs = []
+    other_halts = []
+    for h in ps["halt_details"]:
+        if "review needed" in h.get("reason", "").lower() or \
+           "review manifest" in h.get("reason", "").lower():
+            review_docs.append(h)
+        else:
+            other_halts.append(h)
+
+    if review_docs:
+        print("\nNeeds human review:", file=sys.stderr)
+        for h in review_docs:
+            fixture_dir = None
+            for s in states:
+                if s.doc_name == h["doc"]:
+                    fixture_dir = str(Path(s.tg_path).parent)
+                    break
+            path_hint = f" → {fixture_dir}/review_needed.json" if fixture_dir else ""
+            print(f"  {h['doc']}{path_hint}", file=sys.stderr)
+        print(f"  Run: python3 eval/review_cli.py inspect <fixture_dir>",
+              file=sys.stderr)
+
+    if other_halts:
         print("Halted documents:", file=sys.stderr)
-        for h in ps["halt_details"]:
+        for h in other_halts:
             print(f"  {h['doc']} @ {h['stage']}: {h['reason'][:80]}",
                   file=sys.stderr)
     print(f"Summary: {summary_path}", file=sys.stderr)

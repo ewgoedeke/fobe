@@ -106,29 +106,43 @@ def _detect_toc(tables: list[dict]) -> dict[int, str] | None:
         if has_note_column(tbl):
             continue
 
-        # Count VALUE columns — TOC should have at most 2 (page number columns)
+        # Count VALUE columns — TOC may have up to 4 (two-column layout with
+        # page numbers on each side, e.g. OMV 2024 "Contents" page)
         value_cols = [c for c in tbl.get("columns", []) if c.get("role") == "VALUE"]
-        if len(value_cols) > 2:
+        if len(value_cols) > 4:
             continue
 
-        # Collect (label, page_number) pairs
+        # Collect (label, page_number) pairs.
+        # For multi-column TOC layouts (e.g. OMV), also scan non-label cells
+        # for text+page pairs: a text cell followed by a numeric cell.
         entries = []
         for r in rows:
+            cells = r.get("cells", [])
+            # Primary: label column + rightmost page number
             label = r.get("label", "").strip()
-            if not label:
-                continue
+            if label:
+                page_num = None
+                for c in cells:
+                    pv = c.get("parsedValue")
+                    if pv is not None and 1 < pv < 500 and pv == int(pv):
+                        page_num = int(pv)
+                if page_num is not None:
+                    entries.append((label, page_num))
 
-            # Look for page numbers in cells
-            page_num = None
-            for c in r.get("cells", []):
+            # Secondary: scan cell pairs for text + page number in other columns
+            # (handles two-column TOC layouts where right column has its own entries)
+            for i, c in enumerate(cells):
+                if c.get("colIdx", 0) == 0:
+                    continue  # skip label column, already handled
+                txt = (c.get("text") or "").strip()
                 pv = c.get("parsedValue")
-                if pv is not None and 1 < pv < 500 and pv == int(pv):
-                    # Check it's plausibly a page number (not a financial value)
-                    # Page numbers are typically small integers in the rightmost column
-                    page_num = int(pv)
-
-            if page_num is not None:
-                entries.append((label, page_num))
+                if txt and pv is None:
+                    # Text cell — look for a page number in the next cell
+                    for c2 in cells[i+1:]:
+                        pv2 = c2.get("parsedValue")
+                        if pv2 is not None and 1 < pv2 < 500 and pv2 == int(pv2):
+                            entries.append((txt, int(pv2)))
+                            break
 
         if len(entries) < 3:
             continue
@@ -143,15 +157,21 @@ def _detect_toc(tables: list[dict]) -> dict[int, str] | None:
         if increasing < len(pages) * 0.5:
             continue
 
-        # Check for statement keywords in entries
+        # Check for statement keywords in entries AND all cell text
+        # (multi-column TOC layouts may have statement names in non-label columns)
         has_statement_kw = False
+        all_text = set()
         for label, _ in entries:
-            label_lower = label.lower()
-            for kw in _STATEMENT_KEYWORDS:
-                if kw in label_lower:
-                    has_statement_kw = True
-                    break
-            if has_statement_kw:
+            all_text.add(label.lower())
+        for r in rows:
+            for c in r.get("cells", []):
+                txt = (c.get("text") or "").strip().lower()
+                if txt:
+                    all_text.add(txt)
+        combined = " ".join(all_text)
+        for kw in _STATEMENT_KEYWORDS:
+            if kw in combined:
+                has_statement_kw = True
                 break
 
         if not has_statement_kw:
@@ -476,15 +496,23 @@ def classify_document(tg_path: str, dry_run: bool = False,
 
     if reclassify:
         stripped = 0
+        preserved_human = 0
         for table in tables:
             meta = table.get("metadata", {})
             if meta.get("statementComponent"):
+                # Never strip human review classifications
+                if meta.get("classification_method") == "human_review":
+                    preserved_human += 1
+                    continue
                 del meta["statementComponent"]
                 meta.pop("classification_confidence", None)
                 meta.pop("classification_method", None)
                 stripped += 1
         if verbose:
-            print(f"  Reclassify: stripped statementComponent from {stripped}/{len(tables)} tables")
+            msg = f"  Reclassify: stripped statementComponent from {stripped}/{len(tables)} tables"
+            if preserved_human:
+                msg += f" (preserved {preserved_human} human_review)"
+            print(msg)
 
     stats = {"already": 0, "toc": 0, "note_section": 0, "section_path": 0,
              "keyword": 0, "llm": 0, "unclassified": 0}

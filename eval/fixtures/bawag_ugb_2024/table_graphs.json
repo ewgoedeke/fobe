@@ -160,7 +160,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -958,7 +960,9 @@
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -1742,11 +1746,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -2604,11 +2610,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -3460,11 +3468,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -4971,11 +4981,13 @@
       "headerRowCount": 4,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -5281,11 +5293,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -6571,11 +6585,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -9044,11 +9060,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -11476,11 +11494,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -11796,11 +11815,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -12116,11 +12136,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -12425,11 +12446,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -12759,11 +12782,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -13461,11 +13486,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -13705,11 +13731,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14664,11 +14691,12 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14998,11 +15026,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -15595,11 +15625,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -16398,7 +16430,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {

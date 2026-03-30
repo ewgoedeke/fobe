@@ -148,12 +148,29 @@ def _extract_segment_members(tables: list[dict]) -> dict[str, str]:
             # Strip year/period suffixes
             seg_name = re.sub(r'\.\s*\d{4}$', '', header).strip()
             seg_name = re.sub(r'\s*\(restated\).*$', '', seg_name, flags=re.IGNORECASE).strip()
-            # Skip years, periods, generic headers, and accounting labels
-            skip = seg_name.lower() in (
+            # Skip years, periods, generic headers, metrics, and accounting labels
+            seg_lower = seg_name.lower()
+            skip = seg_lower in (
                 "total", "note", "in thousands of eur", "in millions of eur",
                 "adjustments", "consolidated totals", "eliminations",
+                "group", "consolidated", "unallocated",
                 "2025", "2024", "2023", "2022", "2021",
-            ) or re.match(r'^\d{4}', seg_name) or "restated" in seg_name.lower()
+            ) or re.match(r'^\d{4}', seg_name) or "restated" in seg_lower
+            # Filter out metric/KPI columns and non-segment headers
+            skip = skip or any(w in seg_lower for w in [
+                "change", "delta", "in %", "margin", "growth",
+                "variance", "prior year", "vs.", "yoy",
+                "total segment", "summe", " total",
+                "ebitda", "ebit", "revenue", "profit", "loss",
+                "eur million", "eur thousand", "in eur", "in teur",
+                "management report", "group management",
+            ])
+            # Skip if contains a pipe with year (e.g. "AMAG total | 2024")
+            skip = skip or bool(re.search(r'\|\s*\d{4}', seg_name))
+            # Skip entity name + "total" patterns
+            skip = skip or "total" in seg_lower
+            # Max label length: real segments are concise names
+            skip = skip or len(seg_name) > 60
             if seg_name and len(seg_name) > 3 and not skip:
                 if seg_name not in segments.values():
                     seg_counter += 1
@@ -182,12 +199,31 @@ def _extract_ppe_classes(tables: list[dict]) -> dict[str, str]:
             if not header or c.get("role") != "VALUE":
                 continue
             header = re.sub(r'\.\s*\d{4}$', '', header).strip()
-            skip_ppe = header.lower() in (
+            hdr_lower = header.lower()
+            # Normalize soft hyphens and line breaks
+            hdr_norm = re.sub(r'[-\u00ad]\s*', '', hdr_lower)
+            skip_ppe = hdr_lower in (
                 "total", "note", "in thousands of eur", "in millions of eur",
-            ) or re.match(r'^\d{4}', header) or "restated" in header.lower()
-            skip_ppe = skip_ppe or any(w in header.lower() for w in [
+            ) or re.match(r'^\d{4}', header) or "restated" in hdr_lower
+            # Skip date-only headers (e.g. "30.09", "31.12.2024")
+            skip_ppe = skip_ppe or bool(re.match(r'^[\d.]+(\s*(eur|teur))?$', hdr_lower.strip()))
+            # Filter out movement/non-class labels (check normalized form too)
+            movement_keywords = [
                 "before tax", "net of tax", "tax (expense", "later",
-            ])
+                # Movement keywords (German + English)
+                "zugänge", "abgänge", "abschreibung", "zuschreibung",
+                "umbuchung", "umgliederung", "nutzungsdauer", "buchwert",
+                "anschaffungskosten", "kumulierte", "herstellungskosten",
+                "additions", "disposals", "depreciation", "amortisation",
+                "impairment", "transfers", "carrying amount", "cost",
+                "accumulated", "reclassification",
+                # Position indicators
+                "stand ", "bw ",
+            ]
+            skip_ppe = skip_ppe or any(w in hdr_lower for w in movement_keywords)
+            skip_ppe = skip_ppe or any(w.replace('-', '') in hdr_norm for w in movement_keywords)
+            # Max length filter for PPE class names
+            skip_ppe = skip_ppe or len(header) > 60
             if header and len(header) > 3 and not skip_ppe:
                 if header not in classes.values():
                     cls_counter += 1
@@ -208,13 +244,27 @@ def _extract_geography(tables: list[dict]) -> dict[str, str]:
 
         for r in t.get("rows", []):
             label = r.get("label", "").strip()
+            if not label or len(label) > 40:
+                continue  # skip paragraph-length labels
+            label_lower = label.lower()
             # Geography patterns: country names, region names
-            if any(w in label.lower() for w in [
+            # Only match if the label IS a geography (not contains one as substring)
+            geo_keywords = [
                 "europe", "america", "asia", "africa", "middle east",
-                "austria", "germany", "uk", "us", "china", "japan",
+                "austria", "germany", "uk", "usa", "china", "japan",
                 "domestic", "foreign", "rest of",
                 "österreich", "deutschland", "europa",
+                "north america", "south america", "latin america",
+                "apac", "emea", "americas", "cee",
+            ]
+            is_geo = any(w in label_lower for w in geo_keywords)
+            # Reject labels that are clearly not geography names
+            if is_geo and any(w in label_lower for w in [
+                "margin", "indicator", "revenue from", "income from",
+                "balance", "total", "note",
             ]):
+                is_geo = False
+            if is_geo:
                 if label not in regions.values():
                     reg_counter += 1
                     regions[f"GEO.{reg_counter:03d}"] = label
@@ -267,7 +317,12 @@ def _detect_industry(tables: list[dict], fixture_name: str) -> str:
 # ── Main ──────────────────────────────────────────────────────────
 
 def generate_meta(tg_path: str, verbose: bool = False) -> dict:
-    """Generate document metadata from a table_graphs.json file."""
+    """Generate basic document metadata (entity, GAAP, currency, industry).
+
+    This extracts metadata that does NOT depend on validated classifications.
+    Axis members (segments, PPE classes, geography) are deferred to
+    extract_axes() which should run after the Stage 2 gate passes.
+    """
     with open(tg_path) as f:
         data = json.load(f)
     tables = data.get("tables", [])
@@ -278,11 +333,6 @@ def generate_meta(tg_path: str, verbose: bool = False) -> dict:
     currency, unit = _detect_currency_unit(tables)
     periods = _detect_periods(tables)
     industry = _detect_industry(tables, fixture_name)
-
-    # Axis members
-    segments = _extract_segment_members(tables)
-    ppe_classes = _extract_ppe_classes(tables)
-    geography = _extract_geography(tables)
 
     meta = {
         "document_id": fixture_name,
@@ -296,6 +346,27 @@ def generate_meta(tg_path: str, verbose: bool = False) -> dict:
         "document_axes": {},
     }
 
+    if verbose:
+        print(f"  Entity: {entity_name}")
+        print(f"  GAAP: {gaap}, Industry: {industry}")
+        print(f"  Currency: {currency}, Unit: {unit}")
+        print(f"  Periods: {list(periods.keys())}")
+
+    return meta
+
+
+def extract_axes(tables: list[dict], meta: dict,
+                 verbose: bool = False) -> dict:
+    """Extract axis members from validated/classified tables.
+
+    Should be called AFTER the Stage 2 gate passes so that axis members
+    are only extracted from correctly-classified tables. Mutates meta
+    in place and returns it.
+    """
+    segments = _extract_segment_members(tables)
+    ppe_classes = _extract_ppe_classes(tables)
+    geography = _extract_geography(tables)
+
     if segments:
         meta["document_axes"]["AXIS.SEGMENT_DOC"] = segments
     if ppe_classes:
@@ -303,16 +374,7 @@ def generate_meta(tg_path: str, verbose: bool = False) -> dict:
     if geography:
         meta["document_axes"]["AXIS.GEOGRAPHY_DOC"] = geography
 
-    # Stats
-    n_tables = len(tables)
-    n_rows = sum(len(t["rows"]) for t in tables)
-    classified = sum(1 for t in tables if t.get("metadata", {}).get("statementComponent"))
-
     if verbose:
-        print(f"  Entity: {entity_name}")
-        print(f"  GAAP: {gaap}, Industry: {industry}")
-        print(f"  Currency: {currency}, Unit: {unit}")
-        print(f"  Periods: {list(periods.keys())}")
         if segments:
             print(f"  Segments ({len(segments)}): {list(segments.values())[:5]}")
         if ppe_classes:
@@ -344,6 +406,10 @@ def main():
         name = path.parent.name
         print(f"\n{name}:")
         meta = generate_meta(str(path), verbose=verbose)
+        # When run standalone, extract axes immediately (no gate)
+        with open(path) as f:
+            tables = json.load(f).get("tables", [])
+        extract_axes(tables, meta, verbose=verbose)
 
         out_path = path.parent / "document_meta.json"
         if not dry_run:

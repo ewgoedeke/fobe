@@ -1,0 +1,448 @@
+{
+  "generated_at": "2026-03-30T01:15:35.694238",
+  "document": "vig_holding_2024",
+  "gate_findings": [
+    {
+      "type": "toc_unresolved",
+      "detail": "Only 0 primary statement types found: []. Need >= 1."
+    }
+  ],
+  "toc_detected": null,
+  "page_index": [
+    {
+      "page": 3,
+      "tables": [
+        {
+          "tableId": "raw_0",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "COMPANY PROFILE",
+            "MANAGEMENT REPORT",
+            "VIG Holding business development"
+          ],
+          "col_headers": [],
+          "row_count": 20,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "tables": [
+        {
+          "tableId": "raw_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Premiums written",
+            "Net earned premiums"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "tables": [
+        {
+          "tableId": "raw_2",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Land and buildings",
+            "Investments in affiliated companies and participations"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "tables": [
+        {
+          "tableId": "raw_3",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A. Intangible assets",
+            "I. Other intangible assets",
+            "B. Investments"
+          ],
+          "col_headers": [],
+          "row_count": 29,
+          "data_row_count": 23,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "tables": [
+        {
+          "tableId": "raw_4",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "I. Share capital",
+            "Par value",
+            "II. Capital reserves"
+          ],
+          "col_headers": [],
+          "row_count": 42,
+          "data_row_count": 32,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "tables": [
+        {
+          "tableId": "raw_5",
+          "classification": "DISC.BCA",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "1. Net earned premiums",
+            "Premiums written",
+            "Gross"
+          ],
+          "col_headers": [],
+          "row_count": 31,
+          "data_row_count": 24,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "tables": [
+        {
+          "tableId": "raw_6",
+          "classification": "DISC.PPE",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Underwriting result",
+            "Non-underwriting account:",
+            "1. Income from investments and interest income"
+          ],
+          "col_headers": [],
+          "row_count": 27,
+          "data_row_count": 21,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "tables": [
+        {
+          "tableId": "raw_7",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "As of 31 December 2023",
+            "Additions"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_8",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Land and buildings",
+            "thereof appraisal reports 2020"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "tables": [
+        {
+          "tableId": "raw_9",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "RT1 Schuldverschreibung 2021",
+            "Supplementary capital bond 2015 - 2046"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "tables": [
+        {
+          "tableId": "raw_10",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Mortgage receivables",
+            "Deposits receivables"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "tables": [
+        {
+          "tableId": "raw_11",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Direct business",
+            "Fire and fire business interruption insurance"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_12",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "in EUR '000",
+            "Income from participations",
+            "Income from other investments"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "tables": [
+        {
+          "tableId": "raw_13",
+          "classification": "DISC.EMPLOYEE_BENEFITS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "in EUR '000",
+            "Wages and salaries",
+            "Expenses for severance benefits and payments to company pension plans"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_14",
+          "classification": "DISC.INVENTORIES",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "in EUR '000",
+            "Shares in affiliated companies",
+            "investments"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "tables": [
+        {
+          "tableId": "raw_15",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Affiliated companies",
+            "\"VIENNA LIFE INSURANCE\" - \"VIENNA SIGURIM JETE\" JSC, Tirana",
+            "ASIGURAREA ROMANEASCA - ASIROM VIENNA INSURANCE GROUP S.A., Bucharest"
+          ],
+          "col_headers": [],
+          "row_count": 31,
+          "data_row_count": 30,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "tables": [
+        {
+          "tableId": "raw_16",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Affiliated companies",
+            "KOOPERATIVA poist'ovna, a.s. Vienna Insurance Group, Bratislava",
+            "KUPALA Belarusian-Austrian Closed Joint Stock Insurance Company, Minsk"
+          ],
+          "col_headers": [],
+          "row_count": 38,
+          "data_row_count": 34,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "tables": [
+        {
+          "tableId": "text_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Harald Friedl",
+            "Tel.: +43 (0) 50 390-20733",
+            "E-mail: harald.friedl@vig.com"
+          ],
+          "col_headers": [],
+          "row_count": 37,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "tables": [
+        {
+          "tableId": "text_2",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Klaus M\u00fchleder",
+            "Tel.: +43 (0) 50 390-21363",
+            "E-mail: klaus.muehleder@vig.com"
+          ],
+          "col_headers": [],
+          "row_count": 19,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "tables": [
+        {
+          "tableId": "raw_17",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Erste Group",
+            "VIG, VIG-Versicherungsgruppe, VIG-Gruppe",
+            "VIG Holding bzw. Vienna Insurance Group AG 1"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 20,
+    "by_type": {
+      "DISC.EMPLOYEE_BENEFITS": 2,
+      "DISC.BCA": 1,
+      "DISC.PPE": 1,
+      "DISC.INVENTORIES": 1
+    },
+    "flagged_count": 15,
+    "flagged_page_range": [
+      3,
+      53
+    ],
+    "suggested_action": "15 unclassified tables need assignment"
+  }
+}

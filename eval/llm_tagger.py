@@ -28,6 +28,9 @@ import yaml
 # Add parent dir to path for sibling imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from relationship_graph import load_concepts, ConceptMeta, _infer_context
+from reference_graph import (
+    build_reference_graph, DocumentRefGraph, has_note_column, parse_label,
+)
 
 
 # ── Pre-filter for untaggable labels ──────────────────────────────────────────
@@ -65,6 +68,20 @@ METHOD = "llm"
 RULE = "sonnet_tag"
 
 
+# ── GAAP filtering ──────────────────────────────────────────────────────────────
+
+def _filter_by_gaap(concepts: list[ConceptMeta], gaap: str) -> list[ConceptMeta]:
+    """Filter concepts by GAAP framework.
+
+    - IFRS documents: exclude UGB-specific concepts (*.UGB.*)
+    - UGB documents: include everything (UGB-specific + shared base concepts)
+    """
+    if gaap == "IFRS":
+        return [c for c in concepts if ".UGB." not in c.concept_id]
+    # For UGB and other frameworks, include all concepts
+    return concepts
+
+
 # ── Concept index ──────────────────────────────────────────────────────────────
 
 def _build_concept_index(repo_root: str) -> dict[str, list[ConceptMeta]]:
@@ -82,7 +99,11 @@ def _build_concept_index(repo_root: str) -> dict[str, list[ConceptMeta]]:
 
 # ── Prompt building ────────────────────────────────────────────────────────────
 
-def _row_summary(row: dict, value_col_indices: set[int]) -> str:
+def _row_summary(
+    row: dict,
+    value_col_indices: set[int],
+    note_context: Optional[str] = None,
+) -> str:
     """Produce a one-line description of a row for the prompt."""
     label = (row.get("label", "").strip() or "(no label)")[:80]
     row_type = row.get("rowType", "DATA")
@@ -106,14 +127,16 @@ def _row_summary(row: dict, value_col_indices: set[int]) -> str:
     row_idx = row.get("rowIdx", "?")
     type_note = "" if row_type == "DATA" else f", {row_type}"
     value_note = ", has values" if has_values else ", no values"
+    note_hint = f", note→{note_context}" if note_context else ""
 
-    return f"  row {row_idx}: \"{label}\" [{tagged_note}{type_note}{value_note}]"
+    return f"  row {row_idx}: \"{label}\" [{tagged_note}{type_note}{value_note}{note_hint}]"
 
 
 def _build_table_prompt(
     table: dict,
     concepts: list[ConceptMeta],
     table_idx_in_batch: int = 0,
+    ref_graph: Optional[DocumentRefGraph] = None,
 ) -> str:
     """Build the LLM prompt for a single table."""
     ctx = table.get("metadata", {}).get("statementComponent", "UNKNOWN")
@@ -122,6 +145,16 @@ def _build_table_prompt(
 
     columns = table.get("columns", [])
     value_col_indices = {c["colIdx"] for c in columns if c.get("role") == "VALUE"}
+
+    # Build note column lookup for this table
+    note_col_indices = set()
+    for col in columns:
+        if col.get("role") == "NOTES":
+            note_col_indices.add(col["colIdx"])
+        elif col.get("headerLabel", "").lower().strip() in (
+            "note", "notes", "anhang", "anmerkung", "anmerkungen",
+        ):
+            note_col_indices.add(col["colIdx"])
 
     rows = table.get("rows", [])
     untagged_row_indices = [
@@ -132,7 +165,22 @@ def _build_table_prompt(
     concept_lines = "\n".join(
         f"  {m.concept_id}: {m.label}" for m in concepts
     )
-    row_lines = "\n".join(_row_summary(r, value_col_indices) for r in rows)
+
+    # Build row lines with note context hints
+    row_lines_list = []
+    for r in rows:
+        note_ctx = None
+        if ref_graph and note_col_indices:
+            for cell in r.get("cells", []):
+                if cell.get("colIdx") in note_col_indices:
+                    note_text = cell.get("text", "").strip()
+                    if note_text:
+                        m = re.match(r"(\d+)", note_text)
+                        if m:
+                            note_ctx = ref_graph.context_for_note(int(m.group(1)))
+                    break
+        row_lines_list.append(_row_summary(r, value_col_indices, note_context=note_ctx))
+    row_lines = "\n".join(row_lines_list)
 
     return (
         f"=== Table {table_idx_in_batch} (tableId={table_id}, page={page}) ===\n"
@@ -152,11 +200,14 @@ def _build_table_prompt(
     )
 
 
-def _build_batch_prompt(tables_and_concepts: list[tuple[dict, list[ConceptMeta]]]) -> str:
+def _build_batch_prompt(
+    tables_and_concepts: list[tuple[dict, list[ConceptMeta]]],
+    ref_graph: Optional[DocumentRefGraph] = None,
+) -> str:
     """Build a combined prompt for multiple small tables."""
     parts = []
     for i, (table, concepts) in enumerate(tables_and_concepts):
-        parts.append(_build_table_prompt(table, concepts, table_idx_in_batch=i))
+        parts.append(_build_table_prompt(table, concepts, table_idx_in_batch=i, ref_graph=ref_graph))
 
     n = len(tables_and_concepts)
     return (
@@ -169,11 +220,15 @@ def _build_batch_prompt(tables_and_concepts: list[tuple[dict, list[ConceptMeta]]
     )
 
 
-def _build_single_prompt(table: dict, concepts: list[ConceptMeta]) -> str:
+def _build_single_prompt(
+    table: dict,
+    concepts: list[ConceptMeta],
+    ref_graph: Optional[DocumentRefGraph] = None,
+) -> str:
     """Build a prompt for a single large table."""
     return (
         "You are tagging rows in a financial statement table.\n\n"
-        + _build_table_prompt(table, concepts, table_idx_in_batch=0)
+        + _build_table_prompt(table, concepts, table_idx_in_batch=0, ref_graph=ref_graph)
         + "\n\nRespond with ONLY a JSON object mapping row index strings to concept IDs or null."
     )
 
@@ -377,8 +432,14 @@ def tag_document(
     dry_run: bool = False,
     verbose: bool = False,
     model: str = MODEL_SHORT,
+    gaap: str | None = None,
 ) -> dict:
     """Tag all eligible tables in a table_graphs.json file.
+
+    Args:
+        gaap: Document GAAP framework ("IFRS", "UGB", etc.). When set,
+              filters concepts by GAAP: IFRS docs exclude UGB-specific
+              concepts (*.UGB.*), UGB docs exclude IFRS-only concepts.
 
     Returns a stats dict: {tables_processed, api_calls, tags_added}
     """
@@ -387,6 +448,9 @@ def tag_document(
 
     tables = data.get("tables", [])
     stats = {"tables_processed": 0, "api_calls": 0, "tags_added": 0}
+
+    # Build reference graph for note context
+    ref_graph = build_reference_graph(tables)
 
     # Separate tables into small (batched) and large (individual)
     eligible_small: list[tuple[dict, list[ConceptMeta]]] = []  # (table, concepts)
@@ -405,6 +469,9 @@ def tag_document(
             m for m in raw_concepts
             if _infer_context(m.concept_id) == ctx
         ]
+        # GAAP filter: exclude concepts from wrong framework (Issue #42)
+        if gaap:
+            concepts = _filter_by_gaap(concepts, gaap)
         if not concepts:
             if verbose:
                 print(f"  [skip] No concepts for context {ctx} (tableId={table.get('tableId')})")
@@ -429,7 +496,7 @@ def tag_document(
 
         # If the batch prompt is too large, shrink it
         while len(batch) > 1:
-            trial_prompt = _build_batch_prompt(batch)
+            trial_prompt = _build_batch_prompt(batch, ref_graph=ref_graph)
             if len(trial_prompt) <= MAX_PROMPT_CHARS:
                 break
             # Put last table back and retry with smaller batch
@@ -444,7 +511,7 @@ def tag_document(
             # Degenerate — use single-table path
             table, concepts = batch[0]
             valid_ids = {m.concept_id for m in concepts}
-            prompt = _build_single_prompt(table, concepts)
+            prompt = _build_single_prompt(table, concepts, ref_graph=ref_graph)
             if verbose:
                 ctx = table.get("metadata", {}).get("statementComponent")
                 print(f"  [llm] Single (oversized batch) table: {table.get('tableId')} (ctx={ctx})")
@@ -458,7 +525,7 @@ def tag_document(
                 print(f"    Tagged {n} rows in {table.get('tableId')}")
             continue
 
-        prompt = _build_batch_prompt(batch)
+        prompt = _build_batch_prompt(batch, ref_graph=ref_graph)
         if verbose:
             ctx_list = [t.get("metadata", {}).get("statementComponent") for t, _ in batch]
             print(f"  [llm] Batch {batch_num}: {len(batch)} tables, contexts={ctx_list}")
@@ -477,7 +544,7 @@ def tag_document(
     # Process large tables individually
     for table, concepts in eligible_large:
         valid_ids = {m.concept_id for m in concepts}
-        prompt = _build_single_prompt(table, concepts)
+        prompt = _build_single_prompt(table, concepts, ref_graph=ref_graph)
         ctx = table.get("metadata", {}).get("statementComponent")
         if verbose:
             print(f"  [llm] Single large table: {table.get('tableId')} (ctx={ctx}, rows={len(table.get('rows', []))})")

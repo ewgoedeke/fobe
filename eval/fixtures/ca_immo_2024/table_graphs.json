@@ -6,12 +6,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.UNITS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -1804,12 +1806,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.UNITS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PROVISIONS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {

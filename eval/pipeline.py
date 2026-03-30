@@ -47,6 +47,7 @@ class DocumentState:
     tagging: dict[str, Any] = field(default_factory=dict)
     consistency: dict[str, Any] = field(default_factory=dict)
     corroboration: dict[str, Any] = field(default_factory=dict)
+    review_needed: dict[str, Any] | None = None
     gate_results: dict[str, GateResult] = field(default_factory=dict)
     stage_results: list[dict] = field(default_factory=list)
     status: str = "running"          # running | completed | halted_at_gate | error
@@ -66,6 +67,7 @@ class PipelineConfig:
     gate_thresholds: dict[str, dict] = field(default_factory=dict)
     use_llm: bool = True
     reclassify: bool = False
+    use_ground_truth: bool = False
     verbose: bool = False
     output_dir: str | None = None
     ontology_root: str = ""

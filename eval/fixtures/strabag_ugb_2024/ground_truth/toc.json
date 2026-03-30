@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "annotator": "",
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "Table of Contents",
+      "statement_type": "TOC",
+      "start_page": 2,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "Bilanz zum 31.12.2024",
+      "start_page": 5,
+      "end_page": 6,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "SFP"
+    },
+    {
+      "label": "Gewinn- und Verlustrechnung für das Geschäftsjahr 2024",
+      "start_page": 7,
+      "end_page": 8,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "PNL"
+    },
+    {
+      "label": "Anhang für das Geschäftsjahr 2024 der STRABAG SE, Villach",
+      "start_page": 8,
+      "end_page": 10,
+      "note_number": null,
+      "validated": false,
+      "statement_type": "NOTES"
+    },
+    {
+      "label": "II. Bilanzierungs- und Bewertungsmethoden",
+      "start_page": 10,
+      "end_page": 14,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "SFP"
+    },
+    {
+      "label": "Anlagenspiegel zum 31.12.2024",
+      "start_page": 23,
+      "end_page": 23,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "APPENDIX"
+    },
+    {
+      "label": "Beteiligungsliste",
+      "start_page": 24,
+      "end_page": 24,
+      "note_number": null,
+      "validated": true,
+      "statement_type": "NOTES"
+    },
+    {
+      "label": "EU-Taxonomie",
+      "start_page": 77,
+      "end_page": 77,
+      "note_number": null,
+      "validated": false,
+      "statement_type": "NOTES"
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 12,
+      "end_page": 13,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 15,
+      "end_page": 15,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "annotated_at": "2026-03-28T22:05:15.871450+00:00",
+  "has_toc": true
+}

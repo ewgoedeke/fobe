@@ -15,6 +15,36 @@ doc_tag (produces)  →  fobe (ontology)  ←  finparse-platform (consumes)
    evaluates quality     aliases             generates SQL seeds
 ```
 
+## Eval pipeline
+
+6-stage pipeline for extracting, classifying, tagging, and validating financial tables from PDF annual reports.
+
+```
+STAGE 1: PDF → Docling → raw tables (table_graphs.json)
+    ↓
+STAGE 2: Structure extraction
+    2a. TOC identification (page-reference patterns, multi-language)
+    2b. Table classification (TOC-aware → keyword fallback → "unclassified")
+    2c. Meta extraction (entity, GAAP, periods, axes — from classified tables only)
+    ↓
+STAGE 3: Numeric conversion (format normalization, scale detection)
+    ↓
+STAGE 4: Table structure extraction
+    4a. Multipage table stitching
+    4b. Row/column hierarchy (summation detection, total identification)
+    4c. Axis member validation (hierarchy-informed)
+    ↓
+STAGE 5: Fact tagging (structure-aware, GAAP-constrained)
+    5a. Label matching (pretag_all.py, scoped to context)
+    5b. Structural inference (hierarchy + summation trees)
+    5c. LLM tagging (Claude Sonnet, constrained concept set)
+    ↓
+STAGE 6: Validation & scoring
+    Consistency checks, fact scoring, anomaly detection
+```
+
+See `eval/runs/27032026EVAL002/learnings.md` for the full target architecture and current gap analysis.
+
 ## Ontology coverage
 
 | Layer | Count |
@@ -63,52 +93,25 @@ Context-aware: PNL negates all amounts, SFP negates credit concepts only.
 
 ## Evaluation corpus
 
-**30 PDFs, 22 companies, 16 industries** — parsed via Docling into `table_graphs.json`
-fixtures. Each fixture runs through the consistency engine for tag corroboration.
+**39 documents, 6,342 tables, 44,226 data rows** — parsed via Docling into `table_graphs.json`
+fixtures. Each fixture runs through the full pipeline for classification, tagging, and validation.
 
-### Parsed and evaluated (22 fixtures)
+Latest eval run: `27032026EVAL002` (2026-03-27) — see `eval/runs/` for results.
 
-| Document | Tables | Rows | Framework | Industry |
-|---|---|---|---|---|
-| Wienerberger 2024 | 220 | 3000+ | IFRS | Building materials |
-| KPMG IFRS IFS 2025 | 210 | 2305 | IFRS | Illustrative |
-| Lenzing 2025 | 322 | 2953 | IFRS+UGB | Chemicals / fibres |
-| Lenzing 2024 | 304 | 2979 | IFRS+UGB | Chemicals / fibres |
-| Flughafen Wien 2024 | 291 | 2546 | IFRS+UGB | Airport |
-| AGRANA 2024 | 217 | 2349 | IFRS+UGB | Food / sugar |
-| AMAG 2024 | 246 | 1909 | IFRS+UGB | Aluminium |
-| Kapsch TrafficCom 2024 | 205 | 2240 | IFRS+UGB | ITS |
-| Frequentis 2024 | 199 | 1814 | IFRS+UGB | Defence tech / ATM |
-| EVN 2024 | 189 | 1864 | IFRS+UGB | Energy / utilities |
-| Mayr-Melnhof 2024 (full) | 186 | 1862 | IFRS+UGB | Packaging |
-| FACC 2024 | 168 | 1296 | IFRS+UGB | Aerospace |
-| DO & CO 2024 | 145 | 1393 | IFRS+UGB | Airline catering |
-| Andritz UGB 2024 | 45 | 586 | **UGB** | Plant engineering |
-| CA Immo 2024 (EN) | 38 | 360 | **UGB** | Real estate |
-| ICBC Austria 2024 | 33 | 368 | **UGB+BWG** | Banking |
-| Marinomed 2024 | 25 | 251 | IFRS+UGB | Pharma / biotech |
-| BAWAG UGB 2024 | 20 | 157 | **UGB+BWG** | Banking |
-| Mayr-Melnhof UGB 2024 | 15 | 158 | **UGB** | Packaging |
-| Andritz 2024 | 10 | 51 | IFRS | Plant engineering |
-| EuroTeleSites 2024 | 2 | 49 | **UGB** | Telecom infra |
-| CA Immo 2024 (DE) | 2 | 81 | **UGB** | Real estate |
-| Saldenliste GmbH | 2 | 44 | **UGB** | Test (EKR trial balance) |
+### Validation test subset (8 documents)
 
-### Awaiting Docling processing (11 PDFs)
+For quick pipeline validation without running the full corpus:
 
-| Company | Framework | Industry | UGB Einzelabschluss |
-|---|---|---|---|
-| **OMV** | UGB | Oil & gas | **separate PDF** |
-| **STRABAG** | UGB | Construction | **separate PDF** |
-| **RBI** | UGB+BWG | Banking | **separate PDF** |
-| Palfinger | UGB | Cranes / lifting | bundled |
-| Zumtobel | UGB | Lighting | bundled |
-| Pierer Mobility | UGB | Motorcycles (KTM) | bundled |
-| S IMMO | UGB | Real estate | bundled |
-| Warimpex | UGB | Real estate / hotels | bundled |
-| VIG Holding | UGB+VAG | Insurance | bundled |
-| Wolford | UGB | Luxury textiles | bundled |
-| Kapsch | UGB | ITS | bundled |
+| Document | GAAP | Lang | Sector | Tables | Covers |
+|---|---|---|---|---|---|
+| amag_2024 | UGB | DE | Manufacturing | 246 | SEG/GEO noise |
+| evn_2024 | IFRS | DE | Utilities | 189 | PPE axis errors, GEO paragraphs |
+| vig_holding_2024 | UGB | DE | Insurance | 20 | GEO all wrong; smallest doc |
+| pierer_mobility_2024 | IFRS | EN/DE | Manufacturing | 216 | SFP overclassification |
+| kapsch_2024 | IFRS | EN | Technology | 205 | Compound headers; good baseline |
+| a1_group (stitched) | IFRS | DE | Telecom | 202 | Stitched table format |
+| rbi_ugb_2024 | UGB | DE | Banking | 75 | Bank-specific; dual GAAP |
+| lenzing_2025 | UGB | DE | Manufacturing | 322 | German totals; large doc |
 
 ### Real errors found
 
@@ -152,24 +155,29 @@ fobe/
 ├── accounts/
 │   └── ekr_austria.yaml        # Austrian EKR chart of accounts (127 mappings)
 ├── eval/
+│   ├── ISSUES.md               # Running issue tracker (findings → GitHub issues → status)
+│   ├── classify_tables.py      # Table classification (TOC + keyword heuristics)
+│   ├── table_classifier.py     # Keyword-based classification logic
+│   ├── generate_document_meta.py # Meta extraction (entity, GAAP, periods, axes)
+│   ├── pretag_all.py           # Label matching against ontology
+│   ├── structural_inference.py # Hierarchy-based tag propagation (4 passes)
+│   ├── llm_tagger.py           # LLM-assisted row tagging (Claude Sonnet)
 │   ├── check_consistency.py    # Three-pass consistency checker
 │   ├── check_classification.py # Table classification validator
 │   ├── relationship_graph.py   # Ontology graph builder
+│   ├── reference_graph.py      # Document reference graph (TOC, note refs)
 │   ├── fact_scoring.py         # Per-fact corroboration scoring
 │   ├── table_arithmetic.py     # Pass 0 — same-table parent/child validation
+│   ├── run_eval.py             # Full pipeline runner → timestamped run folders
 │   ├── run_corpus.py           # Cross-document comparison report
-│   ├── run_all.py              # Full evaluation suite
+│   ├── run_all.py              # Single-document validation
 │   ├── convert_isg.py          # ISG format → table_graphs.json converter
 │   ├── convert_saldenliste.py  # EKR trial balance → UGB statements converter
 │   ├── visualize.py            # Mermaid diagram generator
 │   ├── catalogue.yaml          # Running regression test set
-│   ├── process_corpus.sh       # Batch PDF → Docling → fixtures pipeline
-│   └── fixtures/               # Per-document table_graphs.json (22 parsed)
-│       ├── wienerberger_2024/  # + agrana, amag, andritz, bawag, ca_immo,
-│       ├── eurotelesites_2024/ #   doco, evn, facc, flughafen_wien,
-│       ├── kpmg_ifs_2025/      #   frequentis, icbc_austria, kapsch,
-│       ├── lenzing_2025/       #   lenzing, marinomed, mayr_melnhof
-│       └── saldenliste_gmbh/
+│   ├── fixtures/               # Per-document table_graphs.json (39 parsed)
+│   └── runs/                   # Timestamped eval run results
+│       └── 27032026EVAL002/    # Latest run (39 docs, per-doc results + learnings)
 ├── sources/
 │   ├── kpmg/                   # KPMG reference PDFs (IFRS IFS, UGB, Banks, Insurers)
 │   └── ugb/                    # Austrian UGB annual report PDFs
@@ -188,23 +196,37 @@ fobe/
 ## Running the evaluation
 
 ```bash
-# Single document
-python3 eval/check_consistency.py <table_graphs.json>
-python3 eval/check_consistency.py <table_graphs.json> --json
-python3 eval/check_consistency.py <table_graphs.json> --check eval/fixtures/.../expected_violations.json
+# Full pipeline run (all documents → timestamped results in eval/runs/)
+python3 eval/run_eval.py
+
+# Test subset only (8 documents covering all issue types)
+python3 eval/run_eval.py --documents amag_2024 evn_2024 vig_holding_2024 \
+    pierer_mobility_2024 kapsch_2024 a1_group_A1_2024_tables_stitched \
+    rbi_ugb_2024 lenzing_2025
+
+# Individual pipeline stages
+python3 eval/classify_tables.py <table_graphs.json> [--reclassify] [--verbose]
+python3 eval/pretag_all.py <table_graphs.json>
+python3 eval/structural_inference.py <table_graphs.json> [--verbose]
+python3 eval/llm_tagger.py <table_graphs.json> [--strip-bad]
+
+# Consistency checks
+python3 eval/check_consistency.py <table_graphs.json> [--json]
 
 # Corpus comparison
 python3 eval/run_corpus.py --all
 
 # Visualize reporting hierarchies
-python3 eval/visualize.py ppe
-python3 eval/visualize.py revenue
-python3 eval/visualize.py full
+python3 eval/visualize.py ppe | revenue | full
 
 # Convert formats
 python3 eval/convert_isg.py <isg_result.json> [output.json]
 python3 eval/convert_saldenliste.py <saldenliste.csv> [output.json]
 ```
+
+## Issue tracking
+
+Open issues and their resolution status are tracked in `eval/ISSUES.md`. This maps eval run findings to GitHub issues with current status. See also `eval/runs/*/learnings.md` for per-run analysis.
 
 ## License
 

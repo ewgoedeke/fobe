@@ -1,0 +1,116 @@
+{
+  "tables": [
+    {
+      "table_id": "sfp_ca_immo",
+      "page": 2,
+      "predictions": [
+        {
+          "class": "PNL",
+          "score": 0.977
+        },
+        {
+          "class": "SFP",
+          "score": 0.015
+        },
+        {
+          "class": "OTHER",
+          "score": 0.006
+        },
+        {
+          "class": "TOC",
+          "score": 0.001
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        }
+      ],
+      "top_class": "PNL",
+      "top_score": 0.977
+    },
+    {
+      "table_id": "pnl_ca_immo",
+      "page": 4,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.649
+        },
+        {
+          "class": "PNL",
+          "score": 0.351
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        }
+      ],
+      "top_class": "OTHER",
+      "top_score": 0.649
+    }
+  ],
+  "pages": {
+    "2": {
+      "page": 2,
+      "top_class": "PNL",
+      "top_score": 0.977,
+      "predictions": [
+        {
+          "class": "PNL",
+          "score": 0.977
+        },
+        {
+          "class": "SFP",
+          "score": 0.015
+        },
+        {
+          "class": "OTHER",
+          "score": 0.006
+        },
+        {
+          "class": "TOC",
+          "score": 0.001
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        }
+      ]
+    },
+    "4": {
+      "page": 4,
+      "top_class": "OTHER",
+      "top_score": 0.649,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.649
+        },
+        {
+          "class": "PNL",
+          "score": 0.351
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2191 @@
+{
+  "pages": {
+    "1": {
+      "page": 1,
+      "top_class": "OTHER",
+      "top_score": 0.855,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.855
+        },
+        {
+          "class": "TOC",
+          "score": 0.128
+        },
+        {
+          "class": "SFP",
+          "score": 0.015
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "2": {
+      "page": 2,
+      "top_class": "OTHER",
+      "top_score": 0.844,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.844
+        },
+        {
+          "class": "NOTES",
+          "score": 0.107
+        },
+        {
+          "class": "SFP",
+          "score": 0.035
+        },
+        {
+          "class": "TOC",
+          "score": 0.01
+        },
+        {
+          "class": "PNL",
+          "score": 0.005
+        }
+      ]
+    },
+    "3": {
+      "page": 3,
+      "top_class": "TOC",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "TOC",
+          "score": 1.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "OTHER",
+          "score": 0.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "4": {
+      "page": 4,
+      "top_class": "OTHER",
+      "top_score": 0.874,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.874
+        },
+        {
+          "class": "TOC",
+          "score": 0.109
+        },
+        {
+          "class": "SFP",
+          "score": 0.015
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "5": {
+      "page": 5,
+      "top_class": "OTHER",
+      "top_score": 0.924,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.924
+        },
+        {
+          "class": "NOTES",
+          "score": 0.074
+        },
+        {
+          "class": "TOC",
+          "score": 0.002
+        },
+        {
+          "class": "PNL",
+          "score": 0.001
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "6": {
+      "page": 6,
+      "top_class": "OTHER",
+      "top_score": 0.993,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.993
+        },
+        {
+          "class": "TOC",
+          "score": 0.005
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        }
+      ]
+    },
+    "7": {
+      "page": 7,
+      "top_class": "OTHER",
+      "top_score": 0.986,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.986
+        },
+        {
+          "class": "NOTES",
+          "score": 0.014
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "8": {
+      "page": 8,
+      "top_class": "OTHER",
+      "top_score": 0.989,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.989
+        },
+        {
+          "class": "NOTES",
+          "score": 0.011
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "9": {
+      "page": 9,
+      "top_class": "OTHER",
+      "top_score": 0.965,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.965
+        },
+        {
+          "class": "NOTES",
+          "score": 0.034
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "10": {
+      "page": 10,
+      "top_class": "OTHER",
+      "top_score": 0.991,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.991
+        },
+        {
+          "class": "NOTES",
+          "score": 0.009
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "11": {
+      "page": 11,
+      "top_class": "OTHER",
+      "top_score": 0.998,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.998
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "12": {
+      "page": 12,
+      "top_class": "OTHER",
+      "top_score": 0.991,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.991
+        },
+        {
+          "class": "NOTES",
+          "score": 0.008
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "13": {
+      "page": 13,
+      "top_class": "OTHER",
+      "top_score": 0.994,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.994
+        },
+        {
+          "class": "NOTES",
+          "score": 0.006
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "14": {
+      "page": 14,
+      "top_class": "OTHER",
+      "top_score": 0.991,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.991
+        },
+        {
+          "class": "NOTES",
+          "score": 0.009
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "15": {
+      "page": 15,
+      "top_class": "OTHER",
+      "top_score": 0.974,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.974
+        },
+        {
+          "class": "NOTES",
+          "score": 0.026
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "16": {
+      "page": 16,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "17": {
+      "page": 17,
+      "top_class": "OTHER",
+      "top_score": 0.923,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.923
+        },
+        {
+          "class": "NOTES",
+          "score": 0.077
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "18": {
+      "page": 18,
+      "top_class": "OTHER",
+      "top_score": 0.993,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.993
+        },
+        {
+          "class": "NOTES",
+          "score": 0.007
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "19": {
+      "page": 19,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "20": {
+      "page": 20,
+      "top_class": "OTHER",
+      "top_score": 0.997,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.997
+        },
+        {
+          "class": "NOTES",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "21": {
+      "page": 21,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "22": {
+      "page": 22,
+      "top_class": "OTHER",
+      "top_score": 0.992,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.992
+        },
+        {
+          "class": "NOTES",
+          "score": 0.005
+        },
+        {
+          "class": "TOC",
+          "score": 0.004
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "23": {
+      "page": 23,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "24": {
+      "page": 24,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "25": {
+      "page": 25,
+      "top_class": "OTHER",
+      "top_score": 0.997,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.997
+        },
+        {
+          "class": "NOTES",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "26": {
+      "page": 26,
+      "top_class": "OTHER",
+      "top_score": 0.992,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.992
+        },
+        {
+          "class": "NOTES",
+          "score": 0.008
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "27": {
+      "page": 27,
+      "top_class": "OTHER",
+      "top_score": 0.996,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.996
+        },
+        {
+          "class": "NOTES",
+          "score": 0.004
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "28": {
+      "page": 28,
+      "top_class": "OTHER",
+      "top_score": 0.96,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.96
+        },
+        {
+          "class": "NOTES",
+          "score": 0.04
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "29": {
+      "page": 29,
+      "top_class": "OTHER",
+      "top_score": 0.994,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.994
+        },
+        {
+          "class": "NOTES",
+          "score": 0.006
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "30": {
+      "page": 30,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "31": {
+      "page": 31,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "32": {
+      "page": 32,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "33": {
+      "page": 33,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "34": {
+      "page": 34,
+      "top_class": "OTHER",
+      "top_score": 0.996,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.996
+        },
+        {
+          "class": "NOTES",
+          "score": 0.004
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "35": {
+      "page": 35,
+      "top_class": "OTHER",
+      "top_score": 0.995,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.995
+        },
+        {
+          "class": "NOTES",
+          "score": 0.004
+        },
+        {
+          "class": "TOC",
+          "score": 0.001
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "36": {
+      "page": 36,
+      "top_class": "OTHER",
+      "top_score": 0.998,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.998
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "37": {
+      "page": 37,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "38": {
+      "page": 38,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "39": {
+      "page": 39,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "40": {
+      "page": 40,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "41": {
+      "page": 41,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "42": {
+      "page": 42,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "43": {
+      "page": 43,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "44": {
+      "page": 44,
+      "top_class": "OTHER",
+      "top_score": 0.979,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.979
+        },
+        {
+          "class": "TOC",
+          "score": 0.02
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "45": {
+      "page": 45,
+      "top_class": "SFP",
+      "top_score": 0.952,
+      "predictions": [
+        {
+          "class": "SFP",
+          "score": 0.952
+        },
+        {
+          "class": "OTHER",
+          "score": 0.031
+        },
+        {
+          "class": "NOTES",
+          "score": 0.012
+        },
+        {
+          "class": "PNL",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.002
+        }
+      ]
+    },
+    "46": {
+      "page": 46,
+      "top_class": "SFP",
+      "top_score": 0.875,
+      "predictions": [
+        {
+          "class": "SFP",
+          "score": 0.875
+        },
+        {
+          "class": "OTHER",
+          "score": 0.089
+        },
+        {
+          "class": "NOTES",
+          "score": 0.021
+        },
+        {
+          "class": "PNL",
+          "score": 0.015
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        }
+      ]
+    },
+    "47": {
+      "page": 47,
+      "top_class": "PNL",
+      "top_score": 0.935,
+      "predictions": [
+        {
+          "class": "PNL",
+          "score": 0.935
+        },
+        {
+          "class": "OTHER",
+          "score": 0.054
+        },
+        {
+          "class": "SFP",
+          "score": 0.008
+        },
+        {
+          "class": "NOTES",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        }
+      ]
+    },
+    "48": {
+      "page": 48,
+      "top_class": "OTHER",
+      "top_score": 0.892,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.892
+        },
+        {
+          "class": "NOTES",
+          "score": 0.108
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "49": {
+      "page": 49,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "50": {
+      "page": 50,
+      "top_class": "OTHER",
+      "top_score": 0.997,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.997
+        },
+        {
+          "class": "NOTES",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "51": {
+      "page": 51,
+      "top_class": "OTHER",
+      "top_score": 0.944,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.944
+        },
+        {
+          "class": "NOTES",
+          "score": 0.05
+        },
+        {
+          "class": "TOC",
+          "score": 0.005
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "52": {
+      "page": 52,
+      "top_class": "OTHER",
+      "top_score": 0.834,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.834
+        },
+        {
+          "class": "NOTES",
+          "score": 0.166
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "53": {
+      "page": 53,
+      "top_class": "OTHER",
+      "top_score": 0.946,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.946
+        },
+        {
+          "class": "NOTES",
+          "score": 0.054
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "54": {
+      "page": 54,
+      "top_class": "OTHER",
+      "top_score": 0.542,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.542
+        },
+        {
+          "class": "NOTES",
+          "score": 0.458
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "55": {
+      "page": 55,
+      "top_class": "OTHER",
+      "top_score": 0.95,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.95
+        },
+        {
+          "class": "NOTES",
+          "score": 0.05
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "56": {
+      "page": 56,
+      "top_class": "OTHER",
+      "top_score": 0.952,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.952
+        },
+        {
+          "class": "NOTES",
+          "score": 0.048
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "57": {
+      "page": 57,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "58": {
+      "page": 58,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "59": {
+      "page": 59,
+      "top_class": "OTHER",
+      "top_score": 0.992,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.992
+        },
+        {
+          "class": "NOTES",
+          "score": 0.008
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "60": {
+      "page": 60,
+      "top_class": "OTHER",
+      "top_score": 0.995,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.995
+        },
+        {
+          "class": "NOTES",
+          "score": 0.005
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "61": {
+      "page": 61,
+      "top_class": "OTHER",
+      "top_score": 0.995,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.995
+        },
+        {
+          "class": "NOTES",
+          "score": 0.005
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "62": {
+      "page": 62,
+      "top_class": "OTHER",
+      "top_score": 0.983,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.983
+        },
+        {
+          "class": "NOTES",
+          "score": 0.017
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "63": {
+      "page": 63,
+      "top_class": "OTHER",
+      "top_score": 0.904,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.904
+        },
+        {
+          "class": "NOTES",
+          "score": 0.096
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        }
+      ]
+    },
+    "64": {
+      "page": 64,
+      "top_class": "OTHER",
+      "top_score": 0.987,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.987
+        },
+        {
+          "class": "NOTES",
+          "score": 0.013
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "65": {
+      "page": 65,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "66": {
+      "page": 66,
+      "top_class": "OTHER",
+      "top_score": 0.856,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.856
+        },
+        {
+          "class": "NOTES",
+          "score": 0.144
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "67": {
+      "page": 67,
+      "top_class": "OTHER",
+      "top_score": 0.987,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.987
+        },
+        {
+          "class": "NOTES",
+          "score": 0.013
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "68": {
+      "page": 68,
+      "top_class": "OTHER",
+      "top_score": 0.996,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.996
+        },
+        {
+          "class": "NOTES",
+          "score": 0.004
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "69": {
+      "page": 69,
+      "top_class": "OTHER",
+      "top_score": 0.993,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.993
+        },
+        {
+          "class": "NOTES",
+          "score": 0.007
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "70": {
+      "page": 70,
+      "top_class": "OTHER",
+      "top_score": 0.998,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.998
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "71": {
+      "page": 71,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "72": {
+      "page": 72,
+      "top_class": "OTHER",
+      "top_score": 0.971,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.971
+        },
+        {
+          "class": "NOTES",
+          "score": 0.028
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "73": {
+      "page": 73,
+      "top_class": "OTHER",
+      "top_score": 0.999,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.999
+        },
+        {
+          "class": "NOTES",
+          "score": 0.001
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "74": {
+      "page": 74,
+      "top_class": "OTHER",
+      "top_score": 0.996,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.996
+        },
+        {
+          "class": "NOTES",
+          "score": 0.004
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        }
+      ]
+    },
+    "75": {
+      "page": 75,
+      "top_class": "OTHER",
+      "top_score": 0.991,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.991
+        },
+        {
+          "class": "NOTES",
+          "score": 0.009
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        }
+      ]
+    },
+    "76": {
+      "page": 76,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "CFS",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "77": {
+      "page": 77,
+      "top_class": "OTHER",
+      "top_score": 0.997,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.997
+        },
+        {
+          "class": "NOTES",
+          "score": 0.003
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "78": {
+      "page": 78,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "79": {
+      "page": 79,
+      "top_class": "OTHER",
+      "top_score": 0.942,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.942
+        },
+        {
+          "class": "NOTES",
+          "score": 0.058
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SFP",
+          "score": 0.0
+        }
+      ]
+    },
+    "80": {
+      "page": 80,
+      "top_class": "OTHER",
+      "top_score": 0.998,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 0.998
+        },
+        {
+          "class": "NOTES",
+          "score": 0.002
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "PNL",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    },
+    "81": {
+      "page": 81,
+      "top_class": "OTHER",
+      "top_score": 1.0,
+      "predictions": [
+        {
+          "class": "OTHER",
+          "score": 1.0
+        },
+        {
+          "class": "NOTES",
+          "score": 0.0
+        },
+        {
+          "class": "TOC",
+          "score": 0.0
+        },
+        {
+          "class": "SOCIE",
+          "score": 0.0
+        },
+        {
+          "class": "OCI",
+          "score": 0.0
+        }
+      ]
+    }
+  }
+}
