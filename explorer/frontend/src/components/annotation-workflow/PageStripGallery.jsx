@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { cn } from '@/lib/utils'
 import { ALL_SECTION_TYPES } from '../section-hierarchy.js'
+import { Layers } from 'lucide-react'
 
 /**
  * Responsive grid of page thumbnails with colored left border and feature badges.
@@ -13,6 +14,8 @@ export function PageStripGallery({
   pageFeatures,
   selectedPage,
   onPageClick,
+  multiTags = [],
+  onRefBadgeClick,
 }) {
   const selectedRef = useRef(null)
 
@@ -34,6 +37,7 @@ export function PageStripGallery({
           const typeMeta = info ? ALL_SECTION_TYPES[info.type] : null
           const isSelected = page === selectedPage
           const features = pageFeatures?.pages?.[page] || pageFeatures?.pages?.[String(page)]
+          const hasMultiTags = multiTags.some(mt => mt.page === page)
 
           return (
             <div
@@ -51,6 +55,13 @@ export function PageStripGallery({
               }}
               onClick={() => onPageClick(page)}
             >
+              {/* Multi-tag icon */}
+              {hasMultiTags && (
+                <div className="absolute top-1 right-1 z-10" title="Multi-tagged">
+                  <Layers className="size-3 text-amber-400" />
+                </div>
+              )}
+
               {/* Thumbnail */}
               <div className="aspect-[0.707] relative">
                 <img
@@ -76,7 +87,7 @@ export function PageStripGallery({
                   </span>
                 )}
                 <div className="ml-auto flex items-center gap-0.5">
-                  <FeatureBadges features={features} />
+                  <FeatureBadges features={features} onRefClick={onRefBadgeClick ? () => onRefBadgeClick(page) : undefined} />
                 </div>
               </div>
             </div>
@@ -87,7 +98,7 @@ export function PageStripGallery({
   )
 }
 
-function FeatureBadges({ features }) {
+function FeatureBadges({ features, onRefClick }) {
   if (!features) return null
 
   const badges = []
@@ -119,8 +130,9 @@ function FeatureBadges({ features }) {
     badges.push(
       <span
         key="ref"
-        className="text-[10px] font-medium px-1 rounded bg-purple-500/15 text-purple-400"
+        className="text-[10px] font-medium px-1 rounded bg-purple-500/15 text-purple-400 cursor-pointer hover:bg-purple-500/25"
         title={`Note refs: ${features.note_refs.length}`}
+        onClick={onRefClick ? (e) => { e.stopPropagation(); onRefClick() } : undefined}
       >
         REF
       </span>

@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.jsx'
 import { Button } from '../ui/button.jsx'
 import { Input } from '../ui/input.jsx'
+import { Badge } from '../ui/badge.jsx'
 import {
   Select, SelectContent, SelectGroup, SelectItem, SelectLabel,
   SelectTrigger, SelectValue,
@@ -15,7 +16,7 @@ import {
   TYPE_GROUPS_LIST,
   typeLabel,
 } from '../section-hierarchy.js'
-import { Trash2 } from 'lucide-react'
+import { Trash2, ArrowLeftRight, X } from 'lucide-react'
 
 /**
  * Full-size page detail panel: page render + features card + action bar.
@@ -31,12 +32,17 @@ export function PageDetail({
   onRemoveTransition,
   onUpdateTransition,
   totalPages,
+  multiTags = [],
+  onToggleMultiTag,
+  onCompareClick,
+  hasEdges = false,
 }) {
   const { data: allTables = [] } = useDocOverlayTables(docId)
   const tablesOnPage = allTables.filter(t => t.pageNo === pageNo)
   const dims = pageDims?.[pageNo] || pageDims?.[String(pageNo)] || { width: 595, height: 842 }
   const info = pageMap.get(pageNo)
   const features = pageFeatures?.pages?.[pageNo] || pageFeatures?.pages?.[String(pageNo)]
+  const pageMultiTags = multiTags.filter(mt => mt.page === pageNo)
 
   const [selectedType, setSelectedType] = useState(transition?.section_type || info?.type || '')
   const [noteNumber, setNoteNumber] = useState(transition?.note_number || '')
@@ -84,6 +90,60 @@ export function PageDetail({
         </Card>
       )}
 
+      {/* Multi-tag section */}
+      {(pageMultiTags.length > 0 || info) && (
+        <div className="mx-2 mb-2 shrink-0">
+          <div className="text-[10px] font-medium text-muted-foreground mb-1">Also tagged as</div>
+          <div className="flex flex-wrap gap-1">
+            {pageMultiTags.map((mt) => {
+              const meta = ALL_SECTION_TYPES[mt.section_type]
+              return (
+                <Badge
+                  key={mt.section_type}
+                  variant="secondary"
+                  className={cn('text-[10px] px-1.5 py-0 gap-1 cursor-pointer', meta?.bg, meta?.text)}
+                  onClick={() => onToggleMultiTag?.(pageNo, mt.section_type)}
+                >
+                  {typeLabel(mt.section_type)}
+                  <X className="size-2.5" />
+                </Badge>
+              )
+            })}
+            {/* Add multi-tag via secondary select */}
+            <Select
+              value=""
+              onValueChange={(val) => {
+                if (val) onToggleMultiTag?.(pageNo, val)
+              }}
+            >
+              <SelectTrigger className="h-5 w-20 text-[10px] border-dashed">
+                <SelectValue placeholder="+ Add" />
+              </SelectTrigger>
+              <SelectContent>
+                {TYPE_GROUPS_LIST.map(group => (
+                  <SelectGroup key={group.key}>
+                    <SelectLabel className="text-[10px]">{group.label}</SelectLabel>
+                    {group.types
+                      .filter(t => t !== info?.type && !pageMultiTags.some(mt => mt.section_type === t))
+                      .map(t => (
+                        <SelectItem key={t} value={t} className="text-xs">
+                          <span className="flex items-center gap-1.5">
+                            <span
+                              className="size-2 rounded-full shrink-0"
+                              style={{ backgroundColor: ALL_SECTION_TYPES[t]?.hex }}
+                            />
+                            {typeLabel(t)}
+                          </span>
+                        </SelectItem>
+                      ))}
+                  </SelectGroup>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      )}
+
       {/* Action bar */}
       <div className="border-t border-border px-3 py-2 shrink-0 space-y-2">
         <div className="flex items-center gap-2">
@@ -126,6 +186,17 @@ export function PageDetail({
           >
             Mark Transition
           </Button>
+          {hasEdges && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="h-7 text-xs gap-1"
+              onClick={onCompareClick}
+            >
+              <ArrowLeftRight className="size-3" />
+              Compare
+            </Button>
+          )}
           {transition && (
             <Button
               variant="destructive"
