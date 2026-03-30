@@ -112,7 +112,7 @@ class Fact:
     row_id: str = ""          # rowId from table_graphs.json (for table arithmetic)
 
 
-PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
+from section_types import PRIMARY_STATEMENTS
 
 # ── Label-based concept matching ───────────────────────────────────
 # Auto-built from the ontology: concept labels (EN), UGB labels (DE),

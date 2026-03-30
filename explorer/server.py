@@ -37,6 +37,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "eval"))
 sys.path.insert(0, str(REPO_ROOT))
 from relationship_graph import EdgeType, OntologyGraph, build_graph, _infer_context
+from section_types import PRIMARY_STATEMENTS
 
 # ── Data source toggle ────────────────────────────────────────
 # Set FOBE_DATA_SOURCE=supabase to read from Supabase instead of local files.
@@ -547,9 +548,6 @@ def neighborhood(concept_id: str, depth: int = Query(1, ge=1, le=3)):
                 links.extend(new_links)
 
     return {"nodes": nodes, "links": links, "center": concept_id}
-
-
-PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
 
 
 @app.get("/api/ontology/contexts")

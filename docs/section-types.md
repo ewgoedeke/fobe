@@ -7,6 +7,66 @@ sits in the PDF. They do NOT describe semantic content (e.g. "this table is abou
 Semantic classification (DISC.PPE, DISC.REVENUE, etc.) happens later in the pipeline
 via reference tracing from primary statements to notes.
 
+## Source of Truth
+
+- **Python**: `eval/section_types.py`
+- **JavaScript**: `explorer/frontend/src/components/section-hierarchy.js`
+
+All other files import from these. Do not define section types elsewhere.
+
+---
+
+## Hierarchy
+
+```
+REPORT (root)
+├── FRONT_MATTER              # floating: report cover, or section cover
+├── TOC                       # floating: report TOC, or section mini-TOC
+│
+├── GENERAL_REPORTING         # group (inferred, never annotated)
+│   ├── MANAGEMENT_REPORT
+│   ├── ESG
+│   ├── CORPORATE_GOVERNANCE
+│   ├── RISK_REPORT
+│   ├── REMUNERATION_REPORT
+│   ├── SUPERVISORY_BOARD
+│   ├── AUDITOR_REPORT
+│   ├── RESPONSIBILITY_STATEMENT
+│   └── OTHER
+│
+├── PRIMARY_FINANCIALS        # group (inferred)
+│   ├── FRONT_MATTER          # inherits PRIMARY context
+│   ├── TOC                   # inherits PRIMARY context
+│   ├── PNL
+│   ├── SFP
+│   ├── OCI
+│   ├── CFS
+│   └── SOCIE
+│
+├── NOTES                     # group + content type
+│   ├── FRONT_MATTER          # inherits NOTES context
+│   └── (sub-notes by note_number -> pipeline maps to DISC.*)
+│
+└── APPENDIX                  # group + content type
+```
+
+### Type Classification
+
+| Category | Types |
+|----------|-------|
+| Floating | `FRONT_MATTER`, `TOC` |
+| Groups (inferred, never annotated) | `GENERAL_REPORTING`, `PRIMARY_FINANCIALS`, `NOTES`, `APPENDIX` |
+| Primary financials | `PNL`, `SFP`, `OCI`, `CFS`, `SOCIE` |
+| General reporting | `MANAGEMENT_REPORT`, `ESG`, `CORPORATE_GOVERNANCE`, `RISK_REPORT`, `REMUNERATION_REPORT`, `SUPERVISORY_BOARD`, `AUDITOR_REPORT`, `RESPONSIBILITY_STATEMENT`, `OTHER` |
+
+### Floating Context Resolution
+
+FRONT_MATTER and TOC are **floating structural types** — they can appear at any level
+and inherit context from their position in the document. The group is determined by the
+nearest following content-type transition.
+
+---
+
 ## Section Types
 
 ### Primary Financial Statements
@@ -123,3 +183,22 @@ Typical structure of an IFRS Konzernbericht / Group Annual Report:
 5. **MANAGEMENT_REPORT includes risk discussion.** Unless there's a clearly separate standalone Risikobericht section (common in banks), risk commentary within the Lagebericht stays as MANAGEMENT_REPORT.
 
 6. **When in doubt, use OTHER.** It's better to tag a section as OTHER than to guess wrong. The annotator can always refine later.
+
+---
+
+## Section Colors
+
+| Type | Background | Text |
+|------|-----------|------|
+| `PNL` | `bg-red-500/15` | `text-red-400` |
+| `SFP` | `bg-orange-500/15` | `text-orange-400` |
+| `OCI` | `bg-yellow-500/15` | `text-yellow-400` |
+| `CFS` | `bg-green-500/15` | `text-green-400` |
+| `SOCIE` | `bg-teal-500/15` | `text-teal-400` |
+| `FRONT_MATTER` / `TOC` | `bg-slate-500/15` | `text-slate-400` |
+| `MANAGEMENT_REPORT` | `bg-sky-500/15` | `text-sky-400` |
+| `ESG` | `bg-emerald-500/15` | `text-emerald-400` |
+| `AUDITOR_REPORT` | `bg-violet-500/15` | `text-violet-400` |
+| `NOTES` | `bg-purple-500/15` | `text-purple-400` |
+| `APPENDIX` | `bg-cyan-500/15` | `text-cyan-400` |
+| `OTHER` | `bg-zinc-500/15` | `text-zinc-500` |

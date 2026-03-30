@@ -27,22 +27,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from reference_graph import has_note_column
 from classify_tables import _STATEMENT_KEYWORDS
+from section_types import RANK_CLASSES as CLASSES, TYPE_TO_RANK_CLASS as _TYPE_MAP
 
 # ── Classes ──────────────────────────────────────────────────────────────────
 
-CLASSES = ["TOC", "PNL", "SFP", "OCI", "CFS", "SOCIE", "NOTES", "OTHER"]
 CLASS_TO_IDX = {c: i for i, c in enumerate(CLASSES)}
-
-_TYPE_MAP = {
-    "TOC": "TOC", "PNL": "PNL", "SFP": "SFP", "OCI": "OCI",
-    "CFS": "CFS", "SOCIE": "SOCIE", "NOTES": "NOTES",
-    "FRONT_MATTER": "OTHER", "MANAGEMENT_REPORT": "OTHER",
-    "AUDITOR_REPORT": "OTHER", "SUPERVISORY_BOARD": "OTHER",
-    "APPENDIX": "OTHER", "OTHER": "OTHER",
-    "CORPORATE_GOVERNANCE": "OTHER", "ESG": "OTHER",
-    "RISK_REPORT": "OTHER", "REMUNERATION_REPORT": "OTHER",
-    "RESPONSIBILITY_STATEMENT": "OTHER",
-}
 
 # Per-class keywords (searched in lowercased page text)
 _CLASS_KEYWORDS = {

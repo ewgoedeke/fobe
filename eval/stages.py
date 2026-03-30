@@ -18,10 +18,9 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pipeline import DocumentState, GateResult, PipelineConfig
+from section_types import PRIMARY_STATEMENTS
 
 # Lazy imports to avoid circular deps — done inside methods.
-
-PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
 
 
 # ── Stage 1: Load Tables ────────────────────────────────────────
