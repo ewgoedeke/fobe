@@ -12,6 +12,7 @@ import OntologyPage from './components/OntologyPage.jsx'
 import GroundTruthPage from './components/GroundTruthPage.jsx'
 import DocumentEdgesPage from './components/DocumentEdgesPage.jsx'
 import TrainingPage from './components/TrainingPage.jsx'
+import MachineTagPage from './components/MachineTagPage.jsx'
 import PdfPane from './components/PdfPane.jsx'
 import SearchBar from './components/SearchBar.jsx'
 import { useStats, useDocuments, useConcept, useConceptPages } from './api.js'
@@ -112,6 +113,9 @@ function PageContent() {
 
     case 'training':
       return <TrainingPage />
+
+    case 'machine-tag':
+      return <MachineTagPage />
 
     default:
       return (

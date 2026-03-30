@@ -1560,6 +1560,7 @@ async def append_tag_log(request: Request):
         "action": body.get("action"),
         "element_type": body.get("element_type"),
         "old_type": body.get("old_type"),
+        "source": body.get("source", "human"),
     }
     if USE_SUPABASE:
         try:
@@ -3415,6 +3416,200 @@ async def api_cancel_run(run_id: str, request: Request):
             run["status"] = "cancelled"
             run["completed_at"] = datetime.utcnow().isoformat()
             _save_runs_index(runs)
+            return {"status": "cancelled"}
+    return {"error": "run not found"}
+
+
+# ── Machine Tag Runs ──────────────────────────────────────
+_MT_RUNS_DIR = REPO_ROOT / "eval" / "machine_tag_runs"
+_MT_RUNS_STATE_PATH = _MT_RUNS_DIR / ".mt_runs_index.json"
+_mt_active_processes: dict[str, "subprocess.Popen"] = {}
+
+
+def _load_mt_runs_index() -> list[dict]:
+    if _MT_RUNS_STATE_PATH.exists():
+        with open(_MT_RUNS_STATE_PATH) as f:
+            return json.load(f)
+    return []
+
+
+def _save_mt_runs_index(runs: list[dict]):
+    _MT_RUNS_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(_MT_RUNS_STATE_PATH, "w") as f:
+        json.dump(runs, f, indent=2, default=str)
+
+
+def _make_mt_run_id() -> str:
+    now = datetime.utcnow()
+    runs = _load_mt_runs_index()
+    today = now.strftime("%d%m%Y")
+    today_count = sum(1 for r in runs if r.get("run_id", "").startswith(today + "MT"))
+    return f"{today}MT{today_count + 1:03d}"
+
+
+def _read_mt_run_summary(run_id: str) -> dict | None:
+    summary_path = _MT_RUNS_DIR / run_id / "summary.json"
+    if summary_path.exists():
+        with open(summary_path) as f:
+            return json.load(f)
+    return None
+
+
+def _read_mt_run_results(run_id: str) -> list[dict]:
+    """Read per-document result.json files from a machine tag run directory."""
+    run_dir = _MT_RUNS_DIR / run_id
+    if not run_dir.exists():
+        return []
+    results = []
+    for doc_dir in sorted(run_dir.iterdir()):
+        if not doc_dir.is_dir() or doc_dir.name.startswith("."):
+            continue
+        result_json = doc_dir / "result.json"
+        if result_json.exists():
+            with open(result_json) as f:
+                results.append(json.load(f))
+    return results
+
+
+def _update_mt_run_progress(run_id: str):
+    """Update a machine tag run's progress from its output directory."""
+    runs = _load_mt_runs_index()
+    for run in runs:
+        if run["run_id"] == run_id:
+            results = _read_mt_run_results(run_id)
+            docs_completed = len(results)
+            docs_total = len(run.get("config", {}).get("documents", []))
+            run["progress"] = {
+                "docs_completed": docs_completed,
+                "docs_total": docs_total,
+            }
+            proc = _mt_active_processes.get(run_id)
+            if proc:
+                poll = proc.poll()
+                if poll is not None:
+                    del _mt_active_processes[run_id]
+                    summary = _read_mt_run_summary(run_id)
+                    run["status"] = "completed" if poll == 0 else "failed"
+                    run["completed_at"] = datetime.utcnow().isoformat()
+                    if summary:
+                        run["summary"] = summary
+            _save_mt_runs_index(runs)
+            return run
+    return None
+
+
+@app.get("/api/machine-tag/runs")
+def api_list_mt_runs():
+    """List all machine tag runs."""
+    runs = _load_mt_runs_index()
+    for run in runs:
+        if run.get("status") == "running":
+            _update_mt_run_progress(run["run_id"])
+    runs = _load_mt_runs_index()
+    return {"runs": runs}
+
+
+@app.get("/api/machine-tag/runs/{run_id}")
+def api_get_mt_run(run_id: str):
+    """Get a single machine tag run with progress."""
+    runs = _load_mt_runs_index()
+    for run in runs:
+        if run["run_id"] == run_id:
+            if run.get("status") == "running":
+                _update_mt_run_progress(run_id)
+                runs = _load_mt_runs_index()
+                for r in runs:
+                    if r["run_id"] == run_id:
+                        return r
+            return run
+    return {"error": "run not found"}
+
+
+@app.get("/api/machine-tag/runs/{run_id}/results")
+def api_get_mt_run_results(run_id: str):
+    """Get per-document results for a machine tag run."""
+    results = _read_mt_run_results(run_id)
+    return {"results": results}
+
+
+@app.post("/api/machine-tag/runs")
+async def api_create_mt_run(request: Request):
+    """Create and start a new machine tag run."""
+    import subprocess
+    user = _require_auth(request)
+    body = await request.json()
+
+    run_id = _make_mt_run_id()
+    model = body.get("model", "pretag")
+    documents = body.get("documents", [])
+    config = body.get("config", {})
+
+    cmd = [
+        sys.executable, str(REPO_ROOT / "eval" / "machine_tag_runner.py"),
+        "--model", model,
+        "--documents", *documents,
+        "--output-dir", str(_MT_RUNS_DIR / run_id),
+    ]
+    if config.get("dry_run"):
+        cmd.append("--dry-run")
+    if config.get("verbose"):
+        cmd.append("--verbose")
+    if config.get("write_tag_log"):
+        cmd.append("--write-tag-log")
+    if config.get("write_voting"):
+        cmd.append("--write-voting")
+
+    run_entry = {
+        "run_id": run_id,
+        "status": "running",
+        "created_by": str(user.id),
+        "config": {
+            "model": model,
+            "documents": documents,
+            "dry_run": config.get("dry_run", False),
+            "verbose": config.get("verbose", False),
+            "write_tag_log": config.get("write_tag_log", False),
+            "write_voting": config.get("write_voting", False),
+        },
+        "progress": {"docs_completed": 0, "docs_total": len(documents)},
+        "started_at": datetime.utcnow().isoformat(),
+        "created_at": datetime.utcnow().isoformat(),
+    }
+    runs = _load_mt_runs_index()
+    runs.insert(0, run_entry)
+    _save_mt_runs_index(runs)
+
+    (_MT_RUNS_DIR / run_id).mkdir(parents=True, exist_ok=True)
+    proc = subprocess.Popen(
+        cmd,
+        cwd=str(REPO_ROOT),
+        stdout=open(_MT_RUNS_DIR / run_id / "stdout.log", "w"),
+        stderr=subprocess.STDOUT,
+    )
+    _mt_active_processes[run_id] = proc
+
+    return {"run": run_entry}
+
+
+@app.post("/api/machine-tag/runs/{run_id}/cancel")
+async def api_cancel_mt_run(run_id: str, request: Request):
+    """Cancel a running machine tag run."""
+    _require_auth(request)
+    proc = _mt_active_processes.get(run_id)
+    if proc:
+        proc.terminate()
+        try:
+            proc.wait(timeout=5)
+        except Exception:
+            proc.kill()
+        del _mt_active_processes[run_id]
+
+    runs = _load_mt_runs_index()
+    for run in runs:
+        if run["run_id"] == run_id:
+            run["status"] = "cancelled"
+            run["completed_at"] = datetime.utcnow().isoformat()
+            _save_mt_runs_index(runs)
             return {"status": "cancelled"}
     return {"error": "run not found"}
 

@@ -1,7 +1,7 @@
 import {
   LayoutDashboard, FileText, Layers, Network, GitBranch,
   ShieldCheck, ClipboardCheck, BookOpen, History, FlaskConical,
-  Sun, Moon, LogOut, ChevronUp, Settings
+  Sun, Moon, LogOut, ChevronUp, Settings, Bot,
 } from 'lucide-react'
 import { useNavigation } from '@/lib/hooks/useNavigation.jsx'
 import { useTheme } from '@/lib/hooks/useTheme.jsx'
@@ -37,6 +37,7 @@ const navPlatform = [
 
 const navPipeline = [
   { id: 'training', title: 'Training', icon: FlaskConical },
+  { id: 'machine-tag', title: 'Machine Tag', icon: Bot },
 ]
 
 const navQuality = [

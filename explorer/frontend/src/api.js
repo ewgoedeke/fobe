@@ -37,6 +37,22 @@ export function useStats() {
   })
 }
 
+export function useCorpusHealth() {
+  return useQuery({
+    queryKey: ['corpus-health'],
+    queryFn: () => fetchJSON('/api/dashboard/corpus-health'),
+    staleTime: 5 * 60_000,
+  })
+}
+
+export function useTagActivity() {
+  return useQuery({
+    queryKey: ['tag-activity'],
+    queryFn: () => fetchJSON('/api/dashboard/tag-activity'),
+    staleTime: 60_000,
+  })
+}
+
 export function useDocuments() {
   return useQuery({
     queryKey: ['documents'],
@@ -629,5 +645,57 @@ export function useCancelRun() {
   return useMutation({
     mutationFn: (runId) => fetchJSON(`/api/runs/${runId}/cancel`, { method: 'POST' }),
     onSuccess: () => qc.invalidateQueries({ queryKey: ['runs'] }),
+  })
+}
+
+// ── Machine Tag Runs ──────────────────────────────────────────
+
+export function useMachineTagRuns() {
+  return useQuery({
+    queryKey: ['mt-runs'],
+    queryFn: () => fetchJSON('/api/machine-tag/runs').then(d => d.runs || []),
+    staleTime: 10_000,
+  })
+}
+
+export function useMachineTagRun(runId) {
+  return useQuery({
+    queryKey: ['mt-run', runId],
+    queryFn: () => fetchJSON(`/api/machine-tag/runs/${runId}`),
+    enabled: !!runId,
+    staleTime: 3_000,
+    refetchInterval: (query) => {
+      const data = query.state.data
+      return data?.status === 'running' ? 3000 : false
+    },
+  })
+}
+
+export function useMachineTagRunResults(runId) {
+  return useQuery({
+    queryKey: ['mt-run-results', runId],
+    queryFn: () => fetchJSON(`/api/machine-tag/runs/${runId}/results`).then(d => d.results || []),
+    enabled: !!runId,
+    staleTime: 5_000,
+  })
+}
+
+export function useCreateMachineTagRun() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (body) => fetchJSON('/api/machine-tag/runs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['mt-runs'] }),
+  })
+}
+
+export function useCancelMachineTagRun() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (runId) => fetchJSON(`/api/machine-tag/runs/${runId}/cancel`, { method: 'POST' }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['mt-runs'] }),
   })
 }
