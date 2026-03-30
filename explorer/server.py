@@ -14,7 +14,7 @@ Usage:
 import hashlib
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -1274,7 +1274,10 @@ def review_tables(doc_id: str):
 # ── Ground Truth Annotation ───────────────────────────────
 
 from test_set import TEST_SET, is_test_set
-from ground_truth import load_toc_gt_dict, save_toc_gt_dict, toc_gt_path
+from ground_truth import (
+    load_toc_gt_dict, save_toc_gt_dict, toc_gt_path, gt_dir,
+    v1_dict_to_v2_dict, v2_dict_to_v1_dict,
+)
 from classify_tables import _detect_toc, _parse_toc_entries
 from validate_ground_truth import validate_all as validate_gt_all
 
@@ -1365,8 +1368,26 @@ def annotate_get_toc(doc_id: str):
         except (json.JSONDecodeError, OSError):
             pass
 
+    # Also check for v2 file
+    v2_path = gt_dir(str(fixture_dir)) / "toc_v2.json"
+    v2_gt = None
+    if v2_path.exists():
+        try:
+            with open(v2_path) as f:
+                v2_gt = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            pass
+
     if gt:
-        return {"doc_id": doc_id, "ground_truth": gt, "page_count": page_count, "page_dims": page_dims}
+        # Include v2 data if available, otherwise convert v1 on the fly
+        ground_truth_v2 = v2_gt or v1_dict_to_v2_dict(gt)
+        return {
+            "doc_id": doc_id,
+            "ground_truth": gt,
+            "ground_truth_v2": ground_truth_v2,
+            "page_count": page_count,
+            "page_dims": page_dims,
+        }
 
     # Return empty template
     return {"doc_id": doc_id, "page_count": page_count, "page_dims": page_dims, "ground_truth": {
@@ -1377,12 +1398,22 @@ def annotate_get_toc(doc_id: str):
         "sections": [],
         "notes_start_page": None,
         "notes_end_page": None,
+    }, "ground_truth_v2": {
+        "version": 2,
+        "annotator": "",
+        "has_toc": None,
+        "toc_pages": [],
+        "transitions": [],
+        "multi_tags": [],
     }}
 
 
 @app.post("/api/annotate/{doc_id}/toc")
 async def annotate_save_toc(doc_id: str, request: Request):
-    """Save ground truth TOC for a document."""
+    """Save ground truth TOC for a document.
+
+    Accepts v1 or v2 format. If v2, also writes v1 compat for pipeline.
+    """
     _require_auth(request)
     body = await request.json()
     if USE_SUPABASE:
@@ -1392,7 +1423,34 @@ async def annotate_save_toc(doc_id: str, request: Request):
     if not fixture_dir.exists():
         return {"error": f"fixture directory not found: {doc_id}"}
 
-    save_toc_gt_dict(str(fixture_dir), body)
+    version = body.get("version", 1)
+    if version >= 2:
+        # Get total pages for v1 end_page calculation
+        total_pages = None
+        tg_path = fixture_dir / "table_graphs.json"
+        if tg_path.exists():
+            try:
+                with open(tg_path) as f:
+                    tg = json.load(f)
+                pages_obj = tg.get("pages", {})
+                if isinstance(pages_obj, dict):
+                    total_pages = len(pages_obj)
+            except (json.JSONDecodeError, OSError):
+                pass
+
+        # Save v2 canonical
+        v2_path = gt_dir(str(fixture_dir)) / "toc_v2.json"
+        v2_path.parent.mkdir(parents=True, exist_ok=True)
+        body["annotated_at"] = datetime.now(timezone.utc).isoformat()
+        with open(v2_path, "w") as f:
+            json.dump(body, f, indent=2, ensure_ascii=False)
+
+        # Write v1 compat
+        v1_data = v2_dict_to_v1_dict(body, total_pages=total_pages)
+        save_toc_gt_dict(str(fixture_dir), v1_data)
+    else:
+        save_toc_gt_dict(str(fixture_dir), body)
+
     return {"status": "saved", "doc_id": doc_id}
 
 
@@ -1940,6 +1998,229 @@ def annotate_validate(doc_id: str):
     fixture_dir = str(REPO_ROOT / "eval" / "fixtures" / doc_id)
     result = validate_gt_all(fixture_dir)
     return {"doc_id": doc_id, **result}
+
+
+# ── Annotation v2 endpoints ───────────────────────────────
+
+
+@app.get("/api/annotate/{doc_id}/page-features")
+def annotate_page_features(doc_id: str):
+    """Per-page features: rank predictions + TOC entries + note references.
+
+    Combines multiple data sources into a single per-page feature map
+    for the annotation workflow UI.
+    """
+    fixture_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+
+    # 1. Rank tags (ML page classifier predictions)
+    rank_tags: dict = {}
+    rank_path = fixture_dir / "rank_tags.json"
+    if rank_path.exists():
+        try:
+            with open(rank_path) as f:
+                rt_data = json.load(f)
+            rank_tags = rt_data.get("pages", {})
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # 2. TOC entries (from pipeline detection)
+    toc_entries: dict[int, str] = {}
+    tg_path = fixture_dir / "table_graphs.json"
+    if tg_path.exists():
+        try:
+            with open(tg_path) as f:
+                tg = json.load(f)
+            page_map = _detect_toc(tg.get("tables", []))
+            if page_map:
+                toc_entries = page_map
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # 3. Note references (from reference graph)
+    note_refs: dict[int, list] = {}  # page → list of note ref summaries
+    if tg_path.exists():
+        try:
+            with open(tg_path) as f:
+                tg = json.load(f)
+            from reference_graph import build_reference_graph
+            ref_graph = build_reference_graph(tg.get("tables", []))
+            # Index note refs by page (via source table page)
+            tables_by_id = {t["tableId"]: t for t in tg.get("tables", []) if "tableId" in t}
+            for note_num, entries in ref_graph.note_entries.items():
+                ctx = ref_graph.context_for_note(note_num)
+                for entry in entries:
+                    tbl = tables_by_id.get(entry.source_table_id)
+                    page = tbl.get("pageNo") if tbl else None
+                    if page is not None:
+                        note_refs.setdefault(page, []).append({
+                            "note_number": note_num,
+                            "source_label": entry.source_label,
+                            "target_context": ctx,
+                        })
+        except (json.JSONDecodeError, OSError, Exception):
+            pass
+
+    # 4. Get page count
+    page_count = 0
+    pages_obj = {}
+    if tg_path.exists():
+        try:
+            with open(tg_path) as f:
+                tg = json.load(f)
+            pages_obj = tg.get("pages", {})
+            page_count = len(pages_obj)
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Build per-page feature map
+    features: dict[str, dict] = {}
+    for p in range(1, page_count + 1):
+        ps = str(p)
+        feat: dict = {"page": p}
+
+        # Rank predictions
+        if ps in rank_tags:
+            rt = rank_tags[ps]
+            feat["top_class"] = rt.get("top_class")
+            feat["top_score"] = rt.get("top_score")
+            feat["predictions"] = rt.get("predictions", [])
+
+        # TOC entry
+        if p in toc_entries:
+            feat["toc_type"] = toc_entries[p]
+
+        # Note refs on this page
+        if p in note_refs:
+            feat["note_refs"] = note_refs[p]
+
+        features[ps] = feat
+
+    return {"doc_id": doc_id, "page_count": page_count, "features": features}
+
+
+@app.get("/api/annotate/{doc_id}/toc/entries")
+def annotate_toc_entries(doc_id: str):
+    """Parsed TOC table rows with bboxes.
+
+    Returns individual TOC entries extracted from the detected TOC table,
+    including row labels, page numbers, and bounding boxes for overlay display.
+    """
+    fixture_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    tg_path = fixture_dir / "table_graphs.json"
+    if not tg_path.exists():
+        return {"doc_id": doc_id, "entries": [], "toc_table_id": None}
+
+    try:
+        with open(tg_path) as f:
+            tg = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {"doc_id": doc_id, "entries": [], "toc_table_id": None}
+
+    tables = tg.get("tables", [])
+
+    # Find the TOC table using same heuristic as _detect_toc
+    toc_table = None
+    for tbl in tables[:20]:
+        rows = tbl.get("rows", [])
+        if len(rows) < 3:
+            continue
+        from reference_graph import has_note_column
+        if has_note_column(tbl):
+            continue
+        entries_count = 0
+        for r in rows:
+            for c in r.get("cells", []):
+                pv = c.get("parsedValue")
+                if pv is not None and 1 < pv < 500 and pv == int(pv):
+                    entries_count += 1
+                    break
+        if entries_count >= 3:
+            toc_table = tbl
+            break
+
+    if not toc_table:
+        return {"doc_id": doc_id, "entries": [], "toc_table_id": None}
+
+    # Extract entries with bboxes
+    entries = []
+    for r in toc_table.get("rows", []):
+        label = r.get("label", "").strip()
+        if not label:
+            continue
+        page_num = None
+        for c in r.get("cells", []):
+            pv = c.get("parsedValue")
+            if pv is not None and 1 < pv < 500 and pv == int(pv):
+                page_num = int(pv)
+        if page_num is None:
+            continue
+
+        # Determine section type from label
+        label_lower = label.lower()
+        section_type = None
+        from classify_tables import _STATEMENT_KEYWORDS
+        for kw, stmt in _STATEMENT_KEYWORDS.items():
+            if kw in label_lower:
+                section_type = _map_to_physical_section(stmt, label)
+                break
+
+        entries.append({
+            "label": label,
+            "page": page_num,
+            "section_type": section_type,
+            "bbox": r.get("bbox"),
+            "row_idx": r.get("rowIdx"),
+        })
+
+    return {
+        "doc_id": doc_id,
+        "entries": entries,
+        "toc_table_id": toc_table.get("tableId"),
+        "toc_page": toc_table.get("pageNo"),
+    }
+
+
+@app.post("/api/annotate/{doc_id}/transitions")
+async def annotate_save_transitions(doc_id: str, request: Request):
+    """Save v2 transitions and write v1 compat file.
+
+    Accepts TocGroundTruthV2 format, persists it, and also writes
+    the backward-compatible v1 toc.json for pipeline consumption.
+    """
+    _require_auth(request)
+    body = await request.json()
+    fixture_dir = REPO_ROOT / "eval" / "fixtures" / doc_id
+    if not fixture_dir.exists():
+        return {"error": f"fixture directory not found: {doc_id}"}
+
+    # Ensure version is 2
+    body.setdefault("version", 2)
+
+    # Get total pages for v1 end_page calculation
+    total_pages = None
+    tg_path = fixture_dir / "table_graphs.json"
+    if tg_path.exists():
+        try:
+            with open(tg_path) as f:
+                tg = json.load(f)
+            pages_obj = tg.get("pages", {})
+            if isinstance(pages_obj, dict):
+                total_pages = len(pages_obj)
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Save v2 as the canonical format
+    v2_path = gt_dir(str(fixture_dir)) / "toc_v2.json"
+    v2_path.parent.mkdir(parents=True, exist_ok=True)
+    body["annotated_at"] = datetime.now(timezone.utc).isoformat()
+    with open(v2_path, "w") as f:
+        json.dump(body, f, indent=2, ensure_ascii=False)
+
+    # Write v1 compat for pipeline
+    v1_data = v2_dict_to_v1_dict(body, total_pages=total_pages)
+    save_toc_gt_dict(str(fixture_dir), v1_data)
+
+    return {"status": "saved", "doc_id": doc_id, "version": 2}
 
 
 # ── Element Browser endpoints ─────────────────────────────

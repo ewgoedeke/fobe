@@ -228,6 +228,41 @@ export function useAnnotateValidate(docId) {
   })
 }
 
+// ── Annotation v2 ────────────────────────────────────────
+
+export function usePageFeatures(docId) {
+  return useQuery({
+    queryKey: ['page-features', docId],
+    queryFn: () => fetchJSON(`/api/annotate/${docId}/page-features`),
+    enabled: !!docId,
+    staleTime: 60_000,
+  })
+}
+
+export function useTocEntries(docId) {
+  return useQuery({
+    queryKey: ['toc-entries', docId],
+    queryFn: () => fetchJSON(`/api/annotate/${docId}/toc/entries`),
+    enabled: !!docId,
+    staleTime: 60_000,
+  })
+}
+
+export function useSaveTransitions(docId) {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (transitions) => fetchJSON(`/api/annotate/${docId}/transitions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(transitions),
+    }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['annotate-toc', docId] })
+      qc.invalidateQueries({ queryKey: ['annotate-documents'] })
+    },
+  })
+}
+
 // ── Elements Browser ─────────────────────────────────────
 
 export function useElementsBrowse() {
