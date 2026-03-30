@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "annotator": "",
+  "has_page_numbers": true,
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 3,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": null,
+  "notes_end_page": null,
+  "annotated_at": "2026-03-28T07:34:51.083489+00:00",
+  "has_toc": true
+}

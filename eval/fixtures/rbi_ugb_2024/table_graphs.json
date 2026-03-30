@@ -428,7 +428,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -1642,11 +1644,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -1783,7 +1787,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CASH",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:2",
@@ -1851,7 +1861,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:3",
@@ -1922,7 +1938,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:4",
@@ -2126,7 +2148,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:7",
@@ -2197,7 +2225,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:8",
@@ -2401,7 +2435,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.674,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:1:11",
@@ -2469,7 +2510,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:12",
@@ -2537,7 +2584,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:13",
@@ -2673,7 +2726,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EQUITY_ACCOUNTED_INVESTEES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:15",
@@ -2809,7 +2868,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:17",
@@ -2877,7 +2942,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:18",
@@ -2945,7 +3016,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_NON_FINANCIAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:19",
@@ -3013,7 +3090,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:1:20",
@@ -3156,7 +3239,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -3301,11 +3390,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -3445,7 +3536,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:2",
@@ -3513,7 +3610,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:3",
@@ -3581,7 +3684,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:4",
@@ -3649,7 +3758,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:5",
@@ -3717,7 +3832,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:6",
@@ -3790,7 +3911,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:7",
@@ -3858,7 +3985,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:8",
@@ -3926,7 +4059,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:9",
@@ -3997,7 +4136,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:10",
@@ -4065,7 +4210,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:11",
@@ -4133,7 +4284,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:12",
@@ -4276,7 +4433,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DEFERRED_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:14",
@@ -4424,7 +4587,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EMPLOYEE_BENEFITS_LIABILITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:16",
@@ -4492,7 +4661,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EMPLOYEE_BENEFITS_LIABILITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:17",
@@ -4560,7 +4735,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_TAX_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:18",
@@ -4628,7 +4809,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:19",
@@ -4696,7 +4883,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:20",
@@ -4764,7 +4957,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:21",
@@ -4910,7 +5109,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_CAPITAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:23",
@@ -4978,7 +5183,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TREASURY_SHARES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:24",
@@ -5124,7 +5335,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_PREMIUM",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:26",
@@ -5192,7 +5409,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_PREMIUM",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:27",
@@ -5335,7 +5558,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RETAINED_EARNINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:29",
@@ -5406,7 +5635,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RESERVES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:30",
@@ -5474,7 +5709,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RESERVES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:31",
@@ -5542,7 +5783,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RETAINED_EARNINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:2:32",
@@ -5610,7 +5857,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_EQUITY_AND_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -5845,11 +6098,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -6122,7 +6377,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CONTRACT_LIABILITIES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.688,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:3:4",
@@ -6258,7 +6520,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "NOTES.COMMITMENTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:3:6",
@@ -6870,7 +7139,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.REFUND_LIABILITY.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.689,
+            "statementRole": "SFP"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -6984,11 +7260,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -7133,7 +7411,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_INCOME_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:2",
@@ -7269,7 +7553,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_EXPENSE_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:4",
@@ -7412,7 +7702,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:6",
@@ -7480,7 +7776,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:7",
@@ -7548,7 +7850,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:8",
@@ -7616,7 +7924,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:9",
@@ -7759,7 +8073,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.FEE_COMMISSION_EXPENSE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:11",
@@ -7827,7 +8147,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.TRADING_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:12",
@@ -7895,7 +8221,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:13",
@@ -8038,7 +8370,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:15",
@@ -8106,7 +8444,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:16",
@@ -8582,7 +8926,15 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED",
+              "AXIS.SCOPE": "SCOPE.CONTINUING"
+            },
+            "matchConfidence": 0.752,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:4:23",
@@ -8650,7 +9002,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:24",
@@ -8718,7 +9076,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:25",
@@ -8796,7 +9160,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.TOTAL_COSTS_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:26",
@@ -8939,7 +9309,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.CREDIT_LOSS_EXPENSE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:28",
@@ -9007,7 +9383,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.IMPAIRMENT_FINANCIAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:29",
@@ -9079,7 +9461,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_BEFORE_TAX",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:30",
@@ -9147,7 +9535,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:31",
@@ -9215,7 +9609,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:32",
@@ -9356,7 +9756,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:34",
@@ -9564,7 +9970,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:4:37",
@@ -9703,7 +10115,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -9942,11 +10360,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -10388,11 +10808,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -10506,7 +10928,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:6:2",
@@ -10848,7 +11276,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:6:8",
@@ -11188,7 +11622,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.637,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:6:14",
@@ -11537,11 +11978,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -11775,7 +12218,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:3",
@@ -11879,7 +12328,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -12059,11 +12514,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -12295,7 +12752,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:8:3",
@@ -12399,7 +12862,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:8:4",
@@ -12503,7 +12972,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:8:5",
@@ -12607,7 +13082,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -12794,11 +13275,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -13349,7 +13832,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:9:5",
@@ -14573,11 +15063,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -14873,7 +15365,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:10:3",
@@ -15205,11 +15704,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -17224,7 +17725,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:11:15",
@@ -20409,11 +20917,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -22427,7 +22937,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:12:15",
@@ -25610,11 +26127,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -25948,7 +26467,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FOREIGN_CURRENCY_TRANSLATION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.663,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:13:5",
@@ -26352,11 +26878,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -26530,7 +27058,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:3",
@@ -26610,7 +27144,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -26766,11 +27306,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -26940,7 +27482,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:15:2",
@@ -27020,7 +27568,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -27148,11 +27702,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -27322,7 +27878,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:16:2",
@@ -27402,7 +27964,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:16:3",
@@ -27482,7 +28050,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:16:4",
@@ -27562,7 +28136,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:16:5",
@@ -27642,7 +28222,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:16:6",
@@ -27879,11 +28465,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -28053,7 +28641,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:2",
@@ -28133,7 +28727,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:3",
@@ -28213,7 +28813,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:4",
@@ -28293,7 +28899,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:5",
@@ -28373,7 +28985,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:6",
@@ -28453,7 +29071,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:7",
@@ -28533,7 +29157,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:17:8",
@@ -28773,11 +29403,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -32548,11 +33180,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -34521,11 +35155,13 @@
       "headerRowCount": 2,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -34818,7 +35454,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:3",
@@ -34946,7 +35588,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:4",
@@ -35074,7 +35722,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:5",
@@ -35202,7 +35856,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:6",
@@ -35717,7 +36377,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:10",
@@ -35845,7 +36511,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.EQUITY_ACCOUNTED_INVESTEES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:11",
@@ -35973,7 +36645,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INVESTMENT_IN_SUB",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:12",
@@ -36101,7 +36779,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:13",
@@ -36229,7 +36913,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:14",
@@ -36357,7 +37047,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PREPAYMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:20:15",
@@ -36491,7 +37187,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -36714,11 +37416,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -39282,11 +39986,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -39397,7 +40103,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:22:2",
@@ -39565,7 +40277,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:22:5",
@@ -39733,7 +40451,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:22:8",
@@ -39901,7 +40625,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:22:11",
@@ -40152,11 +40882,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -40872,11 +41604,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -41040,7 +41774,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:3",
@@ -41096,7 +41836,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:4",
@@ -41208,7 +41954,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:6",
@@ -41264,7 +42016,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:7",
@@ -41376,7 +42134,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:24:9",
@@ -41432,7 +42196,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -41562,11 +42332,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -41680,7 +42452,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:25:2",
@@ -42022,7 +42800,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:25:8",
@@ -42363,7 +43147,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:25:14",
@@ -42889,11 +43679,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -43057,7 +43849,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:26:3",
@@ -43113,7 +43911,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:26:4",
@@ -43225,7 +44029,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:26:6",
@@ -43281,7 +44091,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -43411,11 +44227,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -43582,7 +44400,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:27:2",
@@ -44188,11 +45012,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.MILLIONS",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -44945,11 +45771,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -45057,7 +45885,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:2",
@@ -45113,7 +45947,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:3",
@@ -45169,7 +46009,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:4",
@@ -45225,7 +46071,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:5",
@@ -45281,7 +46133,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:6",
@@ -45337,7 +46195,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:7",
@@ -45393,7 +46257,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:8",
@@ -45449,7 +46319,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:9",
@@ -45505,7 +46381,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:10",
@@ -45561,7 +46443,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:29:11",
@@ -45692,7 +46580,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [
@@ -45849,11 +46743,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -45961,7 +46857,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:30:2",
@@ -46017,7 +46919,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:30:3",
@@ -46073,7 +46981,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:30:4",
@@ -46129,7 +47043,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -46251,11 +47171,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -46525,7 +47447,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:2",
@@ -46653,7 +47581,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:3",
@@ -46781,7 +47715,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:4",
@@ -46909,7 +47849,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -47032,11 +47978,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -47144,7 +48092,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:2",
@@ -47200,7 +48154,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:3",
@@ -47256,7 +48216,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:4",
@@ -47312,7 +48278,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -47434,11 +48406,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -47724,11 +48698,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -47955,7 +48931,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.RESERVES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:4",
@@ -48011,7 +48993,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:34:5",
@@ -49986,7 +50974,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.RWA",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.692,
+            "statementRole": "SFP"
+          }
         }
       ],
       "aggregationGroups": [
@@ -50181,11 +51176,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -50357,7 +51354,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.RWA",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.692,
+            "statementRole": "SFP"
+          }
         },
         {
           "rowId": "row:35:3",
@@ -53030,11 +54034,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -54679,11 +55685,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -55013,11 +56021,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -55359,11 +56369,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -55529,7 +56541,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_INCOME_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:39:2",
@@ -55609,7 +56627,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_INCOME_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:39:3",
@@ -55689,7 +56713,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:39:4",
@@ -55856,7 +56886,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.TRADING_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:39:6",
@@ -55936,7 +56972,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -56067,11 +57109,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -56237,7 +57281,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_INCOME_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:40:2",
@@ -56317,7 +57367,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.INTEREST_INCOME_GROSS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:40:3",
@@ -56397,7 +57453,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.DIVIDEND_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:40:4",
@@ -56564,7 +57626,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.TRADING_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:40:6",
@@ -56644,7 +57712,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.OTHER_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -56775,11 +57849,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -57232,7 +58308,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_BEFORE_TAX",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:41:5",
@@ -57692,11 +58774,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -57927,7 +59011,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_INTEREST_INCOME",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:42:3",
@@ -58135,7 +59225,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.PROFIT_BEFORE_TAX",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:42:5",
@@ -58602,11 +59698,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -58858,7 +59956,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.STAFF_COSTS.HEADCOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.805,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:43:4",
@@ -59114,11 +60219,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -59633,11 +60740,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -60880,11 +61989,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -60992,7 +62103,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:46:2",
@@ -61048,7 +62165,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:46:3",
@@ -61104,7 +62227,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:46:4",
@@ -61160,7 +62289,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:46:5",
@@ -61216,7 +62351,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.STAFF_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:46:6",
@@ -61394,11 +62535,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -61506,7 +62649,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.ADMIN_EXPENSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -61628,11 +62777,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -61862,11 +63013,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -61974,7 +63127,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.FAIR_VALUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.68,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:2",
@@ -62086,7 +63246,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.716,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:4",
@@ -62142,7 +63309,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_PAYABLES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.657,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:49:5",
@@ -62327,11 +63501,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -62571,11 +63747,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -63063,7 +64241,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TRADE_RECEIVABLES.BY_GEOGRAPHY",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.661,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:51:6",
@@ -63623,7 +64808,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.67,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:51:13",
@@ -64063,11 +65255,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -64545,11 +65739,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -65693,11 +66889,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -66426,11 +67624,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -67828,11 +69028,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -68755,11 +69957,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -70157,11 +71361,13 @@
       "headerRowCount": 1,
       "labelColIdx": 1,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -71512,11 +72718,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -72696,11 +73904,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -74342,11 +75552,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -74512,7 +75724,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FINANCIAL_INSTRUMENTS.CARRYING_AMOUNT",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.642,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:61:2",
@@ -75632,11 +76851,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -77254,11 +78475,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -78041,11 +79264,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -78828,11 +80053,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -79707,11 +80934,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -80637,7 +81866,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:66:5",
@@ -82204,11 +83440,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -83134,7 +84372,14 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:67:5",
@@ -84701,11 +85946,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -85631,7 +86878,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:68:5",
@@ -86874,11 +88128,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -87804,7 +89060,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MARKET_RISK.CURRENCY_EXPOSURE",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.729,
+            "statementRole": "DISC.INTANGIBLES"
+          }
         },
         {
           "rowId": "row:69:5",
@@ -89047,11 +90310,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -89306,7 +90571,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.MEASURE.EQUITY_RATIO",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.693,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -89462,11 +90734,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -89798,7 +91072,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.LCR",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -89920,11 +91201,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.CREDIT_RISK"
       },
       "columns": [
         {
@@ -90144,7 +91427,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "RISK.NSFR",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "DISC.CREDIT_RISK"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -90266,11 +91556,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.FIN_INST"
       },
       "columns": [
         {
@@ -91050,11 +92342,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTANGIBLES",
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "low",
+        "classification_method": "llm",
+        "statementComponent": "DISC.FIN_INST"
       },
       "columns": [
         {

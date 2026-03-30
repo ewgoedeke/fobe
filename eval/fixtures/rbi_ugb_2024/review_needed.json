@@ -1,0 +1,1504 @@
+{
+  "generated_at": "2026-03-30T01:32:10.708881",
+  "document": "rbi_ugb_2024",
+  "gate_findings": [
+    {
+      "type": "inflated_primary",
+      "detail": "36 tables classified as SFP (max 8). Classification is likely broken."
+    },
+    {
+      "type": "inflated_primary",
+      "detail": "15 tables classified as PNL (max 8). Classification is likely broken."
+    }
+  ],
+  "toc_detected": {
+    "page_map": {
+      "3": "SFP",
+      "5": "PNL",
+      "14": "SFP",
+      "40": "PNL",
+      "62": "DISC.EQUITY",
+      "64": "DISC.INTANGIBLES"
+    }
+  },
+  "page_index": [
+    {
+      "page": 2,
+      "tables": [
+        {
+          "tableId": "raw_0",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Annual Financial Statements",
+            "Statement of financial position",
+            "Income statement"
+          ],
+          "col_headers": [],
+          "row_count": 25,
+          "data_row_count": 24,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "tables": [
+        {
+          "tableId": "raw_1",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Cash in hand and balances with central banks",
+            "Treasury bills and other bills eligible for refinancing with central banks",
+            "Loans to banks"
+          ],
+          "col_headers": [],
+          "row_count": 21,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=1"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "tables": [
+        {
+          "tableId": "raw_2",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Deposits from banks",
+            "a) Repayable on demand",
+            "b) With agreed maturity dates or periods of notice"
+          ],
+          "col_headers": [],
+          "row_count": 32,
+          "data_row_count": 25,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=2"
+        },
+        {
+          "tableId": "raw_3",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Foreign assets",
+            "EQUITY AND LIABILITIES",
+            "Contingent liabilities"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=3"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "tables": [
+        {
+          "tableId": "raw_4",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Interest receivable and similar income",
+            "hereof: from fixed-income securities",
+            "Interest payable and similar expenses"
+          ],
+          "col_headers": [],
+          "row_count": 38,
+          "data_row_count": 32,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=1"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "tables": [
+        {
+          "tableId": "raw_5",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Buildings",
+            "Office equipment",
+            "Office fixtures and fittings"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=2"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "tables": [
+        {
+          "tableId": "raw_6",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Loans to banks",
+            "Repayable on demand",
+            "Up to 3 months"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=4"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "tables": [
+        {
+          "tableId": "raw_7",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Mikro-Hedge active",
+            "Mikro-Hedge passive"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=5"
+        },
+        {
+          "tableId": "raw_8",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Makro-Hedge active",
+            "Makro-Hedge 6 Monats EURIBOR",
+            "Makro-Hedge Floor 3 Month EURIBOR"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=6"
+        },
+        {
+          "tableId": "raw_9",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CHF",
+            "CZK",
+            "EUR"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=7"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "tables": [
+        {
+          "tableId": "raw_10",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "EUR",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=8"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "tables": [
+        {
+          "tableId": "raw_11",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total",
+            "a) Interest rate contracts",
+            "OTC products"
+          ],
+          "col_headers": [],
+          "row_count": 34,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=9"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "tables": [
+        {
+          "tableId": "raw_12",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total",
+            "a) Interest rate contracts",
+            "OTC products"
+          ],
+          "col_headers": [],
+          "row_count": 34,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=10"
+        },
+        {
+          "tableId": "raw_13",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Derivatives in the trading book",
+            "a) Interest rate contracts",
+            "b) Foreign exchange rate contracts"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=11"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "tables": [
+        {
+          "tableId": "raw_14",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Debt securities and other fixed-income securities",
+            "Shares and other variable-yield securities"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=12"
+        },
+        {
+          "tableId": "raw_15",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Debt securities and other fixed-income securities",
+            "Shares and other variable-yield securities"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=13"
+        },
+        {
+          "tableId": "raw_16",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Treasury bills and other bills eligible for refinancing with central banks",
+            "Loans to banks",
+            "Loans to customers"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=14"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "tables": [
+        {
+          "tableId": "raw_17",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1 Treasury bills and other bills eligible for refinancing with central banks",
+            "2 Loans to banks",
+            "3 Loans to customers"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=15"
+        },
+        {
+          "tableId": "raw_18",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Akcenta CZ a.s., Prag 3",
+            "Angaga Handels- und Beteiligungs GmbH, Wien",
+            "AO Raiffeisenbank, Moskau 3"
+          ],
+          "col_headers": [],
+          "row_count": 34,
+          "data_row_count": 34,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=16"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "tables": [
+        {
+          "tableId": "raw_19",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "RB International Markets (USA) LLC, New York 3",
+            "RBI Kantinenbetriebs GmbH, Wien",
+            "RBI LEA Beteiligungs GmbH, Wien 2"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 17,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=17"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "tables": [
+        {
+          "tableId": "raw_20",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Treasury bills and other bills eligible for refinancing with central banks",
+            "Loans to banks",
+            "Loans to customers"
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=18"
+        },
+        {
+          "tableId": "raw_21",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1.",
+            "2.",
+            "3."
+          ],
+          "col_headers": [],
+          "row_count": 14,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=19"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "tables": [
+        {
+          "tableId": "raw_22",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Loans to banks",
+            "hereof to affiliated companies",
+            "hereof to companies linked by virtue of a participating interest"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=20"
+        },
+        {
+          "tableId": "raw_23",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Indemnification for securities lending transactions",
+            "Loans assigned to Oestereichische Kontrollbank (OeKB)",
+            "Indemnification for OeNB tender"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 8,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=21"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "tables": [
+        {
+          "tableId": "raw_24",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Loans to banks",
+            "To affiliated companies",
+            "To companies linked by virtue of a participating interest"
+          ],
+          "col_headers": [],
+          "row_count": 9,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=22"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "tables": [
+        {
+          "tableId": "raw_25",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Deposits from banks",
+            "Repayable on demand",
+            "Up to 3 months"
+          ],
+          "col_headers": [],
+          "row_count": 19,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=23"
+        },
+        {
+          "tableId": "raw_26",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Deposits from banks",
+            "From affiliated companies",
+            "From companies linked by virtue of a participating interest"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=24"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "tables": [
+        {
+          "tableId": "raw_27",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Provision amount in \u20ac million",
+            "Reduction in discounting period in years",
+            "Decrease in discount rate (IFRS 9 provision)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=25"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "tables": [
+        {
+          "tableId": "raw_28",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Provision amount in \u20ac million",
+            "Reduction in discounting period",
+            "Decrease in discount rate (IFRS 9 provision)"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=26"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "tables": [
+        {
+          "tableId": "raw_29",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Losses on bankbook derivatives",
+            "Guarantee loans",
+            "Process risks"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=27"
+        },
+        {
+          "tableId": "raw_30",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "RBI SUB.CALL.NTS 20-32",
+            "RBI NFS 19-30/S193T1",
+            "RBI SUB. BONDS 21-33"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=28"
+        },
+        {
+          "tableId": "raw_31",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Subordinated Notes 2032 Serie 215",
+            "Subordinated Notes 2033 Serie 231",
+            "Subordinated Notes 2032 Serie 258"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=29"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "tables": [
+        {
+          "tableId": "raw_32",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "RBI FIX TO FLR 17/UD",
+            "RBI FIX TO FLR 18/UD",
+            "RBI FIX TO RES RTE TIER 1"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=30"
+        },
+        {
+          "tableId": "raw_33",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Assets in foreign currency",
+            "Liabilities in foreign currency"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=31"
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "tables": [
+        {
+          "tableId": "raw_34",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Capital instruments and the related share premium accounts",
+            "Retained earnings",
+            "Accumulated other comprehensive income (and other reserves)"
+          ],
+          "col_headers": [],
+          "row_count": 39,
+          "data_row_count": 34,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=32"
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "tables": [
+        {
+          "tableId": "raw_35",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total risk-weighted assets (RWA)",
+            "Risk-weighted exposure amounts for credit, counterparty credit and dilution risk",
+            "Standardized approach (SA)"
+          ],
+          "col_headers": [],
+          "row_count": 32,
+          "data_row_count": 30,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=33"
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "tables": [
+        {
+          "tableId": "raw_36",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Total risk exposure amount for settlement/delivery",
+            "Settlement/delivery risk in the non-trading book",
+            "Settlement/delivery risk in the trading book"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 15,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=34"
+        },
+        {
+          "tableId": "raw_37",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Common equity tier 1 ratio (fully loaded)",
+            "Tier 1 ratio (fully loaded)",
+            "Total capital ratio (fully loaded)"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=35"
+        },
+        {
+          "tableId": "raw_38",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Leverage exposure",
+            "Tier 1",
+            "Leverage ratio in per cent \u00b9"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: SFP count=36"
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "tables": [
+        {
+          "tableId": "raw_39",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Interest receivable and similar income",
+            "hereof: from fixed-income securities",
+            "Income from variable-yield securities and participations"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=3"
+        },
+        {
+          "tableId": "raw_40",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Interest receivable and similar income",
+            "hereof: from fixed-income securities",
+            "Income from variable-yield securities and participations"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=4"
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "tables": [
+        {
+          "tableId": "raw_41",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Net interest income",
+            "Operating income",
+            "Profit on ordinary activities"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=5"
+        },
+        {
+          "tableId": "raw_42",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Net interest income Operating income",
+            "Profit on ordinary activities",
+            "Income taxes"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=6"
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "tables": [
+        {
+          "tableId": "raw_43",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Members of the management board and senior staff",
+            "Employees",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=7"
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "tables": [
+        {
+          "tableId": "raw_44",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Members of the Management Board",
+            "Johann Strobl, Chairman",
+            "Marie-Valerie Brunner"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=8"
+        },
+        {
+          "tableId": "raw_45",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Supervisory Board members",
+            "Erwin Hameseder, Chairman",
+            "Martin Schaller"
+          ],
+          "col_headers": [],
+          "row_count": 20,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=9"
+        },
+        {
+          "tableId": "raw_46",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Fixed remunerations",
+            "Bonus (performance-based)",
+            "Payments to pension funds and reinsurance policies"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=10"
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "tables": [
+        {
+          "tableId": "raw_47",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Remunerations Supervisory Board"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=11"
+        },
+        {
+          "tableId": "raw_48",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Remuneration Advisory Council"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=12"
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "tables": [
+        {
+          "tableId": "raw_49",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Debt securities",
+            "Shares",
+            "Deposits and other receivables"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=13"
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "tables": [
+        {
+          "tableId": "raw_50",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Johann Strobl m.p. Chairman of the Board, CEO",
+            "Andreas Gschwenter m.p. Member of the Board, COO/CIO",
+            "Hannes M\u00f6senbacher m.p. Member of the Board, CRO"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=14"
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "tables": [
+        {
+          "tableId": "raw_51",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Poland",
+            "Slovakia",
+            "Czech Republic"
+          ],
+          "col_headers": [],
+          "row_count": 16,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=15"
+        }
+      ]
+    },
+    {
+      "page": 71,
+      "tables": [
+        {
+          "tableId": "raw_52",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Approach",
+            "Economic perspective",
+            "Economic capital"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_53",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Participation risk",
+            "Credit risk corporate customers",
+            "Credit risk sovereigns"
+          ],
+          "col_headers": [],
+          "row_count": 11,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 72,
+      "tables": [
+        {
+          "tableId": "raw_54",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Corporate customers",
+            "Project finance",
+            "Retail customers"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 73,
+      "tables": [
+        {
+          "tableId": "raw_55",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Minimal risk",
+            "Excellent credit standing",
+            "Very good credit standing"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_56",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Excellent project risk profile - very low risk",
+            "Good project risk profile - low risk",
+            "Acceptable project risk profile - average risk"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 74,
+      "tables": [
+        {
+          "tableId": "raw_57",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Minimal risk",
+            "Excellent credit standing",
+            "Very good credit standing"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 11,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_58",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Minimal risk",
+            "Excellent credit standing",
+            "Very good credit standing"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 75,
+      "tables": [
+        {
+          "tableId": "raw_59",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1 Excellent credit standing",
+            "2 Very good credit standing",
+            "3 Good credit standing"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_60",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Austria",
+            "Germany",
+            "France"
+          ],
+          "col_headers": [],
+          "row_count": 17,
+          "data_row_count": 16,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 76,
+      "tables": [
+        {
+          "tableId": "raw_61",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Financial Intermediation",
+            "Manufacturing",
+            "Public administration and defense and social insurance institutions"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 77,
+      "tables": [
+        {
+          "tableId": "raw_62",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Individual loan loss provisions",
+            "Banks",
+            "Corporate customers"
+          ],
+          "col_headers": [],
+          "row_count": 13,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 80,
+      "tables": [
+        {
+          "tableId": "raw_63",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Currency risk",
+            "Interest rate risk",
+            "Credit spread risk"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_64",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Currency risk",
+            "Interest rate risk",
+            "Credit spread risk"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_65",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "in \u20ac thousand Economic capital ALL",
+            "Vega risk ALL 1",
+            "Total ALL"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 81,
+      "tables": [
+        {
+          "tableId": "raw_66",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CHF",
+            "CNY",
+            "CZK"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 82,
+      "tables": [
+        {
+          "tableId": "raw_67",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CHF",
+            "CNY",
+            "CZK"
+          ],
+          "col_headers": [],
+          "row_count": 12,
+          "data_row_count": 12,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_68",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CHF",
+            "CNY",
+            "CZK"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_69",
+          "classification": "DISC.INTANGIBLES",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "CHF",
+            "CNY",
+            "CZK"
+          ],
+          "col_headers": [],
+          "row_count": 10,
+          "data_row_count": 10,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 86,
+      "tables": [
+        {
+          "tableId": "raw_70",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "llm",
+          "confidence": "low",
+          "first_labels": [
+            "Liquidity gap",
+            "Liquidity ratio"
+          ],
+          "col_headers": [],
+          "row_count": 2,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_71",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "llm",
+          "confidence": "low",
+          "first_labels": [
+            "Average liquid assets",
+            "Net outflows",
+            "Inflows"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_72",
+          "classification": "DISC.CREDIT_RISK",
+          "method": "llm",
+          "confidence": "low",
+          "first_labels": [
+            "Required stable funding",
+            "Available stable funding",
+            "Net Stable Funding Ratio"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 88,
+      "tables": [
+        {
+          "tableId": "raw_73",
+          "classification": "DISC.FIN_INST",
+          "method": "llm",
+          "confidence": "low",
+          "first_labels": [
+            "Clients, Products and Business Practices",
+            "Excecution, Delivery and Process Management",
+            "External Fraud"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": false
+        },
+        {
+          "tableId": "raw_74",
+          "classification": "DISC.FIN_INST",
+          "method": "llm",
+          "confidence": "low",
+          "first_labels": [
+            "External Fraud",
+            "Excecution, Delivery and Process Management",
+            "Clients, Products and Business Practices"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 75,
+    "by_type": {
+      "SFP": 36,
+      "DISC.INTANGIBLES": 18,
+      "PNL": 15,
+      "DISC.CREDIT_RISK": 3,
+      "DISC.FIN_INST": 2
+    },
+    "flagged_count": 52,
+    "flagged_page_range": [
+      2,
+      50
+    ],
+    "suggested_action": "Review 15 PNL classifications on pages 5-50; likely over-classified. Review 36 SFP classifications on pages 3-39; likely over-classified. 1 unclassified tables need assignment"
+  }
+}

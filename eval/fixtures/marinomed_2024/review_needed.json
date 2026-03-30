@@ -1,0 +1,550 @@
+{
+  "generated_at": "2026-03-30T01:15:28.472420",
+  "document": "marinomed_2024",
+  "gate_findings": [
+    {
+      "type": "inflated_primary",
+      "detail": "19 tables classified as PNL (max 8). Classification is likely broken."
+    }
+  ],
+  "toc_detected": {
+    "page_map": {
+      "36": "DISC.EQUITY",
+      "45": "SFP",
+      "47": "PNL"
+    }
+  },
+  "page_index": [
+    {
+      "page": 3,
+      "tables": [
+        {
+          "tableId": "raw_0",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Business performance, business results and situation of the Company",
+            "Research and development",
+            "Strategy and anticipated development of the Company"
+          ],
+          "col_headers": [],
+          "row_count": 15,
+          "data_row_count": 13,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "tables": [
+        {
+          "tableId": "raw_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Cash flow from the result",
+            "Net cash flow from operating activities before tax",
+            "Net cash flow from operating activities"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "tables": [
+        {
+          "tableId": "raw_2",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ASSETS",
+            "A. Fixed assets",
+            "I. Intangible assets"
+          ],
+          "col_headers": [],
+          "row_count": 32,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "tables": [
+        {
+          "tableId": "raw_3",
+          "classification": "SFP",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "EQUITY ANDLIABILITIES",
+            "A. Negative equity",
+            "I. Share capital"
+          ],
+          "col_headers": [],
+          "row_count": 40,
+          "data_row_count": 27,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "tables": [
+        {
+          "tableId": "raw_4",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "1. Revenue",
+            "2. Changesintheinventory of unfinished services",
+            "3. Other operatingincome"
+          ],
+          "col_headers": [],
+          "row_count": 38,
+          "data_row_count": 29,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=1"
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "tables": [
+        {
+          "tableId": "raw_5",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "April 2025",
+            "November 2025",
+            "May 2026"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=2"
+        }
+      ]
+    },
+    {
+      "page": 49,
+      "tables": [
+        {
+          "tableId": "raw_6",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "January 2025",
+            "May 2025",
+            "November 2025"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=3"
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "tables": [
+        {
+          "tableId": "raw_7",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "IT software",
+            "Patents"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=4"
+        },
+        {
+          "tableId": "raw_8",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Land and buldings (incl. property fixtures)",
+            "Machines",
+            "Other fixtures and fittings"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=5"
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "tables": [
+        {
+          "tableId": "raw_9",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Fixed assets",
+            "Intangible assets",
+            "Patents and licenses"
+          ],
+          "col_headers": [],
+          "row_count": 31,
+          "data_row_count": 22,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=6"
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "tables": [
+        {
+          "tableId": "raw_10",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Marino Immo GmbH"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=7"
+        }
+      ]
+    },
+    {
+      "page": 56,
+      "tables": [
+        {
+          "tableId": "raw_11",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Borrowing costs",
+            "Tax asset company car",
+            "Accrued personnel expenses"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=8"
+        },
+        {
+          "tableId": "raw_12",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Borrowing costs",
+            "Tax asset company car",
+            "Accrued personnel expenses"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=9"
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "tables": [
+        {
+          "tableId": "raw_13",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "No-par value bearer shares"
+          ],
+          "col_headers": [],
+          "row_count": 1,
+          "data_row_count": 1,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=10"
+        }
+      ]
+    },
+    {
+      "page": 59,
+      "tables": [
+        {
+          "tableId": "raw_14",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Patents and licenses",
+            "Land and buildings",
+            "Fixtures and fittings"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=11"
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "tables": [
+        {
+          "tableId": "raw_15",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Patents and licenses",
+            "Land and buildings",
+            "Fixtures and fittings"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=12"
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "tables": [
+        {
+          "tableId": "raw_16",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "N\u00d6BEG financing",
+            "AWS interest",
+            "WAWloan"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=13"
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "tables": [
+        {
+          "tableId": "raw_17",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Sale of goods",
+            "Upfront and milestone payments",
+            "Licence revenues"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=14"
+        },
+        {
+          "tableId": "raw_18",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Austria",
+            "Other european countries",
+            "Non-European countries"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=15"
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "tables": [
+        {
+          "tableId": "raw_19",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Release of accruals",
+            "Research premium",
+            "Release of investment grants"
+          ],
+          "col_headers": [],
+          "row_count": 8,
+          "data_row_count": 7,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=16"
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "tables": [
+        {
+          "tableId": "raw_20",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Management Board",
+            "Other employees",
+            "Total"
+          ],
+          "col_headers": [],
+          "row_count": 3,
+          "data_row_count": 2,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=17"
+        },
+        {
+          "tableId": "raw_21",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "ManagementBoard",
+            "Chairman",
+            "Member"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=18"
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "tables": [
+        {
+          "tableId": "raw_22",
+          "classification": "PNL",
+          "method": "toc",
+          "confidence": "high",
+          "first_labels": [
+            "Membersofthe Supervisory Board",
+            "Chairman",
+            "Deputy Chairwoman"
+          ],
+          "col_headers": [],
+          "row_count": 7,
+          "data_row_count": 0,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "inflated_primary: PNL count=19"
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "tables": [
+        {
+          "tableId": "raw_23",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Management Board",
+            "Executive employees",
+            "Other employees"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_24",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Audit fees financial statements",
+            "Other assurance services",
+            "Other advisory services"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 25,
+    "by_type": {
+      "PNL": 19,
+      "SFP": 2
+    },
+    "flagged_count": 23,
+    "flagged_page_range": [
+      3,
+      68
+    ],
+    "suggested_action": "Review 19 PNL classifications on pages 47-67; likely over-classified. 4 unclassified tables need assignment"
+  }
+}

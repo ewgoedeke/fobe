@@ -1,6 +1,6 @@
 {
   "docId": "omv_ugb_2024",
-  "generatedAt": "2026-03-26T07:56:34.823858+00:00",
+  "generatedAt": "2026-03-27T19:49:49.410019+00:00",
   "pages": {
     "1": {
       "width": 595.4,
@@ -184,11 +184,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
+        "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2873,7 +2875,9 @@
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -3437,14 +3441,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.SHARE_PREMIUM",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:7",
@@ -3848,14 +3845,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RETAINED_EARNINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:12",
@@ -3938,14 +3928,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RETAINED_EARNINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:13",
@@ -4189,14 +4172,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RETAINED_EARNINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:16",
@@ -4436,14 +4412,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PROVISIONS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:19",
@@ -4523,14 +4492,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.EMPLOYEE_BENEFITS_LIABILITY",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:20",
@@ -4610,14 +4572,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.EMPLOYEE_BENEFITS_LIABILITY",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:21",
@@ -4697,14 +4652,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PROVISIONS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:22",
@@ -4784,14 +4732,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PROVISIONS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:23",
@@ -4956,14 +4897,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.LOANS_BORROWINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:25",
@@ -5043,14 +4977,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.LOANS_BORROWINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:26",
@@ -5293,14 +5220,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.LOANS_BORROWINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:29",
@@ -5543,14 +5463,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TRADE_PAYABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:32",
@@ -5790,14 +5703,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RELATED_PARTY_PAYABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:35",
@@ -5960,14 +5866,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.OTHER_LIABILITIES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:1:37",
@@ -6563,7 +6462,9 @@
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -6727,14 +6628,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.REVENUE",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:2",
@@ -6814,14 +6708,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:3",
@@ -7012,14 +6899,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:5",
@@ -7259,14 +7139,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.MATERIAL_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:8",
@@ -7346,14 +7219,7 @@
               "isNegative": true
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.MATERIAL_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:9",
@@ -7436,14 +7302,7 @@
               "isNegative": true
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.PURCHASED_SERVICES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:10",
@@ -7603,14 +7462,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.STAFF_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:12",
@@ -7690,14 +7542,7 @@
               "isNegative": true
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.STAFF_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:13",
@@ -8177,14 +8022,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.DEPRECIATION_AMORTISATION",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:19",
@@ -8424,14 +8262,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_EXPENSES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:22",
@@ -8834,14 +8665,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.DIVIDEND_INCOME",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:27",
@@ -9164,14 +8988,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.FINANCE_INCOME",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:31",
@@ -9411,14 +9228,7 @@
               "isNegative": true
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.UGB.EXPENSE_FINANCIAL_ASSETS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:34",
@@ -9661,14 +9471,7 @@
               "isNegative": true
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.FINANCE_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:37",
@@ -9988,14 +9791,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.INCOME_TAX_EXPENSE",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:41",
@@ -10155,14 +9951,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.NET_PROFIT",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:43",
@@ -10324,14 +10113,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RETAINED_EARNINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:2:45",
@@ -10662,11 +10444,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -10783,14 +10567,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.INTANGIBLE_ASSETS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:3:2",
@@ -10922,14 +10699,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         }
       ],
       "aggregationGroups": [],
@@ -11008,11 +10778,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -12699,11 +12471,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -13496,11 +13270,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -13920,11 +13696,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14196,11 +13974,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RELATED_PARTIES",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -14969,11 +14749,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -15145,14 +14927,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:9:3",
@@ -15232,14 +15007,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.RELATED_PARTY_RECEIVABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:9:4",
@@ -15639,14 +15407,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.UGB.OTHER_RECEIVABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:9:9",
@@ -15868,11 +15629,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EQUITY",
+        "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -16338,11 +16101,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EQUITY",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -16804,11 +16569,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -18292,14 +18059,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.FINANCE_COSTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:12:14",
@@ -18929,7 +18689,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -19664,11 +19426,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -20422,11 +20186,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PROVISIONS",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -20778,7 +20544,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -20950,14 +20718,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.LOANS_BORROWINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:16:3",
@@ -21037,14 +20798,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.LOANS_BORROWINGS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:16:4",
@@ -21124,14 +20878,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.TRADE_PAYABLES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:16:5",
@@ -21771,14 +21518,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.OTHER_LIABILITIES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:16:13",
@@ -22160,11 +21900,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -23517,11 +23259,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -23873,7 +23617,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24037,14 +23783,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.PNL.OTHER_INCOME",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:19:3",
@@ -24268,7 +24007,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -24600,7 +24341,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -25040,11 +24783,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -25598,11 +25343,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -25954,7 +25701,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -26591,11 +26340,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
+        "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -27959,11 +27710,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
+        "statementComponent": null,
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -28883,11 +28636,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PERSONNEL",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29163,7 +28918,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -30845,11 +30602,13 @@
       "headerRowCount": 2,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PERSONNEL",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -31799,7 +31558,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -33666,7 +33427,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -35127,11 +34890,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CONTINGENCIES",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -35432,11 +35197,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": "UNIT.PERCENT",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -36445,10 +36212,10 @@
       "tableId": "raw_34",
       "pageNo": 38,
       "bbox": [
-        43.5935173034668,
-        634.6139984130859,
-        508.8096923828125,
-        387.37481689453125
+        43.59318161010742,
+        634.6206359863281,
+        508.7945251464844,
+        387.36181640625
       ],
       "headerRowCount": 0,
       "labelColIdx": 0,
@@ -36457,7 +36224,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -36961,11 +36730,13 @@
       "headerRowCount": 1,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
+        "statementComponent": null,
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -37921,14 +37692,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:35:8",
@@ -38286,14 +38050,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.INVESTMENT_IN_SUB",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:35:11",
@@ -38409,14 +38166,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.UGB.LOANS_TO_AFFILIATES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:35:12",
@@ -38532,14 +38282,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:35:13",
@@ -38655,14 +38398,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.UGB.OTHER_LOANS_NONCURRENT",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:35:14",
@@ -39067,10 +38803,10 @@
       "tableId": "raw_36",
       "pageNo": 42,
       "bbox": [
-        43.49044418334961,
-        435.22344970703125,
-        795.927001953125,
-        258.3492736816406
+        43.49102020263672,
+        435.2216796875,
+        795.9290161132812,
+        258.34796142578125
       ],
       "headerRowCount": 1,
       "labelColIdx": 0,
@@ -39079,7 +38815,9 @@
         "detectedCurrency": null,
         "detectedUnit": null,
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -39726,14 +39464,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.PPE_NET",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:36:6",
@@ -40045,14 +39776,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.INVESTMENT_IN_SUB",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:36:9",
@@ -40158,14 +39882,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.UGB.LOANS_TO_AFFILIATES",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:36:10",
@@ -40269,14 +39986,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:36:11",
@@ -40383,14 +40093,7 @@
               "isNegative": false
             }
           ],
-          "preTagged": {
-            "conceptId": "FS.SFP.UGB.OTHER_LOANS_NONCURRENT",
-            "method": "structural",
-            "confidence": 0.8,
-            "rule": "label_match",
-            "sourceRows": [],
-            "edge": "ontology_label_index"
-          }
+          "preTagged": null
         },
         {
           "rowId": "row:36:12",

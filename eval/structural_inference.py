@@ -80,7 +80,7 @@ POSITION_ORDERED = {
 
 # ── Build phase ───────────────────────────────────────────────────
 
-PRIMARY_STATEMENTS = {"PNL", "SFP", "OCI", "CFS", "SOCIE"}
+from section_types import PRIMARY_STATEMENTS
 
 
 def build_table_hierarchies(tables: list[dict]) -> list[TableHierarchy]:

@@ -5,3 +5,72 @@ __pycache__/
 dist/
 build/
 .env
+node_modules/
+explorer/frontend/dist/
+
+# PDF source documents (large binaries, not tracked)
+sources/**/*.pdf
+
+# Eval artifacts (keep on disk, don't track)
+eval/fixtures/**/*.bak
+eval/fixtures/**/*.structural.bak
+eval/fixtures/**/prompts/
+eval/fixtures/**/images/
+eval/fixtures/**/images.json
+eval/runs/
+docs/*.tsv
+eval/_archive/
+eval/fixtures/saldenliste_gmbh/
+eval/.embed_cache/
+eval/batch_ingest_state*.json
+eval/batch_ingest_report.json
+eval/rank_embed_eval_report.json
+eval/rank_eval_report.json
+eval/toc_analysis_report.json
+
+# Fixture directories: ignore all, then un-ignore the 36 tracked ones.
+# To track a new fixture: add !eval/fixtures/<name>/ below.
+eval/fixtures/*/
+!eval/fixtures/agrana_2024/
+!eval/fixtures/amag_2024/
+!eval/fixtures/andritz_2024/
+!eval/fixtures/andritz_ugb_2024/
+!eval/fixtures/bawag_ugb_2024/
+!eval/fixtures/ca_immo_2024/
+!eval/fixtures/ca_immo_2024_en/
+!eval/fixtures/doco_2024/
+!eval/fixtures/eurotelesites_2024/
+!eval/fixtures/evn_2024/
+!eval/fixtures/facc_2024/
+!eval/fixtures/flughafen_wien_2024/
+!eval/fixtures/frequentis_2024/
+!eval/fixtures/icbc_austria_2024/
+!eval/fixtures/kapsch_2024/
+!eval/fixtures/kpmg_ifs_2025/
+!eval/fixtures/kpmg_ifs_banks_2025/
+!eval/fixtures/kpmg_ifs_insurance_2024/
+!eval/fixtures/lenzing_2024_full/
+!eval/fixtures/lenzing_2025/
+!eval/fixtures/marinomed_2024/
+!eval/fixtures/mayr_melnhof_2024/
+!eval/fixtures/mayr_melnhof_full_2024/
+!eval/fixtures/omv_2024/
+!eval/fixtures/omv_ugb_2024/
+!eval/fixtures/palfinger_2024/
+!eval/fixtures/pierer_afr_2024/
+!eval/fixtures/pierer_mobility_2024/
+!eval/fixtures/rbi_ugb_2024/
+!eval/fixtures/s_immo_2024/
+!eval/fixtures/strabag_ugb_2024/
+!eval/fixtures/vig_holding_2024/
+!eval/fixtures/warimpex_2024/
+!eval/fixtures/wienerberger_2024/
+!eval/fixtures/zumtobel_2024/
+
+# Explorer artifacts
+explorer/test_screenshots/
+
+# Claude Code / agent config (local)
+.claude/
+.agents/
+skills-lock.json

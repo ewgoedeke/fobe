@@ -6,12 +6,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -462,12 +464,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -2540,7 +2544,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2652,7 +2658,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -2919,7 +2927,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3186,7 +3196,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3378,7 +3390,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3520,7 +3534,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -3657,12 +3673,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -4838,12 +4856,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -6341,7 +6361,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -6851,12 +6873,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -7878,12 +7902,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -8217,7 +8243,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TAX_NON_RECLASSIFIABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:7",
@@ -8253,8 +8285,7 @@
               "parsedValue": 27.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:14:8",
@@ -8555,7 +8586,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.CFH_RECLASS_TO_PNL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:15",
@@ -8636,7 +8673,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.COST_OF_HEDGING_RECLASS_TO_PNL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:17",
@@ -8717,7 +8760,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.FVOCI_DEBT_RECLASS_TO_PNL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:19",
@@ -8754,7 +8803,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.OCI.TAX_RECLASSIFIABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:14:20",
@@ -8790,8 +8845,7 @@
               "parsedValue": 404.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:14:21",
@@ -8899,12 +8953,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -9594,7 +9650,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -10166,12 +10224,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -10266,8 +10326,7 @@
               "parsedValue": -119.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:1",
@@ -10315,8 +10374,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:2",
@@ -10364,8 +10422,7 @@
               "parsedValue": -119.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:3",
@@ -10462,8 +10519,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:5",
@@ -10511,8 +10567,7 @@
               "parsedValue": 275.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:6",
@@ -10560,8 +10615,7 @@
               "parsedValue": 275.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:7",
@@ -10658,8 +10712,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:9",
@@ -11001,8 +11054,7 @@
               "parsedValue": 156.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:16",
@@ -11099,8 +11151,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:18",
@@ -11148,8 +11199,7 @@
               "parsedValue": 458.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:19",
@@ -11197,8 +11247,7 @@
               "parsedValue": 458.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:20",
@@ -11344,8 +11393,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:23",
@@ -11834,8 +11882,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:17:33",
@@ -12079,8 +12126,7 @@
               "parsedValue": 622.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -12100,12 +12146,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -14433,12 +14481,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -15323,7 +15373,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.WC_INTANGIBLE_EMISSIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:19:20",
@@ -15624,7 +15680,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.WC_PROVISIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:19:27",
@@ -15824,12 +15886,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -16556,12 +16620,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -16823,12 +16889,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -17733,12 +17801,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "PNL",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -17805,7 +17875,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.STAFF_COSTS.BY_FUNCTION",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.695,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:23:2",
@@ -17855,7 +17932,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.AUDITOR_REPORTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.813,
+            "statementRole": "PNL"
+          }
         },
         {
           "rowId": "row:23:4",
@@ -17925,12 +18009,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18130,12 +18216,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18329,12 +18417,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18441,12 +18531,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -18516,8 +18608,7 @@
               "parsedValue": 5599.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:1",
@@ -18553,8 +18644,7 @@
               "parsedValue": 30367.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:2",
@@ -18590,8 +18680,7 @@
               "parsedValue": 317.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:3",
@@ -18664,8 +18753,7 @@
               "parsedValue": 42.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:5",
@@ -18701,8 +18789,7 @@
               "parsedValue": -445.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:6",
@@ -18738,8 +18825,7 @@
               "parsedValue": -1583.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:7",
@@ -18775,8 +18861,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:8",
@@ -18812,8 +18897,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:9",
@@ -19071,8 +19155,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:16",
@@ -19108,8 +19191,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:17",
@@ -19145,8 +19227,7 @@
               "parsedValue": 23025.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:18",
@@ -19182,8 +19263,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:19",
@@ -19219,8 +19299,7 @@
               "parsedValue": 5765.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:27:20",
@@ -19256,8 +19335,7 @@
               "parsedValue": 12180.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -19277,12 +19355,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -19393,8 +19473,7 @@
               "parsedValue": 15016.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:1",
@@ -19448,8 +19527,7 @@
               "parsedValue": 110403.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:2",
@@ -19503,8 +19581,7 @@
               "parsedValue": 7549.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:3",
@@ -19561,8 +19638,7 @@
               "parsedValue": 117952.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:4",
@@ -19616,8 +19692,7 @@
               "parsedValue": 209.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:5",
@@ -19671,8 +19746,7 @@
               "parsedValue": -1523.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:6",
@@ -19726,8 +19800,7 @@
               "parsedValue": -6124.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:7",
@@ -19781,8 +19854,7 @@
               "parsedValue": 1141.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:8",
@@ -19836,8 +19908,7 @@
               "parsedValue": 587.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:9",
@@ -19891,8 +19962,7 @@
               "parsedValue": 238.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:10",
@@ -19946,8 +20016,7 @@
               "parsedValue": -326.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:11",
@@ -20001,8 +20070,7 @@
               "parsedValue": -519.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:12",
@@ -20056,8 +20124,7 @@
               "parsedValue": 33.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:13",
@@ -20166,8 +20233,7 @@
               "parsedValue": -116.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:15",
@@ -20221,8 +20287,7 @@
               "parsedValue": 493.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:16",
@@ -20276,8 +20341,7 @@
               "parsedValue": 107400.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:17",
@@ -20331,8 +20395,7 @@
               "parsedValue": 2489.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:28:18",
@@ -20462,12 +20525,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "NOTES",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -21185,12 +21250,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -21301,8 +21368,7 @@
               "parsedValue": 10375.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:1",
@@ -21356,8 +21422,7 @@
               "parsedValue": 119912.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:2",
@@ -21411,8 +21476,7 @@
               "parsedValue": 9516.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:3",
@@ -21469,8 +21533,7 @@
               "parsedValue": 129428.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:4",
@@ -21524,8 +21587,7 @@
               "parsedValue": 151.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:5",
@@ -21579,8 +21641,7 @@
               "parsedValue": -1299.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:6",
@@ -21634,8 +21695,7 @@
               "parsedValue": -5917.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:7",
@@ -21689,8 +21749,7 @@
               "parsedValue": 587.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:8",
@@ -21744,8 +21803,7 @@
               "parsedValue": 28.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:9",
@@ -21799,8 +21857,7 @@
               "parsedValue": 76.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:10",
@@ -21854,8 +21911,7 @@
               "parsedValue": -193.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:11",
@@ -21909,8 +21965,7 @@
               "parsedValue": -1408.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:12",
@@ -22019,8 +22074,7 @@
               "parsedValue": 83703.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:14",
@@ -22074,8 +22128,7 @@
               "parsedValue": 1948.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:15",
@@ -22129,8 +22182,7 @@
               "parsedValue": 2923.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:30:16",
@@ -22184,8 +22236,7 @@
               "parsedValue": 50790.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -22205,12 +22256,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -22324,7 +22377,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_REPORTABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:2",
@@ -22579,7 +22638,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_REPORTABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:8",
@@ -22616,7 +22681,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_OTHER",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:9",
@@ -22653,7 +22724,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_ELIM_INTERSEGMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:10",
@@ -22815,7 +22892,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.RECON_REVENUE_TOTAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:14",
@@ -22889,7 +22972,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:16",
@@ -23004,7 +23093,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:19",
@@ -23085,7 +23180,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:21",
@@ -23200,7 +23301,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.TOTAL_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:31:24",
@@ -23257,12 +23364,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -23552,7 +23661,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:6",
@@ -23589,7 +23704,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:7",
@@ -23626,7 +23747,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:8",
@@ -23663,7 +23790,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:9",
@@ -23744,7 +23877,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_REVERSAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:32:11",
@@ -23808,12 +23947,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24103,7 +24244,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.OTHER_MATERIAL_ITEMS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:33:6",
@@ -24140,7 +24287,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:33:7",
@@ -24204,12 +24357,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HELD_FOR_SALE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HELD_FOR_SALE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24542,12 +24697,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -24849,12 +25006,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -25516,7 +25675,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -25926,12 +26087,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -26415,12 +26578,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -27445,7 +27610,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.EXTERNAL_REVENUE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -27465,12 +27636,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -27682,12 +27854,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SEGMENTS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -27849,8 +28023,7 @@
               "parsedValue": 96884.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:41:1",
@@ -27922,8 +28095,7 @@
               "parsedValue": 22730.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:41:2",
@@ -28071,8 +28243,7 @@
               "parsedValue": 66862.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:41:4",
@@ -28217,8 +28388,7 @@
               "parsedValue": 3483.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:41:6",
@@ -28839,7 +29009,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -28977,12 +29149,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -29052,7 +29226,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.TRADE_RECEIVABLES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:43:1",
@@ -29089,7 +29269,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.ASSETS_HELD_FOR_SALE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:43:2",
@@ -29197,12 +29383,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29309,12 +29496,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.REVENUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -29626,12 +29814,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -30144,12 +30334,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.IMPAIRMENT",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -30912,7 +31104,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.UNWINDING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:47:19",
@@ -31190,12 +31388,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -31484,12 +31684,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -31795,7 +31997,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS.WEIGHTED_AVG_SHARES_BASIC",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -31815,12 +32023,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32018,7 +32228,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS.DILUTION_EFFECT_CONVERTIBLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:50:2",
@@ -32170,12 +32386,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EPS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EPS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32289,7 +32507,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS.DILUTION_EFFECT_CONVERTIBLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:51:2",
@@ -32326,7 +32550,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EPS.DILUTION_EFFECT_OPTIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:51:3",
@@ -32394,12 +32624,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32717,12 +32949,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -32849,12 +33083,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -33425,12 +33661,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -33708,12 +33946,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -34041,12 +34281,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -34116,7 +34358,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.NET_LIABILITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:57:1",
@@ -34509,12 +34757,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -34749,7 +34999,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_SERVICE_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:3",
@@ -34804,7 +35060,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_PAST_SERVICE_COST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:4",
@@ -35086,7 +35348,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:9",
@@ -35141,7 +35409,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:10",
@@ -35196,7 +35470,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_REMEASUREMENT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:11",
@@ -35251,7 +35531,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.PA_RETURN_EXCL_INTEREST",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:12",
@@ -35478,7 +35764,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.PA_CONTRIBUTIONS_EMPLOYER",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:16",
@@ -35533,7 +35825,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.DBO_BENEFITS_PAID",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:17",
@@ -35815,7 +36113,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.NET_LIABILITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:22",
@@ -35870,7 +36174,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.EMPLOYEE_BENEFITS.NET_LIABILITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:58:23",
@@ -35945,12 +36255,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -36039,7 +36351,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:2",
@@ -36070,7 +36388,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:3",
@@ -36101,7 +36425,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:4",
@@ -36132,7 +36462,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:5",
@@ -36163,7 +36499,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:6",
@@ -36225,7 +36567,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_DEBT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:8",
@@ -36287,7 +36635,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FV_HEDGING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:10",
@@ -36318,7 +36672,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FV_HEDGING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:11",
@@ -36349,7 +36709,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVTPL_MANDATORY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:12",
@@ -36442,7 +36808,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.FIN_INST.ASSET_FVOCI_EQUITY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:59:15",
@@ -36493,12 +36865,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -36676,12 +37049,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37018,12 +37393,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37303,12 +37680,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37644,7 +38023,16 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "NOTES.SHARE_BASED_PAYMENTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.679,
+            "statementRole": "DISC.EMPLOYEE_BENEFITS",
+            "noteContext": "DISC.SHARE_BASED",
+            "noteNumber": 12
+          }
         },
         {
           "rowId": "row:63:8",
@@ -37701,12 +38089,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -37840,7 +38230,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.CURRENT_CORPORATE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:64:3",
@@ -37871,7 +38267,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.CURRENT_PILLAR2",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:64:4",
@@ -37939,8 +38341,7 @@
               "parsedValue": 3560.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:64:6",
@@ -38009,7 +38410,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_TEMP_DIFF",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:64:8",
@@ -38040,7 +38447,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RATE_CHANGE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:64:9",
@@ -38071,7 +38484,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:64:10",
@@ -38132,8 +38551,7 @@
               "parsedValue": -1100.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:64:12",
@@ -38191,12 +38609,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -39573,12 +39993,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -39778,12 +40200,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -39871,7 +40295,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.RECON_AT_DOMESTIC_RATE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:1",
@@ -39964,7 +40394,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.CURRENT_PILLAR2",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:3",
@@ -40007,7 +40443,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RATE_CHANGE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:4",
@@ -40143,7 +40585,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.RECON_NON_DEDUCTIBLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:7",
@@ -40186,7 +40634,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.RECON_TAX_EXEMPT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:8",
@@ -40229,7 +40683,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.RECON_TAX_INCENTIVES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:9",
@@ -40315,7 +40775,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.TAX.DEFERRED_RECOG_PRIOR_LOSSES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:67:11",
@@ -40471,12 +40937,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -41149,12 +41617,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -41827,12 +42297,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -41937,8 +42409,7 @@
               "parsedValue": -1379.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:1",
@@ -41992,8 +42463,7 @@
               "parsedValue": -76.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:2",
@@ -42047,8 +42517,7 @@
               "parsedValue": -204.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:3",
@@ -42105,8 +42574,7 @@
               "parsedValue": -37.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:4",
@@ -42160,8 +42628,7 @@
               "parsedValue": -139.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:5",
@@ -42215,8 +42682,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:6",
@@ -42270,8 +42736,7 @@
               "parsedValue": -31.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:7",
@@ -42325,8 +42790,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:8",
@@ -42380,8 +42844,7 @@
               "parsedValue": -63.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:9",
@@ -42435,8 +42898,7 @@
               "parsedValue": -254.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:10",
@@ -42490,8 +42952,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:11",
@@ -42545,8 +43006,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:12",
@@ -42600,8 +43060,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:13",
@@ -42655,8 +43114,7 @@
               "parsedValue": -11.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:14",
@@ -42710,8 +43168,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:15",
@@ -42765,8 +43222,7 @@
               "parsedValue": -2194.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:70:16",
@@ -42896,12 +43352,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -43006,8 +43464,7 @@
               "parsedValue": -1537.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:1",
@@ -43061,8 +43518,7 @@
               "parsedValue": -38.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:2",
@@ -43116,8 +43572,7 @@
               "parsedValue": -22.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:3",
@@ -43171,8 +43626,7 @@
               "parsedValue": -30.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:4",
@@ -43226,8 +43680,7 @@
               "parsedValue": -71.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:5",
@@ -43281,8 +43734,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:6",
@@ -43336,8 +43788,7 @@
               "parsedValue": -43.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:7",
@@ -43391,8 +43842,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:8",
@@ -43446,8 +43896,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:9",
@@ -43501,8 +43950,7 @@
               "parsedValue": -241.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:10",
@@ -43556,8 +44004,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:11",
@@ -43611,8 +44058,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:12",
@@ -43666,8 +44112,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:13",
@@ -43721,8 +44166,7 @@
               "parsedValue": -4.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:14",
@@ -43776,8 +44220,7 @@
               "parsedValue": null,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:15",
@@ -43847,8 +44290,7 @@
               "parsedValue": -1986.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:71:16",
@@ -43978,12 +44420,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44177,12 +44621,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44311,12 +44757,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -44934,12 +45382,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -46118,12 +46568,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -46332,12 +46784,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -46575,12 +47028,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -46812,7 +47267,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -46899,12 +47356,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RELATED_PARTIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -46974,7 +47433,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.RELATED_PARTIES.RECEIVABLES_FROM",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:80:1",
@@ -47075,12 +47540,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47189,12 +47656,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47317,7 +47786,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CASH",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:82:3",
@@ -47382,7 +47857,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CASH",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:82:5",
@@ -47474,12 +47955,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -47826,12 +48309,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -48878,12 +49363,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -50108,12 +50595,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -50312,12 +50801,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOV_GRANTS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -51578,12 +52069,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.IMPAIRMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -53086,12 +53579,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SEGMENTS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTANGIBLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -53198,7 +53693,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.SEGMENTS.IMPAIRMENT_NON_FINANCIAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:90:2",
@@ -53373,12 +53874,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": null,
+        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -53938,12 +54441,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -54039,7 +54544,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.GOODWILL.CGU_GROWTH_RATE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:92:2",
@@ -54090,12 +54601,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -54191,7 +54704,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.GOODWILL.CGU_GROWTH_RATE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -54216,7 +54735,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -54323,12 +54844,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PPE",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -54442,7 +54965,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PPE.COST_ADDITIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:95:2",
@@ -54592,12 +55121,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INV_PROP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INV_PROP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -54737,12 +55268,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -54916,12 +55449,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.GOODWILL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.GOODWILL",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -55625,12 +56160,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -56266,12 +56803,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.ASSOCIATES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.ASSOCIATES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -56480,12 +57019,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -56705,7 +57246,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.HEDGE.HEDGING_INSTRUMENT_CARRYING_ASSET",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:102:6",
@@ -56829,7 +57376,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.HEDGE.HEDGING_INSTRUMENT_CARRYING_ASSET",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:102:10",
@@ -56918,12 +57471,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57117,12 +57672,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57457,12 +58014,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57602,12 +58161,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -57747,12 +58308,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -58599,12 +59161,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -58904,8 +59468,7 @@
               "parsedValue": 679.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:4",
@@ -58965,8 +59528,7 @@
               "parsedValue": -20.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:5",
@@ -59453,8 +60015,7 @@
               "parsedValue": -157.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:13",
@@ -59528,8 +60089,7 @@
               "parsedValue": 733.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:14",
@@ -59711,8 +60271,7 @@
               "parsedValue": 471.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:17",
@@ -59772,8 +60331,7 @@
               "parsedValue": -8.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:18",
@@ -60138,8 +60696,7 @@
               "parsedValue": -169.0,
               "isNegative": true
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:108:24",
@@ -60210,8 +60767,7 @@
               "parsedValue": 431.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -60231,12 +60787,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -60449,7 +61007,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.HEDGE.CFH_RESERVE_CLOSING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:109:5",
@@ -60580,12 +61144,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -61258,12 +61824,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -62356,7 +62924,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -62463,12 +63033,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BIOLOGICAL_ASSETS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -62653,12 +63225,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -62848,7 +63421,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -62986,12 +63561,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -63139,12 +63716,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -63917,7 +64496,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.NET_CASH_FINANCING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:117:15",
@@ -64528,12 +65113,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -65554,8 +66141,7 @@
               "parsedValue": 1863.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:118:14",
@@ -66163,8 +66749,7 @@
               "parsedValue": 347.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:118:23",
@@ -66297,8 +66882,7 @@
               "parsedValue": 74509.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -66318,12 +66902,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -66789,7 +67375,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.NET_CASH_FINANCING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:119:9",
@@ -66832,7 +67424,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.FX_EFFECT_ON_CASH",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:119:10",
@@ -67357,12 +67955,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -68681,12 +69281,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CONTINGENCIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CONTINGENCIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69309,12 +69911,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BORROWINGS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BORROWINGS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69592,12 +70196,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BCA",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -69854,7 +70460,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -69941,12 +70549,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PROVISIONS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.PROVISIONS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -70131,7 +70741,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.OPENING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:2",
@@ -70192,7 +70808,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.BCA",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:3",
@@ -70253,7 +70875,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.ADDITIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:4",
@@ -70314,7 +70942,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.UTILISED",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:5",
@@ -70375,7 +71009,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.RELEASED",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:6",
@@ -70436,7 +71076,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.UNWINDING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:7",
@@ -70566,7 +71212,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.PROVISIONS.CLOSING",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:125:9",
@@ -70788,7 +71440,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -70957,12 +71611,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BORROWINGS",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -71087,7 +71743,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:2",
@@ -71130,7 +71792,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:3",
@@ -71223,7 +71891,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:5",
@@ -71266,7 +71940,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:6",
@@ -71309,7 +71989,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:7",
@@ -71538,7 +72224,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:12",
@@ -71667,7 +72359,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:15",
@@ -71710,7 +72408,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:16",
@@ -71753,7 +72457,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_FINANCIAL_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:17",
@@ -71796,7 +72506,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:18",
@@ -71975,7 +72691,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:22",
@@ -72018,7 +72740,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:23",
@@ -72061,7 +72789,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:24",
@@ -72104,7 +72838,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:25",
@@ -72147,7 +72887,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:26",
@@ -72190,7 +72936,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DIVIDEND_PAYABLE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:127:27",
@@ -72303,12 +73055,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -73943,12 +74697,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -74073,7 +74829,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:2",
@@ -74116,7 +74878,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:3",
@@ -74209,7 +74977,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:5",
@@ -74252,7 +75026,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:6",
@@ -74295,7 +75075,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:7",
@@ -74524,7 +75310,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_INVESTMENTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:12",
@@ -74653,7 +75445,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:15",
@@ -74696,7 +75494,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:16",
@@ -74918,7 +75722,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:21",
@@ -74961,7 +75771,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:22",
@@ -75004,7 +75820,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:23",
@@ -75047,7 +75869,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.LOANS_BORROWINGS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:129:24",
@@ -75160,12 +75988,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FAIR_VALUE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -76463,12 +77293,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -76632,12 +77463,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FAIR_VALUE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -76912,12 +77744,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.BCA",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -77609,12 +78443,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78000,12 +78836,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.IMPAIRMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.IMPAIRMENT",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78207,12 +79045,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78421,12 +79261,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -78628,12 +79470,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79048,12 +79892,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79416,12 +80262,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -79747,12 +80595,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80115,12 +80965,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80446,12 +81298,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HELD_FOR_SALE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HELD_FOR_SALE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80672,12 +81526,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -80910,12 +81766,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.CREDIT_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CREDIT_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -81774,12 +82632,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -82166,12 +83026,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -82554,12 +83416,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -82780,12 +83644,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -83954,7 +84820,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -84123,12 +84991,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -85168,7 +86038,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -85399,12 +86271,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -86208,12 +87082,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FX_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -86407,12 +87283,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FX_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FX_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -86903,12 +87781,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.FIN_INST",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.FIN_INST",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -87286,12 +88166,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INTEREST_RATE_RISK",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INTEREST_RATE_RISK",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -87702,12 +88584,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -88144,12 +89028,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.HEDGE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.HEDGE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -88307,7 +89193,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.HEDGE.HEDGING_INSTRUMENT_NOTIONAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:159:3",
@@ -88529,7 +89421,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.HEDGE.HEDGING_INSTRUMENT_NOTIONAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:159:9",
@@ -88586,12 +89484,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -89139,12 +90039,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -89431,12 +90333,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -89797,12 +90701,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.INVENTORIES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90085,12 +90991,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90451,12 +91359,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -90621,7 +91531,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:4",
@@ -90652,7 +91568,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:5",
@@ -90683,7 +91605,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:6",
@@ -90752,7 +91680,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:8",
@@ -90783,7 +91717,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGING_RESERVE",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:9",
@@ -90845,7 +91785,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGE_TRANSFER_TO_INVENTORY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:165:11",
@@ -90947,12 +91893,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -91317,7 +92265,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SOCIE.HEDGE_TRANSFER_TO_INVENTORY",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:166:10",
@@ -91450,12 +92404,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SOCIE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SOCIE",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -92063,12 +93019,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TRADE_PAYABLES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -92293,7 +93251,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:4",
@@ -92336,7 +93300,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:5",
@@ -92379,7 +93349,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:6",
@@ -92565,7 +93541,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:10",
@@ -92608,7 +93590,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:11",
@@ -92787,7 +93775,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:15",
@@ -92830,7 +93824,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:16",
@@ -92873,7 +93873,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_ASSETS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:17",
@@ -93059,7 +94065,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:21",
@@ -93102,7 +94114,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.DERIVATIVE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:168:22",
@@ -93165,12 +94183,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.SHARE_BASED",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -93413,12 +94433,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.SHARE_BASED",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -93525,12 +94546,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -93989,12 +95012,13 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -94120,12 +95144,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.BCA",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.CASH",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -94180,7 +95206,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BCA.CONSIDERATION_TOTAL",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:173:1",
@@ -94211,7 +95243,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BCA.NCI_AT_ACQUISITION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:173:2",
@@ -94273,7 +95311,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.BCA.NET_ASSETS_ACQUIRED",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:173:4",
@@ -94336,12 +95380,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "SFP",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "SFP",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -94573,7 +95619,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:7",
@@ -94722,7 +95774,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:12",
@@ -95114,7 +96172,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:25",
@@ -95260,7 +96324,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NCI",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:174:30",
@@ -95433,12 +96503,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.NCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.NCI",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -97469,7 +98541,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -97604,12 +98678,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -97760,7 +98836,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_DEPRECIATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:177:3",
@@ -97797,7 +98879,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_ADDITIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:177:4",
@@ -97834,7 +98922,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_DERECOGNITION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:177:5",
@@ -97903,12 +98997,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98059,7 +99155,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_DEPRECIATION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:178:3",
@@ -98096,7 +99198,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_ADDITIONS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:178:4",
@@ -98133,7 +99241,13 @@
               "isNegative": true
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DISC.LEASES.ROU_DERECOGNITION",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:178:5",
@@ -98202,12 +99316,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98427,7 +99543,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.CFS.PAYMENT_LEASE_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -98447,12 +99569,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -98792,12 +99916,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.LEASES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.LEASES",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -99073,7 +100199,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -99210,12 +100338,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.EMPLOYEE_BENEFITS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -99469,12 +100599,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.INVENTORIES",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RELATED_PARTIES",
+        "classification_confidence": "medium",
+        "classification_method": "note_section"
       },
       "columns": [
         {
@@ -99692,12 +100824,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.DIVIDENDS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.DIVIDENDS",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -100319,7 +101453,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -100556,12 +101692,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.TAX",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.TAX",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -101341,12 +102479,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.RESTATEMENT",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "DISC.RESTATEMENT",
+        "classification_confidence": "medium",
+        "classification_method": "keyword"
       },
       "columns": [
         {
@@ -101621,7 +102761,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -102384,7 +103526,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -102711,7 +103855,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -102854,7 +104000,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103096,7 +104244,9 @@
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "classification_confidence": "none",
+        "classification_method": "unclassified"
       },
       "columns": [
         {
@@ -103358,12 +104508,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -103501,12 +104653,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "OCI",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -103741,12 +104895,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -103813,7 +104969,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.PPE_NET",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.694,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:196:2",
@@ -103858,12 +105021,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -103937,7 +105102,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.RD_EXPENSES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.716,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:197:2",
@@ -103987,7 +105159,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.INTANGIBLE_ASSETS_GOODWILL",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.722,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -104007,12 +105186,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104399,12 +105580,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104538,12 +105721,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104687,12 +105872,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -104777,7 +105964,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.SUSTAINABILITY",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.637,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:201:2",
@@ -104901,7 +106095,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.APPENDICES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -104921,12 +106122,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105236,12 +106439,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105326,7 +106531,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.AUDITOR_REPORTS",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.813,
+            "statementRole": "CFS"
+          }
         },
         {
           "rowId": "row:203:2",
@@ -105450,7 +106662,14 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "DOC.APPENDICES",
+            "dimensions": {
+              "AXIS.ENTITY": "ENTITY.CONSOLIDATED"
+            },
+            "matchConfidence": 0.9,
+            "statementRole": "CFS"
+          }
         }
       ],
       "aggregationGroups": [],
@@ -105470,12 +106689,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -105860,12 +107081,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106027,12 +107250,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106344,12 +107569,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106709,12 +107936,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106852,12 +108081,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -106995,12 +108226,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "PNL",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -107576,7 +108809,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_FINANCE_COSTS",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:211:12",
@@ -108471,12 +109710,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "OCI",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -108897,8 +110138,7 @@
               "parsedValue": 27.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:212:10",
@@ -109462,8 +110702,7 @@
               "parsedValue": 404.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         },
         {
           "rowId": "row:212:23",
@@ -109723,8 +110962,7 @@
               "parsedValue": 6405.0,
               "isNegative": false
             }
-          ],
-          "preTagged": null
+          ]
         }
       ],
       "aggregationGroups": [],
@@ -109744,12 +110982,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "CFS",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {
@@ -111643,12 +112883,14 @@
       "headerRowCount": 0,
       "labelColIdx": 0,
       "metadata": {
-        "statementComponent": "DISC.PPE",
         "detectedCurrency": "CURRENCY.EUR",
         "detectedUnit": "UNIT.THOUSANDS",
         "signConvention": "PRESENTATION",
         "sectionPath": [],
-        "scope": null
+        "scope": null,
+        "statementComponent": "CFS",
+        "classification_confidence": "high",
+        "classification_method": "toc"
       },
       "columns": [
         {

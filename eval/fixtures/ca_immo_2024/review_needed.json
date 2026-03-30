@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-03-30T01:15:16.360902",
+  "document": "ca_immo_2024",
+  "gate_findings": [
+    {
+      "type": "toc_unresolved",
+      "detail": "Only 0 primary statement types found: []. Need >= 1."
+    }
+  ],
+  "toc_detected": null,
+  "page_index": [
+    {
+      "page": 2,
+      "tables": [
+        {
+          "tableId": "sfp_ca_immo",
+          "classification": "DISC.TAX",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "Assets",
+            "A. Fixed assets",
+            "I. Intangible fixed assets"
+          ],
+          "col_headers": [],
+          "row_count": 51,
+          "data_row_count": 28,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "tables": [
+        {
+          "tableId": "pnl_ca_immo",
+          "classification": "DISC.PROVISIONS",
+          "method": "keyword",
+          "confidence": "medium",
+          "first_labels": [
+            "1. Gross revenues",
+            "2. Other operating income",
+            "a) Income from the disposal and write-ups of fixed assets"
+          ],
+          "col_headers": [],
+          "row_count": 30,
+          "data_row_count": 19,
+          "sectionPath": [],
+          "flagged": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 2,
+    "by_type": {
+      "DISC.TAX": 1,
+      "DISC.PROVISIONS": 1
+    },
+    "flagged_count": 0,
+    "flagged_page_range": null,
+    "suggested_action": "Review classifications"
+  }
+}
