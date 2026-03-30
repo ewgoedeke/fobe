@@ -107,7 +107,17 @@ export default function AnnotationWorkflow({ initialDocId }) {
     setDetecting(true)
     try {
       const result = await detectMutation.mutateAsync()
-      const markers = (result.markers || result.transitions || []).map(m => ({
+      // Detect endpoint may return v2 transitions/markers or v1 sections — normalise
+      let raw = result.markers || result.transitions || []
+      if (raw.length === 0 && result.sections?.length > 0) {
+        raw = result.sections.map(s => ({
+          page: s.start_page,
+          section_type: s.statement_type,
+          label: s.label || '',
+          note_number: s.note_number || null,
+        }))
+      }
+      const markers = raw.map(m => ({
         ...m,
         source: m.source || 'detected',
         validated: false,

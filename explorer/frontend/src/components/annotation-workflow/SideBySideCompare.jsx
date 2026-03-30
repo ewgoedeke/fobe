@@ -101,16 +101,26 @@ export function SideBySideCompare({
           <div className="flex-1 flex flex-col min-w-0">
             <div className="text-[11px] font-medium text-muted-foreground mb-1 flex items-center gap-1.5">
               <span className="size-2 rounded-full bg-purple-500 shrink-0" />
-              Target — p.{edge.target_page}
+              Target — {edge.target_page ? `p.${edge.target_page}` : (edge.target_context || edge.target_id || 'unknown')}
             </div>
             <div className="flex-1 min-h-0 overflow-auto rounded border border-border bg-muted/30">
-              <PageWithOverlays
-                docId={docId}
-                pageNo={edge.target_page}
-                pageDims={targetDims}
-                tables={targetTables}
-                showDoclingElements={false}
-              />
+              {edge.target_page ? (
+                <PageWithOverlays
+                  docId={docId}
+                  pageNo={edge.target_page}
+                  pageDims={targetDims}
+                  tables={targetTables}
+                  showDoclingElements={false}
+                />
+              ) : (
+                <div className="flex items-center justify-center h-full text-muted-foreground text-sm">
+                  <div className="text-center">
+                    <div className="font-medium">{edge.target_context || edge.target_id}</div>
+                    <div className="text-xs mt-1">Note {edge.note_number}</div>
+                    <div className="text-xs text-muted-foreground/60 mt-0.5">Page not annotated yet</div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
