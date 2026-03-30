@@ -92,35 +92,37 @@ export function useAnnotationState(docId) {
   // Load transitions when doc data arrives
   useEffect(() => {
     if (!tocData) return
+    // Prefer v2 format if available (returned as ground_truth_v2 by the API)
+    const v2 = tocData.ground_truth_v2
+    if (v2 && v2.version === 2 && (v2.transitions?.length > 0 || v2.multi_tags?.length > 0)) {
+      dispatch({
+        type: LOAD,
+        transitions: v2.transitions || [],
+        multiTags: v2.multi_tags || [],
+        hasToc: v2.has_toc,
+        tocPages: v2.toc_pages || [],
+      })
+      return
+    }
+    // Fall back to v1 ground_truth
     const gt = tocData.ground_truth
     if (!gt) return
-    if (gt.version === 2) {
-      dispatch({
-        type: LOAD,
-        transitions: gt.transitions || [],
-        multiTags: gt.multi_tags || [],
-        hasToc: gt.has_toc,
-        tocPages: gt.toc_pages || [],
-      })
-    } else {
-      // v1 — convert sections to transitions
-      const transitions = (gt.sections || [])
-        .sort((a, b) => a.start_page - b.start_page)
-        .map(s => ({
-          page: s.start_page,
-          section_type: s.statement_type,
-          label: s.label || '',
-          note_number: s.note_number || null,
-          source: 'manual',
-          validated: s.validated || false,
-        }))
-      dispatch({
-        type: LOAD,
-        transitions,
-        hasToc: gt.has_toc,
-        tocPages: gt.toc_pages || [],
-      })
-    }
+    const transitions = (gt.sections || [])
+      .sort((a, b) => a.start_page - b.start_page)
+      .map(s => ({
+        page: s.start_page,
+        section_type: s.statement_type,
+        label: s.label || '',
+        note_number: s.note_number || null,
+        source: 'manual',
+        validated: s.validated || false,
+      }))
+    dispatch({
+      type: LOAD,
+      transitions,
+      hasToc: gt.has_toc,
+      tocPages: gt.toc_pages || [],
+    })
   }, [tocData])
 
   // Auto-save with 2s debounce

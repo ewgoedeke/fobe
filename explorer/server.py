@@ -734,6 +734,92 @@ def stats():
     }
 
 
+# ── Dashboard: corpus health + activity ──────────────────
+
+@app.get("/api/dashboard/corpus-health")
+def dashboard_corpus_health():
+    """Per-fixture file completeness for the dashboard."""
+    fixtures_dir = REPO_ROOT / "eval" / "fixtures"
+    results = []
+    for d in sorted(fixtures_dir.iterdir()):
+        if not d.is_dir():
+            continue
+        tg = d / "table_graphs.json"
+        if not tg.exists():
+            continue
+        doc_id = d.name
+        has_docling = (d / "docling_elements.json").exists()
+        has_gt = (d / "ground_truth").is_dir()
+        has_rank = (d / "rank_tags.json").exists()
+        has_meta = (d / "document_meta.json").exists()
+        # Quick completeness check on table_graphs
+        tg_ok = True
+        table_count = 0
+        try:
+            with open(tg) as f:
+                data = json.load(f)
+            table_count = len(data.get("tables", []))
+            if table_count == 0:
+                tg_ok = False
+        except (json.JSONDecodeError, OSError):
+            tg_ok = False
+        results.append({
+            "doc_id": doc_id,
+            "table_graphs": tg_ok,
+            "table_count": table_count,
+            "docling": has_docling,
+            "ground_truth": has_gt,
+            "rank_tags": has_rank,
+            "meta": has_meta,
+        })
+    # Summary
+    total = len(results)
+    complete = sum(1 for r in results if r["docling"] and r["table_graphs"] and r["meta"])
+    missing_docling = [r["doc_id"] for r in results if not r["docling"]]
+    missing_meta = [r["doc_id"] for r in results if not r["meta"]]
+    broken_tg = [r["doc_id"] for r in results if not r["table_graphs"]]
+    return {
+        "total": total,
+        "complete": complete,
+        "missing_docling": missing_docling,
+        "missing_meta": missing_meta,
+        "broken_table_graphs": broken_tg,
+        "fixtures": results,
+    }
+
+
+@app.get("/api/dashboard/tag-activity")
+def dashboard_tag_activity():
+    """Aggregate tag log entries by day for the activity chart."""
+    entries = []
+    if USE_SUPABASE:
+        try:
+            entries = Q.get_tag_log(limit=5000, offset=0)
+        except Exception:
+            pass
+    if not entries and _TAG_LOG_PATH.exists():
+        lines = [l for l in _TAG_LOG_PATH.read_text().strip().split("\n") if l]
+        entries = [json.loads(l) for l in lines]
+    # Aggregate by day and action
+    from collections import Counter
+    day_action = Counter()
+    day_total = Counter()
+    for e in entries:
+        ts = e.get("timestamp", "")[:10]  # YYYY-MM-DD
+        action = e.get("action", "unknown")
+        day_action[(ts, action)] += 1
+        day_total[ts] += 1
+    # Build chart-friendly array sorted by date
+    days = sorted(set(d for d, _ in day_action))
+    chart = []
+    for day in days:
+        row = {"date": day, "total": day_total[day]}
+        for action in ("add", "remove", "reclassify"):
+            row[action] = day_action.get((day, action), 0)
+        chart.append(row)
+    return {"activity": chart, "total_actions": sum(day_total.values())}
+
+
 # ── Document / PDF endpoints ──────────────────────────────
 
 # Index: scan fixtures for table_graphs.json and map concepts → (document, page)
@@ -1715,17 +1801,35 @@ def get_doc_edges(doc_id: str):
         tg = json.load(f)
     from reference_graph import build_reference_graph
     ref_graph = build_reference_graph(tg.get("tables", []))
+
+    # Build lookup: table_id → pageNo
+    tables_by_id = {t["tableId"]: t for t in tg.get("tables", []) if "tableId" in t}
+
+    # Build lookup: section_type → start_page from ground truth
+    gt = load_toc_gt_dict(str(REPO_ROOT / "eval" / "fixtures" / doc_id))
+    section_pages: dict[str, int] = {}
+    if gt:
+        for sec in gt.get("sections", []):
+            st = sec.get("statement_type", "")
+            if st not in section_pages:
+                section_pages[st] = sec.get("start_page", 0)
+
     edges = []
     for note_num, entries in ref_graph.note_entries.items():
         ctx = ref_graph.context_for_note(note_num)
         for entry in entries:
+            source_tbl = tables_by_id.get(entry.source_table_id)
+            source_page = source_tbl.get("pageNo") if source_tbl else None
+            target_page = section_pages.get(ctx) if ctx else None
             edges.append({
                 "id": f"{doc_id}:{entry.source_table_id}:{entry.source_row_idx}:{note_num}",
                 "edge_type": "note_ref",
                 "source_type": "table_row",
                 "source_id": f"{entry.source_table_id}:{entry.source_row_idx}",
+                "source_page": source_page,
                 "target_type": "toc_section",
                 "target_id": ctx or f"note_{note_num}",
+                "target_page": target_page,
                 "note_number": note_num,
                 "confidence": 1.0,
                 "validated": False,
@@ -2025,6 +2129,7 @@ def annotate_page_features(doc_id: str):
 
     # 2. TOC entries (from pipeline detection)
     toc_entries: dict[int, str] = {}
+    toc_refs: dict[int, list] = {}  # target page → list of {label, page} from TOC rows
     tg_path = fixture_dir / "table_graphs.json"
     if tg_path.exists():
         try:
@@ -2033,6 +2138,34 @@ def annotate_page_features(doc_id: str):
             page_map = _detect_toc(tg.get("tables", []))
             if page_map:
                 toc_entries = page_map
+            # Build toc_refs: for each TOC row, record the label → target page mapping
+            for tbl in tg.get("tables", [])[:20]:
+                rows = tbl.get("rows", [])
+                if len(rows) < 3:
+                    continue
+                entries_count = 0
+                for r in rows:
+                    for c in r.get("cells", []):
+                        pv = c.get("parsedValue")
+                        if pv is not None and 1 < pv < 500 and pv == int(pv):
+                            entries_count += 1
+                            break
+                if entries_count < 3:
+                    continue
+                for r in rows:
+                    label = r.get("label", "").strip()
+                    if not label:
+                        continue
+                    for c in r.get("cells", []):
+                        pv = c.get("parsedValue")
+                        if pv is not None and 1 < pv < 500 and pv == int(pv):
+                            target_page = int(pv)
+                            toc_refs.setdefault(target_page, []).append({
+                                "label": label,
+                                "page": target_page,
+                            })
+                            break
+                break  # only use first TOC table
         except (json.JSONDecodeError, OSError):
             pass
 
@@ -2088,6 +2221,10 @@ def annotate_page_features(doc_id: str):
         # TOC entry
         if p in toc_entries:
             feat["toc_type"] = toc_entries[p]
+
+        # TOC references pointing to this page
+        if p in toc_refs:
+            feat["toc_refs"] = toc_refs[p]
 
         # Note refs on this page
         if p in note_refs:
@@ -2788,7 +2925,9 @@ def docling_page_elements(doc_id: str, page_no: int):
 def docling_available(doc_id: str):
     """Check if Docling JSON is available for a document."""
     if USE_SUPABASE:
-        return {"available": Q.query_docling_available(doc_id)}
+        if Q.query_docling_available(doc_id):
+            return {"available": True}
+        # Fall back to local files (r2_get_docling_json checks local docling_elements.json)
     return {"available": _find_docling_json(doc_id) is not None}
 
 

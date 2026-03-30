@@ -41,7 +41,7 @@ export function PageDetail({
   const tablesOnPage = allTables.filter(t => t.pageNo === pageNo)
   const dims = pageDims?.[pageNo] || pageDims?.[String(pageNo)] || { width: 595, height: 842 }
   const info = pageMap.get(pageNo)
-  const features = pageFeatures?.pages?.[pageNo] || pageFeatures?.pages?.[String(pageNo)]
+  const features = pageFeatures?.features?.[pageNo] || pageFeatures?.features?.[String(pageNo)]
   const pageMultiTags = multiTags.filter(mt => mt.page === pageNo)
 
   const [selectedType, setSelectedType] = useState(transition?.section_type || info?.type || '')
@@ -268,7 +268,7 @@ function FeatureList({ features }) {
           <div className="text-[10px] font-medium text-muted-foreground mb-0.5">Note References</div>
           {noteRefs.map((ref, i) => (
             <div key={i} className="text-[10px] text-purple-400 truncate">
-              {ref.label || `ref ${i + 1}`}
+              {ref.source_label || ref.label || `Note ${ref.note_number || i + 1}`}
             </div>
           ))}
         </div>

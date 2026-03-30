@@ -36,7 +36,7 @@ export function PageStripGallery({
           const info = pageMap.get(page)
           const typeMeta = info ? ALL_SECTION_TYPES[info.type] : null
           const isSelected = page === selectedPage
-          const features = pageFeatures?.pages?.[page] || pageFeatures?.pages?.[String(page)]
+          const features = pageFeatures?.features?.[page] || pageFeatures?.features?.[String(page)]
           const hasMultiTags = multiTags.some(mt => mt.page === page)
 
           return (
