@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react'
 import {
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
+  getFilteredRowModel,
   useReactTable,
 } from '@tanstack/react-table'
 import { useTagLog } from '../api.js'
@@ -12,12 +13,22 @@ import {
 import { Badge } from './ui/badge.jsx'
 import { Button } from './ui/button.jsx'
 import { Skeleton } from './ui/skeleton.jsx'
+import {
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
+} from './ui/select.jsx'
 import { ArrowUpDown } from 'lucide-react'
 
 const ACTION_VARIANT = {
   add: 'default',
   remove: 'destructive',
   reclassify: 'secondary',
+}
+
+const SOURCE_LABELS = {
+  human: 'Human',
+  'machine:pretag': 'Pretag',
+  'machine:structural': 'Structural',
+  'machine:llm': 'LLM',
 }
 
 function SortHeader({ column, children }) {
@@ -66,7 +77,6 @@ const columns = [
         {row.original.doc_id}
       </span>
     ),
-    // No fixed width — this column fills remaining space
   },
   {
     accessorKey: 'page_no',
@@ -85,6 +95,25 @@ const columns = [
       </Badge>
     ),
     meta: { className: 'w-[90px]' },
+  },
+  {
+    accessorKey: 'source',
+    header: 'Source',
+    cell: ({ row }) => {
+      const src = row.original.source || 'human'
+      const label = SOURCE_LABELS[src] || src
+      const isMachine = src.startsWith('machine:')
+      return (
+        <Badge variant={isMachine ? 'secondary' : 'outline'} className="text-[10px]">
+          {label}
+        </Badge>
+      )
+    },
+    meta: { className: 'w-[100px]' },
+    filterFn: (row, _columnId, filterValue) => {
+      if (!filterValue || filterValue === 'all') return true
+      return (row.original.source || 'human') === filterValue
+    },
   },
   {
     accessorKey: 'element_type',
@@ -108,16 +137,29 @@ const columns = [
 
 export default function TagLogPage() {
   const { data: entries = [], isLoading } = useTagLog()
+  const [sourceFilter, setSourceFilter] = useState('all')
 
   const table = useReactTable({
     data: entries,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    state: {
+      columnFilters: sourceFilter !== 'all'
+        ? [{ id: 'source', value: sourceFilter }]
+        : [],
+    },
     initialState: {
       sorting: [{ id: 'timestamp', desc: true }],
     },
   })
+
+  // Collect unique sources for the filter dropdown
+  const availableSources = useMemo(() => {
+    const sources = new Set(entries.map(e => e.source || 'human'))
+    return [...sources].sort()
+  }, [entries])
 
   if (isLoading) {
     return (
@@ -131,13 +173,34 @@ export default function TagLogPage() {
     )
   }
 
+  const filteredCount = table.getFilteredRowModel().rows.length
+
   return (
     <div className="flex-1 flex flex-col overflow-hidden px-4 lg:px-6 py-6 md:py-8 gap-4">
-      <div>
-        <h1 className="text-xl font-semibold">Tag Log</h1>
-        <p className="text-sm text-muted-foreground">
-          {entries.length} tagging action{entries.length !== 1 ? 's' : ''} recorded.
-        </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-xl font-semibold">Tag Log</h1>
+          <p className="text-sm text-muted-foreground">
+            {filteredCount} tagging action{filteredCount !== 1 ? 's' : ''}
+            {sourceFilter !== 'all' ? ` (filtered)` : ''} recorded.
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-muted-foreground">Source:</span>
+          <Select value={sourceFilter} onValueChange={setSourceFilter}>
+            <SelectTrigger className="w-36 h-8">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All sources</SelectItem>
+              {availableSources.map(src => (
+                <SelectItem key={src} value={src}>
+                  {SOURCE_LABELS[src] || src}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
       <div className="rounded-lg border overflow-auto flex-1">
         <Table className="table-fixed">
