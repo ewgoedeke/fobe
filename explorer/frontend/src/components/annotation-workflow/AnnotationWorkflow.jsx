@@ -5,23 +5,41 @@ import { Button } from '../ui/button.jsx'
 import { Input } from '../ui/input.jsx'
 import { Badge } from '../ui/badge.jsx'
 import { Skeleton } from '../ui/skeleton.jsx'
-import { Save, Loader2, Search } from 'lucide-react'
-import { useAnnotateDocuments, useAnnotateToc, usePageFeatures } from '../../api.js'
+import { Save, Loader2, Search, Sparkles } from 'lucide-react'
+import {
+  useAnnotateDocuments, useAnnotateToc, usePageFeatures,
+  useAnnotateDetect, useDocEdges, useValidateEdge, useDeleteEdge,
+} from '../../api.js'
 import { useAnnotationState } from './useAnnotationState.js'
 import { resolveTransitions, buildHierarchyGroups } from './resolveTransitions.js'
 import { CoverageStrip } from './CoverageStrip.jsx'
 import { HierarchyOutline } from './HierarchyOutline.jsx'
 import { PageStripGallery } from './PageStripGallery.jsx'
 import { PageDetail } from './PageDetail.jsx'
+import { SideBySideCompare } from './SideBySideCompare.jsx'
+
+// Keyboard shortcut → section type mapping
+const KEY_TO_TYPE = {
+  p: 'PNL', s: 'SFP', n: 'NOTES', f: 'FRONT_MATTER',
+  m: 'MANAGEMENT_REPORT', a: 'AUDITOR_REPORT',
+  c: 'CFS', o: 'OCI', e: 'SOCIE', t: 'TOC',
+}
 
 export default function AnnotationWorkflow({ initialDocId }) {
   const [docId, setDocId] = useState(initialDocId || null)
   const [searchQuery, setSearchQuery] = useState('')
   const [showSearch, setShowSearch] = useState(!initialDocId)
+  const [compareOpen, setCompareOpen] = useState(false)
+  const [compareEdgeIndex, setCompareEdgeIndex] = useState(0)
+  const [detecting, setDetecting] = useState(false)
 
   const { data: documents = [], isLoading: docsLoading } = useAnnotateDocuments()
   const { data: tocData } = useAnnotateToc(docId)
   const { data: pageFeatures } = usePageFeatures(docId)
+  const { data: edges = [] } = useDocEdges(docId)
+  const detectMutation = useAnnotateDetect(docId)
+  const validateEdgeMutation = useValidateEdge(docId)
+  const deleteEdgeMutation = useDeleteEdge(docId)
 
   const totalPages = tocData?.page_count || 0
   const pageDims = tocData?.page_dims || {}
@@ -29,6 +47,7 @@ export default function AnnotationWorkflow({ initialDocId }) {
 
   const {
     transitions,
+    multiTags,
     selectedPage,
     dirty,
     isLoading: stateLoading,
@@ -36,6 +55,8 @@ export default function AnnotationWorkflow({ initialDocId }) {
     addTransition,
     removeTransition,
     updateTransition,
+    mergeProvisional,
+    toggleMultiTag,
     setPage,
     saveNow,
   } = useAnnotationState(docId)
@@ -79,6 +100,120 @@ export default function AnnotationWorkflow({ initialDocId }) {
   const handlePageClick = useCallback((page) => {
     setPage(page)
   }, [setPage])
+
+  // Auto-detect: call API, merge provisional markers
+  const handleDetect = useCallback(async () => {
+    if (!docId || detecting) return
+    setDetecting(true)
+    try {
+      const result = await detectMutation.mutateAsync()
+      const markers = (result.markers || result.transitions || []).map(m => ({
+        ...m,
+        source: m.source || 'detected',
+        validated: false,
+      }))
+      mergeProvisional(markers)
+    } finally {
+      setDetecting(false)
+    }
+  }, [docId, detecting, detectMutation, mergeProvisional])
+
+  // Compare modal: open for edges involving a specific page, or all edges
+  const handleOpenCompare = useCallback((page) => {
+    if (edges.length === 0) return
+    if (page) {
+      const idx = edges.findIndex(e => e.source_page === page || e.target_page === page)
+      setCompareEdgeIndex(idx >= 0 ? idx : 0)
+    } else {
+      setCompareEdgeIndex(0)
+    }
+    setCompareOpen(true)
+  }, [edges])
+
+  const handleConfirmEdge = useCallback((edge) => {
+    if (edge.id) {
+      validateEdgeMutation.mutate({ edgeId: edge.id, updates: { status: 'confirmed' } })
+    }
+  }, [validateEdgeMutation])
+
+  const handleRejectEdge = useCallback((edge) => {
+    if (edge.id) {
+      deleteEdgeMutation.mutate(edge.id)
+    }
+  }, [deleteEdgeMutation])
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    if (!docId || !totalPages) return
+
+    const handler = (e) => {
+      // Skip when focus is in input/select/textarea
+      const tag = document.activeElement?.tagName
+      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return
+
+      const key = e.key.toLowerCase()
+
+      // Section type shortcuts
+      if (KEY_TO_TYPE[key]) {
+        e.preventDefault()
+        addTransition({
+          page: selectedPage,
+          section_type: KEY_TO_TYPE[key],
+          label: '',
+          note_number: null,
+          source: 'manual',
+          validated: true,
+        })
+        return
+      }
+
+      // Delete/Backspace → remove transition on current page
+      if (e.key === 'Delete' || e.key === 'Backspace') {
+        const hasTransition = transitions.some(t => t.page === selectedPage)
+        if (hasTransition) {
+          e.preventDefault()
+          removeTransition(selectedPage)
+        }
+        return
+      }
+
+      // Space → toggle validated flag
+      if (e.key === ' ') {
+        const t = transitions.find(t => t.page === selectedPage)
+        if (t) {
+          e.preventDefault()
+          updateTransition(selectedPage, { validated: !t.validated })
+        }
+        return
+      }
+
+      // V → accept provisional (set validated=true, source="manual")
+      if (key === 'v') {
+        const t = transitions.find(t => t.page === selectedPage)
+        if (t && !t.validated) {
+          e.preventDefault()
+          updateTransition(selectedPage, { validated: true, source: 'manual' })
+        }
+        return
+      }
+
+      // Tab → jump to next unvalidated provisional marker
+      if (e.key === 'Tab') {
+        const provisionals = transitions
+          .filter(t => !t.validated && t.source !== 'manual')
+          .sort((a, b) => a.page - b.page)
+        if (provisionals.length > 0) {
+          e.preventDefault()
+          const next = provisionals.find(t => t.page > selectedPage) || provisionals[0]
+          setPage(next.page)
+        }
+        return
+      }
+    }
+
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [docId, totalPages, selectedPage, transitions, addTransition, removeTransition, updateTransition, setPage])
 
   const isLoading = stateLoading || docsLoading
 
@@ -138,7 +273,7 @@ export default function AnnotationWorkflow({ initialDocId }) {
           </>
         )}
 
-        {/* Status + save */}
+        {/* Status + detect + save */}
         <div className="ml-auto flex items-center gap-2">
           {dirty && (
             <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-yellow-500/15 text-yellow-500">
@@ -147,6 +282,21 @@ export default function AnnotationWorkflow({ initialDocId }) {
           )}
           {isSaving && (
             <Loader2 className="size-3.5 animate-spin text-muted-foreground" />
+          )}
+          {docId && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="h-7 gap-1.5 text-xs"
+              onClick={handleDetect}
+              disabled={detecting}
+            >
+              {detecting
+                ? <Loader2 className="size-3 animate-spin" />
+                : <Sparkles className="size-3" />
+              }
+              Detect
+            </Button>
           )}
           <Button
             variant="outline"
@@ -216,6 +366,8 @@ export default function AnnotationWorkflow({ initialDocId }) {
                 pageFeatures={pageFeatures}
                 selectedPage={selectedPage}
                 onPageClick={handlePageClick}
+                multiTags={multiTags}
+                onRefBadgeClick={edges.length > 0 ? handleOpenCompare : undefined}
               />
             </Allotment.Pane>
 
@@ -232,10 +384,28 @@ export default function AnnotationWorkflow({ initialDocId }) {
                 onRemoveTransition={removeTransition}
                 onUpdateTransition={updateTransition}
                 totalPages={totalPages}
+                multiTags={multiTags}
+                onToggleMultiTag={toggleMultiTag}
+                onCompareClick={() => handleOpenCompare(selectedPage)}
+                hasEdges={edges.length > 0}
               />
             </Allotment.Pane>
           </Allotment>
         </div>
+      )}
+
+      {/* Side-by-side compare modal */}
+      {edges.length > 0 && (
+        <SideBySideCompare
+          open={compareOpen}
+          onOpenChange={setCompareOpen}
+          docId={docId}
+          edges={edges}
+          initialEdgeIndex={compareEdgeIndex}
+          pageDims={pageDims}
+          onConfirmEdge={handleConfirmEdge}
+          onRejectEdge={handleRejectEdge}
+        />
       )}
     </div>
   )

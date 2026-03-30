@@ -131,6 +131,15 @@ export function useDoclingElements(docId, pageNo, enabled = true) {
   })
 }
 
+export function useDoclingAvailable(docId) {
+  return useQuery({
+    queryKey: ['docling-available', docId],
+    queryFn: () => fetchJSON(`/api/docling-available/${docId}`).then(d => d.available),
+    enabled: !!docId,
+    staleTime: 10 * 60_000,
+  })
+}
+
 // ── Review ───────────────────────────────────────────────
 
 export function useReviewStatus() {
@@ -251,10 +260,10 @@ export function useTocEntries(docId) {
 export function useSaveTransitions(docId) {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: (transitions) => fetchJSON(`/api/annotate/${docId}/transitions`, {
+    mutationFn: (payload) => fetchJSON(`/api/annotate/${docId}/transitions`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(transitions),
+      body: JSON.stringify(payload),
     }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['annotate-toc', docId] })

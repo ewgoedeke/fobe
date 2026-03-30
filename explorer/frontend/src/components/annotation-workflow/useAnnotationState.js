@@ -8,6 +8,8 @@ const UPDATE_TRANSITION = 'UPDATE_TRANSITION'
 const SET_PAGE = 'SET_PAGE'
 const LOAD = 'LOAD'
 const MARK_SAVED = 'MARK_SAVED'
+const MERGE_PROVISIONAL = 'MERGE_PROVISIONAL'
+const TOGGLE_MULTI_TAG = 'TOGGLE_MULTI_TAG'
 
 function reducer(state, action) {
   switch (action.type) {
@@ -15,6 +17,7 @@ function reducer(state, action) {
       return {
         ...state,
         transitions: action.transitions || [],
+        multiTags: action.multiTags || [],
         hasToc: action.hasToc ?? state.hasToc,
         tocPages: action.tocPages ?? state.tocPages,
         dirty: false,
@@ -43,6 +46,26 @@ function reducer(state, action) {
     case SET_PAGE:
       return { ...state, selectedPage: action.page }
 
+    case MERGE_PROVISIONAL: {
+      // Merge detected markers without overwriting existing manual/validated transitions
+      const existingPages = new Set(state.transitions.map(t => t.page))
+      const newMarkers = (action.markers || []).filter(m => !existingPages.has(m.page))
+      if (newMarkers.length === 0) return state
+      const next = [...state.transitions, ...newMarkers].sort((a, b) => a.page - b.page)
+      return { ...state, transitions: next, dirty: true }
+    }
+
+    case TOGGLE_MULTI_TAG: {
+      const { page, section_type } = action
+      const existing = state.multiTags.find(
+        mt => mt.page === page && mt.section_type === section_type
+      )
+      const next = existing
+        ? state.multiTags.filter(mt => !(mt.page === page && mt.section_type === section_type))
+        : [...state.multiTags, { page, section_type }]
+      return { ...state, multiTags: next, dirty: true }
+    }
+
     case MARK_SAVED:
       return { ...state, dirty: false }
 
@@ -53,6 +76,7 @@ function reducer(state, action) {
 
 const initialState = {
   transitions: [],
+  multiTags: [],
   selectedPage: 1,
   dirty: false,
   hasToc: null,
@@ -74,6 +98,7 @@ export function useAnnotationState(docId) {
       dispatch({
         type: LOAD,
         transitions: gt.transitions || [],
+        multiTags: gt.multi_tags || [],
         hasToc: gt.has_toc,
         tocPages: gt.toc_pages || [],
       })
@@ -103,7 +128,7 @@ export function useAnnotationState(docId) {
     if (!state.dirty || !docId) return
     clearTimeout(saveTimer.current)
     saveTimer.current = setTimeout(() => {
-      saveMutation.mutate(state.transitions, {
+      saveMutation.mutate({ transitions: state.transitions, multi_tags: state.multiTags }, {
         onSuccess: () => dispatch({ type: MARK_SAVED }),
       })
     }, 2000)
@@ -133,13 +158,21 @@ export function useAnnotationState(docId) {
     dispatch({ type: SET_PAGE, page })
   }, [])
 
+  const mergeProvisional = useCallback((markers) => {
+    dispatch({ type: MERGE_PROVISIONAL, markers })
+  }, [])
+
+  const toggleMultiTag = useCallback((page, section_type) => {
+    dispatch({ type: TOGGLE_MULTI_TAG, page, section_type })
+  }, [])
+
   const saveNow = useCallback(() => {
     if (!state.dirty || !docId) return
     clearTimeout(saveTimer.current)
-    saveMutation.mutate(state.transitions, {
+    saveMutation.mutate({ transitions: state.transitions, multi_tags: state.multiTags }, {
       onSuccess: () => dispatch({ type: MARK_SAVED }),
     })
-  }, [state.dirty, state.transitions, docId])
+  }, [state.dirty, state.transitions, state.multiTags, docId])
 
   return {
     ...state,
@@ -148,6 +181,8 @@ export function useAnnotationState(docId) {
     addTransition,
     removeTransition,
     updateTransition,
+    mergeProvisional,
+    toggleMultiTag,
     setPage,
     saveNow,
     dispatch,
