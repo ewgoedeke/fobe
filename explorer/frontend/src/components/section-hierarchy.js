@@ -24,7 +24,12 @@ export const SECTION_GROUPS = {
   },
   NOTES: {
     label: 'Notes to the Financial Statements',
-    types: [],
+    types: [
+      'NOTES_GENERAL', 'NOTES_PPE', 'NOTES_INTANGIBLES',
+      'NOTES_FIN_INST', 'NOTES_TAX', 'NOTES_REVENUE',
+      'NOTES_PERSONNEL', 'NOTES_PROVISIONS', 'NOTES_LEASES',
+      'NOTES_SEGMENT', 'NOTES_RELATED_PARTIES', 'NOTES_OTHER',
+    ],
   },
   APPENDIX: {
     label: 'Appendix',
@@ -40,7 +45,21 @@ for (const [groupKey, groupDef] of Object.entries(SECTION_GROUPS)) {
   }
 }
 TYPE_TO_GROUP['NOTES'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_GENERAL'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_PPE'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_INTANGIBLES'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_FIN_INST'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_TAX'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_REVENUE'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_PERSONNEL'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_PROVISIONS'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_LEASES'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_SEGMENT'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_RELATED_PARTIES'] = 'NOTES'
+TYPE_TO_GROUP['NOTES_OTHER'] = 'NOTES'
 TYPE_TO_GROUP['APPENDIX'] = 'APPENDIX'
+TYPE_TO_GROUP['GENERAL_REPORTING'] = 'GENERAL_REPORTING'
+TYPE_TO_GROUP['PRIMARY_FINANCIALS'] = 'PRIMARY_FINANCIALS'
 
 // ── Primary statements ────────────────────────────────────────────────────
 export const PRIMARY_STATEMENTS = new Set(['PNL', 'SFP', 'OCI', 'CFS', 'SOCIE'])
@@ -58,6 +77,10 @@ export const TYPE_TO_RANK_CLASS = {
   CORPORATE_GOVERNANCE: 'OTHER', ESG: 'OTHER',
   RISK_REPORT: 'OTHER', REMUNERATION_REPORT: 'OTHER',
   RESPONSIBILITY_STATEMENT: 'OTHER',
+  NOTES_GENERAL: 'NOTES', NOTES_PPE: 'NOTES', NOTES_INTANGIBLES: 'NOTES',
+  NOTES_FIN_INST: 'NOTES', NOTES_TAX: 'NOTES', NOTES_REVENUE: 'NOTES',
+  NOTES_PERSONNEL: 'NOTES', NOTES_PROVISIONS: 'NOTES', NOTES_LEASES: 'NOTES',
+  NOTES_SEGMENT: 'NOTES', NOTES_RELATED_PARTIES: 'NOTES', NOTES_OTHER: 'NOTES',
 }
 
 // ── All section types with metadata ───────────────────────────────────────
@@ -82,27 +105,47 @@ export const ALL_SECTION_TYPES = {
   RESPONSIBILITY_STATEMENT:{ label: 'Responsibility Statement',  bg: 'bg-indigo-500/15',  text: 'text-indigo-400',  hex: '#818cf8' },
   // Notes & appendix
   NOTES:                   { label: 'Notes',                     bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_GENERAL:           { label: 'General / Policies',        bg: 'bg-purple-500/10',  text: 'text-purple-300',  hex: '#d8b4fe' },
+  NOTES_PPE:               { label: 'PPE',                       bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_INTANGIBLES:       { label: 'Intangibles & Goodwill',    bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_FIN_INST:          { label: 'Financial Instruments',     bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_TAX:               { label: 'Tax',                       bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_REVENUE:           { label: 'Revenue',                   bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_PERSONNEL:         { label: 'Personnel & Benefits',      bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_PROVISIONS:        { label: 'Provisions & Contingencies',bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_LEASES:            { label: 'Leases',                    bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_SEGMENT:           { label: 'Segment Reporting',         bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_RELATED_PARTIES:   { label: 'Related Parties',           bg: 'bg-purple-500/15',  text: 'text-purple-400',  hex: '#c084fc' },
+  NOTES_OTHER:             { label: 'Other Notes',               bg: 'bg-purple-500/10',  text: 'text-purple-300',  hex: '#d8b4fe' },
   APPENDIX:                { label: 'Appendix',                  bg: 'bg-cyan-500/15',    text: 'text-cyan-400',    hex: '#22d3ee' },
+  // Group-level (taggable when specific sub-type is unknown)
+  GENERAL_REPORTING:       { label: 'General Reporting',          bg: 'bg-sky-500/10',     text: 'text-sky-300',     hex: '#7dd3fc' },
+  PRIMARY_FINANCIALS:      { label: 'Primary Financials',         bg: 'bg-red-500/10',     text: 'text-red-300',     hex: '#fca5a5' },
   // Catch-all
   OTHER:                   { label: 'Other',                     bg: 'bg-zinc-500/15',    text: 'text-zinc-500',    hex: '#71717a' },
 }
 
 // Ordered list for UI display
 export const TYPE_ORDER = [
-  'PNL', 'SFP', 'OCI', 'CFS', 'SOCIE',
-  'FRONT_MATTER', 'TOC', 'NOTES',
-  'MANAGEMENT_REPORT', 'ESG', 'CORPORATE_GOVERNANCE',
+  'FRONT_MATTER', 'TOC',
+  'GENERAL_REPORTING', 'MANAGEMENT_REPORT', 'ESG', 'CORPORATE_GOVERNANCE',
   'RISK_REPORT', 'REMUNERATION_REPORT', 'SUPERVISORY_BOARD',
   'AUDITOR_REPORT', 'RESPONSIBILITY_STATEMENT',
+  'PRIMARY_FINANCIALS', 'PNL', 'SFP', 'OCI', 'CFS', 'SOCIE',
+  'NOTES', 'NOTES_GENERAL', 'NOTES_PPE', 'NOTES_INTANGIBLES',
+  'NOTES_FIN_INST', 'NOTES_TAX', 'NOTES_REVENUE',
+  'NOTES_PERSONNEL', 'NOTES_PROVISIONS', 'NOTES_LEASES',
+  'NOTES_SEGMENT', 'NOTES_RELATED_PARTIES', 'NOTES_OTHER',
   'APPENDIX', 'OTHER',
 ]
 
 // UI group structure for dropdowns/selects
 export const TYPE_GROUPS_LIST = [
-  { key: 'PRIMARY_FINANCIALS', label: 'Primary Financial Statements', types: ['PNL', 'SFP', 'OCI', 'CFS', 'SOCIE'] },
-  { key: 'GENERAL_REPORTING', label: 'General Reporting', types: ['MANAGEMENT_REPORT', 'ESG', 'CORPORATE_GOVERNANCE', 'RISK_REPORT', 'REMUNERATION_REPORT', 'SUPERVISORY_BOARD', 'AUDITOR_REPORT', 'RESPONSIBILITY_STATEMENT', 'OTHER'] },
   { key: 'FLOATING', label: 'Structural', types: ['FRONT_MATTER', 'TOC'] },
-  { key: 'NOTES', label: 'Notes & Appendix', types: ['NOTES', 'APPENDIX'] },
+  { key: 'GENERAL_REPORTING', label: 'General Reporting', types: ['GENERAL_REPORTING', 'MANAGEMENT_REPORT', 'ESG', 'CORPORATE_GOVERNANCE', 'RISK_REPORT', 'REMUNERATION_REPORT', 'SUPERVISORY_BOARD', 'AUDITOR_REPORT', 'RESPONSIBILITY_STATEMENT', 'OTHER'] },
+  { key: 'PRIMARY_FINANCIALS', label: 'Primary Financial Statements', types: ['PRIMARY_FINANCIALS', 'PNL', 'SFP', 'OCI', 'CFS', 'SOCIE'] },
+  { key: 'NOTES', label: 'Notes', types: ['NOTES', 'NOTES_GENERAL', 'NOTES_PPE', 'NOTES_INTANGIBLES', 'NOTES_FIN_INST', 'NOTES_TAX', 'NOTES_REVENUE', 'NOTES_PERSONNEL', 'NOTES_PROVISIONS', 'NOTES_LEASES', 'NOTES_SEGMENT', 'NOTES_RELATED_PARTIES', 'NOTES_OTHER'] },
+  { key: 'APPENDIX', label: 'Appendix', types: ['APPENDIX'] },
 ]
 export const GROUP_KEYS = new Set(['ALL', ...TYPE_GROUPS_LIST.map(g => g.key), 'DISC', 'OTHER'])
 
@@ -150,6 +193,29 @@ export function resolveFloatingContext(page, transitions) {
   }
   return null
 }
+
+// ── Document structure template ──────────────────────────────────────
+// Fixed tree skeleton for the annotation workflow TransitionList.
+// Defines the expected document structure; nodes fill in as transitions are found.
+export const DOCUMENT_TEMPLATE = [
+  { kind: 'leaf', type: 'FRONT_MATTER' },
+  { kind: 'leaf', type: 'TOC' },
+  { kind: 'group', key: 'GENERAL_REPORTING', label: 'General Reporting',
+    groupType: 'GENERAL_REPORTING',
+    children: ['MANAGEMENT_REPORT', 'ESG', 'CORPORATE_GOVERNANCE',
+               'RISK_REPORT', 'REMUNERATION_REPORT', 'SUPERVISORY_BOARD',
+               'AUDITOR_REPORT', 'RESPONSIBILITY_STATEMENT'] },
+  { kind: 'group', key: 'PRIMARY_FINANCIALS', label: 'Primary Financial Statements',
+    groupType: 'PRIMARY_FINANCIALS',
+    children: ['PNL', 'SFP', 'OCI', 'CFS', 'SOCIE'] },
+  { kind: 'group', key: 'NOTES', label: 'Notes',
+    groupType: 'NOTES',
+    children: ['NOTES_GENERAL', 'NOTES_PPE', 'NOTES_INTANGIBLES',
+               'NOTES_FIN_INST', 'NOTES_TAX', 'NOTES_REVENUE',
+               'NOTES_PERSONNEL', 'NOTES_PROVISIONS', 'NOTES_LEASES',
+               'NOTES_SEGMENT', 'NOTES_RELATED_PARTIES', 'NOTES_OTHER'] },
+  { kind: 'leaf', type: 'APPENDIX' },
+]
 
 export function sortTypes(types) {
   return [...types].sort((a, b) => {

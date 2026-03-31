@@ -21,6 +21,7 @@ function reducer(state, action) {
         hasToc: action.hasToc ?? state.hasToc,
         tocPages: action.tocPages ?? state.tocPages,
         dirty: false,
+        changeCount: 0,
       }
 
     case ADD_TRANSITION: {
@@ -28,19 +29,19 @@ function reducer(state, action) {
       // Replace if same page already has a transition
       const filtered = state.transitions.filter(x => x.page !== t.page)
       const next = [...filtered, t].sort((a, b) => a.page - b.page)
-      return { ...state, transitions: next, dirty: true }
+      return { ...state, transitions: next, dirty: true, changeCount: state.changeCount + 1 }
     }
 
     case REMOVE_TRANSITION: {
       const next = state.transitions.filter(t => t.page !== action.page)
-      return { ...state, transitions: next, dirty: true }
+      return { ...state, transitions: next, dirty: true, changeCount: state.changeCount + 1 }
     }
 
     case UPDATE_TRANSITION: {
       const next = state.transitions.map(t =>
         t.page === action.page ? { ...t, ...action.updates } : t
       )
-      return { ...state, transitions: next, dirty: true }
+      return { ...state, transitions: next, dirty: true, changeCount: state.changeCount + 1 }
     }
 
     case SET_PAGE:
@@ -63,7 +64,7 @@ function reducer(state, action) {
       const next = existing
         ? state.multiTags.filter(mt => !(mt.page === page && mt.section_type === section_type))
         : [...state.multiTags, { page, section_type }]
-      return { ...state, multiTags: next, dirty: true }
+      return { ...state, multiTags: next, dirty: true, changeCount: state.changeCount + 1 }
     }
 
     case MARK_SAVED:
@@ -81,6 +82,7 @@ const initialState = {
   dirty: false,
   hasToc: null,
   tocPages: [],
+  changeCount: 0,
 }
 
 export function useAnnotationState(docId) {
@@ -169,12 +171,12 @@ export function useAnnotationState(docId) {
   }, [])
 
   const saveNow = useCallback(() => {
-    if (!state.dirty || !docId) return
+    if (!docId || state.transitions.length === 0) return
     clearTimeout(saveTimer.current)
     saveMutation.mutate({ transitions: state.transitions, multi_tags: state.multiTags }, {
       onSuccess: () => dispatch({ type: MARK_SAVED }),
     })
-  }, [state.dirty, state.transitions, state.multiTags, docId])
+  }, [state.transitions, state.multiTags, docId])
 
   return {
     ...state,

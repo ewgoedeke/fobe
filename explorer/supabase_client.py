@@ -1,17 +1,35 @@
 """Shared Supabase client for the explorer server."""
 
 import os
+import threading
 from functools import lru_cache
 
 from supabase import create_client, Client
 
+_client: Client | None = None
+_lock = threading.Lock()
 
-@lru_cache(maxsize=1)
+
 def get_supabase() -> Client:
     """Return a cached Supabase client instance."""
-    url = os.environ["SUPABASE_URL"]
-    key = os.environ["SUPABASE_SECRET_KEY"]
-    return create_client(url, key)
+    global _client
+    if _client is None:
+        with _lock:
+            if _client is None:
+                url = os.environ["SUPABASE_URL"]
+                key = os.environ["SUPABASE_SECRET_KEY"]
+                _client = create_client(url, key)
+    return _client
+
+
+def reset_supabase() -> Client:
+    """Force-create a new Supabase client (e.g. after connection errors)."""
+    global _client
+    with _lock:
+        url = os.environ["SUPABASE_URL"]
+        key = os.environ["SUPABASE_SECRET_KEY"]
+        _client = create_client(url, key)
+    return _client
 
 
 @lru_cache(maxsize=512)

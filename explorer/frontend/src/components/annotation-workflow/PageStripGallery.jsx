@@ -10,11 +10,13 @@ import { Layers } from 'lucide-react'
 export function PageStripGallery({
   docId,
   totalPages,
+  pageDims,
   pageMap,
   pageFeatures,
+  transitions = [],
   selectedPage,
   onPageClick,
-  multiTags = [],
+  resolvedMultiTags = new Map(),
   onRefBadgeClick,
 }) {
   const selectedRef = useRef(null)
@@ -37,21 +39,27 @@ export function PageStripGallery({
           const typeMeta = info ? ALL_SECTION_TYPES[info.type] : null
           const isSelected = page === selectedPage
           const features = pageFeatures?.features?.[page] || pageFeatures?.features?.[String(page)]
-          const hasMultiTags = multiTags.some(mt => mt.page === page)
+          const hasMultiTags = (resolvedMultiTags.get(page) || []).length > 0
+          const transition = transitions.find(t => t.page === page)
+          const isTransition = !!transition
+          const dims = pageDims?.[page] || pageDims?.[String(page)]
+          const ar = dims ? (dims.width / dims.height) : 0.707
 
           return (
             <div
               key={page}
               ref={isSelected ? selectedRef : null}
               className={cn(
-                'relative rounded overflow-hidden cursor-pointer border bg-muted',
+                'relative rounded overflow-hidden cursor-pointer bg-muted',
                 isSelected
                   ? 'ring-2 ring-primary border-primary'
-                  : 'border-border hover:border-muted-foreground/50',
+                  : isTransition
+                    ? 'border-2 border-green-500/70'
+                    : 'border border-border hover:border-muted-foreground/50',
               )}
               style={{
                 borderLeftWidth: 3,
-                borderLeftColor: typeMeta?.hex || 'transparent',
+                borderLeftColor: typeMeta?.hex || (isTransition ? undefined : 'transparent'),
               }}
               onClick={() => onPageClick(page)}
             >
@@ -63,7 +71,7 @@ export function PageStripGallery({
               )}
 
               {/* Thumbnail */}
-              <div className="aspect-[0.707] relative">
+              <div className="relative bg-white" style={{ aspectRatio: ar }}>
                 <img
                   src={`/api/page-image/${docId}/${page}`}
                   alt={`Page ${page}`}

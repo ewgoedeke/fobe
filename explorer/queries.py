@@ -5,30 +5,116 @@ Each function returns data in the exact shape the current file-based endpoints p
 so the frontend needs zero changes.
 """
 
+import time
+import logging
 from collections import defaultdict
 
-from explorer.supabase_client import get_supabase, resolve_doc_uuid
+from explorer.supabase_client import get_supabase, reset_supabase, resolve_doc_uuid
+
+logger = logging.getLogger(__name__)
+
+_RETRYABLE = (
+    "RemoteProtocolError", "ConnectionTerminated", "WriteError",
+    "Broken pipe", "Connection reset", "GOAWAY",
+)
+
+
+def _is_retryable(exc: Exception) -> bool:
+    """Check if an exception is a transient Supabase/HTTP2 connection error."""
+    msg = f"{type(exc).__name__}: {exc}"
+    return any(token in msg for token in _RETRYABLE)
 
 
 # ── Documents ────────────────────────────────────────────────
 
 
-def query_documents_list() -> list[dict]:
-    """Replace _build_document_index() → _documents list."""
+def _paginated_select(table_name: str, select: str, page_size: int = 1000,
+                      max_retries: int = 3) -> list[dict]:
+    """Fetch all rows from a Supabase table, paginating past the default limit.
+
+    Retries on transient HTTP/2 connection errors (broken pipe, GOAWAY, etc.).
+    """
     sb = get_supabase()
-    docs = sb.table("documents").select(
-        "id, slug, entity_name, gaap, page_count, pdf_url, page_offset"
-    ).execute().data
+    all_rows = []
+    offset = 0
+    while True:
+        for attempt in range(max_retries):
+            try:
+                batch = (sb.table(table_name).select(select)
+                         .range(offset, offset + page_size - 1)
+                         .execute().data)
+                break
+            except Exception as exc:
+                if attempt < max_retries - 1 and _is_retryable(exc):
+                    wait = 0.5 * (attempt + 1)
+                    logger.warning("Supabase retry %d/%d for %s: %s (wait %.1fs)",
+                                   attempt + 1, max_retries, table_name, exc, wait)
+                    time.sleep(wait)
+                    sb = reset_supabase()  # fresh client after connection error
+                    continue
+                raise
+        all_rows.extend(batch)
+        if len(batch) < page_size:
+            break
+        offset += page_size
+    return all_rows
 
-    # Count tables and tagged concepts per document
-    tables = sb.table("tables").select("document_id, id").execute().data
-    table_counts = defaultdict(int)
+
+_doc_list_cache = {"data": None, "ts": 0}
+_table_counts_cache = {"data": None, "ts": 0}
+_TABLE_COUNTS_TTL = 300  # 5 minutes — tables rarely change
+
+
+def _get_table_counts() -> dict[str, int]:
+    """Fetch table counts per document, cached for 5 minutes.
+
+    This avoids fetching the full 97K+ tables table on every request.
+    """
+    now = time.time()
+    if (_table_counts_cache["data"] is not None
+            and now - _table_counts_cache["ts"] < _TABLE_COUNTS_TTL):
+        return _table_counts_cache["data"]
+
+    tables = _paginated_select("tables", "document_id")
+    counts = {}
     for t in tables:
-        table_counts[t["document_id"]] += 1
+        doc_id = t["document_id"]
+        counts[doc_id] = counts.get(doc_id, 0) + 1
 
-    tags = sb.table("row_tags").select(
-        "concept_id, row_id, table_rows!inner(table_id, tables!inner(document_id))"
-    ).execute().data
+    _table_counts_cache["data"] = counts
+    _table_counts_cache["ts"] = now
+    return counts
+
+
+def query_documents_list(force_refresh: bool = False) -> list[dict]:
+    """Replace _build_document_index() → _documents list.
+
+    Caches for 60s.  Table counts are computed once from the tables table
+    and cached alongside the document list.
+    """
+    import time
+
+    now = time.time()
+    if (not force_refresh
+            and _doc_list_cache["data"] is not None
+            and now - _doc_list_cache["ts"] < 60):
+        return _doc_list_cache["data"]
+
+    # Try fetching with denormalized counts; fall back if columns don't exist yet
+    try:
+        docs = _paginated_select("documents",
+            "id, slug, entity_name, gaap, page_count, table_count, row_count, pdf_url, page_offset")
+        has_counts = any(d.get("table_count") for d in docs)
+    except Exception:
+        docs = _paginated_select("documents",
+            "id, slug, entity_name, gaap, page_count, pdf_url, page_offset")
+        has_counts = False
+
+    table_counts = {} if has_counts else _get_table_counts()
+
+    # Tags (small, <5K)
+    tags = _paginated_select("row_tags",
+        "concept_id, row_id, table_rows!inner(table_id, tables!inner(document_id))")
     concept_counts = defaultdict(set)
     for t in tags:
         doc_id = t["table_rows"]["tables"]["document_id"]
@@ -36,16 +122,22 @@ def query_documents_list() -> list[dict]:
 
     result = []
     for doc in docs:
+        tc = doc.get("table_count") or table_counts.get(doc["id"], 0)
         result.append({
             "id": doc["slug"],
             "name": doc["entity_name"] or doc["slug"].replace("_", " ").title(),
+            "gaap": doc.get("gaap"),
+            "page_count": doc.get("page_count"),
             "pdf": doc["pdf_url"],
             "has_pdf": bool(doc["pdf_url"]),
-            "tables": table_counts.get(doc["id"], 0),
+            "table_count": tc,
+            "tables": tc,
             "tagged_concepts": len(concept_counts.get(doc["id"], set())),
             "page_offset": doc.get("page_offset", 0) or 0,
         })
 
+    _doc_list_cache["data"] = result
+    _doc_list_cache["ts"] = now
     return result
 
 
@@ -55,69 +147,50 @@ _doc_stats_cache = {"data": None, "ts": 0}
 
 
 def query_documents_stats() -> list[dict]:
-    """Per-document stats: table count, total rows, tagged rows, conflict rows."""
+    """Per-document stats: table count, total rows, tagged rows, conflict rows.
+
+    Uses paginated fetches for documents and tables.  Row/tag counts come from
+    the tables query (avoiding a 1M+ row fetch of table_rows).
+    """
     import time
 
     now = time.time()
     if _doc_stats_cache["data"] is not None and now - _doc_stats_cache["ts"] < 30:
         return _doc_stats_cache["data"]
 
-    sb = get_supabase()
+    # Documents (paginated) — includes denormalized counts when available
+    try:
+        docs = _paginated_select("documents",
+            "id, slug, entity_name, gaap, page_count, table_count, row_count, pdf_url")
+        has_counts = any(d.get("table_count") for d in docs)
+    except Exception:
+        docs = _paginated_select("documents",
+            "id, slug, entity_name, gaap, page_count, pdf_url")
+        has_counts = False
 
-    # Documents
-    docs = sb.table("documents").select(
-        "id, slug, entity_name, gaap, page_count, pdf_url"
-    ).execute().data
-    doc_map = {d["id"]: d for d in docs}
+    table_counts = {} if has_counts else _get_table_counts()
 
-    # Tables per document
-    tables = sb.table("tables").select("id, document_id").execute().data
-    table_by_doc = defaultdict(list)
-    table_doc_map = {}  # table uuid -> doc uuid
-    for t in tables:
-        table_by_doc[t["document_id"]].append(t["id"])
-        table_doc_map[t["id"]] = t["document_id"]
-
-    # Rows per table
-    rows = sb.table("table_rows").select("id, table_id").execute().data
-    row_doc_map = {}  # row uuid -> doc uuid
-    rows_by_doc = defaultdict(int)
-    for r in rows:
-        doc_id = table_doc_map.get(r["table_id"])
-        if doc_id:
-            rows_by_doc[doc_id] += 1
-            row_doc_map[r["id"]] = doc_id
-
-    # Tags: count tagged rows and detect conflicts (rows with >1 distinct concept)
-    tags = sb.table("row_tags").select("row_id, concept_id").execute().data
+    # Tags (small, paginated for safety)
+    tags = _paginated_select("row_tags",
+        "concept_id, row_id, table_rows!inner(table_id, tables!inner(document_id))")
     tagged_rows_by_doc = defaultdict(set)
-    concepts_per_row = defaultdict(set)
     for tag in tags:
-        doc_id = row_doc_map.get(tag["row_id"])
-        if doc_id:
-            tagged_rows_by_doc[doc_id].add(tag["row_id"])
-            concepts_per_row[(doc_id, tag["row_id"])].add(tag["concept_id"])
-
-    conflict_rows_by_doc = defaultdict(int)
-    for (doc_id, _row_id), concepts in concepts_per_row.items():
-        if len(concepts) > 1:
-            conflict_rows_by_doc[doc_id] += 1
+        doc_id = tag["table_rows"]["tables"]["document_id"]
+        tagged_rows_by_doc[doc_id].add(tag["row_id"])
 
     result = []
     for doc in docs:
         did = doc["id"]
-        total_rows = rows_by_doc.get(did, 0)
-        tagged_rows = len(tagged_rows_by_doc.get(did, set()))
         result.append({
             "doc_id": doc["slug"],
             "slug": doc["slug"],
             "entity_name": doc["entity_name"],
             "gaap": doc["gaap"],
             "page_count": doc.get("page_count") or 0,
-            "table_count": len(table_by_doc.get(did, [])),
-            "total_rows": total_rows,
-            "tagged_rows": tagged_rows,
-            "conflict_rows": conflict_rows_by_doc.get(did, 0),
+            "table_count": doc.get("table_count") or table_counts.get(did, 0),
+            "total_rows": doc.get("row_count") or 0,
+            "tagged_rows": len(tagged_rows_by_doc.get(did, set())),
+            "conflict_rows": 0,
             "has_pdf": bool(doc.get("pdf_url")),
         })
 
@@ -197,36 +270,40 @@ def query_concept_pages(concept_id: str) -> list[dict]:
 # ── Element Browser ──────────────────────────────────────────
 
 
-def query_elements_browse() -> list[dict]:
-    """Replace the massive elements_browse() file scan."""
+_elements_browse_cache = {"data": None, "ts": 0}
+
+
+def query_elements_browse(doc_id: str | None = None) -> list[dict]:
+    """Replace the massive elements_browse() file scan. Cached for 5 minutes."""
+    now = time.time()
+    if (_elements_browse_cache["data"] is not None
+            and now - _elements_browse_cache["ts"] < 300):
+        return _elements_browse_cache["data"]
+
     sb = get_supabase()
 
-    # 1. All documents
-    docs = sb.table("documents").select(
-        "id, slug, gaap, page_count, page_dims, rank_tags, pdf_url"
-    ).execute().data
+    # 1. All documents (paginated)
+    docs = _paginated_select("documents",
+        "id, slug, gaap, page_count, page_dims, pdf_url")
     doc_map = {d["id"]: d for d in docs}
 
-    # 2. All TOC sections
-    toc_rows = sb.table("toc_sections").select(
-        "document_id, statement_type, start_page, end_page, source"
-    ).execute().data
+    # 2. All TOC sections (paginated)
+    toc_rows = _paginated_select("toc_sections",
+        "document_id, statement_type, start_page, end_page, source")
     toc_by_doc = defaultdict(list)
     for t in toc_rows:
         toc_by_doc[t["document_id"]].append(t)
 
-    # 3. All tables (lightweight — just id, page, classification)
-    table_rows = sb.table("tables").select(
-        "document_id, table_id, page_no, statement_component"
-    ).execute().data
+    # 3. All tables (paginated — 97K+ rows)
+    table_rows = _paginated_select("tables",
+        "document_id, table_id, page_no, statement_component")
     tables_by_doc = defaultdict(list)
     for t in table_rows:
         tables_by_doc[t["document_id"]].append(t)
 
-    # 4. Page reviews
-    review_rows = sb.table("page_reviews").select(
-        "document_id, element_type, page_no, reviewed_at"
-    ).execute().data
+    # 4. Page reviews (paginated)
+    review_rows = _paginated_select("page_reviews",
+        "document_id, element_type, page_no, reviewed_at")
     reviews_by_doc = defaultdict(lambda: defaultdict(dict))
     for r in review_rows:
         doc_uuid = r["document_id"]
@@ -299,15 +376,13 @@ def query_elements_browse() -> list[dict]:
             "elements": elements_out,
         }
 
-        # Rank tags
-        if doc.get("rank_tags"):
-            entry["rank_tags"] = doc["rank_tags"]
-
         # Reviews
         entry["reviews"] = dict(reviews_by_doc.get(slug, {}))
 
         results.append(entry)
 
+    _elements_browse_cache["data"] = results
+    _elements_browse_cache["ts"] = time.time()
     return results
 
 
@@ -778,24 +853,55 @@ def save_human_review(doc_id: str, review_data: dict, user_id: str | None = None
 # ── TOC Annotation ───────────────────────────────────────────
 
 
-def query_annotate_documents() -> list[dict]:
-    """Replace annotate_documents() — document list with annotation status."""
+def query_annotate_documents_search(
+    q: str = "", limit: int = 20, slugs: list[str] | None = None,
+) -> list[dict]:
+    """Search documents for annotation dropdown with server-side filtering.
+
+    slugs: optional whitelist — when provided, only return docs whose slug is in the list.
+    """
     sb = get_supabase()
-    docs = sb.table("documents").select(
-        "id, slug, gaap, page_count, pdf_url"
-    ).execute().data
 
-    # Table counts per doc
-    tables = sb.table("tables").select("document_id").execute().data
-    table_counts = defaultdict(int)
-    for t in tables:
-        table_counts[t["document_id"]] += 1
+    try:
+        query = sb.table("documents").select("id, slug, gaap, page_count, table_count, pdf_url")
+        if slugs:
+            # Batch .in_() for large slug lists (PostgREST limit ~100 per call)
+            all_docs = []
+            for i in range(0, len(slugs), 80):
+                batch = slugs[i:i + 80]
+                bq = sb.table("documents").select("id, slug, gaap, page_count, table_count, pdf_url")
+                bq = bq.in_("slug", batch)
+                if q:
+                    bq = bq.ilike("slug", f"*{q}*")
+                all_docs.extend(bq.order("slug").execute().data)
+            docs = all_docs[:limit]
+        else:
+            if q:
+                query = query.ilike("slug", f"*{q}*")
+            docs = query.order("slug").limit(limit).execute().data
+    except Exception:
+        query = sb.table("documents").select("id, slug, gaap, page_count, pdf_url")
+        if q:
+            query = query.ilike("slug", f"*{q}*")
+        docs = query.order("slug").limit(limit).execute().data
 
-    # TOC section counts per doc
-    toc = sb.table("toc_sections").select("document_id, source, validated").execute().data
+    if not docs:
+        return []
+
+    # Fetch toc_sections only for matched documents
+    doc_ids = [d["id"] for d in docs]
     toc_by_doc = defaultdict(list)
-    for t in toc:
-        toc_by_doc[t["document_id"]].append(t)
+    # Batch in small groups to stay within PostgREST 1000-row default limit
+    # (~20 docs × ~30 sections = ~600 rows, safely under limit)
+    for i in range(0, len(doc_ids), 20):
+        batch_ids = doc_ids[i:i + 20]
+        toc_rows = (sb.table("toc_sections")
+                    .select("document_id, validated, validated_at")
+                    .in_("document_id", batch_ids)
+                    .limit(1000)
+                    .execute().data)
+        for t in toc_rows:
+            toc_by_doc[t["document_id"]].append(t)
 
     result = []
     for doc in docs:
@@ -813,11 +919,15 @@ def query_annotate_documents() -> list[dict]:
             status = "in_progress"
             has_toc = True
 
+        # Use max validated_at as completed_at
+        validated_times = [s["validated_at"] for s in sections if s.get("validated_at")]
+        completed_at = max(validated_times) if validated_times else None
+
         entry = {
             "doc_id": doc["slug"],
             "gaap": doc.get("gaap", "IFRS"),
             "has_fixture": True,
-            "table_count": table_counts.get(doc_uuid, 0),
+            "table_count": doc.get("table_count", 0),
             "has_pdf": bool(doc.get("pdf_url")),
             "page_count": doc.get("page_count", 0),
             "annotation_status": status,
@@ -825,6 +935,8 @@ def query_annotate_documents() -> list[dict]:
         }
         if section_count > 0:
             entry["section_count"] = section_count
+        if completed_at:
+            entry["completed_at"] = completed_at
 
         result.append(entry)
 
@@ -888,6 +1000,16 @@ def query_toc_sections(doc_id: str) -> dict:
             "notes_end_page": None,
         },
     }
+
+
+def get_document_page_count(doc_id: str) -> int | None:
+    """Get page_count for a document by slug."""
+    sb = get_supabase()
+    doc_uuid = resolve_doc_uuid(doc_id)
+    if not doc_uuid:
+        return None
+    resp = sb.table("documents").select("page_count").eq("id", doc_uuid).single().execute()
+    return resp.data.get("page_count") if resp.data else None
 
 
 def save_toc_sections(doc_id: str, ground_truth: dict):
@@ -990,17 +1112,21 @@ def get_vote_conflicts(doc_id: str) -> list[dict]:
 
 
 def query_gt_sets() -> list[dict]:
-    """List all GT sets with document counts."""
+    """List all GT sets with document counts and doc_ids (slugs)."""
     sb = get_supabase()
     sets = sb.table("gt_sets").select("*").order("created_at", desc=True).execute().data or []
-    # Count docs per set
-    set_docs = sb.table("gt_set_documents").select("set_id").execute().data or []
-    doc_counts = defaultdict(int)
+    # Fetch all set-doc mappings with document slug via join
+    set_docs = _paginated_select(
+        "gt_set_documents", "set_id, document_id, documents!inner(slug)")
+    docs_by_set = defaultdict(list)
     for sd in set_docs:
-        doc_counts[sd["set_id"]] += 1
+        slug = sd.get("documents", {}).get("slug") if isinstance(sd.get("documents"), dict) else None
+        if slug:
+            docs_by_set[sd["set_id"]].append(slug)
 
     for s in sets:
-        s["doc_count"] = doc_counts.get(s["id"], 0)
+        s["doc_ids"] = docs_by_set.get(s["id"], [])
+        s["doc_count"] = len(s["doc_ids"])
     return sets
 
 
@@ -1014,18 +1140,89 @@ def create_gt_set(name: str, description: str, user_id: str = None) -> dict:
 
 
 def query_gt_set_docs(set_id: str) -> list[dict]:
-    """Documents in a GT set with per-doc stats."""
+    """Documents in a GT set with per-doc stats including docling metadata and tag coverage."""
     sb = get_supabase()
-    rows = (
-        sb.table("gt_set_documents")
-        .select("document_id, added_at, documents!inner(slug, entity_name, gaap, page_count, pdf_url)")
-        .eq("set_id", set_id)
-        .execute()
-        .data or []
+
+    # Try extended select with docling metadata columns; fall back if migration not yet applied
+    _EXTENDED_SELECT = (
+        "document_id, added_at, "
+        "documents!inner(slug, entity_name, gaap, page_count, pdf_url, docling_url, "
+        "docling_text_count, docling_table_count, docling_page_count, docling_size_kb, "
+        "tg_page_count)"
     )
+    _BASIC_SELECT = (
+        "document_id, added_at, "
+        "documents!inner(slug, entity_name, gaap, page_count, pdf_url, docling_url)"
+    )
+    try:
+        rows = (
+            sb.table("gt_set_documents")
+            .select(_EXTENDED_SELECT)
+            .eq("set_id", set_id)
+            .execute()
+            .data or []
+        )
+    except Exception:
+        rows = (
+            sb.table("gt_set_documents")
+            .select(_BASIC_SELECT)
+            .eq("set_id", set_id)
+            .execute()
+            .data or []
+        )
+
+    # Collect document UUIDs for tag coverage query
+    doc_ids = [r["document_id"] for r in rows]
+
+    # Batch-fetch toc_sections for tag coverage
+    tag_coverage_map = {}
+    page_count_map = {}
+    if doc_ids:
+        # Build page count map
+        for r in rows:
+            d = r["documents"]
+            pc = d.get("page_count")
+            if pc:
+                page_count_map[r["document_id"]] = pc
+
+        # Fetch toc_sections for all docs in the set
+        sections = _paginated_select(
+            "toc_sections",
+            "document_id, start_page, end_page"
+        )
+        # Group by document_id
+        sections_by_doc = defaultdict(list)
+        for s in sections:
+            if s["document_id"] in set(doc_ids):
+                sections_by_doc[s["document_id"]].append(s)
+
+        for doc_id, secs in sections_by_doc.items():
+            pc = page_count_map.get(doc_id)
+            if not pc:
+                continue
+            tagged = set()
+            for sec in secs:
+                sp = sec.get("start_page")
+                ep = sec.get("end_page")
+                if sp and ep:
+                    tagged.update(range(sp, ep + 1))
+            if tagged:
+                tag_coverage_map[doc_id] = min(100, round(100 * len(tagged) / pc))
+
     result = []
     for r in rows:
         d = r["documents"]
+        dl_pages = d.get("docling_page_count")
+        tg_pages = d.get("tg_page_count")
+
+        # Compute match status
+        if dl_pages is None:
+            match = "missing" if not d.get("docling_url") else None
+        elif tg_pages is not None:
+            match = "ok" if dl_pages >= tg_pages else "partial"
+        else:
+            match = "ok"
+
         result.append({
             "document_id": r["document_id"],
             "slug": d["slug"],
@@ -1034,6 +1231,14 @@ def query_gt_set_docs(set_id: str) -> list[dict]:
             "page_count": d.get("page_count"),
             "has_pdf": bool(d.get("pdf_url")),
             "added_at": r["added_at"],
+            "docling_url": d.get("docling_url"),
+            "docling_size": d.get("docling_size_kb"),
+            "docling_texts": d.get("docling_text_count"),
+            "docling_tables": d.get("docling_table_count"),
+            "docling_pages": dl_pages,
+            "tg_pages": tg_pages,
+            "docling_match": match,
+            "tag_coverage": tag_coverage_map.get(r["document_id"]),
         })
     return result
 

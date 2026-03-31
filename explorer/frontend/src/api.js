@@ -53,6 +53,14 @@ export function useTagActivity() {
   })
 }
 
+export function useEventActivity() {
+  return useQuery({
+    queryKey: ['event-activity'],
+    queryFn: () => fetchJSON('/api/dashboard/event-activity'),
+    staleTime: 60_000,
+  })
+}
+
 export function useDocuments() {
   return useQuery({
     queryKey: ['documents'],
@@ -200,11 +208,19 @@ export function useReviewSave(docId) {
 
 // ── Annotate (TOC) ───────────────────────────────────────
 
-export function useAnnotateDocuments() {
+export function useAnnotateDocuments(searchQuery = '', tier = '') {
   return useQuery({
-    queryKey: ['annotate-documents'],
-    queryFn: () => fetchJSON('/api/annotate/documents').then(d => d.documents || []),
+    queryKey: ['annotate-documents', searchQuery, tier],
+    queryFn: () => {
+      const params = new URLSearchParams({ q: searchQuery, limit: '500' })
+      if (tier) {
+        params.set('tier', tier)
+        params.set('tier_only', 'true')
+      }
+      return fetchJSON(`/api/annotate/documents?${params}`).then(d => d.documents || [])
+    },
     staleTime: 30_000,
+    keepPreviousData: true,
   })
 }
 
@@ -264,10 +280,15 @@ export function usePageFeatures(docId) {
   })
 }
 
-export function useTocEntries(docId) {
+export function useTocEntries(docId, tocPage) {
   return useQuery({
-    queryKey: ['toc-entries', docId],
-    queryFn: () => fetchJSON(`/api/annotate/${docId}/toc/entries`),
+    queryKey: ['toc-entries', docId, tocPage ?? null],
+    queryFn: () => {
+      const url = tocPage
+        ? `/api/annotate/${docId}/toc/entries?toc_page=${tocPage}`
+        : `/api/annotate/${docId}/toc/entries`
+      return fetchJSON(url)
+    },
     enabled: !!docId,
     staleTime: 60_000,
   })
@@ -283,6 +304,20 @@ export function useSaveTransitions(docId) {
     }),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['annotate-toc', docId] })
+      qc.invalidateQueries({ queryKey: ['annotate-documents'] })
+    },
+  })
+}
+
+export function useMarkComplete(docId) {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (complete = true) => fetchJSON(`/api/annotate/${docId}/mark-complete`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ complete }),
+    }),
+    onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['annotate-documents'] })
     },
   })
@@ -304,6 +339,15 @@ export function useElementsDetail(docId) {
     queryFn: () => fetchJSON(`/api/elements/browse/${docId}/detail`),
     enabled: !!docId,
     staleTime: 60_000,
+  })
+}
+
+export function useDocRankTags(docId) {
+  return useQuery({
+    queryKey: ['doc-rank-tags', docId],
+    queryFn: () => fetchJSON(`/api/elements/browse/${docId}/detail`).then(d => d.rank_tags || null),
+    enabled: !!docId,
+    staleTime: 5 * 60_000,
   })
 }
 
@@ -375,6 +419,22 @@ export function useCastVote() {
 }
 
 // ── Ground Truth Sets ────────────────────────────────────────
+
+export function useAnnotateTierDocs(tier) {
+  return useQuery({
+    queryKey: ['annotate-tier-docs', tier],
+    queryFn: () => {
+      const params = new URLSearchParams({ q: '', limit: '500' })
+      if (tier) {
+        params.set('tier', tier)
+        params.set('tier_only', 'true')
+      }
+      return fetchJSON(`/api/annotate/documents?${params}`).then(d => d.documents || [])
+    },
+    enabled: tier !== undefined && tier !== null,
+    staleTime: 30_000,
+  })
+}
 
 export function useGTSets() {
   return useQuery({

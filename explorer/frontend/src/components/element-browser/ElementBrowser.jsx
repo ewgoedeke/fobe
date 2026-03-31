@@ -3,7 +3,7 @@ import { Allotment } from 'allotment'
 import { useQueryClient } from '@tanstack/react-query'
 import { cn } from '@/lib/utils'
 import PageBrowserModal from '../PageBrowserModal.jsx'
-import { useElementsBrowse, useGTSets, logTagAction } from '../../api.js'
+import { useElementsBrowse, useGTSets, useDoclingAvailable, useDocRankTags, logTagAction } from '../../api.js'
 import { Button } from '../ui/button.jsx'
 import { Badge, GaapBadge } from '../ui/badge.jsx'
 import { Separator } from '../ui/separator.jsx'
@@ -234,7 +234,17 @@ export default function ElementBrowser() {
     }
   }, [data, selectedType, isDocFullyReviewed, qc])
 
-  const documents = data?.documents || []
+  const allDocuments = data?.documents || []
+
+  // Population filter: apply GT set filter BEFORE computing type counts
+  const populationDocs = (() => {
+    if (filterGTSet === 'all') return allDocuments
+    const set = gtSets.find(s => s.id === filterGTSet)
+    if (!set?.doc_ids) return allDocuments
+    const docIdSet = new Set(set.doc_ids)
+    return allDocuments.filter(d => docIdSet.has(d.doc_id))
+  })()
+  const documents = populationDocs
 
   const getBestScore = (doc, type) => {
     const rt = doc.rank_tags
@@ -345,19 +355,18 @@ export default function ElementBrowser() {
 
   let filteredDocs = docsWithType
   if (filterGaap !== 'all') filteredDocs = filteredDocs.filter(d => d.gaap === filterGaap)
-  if (filterGTSet !== 'all') {
-    const set = gtSets.find(s => s.id === filterGTSet)
-    if (set?.doc_ids) {
-      const docIdSet = new Set(set.doc_ids)
-      filteredDocs = filteredDocs.filter(d => docIdSet.has(d.doc_id))
-    }
-  }
   if (minScore > 0 && showPredictions) filteredDocs = filteredDocs.filter(d => d.bestScore >= minScore / 100)
   if (hideReviewed) filteredDocs = filteredDocs.filter(d => !isDocFullyReviewed(d))
   const reviewedCount = docsWithType.filter(d => isDocFullyReviewed(d)).length
 
   const activeDocIdx = filteredDocs.findIndex(d => d.doc_id === activeDocId)
-  const activeDoc = activeDocIdx >= 0 ? filteredDocs[activeDocIdx] : null
+  const activeDocRaw = activeDocIdx >= 0 ? filteredDocs[activeDocIdx] : null
+  const { data: activeRankTags } = useDocRankTags(activeDocId)
+  // Merge lazy-loaded rank_tags into the active doc so gallery/zoom can use it
+  const activeDoc = activeDocRaw && activeRankTags
+    ? { ...activeDocRaw, rank_tags: activeRankTags }
+    : activeDocRaw
+  const { data: doclingAvailable = false } = useDoclingAvailable(activeDocId)
 
   useEffect(() => {
     if (!activeDocId && filteredDocs.length > 0) {
@@ -382,6 +391,24 @@ export default function ElementBrowser() {
     <div className="flex-1 flex flex-col overflow-hidden bg-background text-foreground">
       {/* Toolbar */}
       <div className="flex items-center gap-3 px-4 lg:px-6 py-1.5 border-b border-border shrink-0">
+        {/* Population selector */}
+        <Select value={filterGTSet} onValueChange={setFilterGTSet}>
+          <SelectTrigger className="h-7 w-auto min-w-[120px] text-xs">
+            <FileText className="size-3 mr-1 shrink-0 text-muted-foreground" />
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All documents ({allDocuments.length})</SelectItem>
+            {gtSets.map(s => (
+              <SelectItem key={s.id} value={s.id}>
+                {s.name} ({s.doc_count ?? s.doc_ids?.length ?? 0})
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+
+        <Separator orientation="vertical" className="h-4" />
+
         {/* Type selector */}
         <Select
           value={selectedType}
@@ -442,12 +469,16 @@ export default function ElementBrowser() {
                 variant="outline"
                 pressed={showDoclingElements}
                 onPressedChange={setShowDoclingElements}
+                disabled={!doclingAvailable}
+                className={!doclingAvailable ? 'opacity-40' : ''}
               >
                 <Layers className="size-3.5" />
                 <span className="text-xs">Docling</span>
               </Toggle>
             </TooltipTrigger>
-            <TooltipContent side="bottom">Show Docling elements</TooltipContent>
+            <TooltipContent side="bottom">
+              {doclingAvailable ? 'Show Docling elements' : 'No Docling data for this document'}
+            </TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -495,22 +526,6 @@ export default function ElementBrowser() {
 
         {/* Right-aligned filters & nav */}
         <div className="ml-auto flex items-center gap-1.5">
-          {gtSets.length > 0 && (
-            <Select value={filterGTSet} onValueChange={setFilterGTSet}>
-              <SelectTrigger className="h-7 w-auto min-w-[90px] text-xs">
-                <FileText className="size-3 mr-1 shrink-0 text-muted-foreground" />
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="all">All docs</SelectItem>
-                {gtSets.map(s => (
-                  <SelectItem key={s.id} value={s.id}>
-                    {s.name} ({s.doc_count ?? s.doc_ids?.length ?? 0})
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          )}
           <Select value={filterGaap} onValueChange={setFilterGaap}>
             <SelectTrigger className="h-7 w-auto min-w-[70px] text-xs">
               <SelectValue />
@@ -552,7 +567,7 @@ export default function ElementBrowser() {
             </Button>
           </div>
           <span className="text-[11px] text-muted-foreground">
-            {filteredDocs.length}/{documents.length} docs
+            {filteredDocs.length}/{populationDocs.length} docs
             {reviewedCount > 0 && <span className="text-green-500 ml-1">({reviewedCount} done)</span>}
           </span>
         </div>
