@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useGTSets, useGTSetDocs, useCreateGTSet, useAddGTSetDocs, useDocuments } from '../api.js'
-import { GaapBadge } from './ui/badge.jsx'
 import { Button } from './ui/button.jsx'
 import { Input } from './ui/input.jsx'
 import {
@@ -157,6 +156,7 @@ function SetDetail({ set, onBack }) {
           <h2 className="text-lg font-semibold">{set.name}</h2>
           {set.description && <p className="text-sm text-muted-foreground">{set.description}</p>}
         </div>
+        <span className="text-sm text-muted-foreground tabular-nums">{docs.length} docs</span>
         <Button size="sm" className="ml-auto" onClick={() => setAddDialogOpen(true)}>
           <Plus className="size-3.5 mr-1" /> Add Docs
         </Button>
@@ -176,9 +176,15 @@ function SetDetail({ set, onBack }) {
             <TableHeader className="bg-muted sticky top-0 z-10">
               <TableRow>
                 <TableHead>Document</TableHead>
-                <TableHead>GAAP</TableHead>
                 <TableHead className="text-right">Pages</TableHead>
                 <TableHead>PDF</TableHead>
+                <TableHead className="text-right">Size</TableHead>
+                <TableHead className="text-right">Texts</TableHead>
+                <TableHead className="text-right">Tables</TableHead>
+                <TableHead className="text-right">DL pgs</TableHead>
+                <TableHead className="text-right">TG pgs</TableHead>
+                <TableHead>Match</TableHead>
+                <TableHead className="text-right">Tags</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -190,12 +196,57 @@ function SetDetail({ set, onBack }) {
                       <div className="text-[11px] text-muted-foreground">{doc.entity_name}</div>
                     )}
                   </TableCell>
-                  <TableCell><GaapBadge gaap={doc.gaap} /></TableCell>
                   <TableCell className="text-right tabular-nums text-muted-foreground">
                     {doc.page_count || '\u2013'}
                   </TableCell>
                   <TableCell>
                     <PdfIndicator hasPdf={doc.has_pdf} />
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-muted-foreground text-xs">
+                    {doc.docling_size != null ? (
+                      doc.docling_url ? (
+                        <a href={doc.docling_url} target="_blank" rel="noopener noreferrer"
+                           className="text-blue-500 hover:underline">{doc.docling_size}KB</a>
+                      ) : `${doc.docling_size}KB`
+                    ) : '\u2013'}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-muted-foreground text-xs">
+                    {doc.docling_texts ?? '\u2013'}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-muted-foreground text-xs">
+                    {doc.docling_tables ?? '\u2013'}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-muted-foreground text-xs">
+                    {doc.docling_pages ?? '\u2013'}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-muted-foreground text-xs">
+                    {doc.tg_pages ?? '\u2013'}
+                  </TableCell>
+                  <TableCell>
+                    {doc.docling_match === 'ok' ? (
+                      <span className="text-xs font-medium text-green-600">OK</span>
+                    ) : doc.docling_match === 'partial' ? (
+                      <span className="text-xs font-medium text-amber-600">Partial</span>
+                    ) : doc.docling_match === 'missing' ? (
+                      <span className="text-xs font-medium text-red-500">Missing</span>
+                    ) : doc.docling_match === 'error' ? (
+                      <span className="text-xs font-medium text-red-500">Error</span>
+                    ) : (
+                      <span className="text-xs text-muted-foreground">{'\u2013'}</span>
+                    )}
+                  </TableCell>
+                  <TableCell className="text-right tabular-nums text-xs">
+                    {doc.tag_coverage != null ? (
+                      <span className={
+                        doc.tag_coverage === 100 ? 'font-medium text-green-600' :
+                        doc.tag_coverage > 0 ? 'font-medium text-amber-600' :
+                        'text-muted-foreground'
+                      }>
+                        {doc.tag_coverage}%
+                      </span>
+                    ) : (
+                      <span className="text-muted-foreground">{'\u2013'}</span>
+                    )}
                   </TableCell>
                 </TableRow>
               ))}

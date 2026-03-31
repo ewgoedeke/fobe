@@ -42,6 +42,52 @@ export function resolveTransitions(transitions, totalPages) {
 }
 
 /**
+ * Resolve multi-tags into a per-page set, carrying forward within transition spans.
+ *
+ * A multi-tag on page N carries forward until either:
+ * - A primary transition on a later page resets the span
+ * - The same multi-tag type appears again (toggle off)
+ *
+ * @param {Array<{page: number, section_type: string}>} multiTags
+ * @param {Array<{page: number, section_type: string}>} transitions
+ * @param {number} totalPages
+ * @returns {Map<number, string[]>} page → array of multi-tag section_types
+ */
+export function resolveMultiTags(multiTags, transitions, totalPages) {
+  if (!multiTags.length) return new Map()
+
+  // Build transition boundary pages (sorted)
+  const transitionPages = new Set(transitions.map(t => t.page))
+  const sortedTransitions = [...transitions].sort((a, b) => a.page - b.page)
+
+  // For each multi-tag, find its transition span and fill forward
+  const result = new Map()
+
+  // Sort multi-tags by page
+  const sorted = [...multiTags].sort((a, b) => a.page - b.page)
+
+  for (const mt of sorted) {
+    // Find the end of this transition span
+    let spanEnd = totalPages
+    for (const t of sortedTransitions) {
+      if (t.page > mt.page) {
+        spanEnd = t.page - 1
+        break
+      }
+    }
+
+    // Fill forward from mt.page to spanEnd
+    for (let p = mt.page; p <= spanEnd; p++) {
+      if (!result.has(p)) result.set(p, [])
+      const arr = result.get(p)
+      if (!arr.includes(mt.section_type)) arr.push(mt.section_type)
+    }
+  }
+
+  return result
+}
+
+/**
  * Build hierarchy groups from resolved page map for outline display.
  *
  * Returns array of groups, each with sections and page ranges.
