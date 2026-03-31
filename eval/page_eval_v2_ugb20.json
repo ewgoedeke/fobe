@@ -1,0 +1,935 @@
+{
+  "scope": "UGB20",
+  "method": "layout+structural+text+visual+lightgbm",
+  "accuracy": 0.773,
+  "macro_f1": 0.568,
+  "n_samples": 511,
+  "n_documents": 20,
+  "branches": [
+    "layout",
+    "structural",
+    "text",
+    "visual"
+  ],
+  "class_metrics": {
+    "FRONT_MATTER": {
+      "precision": 0.909,
+      "recall": 0.769,
+      "f1": 0.833,
+      "support": 13
+    },
+    "TOC": {
+      "precision": 0.5,
+      "recall": 0.167,
+      "f1": 0.25,
+      "support": 6
+    },
+    "PNL": {
+      "precision": 0.667,
+      "recall": 0.222,
+      "f1": 0.333,
+      "support": 27
+    },
+    "SFP": {
+      "precision": 0.686,
+      "recall": 0.558,
+      "f1": 0.615,
+      "support": 43
+    },
+    "AUDITOR_REPORT": {
+      "precision": 0.576,
+      "recall": 0.466,
+      "f1": 0.515,
+      "support": 73
+    },
+    "NOTES": {
+      "precision": 0.81,
+      "recall": 0.917,
+      "f1": 0.86,
+      "support": 349
+    }
+  },
+  "class_distribution": {
+    "FRONT_MATTER": 13,
+    "TOC": 6,
+    "PNL": 27,
+    "SFP": 43,
+    "AUDITOR_REPORT": 73,
+    "NOTES": 349
+  },
+  "confusion_matrix": {
+    "classes": [
+      "FRONT_MATTER",
+      "TOC",
+      "PNL",
+      "SFP",
+      "AUDITOR_REPORT",
+      "NOTES"
+    ],
+    "matrix": [
+      [
+        10,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        0,
+        6,
+        7,
+        0,
+        14
+      ],
+      [
+        0,
+        0,
+        3,
+        24,
+        0,
+        16
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        34,
+        39
+      ],
+      [
+        1,
+        0,
+        0,
+        4,
+        24,
+        320
+      ]
+    ]
+  },
+  "n_errors": 116,
+  "errors": [
+    {
+      "doc": "mayr_melnhof_ugb_2024",
+      "page": 19,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.883
+    },
+    {
+      "doc": "mayr_melnhof_ugb_2024",
+      "page": 21,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "mayr_melnhof_ugb_2024",
+      "page": 22,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "mayr_melnhof_ugb_2024",
+      "page": 23,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "mayr_melnhof_ugb_2024",
+      "page": 24,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.898
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.977
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 4,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.826
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 9,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 1,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.412
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 4,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.801
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 5,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 6,
+      "true": "NOTES",
+      "pred": "SFP",
+      "conf": 0.731
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 7,
+      "true": "NOTES",
+      "pred": "SFP",
+      "conf": 0.964
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 13,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.998
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 22,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.992
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 28,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.84
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 29,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 30,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 1,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.99
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 2,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 3,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 4,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 8,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 11,
+      "true": "NOTES",
+      "pred": "FRONT_MATTER",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 12,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 1,
+      "true": "SFP",
+      "pred": "PNL",
+      "conf": 0.441
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 3,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 1.0
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 17,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 18,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_ugb_2025",
+      "page": 2,
+      "true": "TOC",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.422
+    },
+    {
+      "doc": "agrana_ugb_2025",
+      "page": 5,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.783
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.318
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 6,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.856
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 7,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.67
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 10,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.736
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 20,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.625
+    },
+    {
+      "doc": "donau_chemie_ugb_2023",
+      "page": 22,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.937
+    },
+    {
+      "doc": "bergbahn_kitzbuehel_ugb_2024",
+      "page": 1,
+      "true": "FRONT_MATTER",
+      "pred": "TOC",
+      "conf": 0.541
+    },
+    {
+      "doc": "bergbahn_kitzbuehel_ugb_2024",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "bergbahn_kitzbuehel_ugb_2024",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "bergbahn_kitzbuehel_ugb_2024",
+      "page": 4,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "bergbahn_kitzbuehel_ugb_2024",
+      "page": 19,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 4,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.871
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 5,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.773
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 17,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 31,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.855
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 32,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 1,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 4,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 5,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 6,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.993
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 26,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 27,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 28,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.993
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 29,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 30,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.819
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 31,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 33,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 34,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 35,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 1,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.566
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.635
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 6,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.518
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 8,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.912
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 9,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 20,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 24,
+      "true": "NOTES",
+      "pred": "SFP",
+      "conf": 1.0
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 25,
+      "true": "NOTES",
+      "pred": "SFP",
+      "conf": 0.999
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 29,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.719
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 33,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.527
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.824
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 4,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.312
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 30,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 31,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 33,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 34,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 35,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "3_bankengenerali_investment_gesellschaft_mbh_ugb_2023",
+      "page": 3,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.515
+    },
+    {
+      "doc": "3_bankengenerali_investment_gesellschaft_mbh_ugb_2023",
+      "page": 5,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.987
+    },
+    {
+      "doc": "3_bankengenerali_investment_gesellschaft_mbh_ugb_2023",
+      "page": 8,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.79
+    },
+    {
+      "doc": "3_bankengenerali_investment_gesellschaft_mbh_ugb_2023",
+      "page": 17,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.727
+    },
+    {
+      "doc": "3banken_wohnbaubank_ag_ugb_2023",
+      "page": 12,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "3banken_wohnbaubank_ag_ugb_2023",
+      "page": 13,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.997
+    },
+    {
+      "doc": "3banken_wohnbaubank_ag_ugb_2023",
+      "page": 14,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "3e_handels_und_dienstleistungs_ag_ugb_2023",
+      "page": 4,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.288
+    },
+    {
+      "doc": "6b47_real_estate_investors_ag_ugb_2022",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.964
+    },
+    {
+      "doc": "6b47_real_estate_investors_ag_ugb_2022",
+      "page": 4,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "6b47_real_estate_investors_ag_ugb_2022",
+      "page": 5,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.641
+    },
+    {
+      "doc": "6b47_real_estate_investors_ag_ugb_2022",
+      "page": 7,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.993
+    },
+    {
+      "doc": "6b47_real_estate_investors_ag_ugb_2022",
+      "page": 8,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 2,
+      "true": "SFP",
+      "pred": "PNL",
+      "conf": 0.75
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 4,
+      "true": "SFP",
+      "pred": "PNL",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 5,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.758
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 6,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.818
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 7,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 24,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 25,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 28,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.983
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 29,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_telekom_austria_aktiengesellschaft_ugb_2023",
+      "page": 7,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_telekom_austria_aktiengesellschaft_ugb_2023",
+      "page": 8,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.465
+    },
+    {
+      "doc": "a1_telekom_ugb_2024",
+      "page": 1,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_telekom_ugb_2024",
+      "page": 3,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "a1_telekom_ugb_2024",
+      "page": 7,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.867
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 4,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.999
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 5,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.718
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 6,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.992
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 7,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.99
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 8,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "abag_ag_ugb_2023",
+      "page": 20,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    }
+  ]
+}
