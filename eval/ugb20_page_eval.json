@@ -1,0 +1,633 @@
+{
+  "scope": "UGB50",
+  "method": "tfidf+cnn+lightgbm",
+  "accuracy": 0.943,
+  "n_samples": 1287,
+  "n_documents": 50,
+  "grid_shape": [
+    6,
+    64,
+    48
+  ],
+  "vocab_size": 2000,
+  "class_metrics": {
+    "FRONT_MATTER": {
+      "precision": 0.882,
+      "recall": 0.833,
+      "f1": 0.857,
+      "support": 36
+    },
+    "TOC": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.571,
+      "support": 15
+    },
+    "PNL": {
+      "precision": 0.957,
+      "recall": 0.944,
+      "f1": 0.95,
+      "support": 71
+    },
+    "SFP": {
+      "precision": 0.965,
+      "recall": 0.863,
+      "f1": 0.911,
+      "support": 95
+    },
+    "AUDITOR_REPORT": {
+      "precision": 0.897,
+      "recall": 0.91,
+      "f1": 0.904,
+      "support": 201
+    },
+    "NOTES": {
+      "precision": 0.953,
+      "recall": 0.974,
+      "f1": 0.963,
+      "support": 869
+    }
+  },
+  "class_distribution": {
+    "FRONT_MATTER": 36,
+    "TOC": 15,
+    "PNL": 71,
+    "SFP": 95,
+    "AUDITOR_REPORT": 201,
+    "NOTES": 869
+  },
+  "confusion_matrix": {
+    "classes": [
+      "FRONT_MATTER",
+      "TOC",
+      "PNL",
+      "SFP",
+      "AUDITOR_REPORT",
+      "NOTES"
+    ],
+    "matrix": [
+      [
+        30,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        2,
+        6,
+        0,
+        1,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        67,
+        1,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        2,
+        82,
+        0,
+        11
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        183,
+        16
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        21,
+        846
+      ]
+    ]
+  },
+  "n_errors": 73,
+  "errors": [
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 3,
+      "true": "SFP",
+      "pred": "PNL",
+      "conf": 1.0
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 12,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.994
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 13,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "merkur_international_ugb_2023",
+      "page": 14,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 1,
+      "true": "TOC",
+      "pred": "FRONT_MATTER",
+      "conf": 0.384
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 26,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 27,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 28,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 29,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 30,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 31,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.999
+    },
+    {
+      "doc": "voestalpine_ugb_2025",
+      "page": 32,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.99
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 8,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "pke_holding_ugb_2024",
+      "page": 11,
+      "true": "NOTES",
+      "pred": "FRONT_MATTER",
+      "conf": 1.0
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 18,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.96
+    },
+    {
+      "doc": "gesiba_ugb_2022",
+      "page": 19,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.996
+    },
+    {
+      "doc": "evn_ugb_2025",
+      "page": 1,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.989
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 1,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.996
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 27,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 28,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.587
+    },
+    {
+      "doc": "kapsch_ugb_2025",
+      "page": 29,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.995
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 25,
+      "true": "NOTES",
+      "pred": "PNL",
+      "conf": 0.891
+    },
+    {
+      "doc": "borealis_ag_ugb_2023",
+      "page": 29,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 1,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "marinomed_ugb_2024",
+      "page": 31,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.947
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 4,
+      "true": "SFP",
+      "pred": "PNL",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 6,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.765
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 7,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.6
+    },
+    {
+      "doc": "a1_bank_ag_ugb_2023",
+      "page": 24,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "a1_telekom_austria_aktiengesellschaft_ugb_2023",
+      "page": 7,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.998
+    },
+    {
+      "doc": "abb_ag_ugb_2023",
+      "page": 3,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.816
+    },
+    {
+      "doc": "abb_ag_ugb_2023",
+      "page": 5,
+      "true": "TOC",
+      "pred": "SFP",
+      "conf": 0.608
+    },
+    {
+      "doc": "abb_ag_ugb_2023",
+      "page": 6,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.998
+    },
+    {
+      "doc": "abs_factoring_ag_ugb_2023",
+      "page": 3,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "acredia_versicherung_ag_ugb_2023",
+      "page": 2,
+      "true": "PNL",
+      "pred": "SFP",
+      "conf": 0.999
+    },
+    {
+      "doc": "addiko_bank_ag_ugb_2022",
+      "page": 35,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.742
+    },
+    {
+      "doc": "addiko_bank_ag_ugb_2023",
+      "page": 36,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "addiko_bank_ag_ugb_2023",
+      "page": 37,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 1,
+      "true": "AUDITOR_REPORT",
+      "pred": "FRONT_MATTER",
+      "conf": 0.999
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 34,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 35,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 36,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 37,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "addiko_ugb_2024",
+      "page": 38,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.998
+    },
+    {
+      "doc": "admonter_holzindustrie_ag_ugb_2022",
+      "page": 5,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "adolf_darbo_aktiengesellschaft_ugb_2022",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.998
+    },
+    {
+      "doc": "adolf_darbo_aktiengesellschaft_ugb_2022",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.999
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 3,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 13,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 14,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 15,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_st\u00e4rke_und_frucht_holding_ag_ugb_2023",
+      "page": 16,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "agrana_zucker_ugb_2023",
+      "page": 3,
+      "true": "PNL",
+      "pred": "NOTES",
+      "conf": 0.835
+    },
+    {
+      "doc": "allianz_elementar_versicherungs_aktiengesellschaft_ugb_2023",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.537
+    },
+    {
+      "doc": "alpen_privatbank_aktiengesellschaft_ugb_2022",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.988
+    },
+    {
+      "doc": "altstoff_recycling_austria_aktiengesellschaft_ugb_2022",
+      "page": 17,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 1.0
+    },
+    {
+      "doc": "altstoff_recycling_austria_aktiengesellschaft_ugb_2023",
+      "page": 1,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 0.99
+    },
+    {
+      "doc": "amag_austria_metall_ag_ugb_2023",
+      "page": 33,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.517
+    },
+    {
+      "doc": "amsosram_ag_ugb_2022",
+      "page": 1,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.973
+    },
+    {
+      "doc": "amsosram_ag_ugb_2022",
+      "page": 40,
+      "true": "NOTES",
+      "pred": "AUDITOR_REPORT",
+      "conf": 0.776
+    },
+    {
+      "doc": "andritz_ag_ugb_2023",
+      "page": 2,
+      "true": "AUDITOR_REPORT",
+      "pred": "SFP",
+      "conf": 1.0
+    },
+    {
+      "doc": "andritz_ag_ugb_2023",
+      "page": 34,
+      "true": "FRONT_MATTER",
+      "pred": "NOTES",
+      "conf": 0.998
+    },
+    {
+      "doc": "andritz_ugb_2024",
+      "page": 2,
+      "true": "TOC",
+      "pred": "FRONT_MATTER",
+      "conf": 0.818
+    },
+    {
+      "doc": "andritz_ugb_2024",
+      "page": 8,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "andritz_ugb_2024",
+      "page": 71,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.944
+    },
+    {
+      "doc": "andritz_ugb_2024",
+      "page": 72,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.97
+    },
+    {
+      "doc": "andritz_ugb_2024",
+      "page": 73,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.972
+    },
+    {
+      "doc": "anteilsverwaltung_allgemeine_sparkasse_ugb_2023",
+      "page": 2,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "anteilsverwaltung_allgemeine_sparkasse_ugb_2023",
+      "page": 3,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "anteilsverwaltung_allgemeine_sparkasse_ugb_2023",
+      "page": 4,
+      "true": "SFP",
+      "pred": "NOTES",
+      "conf": 1.0
+    },
+    {
+      "doc": "anteilsverwaltung_allgemeine_sparkasse_ugb_2023",
+      "page": 8,
+      "true": "TOC",
+      "pred": "NOTES",
+      "conf": 0.73
+    },
+    {
+      "doc": "anteilsverwaltung_allgemeine_sparkasse_ugb_2023",
+      "page": 25,
+      "true": "AUDITOR_REPORT",
+      "pred": "NOTES",
+      "conf": 0.998
+    }
+  ]
+}
