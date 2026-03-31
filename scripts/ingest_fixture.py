@@ -85,6 +85,38 @@ def parse_fixture(slug: str) -> dict[str, Any]:
     elif "_hgb_" in slug:
         gaap = "HGB"
 
+    total_tables = len(tg.get("tables", []))
+    total_rows = sum(len(t.get("rows", [])) for t in tg.get("tables", []))
+
+    # Distinct pages with tables
+    tg_page_set = set()
+    for t in tg.get("tables", []):
+        p = t.get("pageNo")
+        if p:
+            tg_page_set.add(p)
+
+    # Docling metadata
+    dl = load_json(fixture_dir / "docling_elements.json")
+    dl_text_count = None
+    dl_table_count = None
+    dl_page_count = None
+    dl_size_kb = None
+    if dl:
+        dl_path = fixture_dir / "docling_elements.json"
+        dl_size_kb = round(dl_path.stat().st_size / 1024)
+        if "texts" in dl:
+            dl_text_count = len(dl.get("texts", []))
+            dl_table_count = len(dl.get("tables", []))
+            dl_pages = set()
+            for item in dl.get("texts", []) + dl.get("tables", []):
+                for prov in item.get("prov", []):
+                    p = prov.get("page_no")
+                    if p:
+                        dl_pages.add(p)
+            dl_page_count = len(dl_pages)
+        elif "pages" in dl and isinstance(dl["pages"], dict):
+            dl_page_count = len(dl["pages"])
+
     result["document"] = {
         "slug": slug,
         "entity_name": meta.get("entity_name", slug.replace("_", " ").title()) if meta else slug,
@@ -96,8 +128,15 @@ def parse_fixture(slug: str) -> dict[str, Any]:
         "unit_scale": _parse_unit_scale(meta.get("unit", "")) if meta else 1,
         "language": "de",
         "page_count": page_count,
+        "table_count": total_tables,
+        "row_count": total_rows,
         "source_path": find_pdf_path(slug),
         "status": "structured",
+        "tg_page_count": len(tg_page_set) if tg_page_set else None,
+        "docling_text_count": dl_text_count,
+        "docling_table_count": dl_table_count,
+        "docling_page_count": dl_page_count,
+        "docling_size_kb": dl_size_kb,
     }
 
     # ── Tables, rows, cells ──────────────────────────────────
@@ -277,33 +316,17 @@ def upsert_fixture(parsed: dict, supabase_url: str, supabase_key: str) -> dict:
             row_inserts.append(insert)
             row_keys.append(r["_row_key"])
 
-        for chunk_start in range(0, len(row_inserts), 500):
-            chunk = row_inserts[chunk_start:chunk_start + 500]
-            keys_chunk = row_keys[chunk_start:chunk_start + 500]
+        for chunk_start in range(0, len(row_inserts), 2000):
+            chunk = row_inserts[chunk_start:chunk_start + 2000]
+            keys_chunk = row_keys[chunk_start:chunk_start + 2000]
             resp = sb.table("table_rows").insert(chunk).execute()
             for j, row_data in enumerate(resp.data):
                 row_uuid_map[keys_chunk[j]] = row_data["id"]
 
     stats["rows"] = len(row_uuid_map)
 
-    # 5. Insert cells
-    cell_count = 0
-    if parsed["cells"]:
-        cell_inserts = []
-        for c in parsed["cells"]:
-            row_uuid = row_uuid_map.get(c["_row_key"])
-            if not row_uuid:
-                continue
-            insert = {k: v for k, v in c.items() if not k.startswith("_")}
-            insert["row_id"] = row_uuid
-            cell_inserts.append(insert)
-
-        for chunk_start in range(0, len(cell_inserts), 500):
-            chunk = cell_inserts[chunk_start:chunk_start + 500]
-            sb.table("cells").insert(chunk).execute()
-            cell_count += len(chunk)
-
-    stats["cells"] = cell_count
+    # 5. Skip cells — lazy-loaded from table_graphs.json / R2 instead
+    stats["cells"] = 0
 
     # 6. Insert tags
     tag_count = 0
@@ -321,8 +344,8 @@ def upsert_fixture(parsed: dict, supabase_url: str, supabase_key: str) -> dict:
             })
 
         if tag_inserts:
-            for chunk_start in range(0, len(tag_inserts), 500):
-                chunk = tag_inserts[chunk_start:chunk_start + 500]
+            for chunk_start in range(0, len(tag_inserts), 2000):
+                chunk = tag_inserts[chunk_start:chunk_start + 2000]
                 sb.table("row_tags").insert(chunk).execute()
                 tag_count += len(chunk)
 
@@ -334,6 +357,21 @@ def upsert_fixture(parsed: dict, supabase_url: str, supabase_key: str) -> dict:
         sb.table("toc_sections").insert(toc_inserts).execute()
 
     stats["toc_sections"] = len(parsed["toc_sections"])
+
+    # Log upload event for dashboard activity chart
+    try:
+        event_log = REPO_ROOT / "eval" / "fixtures" / ".event_log.jsonl"
+        from datetime import datetime, timezone
+        entry = json.dumps({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "event": "document_upload",
+            "doc_id": parsed["slug"],
+            "source": "ingest_fixture",
+        })
+        with open(event_log, "a") as f:
+            f.write(entry + "\n")
+    except Exception:
+        pass
 
     return stats
 
