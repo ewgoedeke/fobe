@@ -1,14 +1,40 @@
 {
   "version": 1,
+  "annotated_at": "2026-03-30T22:40:56.249354+00:00",
   "annotator": "",
+  "has_toc": false,
   "toc_table_id": null,
   "toc_pages": [],
   "sections": [
     {
       "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 2,
+      "end_page": 7,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
       "statement_type": "TOC",
       "start_page": 8,
-      "end_page": 9,
+      "end_page": 23,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 24,
+      "end_page": 25,
       "note_number": null,
       "validated": true
     },
@@ -16,7 +42,23 @@
       "label": "",
       "statement_type": "TOC",
       "start_page": 26,
-      "end_page": 26,
+      "end_page": 27,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 28,
+      "end_page": 82,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 83,
+      "end_page": 95,
       "note_number": null,
       "validated": true
     },
@@ -24,7 +66,15 @@
       "label": "",
       "statement_type": "TOC",
       "start_page": 96,
-      "end_page": 96,
+      "end_page": 113,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "OTHER",
+      "start_page": 114,
+      "end_page": 155,
       "note_number": null,
       "validated": true
     },
@@ -32,7 +82,7 @@
       "label": "",
       "statement_type": "TOC",
       "start_page": 156,
-      "end_page": 156,
+      "end_page": 273,
       "note_number": null,
       "validated": true
     },
@@ -40,7 +90,7 @@
       "label": "",
       "statement_type": "TOC",
       "start_page": 274,
-      "end_page": 274,
+      "end_page": 379,
       "note_number": null,
       "validated": true
     },
@@ -48,7 +98,119 @@
       "label": "",
       "statement_type": "TOC",
       "start_page": 380,
-      "end_page": 380,
+      "end_page": 438,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "TOC",
+      "start_page": 439,
+      "end_page": 439,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 440,
+      "end_page": 440,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 441,
+      "end_page": 441,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 442,
+      "end_page": 442,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 443,
+      "end_page": 443,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 444,
+      "end_page": 444,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 445,
+      "end_page": 445,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 446,
+      "end_page": 446,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 447,
+      "end_page": 447,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 448,
+      "end_page": 448,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 449,
+      "end_page": 449,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 450,
+      "end_page": 450,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 451,
+      "end_page": 451,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "PNL",
+      "start_page": 452,
+      "end_page": 452,
       "note_number": null,
       "validated": true
     },
@@ -62,39 +224,461 @@
     },
     {
       "label": "",
-      "statement_type": "OTHER",
-      "start_page": 28,
-      "end_page": 28,
+      "statement_type": "SFP",
+      "start_page": 454,
+      "end_page": 454,
       "note_number": null,
       "validated": true
     },
     {
       "label": "",
-      "statement_type": "OTHER",
-      "start_page": 114,
-      "end_page": 114,
+      "statement_type": "SOCIE",
+      "start_page": 455,
+      "end_page": 455,
       "note_number": null,
       "validated": true
     },
     {
       "label": "",
-      "statement_type": "OTHER",
-      "start_page": 24,
-      "end_page": 24,
+      "statement_type": "CFS",
+      "start_page": 456,
+      "end_page": 456,
       "note_number": null,
       "validated": true
     },
     {
       "label": "",
-      "statement_type": "OTHER",
-      "start_page": 83,
-      "end_page": 83,
+      "statement_type": "NOTES",
+      "start_page": 457,
+      "end_page": 457,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 458,
+      "end_page": 458,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 459,
+      "end_page": 459,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 460,
+      "end_page": 460,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 461,
+      "end_page": 461,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 462,
+      "end_page": 462,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 463,
+      "end_page": 463,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 464,
+      "end_page": 464,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 465,
+      "end_page": 465,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 466,
+      "end_page": 466,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 467,
+      "end_page": 467,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 468,
+      "end_page": 468,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 469,
+      "end_page": 469,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 470,
+      "end_page": 470,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 471,
+      "end_page": 471,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 472,
+      "end_page": 472,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 473,
+      "end_page": 473,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 474,
+      "end_page": 474,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 475,
+      "end_page": 475,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 476,
+      "end_page": 476,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 477,
+      "end_page": 477,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 478,
+      "end_page": 479,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 480,
+      "end_page": 480,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 481,
+      "end_page": 481,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 482,
+      "end_page": 482,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 483,
+      "end_page": 483,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 484,
+      "end_page": 484,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 485,
+      "end_page": 485,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 486,
+      "end_page": 486,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 487,
+      "end_page": 487,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 488,
+      "end_page": 488,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 489,
+      "end_page": 489,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 490,
+      "end_page": 490,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 491,
+      "end_page": 491,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 492,
+      "end_page": 492,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 493,
+      "end_page": 493,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 494,
+      "end_page": 495,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 496,
+      "end_page": 580,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 581,
+      "end_page": 581,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 582,
+      "end_page": 582,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 583,
+      "end_page": 583,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 584,
+      "end_page": 584,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 585,
+      "end_page": 585,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 586,
+      "end_page": 586,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 587,
+      "end_page": 587,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 588,
+      "end_page": 588,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 589,
+      "end_page": 589,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 590,
+      "end_page": 590,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 591,
+      "end_page": 591,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 592,
+      "end_page": 592,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 593,
+      "end_page": 593,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 594,
+      "end_page": 594,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 595,
+      "end_page": 595,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 596,
+      "end_page": 596,
       "note_number": null,
       "validated": true
     }
   ],
-  "notes_start_page": null,
-  "notes_end_page": null,
-  "annotated_at": "2026-03-28T21:44:13.020114+00:00",
-  "has_toc": true
+  "notes_start_page": 457,
+  "notes_end_page": 580
 }

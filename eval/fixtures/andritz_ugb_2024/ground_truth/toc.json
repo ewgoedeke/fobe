@@ -1,9 +1,19 @@
 {
   "version": 1,
+  "annotated_at": "2026-03-30T22:52:55.771069+00:00",
   "annotator": "",
+  "has_toc": false,
   "toc_table_id": null,
   "toc_pages": [],
   "sections": [
+    {
+      "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
     {
       "label": "",
       "statement_type": "TOC",
@@ -14,15 +24,581 @@
     },
     {
       "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 3,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 4,
+      "end_page": 4,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 5,
+      "end_page": 5,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 6,
+      "end_page": 6,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 7,
+      "end_page": 7,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
       "statement_type": "TOC",
       "start_page": 8,
       "end_page": 8,
       "note_number": null,
       "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 9,
+      "end_page": 9,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 10,
+      "end_page": 10,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 11,
+      "end_page": 11,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 12,
+      "end_page": 12,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 13,
+      "end_page": 13,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 14,
+      "end_page": 14,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 15,
+      "end_page": 15,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 16,
+      "end_page": 16,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 17,
+      "end_page": 17,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 18,
+      "end_page": 18,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 19,
+      "end_page": 19,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 20,
+      "end_page": 20,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 21,
+      "end_page": 21,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 22,
+      "end_page": 22,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 23,
+      "end_page": 23,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 24,
+      "end_page": 24,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 25,
+      "end_page": 25,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 26,
+      "end_page": 26,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 27,
+      "end_page": 27,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 28,
+      "end_page": 28,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 29,
+      "end_page": 29,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 30,
+      "end_page": 30,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 31,
+      "end_page": 31,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 32,
+      "end_page": 32,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 33,
+      "end_page": 33,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 34,
+      "end_page": 34,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 35,
+      "end_page": 35,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 36,
+      "end_page": 36,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 37,
+      "end_page": 37,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 38,
+      "end_page": 38,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 39,
+      "end_page": 39,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 40,
+      "end_page": 40,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "SFP",
+      "start_page": 41,
+      "end_page": 41,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "SFP",
+      "start_page": 42,
+      "end_page": 42,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "PNL",
+      "start_page": 43,
+      "end_page": 43,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 44,
+      "end_page": 44,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 45,
+      "end_page": 45,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 46,
+      "end_page": 46,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 47,
+      "end_page": 47,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 48,
+      "end_page": 48,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 49,
+      "end_page": 49,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 50,
+      "end_page": 50,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 51,
+      "end_page": 51,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 52,
+      "end_page": 52,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 53,
+      "end_page": 53,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 54,
+      "end_page": 54,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 55,
+      "end_page": 55,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 56,
+      "end_page": 56,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 57,
+      "end_page": 57,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 58,
+      "end_page": 58,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 59,
+      "end_page": 59,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 60,
+      "end_page": 61,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 62,
+      "end_page": 62,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 63,
+      "end_page": 63,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 64,
+      "end_page": 64,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 65,
+      "end_page": 65,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 66,
+      "end_page": 66,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 67,
+      "end_page": 67,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 68,
+      "end_page": 68,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 69,
+      "end_page": 69,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 70,
+      "end_page": 70,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 71,
+      "end_page": 71,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 72,
+      "end_page": 72,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 73,
+      "end_page": 73,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 74,
+      "end_page": 74,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 75,
+      "end_page": 75,
+      "note_number": null,
+      "validated": true
     }
   ],
-  "notes_start_page": null,
-  "notes_end_page": null,
-  "has_toc": false,
-  "annotated_at": "2026-03-28T17:38:48.073324+00:00"
+  "notes_start_page": 44,
+  "notes_end_page": 68
 }

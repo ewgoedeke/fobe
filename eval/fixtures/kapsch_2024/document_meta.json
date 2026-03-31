@@ -28,5 +28,22 @@
       "year": 2026
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "EMEA",
+      "SEG.002": "March 31, 2024 | Tolling",
+      "SEG.003": "March 31, 2024 | Traffic Manage- ment",
+      "SEG.004": "March 31, 2025 | Tolling",
+      "SEG.005": "March 31, 2025 | Traffic Manage- ment"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "April, 2024",
+      "PPEDOC.002": "August, 2024"
+    },
+    "AXIS.GEOGRAPHY_DOC": {
+      "GEO.001": "EMEA",
+      "GEO.002": "Americas",
+      "GEO.003": "APAC"
+    }
+  }
 }

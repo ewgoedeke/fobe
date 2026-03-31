@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "transitions": [
+    {
+      "page": 3,
+      "section_type": "TOC",
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 170,
+      "section_type": "TOC",
+      "source": "manual",
+      "validated": true
+    }
+  ],
+  "multi_tags": [],
+  "annotated_at": "2026-03-30T11:00:59.341356+00:00"
+}

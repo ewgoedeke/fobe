@@ -1,0 +1,310 @@
+{
+  "transitions": [
+    {
+      "page": 1,
+      "section_type": "FRONT_MATTER",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 2,
+      "section_type": "SFP",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 3,
+      "section_type": "PNL",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 4,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 5,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 6,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 7,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 8,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 9,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 10,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 11,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 12,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 13,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 14,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 15,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 16,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 17,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 18,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 19,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 21,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 22,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 23,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 24,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 25,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 26,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 27,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 28,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 29,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 30,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 31,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 32,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 33,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 34,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 35,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 36,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 37,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 38,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    }
+  ],
+  "multi_tags": [
+    {
+      "page": 20,
+      "section_type": "GENERAL_REPORTING"
+    }
+  ],
+  "version": 2,
+  "annotated_at": "2026-03-31T08:47:02.505411+00:00",
+  "completed_at": "2026-03-31T08:47:06.636851+00:00",
+  "completed_by": "eckhard.goedeke@gmail.com"
+}

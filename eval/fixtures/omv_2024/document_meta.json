@@ -40,5 +40,35 @@
       "year": 2027
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "Deferred tax assets total | 2024",
+      "PPEDOC.002": "Deferred tax assets not recognized | 2024",
+      "PPEDOC.003": "Deferred tax assets recognized | 2024",
+      "PPEDOC.004": "Deferred tax liabilities | 2024",
+      "PPEDOC.005": "Romania and Black Sea | 2024",
+      "PPEDOC.006": "Austria | 2024",
+      "PPEDOC.007": "Russia | 2024",
+      "PPEDOC.008": "North | 2024",
+      "PPEDOC.009": "South | 2024",
+      "PPEDOC.010": "New Zealand and Australia | 2024",
+      "PPEDOC.011": "Malaysia | 2024",
+      "PPEDOC.012": "Total | 2024",
+      "PPEDOC.013": "Romania and Black Sea | 2022",
+      "PPEDOC.014": "Austria | 2022",
+      "PPEDOC.015": "Russia | 2022",
+      "PPEDOC.016": "North | 2022",
+      "PPEDOC.017": "South | 2022",
+      "PPEDOC.018": "New Zealand and Australia | 2022",
+      "PPEDOC.019": "Malaysia | 2022",
+      "PPEDOC.020": "Total | 2022"
+    },
+    "AXIS.GEOGRAPHY_DOC": {
+      "GEO.001": "Austria",
+      "GEO.002": "Germany",
+      "GEO.003": "Rest of CEE 3",
+      "GEO.004": "Rest of Europe",
+      "GEO.005": "Rest of the world 4"
+    }
+  }
 }

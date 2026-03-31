@@ -34,29 +34,27 @@
   },
   "document_axes": {
     "AXIS.SEGMENT_DOC": {
-      "SEG.001": "Operations",
-      "SEG.002": "Reportable segments.Non-recycled Papers",
-      "SEG.003": "Reportable segments.Recycled Papers",
-      "SEG.004": "Forestry",
-      "SEG.005": "Timber Products",
-      "SEG.006": "Research and Development",
-      "SEG.007": "Total reportable segments",
-      "SEG.008": "All other segments",
-      "SEG.009": "Reportable segments",
-      "SEG.010": "Reportable segment totals",
-      "SEG.011": "Reportable segments.Packaging (discontinued) d"
+      "SEG.001": "Forestry",
+      "SEG.002": "Timber Products",
+      "SEG.003": "Research and Development",
+      "SEG.004": "All other segments",
+      "SEG.005": "Reportable segments.Non-recycled Papers",
+      "SEG.006": "Reportable segments.Recycled Papers",
+      "SEG.007": "Reportable segments.Packaging (discontinued) d"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "timber",
+      "PPEDOC.002": "Livestock",
+      "PPEDOC.003": "Land and buildings",
+      "PPEDOC.004": "Plant and equipment",
+      "PPEDOC.005": "Fixtures and fittings",
+      "PPEDOC.006": "Under construction"
     },
     "AXIS.GEOGRAPHY_DOC": {
-      "GEO.001": "Basis of preparation 1. Reporting entity 2. Basis of accounting 3. Functional and 4. Use of judgements 5. Change in accounting Performance for the year 6. Operating segments Discontinued operation 8. Revenue 9. Income and expenses 10. Net finance costs Earnings per share benefits Share-based payment Employee benefits",
-      "GEO.002": "Adjusted earnings before interest, tax, depreciation and amortisation (adjusted EBITDA)",
-      "GEO.003": "All foreign countries",
-      "GEO.004": "Germany",
-      "GEO.005": "UK",
-      "GEO.006": "US",
-      "GEO.007": "Revenue from contracts with customers b",
-      "GEO.008": "Europe",
-      "GEO.009": "Revenue from contracts with customers",
-      "GEO.010": "In thousands of EUR"
+      "GEO.001": "All foreign countries",
+      "GEO.002": "Germany",
+      "GEO.003": "UK",
+      "GEO.004": "Europe"
     }
   }
 }

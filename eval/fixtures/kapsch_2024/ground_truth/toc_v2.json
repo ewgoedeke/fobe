@@ -1,0 +1,113 @@
+{
+  "transitions": [
+    {
+      "page": 1,
+      "section_type": "FRONT_MATTER",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 2,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 3,
+      "section_type": "FRONT_MATTER",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 4,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 5,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 11,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 146,
+      "section_type": "PNL",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 147,
+      "section_type": "SFP",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 148,
+      "section_type": "SOCIE",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 149,
+      "section_type": "CFS",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 150,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 151,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 152,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    }
+  ],
+  "multi_tags": [],
+  "version": 2,
+  "annotated_at": "2026-03-30T22:37:29.712612+00:00",
+  "completed_at": "2026-03-30T22:37:31.404271+00:00",
+  "completed_by": "eckhard.goedeke@gmail.com"
+}

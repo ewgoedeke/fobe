@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-03-30T01:15:13.411394",
+  "generated_at": "2026-03-31T00:51:36.689227",
   "document": "amag_2024",
   "gate_findings": [
     {
       "type": "inflated_primary",
-      "detail": "12 tables classified as OCI (max 8). Classification is likely broken."
+      "detail": "9 tables classified as CFS (max 8). Classification is likely broken."
     },
     {
       "type": "inflated_primary",
-      "detail": "9 tables classified as CFS (max 8). Classification is likely broken."
+      "detail": "12 tables classified as OCI (max 8). Classification is likely broken."
     }
   ],
   "toc_detected": {

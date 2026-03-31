@@ -1,0 +1,2226 @@
+{
+  "transitions": [
+    {
+      "page": 1,
+      "section_type": "FRONT_MATTER",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 2,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 3,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 4,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 5,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 6,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 7,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 8,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 9,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 10,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 11,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 12,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 13,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 14,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 15,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 16,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 17,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 18,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 19,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 20,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 21,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 22,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 23,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 24,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 25,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 26,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 27,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 28,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 29,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 30,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 31,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 32,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 33,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 34,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 35,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 36,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 37,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 38,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 39,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 40,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 41,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 42,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 43,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 44,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 45,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 46,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 47,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 48,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 49,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 50,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 51,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 52,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 53,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 54,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 55,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 56,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 57,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 58,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 59,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 60,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 61,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 62,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 63,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 64,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 65,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 66,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 67,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 68,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 69,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 70,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 71,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 72,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 73,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 74,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 75,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 76,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 77,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 78,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 79,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 80,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 81,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 82,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 83,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 84,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 85,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 86,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 87,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 88,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 89,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 90,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 91,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 92,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 93,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 94,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 95,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 96,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 97,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 98,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 99,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 100,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 101,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 102,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 103,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 104,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 105,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 106,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 107,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 108,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 109,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 110,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 111,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 112,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 113,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 114,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 115,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 116,
+      "section_type": "APPENDIX",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 117,
+      "section_type": "APPENDIX",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 118,
+      "section_type": "APPENDIX",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 119,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 120,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 121,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 122,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 123,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 124,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 125,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 126,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 127,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 128,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 129,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 130,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 131,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 132,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 133,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 134,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 135,
+      "section_type": "SFP",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 136,
+      "section_type": "PNL",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 137,
+      "section_type": "OCI",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 138,
+      "section_type": "CFS",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 139,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 140,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 141,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 142,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 143,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 144,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 145,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 146,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 147,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 148,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 149,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 150,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 151,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 152,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 153,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 154,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 155,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 156,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 157,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 158,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 159,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 160,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 161,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 162,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 163,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 164,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 165,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 166,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 167,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 168,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 169,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 170,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 171,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 172,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 174,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 175,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 176,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 177,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 178,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 179,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 180,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 181,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 182,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 183,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 184,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 185,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 186,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 187,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 188,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 189,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 190,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 191,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 192,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 193,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 194,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 195,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 196,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 197,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 198,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 199,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 200,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 201,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 202,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 203,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 204,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 205,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 206,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 207,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 208,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 209,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 210,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 211,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 213,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 214,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 215,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 216,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 217,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 218,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 219,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 220,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 221,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 222,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 223,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 224,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 225,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 226,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 227,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 228,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 229,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 230,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 231,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 232,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 233,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 234,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 235,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 236,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 237,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 238,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 239,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 240,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 241,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 242,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 243,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 244,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 245,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 246,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 248,
+      "section_type": "PNL",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 249,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 250,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 251,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 252,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 253,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 254,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 255,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 256,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 257,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 258,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 259,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 260,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 262,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 263,
+      "section_type": "NOTES",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 265,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 266,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 267,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 268,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 269,
+      "section_type": "AUDITOR_REPORT",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 270,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 271,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 272,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 273,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 274,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 275,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 276,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 277,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 278,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 279,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    }
+  ],
+  "multi_tags": [
+    {
+      "page": 114,
+      "section_type": "APPENDIX"
+    },
+    {
+      "page": 115,
+      "section_type": "APPENDIX"
+    },
+    {
+      "page": 117,
+      "section_type": "TOC"
+    },
+    {
+      "page": 118,
+      "section_type": "TOC"
+    },
+    {
+      "page": 137,
+      "section_type": "SOCIE"
+    },
+    {
+      "page": 247,
+      "section_type": "SFP"
+    }
+  ],
+  "version": 2,
+  "annotated_at": "2026-03-31T09:00:40.511963+00:00",
+  "completed_at": "2026-03-31T09:01:01.685133+00:00",
+  "completed_by": "eckhard.goedeke@gmail.com"
+}

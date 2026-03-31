@@ -28,5 +28,25 @@
       "year": 2024
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "SALES & SERVICE",
+      "SEG.002": "OPERATIONS 1)",
+      "SEG.003": "Other Segments",
+      "SEG.004": "PALFINGER Group",
+      "SEG.005": "12/31/2023",
+      "SEG.006": "12/31/2024",
+      "SEG.007": "Jan-Dec 2023",
+      "SEG.008": "Jan-Dec 2024",
+      "SEG.009": "OPERATIONS",
+      "SEG.010": "Consolidation"
+    },
+    "AXIS.GEOGRAPHY_DOC": {
+      "GEO.001": "Germany",
+      "GEO.002": "Austria",
+      "GEO.003": "Remaining foreign countries",
+      "GEO.004": "USA",
+      "GEO.005": "China"
+    }
+  }
 }

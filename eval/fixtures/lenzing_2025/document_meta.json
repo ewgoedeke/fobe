@@ -32,5 +32,35 @@
       "year": 2017
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "Division Faser",
+      "SEG.002": "Division Zellstoff",
+      "SEG.003": "Sonstige",
+      "SEG.004": "Überleitung",
+      "SEG.005": "Konzern",
+      "SEG.006": "Firmenwerte nach Segmenten bzw. CGUs | 31.12",
+      "SEG.007": "31.12"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "Firmenwerte",
+      "PPEDOC.002": "Selbst erstellte immaterielle Vermögenswerte",
+      "PPEDOC.003": "Summe",
+      "PPEDOC.004": "Grundstücke und Bauten",
+      "PPEDOC.005": "Zins-und Dividenden- ertrag",
+      "PPEDOC.006": "Zinsaufwand",
+      "PPEDOC.007": "Nettozinsen",
+      "PPEDOC.008": "Erfolgs- neutrale Bewertung und Umglieder- GuV",
+      "PPEDOC.009": "Abgangs- ergebnis",
+      "PPEDOC.010": "TEUR Netto- ergebnis (Summe)",
+      "PPEDOC.011": "Finanzinstrumenten (Vorjahr) | Zinsertrag",
+      "PPEDOC.012": "Finanzinstrumenten (Vorjahr) | Zinsaufwand",
+      "PPEDOC.013": "Finanzinstrumenten (Vorjahr) | Nettozinsen",
+      "PPEDOC.014": "Finanzinstrumenten (Vorjahr) | Abgangs- ergebnis",
+      "PPEDOC.015": "Netto- ergebnis (Summe)",
+      "PPEDOC.016": "(Einzelbewertung) | 2025",
+      "PPEDOC.017": "Bereinigte Eigenkapitalquote",
+      "PPEDOC.018": "U Unlevered Free Cashflow"
+    }
+  }
 }

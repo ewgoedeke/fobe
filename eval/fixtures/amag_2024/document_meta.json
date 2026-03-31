@@ -20,5 +20,10 @@
       "year": 2023
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.GEOGRAPHY_DOC": {
+      "GEO.001": "Austria revenue*",
+      "GEO.002": "Europe revenue"
+    }
+  }
 }
