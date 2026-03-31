@@ -12,6 +12,7 @@ explorer/frontend/dist/
 sources/**/*.pdf
 
 # Eval artifacts (keep on disk, don't track)
+eval/.feature_cache/
 eval/fixtures/**/*.bak
 eval/fixtures/**/*.structural.bak
 eval/fixtures/**/prompts/
@@ -66,6 +67,9 @@ eval/fixtures/*/
 !eval/fixtures/warimpex_2024/
 !eval/fixtures/wienerberger_2024/
 !eval/fixtures/zumtobel_2024/
+
+# Supabase temp files
+supabase/.temp/
 
 # Explorer artifacts
 explorer/test_screenshots/
