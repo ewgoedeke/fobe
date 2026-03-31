@@ -43,12 +43,45 @@ amag_2024, evn_2024, vig_holding_2024, pierer_mobility_2024,
 kapsch_2024, a1_group_A1_2024_tables_stitched, rbi_ugb_2024, lenzing_2025
 ```
 
+## Annotation edge cases
+
+- **Segment data on primary statement face**: Some reports (e.g., BMW) present segment breakdowns (Automotive, Motorcycles, Financial Services, etc.) directly in the columns of primary financial statements (SFP, PNL). These pages need multi-tagging — a primary tag (e.g., SFP) plus a secondary multi-tag (e.g., NOTES_SEGMENT). The annotation UI supports this via the `multiTags` mechanism: when a page already has a primary transition, clicking a different category adds it as a multi-tag instead of replacing.
+- **TOC page offsets**: Fixtures extracted from larger PDF reports (e.g., `bmw_ifrs_2024_en_AFS` from a 300+ page annual report) have TOC entries with "external" page numbers (e.g., 269 for Income Statement) that differ from "internal" fixture page numbers (e.g., page 2). The TOC entries API computes a `page_offset` and returns both `internal_page` and `external_page` to handle this.
+- **Image-only TOC pages**: Some fixtures have TOC pages that are cover/divider images without parsed table data (e.g., BMW page 1). The TOC entries API falls back to parsing docling text elements (`docling_elements.json`) when no table is found on the specified page.
+
 ## Known open issues (see eval/ISSUES.md for full list)
 
 - **#36**: TOC single-entry poisoning → entire document classified as one statement type
 - **#43**: Axis member extraction captures noise (SEG, GEO, PPE axes contaminated)
 - **#42**: LLM tagger ignores GAAP — UGB concepts offered for IFRS docs
 - **#45**: No table corruption/quality detection — garbage processed blindly
+
+## Annotation keyboard shortcuts
+
+The Annotate page (`/annotate`) supports keyboard-driven workflow on both the landing page and the page modal.
+
+**Navigation:**
+- `←` / `→` or `[` / `]` — previous / next page
+- `Space` — open page modal for selected page
+- `Esc` — close modal or search dropdown
+- `Tab` — jump to next provisional (unvalidated) tag
+
+**Tagging (landing page sets primary tag; modal adds multi-tag if page already tagged):**
+- `G` — General Reporting
+- `T` — TOC
+- `P` — PNL
+- `S` — SFP
+- `C` — CFS
+- `O` — OCI
+- `E` — SOCIE
+- `N` — Notes
+- `F` — Front Matter
+- `A` — Appendix
+- `R` — Auditor Report
+
+**Actions:**
+- `Delete` / `Backspace` — remove tag from current page
+- `V` — validate provisional tag (mark as manual)
 
 ## Reprocessing fixtures
 
@@ -115,6 +148,31 @@ Two coordinate origins coexist in the pipeline — mixing them up causes visual 
 - **Row/cell bboxes** (`rows[].bbox`, `cells[].bbox`): `[l, t, r, b]` in **TOPLEFT** origin (screen/CSS — y increases downward). Sourced from Docling's `data.grid[r][c].bbox`.
 
 The explorer frontend handles both via `pdfToCSS()` and `tlToCSS()` in `PageWithOverlays.jsx`.
+
+## Project Skills
+
+When working on frontend/UI tasks, read and follow `.claude/skills/frontend-design/SKILL.md`
+When working on shadcn components, read `.claude/skills/shadcn/SKILL.md`
+When working on browser automation, read `.claude/skills/browser-use/SKILL.md`
+When working on React component structure, read `.claude/skills/vercel-composition-patterns/SKILL.md`
+When working on React/Next.js performance, read `.claude/skills/vercel-react-best-practices/SKILL.md`
+When reviewing UI for accessibility/design, read `.claude/skills/web-design-guidelines/SKILL.md`
+
+## Supabase schema
+
+The explorer uses Supabase Postgres when `FOBE_DATA_SOURCE=supabase`.
+
+**Key tables**: `documents`, `tables`, `table_rows`, `row_tags`, `toc_sections`, `cells` (unused — lazy-loaded from R2)
+
+**Denormalized counts**: `documents.table_count` and `documents.row_count` are maintained by Postgres triggers to avoid expensive JOINs on dashboard load. Migration SQL: `scripts/sql/001_denormalize_counts.sql`
+
+**Supabase REST API limits**: Default 1000 rows per query. Use `_paginated_select()` in `explorer/queries.py` for unbounded fetches, or prefer denormalized columns.
+
+**Lazy loading**: Cell-level data (raw text, parsed values, bboxes) is NOT stored in Supabase. It's lazy-loaded from `table_graphs.json` via Cloudflare R2 (cached locally at `/tmp/fobe_r2_cache/`). This keeps the DB at ~240MB instead of ~1.5GB.
+
+**Ingestion**: `scripts/ingest_fixture.py` → parses fixture dirs into Supabase. `scripts/migrate_existing.py` → batch migration (ontology seed, fixture ingest, R2 upload). State tracked in `scripts/.migrate_state.json`.
+
+**Schema migrations**: Store in `scripts/sql/` with numbered prefixes. Run manually in Supabase SQL Editor.
 
 ## Docling ingestion
 
