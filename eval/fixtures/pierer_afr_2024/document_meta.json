@@ -28,5 +28,15 @@
       "year": 2026
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "Motorcycles",
+      "SEG.002": "Bicycles",
+      "SEG.003": "Other",
+      "SEG.004": "Consolida- tion"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "Notes No."
+    }
+  }
 }

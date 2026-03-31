@@ -7,7 +7,7 @@
     {
       "label": "",
       "statement_type": "OTHER",
-      "start_page": null,
+      "start_page": 0,
       "end_page": null,
       "note_number": null,
       "validated": true,

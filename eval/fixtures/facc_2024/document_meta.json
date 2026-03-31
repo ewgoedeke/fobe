@@ -20,5 +20,12 @@
       "year": 2024
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "NEW PLANT"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "ASSETS"
+    }
+  }
 }

@@ -1,0 +1,55 @@
+{
+  "transitions": [
+    {
+      "page": 2,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 3,
+      "section_type": "GENERAL_REPORTING",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 24,
+      "section_type": "TOC",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 76,
+      "section_type": "PNL",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 77,
+      "section_type": "SFP",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    },
+    {
+      "page": 78,
+      "section_type": "SOCIE",
+      "label": "",
+      "note_number": null,
+      "source": "manual",
+      "validated": true
+    }
+  ],
+  "multi_tags": [],
+  "version": 2,
+  "annotated_at": "2026-03-30T19:30:59.543234+00:00"
+}

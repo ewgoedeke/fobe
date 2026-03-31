@@ -2935,5 +2935,6 @@
       "rawHeaders": [],
       "filledHeaders": []
     }
-  ]
+  ],
+  "gaap": "IFRS"
 }

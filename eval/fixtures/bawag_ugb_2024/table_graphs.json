@@ -7012,7 +7012,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.SHARE_PREMIUM",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:6",
@@ -7829,7 +7835,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:17",
@@ -7897,7 +7909,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:18",
@@ -8040,7 +8058,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:20",
@@ -8108,7 +8132,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:21",
@@ -8254,7 +8284,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:23",
@@ -8397,7 +8433,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:25",
@@ -8465,7 +8507,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:26",
@@ -8608,7 +8656,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:28",
@@ -8676,7 +8730,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.NON_CURRENT_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:29",
@@ -8818,7 +8878,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.SFP.OTHER_LIABILITIES",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:7:31",
@@ -11157,7 +11223,13 @@
               "isNegative": false
             }
           ],
-          "preTagged": null
+          "preTagged": {
+            "conceptId": "FS.PNL.NET_PROFIT",
+            "method": "llm",
+            "confidence": 0.8,
+            "rule": "sonnet_tag",
+            "model": "claude-sonnet-4-20250514"
+          }
         },
         {
           "rowId": "row:8:29",
@@ -16734,5 +16806,6 @@
         ]
       ]
     }
-  ]
+  ],
+  "gaap": "UGB"
 }

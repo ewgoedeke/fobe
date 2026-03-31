@@ -28,5 +28,26 @@
       "year": 2020
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.SEGMENT_DOC": {
+      "SEG.001": "Lighting segment",
+      "SEG.002": "Lighting Segment",
+      "SEG.003": "Components Segment",
+      "SEG.004": "30 April 2025",
+      "SEG.005": "30 April 2024",
+      "SEG.006": "Lighting Segment | 30 April 2025",
+      "SEG.007": "Lighting Segment | 30 April 2024",
+      "SEG.008": "Components Segment | 30 April 2025",
+      "SEG.009": "Components Segment | 30 April 2024",
+      "SEG.010": "Reconciliation | 30 April 2025",
+      "SEG.011": "Reconciliation | 30 April 2024",
+      "SEG.012": "Group | 30 April 2025",
+      "SEG.013": "Group | 30 April 2024"
+    },
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "Selling expenses",
+      "PPEDOC.002": "Administrative expenses",
+      "PPEDOC.003": "Other operating results"
+    }
+  }
 }

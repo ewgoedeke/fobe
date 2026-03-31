@@ -28,5 +28,14 @@
       "year": 2020
     }
   },
-  "document_axes": {}
+  "document_axes": {
+    "AXIS.PPE_CLASS_DOC": {
+      "PPEDOC.001": "31 Dec. 2024 EUR thousand",
+      "PPEDOC.002": "31 Dec. 2023 EUR thousand",
+      "PPEDOC.003": "Assets 2024 EUR thousand",
+      "PPEDOC.004": "Liabilities 2024 EUR thousand",
+      "PPEDOC.005": "Assets 2023 EUR thousand",
+      "PPEDOC.006": "Liabilities 2023 EUR thousand"
+    }
+  }
 }

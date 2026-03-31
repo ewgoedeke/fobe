@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "annotated_at": "2026-03-31T08:47:02.505859+00:00",
+  "annotator": "",
+  "has_toc": false,
+  "toc_table_id": null,
+  "toc_pages": [],
+  "sections": [
+    {
+      "label": "",
+      "statement_type": "FRONT_MATTER",
+      "start_page": 1,
+      "end_page": 1,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "SFP",
+      "start_page": 2,
+      "end_page": 2,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "PNL",
+      "start_page": 3,
+      "end_page": 3,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 4,
+      "end_page": 4,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 5,
+      "end_page": 5,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 6,
+      "end_page": 6,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 7,
+      "end_page": 7,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 8,
+      "end_page": 8,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 9,
+      "end_page": 9,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 10,
+      "end_page": 10,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 11,
+      "end_page": 11,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 12,
+      "end_page": 12,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 13,
+      "end_page": 13,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 14,
+      "end_page": 14,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 15,
+      "end_page": 15,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 16,
+      "end_page": 16,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 17,
+      "end_page": 17,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "NOTES",
+      "start_page": 18,
+      "end_page": 18,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 19,
+      "end_page": 20,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 21,
+      "end_page": 21,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 22,
+      "end_page": 22,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 23,
+      "end_page": 23,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 24,
+      "end_page": 24,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 25,
+      "end_page": 25,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 26,
+      "end_page": 26,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 27,
+      "end_page": 27,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 28,
+      "end_page": 28,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 29,
+      "end_page": 29,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 30,
+      "end_page": 30,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 31,
+      "end_page": 31,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "GENERAL_REPORTING",
+      "start_page": 32,
+      "end_page": 32,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 33,
+      "end_page": 33,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 34,
+      "end_page": 34,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 35,
+      "end_page": 35,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 36,
+      "end_page": 36,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 37,
+      "end_page": 37,
+      "note_number": null,
+      "validated": true
+    },
+    {
+      "label": "",
+      "statement_type": "AUDITOR_REPORT",
+      "start_page": 38,
+      "end_page": 38,
+      "note_number": null,
+      "validated": true
+    }
+  ],
+  "notes_start_page": 4,
+  "notes_end_page": 18
+}

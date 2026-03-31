@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-03-31T11:11:13.901665",
+  "document": "andritz_2024",
+  "gate_findings": [
+    {
+      "type": "toc_unresolved",
+      "detail": "Only 0 primary statement types found: []. Need >= 1."
+    }
+  ],
+  "toc_detected": null,
+  "page_index": [
+    {
+      "page": 4,
+      "tables": [
+        {
+          "tableId": "raw_0",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Pulp & Paper",
+            "Metals",
+            "Hydropower"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "tables": [
+        {
+          "tableId": "raw_2",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "Pulp & Paper",
+            "Metals",
+            "Hydropower"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_3",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_4",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        },
+        {
+          "tableId": "raw_5",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "ANDRITZ-Gruppe",
+            "Pulp & Paper",
+            "Metals"
+          ],
+          "col_headers": [],
+          "row_count": 5,
+          "data_row_count": 5,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "tables": [
+        {
+          "tableId": "raw_6",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 6,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "tables": [
+        {
+          "tableId": "raw_7",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "tables": [
+        {
+          "tableId": "text_1",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "226",
+            "Abschreibungen",
+            "928"
+          ],
+          "col_headers": [],
+          "row_count": 6,
+          "data_row_count": 3,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "tables": [
+        {
+          "tableId": "raw_8",
+          "classification": null,
+          "method": "unclassified",
+          "confidence": "none",
+          "first_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "col_headers": [],
+          "row_count": 4,
+          "data_row_count": 4,
+          "sectionPath": [],
+          "flagged": true,
+          "flag_reason": "unclassified"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_tables": 10,
+    "by_type": {},
+    "flagged_count": 10,
+    "flagged_page_range": [
+      4,
+      13
+    ],
+    "suggested_action": "10 unclassified tables need assignment"
+  }
+}
